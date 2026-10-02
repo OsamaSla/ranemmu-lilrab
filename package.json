@@ -36,9 +36,7 @@
     "eslint": "^9.0.0",
     "eslint-config-expo": "~57.0.2",
     "typescript": "~6.0.3",
-    "docx": "^9.8.1",
-    "mammoth": "^1.13.0",
-    "cheerio": "^1.2.0"
+    "exceljs": "^4.4.0"
   },
   "scripts": {
     "start": "expo start",
@@ -48,8 +46,8 @@
     "lint": "expo lint",
     "typecheck": "tsc --noEmit",
     "fonts": "node scripts/fetch-fonts.mjs",
-    "make:template": "node scripts/make-template.mjs",
-    "import:word": "node scripts/import-word.mjs",
+    "make:sheet": "node scripts/make-sheet.mjs",
+    "import:sheet": "node scripts/import-sheet.mjs",
     "build:corpus": "node scripts/build-corpus.mjs",
     "check:hymns": "node scripts/check-hymns.mjs"
   },
