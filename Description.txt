@@ -1,0 +1,221 @@
+Here is a structured overview detailing the UI layouts, design patterns, components, and color palettes found in the screenshots.
+
+---
+
+### **1. Navigation & Core App Structure**
+
+* **Bottom Navigation Bar:**
+* **Layout:** Fixed bottom bar with 4 tabs, styled using rounded icons and Arabic labels.
+
+
+* **Tabs (Right to Left / RTL):**
+1. **الرئيسية (Home):** Default screen featuring main search and hymn list trigger.
+
+
+2. **الحديثة (Recent):** Log of recently accessed hymns.
+
+
+3. **مساعدة (Help):** User guide and instruction manual (`كيفية استخدام التطبيق`).
+
+
+4. **المزيد (More):** Settings, favorites, and metadata menu.
+
+
+
+
+
+
+* **Top Bar / Header:**
+* **Left Side:** Round app logo badge (`ترانيم روحية`).
+
+
+* **Center:** Dynamic screen title.
+
+
+* **Right Side:** Musical note icon (audio toggle/player shortcut).
+
+
+
+
+
+---
+
+### **2. Screen-by-Screen UI Specifications**
+
+#### **Screen A: Home View (الرئيسية)**
+
+* **Header Backdrop:** Subtle circular artistic graphic/artwork.
+
+
+* **Title:** Large bold Arabic branding text reading **ترنيمات روحية**.
+
+
+* **Primary Actions:**
+* **Search Trigger Input:** Rounded card button styled as a search bar containing a search icon and placeholder text (`بحث برقم الترنيمة أو جزء منها...`).
+
+
+* **Main CTA:** Dark Teal filled button centered below the search bar labeled **عرض جميع الترنيمات** (View All Hymns).
+
+
+
+
+
+#### **Screen B: User Guide / Help View (مساعدة)**
+
+* **Card Container:** Floating light gray/white rounded card.
+
+
+* **Header:** Title badge **دليل المستخدم** with a document/book icon.
+
+
+* **List Elements (Instruction Cards):**
+* Icon + Title + Description layout for each feature:
+
+
+1. **البحث (Search):** Search icon with input explanation.
+
+
+2. **تصفح الترنيمات (Browse Hymns):** Menu list icon explaining how to browse.
+
+
+3. **عرض ملء الشاشة (Fullscreen View):** Expand icon explaining double-tap or button toggle.
+
+
+4. **المشاركة (Share):** Share node icon explaining how to share text/verses.
+
+
+
+
+
+
+
+#### **Screen C: Live Search Overlay (بحث)**
+
+* **Search Field:** Active top input bar with a clear button (`X`) and real-time cursor.
+
+
+* **Search Results:** Vertical list featuring matching hymn snippets with verse numbers (e.g., `1:9`, `2:11`) and highlighted matching text.
+
+
+* **Keyboard:** Native Arabic mobile keyboard with custom key layout.
+
+
+
+#### **Screen D: Settings / More Menu (المزيد)**
+
+* **List View:** Clean white card items stacked vertically:
+
+
+1. **نظم (Structure/Rhyme)**
+
+2. **الترنيمات المفضلة (Favorite Hymns)** with Star icon
+
+
+3. **الإعدادات (Settings)** with Gear icon
+
+
+4. **تقييم التطبيق (Rate App)** with Thumb/Star icon
+
+
+5. **مشاركة التطبيق (Share App)** with Share icon
+
+
+6. **تواصل معنا (Contact Us)** with Mail/Message icon
+
+
+
+
+
+---
+
+### **3. Screen-by-Screen UI Specifications**
+
+#### **Screen E: Hymn Reader (Text View)**
+
+* **Floating Side Bar (Vertical Menu):**
+* Left-side vertical icon toolbar featuring: Bookmark/Star, Search, Home, Aspect Ratio (Fullscreen), Audio/Play, Settings (Gear), Info (`i`).
+
+
+
+
+* **Content Container:** Clean card containers displaying stanza numbers (Arabic numerals like `١`, `٢`, `٣`) and centered Arabic stanzas.
+
+
+* **Bottom Controls:** Next/Previous navigation circular arrow buttons (`→` / `←`).
+
+
+
+#### **Screen F: Reader Settings Modal (إعدادات النص)**
+
+* **Typography Controls:**
+* **Font Size:** Horizontal slider with step controls (`A+` and `A-`).
+
+
+* **Font Family Selector:** Pill/Chip selector grid offering options such as: `ArabicFont1`, `ScheherazadeNew`, `Marhey`, `Katibeh`, `Cairo`, `OMNES`, `Bahij`, `Rubik`, `Rakkas`.
+
+
+
+
+
+#### **Screen G: Fullscreen Dark Mode Reading View**
+
+* **Layout:** High-contrast reading mode with pure black background `#000000` and crisp white text.
+
+
+* **Orientation Support:** Supports both portrait and 90° landscape rotations.
+
+
+* **Minimal UI:** Hides background chrome, leaving only a subtle top back arrow.
+
+
+
+#### **Screen H: Hymn Metadata Sheet (معلومات الترنيمة)**
+
+* **Bottom Sheet Container:** Slide-up bottom card detailing song credits:
+
+
+* **نظم (Verse/Structure):** Metering reference
+
+
+* **المؤلف (Author):** Henry Francess Lyte / اسعد الشدودي
+
+
+* **كورد (Chords/Key):** Musical key signature (e.g., `Db`)
+
+
+* **الملحن (Composer):** William B. Bradbury
+
+
+* **مقياس الكلام (Meter/Rhythm):** Numeric rhythm cadence (e.g., `87.87.87`)
+
+
+
+
+
+---
+
+### **4. Design Tokens & Styling**
+
+* **Color Palette:**
+* **Primary Teal:** `#0F5B66` / `#184D55` (Used for header bars, active navigation states, and primary CTA buttons).
+
+
+* **Background Light:** `#F2F4F5` / `#EFEFEF` (Light gray canvas background with white cards `#FFFFFF`).
+
+
+* **Dark Mode:** `#000000` pure black background with `#FFFFFF` text.
+
+
+* **Accent Blue/Teal:** `#20808D` for interactive sliders and toggle chips.
+
+
+
+
+* **UI Patterns:**
+* **RTL (Right-To-Left):** Fully aligned for Arabic layout and typography.
+
+
+* **Card Elevation:** Rounded corners (`border-radius: 12px - 16px`) with soft drop-shadows on cards.
+
+
+* **Typography:** Clean Arabic sans-serif fonts (`Cairo` / `Bahij` style) with adjustable sizes and custom font families.
