@@ -9,16 +9,16 @@ import Constants from 'expo-constants';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps, ReactNode } from 'react';
 
-import { AppBar } from '../components/AppBar';
-import { AppText } from '../components/AppText';
-import { Card } from '../components/Card';
-import { FontChips } from '../components/FontChips';
-import { IconButton } from '../components/IconButton';
-import { SegmentedControl } from '../components/SegmentedControl';
-import { LOCALES, type LocaleCode } from '../i18n';
-import { useT } from '../hooks/useT';
-import { useTheme } from '../hooks/useTheme';
-import { useLibrary } from '../store/library';
+import { AppBar } from '../../components/AppBar';
+import { AppText } from '../../components/AppText';
+import { Card } from '../../components/Card';
+import { FontChips } from '../../components/FontChips';
+import { IconButton } from '../../components/IconButton';
+import { SegmentedControl } from '../../components/SegmentedControl';
+import { LOCALES, type LocaleCode } from '../../i18n';
+import { useT } from '../../hooks/useT';
+import { useTheme } from '../../hooks/useTheme';
+import { useLibrary } from '../../store/library';
 import {
   APP_SCALE_MAX,
   APP_SCALE_MIN,
@@ -28,8 +28,8 @@ import {
   READER_SIZE_STEP,
   useSettings,
   type ThemePreference,
-} from '../store/settings';
-import { spacing } from '../theme/tokens';
+} from '../../store/settings';
+import { spacing } from '../../theme/tokens';
 
 const APP_VERSION = Constants.expoConfig?.version ?? '1.0.0';
 

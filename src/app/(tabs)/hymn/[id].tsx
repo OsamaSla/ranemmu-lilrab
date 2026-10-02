@@ -12,27 +12,27 @@
  * may carry `?verse=<n>` to land on a specific stanza.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useLocalSearchParams, useRouter } from 'expo-router';
+import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
 import { Pressable, ScrollView, Share, View, type LayoutChangeEvent } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
-import { AppText } from '../../components/AppText';
-import { Card } from '../../components/Card';
-import { EmptyState } from '../../components/EmptyState';
-import { HymnInfoSheet } from '../../components/HymnInfoSheet';
-import { HymnRow } from '../../components/HymnRow';
-import { IconButton } from '../../components/IconButton';
-import { ReaderSettingsModal } from '../../components/ReaderSettingsModal';
-import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../data/loader';
-import { toArabicDigits } from '../../data/normalize';
-import { findSimilar } from '../../data/search';
-import { useT } from '../../hooks/useT';
-import { useTheme } from '../../hooks/useTheme';
-import { useLibrary } from '../../store/library';
-import { useSettings } from '../../store/settings';
-import { fontFamilyFor, READER_MAX_WIDTH } from '../../theme/fonts';
-import { palette, radius, spacing } from '../../theme/tokens';
+import { AppText } from '../../../components/AppText';
+import { Card } from '../../../components/Card';
+import { EmptyState } from '../../../components/EmptyState';
+import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
+import { HymnRow } from '../../../components/HymnRow';
+import { IconButton } from '../../../components/IconButton';
+import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
+import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
+import { toArabicDigits } from '../../../data/normalize';
+import { findSimilar } from '../../../data/search';
+import { useT } from '../../../hooks/useT';
+import { useTheme } from '../../../hooks/useTheme';
+import { useLibrary } from '../../../store/library';
+import { useSettings } from '../../../store/settings';
+import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
+import { palette, radius, spacing } from '../../../theme/tokens';
 
 const RAIL_WIDTH = 56;
 
@@ -46,6 +46,7 @@ export function generateStaticParams(): { id: string }[] {
 
 export default function ReaderScreen() {
   const router = useRouter();
+  const navigation = useNavigation();
   const { id, verse } = useLocalSearchParams<{ id: string; verse?: string }>();
   const { t, direction } = useT();
   const { colors } = useTheme();
@@ -60,6 +61,27 @@ export default function ReaderScreen() {
   const touchRecent = useLibrary((s) => s.touchRecent);
   const toggleFavorite = useLibrary((s) => s.toggleFavorite);
   const isFavorite = useLibrary((s) => s.favorites.includes(id ?? ''));
+
+  // Fullscreen owns the whole display, so the tab bar goes away with the
+  // rest of the chrome. The cleanup restores it even when leaving mid-read.
+  useEffect(() => {
+    navigation.setOptions({
+      tabBarStyle: {
+        display: fullscreen ? 'none' : 'flex',
+        backgroundColor: colors.surface,
+        borderTopColor: colors.border,
+      },
+    });
+    return () => {
+      navigation.setOptions({
+        tabBarStyle: {
+          display: 'flex',
+          backgroundColor: colors.surface,
+          borderTopColor: colors.border,
+        },
+      });
+    };
+  }, [fullscreen, navigation, colors.surface, colors.border]);
 
   const hymn = id ? getHymn(id) : undefined;
   const neighbours = useMemo(() => (id ? getNeighbours(id) : {}), [id]);

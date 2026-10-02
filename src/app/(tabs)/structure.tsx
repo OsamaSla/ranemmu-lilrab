@@ -10,16 +10,16 @@ import { useMemo, useState } from 'react';
 import { Pressable, SectionList, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
-import { AppBar } from '../components/AppBar';
-import { AppText } from '../components/AppText';
-import { EmptyState } from '../components/EmptyState';
-import { HymnRow } from '../components/HymnRow';
-import { getSummaries } from '../data/loader';
-import { toArabicDigits } from '../data/normalize';
-import { groupByStructure } from '../data/search';
-import { useT } from '../hooks/useT';
-import { useTheme } from '../hooks/useTheme';
-import { spacing } from '../theme/tokens';
+import { AppBar } from '../../components/AppBar';
+import { AppText } from '../../components/AppText';
+import { EmptyState } from '../../components/EmptyState';
+import { HymnRow } from '../../components/HymnRow';
+import { getSummaries } from '../../data/loader';
+import { toArabicDigits } from '../../data/normalize';
+import { groupByStructure } from '../../data/search';
+import { useT } from '../../hooks/useT';
+import { useTheme } from '../../hooks/useTheme';
+import { spacing } from '../../theme/tokens';
 
 export default function StructureScreen() {
   const router = useRouter();

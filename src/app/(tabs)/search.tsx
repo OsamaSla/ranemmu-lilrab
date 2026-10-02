@@ -11,15 +11,15 @@ import { useMemo, useState } from 'react';
 import { FlatList, Pressable, Text as RNText, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
-import { AppText } from '../components/AppText';
-import { EmptyState } from '../components/EmptyState';
-import { getCorpus } from '../data/loader';
-import { toArabicDigits } from '../data/normalize';
-import { highlight, searchHymns } from '../data/search';
-import type { SearchMatch } from '../data/types';
-import { useT } from '../hooks/useT';
-import { useTheme } from '../hooks/useTheme';
-import { radius, spacing } from '../theme/tokens';
+import { AppText } from '../../components/AppText';
+import { EmptyState } from '../../components/EmptyState';
+import { getCorpus } from '../../data/loader';
+import { toArabicDigits } from '../../data/normalize';
+import { highlight, searchHymns } from '../../data/search';
+import type { SearchMatch } from '../../data/types';
+import { useT } from '../../hooks/useT';
+import { useTheme } from '../../hooks/useTheme';
+import { radius, spacing } from '../../theme/tokens';
 
 const QUERY_MIN_LENGTH = 1;
 

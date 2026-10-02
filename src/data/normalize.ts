@@ -101,5 +101,5 @@ export function normalizeText(input: string): string {
 
 /** The digits shown for a stanza/line reference, matching the printed book. */
 export function toArabicDigits(value: number | string): string {
-  return String(value).replace(/[0-9]/g, (d) => '\u0660' + Number(d));
+  return String(value).replace(/[0-9]/g, (d) => String.fromCharCode(0x0660 + Number(d)));
 }

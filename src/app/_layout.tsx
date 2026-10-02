@@ -46,12 +46,6 @@ export default function RootLayout() {
           animation: 'slide_from_left',
         }}>
         <Stack.Screen name="(tabs)" />
-        <Stack.Screen name="hymn/[id]" />
-        <Stack.Screen name="library" />
-        <Stack.Screen name="search" options={{ animation: 'fade' }} />
-        <Stack.Screen name="structure" />
-        <Stack.Screen name="favorites" />
-        <Stack.Screen name="settings" />
       </Stack>
     </>
   );

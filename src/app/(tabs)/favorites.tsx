@@ -8,15 +8,15 @@ import { useRouter } from 'expo-router';
 import { useMemo } from 'react';
 import { FlatList, View } from 'react-native';
 
-import { AppBar } from '../components/AppBar';
-import { EmptyState } from '../components/EmptyState';
-import { HymnRow } from '../components/HymnRow';
-import { getSummaries } from '../data/loader';
-import type { HymnSummary } from '../data/types';
-import { useT } from '../hooks/useT';
-import { useTheme } from '../hooks/useTheme';
-import { useLibrary } from '../store/library';
-import { spacing } from '../theme/tokens';
+import { AppBar } from '../../components/AppBar';
+import { EmptyState } from '../../components/EmptyState';
+import { HymnRow } from '../../components/HymnRow';
+import { getSummaries } from '../../data/loader';
+import type { HymnSummary } from '../../data/types';
+import { useT } from '../../hooks/useT';
+import { useTheme } from '../../hooks/useTheme';
+import { useLibrary } from '../../store/library';
+import { spacing } from '../../theme/tokens';
 
 export default function FavoritesScreen() {
   const router = useRouter();

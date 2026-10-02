@@ -10,17 +10,17 @@ import { useMemo, useState } from 'react';
 import { SectionList, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
-import { AppBar } from '../components/AppBar';
-import { AppText } from '../components/AppText';
-import { EmptyState } from '../components/EmptyState';
-import { HymnRow } from '../components/HymnRow';
-import { SegmentedControl } from '../components/SegmentedControl';
-import { getSummaries } from '../data/loader';
-import { toArabicDigits } from '../data/normalize';
-import type { HymnSummary } from '../data/types';
-import { useT } from '../hooks/useT';
-import { useTheme } from '../hooks/useTheme';
-import { spacing } from '../theme/tokens';
+import { AppBar } from '../../components/AppBar';
+import { AppText } from '../../components/AppText';
+import { EmptyState } from '../../components/EmptyState';
+import { HymnRow } from '../../components/HymnRow';
+import { SegmentedControl } from '../../components/SegmentedControl';
+import { getSummaries } from '../../data/loader';
+import { toArabicDigits } from '../../data/normalize';
+import type { HymnSummary } from '../../data/types';
+import { useT } from '../../hooks/useT';
+import { useTheme } from '../../hooks/useTheme';
+import { spacing } from '../../theme/tokens';
 
 /** Letter of the alphabet used to bucket the alphabetical sort. */
 function firstLetter(text: string): string {
