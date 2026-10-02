@@ -15,7 +15,6 @@ import { AppText } from '../../components/AppText';
 import { EmptyState } from '../../components/EmptyState';
 import { HymnRow } from '../../components/HymnRow';
 import { getSummaries } from '../../data/loader';
-import { toArabicDigits } from '../../data/normalize';
 import { groupByStructure } from '../../data/search';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
@@ -80,7 +79,7 @@ export default function StructureScreen() {
                 {typed.label}
               </AppText>
               <AppText variant="caption" color={colors.textMuted}>
-                {toArabicDigits(typed.hymns.length)}
+                {typed.hymns.length}
               </AppText>
               <MaterialCommunityIcons
                 name={expanded ? 'chevron-up' : 'chevron-down'}

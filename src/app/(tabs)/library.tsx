@@ -16,7 +16,6 @@ import { EmptyState } from '../../components/EmptyState';
 import { HymnRow } from '../../components/HymnRow';
 import { SegmentedControl } from '../../components/SegmentedControl';
 import { getSummaries } from '../../data/loader';
-import { toArabicDigits } from '../../data/normalize';
 import type { HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
@@ -59,7 +58,7 @@ export default function LibraryScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('library.title')} subtitle={`${toArabicDigits(summaries.length)}`} />
+      <AppBar title={t('library.title')} subtitle={`${summaries.length}`} />
 
       <SegmentedControl
         options={[

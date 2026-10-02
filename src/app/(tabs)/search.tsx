@@ -14,7 +14,6 @@ import { useRouter } from 'expo-router';
 import { AppText } from '../../components/AppText';
 import { EmptyState } from '../../components/EmptyState';
 import { getCorpus } from '../../data/loader';
-import { toArabicDigits } from '../../data/normalize';
 import { highlight, searchHymns } from '../../data/search';
 import type { SearchMatch } from '../../data/types';
 import { useT } from '../../hooks/useT';
@@ -155,7 +154,7 @@ function SearchResultRow({ match, onPress }: { match: SearchMatch; onPress: () =
             backgroundColor: colors.primary,
           }}>
           <AppText variant="caption" color={colors.onPrimary} useAppFont={false} style={{ fontWeight: '700' }}>
-            {toArabicDigits(match.hymn.number)}
+            {match.hymn.number}
           </AppText>
         </View>
         <AppText

@@ -9,7 +9,6 @@ import { Pressable, View } from 'react-native';
 
 import { AppText } from './AppText';
 import { Card } from './Card';
-import { toArabicDigits } from '../data/normalize';
 import type { HymnSummary } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -56,7 +55,7 @@ export function HymnRow({ hymn, onPress, subtitle, showStar = true, onToggleFavo
                 alignItems: 'center',
               }}>
               <AppText variant="label" color={colors.onPrimary} useAppFont={false} style={{ fontWeight: '700' }}>
-                {toArabicDigits(hymn.number)}
+                {hymn.number}
               </AppText>
             </View>
 

@@ -42,7 +42,8 @@ const COLUMNS = new Map([
 ]);
 
 const AR_DIGITS = '٠١٢٣٤٥٦٧٨٩';
-const toArabicDigits = (n) => String(n).replace(/[0-9]/g, (d) => AR_DIGITS[Number(d)]);
+/** Display labels use Western digits; fromDigits still reads both forms. */
+const toWesternDigits = (n) => String(n);
 const fromDigits = (s) =>
   Number(String(s).replace(/[٠-٩]/g, (d) => AR_DIGITS.indexOf(d)));
 
@@ -83,7 +84,7 @@ function parseLabel(value) {
   const m = /([0-9٠-٩]+)/.exec(clean(value));
   if (!m) return null;
   const n = fromDigits(m[1]);
-  return Number.isInteger(n) && n >= 1 ? toArabicDigits(n) : null;
+  return Number.isInteger(n) && n >= 1 ? toWesternDigits(n) : null;
 }
 
 export function importWorksheet(ws, sourceName) {
@@ -186,7 +187,7 @@ export function importWorksheet(ws, sourceName) {
     if (!sameBlock) {
       if (!chorus) verseCounter += 1;
       openStanza = {
-        label: label ?? toArabicDigits(Math.max(verseCounter, 1)),
+        label: label ?? toWesternDigits(Math.max(verseCounter, 1)),
         lines: [],
         chorus,
       };

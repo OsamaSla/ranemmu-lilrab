@@ -15,7 +15,6 @@ import { AppText } from '../../components/AppText';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { getHymnCount } from '../../data/loader';
-import { toArabicDigits } from '../../data/normalize';
 import { radius, spacing } from '../../theme/tokens';
 
 export default function HomeScreen() {
@@ -69,7 +68,7 @@ export default function HomeScreen() {
         </AppText>
 
         <AppText variant="body" center color={colors.textMuted} style={{ marginBottom: spacing.xxl }}>
-          {t('library.count')}: {toArabicDigits(getHymnCount())}
+          {t('library.count')}: {getHymnCount()}
         </AppText>
 
         {/* Search trigger. A real field would need a keyboard on tap; routing to

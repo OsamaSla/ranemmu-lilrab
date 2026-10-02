@@ -25,7 +25,6 @@ import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
 import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
-import { toArabicDigits } from '../../../data/normalize';
 import { findSimilar } from '../../../data/search';
 import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
@@ -307,7 +306,7 @@ export default function ReaderScreen() {
               numberOfLines={1}
               color={colors.onPrimary}
               style={{ fontWeight: '700' }}>
-              {t('common.hymnNumber')} {toArabicDigits(hymn.number)}
+              {t('common.hymnNumber')} {hymn.number}
             </AppText>
             <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.85 }}>
               {hymn.title}
@@ -396,7 +395,7 @@ export default function ReaderScreen() {
           onPress={() => neighbours.previous && router.replace(`/hymn/${neighbours.previous.id}`)}
         />
         <AppText variant="caption" color={colors.textMuted} style={{ alignSelf: 'center' }}>
-          {toArabicDigits(hymn.number)}
+          {hymn.number}
         </AppText>
         <NavCircle
           name={direction.isRTL ? 'chevron-left' : 'chevron-right'}

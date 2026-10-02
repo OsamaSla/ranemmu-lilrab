@@ -98,8 +98,3 @@ export function normalize(input: string): Normalized {
 export function normalizeText(input: string): string {
   return normalize(input).text;
 }
-
-/** The digits shown for a stanza/line reference, matching the printed book. */
-export function toArabicDigits(value: number | string): string {
-  return String(value).replace(/[0-9]/g, (d) => String.fromCharCode(0x0660 + Number(d)));
-}
