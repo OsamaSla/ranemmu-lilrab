@@ -51,6 +51,11 @@ npm run make:sheet
 - `scripts/import-sheet.mjs` reassembles rows into hymn records in order.
   Only number, title, metre (`مقياس الكلام`) and refrain label (`القرار`)
   are collected — tune, key, author and composer do not exist in this book.
+- **Translations (optional):** the `EN - English` and `DE - Deutsch` sheets
+  hold translations with the same hymn numbers. The importer merges them by
+  number into `title_en/verses_en/…` fields and blocks on stanza-count
+  mismatch. The app shows the UI language's text where present, Arabic
+  everywhere else — per hymn, never blank.
 - `scripts/check-hymns.mjs` validates every `content/*.json`: unique numbers,
   non-empty verses, no stray non-Arabic characters, no unfilled `…`
   template placeholders — plus a vocalisation-coverage report that spots OCR

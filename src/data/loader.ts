@@ -6,8 +6,9 @@
  * bundle size, which `npm run build:corpus` keeps in check by chunking.
  */
 import { HYMN_CHUNKS, HYMN_CHUNK_COUNT } from './generated-chunks';
-import type { Hymn, HymnSummary } from './types';
+import type { Hymn, HymnSummary, HymnVerse } from './types';
 import { invalidateSearchCache } from './search';
+import type { LocaleCode } from '../i18n';
 
 const SUMMARIES = require('../../assets/hymns/index.json') as HymnSummary[];
 
@@ -68,6 +69,35 @@ export function getHymn(id: string): Hymn | undefined {
     }
   }
   return undefined;
+}
+
+/**
+ * The display text of a hymn in the given UI locale.
+ *
+ * Each field falls back to Arabic independently: a translated title shows even
+ * when its verses are not translated yet, and vice versa. Verse alignment
+ * between languages is enforced at import, so indices and the `?verse=` deep
+ * link stay valid whichever text is showing.
+ */
+export function localizeHymn(
+  hymn: Hymn,
+  locale: LocaleCode,
+): { title: string; verses: HymnVerse[]; chorus?: string } {
+  if (locale === 'en') {
+    return {
+      title: hymn.title_en ?? hymn.title,
+      verses: hymn.verses_en ?? hymn.verses,
+      chorus: hymn.chorus_en ?? hymn.chorus,
+    };
+  }
+  if (locale === 'de') {
+    return {
+      title: hymn.title_de ?? hymn.title,
+      verses: hymn.verses_de ?? hymn.verses,
+      chorus: hymn.chorus_de ?? hymn.chorus,
+    };
+  }
+  return { title: hymn.title, verses: hymn.verses, chorus: hymn.chorus };
 }
 
 /**

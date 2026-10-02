@@ -11,8 +11,15 @@
  */
 const NON_ARABIC_LETTERS = /[A-Za-z\p{Script=Latin}가-힯぀-ヿ一-鿿]/u;
 
-/** LTR text that *is* legitimate: metre cadences like "87.87.87". */
-const ALLOWED_LATIN_FIELDS = new Set(['meter']);
+/**
+ * LTR text that *is* legitimate: metre cadences like "87.87.87", plus the
+ * human translation fields (checked structurally, not by alphabet).
+ */
+const ALLOWED_LATIN_FIELDS = new Set([
+  'meter',
+  'title_en', 'chorus_en',
+  'title_de', 'chorus_de',
+]);
 
 /** Harakat range, kept for the vocalisation-coverage report in check-hymns. */
 export const DIACRITICS = /[ؐ-ًؚ-ٰٟۖ-ۭ]/;
@@ -115,6 +122,38 @@ export function validateCorpus(hymns) {
         if (ph) issues.push(ph);
       });
     });
+
+    // Translations mirror the Arabic stanza-for-stanza so indices, refs and
+    // the reader's fallback stay aligned. Only structure is checked here —
+    // the Arabic-only letter rules above must not run on foreign text.
+    for (const lang of ['en', 'de']) {
+      const key = `verses_${lang}`;
+      const tv = hymn[key];
+      if (tv === undefined) continue;
+      if (!Array.isArray(tv) || tv.length !== hymn.verses.length) {
+        issues.push(
+          `${at} (${hymn.number}): '${key}' has ${Array.isArray(tv) ? tv.length : 'no'} stanzas vs ${hymn.verses.length} in Arabic — must match one-to-one`,
+        );
+        continue;
+      }
+      tv.forEach((verse, v) => {
+        const vat = `${at}.${key}[${v}]`;
+        if (!Array.isArray(verse.lines) || verse.lines.length === 0) {
+          issues.push(`${vat}: missing or empty 'lines'`);
+          return;
+        }
+        if (verse.lines.length !== hymn.verses[v].lines.length) {
+          issues.push(
+            `${vat}: ${verse.lines.length} lines vs ${hymn.verses[v].lines.length} in Arabic stanza ${v + 1} — must match`,
+          );
+        }
+        verse.lines.forEach((line, l) => {
+          if (isBlank(line)) issues.push(`${vat}.lines[${l}]: empty line`);
+          const ph = placeholderIn('line', line, `${vat}.lines[${l}]`);
+          if (ph) issues.push(ph);
+        });
+      });
+    }
 
     if (hymn.chorus !== undefined && isBlank(hymn.chorus)) {
       issues.push(`${at}: 'chorus' present but blank — omit the key instead`);

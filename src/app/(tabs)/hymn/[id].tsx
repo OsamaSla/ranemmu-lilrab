@@ -24,7 +24,7 @@ import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
 import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
-import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
+import { getCorpus, getHymn, getNeighbours, getSummaries, localizeHymn } from '../../../data/loader';
 import { findSimilar } from '../../../data/search';
 import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
@@ -47,7 +47,7 @@ export default function ReaderScreen() {
   const router = useRouter();
   const navigation = useNavigation();
   const { id, verse } = useLocalSearchParams<{ id: string; verse?: string }>();
-  const { t, direction } = useT();
+  const { t, direction, locale } = useT();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
 
@@ -102,6 +102,13 @@ export default function ReaderScreen() {
     [hymn],
   );
 
+  // Display text in the UI language when the hymn carries it, Arabic
+  // otherwise. Indices stay aligned across languages by import contract.
+  const shown = useMemo(
+    () => (hymn ? localizeHymn(hymn, locale) : null),
+    [hymn, locale],
+  );
+
   useEffect(() => {
     if (hymn) touchRecent(hymn.id);
   }, [hymn, touchRecent]);
@@ -131,7 +138,7 @@ export default function ReaderScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [verse, hymn?.id]);
 
-  if (!hymn) {
+  if (!hymn || !shown) {
     return (
       <View style={{ flex: 1, backgroundColor: colors.canvas, paddingTop: insets.top }}>
         <View style={{ flexDirection: direction.row, paddingHorizontal: spacing.sm }}>
@@ -148,9 +155,9 @@ export default function ReaderScreen() {
 
   const shareHymn = () => {
     const body = [
-      `${hymn.number}. ${hymn.title}`,
+      `${hymn.number}. ${shown.title}`,
       '',
-      ...hymn.verses.flatMap((v) => [`${v.label}`, ...v.lines, '']),
+      ...shown.verses.flatMap((v) => [`${v.label}`, ...v.lines, '']),
       `— ${t('appName')}`,
     ].join('\n');
 
@@ -200,7 +207,7 @@ export default function ReaderScreen() {
 
   const versesView = (
     <>
-      {hymn.verses.map((verseBlock, verseIndex) => (
+      {shown.verses.map((verseBlock, verseIndex) => (
         <View
           key={`${verseIndex}-${verseBlock.label}`}
           onLayout={onVerseLayout(verseIndex)}
@@ -227,7 +234,7 @@ export default function ReaderScreen() {
               marginBottom: spacing.xs,
               opacity: fullscreen ? 0.85 : 1,
             }}>
-            {verseBlock.chorus && hymn.chorus ? hymn.chorus : `(${verseBlock.label})`}
+            {verseBlock.chorus && shown.chorus ? shown.chorus : `(${verseBlock.label})`}
           </AppText>
           {verseBlock.lines.map((line, lineIndex) => (
             <View key={lineIndex} style={{ marginBottom: lineIndex < verseBlock.lines.length - 1 ? spacing.xs : 0 }}>
@@ -275,7 +282,7 @@ export default function ReaderScreen() {
               color: palette.readerText,
               marginVertical: spacing.lg,
             }}>
-            {hymn.number}. {hymn.title}
+            {hymn.number}. {shown.title}
           </AppText>
           {versesView}
         </ScrollView>
@@ -309,7 +316,7 @@ export default function ReaderScreen() {
               {t('common.hymnNumber')} {hymn.number}
             </AppText>
             <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.85 }}>
-              {hymn.title}
+              {shown.title}
             </AppText>
           </View>
           <IconButton

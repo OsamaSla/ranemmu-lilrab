@@ -5,13 +5,18 @@
  * With no file argument, the newest .xlsx in content/ (other than the
  * template itself) is used. Output defaults to content/book-<name>.json.
  *
+ * Sheets: the Arabic sheet is the master; `EN - English` and `DE - Deutsch`
+ * hold optional translations with the SAME hymn numbers. Absent hymns stay
+ * Arabic — translation is per hymn, never mandatory. A translation whose
+ * stanza count differs from the Arabic blocks the import until fixed.
+ *
  * Row rules (also printed in the template's instructions sheet):
- *   - one spreadsheet row = one printed line; stanzas reassemble below
+ *   - one spreadsheet row = one printed verse (بيت); stanzas (مقاطع) reassemble
  *   - blank hymn number = same hymn as the row above
  *   - blank stanza label = continuation of the open stanza
- *   - نوع السطر لازمة/قرار = refrain block in place, flagged chorus:true
- *   - الصدر + العجز filled = halves joined with ❖; صدر alone = يتيم
- *   - ملاحظات column is never imported
+ *   - kind لازمة/refrain/Kehrvers = refrain block in place, chorus:true
+ *   - الصدر + العجز filled = بيت تام joined with ❖; صدر alone = مشطور
+ *   - ملاحظات/Notes column is never imported
  */
 import { readdirSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, extname, join } from 'node:path';
@@ -27,18 +32,27 @@ const HALF_JOINER = ' \u2756 ';
 /** Header texts (trimmed) mapped to schema roles. */
 const COLUMNS = new Map([
   ['رقم الترنيمة', 'number'], ['الرقم', 'number'], ['رقم', 'number'], ['number', 'number'],
+  ['Hymn No.', 'number'], ['Liednr.', 'number'], ['Nummer', 'number'],
   ['العنوان', 'title'], ['عنوان', 'title'], ['title', 'title'],
+  ['Title', 'title'], ['Titel', 'title'],
   ['مقياس الكلام', 'meter'], ['الوزن', 'meter'], ['meter', 'meter'],
+  ['Meter', 'meter'], ['Metrum', 'meter'],
   ['القرار', 'chorus'], ['اللازمة', 'chorus'], ['chorus', 'chorus'],
+  ['Chorus label', 'chorus'], ['Kehrvers', 'chorus'],
   ['نوع المقطع', 'kind'], ['نوع السطر', 'kind'], ['النوع', 'kind'], ['kind', 'kind'], ['type', 'kind'],
+  ['Kind', 'kind'], ['Art', 'kind'],
   ['رقم المقطع', 'label'], ['المقطع', 'label'],
   ['رقم البيت', 'label'], ['البيت', 'label'], ['label', 'label'],
+  ['Stanza No.', 'label'], ['Strophennr.', 'label'], ['Strophe', 'label'],
   ['الصدر', 'part1'], ['صدر', 'part1'],
   ['الشطر الأول', 'part1'], ['السطر', 'part1'], ['line', 'part1'], ['part1', 'part1'],
+  ['First half', 'part1'], ['Erste Hälfte', 'part1'],
   ['العجز', 'part2'], ['عجز', 'part2'],
   ['الشطر الثاني', 'part2'], ['part2', 'part2'],
+  ['Second half', 'part2'], ['Zweite Hälfte', 'part2'],
   // Never imported, never warned about.
   ['ملاحظات', 'notes'], ['notes', 'notes'], ['comment', 'notes'],
+  ['Notes', 'notes'], ['Notizen', 'notes'],
 ]);
 
 const AR_DIGITS = '٠١٢٣٤٥٦٧٨٩';
@@ -76,7 +90,7 @@ function cellText(cell) {
 function isChorusKind(value) {
   const v = clean(value);
   if (!v) return false;
-  return /لازم|قرار|chorus/i.test(v);
+  return /لازم|قرار|chorus|refrain|kehrvers/i.test(v);
 }
 
 /** Digits anywhere in the cell (brackets, dots and prefixes tolerated). */
@@ -87,7 +101,12 @@ function parseLabel(value) {
   return Number.isInteger(n) && n >= 1 ? toWesternDigits(n) : null;
 }
 
-export function importWorksheet(ws, sourceName) {
+/**
+ * Parses one sheet. `lang` is 'ar' for the master, 'en'/'de' for translations:
+ * title and chorus-label land on the suffixed fields, metre is only ever
+ * taken from the Arabic master (it is language-neutral).
+ */
+export function importWorksheet(ws, sourceName, lang = 'ar') {
   const warnings = [];
   const errors = [];
   const hymns = [];
@@ -157,7 +176,12 @@ export function importWorksheet(ws, sourceName) {
       finishHymn();
       current = { number, title: title || '', verses: [], where: `${where} (hymn ${number})` };
       verseCounter = 0;
-      const meta = { meter: at(row, 'meter'), chorus: at(row, 'chorus') };
+      const suffix = lang === 'ar' ? '' : `_${lang}`;
+      // Metre is language-neutral: only the Arabic sheet may set it.
+      const meta = {
+        ...(lang === 'ar' ? { meter: at(row, 'meter') } : {}),
+        [`chorus${suffix}`]: at(row, 'chorus'),
+      };
       for (const [field, value] of Object.entries(meta)) {
         if (value) current[field] = value;
       }
@@ -167,8 +191,9 @@ export function importWorksheet(ws, sourceName) {
       errors.push(`${where}: first data row must carry a hymn number`);
       continue;
     }
-    if (title && !current.title) current.title = title;
-    if (!current.title) {
+    const titleField = lang === 'ar' ? 'title' : `title_${lang}`;
+    if (title && !current[titleField]) current[titleField] = title;
+    if (!current[titleField]) {
       errors.push(`${where}: hymn ${current.number} has no title yet (put it on its first row)`);
       continue;
     }
@@ -208,12 +233,92 @@ export function importWorksheet(ws, sourceName) {
   return { hymns, warnings, errors };
 }
 
+/** Sheet name (or fallback position) mapped to content language. */
+const SHEET_LANGS = [
+  { match: (name) => name === 'ترانيم', lang: 'ar' },
+  { match: (name) => name === 'EN - English', lang: 'en' },
+  { match: (name) => name === 'DE - Deutsch', lang: 'de' },
+];
+
+/** Returns null when shapes match, otherwise a human-readable mismatch. */
+function shapeMismatch(a, b) {
+  if (a.length !== b.length) return `${b.length} stanzas vs ${a.length} in Arabic`;
+  for (let i = 0; i < a.length; i += 1) {
+    if (a[i].lines.length !== b[i].lines.length) {
+      return `stanza ${i + 1} has ${b[i].lines.length} lines vs ${a[i].lines.length} in Arabic`;
+    }
+  }
+  return null;
+}
+
+/**
+ * Merges translation sheets into the Arabic master by hymn number. A hymn
+ * with no translation rows keeps only Arabic — that absence is the entire
+ * "optional translation" mechanism. Stanza-count mismatch blocks the import.
+ */
+function mergeTranslations(master, translated, lang, sourceName, warnings, errors) {
+  const byNumber = new Map(master.map((h) => [h.number, h]));
+  let attached = 0;
+
+  for (const t of translated) {
+    const base = byNumber.get(t.number);
+    if (!base) {
+      warnings.push(`${t.where ?? sourceName}: ${lang} translation of hymn ${t.number} has no Arabic original — skipped`);
+      continue;
+    }
+    const mismatch = shapeMismatch(base.verses, t.verses);
+    if (mismatch) {
+      errors.push(
+        `${t.where ?? sourceName}: ${lang} translation of hymn ${t.number}: ${mismatch} — fix to match one-to-one`,
+      );
+      continue;
+    }
+    if (t[`title_${lang}`]) base[`title_${lang}`] = t[`title_${lang}`];
+    if (t[`chorus_${lang}`]) base[`chorus_${lang}`] = t[`chorus_${lang}`];
+    base[`verses_${lang}`] = t.verses;
+    attached += 1;
+  }
+
+  return attached;
+}
+
 async function convertFile(xlsxPath) {
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.readFile(xlsxPath);
-  const ws = wb.getWorksheet('ترانيم') ?? wb.worksheets[0];
-  if (!ws) throw new Error(`${basename(xlsxPath)}: workbook has no sheets`);
-  return importWorksheet(ws, basename(xlsxPath));
+  if (wb.worksheets.length === 0) throw new Error(`${basename(xlsxPath)}: workbook has no sheets`);
+
+  const warnings = [];
+  const errors = [];
+  const counts = { ar: 0, en: 0, de: 0 };
+
+  // Sheets carrying one of the known names parse into their language;
+  // anything else is ignored unless it is the only sheet (single-sheet file).
+  const targets = wb.worksheets
+    .map((ws) => {
+      const known = SHEET_LANGS.find((s) => s.match(ws.name));
+      return known ? { ws, lang: known.lang } : null;
+    })
+    .filter(Boolean);
+
+  const plan = targets.length > 0 ? targets : [{ ws: wb.worksheets[0], lang: 'ar' }];
+
+  const parsed = new Map();
+  for (const { ws, lang } of plan) {
+    const result = importWorksheet(ws, `${basename(xlsxPath)}:${ws.name}`, lang);
+    warnings.push(...result.warnings);
+    errors.push(...result.errors);
+    parsed.set(lang, result.hymns);
+  }
+
+  const hymns = parsed.get('ar') ?? [];
+  counts.ar = hymns.length;
+  for (const lang of ['en', 'de']) {
+    if (!parsed.has(lang)) continue;
+    counts[lang] = mergeTranslations(hymns, parsed.get(lang), lang, `${basename(xlsxPath)}`, warnings, errors);
+  }
+
+  hymns.sort((a, b) => a.number - b.number);
+  return { hymns, warnings, errors, counts };
 }
 
 function newestWorkbook() {
@@ -239,7 +344,7 @@ async function main() {
     process.exit(1);
   }
 
-  const { hymns, warnings, errors } = await convertFile(input);
+  const { hymns, warnings, errors, counts } = await convertFile(input);
 
   for (const w of warnings) console.warn(`warn: ${w}`);
 
@@ -251,7 +356,10 @@ async function main() {
 
   const out = outPath ?? join(CONTENT_DIR, `book-${basename(input, extname(input))}.json`);
   writeFileSync(out, JSON.stringify({ hymns }, null, 1) + '\n');
-  console.log(`${hymns.length} hymn(s) from ${basename(input)} -> ${out}`);
+  const langs = [`${counts.ar} Arabic`];
+  if (counts.en > 0) langs.push(`${counts.en} with English`);
+  if (counts.de > 0) langs.push(`${counts.de} with German`);
+  console.log(`${hymns.length} hymn(s) from ${basename(input)} -> ${out} (${langs.join(', ')})`);
 }
 
 const invoked = process.argv[1] && basename(process.argv[1]) === 'import-sheet.mjs';

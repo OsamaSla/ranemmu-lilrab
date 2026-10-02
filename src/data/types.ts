@@ -32,6 +32,17 @@ export interface Hymn extends HymnSummary {
    * label for the whole hymn; stanzas only carry the boolean flag.
    */
   chorus?: string;
+  /**
+   * Optional human translations. Each language is independent and partial:
+   * a hymn shows the UI language's text wherever present and Arabic
+   * everywhere else. Never machine-generated — only the typist's wording.
+   */
+  title_en?: string;
+  verses_en?: HymnVerse[];
+  chorus_en?: string;
+  title_de?: string;
+  verses_de?: HymnVerse[];
+  chorus_de?: string;
   /** Free-form notes shown in the info sheet. */
   info?: string;
   verses: HymnVerse[];
