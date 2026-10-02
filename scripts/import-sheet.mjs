@@ -10,7 +10,7 @@
  *   - blank hymn number = same hymn as the row above
  *   - blank stanza label = continuation of the open stanza
  *   - نوع السطر لازمة/قرار = refrain block in place, flagged chorus:true
- *   - الشطر الأول + الثاني filled = halves joined with ❖
+ *   - الصدر + العجز filled = halves joined with ❖; صدر alone = يتيم
  *   - ملاحظات column is never imported
  */
 import { readdirSync, statSync, writeFileSync } from 'node:fs';
@@ -28,15 +28,13 @@ const HALF_JOINER = ' \u2756 ';
 const COLUMNS = new Map([
   ['رقم الترنيمة', 'number'], ['الرقم', 'number'], ['رقم', 'number'], ['number', 'number'],
   ['العنوان', 'title'], ['عنوان', 'title'], ['title', 'title'],
-  ['نظم', 'tune'], ['اللحن', 'tune'], ['tune', 'tune'],
   ['مقياس الكلام', 'meter'], ['الوزن', 'meter'], ['meter', 'meter'],
-  ['كورد', 'key'], ['key', 'key'], ['chord', 'key'],
-  ['المؤلف', 'author'], ['author', 'author'],
-  ['الملحن', 'composer'], ['composer', 'composer'],
   ['القرار', 'chorus'], ['اللازمة', 'chorus'], ['chorus', 'chorus'],
   ['نوع السطر', 'kind'], ['النوع', 'kind'], ['kind', 'kind'], ['type', 'kind'],
   ['رقم البيت', 'label'], ['البيت', 'label'], ['label', 'label'],
+  ['الصدر', 'part1'], ['صدر', 'part1'],
   ['الشطر الأول', 'part1'], ['السطر', 'part1'], ['line', 'part1'], ['part1', 'part1'],
+  ['العجز', 'part2'], ['عجز', 'part2'],
   ['الشطر الثاني', 'part2'], ['part2', 'part2'],
   // Never imported, never warned about.
   ['ملاحظات', 'notes'], ['notes', 'notes'], ['comment', 'notes'],
@@ -49,6 +47,12 @@ const fromDigits = (s) =>
 
 /** Invisible direction/zero-width marks Excel sometimes carries over. */
 const INVISIBLE_RE = /[​‌‍‎‏؜]/g;
+
+/** Headers match with harakat stripped, so vocalised and plain forms agree. */
+const HARAKAT_RE = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7-\u06E8\u06EB-\u06ED]/g;
+function canonicalHeader(text) {
+  return clean(text).replace(HARAKAT_RE, '');
+}
 
 function clean(value) {
   return String(value ?? '').replace(INVISIBLE_RE, '').replace(/\s{2,}/g, ' ').trim();
@@ -93,7 +97,7 @@ export function importWorksheet(ws, sourceName) {
     if (headerRowNumber !== -1) return;
     const mapping = new Map();
     row.eachCell((cell, c) => {
-      const role = COLUMNS.get(cellText(cell));
+      const role = COLUMNS.get(canonicalHeader(cellText(cell)));
       if (role && !mapping.has(role)) mapping.set(role, c);
     });
     if (mapping.has('number') && mapping.has('title') && mapping.has('part1')) {
@@ -103,7 +107,7 @@ export function importWorksheet(ws, sourceName) {
   });
 
   if (headerRowNumber === -1) {
-    return { hymns, warnings, errors: [`${sourceName}: no header row found (need رقم الترنيمة / العنوان / الشطر الأول)`] };
+    return { hymns, warnings, errors: [`${sourceName}: no header row found (need رقم الترنيمة / العنوان / الصدر)`] };
   }
 
   const at = (row, role) => {
@@ -151,8 +155,7 @@ export function importWorksheet(ws, sourceName) {
       finishHymn();
       current = { number, title: title || '', verses: [], where: `${where} (hymn ${number})` };
       verseCounter = 0;
-      const meta = { tune: at(row, 'tune'), meter: at(row, 'meter'), key: at(row, 'key'),
-        author: at(row, 'author'), composer: at(row, 'composer'), chorus: at(row, 'chorus') };
+      const meta = { meter: at(row, 'meter'), chorus: at(row, 'chorus') };
       for (const [field, value] of Object.entries(meta)) {
         if (value) current[field] = value;
       }
