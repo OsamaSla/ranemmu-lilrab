@@ -52,21 +52,18 @@ export const spacing = {
 export const HIT_SLOP = { top: 8, bottom: 8, left: 8, right: 8 };
 export const MIN_TOUCH = 48;
 
-/** Card elevation, matching the soft shadow in the reference design. */
+/**
+ * Card elevation, matching the soft shadow in the reference design.
+ * Expressed as `boxShadow`, which React Native 0.76+ honours on native and
+ * react-native-web maps straight to CSS — the legacy `shadow*` props warn on
+ * web, so they are deliberately not used.
+ */
 export const shadow = {
   card: {
-    shadowColor: '#0B2A30',
-    shadowOpacity: 0.08,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 3 },
-    elevation: 2,
+    boxShadow: '0 3px 10px rgba(11, 42, 48, 0.08)',
   },
   bar: {
-    shadowColor: '#0B2A30',
-    shadowOpacity: 0.12,
-    shadowRadius: 12,
-    shadowOffset: { width: 0, height: -2 },
-    elevation: 8,
+    boxShadow: '0 -2px 12px rgba(11, 42, 48, 0.12)',
   },
 } as const;
 
