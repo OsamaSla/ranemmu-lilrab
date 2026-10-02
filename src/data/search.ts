@@ -5,6 +5,9 @@
  * positions are mapped back to the original text for highlighting, so a query
  * of "نرنم" matches "نَرْنَم" and highlights the diacritics in place.
  *
+ * Result references are stanza:line (مقطع:سطر, e.g. "1:9") to match the
+ * printed book.
+ *
  * Normalising every line on each keystroke is far too slow for 1000+ hymns, so
  * the flattened search index is built once per loaded corpus and memoised.
  */

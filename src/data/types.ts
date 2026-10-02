@@ -6,7 +6,7 @@
  * rather than one blob of text per stanza.
  */
 
-/** One stanza. `label` is the printed marker, usually Arabic-Indic digits. */
+/** One stanza (مقطع — a group of verses). `label` is the printed marker, usually Arabic-Indic digits. */
 export interface HymnVerse {
   label: string;
   lines: string[];

@@ -35,7 +35,7 @@ export const en: PartialDictionary = {
   'reader.decreaseFont': 'Decrease text size',
   'reader.fontSize': 'Text size',
   'reader.fontFamily': 'Font',
-  'reader.verseOf': 'Verse',
+  'reader.verseOf': 'Stanza',
 
   'info.tune': 'Tune',
   'info.author': 'Author',

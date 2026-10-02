@@ -46,7 +46,7 @@ export const ar = {
     decreaseFont: 'تصغير الخط',
     fontSize: 'حجم الخط',
     fontFamily: 'نوع الخط',
-    verseOf: 'الآية',
+    verseOf: 'المقطع',
   },
 
   info: {
