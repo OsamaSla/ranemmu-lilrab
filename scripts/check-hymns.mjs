@@ -30,10 +30,8 @@ const lines = hymns.flatMap((h) => (h.verses ?? []).flatMap((v) => v.lines));
 const vocalised = lines.filter((line) => DIACRITICS.test(line)).length;
 const pct = lines.length === 0 ? 0 : (vocalised / lines.length) * 100;
 
-const untuned = hymns.filter((h) => !h.tune).length;
 const unmetered = hymns.filter((h) => !h.meter).length;
 
 console.log(`${hymns.length} hymns in ${entries.length} file(s) — all checks passed`);
 console.log(`  lines            ${lines.length} (${vocalised} vocalised, ${pct.toFixed(0)}%)`);
-console.log(`  missing tune     ${untuned}`);
 console.log(`  missing meter    ${unmetered}`);

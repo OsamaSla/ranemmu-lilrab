@@ -40,7 +40,6 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
       id: hymn.id,
       number: hymn.number,
       title: hymn.title,
-      tune: hymn.tune,
       meter: hymn.meter,
       hasChorus: hymn.verses.some((v) => v.chorus),
     },
@@ -138,25 +137,18 @@ export function highlight(
 }
 
 /**
- * Rank sibling hymns for the "similar hymns" view.
- *
- * Prefers an exact `tune` match, falls back to a shared `meter`. The chorus
- * fallback exists only for books that omit tune metadata entirely: without
- * that guard it would flood every result, since nearly every hymn has one.
+ * Rank sibling hymns for the "similar hymns" view by shared metre
+ * (مقياس الكلام). The chorus fallback exists only for hymns that carry no
+ * metre at all: without that guard it would flood every result, since nearly
+ * every hymn has one.
  */
 export function findSimilar(hymn: HymnSummary, all: HymnSummary[], limit = 20): HymnSummary[] {
-  const hasStructure = Boolean(hymn.tune || hymn.meter);
-
   const scored = all
     .filter((candidate) => candidate.id !== hymn.id)
     .map((candidate) => {
       let score = 0;
-      if (hymn.tune && candidate.tune) {
-        if (candidate.tune === hymn.tune) score += 100;
-        else if (candidate.tune.startsWith(hymn.tune)) score += 60;
-      }
       if (hymn.meter && candidate.meter === hymn.meter) score += 25;
-      if (!score && !hasStructure && hymn.hasChorus && candidate.hasChorus) score += 5;
+      if (!score && !hymn.meter && hymn.hasChorus && candidate.hasChorus) score += 5;
       return { candidate, score };
     })
     .filter((entry) => entry.score > 0)
@@ -165,12 +157,12 @@ export function findSimilar(hymn: HymnSummary, all: HymnSummary[], limit = 20): 
   return scored.slice(0, limit).map((entry) => entry.candidate);
 }
 
-/** Group summaries by tune (or meter when tune is absent) for the نظم screen. */
+/** Group summaries by metre (مقياس الكلام) for the structure screen. */
 export function groupByStructure(all: HymnSummary[]): { key: string; label: string; hymns: HymnSummary[] }[] {
   const groups = new Map<string, HymnSummary[]>();
 
   for (const hymn of all) {
-    const key = hymn.tune?.trim() || hymn.meter?.trim() || '';
+    const key = hymn.meter?.trim() || '';
     if (!key) continue;
     const bucket = groups.get(key);
     if (bucket) bucket.push(hymn);
@@ -180,7 +172,7 @@ export function groupByStructure(all: HymnSummary[]): { key: string; label: stri
   return [...groups.entries()]
     .map(([key, hymns]) => ({
       key,
-      label: hymns[0].tune?.trim() || hymns[0].meter?.trim() || key,
+      label: hymns[0].meter?.trim() || key,
       hymns: hymns.sort((a, b) => a.number - b.number),
     }))
     .sort((a, b) => a.label.localeCompare(b.label, 'ar'));

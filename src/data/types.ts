@@ -19,21 +19,13 @@ export interface HymnSummary {
   id: string;
   number: number;
   title: string;
-  /** نظم — the tune name, e.g. "HAMZA". Groups the "similar hymns" views. */
-  tune?: string;
-  /** مقياس الكلام — metre cadence, e.g. "87.87.87". */
+  /** مقياس الكلام — metre cadence, e.g. "87.87.87". Groups the "similar hymns" views. */
   meter?: string;
   /** True when the summary should be flagged as a chorus-bearing hymn. */
   hasChorus?: boolean;
 }
 
 export interface Hymn extends HymnSummary {
-  /** كورد — musical key, e.g. "Db". */
-  key?: string;
-  /** المؤلف — author/lyricist. */
-  author?: string;
-  /** الملحن — composer. */
-  composer?: string;
   /**
    * The printed label of the refrain (e.g. "القرار"), rendered above any
    * stanza flagged `chorus`. Kept at the hymn level because a book uses one
@@ -60,11 +52,7 @@ export interface SearchMatch {
   inTitle?: boolean;
 }
 
-/** Metadata exposed by the info sheet, in the order the reference app lists it. */
+/** Metadata exposed by the info sheet. */
 export interface HymnInfo {
-  tune?: string;
-  author?: string;
-  key?: string;
-  composer?: string;
   meter?: string;
 }

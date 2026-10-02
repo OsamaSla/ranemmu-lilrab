@@ -72,7 +72,6 @@ export default function ReaderScreen() {
               id: h.id,
               number: h.number,
               title: h.title,
-              tune: h.tune,
               meter: h.meter,
               hasChorus: h.verses.some((v) => v.chorus),
             })),

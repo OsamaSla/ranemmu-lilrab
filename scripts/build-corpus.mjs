@@ -52,7 +52,6 @@ function toSummary(hymn) {
     id: hymn.id ?? idFor(hymn.number),
     number: hymn.number,
     title: hymn.title,
-    tune: hymn.tune,
     meter: hymn.meter,
     hasChorus: (hymn.verses ?? []).some((v) => v.chorus),
   };

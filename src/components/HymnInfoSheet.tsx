@@ -1,10 +1,9 @@
 /**
  * معلومات الترنيمة — the credits bottom sheet.
  *
- * Shows, in the reference app's order: نظم (tune) · المؤلف (author) ·
- * كورد (key) · الملحن (composer) · مقياس الكلام (metre). Fields the book does
- * not provide render the "not available" label rather than being omitted, so a
- * missing credit is distinguishable from a loading fault.
+ * Shows the metre (مقياس الكلام) when the book provides it, otherwise the
+ * "not available" label — so a missing credit is distinguishable from a
+ * loading fault.
  */
 import { Modal, Pressable, View } from 'react-native';
 
@@ -26,10 +25,6 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
   const { colors } = useTheme();
 
   const rows: { label: TranslationKey; value: string | undefined }[] = [
-    { label: 'info.tune', value: hymn?.tune },
-    { label: 'info.author', value: hymn?.author },
-    { label: 'info.key', value: hymn?.key },
-    { label: 'info.composer', value: hymn?.composer },
     { label: 'info.meter', value: hymn?.meter },
   ];
 

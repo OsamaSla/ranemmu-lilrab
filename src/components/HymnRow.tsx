@@ -1,5 +1,5 @@
 /**
- * One row in any hymn list: library, favourites, recents, tune groups.
+ * One row in any hymn list: library, favourites, recents, metre groups.
  *
  * The number is rendered in Arabic-Indic digits regardless of the UI locale,
  * because it has to match the number printed in the book the reader is holding.
@@ -19,7 +19,7 @@ import { radius, spacing } from '../theme/tokens';
 interface HymnRowProps {
   hymn: HymnSummary;
   onPress: () => void;
-  /** Secondary line under the title, e.g. the tune name or "read 2h ago". */
+  /** Secondary line under the title, e.g. the metre or "read 2h ago". */
   subtitle?: string;
   showStar?: boolean;
   onToggleFavorite?: () => void;

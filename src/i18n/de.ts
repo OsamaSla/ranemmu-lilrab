@@ -42,15 +42,11 @@ export const de: PartialDictionary = {
   'reader.fontFamily': 'Schriftart',
   'reader.verseOf': 'Strophe',
 
-  'info.tune': 'Melodie',
-  'info.author': 'Textautor',
-  'info.key': 'Tonart',
-  'info.composer': 'Komponist',
   'info.meter': 'Metrum',
   'info.missing': 'Nicht verfügbar',
 
-  'structure.title': 'Melodien',
-  'structure.subtitle': 'Lieder mit derselben Melodie und demselben Metrum',
+  'structure.title': 'Metrum',
+  'structure.subtitle': 'Lieder mit demselben Metrum',
   'structure.empty': 'Keine eingeordneten Lieder',
 
   'favorites.title': 'Lieblingslieder',
@@ -86,7 +82,7 @@ export const de: PartialDictionary = {
   'help.share.body': 'Teile das Lied oder eine Strecke daraus über eine beliebige App auf deinem Gerät.',
 
   'more.title': 'Mehr',
-  'more.structure': 'Melodien',
+  'more.structure': 'Metrum',
   'more.favorites': 'Lieblingslieder',
   'more.settings': 'Einstellungen',
   'more.rateApp': 'App bewerten',

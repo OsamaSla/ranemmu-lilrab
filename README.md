@@ -50,8 +50,7 @@ npm run make:sheet
   - `ملاحظات` is never imported.
 - `scripts/import-sheet.mjs` reassembles rows into hymn records in order.
   Only number, title, metre (`مقياس الكلام`) and refrain label (`القرار`)
-  are collected for now; tune/key/author/composer stay optional in the schema
-  for later.
+  are collected — tune, key, author and composer do not exist in this book.
 - `scripts/check-hymns.mjs` validates every `content/*.json`: unique numbers,
   non-empty verses, no stray non-Arabic characters, no unfilled `…`
   template placeholders — plus a vocalisation-coverage report that spots OCR

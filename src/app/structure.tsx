@@ -1,9 +1,9 @@
 /**
- * نظم — hymns grouped by tune and metre.
+ * مقياس الكلام — hymns grouped by metre.
  *
- * This is the "similar hymns" grouping surfaced as its own destination, for a
- * reader who knows a tune and wants everything singable to it. Groups collapse
- * independently and remember nothing, since the grouping is cheap to compute.
+ * For a reader who knows a metre and wants everything singable to it. Groups
+ * collapse independently and remember nothing, since the grouping is cheap
+ * to compute.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useMemo, useState } from 'react';

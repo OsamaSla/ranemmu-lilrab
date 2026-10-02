@@ -11,7 +11,7 @@ import { invalidateSearchCache } from './search';
 
 const SUMMARIES = require('../../assets/hymns/index.json') as HymnSummary[];
 
-/** All hymn summaries: numbers, titles, tunes and metres. */
+/** All hymn summaries: numbers, titles and metres. */
 export function getSummaries(): HymnSummary[] {
   return SUMMARIES;
 }

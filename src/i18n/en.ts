@@ -37,15 +37,11 @@ export const en: PartialDictionary = {
   'reader.fontFamily': 'Font',
   'reader.verseOf': 'Stanza',
 
-  'info.tune': 'Tune',
-  'info.author': 'Author',
-  'info.key': 'Key',
-  'info.composer': 'Composer',
   'info.meter': 'Metre',
   'info.missing': 'Not available',
 
-  'structure.title': 'Tunes',
-  'structure.subtitle': 'Hymns sharing the same tune and metre',
+  'structure.title': 'Metre',
+  'structure.subtitle': 'Hymns sharing the same metre',
   'structure.empty': 'No categorised hymns',
 
   'favorites.title': 'Favorite Hymns',
@@ -81,7 +77,7 @@ export const en: PartialDictionary = {
   'help.share.body': 'Share the hymn, or a passage from it, through any app on your device.',
 
   'more.title': 'More',
-  'more.structure': 'Tunes',
+  'more.structure': 'Metre',
   'more.favorites': 'Favorite Hymns',
   'more.settings': 'Settings',
   'more.rateApp': 'Rate the App',

@@ -11,8 +11,8 @@
  */
 const NON_ARABIC_LETTERS = /[A-Za-z\p{Script=Latin}가-힯぀-ヿ一-鿿]/u;
 
-/** LTR letters that *are* legitimate: key signatures and metre numerals. */
-const ALLOWED_LATIN_FIELDS = new Set(['key', 'meter', 'tune', 'composer']);
+/** LTR text that *is* legitimate: metre cadences like "87.87.87". */
+const ALLOWED_LATIN_FIELDS = new Set(['meter']);
 
 /** Harakat range, kept for the vocalisation-coverage report in check-hymns. */
 export const DIACRITICS = /[ؐ-ًؚ-ٰٟۖ-ۭ]/;
