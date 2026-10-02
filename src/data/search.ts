@@ -137,11 +137,13 @@ export function highlight(
 /**
  * Rank sibling hymns for the "similar hymns" view.
  *
- * Prefers an exact `tune` match, falls back to a shared `meter`, and finally
- * to sharing the chorus label — which is the only grouping signal available
- * when a book omits tune metadata entirely.
+ * Prefers an exact `tune` match, falls back to a shared `meter`. The chorus
+ * fallback exists only for books that omit tune metadata entirely: without
+ * that guard it would flood every result, since nearly every hymn has one.
  */
 export function findSimilar(hymn: HymnSummary, all: HymnSummary[], limit = 20): HymnSummary[] {
+  const hasStructure = Boolean(hymn.tune || hymn.meter);
+
   const scored = all
     .filter((candidate) => candidate.id !== hymn.id)
     .map((candidate) => {
@@ -151,7 +153,7 @@ export function findSimilar(hymn: HymnSummary, all: HymnSummary[], limit = 20): 
         else if (candidate.tune.startsWith(hymn.tune)) score += 60;
       }
       if (hymn.meter && candidate.meter === hymn.meter) score += 25;
-      if (!score && hymn.hasChorus && candidate.hasChorus) score += 5;
+      if (!score && !hasStructure && hymn.hasChorus && candidate.hasChorus) score += 5;
       return { candidate, score };
     })
     .filter((entry) => entry.score > 0)

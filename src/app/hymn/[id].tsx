@@ -24,7 +24,7 @@ import { HymnInfoSheet } from '../../components/HymnInfoSheet';
 import { HymnRow } from '../../components/HymnRow';
 import { IconButton } from '../../components/IconButton';
 import { ReaderSettingsModal } from '../../components/ReaderSettingsModal';
-import { getCorpus, getHymn, getNeighbours } from '../../data/loader';
+import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../data/loader';
 import { toArabicDigits } from '../../data/normalize';
 import { findSimilar } from '../../data/search';
 import { useT } from '../../hooks/useT';
@@ -35,6 +35,14 @@ import { fontFamilyFor, READER_MAX_WIDTH } from '../../theme/fonts';
 import { palette, radius, spacing } from '../../theme/tokens';
 
 const RAIL_WIDTH = 56;
+
+/**
+ * Lets `expo export` and web deep links resolve every hymn statically.
+ * Native dev and production builds resolve the param at runtime and ignore this.
+ */
+export function generateStaticParams(): { id: string }[] {
+  return getSummaries().map((summary) => ({ id: summary.id }));
+}
 
 export default function ReaderScreen() {
   const router = useRouter();

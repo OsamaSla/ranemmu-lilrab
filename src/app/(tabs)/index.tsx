@@ -38,7 +38,6 @@ export default function HomeScreen() {
         {/* Decorative backdrop: concentric arcs bleeding off the inline-end edge,
             standing in for the reference app's circular artwork. */}
         <View
-          pointerEvents="none"
           style={{
             position: 'absolute',
             top: -80,
@@ -48,10 +47,10 @@ export default function HomeScreen() {
             borderRadius: 140,
             backgroundColor: colors.primary,
             opacity: 0.06,
+            pointerEvents: 'none',
           }}
         />
         <View
-          pointerEvents="none"
           style={{
             position: 'absolute',
             top: -20,
@@ -61,6 +60,7 @@ export default function HomeScreen() {
             borderRadius: 80,
             backgroundColor: colors.accent,
             opacity: 0.08,
+            pointerEvents: 'none',
           }}
         />
 

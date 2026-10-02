@@ -10,10 +10,13 @@
 
 /**
  * Marks, harakat, and Quranic annotation signs to discard entirely.
+ * Written with explicit escapes: literal Arabic ranges are treacherous because
+ * a range end glyph can sit *after* the alphabet in code-point order, silently
+ * swallowing every letter (this exact bug once shipped here).
  * Deliberately not /g: a global regex used with `.test()` carries `lastIndex`
  * between calls, which silently drops alternating characters.
  */
-const DROPPED = /[ؐ-ًؚ-ٰٟۖ-ۭـ]/;
+const DROPPED = /[\u0610-\u061A\u064B-\u065F\u0670\u06D6-\u06DC\u06DF-\u06E4\u06E7-\u06E8\u06EB-\u06ED\u0640]/;
 
 /** Explicit many-to-one folds. Anything here changes length. */
 const FOLDS: Record<string, string> = {
@@ -55,7 +58,7 @@ const FOLDS: Record<string, string> = {
 };
 
 /** Punctuation that differs between sources and carries no search meaning. */
-const STRIPPED_PUNCT = /[،؛؟.,!()[\]{}"'`~*_—–\-/\\]/;
+const STRIPPED_PUNCT = /[\u060C\u061B\u061F.,!()[\]{}"'`~*_\u2013\u2014\-/\\]/;
 
 export interface Normalized {
   text: string;
