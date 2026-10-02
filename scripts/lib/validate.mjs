@@ -21,6 +21,15 @@ function isBlank(value) {
   return value === undefined || value === null || String(value).trim() === '';
 }
 
+const PLACEHOLDER_RE = /\u2026/;
+
+function placeholderIn(field, value, where) {
+  if (typeof value === 'string' && PLACEHOLDER_RE.test(value)) {
+    return `${where}: '${field}' contains … — unfilled template placeholder?`;
+  }
+  return null;
+}
+
 /**
  * Validates a raw hymn array, returning a list of human-readable problems.
  * An empty array means the corpus is good.
@@ -46,6 +55,9 @@ export function validateCorpus(hymns) {
 
     if (isBlank(hymn.title)) {
       issues.push(`${at} (${hymn.number ?? '?'}): missing 'title'`);
+    } else {
+      const ph = placeholderIn('title', hymn.title, `${at} (${hymn.number})`);
+      if (ph) issues.push(ph);
     }
 
     if (hymn.id !== undefined) {
@@ -99,6 +111,8 @@ export function validateCorpus(hymns) {
           const hit = NON_ARABIC_LETTERS.exec(line);
           issues.push(`${vat}.lines[${l}]: stray non-Arabic character '${hit[0]}': ${JSON.stringify(line.slice(0, 60))}`);
         }
+        const ph = placeholderIn('line', line, `${vat}.lines[${l}]`);
+        if (ph) issues.push(ph);
       });
     });
 
