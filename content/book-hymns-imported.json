@@ -86595,6 +86595,102 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "O You Who Began the Journey With Me",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "O You who began the journey with me",
+      "I trust You will complete it",
+      "You are joy in my weeping",
+      "And the heart that endures"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Thanks to You who tend me",
+      "Whose hands always lift me"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Though I always change",
+      "You are faithful, You never change",
+      "Your promise is true when You promise",
+      "From Your promise You never turn"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "A great plan You devised for me",
+      "And my lifes journey You drew for me",
+      "Help me, Lord, to live for You exalted",
+      "Above the world, above my state"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "My longing, Lord, is to love You more",
+      "For none loves me like You",
+      "Unite my heart and let me watch",
+      "All my days testifying of Your love"
+     ]
+    }
+   ],
+   "title_de": "O du, der du die Reise mit mir begannst",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "O du, der du die Reise mit mir begannst",
+      "Ich vertraue, du wirst sie vollenden",
+      "Du bist Freude in meinem Weinen",
+      "Und das Herz, das erträgt"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Dank dir, der du mich hütest",
+      "Dessen Hände mich immer erheben"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Auch wenn ich mich immer ändere",
+      "Du bist treu, du änderst dich nie",
+      "Deine Verheißung ist wahr, wenn du verheißt",
+      "Von deiner Verheißung kehrst du nie um"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Einen großen Plan ersannst du für mich",
+      "Und meines Lebens Reise zeichnetest du für mich",
+      "Hilf mir, Herr, für dich zu leben, erhaben",
+      "Über der Welt, über meinem Zustand"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Meine Sehnsucht, Herr, ist, dich mehr zu lieben",
+      "Denn keiner liebt mich wie du",
+      "Eine mein Herz und lass mich wachen",
+      "Alle meine Tage zeugend von deiner Liebe"
+     ]
+    }
+   ],
    "author": "(هاني رمزي صموئيل)"
   },
   {
@@ -86617,7 +86713,45 @@
      ]
     }
    ],
-   "chorus": "القرار"
+   "chorus": "القرار",
+   "title_en": "For There the Lord Commanded the Blessing",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "(Behold how good and how pleasant",
+      "That brothers dwell together)"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "(For there the Lord commanded the blessing)",
+      "(Life forevermore), thrice"
+     ]
+    }
+   ],
+   "title_de": "Denn dort gebot der Herr den Segen",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "(Siehe, wie gut und wie lieblich",
+      "Dass Brüder beisammen wohnen)"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "(Denn dort gebot der Herr den Segen)",
+      "(Leben auf ewig), dreimal"
+     ]
+    }
+   ]
   },
   {
    "number": 658,
@@ -86634,6 +86768,38 @@
       "وابتهجت روحي",
       "لأنك لن تترُكَ",
       "نفسي في الهاويةْ"
+     ]
+    }
+   ],
+   "title_en": "I Set the Lord Before Me",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "I set the Lord before me",
+      "Before me at all times",
+      "For He is at my right hand",
+      "I shall not be shaken",
+      "Therefore my heart rejoiced",
+      "And my spirit exulted",
+      "For You will not leave",
+      "My soul in the grave"
+     ]
+    }
+   ],
+   "title_de": "Ich stellte den Herrn vor mich",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Ich stellte den Herrn vor mich",
+      "Vor mich allezeit",
+      "Denn er ist zu meiner Rechten",
+      "Ich werde nicht wanken",
+      "Darum freute sich mein Herz",
+      "Und mein Geist frohlockte",
+      "Denn du wirst nicht lassen",
+      "Meine Seele im Grab"
      ]
     }
    ]
@@ -86685,6 +86851,102 @@
       "عوني في الضيقات وماليش غير هو",
       "وف ضي حبه شايف صورتي",
       "في قلبه من جوه"
+     ]
+    }
+   ],
+   "title_en": "My Eye to the Slain Lamb",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "My Beloveds wounds are dear to me",
+      "They made me hate every sin",
+      "And long from my heart to serve the One",
+      "Who did me good"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "My eye to the slain Lamb",
+      "Lift me, lift me with the Spirit",
+      "That I may kiss the secret of my healing",
+      "Which is the wounds"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "My heart is lifted to eternity",
+      "Longing for the glorious presence",
+      "To see my Beloved and His sweet image",
+      "Fill my eye"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "My Beloveds advent is like Lebanon",
+      "No man resembles Him",
+      "He fills my life and I see Him",
+      "By faith"
+     ]
+    },
+    {
+     "label": "5",
+     "lines": [
+      "My Christ is my refuge and strength",
+      "My help in troubles, I have none but Him",
+      "And in the light of His love I see my image",
+      "Deep in His heart"
+     ]
+    }
+   ],
+   "title_de": "Mein Auge zum geschlachteten Lamm",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Die Wunden meines Geliebten sind mir teuer",
+      "Sie ließen mich jede Sünde hassen",
+      "Und sehnen aus meinem Herzen, dem zu dienen",
+      "Der mir Gutes tat"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Mein Auge zum geschlachteten Lamm",
+      "Hebe mich, hebe mich mit dem Geist",
+      "Dass ich küsse das Geheimnis meiner Heilung",
+      "Welche die Wunden sind"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Mein Herz ist erhoben zur Ewigkeit",
+      "Sehnend nach der herrlichen Gegenwart",
+      "Meinen Geliebten zu sehen und sein süßes Bild",
+      "Fülle mein Auge"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Die Ankunft meines Geliebten ist wie der Libanon",
+      "Kein Mensch gleicht ihm",
+      "Er füllt mein Leben und ich sehe ihn",
+      "Durch Glauben"
+     ]
+    },
+    {
+     "label": "5",
+     "lines": [
+      "Mein Christus ist meine Zuflucht und Stärke",
+      "Meine Hilfe in Nöten, ich habe keinen außer ihm",
+      "Und im Licht seiner Liebe sehe ich mein Bild",
+      "Tief in seinem Herzen"
      ]
     }
    ],
@@ -86745,6 +87007,112 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "I Know Not What Shall Come",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "I know not what shall come",
+      "Tomorrow or after",
+      "For tomorrow is in my Lords knowledge",
+      "Nothing is hidden from Him",
+      "My care is not what happens",
+      "Of coming matters",
+      "My care is to please my Lord",
+      "In life and in death"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "I know not what shall be",
+      "Of my life tomorrow",
+      "One thing I know for certain",
+      "My Lord holds my hand"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "I know the road is bright",
+      "I know my Lord is faithful",
+      "For He is my best companion",
+      "And my best helper",
+      "Soon I shall depart",
+      "To the eternal homeland",
+      "Where no tear flows",
+      "Nor death reigns"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "I know not the futures",
+      "I know not what shall be",
+      "But I know that",
+      "My Master is a tender Father",
+      "For He cares for the birds",
+      "And so He cares for me",
+      "His blood suffices me as cover",
+      "His Spirit fills me"
+     ]
+    }
+   ],
+   "title_de": "Ich weiß nicht, was kommen wird",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Ich weiß nicht, was kommen wird",
+      "Morgen oder danach",
+      "Denn morgen ist im Wissen meines Herrn",
+      "Nichts ist verborgen vor ihm",
+      "Meine Sorge ist nicht, was geschieht",
+      "An kommenden Dingen",
+      "Meine Sorge ist, meinem Herrn zu gefallen",
+      "Im Leben und im Tod"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Ich weiß nicht, was sein wird",
+      "Von meinem Leben morgen",
+      "Eines weiß ich gewiss",
+      "Mein Herr hält meine Hand"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Ich weiß, der Weg ist hell",
+      "Ich weiß, mein Herr ist treu",
+      "Denn er ist mein bester Gefährte",
+      "Und mein bester Helfer",
+      "Bald werde ich gehen",
+      "Zur ewigen Heimat",
+      "Wo keine Träne fließt",
+      "Noch der Tod herrscht"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Ich kenne nicht die Zukünfte",
+      "Ich weiß nicht, was sein wird",
+      "Doch ich weiß, dass",
+      "Mein Meister ein zarter Vater ist",
+      "Denn er sorgt für die Vögel",
+      "Und so sorgt er für mich",
+      "Sein Blut genügt mir als Decke",
+      "Sein Geist erfüllt mich"
+     ]
+    }
+   ],
    "author": "يوسف قسطة",
    "authorOriginal": "Ira F. Stanphill"
   },
@@ -86786,6 +87154,84 @@
       "الحِلوة مُرّة",
       "ومعْ يسوعي",
       "المرّة حِلوة"
+     ]
+    }
+   ],
+   "title_en": "Giver of Songs in My Night of Pain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Giver of songs",
+      "In my night of pain",
+      "He wipes my tears",
+      "My Lord, my peace"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "He renewed my mind",
+      "He dried my tears",
+      "He lit my eyes",
+      "He purified my hearing"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Melodies of my lute",
+      "Return to singing",
+      "To the Lord I offer",
+      "My thanks and worship"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Without Him the sweet stays",
+      "Bitter indeed",
+      "And with my Jesus",
+      "The bitter is sweet"
+     ]
+    }
+   ],
+   "title_de": "Geber der Lieder in meiner Nacht des Schmerzes",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Geber der Lieder",
+      "In meiner Nacht des Schmerzes",
+      "Er wischt meine Tränen",
+      "Mein Herr, mein Friede"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Er erneuerte meinen Sinn",
+      "Er trocknete meine Tränen",
+      "Er erleuchtete meine Augen",
+      "Er reinigte mein Gehör"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Melodien meiner Laute",
+      "Kehrt zurück zum Singen",
+      "Dem Herrn bringe ich dar",
+      "Meinen Dank und Anbetung"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Ohne ihn bleibt das Süße",
+      "Wahrlich bitter",
+      "Und mit meinem Jesus",
+      "Ist das Bittere süß"
      ]
     }
    ],
@@ -86850,6 +87296,120 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "I Have a Radiant Abode on High",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "I have a radiant abode on high",
+      "Its glory surpasses daylight",
+      "On high, where the worlds Redeemer",
+      "His face shines like the sun"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "We shall meet soon",
+      "Around the throne of the glorious Beloved"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "We shall sing at the meeting",
+      "Sweet praise of a forgiving Redeemer",
+      "For thereby that host gained",
+      "Rest with perfect joy"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "We shall offer to our Lord",
+      "Abundant praise of deep thanks",
+      "For He granted us His Son as Redeemer",
+      "Like a sheep to painful death"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "We shall meet on high after",
+      "Our walk ends from here",
+      "Where the sorrow of death ends",
+      "Then we forget toil and misery"
+     ]
+    },
+    {
+     "label": "5",
+     "lines": [
+      "Where we shall receive our crowns",
+      "For possession with the Victor",
+      "That Lord of kings most high",
+      "A conquering, mighty Lion"
+     ]
+    }
+   ],
+   "title_de": "Ich habe eine strahlende Wohnung in der Höhe",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Ich habe eine strahlende Wohnung in der Höhe",
+      "Ihre Herrlichkeit übertrifft das Tageslicht",
+      "In der Höhe, wo der Erlöser der Welt",
+      "Sein Angesicht leuchtet wie die Sonne"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Wir werden uns bald treffen",
+      "Um den Thron des herrlichen Geliebten"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Wir werden singen beim Treffen",
+      "Süßen Lobpreis eines vergebenden Erlösers",
+      "Denn dadurch gewann jene Schar",
+      "Ruhe mit vollkommener Freude"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Wir werden darbringen unserem Herrn",
+      "Reichlichen Lobpreis tiefen Dankes",
+      "Denn er gab uns seinen Sohn als Erlöser",
+      "Wie ein Schaf zum schmerzlichen Tod"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Wir werden uns treffen in der Höhe, nachdem",
+      "Unser Wandel endet von hier",
+      "Wo der Kummer des Todes endet",
+      "Dann vergessen wir Mühsal und Elend"
+     ]
+    },
+    {
+     "label": "5",
+     "lines": [
+      "Wo wir empfangen unsere Kronen",
+      "Zum Besitz mit dem Sieger",
+      "Jener Herr der Könige, Allerhöchster",
+      "Ein siegender, mächtiger Löwe"
+     ]
+    }
+   ],
    "author": "اسعد الشدودي",
    "authorOriginal": "Sanford Fillmore Bennett"
   },
@@ -86918,6 +87478,132 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "What Is My Sin",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "What shall I do for my vineyard, what I have not done",
+      "What shall another bear, that I have not borne first",
+      "I cast my crowns down to the ground",
+      "I laid my life down to death",
+      "All became cheap to me, O my Beloved",
+      "For You all becomes cheap, O my Beloved",
+      "Will You accept me",
+      "Do not lose the way",
+      "Here is the way"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "What is my sin, to be crucified like robbers",
+      "What is my crime, that my blood is shed and spilled",
+      "It is your sin, your crime, it is the sin",
+      "They crowned me with thorns, where is my crown that I own",
+      "That you may become righteous",
+      "Blameless in hope"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Your love of evil lashed my back with whips",
+      "And stubborn injustice burst my side with spears",
+      "This hand they pierced with torment",
+      "They bound it with sin, they stripped my clothes",
+      "That you may become righteous",
+      "Blameless in hope"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Did you see the cross stained with blood",
+      "Sweat and pain flowing from it without weeping",
+      "There I paid all you owed in full",
+      "The sentence of death was the price",
+      "That you may become righteous",
+      "Blameless in hope"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "All in me burned and burned upon the cross",
+      "In my hands and feet, in the head, fire like flame",
+      "But my love stands firm as ever, indeed grows",
+      "My heart beats with love, calling, will you",
+      "That you may become righteous",
+      "Blameless in hope"
+     ]
+    }
+   ],
+   "title_de": "Was ist meine Sünde",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Was soll ich tun für meinen Weinberg, was ich nicht tat",
+      "Was soll ein anderer tragen, was ich nicht zuerst trug",
+      "Ich warf meine Kronen nieder zur Erde",
+      "Ich legte mein Leben nieder zum Tod",
+      "Alles wurde billig für mich, o mein Geliebter",
+      "Für dich wird alles billig, o mein Geliebter",
+      "Willst du mich annehmen",
+      "Verliere nicht den Weg",
+      "Hier ist der Weg"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Was ist meine Sünde, gekreuzigt zu werden wie Räuber",
+      "Was ist mein Verbrechen, dass mein Blut vergossen wird",
+      "Es ist deine Sünde, dein Verbrechen, es ist die Sünde",
+      "Sie krönten mich mit Dornen, wo ist meine Krone, die ich besitze",
+      "Dass du gerecht werdest",
+      "Tadellos in Hoffnung"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Deine Liebe zum Bösen peitschte meinen Rücken mit Geißeln",
+      "Und hartnäckiges Unrecht barst meine Seite mit Speeren",
+      "Diese Hand durchbohrten sie mit Qual",
+      "Sie banden sie mit Sünde, sie zogen mir die Kleider aus",
+      "Dass du gerecht werdest",
+      "Tadellos in Hoffnung"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Sahst du das Kreuz, befleckt mit Blut",
+      "Schweiß und Schmerz fließend davon ohne Weinen",
+      "Dort zahlte ich alles, was du schuldest, voll",
+      "Das Todesurteil war der Preis",
+      "Dass du gerecht werdest",
+      "Tadellos in Hoffnung"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Alles in mir brannte und brannte am Kreuz",
+      "In meinen Händen und Füßen, im Haupt, Feuer wie Flamme",
+      "Doch meine Liebe steht fest wie je, ja wächst",
+      "Mein Herz schlägt mit Liebe, rufend, willst du",
+      "Dass du gerecht werdest",
+      "Tadellos in Hoffnung"
+     ]
+    }
+   ],
    "author": "ولسن رمزي"
   },
   {
@@ -86971,7 +87657,107 @@
      ]
     }
    ],
-   "chorus": "القرار"
+   "chorus": "القرار",
+   "title_en": "Who Built the Sky",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Who built the sky",
+      "With its shining stars",
+      "Who spread the earth, and",
+      "Raised the high mountains"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "God created them",
+      "All by power",
+      "Glory to Him, for He",
+      "Made them with wisdom"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Who created the seas and the",
+      "Fish swimming therein",
+      "Who made the beasts of the heights",
+      "And every singing bird"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Who grew the grass and the",
+      "Kinds of flowers and trees",
+      "And made the trees in",
+      "Their season give fruit"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Who created man with",
+      "A mind whereby he excelled",
+      "Ruling him over the",
+      "Earth, over what He created"
+     ]
+    }
+   ],
+   "title_de": "Wer baute den Himmel",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Wer baute den Himmel",
+      "Mit seinen leuchtenden Sternen",
+      "Wer breitete die Erde aus, und",
+      "Erhob die hohen Berge"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Gott schuf sie",
+      "Alle durch Macht",
+      "Ehre ihm, denn er",
+      "Machte sie mit Weisheit"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Wer schuf die Meere und die",
+      "Fische, darin schwimmend",
+      "Wer machte die Tiere der Höhen",
+      "Und jeden singenden Vogel"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Wer ließ wachsen das Gras und die",
+      "Arten von Blumen und Bäumen",
+      "Und ließ die Bäume in",
+      "Ihrer Zeit Frucht geben"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Wer schuf den Menschen mit",
+      "Einem Verstand, womit er sich auszeichnete",
+      "Ihn setzend über die",
+      "Erde, über was er schuf"
+     ]
+    }
+   ]
   },
   {
    "number": 665,
@@ -87014,6 +87800,90 @@
       "ترجو النجاهْ",
       "أسرِعْ فروحُ القُدسِ",
       "يدعو الخطاهْ"
+     ]
+    }
+   ],
+   "title_en": "The Worlds Redeemer Calls You, Say Here I Am",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "The worlds Redeemer calls you",
+      "Say, here I am",
+      "And His light guides you",
+      "Radiant in splendor",
+      "Life is like a shadow",
+      "As it passes",
+      "While you in error",
+      "Cannot see"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "O neglecter of salvation",
+      "Answer the Lamb",
+      "Woe to you from a punishment",
+      "Unbearable",
+      "For the day of reckoning",
+      "Is near at hand",
+      "So flee from punishment",
+      "To the Beloved"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Glory to Him exalted",
+      "A forgiving Lord",
+      "How many repentant have gained",
+      "Blotting of evils",
+      "You are drowning in despair",
+      "Hoping for rescue",
+      "Hurry, for the Holy Spirit",
+      "Calls the straying"
+     ]
+    }
+   ],
+   "title_de": "Der Erlöser der Welt ruft dich, sprich, hier bin ich",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Der Erlöser der Welt ruft dich",
+      "Sprich, hier bin ich",
+      "Und sein Licht leitet dich",
+      "Strahlend im Glanz",
+      "Das Leben ist wie ein Schatten",
+      "Wenn es vorübergeht",
+      "Während du im Irrtum",
+      "Nicht sehen kannst"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "O Vernachlässiger des Heils",
+      "Antworte dem Lamm",
+      "Wehe dir vor einer Strafe",
+      "Unerträglich",
+      "Denn der Tag der Abrechnung",
+      "Ist nahe bevorstehend",
+      "So fliehe vor der Strafe",
+      "Zum Geliebten"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Herrlichkeit ihm, dem Erhabenen",
+      "Einem vergebenden Herrn",
+      "Wie viele Bußfertige erlangten",
+      "Tilgen der Übel",
+      "Du ertrinkst in Verzweiflung",
+      "Hoffend auf Rettung",
+      "Eile, denn der Heilige Geist",
+      "Ruft die Irrenden"
      ]
     }
    ],
@@ -87070,7 +87940,107 @@
      ]
     }
    ],
-   "chorus": "القرار"
+   "chorus": "القرار",
+   "title_en": "The World Builds and Plants",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "The world builds and plants",
+      "And never is full",
+      "Its care is to dress and undress",
+      "And of Jesus heedless"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "But I am not from here",
+      "For here is a passing world",
+      "No wealth, no rank, no riches",
+      "I have another homeland"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "The world runs and toils",
+      "After a master called money",
+      "And sowing evil never prospers",
+      "And all is passing"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Carrying the cares of days",
+      "Deprived of peace",
+      "With complaint and much talk",
+      "From straits and pains"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "They weep over betraying luck",
+      "Not coming as they wish",
+      "Wanting gardens in this world",
+      "While life awaits them"
+     ]
+    }
+   ],
+   "title_de": "Die Welt baut und pflanzt",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Die Welt baut und pflanzt",
+      "Und wird niemals satt",
+      "Ihre Sorge ist anzuziehen und auszuziehen",
+      "Und Jesu achtlos"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Doch ich bin nicht von hier",
+      "Denn hier ist eine vergängliche Welt",
+      "Kein Vermögen, kein Rang, kein Reichtum",
+      "Ich habe eine andere Heimat"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Die Welt rennt und müht sich",
+      "Nach einem Herrn namens Geld",
+      "Und Böses säen gedeiht nie",
+      "Und alles ist vergänglich"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Tragend die Sorgen der Tage",
+      "Beraubt des Friedens",
+      "Mit Klage und vielem Reden",
+      "Aus Enge und Schmerzen"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Sie weinen über verräterisches Glück",
+      "Nicht kommend, wie sie wünschen",
+      "Wollend Gärten in dieser Welt",
+      "Während das Leben sie erwartet"
+     ]
+    }
+   ]
   },
   {
    "number": 667,
@@ -87100,6 +88070,64 @@
       "ربي حسبَ وعدِكَ",
       "ذا لأنك الأمين",
       "يا حبيب آمين"
+     ]
+    }
+   ],
+   "title_en": "O My Master, Here Is My Trust",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "O my Master, here is my trust",
+      "That You will work",
+      "As You began within me",
+      "With power You will complete",
+      "For how much more in Your heart",
+      "Of Your bounty awaits",
+      "And how much longing in my heart",
+      "For grace to pour",
+      "So let me never be content",
+      "With all You gave me",
+      "But asking from Your hand",
+      "For You will give me",
+      "For all You gave me",
+      "Is from the fruits of Your love",
+      "So sanctify me, my Master",
+      "That all may become Yours",
+      "So work for Your glory",
+      "Fruitful in Your servant",
+      "My Lord, according to Your promise",
+      "This, for You are faithful",
+      "O Beloved, amen"
+     ]
+    }
+   ],
+   "title_de": "O mein Meister, hier ist mein Vertrauen",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "O mein Meister, hier ist mein Vertrauen",
+      "Dass du wirken wirst",
+      "Wie du begannst in mir",
+      "Mit Macht wirst du vollenden",
+      "Denn wie viel mehr in deinem Herzen",
+      "Von deiner Güte wartet",
+      "Und wie viel Sehnen in meinem Herzen",
+      "Nach Gnade, die sich ergießt",
+      "So lass mich niemals genügen",
+      "An allem, was du mir gabst",
+      "Sondern bittend von deiner Hand",
+      "Denn du wirst mir geben",
+      "Denn alles, was du mir gabst",
+      "Ist von den Früchten deiner Liebe",
+      "So heilige mich, mein Meister",
+      "Dass alles dein werde",
+      "So wirke zu deiner Herrlichkeit",
+      "Fruchtbar in deinem Knecht",
+      "Mein Herr, nach deiner Verheißung",
+      "Dies, denn du bist treu",
+      "O Geliebter, Amen"
      ]
     }
    ]
@@ -87147,6 +88175,88 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "I Belong to the Redeemer Who Redeemed Me",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "I belong to the Redeemer who redeemed me",
+      "And with His cross and death gave me life",
+      "He freed me, with His blood bought me",
+      "The snare broke, and He saved me"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Glory to Jesus, thanks to Jesus",
+      "Glory to Jesus, praise to Jesus",
+      "Hallelujah, hallelujah, I belong to Jesus",
+      "Hallelujah, I belong to Jesus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "I belong to the Redeemer who suffered",
+      "For the whole world with His pains",
+      "To His cross I shall submit and learn",
+      "And my road grows clear in His words"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "I belong to the Redeemer who called me",
+      "From the evil lands of bondage",
+      "To the life of obedience in my faith",
+      "To the life of practical righteousness"
+     ]
+    }
+   ],
+   "title_de": "Ich gehöre dem Erlöser, der mich erlöste",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Ich gehöre dem Erlöser, der mich erlöste",
+      "Und mit seinem Kreuz und Tod gab er mir Leben",
+      "Er befreite mich, mit seinem Blut kaufte er mich",
+      "Die Schlinge brach, und er rettete mich"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Herrlichkeit Jesus, Dank Jesus",
+      "Herrlichkeit Jesus, Lobpreis Jesus",
+      "Halleluja, Halleluja, ich gehöre Jesus",
+      "Halleluja, ich gehöre Jesus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Ich gehöre dem Erlöser, der litt",
+      "Für die ganze Welt mit seinen Schmerzen",
+      "Seinem Kreuz werde ich mich beugen und lernen",
+      "Und mein Weg wird klar in seinen Worten"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Ich gehöre dem Erlöser, der mich rief",
+      "Aus den bösen Ländern der Knechtschaft",
+      "Zum Leben des Gehorsams in meinem Glauben",
+      "Zum Leben der tätigen Gerechtigkeit"
+     ]
+    }
+   ],
    "author": "ماهر فايز"
   },
   {
@@ -87202,6 +88312,108 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "O You Who Paid the Dearest Price",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "How sweet is worship before You",
+      "I sing with the lute to Your majesty"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "O You who paid",
+      "The dearest price",
+      "And when I accepted You, my Lord",
+      "Authority became mine",
+      "While You tend my life",
+      "With all tenderness",
+      "What fills my heart before You",
+      "But worship"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "And my voice to You shall rise",
+      "With shouts of songs",
+      "And since You live in",
+      "My days are a feast",
+      "And my life beside You sings",
+      "Of promises",
+      "What fills my heart before You",
+      "But worship"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "My glory in You and my pride",
+      "And I have none but You",
+      "And a lamp to my feet is Your word",
+      "And I walk behind You",
+      "And over my days, O my Lord",
+      "None rules but You",
+      "What fills my heart before You",
+      "But worship"
+     ]
+    }
+   ],
+   "title_de": "O du, der du den teuersten Preis zahltest",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Wie süß ist Anbetung vor dir",
+      "Ich singe mit der Laute deiner Majestät"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "O du, der du zahltest",
+      "Den teuersten Preis",
+      "Und als ich dich annahm, mein Herr",
+      "Wurde mir Vollmacht",
+      "Während du mein Leben hütest",
+      "Mit aller Zärtlichkeit",
+      "Was füllt mein Herz vor dir",
+      "Außer Anbetung"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Und meine Stimme zu dir soll steigen",
+      "Mit Rufen von Liedern",
+      "Und da du lebst in",
+      "Meinen Tagen ist Fest",
+      "Und mein Leben neben dir singt",
+      "Von Verheißungen",
+      "Was füllt mein Herz vor dir",
+      "Außer Anbetung"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Meine Ehre in dir und mein Stolz",
+      "Und ich habe keinen außer dir",
+      "Und eine Leuchte für meine Füße ist dein Wort",
+      "Und ich wandle hinter dir",
+      "Und über meine Tage, o mein Herr",
+      "Herrscht keiner außer dir",
+      "Was füllt mein Herz vor dir",
+      "Außer Anbetung"
+     ]
+    }
+   ],
    "author": "منال سمير"
   },
   {
@@ -87219,6 +88431,38 @@
       "القدرةَ والكرامةَ",
       "قد ذبحتَ واشتريتنا",
       "فديتنا بدمِك، نحبك"
+     ]
+    }
+   ],
+   "title_en": "Above Every Power and Rule",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Above every power and rule",
+      "Above every name and dominion",
+      "You stand, seated in the heavens",
+      "All things submit to You",
+      "Worthy to receive glory",
+      "Power and honor",
+      "You were slain and bought us",
+      "You redeemed us with Your blood, we love You"
+     ]
+    }
+   ],
+   "title_de": "Über aller Macht und Herrschaft",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Über aller Macht und Herrschaft",
+      "Über jedem Namen und jeder Herrschaft",
+      "Du stehst, sitzend in den Himmeln",
+      "Alle Dinge unterwerfen sich dir",
+      "Würdig, Herrlichkeit zu empfangen",
+      "Macht und Ehre",
+      "Du wurdest geschlachtet und kauftest uns",
+      "Du erlöstest uns mit deinem Blut, wir lieben dich"
      ]
     }
    ]
@@ -87265,6 +88509,86 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "Who Am I to Become of Your People",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Who am I to become of Your people",
+      "On whom Your name is called",
+      "I wonder, did You call me",
+      "To be a king for You",
+      "Can a stranger, a straying sinner",
+      "Belong to the King",
+      "You showed me how merciful You are",
+      "When You planted me in Your vineyard"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Blessed be the name of the Lord",
+      "Blessed be the name of the Lord",
+      "All within me says",
+      "Blessed be the name of the Lord"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "You showed me Your great mercy",
+      "By shedding the Lambs blood",
+      "Your love surpasses all imagination",
+      "Wholly I bless You",
+      "Glory to You, the veil was torn",
+      "And You revealed Your secret to us",
+      "Now I cry, O Father of the Father",
+      "Glory, for I became Yours"
+     ]
+    }
+   ],
+   "title_de": "Wer bin ich, zu deinem Volk zu gehören",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Wer bin ich, zu deinem Volk zu gehören",
+      "Über dem dein Name angerufen ist",
+      "Ich wundere mich, riefst du mich",
+      "Ein König für dich zu sein",
+      "Kann ein Fremder, ein verirrter Sünder",
+      "Dem König gehören",
+      "Du zeigtest mir, wie barmherzig du bist",
+      "Als du mich pflanztest in deinen Weinberg"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Gesegnet sei der Name des Herrn",
+      "Gesegnet sei der Name des Herrn",
+      "Alles in mir spricht",
+      "Gesegnet sei der Name des Herrn"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Du zeigtest mir deine große Barmherzigkeit",
+      "Durch Vergießen des Blutes des Lammes",
+      "Deine Liebe übertrifft alle Vorstellung",
+      "Ganz segne ich dich",
+      "Herrlichkeit dir, der Vorhang zerriss",
+      "Und du offenbartest uns dein Geheimnis",
+      "Nun rufe ich, o Vater des Vaters",
+      "Herrlichkeit, denn ich wurde dein"
+     ]
+    }
+   ],
    "author": "نانسي فلتس",
    "authorOriginal": "Dawn Rogers"
   },
@@ -87311,6 +88635,88 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "You Are the Only King",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "You are the only King",
+      "The proclamation of Your kingship grows for us",
+      "And at the cost of the crosss blood",
+      "Over Satan victory is sure"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "With shouts and praises",
+      "We enter our wars victorious",
+      "And with songs raising banners",
+      "Banners of victory, with You conquering"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "We lift Your name, O Son of God",
+      "For by Your authority we have life",
+      "To Your name every forehead bows",
+      "Your praise from every lip"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Yours is power and dominion",
+      "To You we proclaim all melodies",
+      "And with Your Spirit we lift tunes",
+      "Your name exalted everywhere"
+     ]
+    }
+   ],
+   "title_de": "Du bist der einzige König",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Du bist der einzige König",
+      "Die Verkündigung deines Königtums wächst für uns",
+      "Und um den Preis des Blutes des Kreuzes",
+      "Über Satan ist der Sieg gewiss"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Mit Rufen und Lobpreisen",
+      "Ziehen wir in unsere Kriege siegreich",
+      "Und mit Liedern Banner erhebend",
+      "Banner des Sieges, mit dir siegend"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Wir erheben deinen Namen, o Sohn Gottes",
+      "Denn durch deine Vollmacht haben wir Leben",
+      "Vor deinem Namen beugt sich jede Stirn",
+      "Dein Lobpreis von jeder Lippe"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Dein ist Macht und Herrschaft",
+      "Dir verkünden wir alle Melodien",
+      "Und mit deinem Geist erheben wir Weisen",
+      "Dein Name erhöht überall"
+     ]
+    }
+   ],
    "author": "جوزيف نصرالله"
   },
   {
@@ -87360,6 +88766,102 @@
       "إلى من فدانا على الصليب",
       "قد كفكف دمعنا الغزير",
       "ولقد محا كل نحيب"
+     ]
+    }
+   ],
+   "title_en": "Why Does the Sun Hide Its Face",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Why does the sun hide its face",
+      "Why does the rock hurl lava",
+      "Why does thunder crash in wrath",
+      "The Lord of nature in pains"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Sighs that bloody the hardest hearts",
+      "Upon Him were cast all sins",
+      "A cry from a suffering heart",
+      "Eli, Eli, why have You forsaken me"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "What love is this that called You",
+      "Amid pains to call, O Tender One",
+      "Forgive them, Father, for they",
+      "Know not what they do"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "O shameful cross, you became for us",
+      "The pride of life, the sign of our glory",
+      "The Son of God accepted you",
+      "To save us sinners"
+     ]
+    },
+    {
+     "label": "5",
+     "lines": [
+      "How shall we repay our great debt",
+      "To Him who redeemed us on the cross",
+      "He dried our abundant tears",
+      "And blotted every wailing"
+     ]
+    }
+   ],
+   "title_de": "Warum verbirgt die Sonne ihr Angesicht",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Warum verbirgt die Sonne ihr Angesicht",
+      "Warum schleudert der Fels Lava",
+      "Warum kracht der Donner im Zorn",
+      "Der Herr der Natur in Schmerzen"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Seufzer, die die härtesten Herzen blutig machen",
+      "Auf ihn wurden alle Sünden geworfen",
+      "Ein Schrei aus leidendem Herzen",
+      "Eli, Eli, warum hast du mich verlassen"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Was ist das für eine Liebe, die dich rief",
+      "Inmitten der Schmerzen zu rufen, o Zarter",
+      "Vergib ihnen, Vater, denn sie",
+      "Wissen nicht, was sie tun"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "O schmachvolles Kreuz, du wurdest für uns",
+      "Der Stolz des Lebens, das Zeichen unserer Herrlichkeit",
+      "Der Sohn Gottes nahm dich an",
+      "Um uns Sünder zu retten"
+     ]
+    },
+    {
+     "label": "5",
+     "lines": [
+      "Wie sollen wir unsere große Schuld vergelten",
+      "Dem, der uns erlöste am Kreuz",
+      "Er trocknete unsere reichlichen Tränen",
+      "Und tilgte jedes Wehklagen"
      ]
     }
    ]
@@ -87418,7 +88920,113 @@
      ]
     }
    ],
-   "chorus": "القرار"
+   "chorus": "القرار",
+   "title_en": "Never Shall I See a Greater, Stronger Love",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Never shall I see a greater, stronger love",
+      "Than Your love on the cross, O my Master",
+      "You chose it willingly, though it is a punishment",
+      "Just, for a guilty rebel"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Like a sheep led to slaughter, You opened not Your mouth",
+      "Like a silent ewe they led You to the cross there",
+      "In Golgotha, in Golgotha",
+      "Upon the cross, O my Master"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Peter denied and reviled us",
+      "With cowardice when he denied You",
+      "We all said, traitor",
+      "To Judas when he betrayed You",
+      "And we today before people",
+      "Are ashamed of You, we deny You",
+      "With two coins of copper",
+      "Like Judas we betray You",
+      "Yet despite this we see You forget",
+      "Your pain with Your renewed love"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "The crowd kept calling",
+      "For Barabbas to be released",
+      "Your crucifixion was their demand",
+      "That You be flogged with the whip",
+      "They judged You, reviled You",
+      "They loaded You with the shameful cross",
+      "Between thieves they hung You",
+      "O holy, righteous One",
+      "Yet despite this we see You forget",
+      "Your pain with Your renewed love"
+     ]
+    }
+   ],
+   "title_de": "Niemals werde ich größere, stärkere Liebe sehen",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Niemals werde ich größere, stärkere Liebe sehen",
+      "Als deine Liebe am Kreuz, o mein Meister",
+      "Du wähltest sie willig, obwohl sie eine Strafe ist",
+      "Gerecht, für einen schuldigen Rebellen"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Wie ein Schaf zur Schlachtung geführt, öffnetest du nicht deinen Mund",
+      "Wie ein schweigendes Mutterschaf führten sie dich zum Kreuz dort",
+      "In Golgatha, in Golgatha",
+      "Am Kreuz, o mein Meister"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Petrus verleugnete und schalt uns",
+      "Mit Feigheit, als er dich verleugnete",
+      "Wir alle sagten, Verräter",
+      "Zu Judas, als er dich verriet",
+      "Und wir heute vor den Menschen",
+      "Schämen uns deiner, wir verleugnen dich",
+      "Mit zwei Kupfermünzen",
+      "Wie Judas verraten wir dich",
+      "Doch trotzdem sehen wir, wie du vergisst",
+      "Deinen Schmerz mit deiner erneuerten Liebe"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Die Menge rief weiter",
+      "Dass Barabbas freigelassen werde",
+      "Deine Kreuzigung war ihre Forderung",
+      "Dass du gegeißelt werdest mit der Peitsche",
+      "Sie richteten dich, schmähten dich",
+      "Sie beluden dich mit dem schmachvollen Kreuz",
+      "Zwischen Räubern hängten sie dich",
+      "O Heiliger, Gerechter",
+      "Doch trotzdem sehen wir, wie du vergisst",
+      "Deinen Schmerz mit deiner erneuerten Liebe"
+     ]
+    }
+   ]
   },
   {
    "number": 675,
@@ -87475,6 +89083,112 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "I Heard Your Call, O My Lord",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Your tenderness, O Lord of the worlds",
+      "To You I lifted my prayer",
+      "If I live, it is by faith",
+      "That honors the meaning of my life"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "I heard Your call, O my Lord",
+      "Resounding in my depths",
+      "An echo answering in my heart",
+      "With the throbbing melody",
+      "So I walked by Your guidance on my road",
+      "With the thirst of the yearning in me",
+      "For Your pure, sweet fountain",
+      "With it I water my wishes"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "The roar of the sea frightens me",
+      "And the sound of crashing thunder",
+      "But I find comfort from You with dawn",
+      "With floods of favor and bounty",
+      "O Creator of the universe, who knows",
+      "But You the secret of existence",
+      "For how many secrets in You, O Lord",
+      "And amazing signs"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "My God, if I call, I have none",
+      "But You to answer the call",
+      "And when I stagger under my burdens",
+      "In Your favor is my comfort",
+      "I cast my wishes and my hopes",
+      "With You, and all my hope",
+      "For You are my refuge and my resort",
+      "In You and to You is my rescue"
+     ]
+    }
+   ],
+   "title_de": "Ich hörte deinen Ruf, o mein Herr",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Deine Zärtlichkeit, o Herr der Welten",
+      "Zu dir erhob ich mein Gebet",
+      "Wenn ich lebe, so durch Glauben",
+      "Der ehrt den Sinn meines Lebens"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Ich hörte deinen Ruf, o mein Herr",
+      "Widerhallend in meinen Tiefen",
+      "Ein Echo antwortend in meinem Herzen",
+      "Mit der pochenden Melodie",
+      "So ging ich durch deine Leitung auf meinem Weg",
+      "Mit dem Durst des Sehnenden in mir",
+      "Zu deiner reinen, süßen Quelle",
+      "Damit tränke ich meine Wünsche"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Das Tosen des Meeres erschreckt mich",
+      "Und der Klang krachenden Donners",
+      "Doch ich finde Trost von dir mit der Morgenröte",
+      "Mit Fluten von Gunst und Fülle",
+      "O Schöpfer des Universums, wer kennt",
+      "Außer dir das Geheimnis des Daseins",
+      "Denn wie viele Geheimnisse in dir, o Herr",
+      "Und erstaunliche Zeichen"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Mein Gott, wenn ich rufe, habe ich keinen",
+      "Außer dich, den Ruf zu erhören",
+      "Und wenn ich wanke unter meinen Lasten",
+      "Ist in deiner Gunst mein Trost",
+      "Ich warf meine Wünsche und meine Hoffnungen",
+      "Zu dir, und all meine Hoffnung",
+      "Denn du bist meine Zuflucht und mein Ziel",
+      "In dir und zu dir ist meine Rettung"
+     ]
+    }
+   ],
    "author": "زكي ناصيف"
   },
   {
@@ -87525,7 +89239,101 @@
      ]
     }
    ],
-   "chorus": "القرار"
+   "chorus": "القرار",
+   "title_en": "How Often I Felt Alone",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "He inclined to me and heard my cry",
+      "Rewarding my patience and waiting",
+      "He brought my foot out of the net",
+      "I shall proclaim my joy, why hide it"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "How often I felt alone",
+      "And my rescue seemed far",
+      "The Redeemer heard my groaning in me",
+      "He sheltered my dying wick",
+      "His mercy covered all my faults",
+      "And breathed into me a new life"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Blessed is he who trusts in Him",
+      "The steps of his feet are firm",
+      "I was in the valley of death crying to Him",
+      "My heart wounded, who pities it",
+      "He came to me, filling me with His Spirits power",
+      "And the day came to rejoice therein"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "He made singing fill my being",
+      "And praise my banner and title",
+      "And they say, his God is wondrous",
+      "He never lets his faith fail",
+      "Who is the shepherd tending him",
+      "Turning his wailing to songs"
+     ]
+    }
+   ],
+   "title_de": "Wie oft fühlte ich mich allein",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Er neigte sich mir und hörte mein Schreien",
+      "Belohnend meine Geduld und mein Warten",
+      "Er brachte meinen Fuß aus dem Netz",
+      "Ich werde meine Freude verkünden, warum verbergen"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Wie oft fühlte ich mich allein",
+      "Und meine Rettung schien fern",
+      "Der Erlöser hörte mein Stöhnen in mir",
+      "Er schützte meinen erlöschenden Docht",
+      "Seine Barmherzigkeit deckte alle meine Fehler",
+      "Und hauchte in mich ein neues Leben"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Glücklich ist, wer auf ihn vertraut",
+      "Die Schritte seiner Füße sind fest",
+      "Ich war im Tal des Todes, zu ihm schreiend",
+      "Mein Herz verwundet, wer erbarmt sich",
+      "Er kam zu mir, mich füllend mit der Kraft seines Geistes",
+      "Und der Tag kam, darin zu frohlocken"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Er ließ Singen mein Wesen füllen",
+      "Und Lobpreis mein Banner und Titel",
+      "Und sie sagen, sein Gott ist wunderbar",
+      "Er lässt seinen Glauben niemals scheitern",
+      "Wer ist der Hirte, der ihn weidet",
+      "Der sein Wehklagen zu Liedern wandelt"
+     ]
+    }
+   ]
   },
   {
    "number": 677,
@@ -87570,6 +89378,88 @@
     }
    ],
    "chorus": "القرار",
+   "title_en": "He Came to Us From the Throne of Heaven",
+   "chorus_en": "Refrain",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "He came to us from heavens throne",
+      "That I may have life",
+      "Were it not for my Masters kindness",
+      "I would have no hope at all"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "To a better life",
+      "Christ has led me",
+      "Love has come between us",
+      "I shall sing with praise"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "My testimony, I live for Him",
+      "Not I, but His grace",
+      "My message, my preaching",
+      "To stay always near Him"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "O my Lord, dwell within me",
+      "Put in my mouth a hymn",
+      "Its tunes are praise to You",
+      "Its melodies are from You"
+     ]
+    }
+   ],
+   "title_de": "Er kam zu uns vom Thron des Himmels",
+   "chorus_de": "Kehrvers",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Er kam zu uns vom Thron des Himmels",
+      "Dass ich Leben habe",
+      "Wäre nicht die Güte meines Meisters",
+      "Hätte ich gar keine Hoffnung"
+     ]
+    },
+    {
+     "label": "1",
+     "lines": [
+      "Zu einem besseren Leben",
+      "Hat mich Christus geführt",
+      "Liebe ist gekommen zwischen uns",
+      "Ich werde singen mit Lobpreis"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Mein Zeugnis, ich lebe für ihn",
+      "Nicht ich, sondern seine Gnade",
+      "Meine Botschaft, meine Predigt",
+      "Immer nahe bei ihm zu bleiben"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "O mein Herr, wohne in mir",
+      "Lege in meinen Mund ein Lied",
+      "Seine Weisen sind Lobpreis dir",
+      "Seine Melodien sind von dir"
+     ]
+    }
+   ],
    "author": "ولسن رمزي"
   },
   {
@@ -87600,6 +89490,64 @@
       "وليوم مجيئه هاستنى أشوفه في الأمجاد في الأمجاد",
       "(أنا فرحان باهتف مجدا ليك، مجدا ليك، مجدا ليك)",
       "هللويا، هللويا، هللويا، هللويا"
+     ]
+    }
+   ],
+   "title_en": "Praise to the Lord Rises, and Joy Rises With It",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Praise to the Lord rises, and joy rises with it",
+      "My heart shall sing to the Almighty",
+      "With my faith I shall see good in my hard conditions",
+      "Sing, O my soul, to the Almighty",
+      "I proclaim my faith, I see my God, His is authority, His is authority",
+      "And before me He moves my mountains by faith, by faith",
+      "I shall rejoice and shout glory to You, glory to You, glory to You",
+      "Hallelujah, hallelujah, hallelujah, hallelujah"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "I proclaim Jesus the only King over all my life",
+      "My heart shall sing to Christ",
+      "And with the voice of praise I shall testify, and my prayer stands firm",
+      "Sing, O my soul, to Christ",
+      "My life and all my goals are for Christ, for Christ",
+      "And for the day of His coming I wait to see Him in glories, in glories",
+      "I am joyful, shouting glory to You, glory to You, glory to You",
+      "Hallelujah, hallelujah, hallelujah, hallelujah"
+     ]
+    }
+   ],
+   "title_de": "Lobpreis dem Herrn steigt auf, und Freude steigt mit ihm",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Lobpreis dem Herrn steigt auf, und Freude steigt mit ihm",
+      "Mein Herz wird singen dem Allmächtigen",
+      "Mit meinem Glauben werde ich Gutes sehen in meinen schweren Umständen",
+      "Singe, o meine Seele, dem Allmächtigen",
+      "Ich verkünde meinen Glauben, ich sehe meinen Gott, sein ist Vollmacht, sein ist Vollmacht",
+      "Und vor mir versetzt er meine Berge durch Glauben, durch Glauben",
+      "Ich werde mich freuen und rufen Ehre dir, Ehre dir, Ehre dir",
+      "Halleluja, Halleluja, Halleluja, Halleluja"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Ich verkünde Jesus als einzigen König über mein ganzes Leben",
+      "Mein Herz wird singen Christus",
+      "Und mit der Stimme des Lobes werde ich bezeugen, und mein Gebet steht fest",
+      "Singe, o meine Seele, Christus",
+      "Mein Leben und all meine Ziele sind für Christus, für Christus",
+      "Und auf den Tag seines Kommens warte ich, ihn zu sehen in Herrlichkeiten, in Herrlichkeiten",
+      "Ich bin freudig, rufend Ehre dir, Ehre dir, Ehre dir",
+      "Halleluja, Halleluja, Halleluja, Halleluja"
      ]
     }
    ],
@@ -87655,6 +89603,102 @@
      ]
     }
    ],
+   "title_en": "O Sinner, Has There Come to You",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "O sinner, has there come to you",
+      "One day like a breeze",
+      "A hidden voice knocking",
+      "On your sinful hearts doors"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Saying, pointing to the",
+      "Snares on the roads of ruin",
+      "Beware the love of the deceptive",
+      "World, love Him who redeemed you"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "For that is the Spirits voice, do not",
+      "Reject it if you are wise",
+      "Warning you",
+      "To choose a share in bliss"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "O heedless one, do not despise",
+      "Resisting the Spirit of God",
+      "And beware missing the chance",
+      "While you are in this life"
+     ]
+    },
+    {
+     "label": "5",
+     "lines": [
+      "So hear the voice of Him who",
+      "Called you, and rise to prayer",
+      "Seeking the Lord of creation",
+      "O you, aiming to dwell on high"
+     ]
+    }
+   ],
+   "title_de": "O Sünder, ist zu dir gekommen",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "O Sünder, ist zu dir gekommen",
+      "Eines Tages wie ein Hauch",
+      "Eine verborgene Stimme, klopfend",
+      "An deines sündigen Herzens Türen"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Sagend, weisend auf die",
+      "Schlingen auf den Wegen des Verderbens",
+      "Hüte dich vor der Liebe der trügerischen",
+      "Welt, liebe den, der dich erlöste"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Denn das ist die Stimme des Geistes, weise",
+      "Sie nicht ab, wenn du weise bist",
+      "Dich warnend",
+      "Zu wählen einen Anteil an der Wonne"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "O Achtloser, verachte nicht",
+      "Widerstehend dem Geist Gottes",
+      "Und hüte dich, die Chance zu verpassen",
+      "Solange du in diesem Leben bist"
+     ]
+    },
+    {
+     "label": "5",
+     "lines": [
+      "So höre die Stimme dessen, der",
+      "Dich rief, und erhebe dich zum Gebet",
+      "Suchend den Herrn der Schöpfung",
+      "O du, zielend, in der Höhe zu wohnen"
+     ]
+    }
+   ],
    "author": "اسعد الشدودي"
   },
   {
@@ -87695,6 +89739,84 @@
       "لأستطيعَ أن أعيشَ في وِئام",
       "ولا أكونُ معثرًا لإخوتي",
       "بقولي بل أقودُهُم إلى الأمام"
+     ]
+    }
+   ],
+   "title_en": "Teach Me to Be Silent",
+   "verses_en": [
+    {
+     "label": "1",
+     "lines": [
+      "Teach me to be silent",
+      "As You, my Master, faced pains",
+      "Train me always to become slow",
+      "Thinking, unhasty in speech"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "You left me the highest example when",
+      "You walked calling to peace",
+      "Comforting, strengthening, healing",
+      "Without noise, unlike all men"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "How often I saw You in tenderness",
+      "Comforting a sinner, forgiving sins",
+      "And how often I heard You calling",
+      "Come forth, to a dead man, and he rose"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "I want, Lord, a guard upon my mouth",
+      "That I may live in harmony",
+      "And never trip my brothers",
+      "With my words, but lead them forward"
+     ]
+    }
+   ],
+   "title_de": "Lehre mich zu schweigen",
+   "verses_de": [
+    {
+     "label": "1",
+     "lines": [
+      "Lehre mich zu schweigen",
+      "Wie du, mein Meister, Schmerzen begegnetest",
+      "Übe mich immer, zu werden langsam",
+      "Denkend, unhastig in der Rede"
+     ]
+    },
+    {
+     "label": "2",
+     "lines": [
+      "Du ließest mir das höchste Vorbild, als",
+      "Du wandeltest, zum Frieden rufend",
+      "Tröstend, stärkend, heilend",
+      "Ohne Lärm, anders als alle Menschen"
+     ]
+    },
+    {
+     "label": "3",
+     "lines": [
+      "Wie oft sah ich dich in Zärtlichkeit",
+      "Einen Sünder tröstend, Sünden vergebend",
+      "Und wie oft hörte ich dich rufen",
+      "Komm heraus, zu einem Toten, und er stand auf"
+     ]
+    },
+    {
+     "label": "4",
+     "lines": [
+      "Ich will, Herr, eine Wache auf meinem Mund",
+      "Dass ich leben möge in Eintracht",
+      "Und niemals meine Brüder straucheln lasse",
+      "Mit meinen Worten, sondern sie voranführe"
      ]
     }
    ],
