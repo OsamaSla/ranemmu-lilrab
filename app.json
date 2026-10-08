@@ -1,17 +1,17 @@
 {
   "expo": {
-    "name": "هلم نرنم",
-    "slug": "helmenarnam",
+    "name": "رنموا للرب",
+    "slug": "ranemmu.lilrab",
     "version": "1.0.0",
     "orientation": "default",
     "icon": "./assets/images/icon.png",
-    "scheme": "helmenarnam",
+    "scheme": "ranemmu.lilrab",
     "userInterfaceStyle": "automatic",
     "ios": {
-      "bundleIdentifier": "com.helmenarnam.app"
+      "bundleIdentifier": "com.ranemmu.lilrab"
     },
     "android": {
-      "package": "com.helmenarnam.app",
+      "package": "com.ranemmu.lilrab",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/images/android-icon-foreground.png",
@@ -39,7 +39,8 @@
     ],
     "experiments": {
       "typedRoutes": true,
-      "reactCompiler": true
+      "reactCompiler": true,
+      "baseUrl": "/ranemmu-lilrab"
     }
   }
 }

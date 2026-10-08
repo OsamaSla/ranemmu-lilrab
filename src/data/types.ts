@@ -43,6 +43,13 @@ export interface Hymn extends HymnSummary {
   title_de?: string;
   verses_de?: HymnVerse[];
   chorus_de?: string;
+  /**
+   * Who wrote the Arabic words (poet, or translator for translated hymns).
+   * Absent when unknown — the app hides the author line for those hymns.
+   */
+  author?: string;
+  /** Foreign original author (e.g. "John W. Peterson"), when known. */
+  authorOriginal?: string;
   /** Free-form notes shown in the info sheet. */
   info?: string;
   verses: HymnVerse[];
@@ -61,9 +68,4 @@ export interface SearchMatch {
   end: number;
   /** Set when the hit was in the title rather than a verse. */
   inTitle?: boolean;
-}
-
-/** Metadata exposed by the info sheet. */
-export interface HymnInfo {
-  meter?: string;
 }

@@ -15,7 +15,6 @@ import { Card } from '../../components/Card';
 import { FontChips } from '../../components/FontChips';
 import { IconButton } from '../../components/IconButton';
 import { SegmentedControl } from '../../components/SegmentedControl';
-import { LOCALES, type LocaleCode } from '../../i18n';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useLibrary } from '../../store/library';
@@ -39,8 +38,6 @@ export default function SettingsScreen() {
 
   const theme = useSettings((s) => s.theme);
   const setTheme = useSettings((s) => s.setTheme);
-  const locale = useSettings((s) => s.locale);
-  const setLocale = useSettings((s) => s.setLocale);
   const fontFamily = useSettings((s) => s.fontFamily);
   const setFontFamily = useSettings((s) => s.setFontFamily);
   const appScale = useSettings((s) => s.appScale);
@@ -55,8 +52,8 @@ export default function SettingsScreen() {
       { text: t('common.ok'), style: 'destructive', onPress: clearRecents },
     ]);
 
-  // The percent glyph follows the UI locale, not the book's numerals.
-  const percent = locale === 'ar' ? '٪' : '%';
+  // Translations live per hymn in the reader now; the chrome stays Arabic.
+  const percent = '٪';
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
@@ -73,14 +70,6 @@ export default function SettingsScreen() {
               { value: 'dark', label: t('settings.themeDark') },
               { value: 'system', label: t('settings.themeSystem') },
             ]}
-          />
-        </Section>
-
-        <Section title={t('settings.language')}>
-          <SegmentedControl
-            value={locale}
-            onChange={(value) => setLocale(value as LocaleCode)}
-            options={LOCALES.map((entry) => ({ value: entry.code, label: entry.nativeLabel }))}
           />
         </Section>
 
@@ -217,6 +206,7 @@ function IconRowButton({
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={label}
+      android_ripple={{ color: colors.border }}
       style={({ pressed }) => ({
         flexDirection: direction.row,
         alignItems: 'center',
@@ -225,7 +215,7 @@ function IconRowButton({
       })}>
       <MaterialCommunityIcons
         name={icon}
-        size={22}
+        size={24}
         color={destructive ? colors.danger : colors.text}
       />
       <AppText

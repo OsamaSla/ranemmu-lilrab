@@ -33,10 +33,12 @@ interface SettingsState {
   appScale: number;
   /** Point size for hymn text. */
   readerSize: number;
+  /** Admin area PIN. */
+  adminPin: string;
 
   setTheme: (theme: ThemePreference) => void;
-  setLocale: (locale: LocaleCode) => void;
   setFontFamily: (id: string) => void;
+  setAdminPin: (pin: string) => void;
   setAppScale: (scale: number) => void;
   setReaderSize: (size: number) => void;
   increaseReaderSize: () => void;
@@ -56,10 +58,11 @@ export const useSettings = create<SettingsState>()(
       fontFamily: DEFAULT_FONT_ID,
       appScale: 1,
       readerSize: 20,
+      adminPin: '1234',
 
       setTheme: (theme) => set({ theme }),
-      setLocale: (locale) => set({ locale }),
       setFontFamily: (fontFamily) => set({ fontFamily }),
+      setAdminPin: (adminPin) => set({ adminPin }),
 
       setAppScale: (appScale) =>
         set({ appScale: clamp(snap(appScale, APP_SCALE_STEP), APP_SCALE_MIN, APP_SCALE_MAX) }),
@@ -80,6 +83,15 @@ export const useSettings = create<SettingsState>()(
     {
       name: 'helmenarnam.settings',
       storage: createJSONStorage(() => AsyncStorage),
+      // v1: the settings language switch is gone (translations live per
+      // hymn in the reader), so any stored non-Arabic locale resets to Arabic.
+      // v2: adds the admin PIN (defaults to '1234' for older stores).
+      version: 2,
+      migrate: (persisted) => ({
+        adminPin: '1234',
+        ...((persisted ?? {}) as Record<string, unknown>),
+        locale: 'ar',
+      }),
     },
   ),
 );

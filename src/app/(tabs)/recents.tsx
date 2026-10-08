@@ -14,6 +14,7 @@ import type { HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useLibrary } from '../../store/library';
+import { useOverrides } from '../../store/overrides';
 import { spacing } from '../../theme/tokens';
 
 export default function RecentsScreen() {
@@ -23,6 +24,7 @@ export default function RecentsScreen() {
 
   const recents = useLibrary((s) => s.recents);
   const clearRecents = useLibrary((s) => s.clearRecents);
+  const corpusVersion = useOverrides((s) => s.updatedAt);
 
   // Resolving ids to summaries drops entries whose hymn no longer exists, which
   // happens whenever the corpus is rebuilt with different content.
@@ -34,7 +36,9 @@ export default function RecentsScreen() {
       if (summary) resolved.push({ id: entry.id, summary });
     }
     return resolved;
-  }, [recents]);
+    // corpusVersion only retriggers this after admin edits land.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [recents, corpusVersion]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>

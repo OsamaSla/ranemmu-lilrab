@@ -105,7 +105,7 @@ const SHEETS = [
 ];
 
 const INSTRUCTIONS = [
-  'تعليمات إدخال الترانيم — كتاب «هلم نرنم» (اقرأ مرة واحدة فقط)',
+  'تعليمات إدخال الترانيم — كتاب «رنموا للرب» (اقرأ مرة واحدة فقط)',
   '',
   '١. كل بيت في الكتاب = صف في الجدول. لا تدمج أبياتاً في خلية واحدة.',
   '٢. رقم الترنيمة وعنوانها ومقياس الكلام والقرار تُكتب في أول صف فقط؛ اتركها فارغة في بقية الصفوف.',
@@ -162,7 +162,7 @@ function buildDataSheet(wb, spec) {
 
 async function main() {
   const wb = new ExcelJS.Workbook();
-  wb.creator = 'helmenarnam content pipeline';
+  wb.creator = 'ranemmu.lilrab content pipeline';
   wb.views = [{ activeTab: 0 }];
 
   for (const spec of SHEETS) buildDataSheet(wb, spec);

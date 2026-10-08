@@ -25,7 +25,7 @@ interface IndexedLine {
 
 interface SearchDoc {
   summary: HymnSummary;
-  title: Normalized;
+  titles: { normalized: Normalized; original: string }[];
   lines: IndexedLine[];
 }
 
@@ -35,16 +35,14 @@ let cache: { key: string; docs: SearchDoc[] } | null = null;
 function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
   if (cache?.key === key) return cache.docs;
 
-  const docs = hymns.map((hymn) => ({
-    summary: {
-      id: hymn.id,
-      number: hymn.number,
-      title: hymn.title,
-      meter: hymn.meter,
-      hasChorus: hymn.verses.some((v) => v.chorus),
-    },
-    title: normalize(hymn.title),
-    lines: hymn.verses.flatMap((verse, verseIndex) =>
+  const docs = hymns.map((hymn) => {
+    const titles = [{ normalized: normalize(hymn.title), original: hymn.title }];
+    // Translated titles are searchable too, so search works in every UI
+    // language (each reports its own title as the hit line).
+    if (hymn.title_en) titles.push({ normalized: normalize(hymn.title_en), original: hymn.title_en });
+    if (hymn.title_de) titles.push({ normalized: normalize(hymn.title_de), original: hymn.title_de });
+
+    const lines = hymn.verses.flatMap((verse, verseIndex) =>
       verse.lines.map((line, lineIndex) => ({
         verseIndex,
         lineIndex,
@@ -52,8 +50,37 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
         original: line,
         normalized: normalize(line),
       })),
-    ),
-  }));
+    );
+    // Translated verses join the same index with their own originals, so
+    // highlighting maps back into the translated line, not the Arabic one.
+    for (const key of ['verses_en', 'verses_de'] as const) {
+      const translated = hymn[key];
+      if (!translated) continue;
+      translated.forEach((verse, verseIndex) => {
+        verse.lines.forEach((line, lineIndex) => {
+          lines.push({
+            verseIndex,
+            lineIndex,
+            label: verse.label,
+            original: line,
+            normalized: normalize(line),
+          });
+        });
+      });
+    }
+
+    return {
+      summary: {
+        id: hymn.id,
+        number: hymn.number,
+        title: hymn.title,
+        meter: hymn.meter,
+        hasChorus: hymn.verses.some((v) => v.chorus),
+      },
+      titles,
+      lines,
+    };
+  });
 
   cache = { key, docs };
   return docs;
@@ -78,22 +105,52 @@ export function searchHymns(hymns: Hymn[], query: string, limit = 200): SearchMa
   const docs = buildDocs(hymns, `${hymns.length}:${hymns[0]?.id ?? ''}:${hymns.at(-1)?.id ?? ''}`);
   const matches: SearchMatch[] = [];
 
-  for (const doc of docs) {
-    if (matches.length >= limit) break;
-
-    const titleAt = doc.title.text.indexOf(needle);
-    if (titleAt !== -1) {
-      const end = titleAt + needle.length;
+  // A digit-only query is a hymn-number lookup: exact number first, then
+  // numbers starting with it, both numerically sorted. This runs before the
+  // text search so typing "55" jumps straight to hymn 55.
+  if (/^\d+$/.test(needle)) {
+    const digits = needle.replace(/^0+(?=\d)/, '');
+    const exact: SearchDoc[] = [];
+    const prefixed: SearchDoc[] = [];
+    for (const doc of docs) {
+      const num = String(doc.summary.number);
+      if (num === digits) exact.push(doc);
+      else if (num.startsWith(digits)) prefixed.push(doc);
+    }
+    prefixed.sort((a, b) => a.summary.number - b.summary.number);
+    for (const doc of [...exact, ...prefixed]) {
+      if (matches.length >= limit) break;
       matches.push({
         hymn: doc.summary,
         verseIndex: -1,
         lineIndex: -1,
         label: '',
         line: doc.summary.title,
-        start: doc.title.origin[titleAt],
-        end: (doc.title.origin[end - 1] ?? 0) + 1,
+        start: 0,
+        end: 0,
         inTitle: true,
       });
+    }
+  }
+
+  for (const doc of docs) {
+    if (matches.length >= limit) break;
+
+    for (const title of doc.titles) {
+      const titleAt = title.normalized.text.indexOf(needle);
+      if (titleAt === -1) continue;
+      const end = titleAt + needle.length;
+      matches.push({
+        hymn: doc.summary,
+        verseIndex: -1,
+        lineIndex: -1,
+        label: '',
+        line: title.original,
+        start: title.normalized.origin[titleAt],
+        end: (title.normalized.origin[end - 1] ?? 0) + 1,
+        inTitle: true,
+      });
+      break;
     }
 
     for (const line of doc.lines) {

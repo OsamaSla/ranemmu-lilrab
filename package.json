@@ -1,5 +1,5 @@
 {
-  "name": "helmenarnam",
+  "name": "ranemmu.lilrab",
   "main": "expo-router/entry",
   "version": "1.0.0",
   "dependencies": {
@@ -35,11 +35,17 @@
     "@types/react": "~19.2.2",
     "eslint": "^9.0.0",
     "eslint-config-expo": "~57.0.2",
-    "typescript": "~6.0.3",
-    "exceljs": "^4.4.0"
+    "exceljs": "^4.4.0",
+    "gh-pages": "^6.3.0",
+    "playwright-core": "^1.63.0",
+    "typescript": "~6.0.3"
   },
   "scripts": {
-    "start": "expo start",
+    "start": "expo start --port 8082",
+    "dev": "expo start --port 8082",
+    "preview": "expo serve --port 8081",
+    "preview:build": "npm run check:hymns && npm run build:corpus && npx expo export --platform web && expo serve --port 8081",
+    "warm": "node scripts/warm-metro.mjs --port 8082",
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
@@ -49,7 +55,11 @@
     "make:sheet": "node scripts/make-sheet.mjs",
     "import:sheet": "node scripts/import-sheet.mjs",
     "build:corpus": "node scripts/build-corpus.mjs",
-    "check:hymns": "node scripts/check-hymns.mjs"
+    "check:hymns": "node scripts/check-hymns.mjs",
+    "import:input": "node scripts/converter.mjs content/input-temp.txt content/from-input.xlsx",
+    "add-batch": "node scripts/add-batch.mjs",
+    "predeploy": "expo export -p web && node scripts/pages-fallback.mjs",
+    "deploy": "gh-pages --nojekyll -d dist"
   },
   "private": true
 }

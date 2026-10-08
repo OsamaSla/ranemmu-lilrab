@@ -32,7 +32,10 @@ export function FontChips({ value, onChange }: FontChipsProps) {
             accessibilityRole="button"
             accessibilityState={{ selected }}
             accessibilityLabel={family.label}
+            android_ripple={{ color: colors.border }}
             style={({ pressed }) => ({
+              minHeight: 48,
+              justifyContent: 'center',
               paddingHorizontal: spacing.md,
               paddingVertical: spacing.sm,
               borderRadius: radius.pill,

@@ -14,7 +14,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
-import { Pressable, ScrollView, Share, View, type LayoutChangeEvent } from 'react-native';
+import { Animated, Pressable, ScrollView, Share, Text as RNText, TextInput, View, type LayoutChangeEvent } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../../components/AppText';
@@ -24,12 +24,19 @@ import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
 import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
-import { getCorpus, getHymn, getNeighbours, getSummaries, localizeHymn } from '../../../data/loader';
+import { SegmentedControl, type SegmentOption } from '../../../components/SegmentedControl';
+import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
+import { normalize } from '../../../data/normalize';
 import { findSimilar } from '../../../data/search';
 import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
 import { useLibrary } from '../../../store/library';
-import { useSettings } from '../../../store/settings';
+import { useOverrides } from '../../../store/overrides';
+import {
+  READER_SIZE_MAX,
+  READER_SIZE_MIN,
+  useSettings,
+} from '../../../store/settings';
 import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
 import { palette, radius, spacing } from '../../../theme/tokens';
 
@@ -47,8 +54,8 @@ export default function ReaderScreen() {
   const router = useRouter();
   const navigation = useNavigation();
   const { id, verse } = useLocalSearchParams<{ id: string; verse?: string }>();
-  const { t, direction, locale } = useT();
-  const { colors } = useTheme();
+  const { t, direction } = useT();
+  const { colors, fontFamily } = useTheme();
   const insets = useSafeAreaInsets();
 
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -56,6 +63,8 @@ export default function ReaderScreen() {
   const [fullscreen, setFullscreen] = useState(false);
 
   const readerSize = useSettings((s) => s.readerSize);
+  const increaseReaderSize = useSettings((s) => s.increaseReaderSize);
+  const decreaseReaderSize = useSettings((s) => s.decreaseReaderSize);
   const fontId = useSettings((s) => s.fontFamily);
   const touchRecent = useLibrary((s) => s.touchRecent);
   const toggleFavorite = useLibrary((s) => s.toggleFavorite);
@@ -83,7 +92,11 @@ export default function ReaderScreen() {
   }, [fullscreen, navigation, colors.surface, colors.border]);
 
   const hymn = id ? getHymn(id) : undefined;
-  const neighbours = useMemo(() => (id ? getNeighbours(id) : {}), [id]);
+  // Re-reads the merged corpus whenever an admin override lands.
+  const corpusVersion = useOverrides((s) => s.updatedAt);
+  // corpusVersion only retriggers these after admin edits land.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const neighbours = useMemo(() => (id ? getNeighbours(id) : {}), [id, corpusVersion]);
   const similar = useMemo(
     () =>
       hymn
@@ -102,18 +115,81 @@ export default function ReaderScreen() {
     [hymn],
   );
 
-  // Display text in the UI language when the hymn carries it, Arabic
-  // otherwise. Indices stay aligned across languages by import contract.
-  const shown = useMemo(
-    () => (hymn ? localizeHymn(hymn, locale) : null),
-    [hymn, locale],
-  );
+  // Per-hymn translation view. Arabic is always the master text; a
+  // translation renders line-by-line beside it and never replaces it.
+  // The toggle only exists when this hymn actually carries a translation.
+  // The view resets to Arabic when navigating (render-time reset, no effect).
+  const [view, setView] = useState<{ id: string | string[] | undefined; lang: 'ar' | 'en' | 'de' }>({
+    id,
+    lang: 'ar',
+  });
+  if (view.id !== id) setView({ id, lang: 'ar' });
+  const parallel = view.id === id ? view.lang : 'ar';
+  const chooseParallel = (lang: 'ar' | 'en' | 'de') => setView({ id, lang });
+
+  const hasEn = Boolean(hymn?.title_en ?? hymn?.verses_en);
+  const hasDe = Boolean(hymn?.title_de ?? hymn?.verses_de);
+  const transVerses =
+    parallel === 'en' ? hymn?.verses_en : parallel === 'de' ? hymn?.verses_de : undefined;
+  const transTitle =
+    parallel === 'en' ? hymn?.title_en : parallel === 'de' ? hymn?.title_de : undefined;
+  const transChorus =
+    parallel === 'en' ? hymn?.chorus_en : parallel === 'de' ? hymn?.chorus_de : undefined;
+
+  const translationOptions: SegmentOption<'ar' | 'en' | 'de'>[] = [
+    { value: 'ar', label: 'العربية' },
+    ...(hasEn ? [{ value: 'en', label: 'English' } as const] : []),
+    ...(hasDe ? [{ value: 'de', label: 'Deutsch' } as const] : []),
+  ];
+
+  // Jump bar: a hymn number goes straight there, anything else opens the
+  // full search with the text prefilled.
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- see above
+  const summaries = useMemo(() => getSummaries(), [corpusVersion]);
+  const [jump, setJump] = useState('');
+  const submitJump = () => {
+    const q = jump.trim();
+    if (!q) return;
+    const digits = normalize(q).text;
+    if (/^\d+$/.test(digits)) {
+      const target = summaries.find((s) => s.number === Number(digits));
+      setJump('');
+      if (target) {
+        router.replace(`/hymn/${target.id}`);
+        return;
+      }
+    } else {
+      setJump('');
+    }
+    router.push({ pathname: '/search', params: { q } });
+  };
 
   useEffect(() => {
     if (hymn) touchRecent(hymn.id);
   }, [hymn, touchRecent]);
 
   const scrollRef = useRef<ScrollView>(null);
+  // 150ms fade for entering/exiting fullscreen (spec: all transitions <200ms).
+  const [fadeAnim] = useState(() => new Animated.Value(0));
+
+  useEffect(() => {
+    if (!fullscreen) return;
+    fadeAnim.setValue(0);
+    Animated.timing(fadeAnim, {
+      toValue: 1,
+      duration: 150,
+      useNativeDriver: true,
+    }).start();
+  }, [fadeAnim, fullscreen]);
+
+  const exitFullscreen = () => {
+    Animated.timing(fadeAnim, {
+      toValue: 0,
+      duration: 150,
+      useNativeDriver: true,
+    }).start(() => setFullscreen(false));
+  };
+
   const verseOffsets = useRef<Map<number, number>>(new Map());
 
   useEffect(() => {
@@ -138,7 +214,7 @@ export default function ReaderScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [verse, hymn?.id]);
 
-  if (!hymn || !shown) {
+  if (!hymn) {
     return (
       <View style={{ flex: 1, backgroundColor: colors.canvas, paddingTop: insets.top }}>
         <View style={{ flexDirection: direction.row, paddingHorizontal: spacing.sm }}>
@@ -155,9 +231,17 @@ export default function ReaderScreen() {
 
   const shareHymn = () => {
     const body = [
-      `${hymn.number}. ${shown.title}`,
+      `${hymn.number}. ${hymn.title}`,
+      ...(transTitle ? [`${hymn.number}. ${transTitle}`] : []),
       '',
-      ...shown.verses.flatMap((v) => [`${v.label}`, ...v.lines, '']),
+      ...hymn.verses.flatMap((v, verseIndex) => [
+        `${v.label}`,
+        ...v.lines.flatMap((line, lineIndex) => {
+          const translated = transVerses?.[verseIndex]?.lines[lineIndex];
+          return translated ? [line, translated] : [line];
+        }),
+        '',
+      ]),
       `— ${t('appName')}`,
     ].join('\n');
 
@@ -205,9 +289,24 @@ export default function ReaderScreen() {
     </AppText>
   );
 
+  const translationText = (body: string) => (
+    <RNText
+      style={{
+        fontFamily: readerFont,
+        fontSize: Math.round(readerSize * 0.85),
+        lineHeight: Math.round(readerSize * 1.6),
+        color: fullscreen ? palette.readerText : colors.textMuted,
+        writingDirection: 'ltr',
+        textAlign: 'left',
+        opacity: fullscreen ? 0.8 : 1,
+      }}>
+      {body}
+    </RNText>
+  );
+
   const versesView = (
     <>
-      {shown.verses.map((verseBlock, verseIndex) => (
+      {hymn.verses.map((verseBlock, verseIndex) => (
         <View
           key={`${verseIndex}-${verseBlock.label}`}
           onLayout={onVerseLayout(verseIndex)}
@@ -234,13 +333,23 @@ export default function ReaderScreen() {
               marginBottom: spacing.xs,
               opacity: fullscreen ? 0.85 : 1,
             }}>
-            {verseBlock.chorus && shown.chorus ? shown.chorus : `(${verseBlock.label})`}
+            {verseBlock.chorus && (hymn.chorus ?? transChorus)
+              ? (transChorus && transChorus !== hymn.chorus
+                ? `${hymn.chorus} · ${transChorus}`
+                : (hymn.chorus ?? transChorus))
+              : `(${verseBlock.label})`}
           </AppText>
-          {verseBlock.lines.map((line, lineIndex) => (
-            <View key={lineIndex} style={{ marginBottom: lineIndex < verseBlock.lines.length - 1 ? spacing.xs : 0 }}>
-              {stanzaText(line)}
-            </View>
-          ))}
+          {verseBlock.lines.map((line, lineIndex) => {
+            const translated = transVerses?.[verseIndex]?.lines[lineIndex];
+            return (
+              <View
+                key={lineIndex}
+                style={{ marginBottom: lineIndex < verseBlock.lines.length - 1 ? spacing.sm : 0 }}>
+                {stanzaText(line)}
+                {translated ? <View style={{ marginTop: 2 }}>{translationText(translated)}</View> : null}
+              </View>
+            );
+          })}
         </View>
       ))}
     </>
@@ -248,19 +357,37 @@ export default function ReaderScreen() {
 
   if (fullscreen) {
     return (
-      <View style={{ flex: 1, backgroundColor: palette.readerBg }}>
+      <Animated.View style={{ flex: 1, backgroundColor: palette.readerBg, opacity: fadeAnim }}>
         <View
           style={{
             paddingTop: insets.top + spacing.sm,
             paddingHorizontal: spacing.sm,
             flexDirection: direction.row,
             justifyContent: 'flex-start',
+            alignItems: 'center',
           }}>
           <IconButton
             name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
             label={t('common.back')}
             color={palette.readerText}
-            onPress={() => setFullscreen(false)}
+            onPress={exitFullscreen}
+          />
+          <View style={{ flex: 1 }} />
+          <IconButton
+            name="minus"
+            label={t('reader.decreaseFont')}
+            color={palette.readerText}
+            onPress={decreaseReaderSize}
+            disabled={readerSize <= READER_SIZE_MIN}
+            style={{ opacity: readerSize <= READER_SIZE_MIN ? 0.35 : 1 }}
+          />
+          <IconButton
+            name="plus"
+            label={t('reader.increaseFont')}
+            color={palette.readerText}
+            onPress={increaseReaderSize}
+            disabled={readerSize >= READER_SIZE_MAX}
+            style={{ opacity: readerSize >= READER_SIZE_MAX ? 0.35 : 1 }}
           />
         </View>
         <ScrollView
@@ -282,11 +409,11 @@ export default function ReaderScreen() {
               color: palette.readerText,
               marginVertical: spacing.lg,
             }}>
-            {hymn.number}. {shown.title}
+            {hymn.number}. {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
           </AppText>
           {versesView}
         </ScrollView>
-      </View>
+      </Animated.View>
     );
   }
 
@@ -300,6 +427,18 @@ export default function ReaderScreen() {
           paddingHorizontal: spacing.sm,
           backgroundColor: colors.primaryDeep,
         }}>
+        {/* Author credit, top corner — only when known. */}
+        {hymn.author || hymn.authorOriginal ? (
+          <AppText
+            variant="caption"
+            numberOfLines={1}
+            color={colors.onPrimary}
+            style={{ opacity: 0.75, fontSize: 11, textAlign: 'left', paddingHorizontal: spacing.sm }}>
+            {hymn.author ?? ''}
+            {hymn.author && hymn.authorOriginal ? ' · ' : ''}
+            {hymn.authorOriginal ?? ''}
+          </AppText>
+        ) : null}
         <View style={{ flexDirection: direction.row, alignItems: 'center' }}>
           <IconButton
             name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
@@ -316,7 +455,7 @@ export default function ReaderScreen() {
               {t('common.hymnNumber')} {hymn.number}
             </AppText>
             <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.85 }}>
-              {shown.title}
+              {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
             </AppText>
           </View>
           <IconButton
@@ -332,6 +471,71 @@ export default function ReaderScreen() {
             onPress={shareHymn}
           />
         </View>
+      </View>
+
+      {/* Translation toggle — only when this hymn carries a translation. */}
+      {hasEn || hasDe ? (
+        <View
+          style={{
+            paddingHorizontal: spacing.sm,
+            paddingTop: spacing.sm,
+            backgroundColor: colors.surface,
+            borderBottomWidth: 1,
+            borderBottomColor: colors.border,
+          }}>
+          <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
+            {t('reader.translation')}
+          </AppText>
+          <SegmentedControl value={parallel} onChange={chooseParallel} options={translationOptions} />
+          <View style={{ height: spacing.sm }} />
+        </View>
+      ) : null}
+
+      {/* Jump bar — a hymn number goes straight there, anything else opens search. */}
+      <View
+        style={{
+          flexDirection: direction.row,
+          alignItems: 'center',
+          paddingHorizontal: spacing.md,
+          paddingVertical: spacing.sm,
+          backgroundColor: colors.surface,
+          borderBottomWidth: 1,
+          borderBottomColor: colors.border,
+        }}>
+        <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
+        <TextInput
+          value={jump}
+          onChangeText={setJump}
+          onSubmitEditing={submitJump}
+          returnKeyType="search"
+          placeholder={t('reader.jumpPlaceholder')}
+          placeholderTextColor={colors.textMuted}
+          style={{
+            flex: 1,
+            marginHorizontal: spacing.sm,
+            color: colors.text,
+            fontFamily,
+            fontSize: 16,
+            writingDirection: direction.dir,
+            textAlign: direction.textAlign,
+          }}
+        />
+        <Pressable
+          onPress={submitJump}
+          accessibilityRole="button"
+          accessibilityLabel={t('reader.jump')}
+          android_ripple={{ color: colors.border }}
+          style={({ pressed }) => ({
+            paddingHorizontal: spacing.md,
+            paddingVertical: spacing.xs,
+            borderRadius: radius.pill,
+            backgroundColor: colors.primary,
+            opacity: pressed ? 0.75 : 1,
+          })}>
+          <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
+            {t('reader.jump')}
+          </AppText>
+        </Pressable>
       </View>
 
       <View style={{ flex: 1, flexDirection: 'row' }}>
@@ -356,7 +560,9 @@ export default function ReaderScreen() {
             onPress: () => setFullscreen(true),
           })}
           {railButton({ name: 'cog-outline', label: t('reader.settings'), onPress: () => setSettingsOpen(true) })}
-          {railButton({ name: 'information-outline', label: t('reader.info'), onPress: () => setInfoHymn(true) })}
+          {hymn.meter
+            ? railButton({ name: 'information-outline', label: t('reader.info'), onPress: () => setInfoHymn(true) })
+            : null}
         </View>
 
         {/* Verses */}
@@ -435,6 +641,7 @@ function NavCircle({
     <Pressable
       onPress={onPress}
       disabled={!enabled}
+      android_ripple={{ color: colors.border }}
       accessibilityRole="button"
       accessibilityLabel={label}
       hitSlop={8}

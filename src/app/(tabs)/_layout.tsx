@@ -13,6 +13,7 @@ import { Tabs } from 'expo-router';
 
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { shadow } from '../../theme/tokens';
 
 export default function TabsLayout() {
   const { colors } = useTheme();
@@ -27,22 +28,23 @@ export default function TabsLayout() {
         tabBarStyle: {
           backgroundColor: colors.surface,
           borderTopColor: colors.border,
+          ...shadow.bar,
         },
-        tabBarLabelStyle: { fontSize: 11, marginBottom: 4 },
+        tabBarLabelStyle: { fontSize: 11, marginTop: 12, marginBottom: 4 },
       }}>
       <Tabs.Screen
         name="index"
         options={{
           title: t('tabs.home'),
-          tabBarIcon: ({ color, size }) => <MaterialCommunityIcons name="home" color={color} size={size} />,
+          tabBarIcon: ({ color }) => <MaterialCommunityIcons name="home" color={color} size={24} />,
         }}
       />
       <Tabs.Screen
         name="recents"
         options={{
           title: t('tabs.recents'),
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="history" color={color} size={size} />
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="history" color={color} size={24} />
           ),
         }}
       />
@@ -50,8 +52,8 @@ export default function TabsLayout() {
         name="help"
         options={{
           title: t('tabs.help'),
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="book-open-page-variant" color={color} size={size} />
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="book-open-page-variant" color={color} size={24} />
           ),
         }}
       />
@@ -59,8 +61,8 @@ export default function TabsLayout() {
         name="more"
         options={{
           title: t('tabs.more'),
-          tabBarIcon: ({ color, size }) => (
-            <MaterialCommunityIcons name="dots-horizontal" color={color} size={size} />
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name="dots-horizontal" color={color} size={24} />
           ),
         }}
       />
@@ -71,6 +73,8 @@ export default function TabsLayout() {
       <Tabs.Screen name="favorites" options={{ href: null, title: t('favorites.title') }} />
       <Tabs.Screen name="settings" options={{ href: null, title: t('settings.title') }} />
       <Tabs.Screen name="hymn/[id]" options={{ href: null, title: t('common.hymnNumber') }} />
+      <Tabs.Screen name="admin" options={{ href: null, title: t('admin.title') }} />
+      <Tabs.Screen name="admin-edit" options={{ href: null, title: t('admin.editHymn') }} />
     </Tabs>
   );
 }

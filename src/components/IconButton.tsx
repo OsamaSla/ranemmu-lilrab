@@ -25,7 +25,7 @@ interface IconButtonProps extends Omit<PressableProps, 'style' | 'children'> {
 export function IconButton({
   name,
   label,
-  size = 22,
+  size = 24,
   color,
   style,
   ...rest
@@ -38,6 +38,7 @@ export function IconButton({
       accessibilityRole="button"
       accessibilityLabel={label}
       hitSlop={HIT_SLOP}
+      android_ripple={{ color: colors.border }}
       style={({ pressed }) => [
         {
           width: MIN_TOUCH,

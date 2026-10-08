@@ -1,16 +1,41 @@
-# هلم نرنم — Halma Naranaam
+# رنموا للرب — Ranemmu lil-Rab
 
 An offline-first Arabic hymns app built with [Expo](https://expo.dev) (SDK 57),
-TypeScript, `expo-router` and `zustand`. UI in Arabic (RTL) by default, with
-English and German locales wired in.
+TypeScript, `expo-router` and `zustand`. App chrome is Arabic (RTL); hymn 1
+carries English and German translations with a per-hymn translation toggle,
+and more translations are staged.
+
+**Live demo:** https://OsamaSla.github.io/ranemmu-lilrab/
+
+Corpus status: **1000/1000 Arabic hymns**, fully vocalised, `npm run check:hymns`
+green. Sources live in `content/hymns-imported.xlsx`; hymns 58 and 489 were
+typed manually from the printed book (no lyrics on hymnary.org).
 
 ## Get started
 
 ```bash
 npm install
-npx expo start        # dev server — open in Expo Go, emulator, or web
-npx expo start --web  # fastest first look, no phone needed
+npm run dev      # Metro on :8082 — open in Expo Go on your phone
+npm run warm     # pre-compile bundles so the first phone load is fast
+npm run preview  # static web export on :8081 for instant PC viewing
+npm run preview:build  # refresh :8081 after hymn/code changes
 ```
+
+## Daily dev loop (phone + PC)
+
+Double-click `start-dev.cmd` — it opens the static PC preview
+(`http://localhost:8081/ranemmu-lilrab/`) and Metro (`:8082`) in two windows,
+then warms the android/ios/web bundles so the first load is fast.
+(`npm run dev` followed by `npm run warm` does the same thing manually. Metro
+uses port 8082 because the static preview already occupies 8081.)
+
+1. On your phone: same Wi-Fi as the PC, Expo Go updated to the SDK 57
+   version. Scan the terminal QR with Expo Go's scanner, or use "Enter URL
+   manually" with `exp://<your-PC-LAN-IP>:8082`. Open it inside Expo Go, not
+   in the phone browser.
+2. iPhone only: the PC terminal (`npx expo login`) and the Expo Go app must
+   be signed into the same Expo account, or Expo Go refuses dev-server
+   projects.
 
 Quality gates (run before committing):
 
@@ -54,27 +79,68 @@ npm run make:sheet
 - **Translations (optional):** the `EN - English` and `DE - Deutsch` sheets
   hold translations with the same hymn numbers. The importer merges them by
   number into `title_en/verses_en/…` fields and blocks on stanza-count
-  mismatch. The app shows the UI language's text where present, Arabic
-  everywhere else — per hymn, never blank.
+  mismatch. The reader shows a translation toggle per hymn where a
+  translation exists, Arabic-parallel view — never blank.
 - `scripts/check-hymns.mjs` validates every `content/*.json`: unique numbers,
   non-empty verses, no stray non-Arabic characters, no unfilled `…`
   template placeholders — plus a vocalisation-coverage report that spots OCR
   or extraction damage early.
+- `scripts/extract-authors.mjs` builds `content/authors.json` (author
+  credits attached at import, validated and typed).
 
-Until the real book arrives, `content/seed.json` holds 10 Psalm-based
-placeholders so every screen is exercisable. Delete it once real content lands.
+The corpus is whatever lives in `content/*.json` — `build:corpus` bundles every
+file there, so placeholder batches never belong alongside real ones.
+
+### Adding hymns (one file, no Metro needed)
+
+All hymns live in `content/hymns-imported.xlsx` — just keep appending new
+hymns at the bottom (numbers continue the sequence and must never repeat).
+
+1. Fill rows in Excel and save. Work over as many sessions as you like.
+2. `npm run add-batch` — imports the sheet, validates, rebuilds, and
+   re-exports the static preview (including the Pages `404.html` fallback).
+   Reload the preview to view them. Re-running on the same file just
+   overwrites its own `book-*.json`, so import as often as you like while
+   typing.
+
+### Admin corrections
+
+Hidden PIN-gated routes (`admin`, `admin-edit`) allow text-level edits and
+hymn-number swaps, persisted to `src/store/overrides.ts` and merged at load.
+`scripts/apply-overrides.mjs` merges them back into the xlsx (round-trip
+tested) so corrections survive re-imports.
+
+## Web deploy (GitHub Pages)
+
+The site is a static export served from the `gh-pages` branch under the
+subpath `/ranemmu-lilrab` (see `experiments.baseUrl` in `app.json`):
+
+```bash
+npm run deploy   # expo export -p web + 404 fallback, then push dist/ via gh-pages
+```
+
+Then in the repo: Settings → Pages → Source **Deploy from a branch**,
+Branch **gh-pages** / root. The app lands at
+https://OsamaSla.github.io/ranemmu-lilrab/.
+
+Local preview uses `expo serve` (subpath-aware) — plain static servers at the
+domain root will 404 the assets.
 
 ## Project layout
 
 - `src/app/` — routes: `(tabs)` (home, recents, help, more), `library`,
-  `search`, `hymn/[id]` reader, `structure`, `favorites`, `settings`
+  `search`, `hymn/[id]` reader, `structure`, `favorites`, `settings`, hidden
+  `admin` / `admin-edit`
 - `src/data/` — hymn types, Arabic search normaliser, search engine, loader
-- `src/i18n/` — `ar` source strings; `en`/`de` typed against it
+  (incl. persisted overrides)
+- `src/i18n/` — Arabic chrome strings
 - `src/theme/` — design tokens, 6 bundled OFL Arabic fonts
-- `src/store/` — persisted settings (theme/locale/fonts/sizes) and library
-  (favorites, recents)
+- `src/store/` — persisted settings (theme/fonts/sizes) and library
+  (favorites, recents), plus admin overrides
 - `src/components/` — shared UI (cards, rows, sheets, modals)
 - `scripts/` — content tooling only; never bundled into the app
+- `content/` — live xlsx source, generated JSON, staging review queues,
+  raw scrape evidence
 - `assets/fonts/` — generated by `npm run fonts` (static TTF instances)
 
 ## Release

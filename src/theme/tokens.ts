@@ -1,7 +1,7 @@
 /**
  * Design tokens, matching the reference app's palette.
  *
- * Light surfaces are warm-neutral greys with white cards; the reading surface
+ * Light surfaces are neutral greys with white cards; the reading surface
  * is intentionally pure black (not dark grey) so fullscreen mode matches the
  * printed contrast of a hymnal rather than looking like a dimmed screen.
  */
@@ -14,13 +14,13 @@ export const palette = {
   /** Interactive accents: sliders, chips, focus rings. */
   accent: '#20808D',
 
-  canvas: '#F2F4F5',
+  canvas: '#FAFAFA',
   canvasAlt: '#EFEFEF',
   surface: '#FFFFFF',
-  border: '#E1E5E7',
+  border: '#E5E5E5',
 
-  text: '#132024',
-  textMuted: '#5C6B70',
+  text: '#111111',
+  textMuted: '#555555',
   textInverse: '#FFFFFF',
 
   /** Fullscreen reading mode. */
@@ -107,12 +107,12 @@ export const themes: Record<ThemeName, ThemeColors> = {
     overlay: palette.overlay,
   },
   dark: {
-    canvas: '#0D1416',
-    surface: '#161F22',
-    surfaceMuted: '#1E282B',
-    border: '#2A3639',
-    text: '#E8EDEF',
-    textMuted: '#9AA8AD',
+    canvas: '#1A1A1A',
+    surface: '#2A2A2A',
+    surfaceMuted: '#232323',
+    border: '#3A3A3A',
+    text: '#F5F5F5',
+    textMuted: '#CFCFCF',
     primary: '#2E8C99',
     primaryDeep: '#1B5A65',
     accent: '#3FA3B0',

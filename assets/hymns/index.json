@@ -2,71 +2,6001 @@
  {
   "id": "h0001",
   "number": 1,
-  "title": "الرب راعيَّ",
-  "meter": "8.7.8.7",
+  "title": "لإلهنا بنعد طريق",
   "hasChorus": true
  },
  {
   "id": "h0002",
   "number": 2,
-  "title": "أسبح للرب",
-  "meter": "8.8.8.8",
-  "hasChorus": true
+  "title": "هللويا أنا غالي",
+  "hasChorus": false
  },
  {
   "id": "h0003",
   "number": 3,
-  "title": "إليكم أرفع عيني",
-  "meter": "8.7.8.7",
+  "title": "تارك كل أموري لديك",
   "hasChorus": true
  },
  {
   "id": "h0004",
   "number": 4,
-  "title": "ارحمني يا الله",
-  "meter": "10.6.10.6",
+  "title": "يا إلهي برك إلى العلاء",
   "hasChorus": true
  },
  {
   "id": "h0005",
   "number": 5,
-  "title": "السماوات تروي",
-  "meter": "8.8.8.8",
+  "title": "إلهي إلهي كن قائدي",
   "hasChorus": true
  },
  {
   "id": "h0006",
   "number": 6,
-  "title": "اللهم اقتدت",
-  "meter": "8.7.8.7",
-  "hasChorus": true
+  "title": "وقت المحن ما القاش أحن",
+  "hasChorus": false
  },
  {
   "id": "h0007",
   "number": 7,
-  "title": "أنت تعرفني",
-  "meter": "8.8.8.8",
+  "title": "حررني يسوع البار",
   "hasChorus": true
  },
  {
   "id": "h0008",
   "number": 8,
-  "title": "يا رب سيدنا",
-  "meter": "8.7.8.7",
+  "title": "أنت للشفاه ربي",
   "hasChorus": true
  },
  {
   "id": "h0009",
   "number": 9,
-  "title": "هللوا الله",
-  "meter": "4.4.4.10",
+  "title": "قلوب الملوك جدول مياه",
   "hasChorus": true
  },
  {
   "id": "h0010",
   "number": 10,
-  "title": "إن كان لي إله",
-  "meter": "8.7.8.7",
+  "title": "ربي أنت للتعابى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0011",
+  "number": 11,
+  "title": "الأشبال يمكن تحتاج",
+  "hasChorus": true
+ },
+ {
+  "id": "h0012",
+  "number": 12,
+  "title": "اوعى تفكر إني نسيتك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0013",
+  "number": 13,
+  "title": "ليه تحمل الهموم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0014",
+  "number": 14,
+  "title": "اللي بيعزيني عن كل آلامي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0015",
+  "number": 15,
+  "title": "ماذا أرد لك يا حبيب هل فضتي والذهب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0016",
+  "number": 16,
+  "title": "دوسي يا نفس بعز",
+  "hasChorus": true
+ },
+ {
+  "id": "h0017",
+  "number": 17,
+  "title": "ربي من لي في حيرتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0018",
+  "number": 18,
+  "title": "مر بي ولقاني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0019",
+  "number": 19,
+  "title": "ماشي معايا وما بتنساني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0020",
+  "number": 20,
+  "title": "لولا الحربه لولا التاج",
+  "hasChorus": true
+ },
+ {
+  "id": "h0021",
+  "number": 21,
+  "title": "كسرت سهام العدو",
+  "hasChorus": true
+ },
+ {
+  "id": "h0022",
+  "number": 22,
+  "title": "عايز أخرج كالنور برك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0023",
+  "number": 23,
+  "title": "أنا مطمن وانا وياه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0024",
+  "number": 24,
+  "title": "قال لي الشيطان خطاياك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0025",
+  "number": 25,
+  "title": "ما دمت راعي يا ربي الحبيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0026",
+  "number": 26,
+  "title": "إلهنا حاضر وسطينا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0027",
+  "number": 27,
+  "title": "يا اللي سلام النفس في قربك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0028",
+  "number": 28,
+  "title": "نهتف لسيدنا فادينا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0029",
+  "number": 29,
+  "title": "أنا فيك وفي فكرك م الأول",
+  "hasChorus": true
+ },
+ {
+  "id": "h0030",
+  "number": 30,
+  "title": "إن زرعت اليوم يا نفسي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0031",
+  "number": 31,
+  "title": "وسط الجماهير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0032",
+  "number": 32,
+  "title": "بقوة الدم اللي سال",
+  "hasChorus": true
+ },
+ {
+  "id": "h0033",
+  "number": 33,
+  "title": "مضيت وحدي في الطريق أبحث",
+  "hasChorus": true
+ },
+ {
+  "id": "h0034",
+  "number": 34,
+  "title": "قد مت عن خطيتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0035",
+  "number": 35,
+  "title": "يسوع أتانا وزار ربانا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0036",
+  "number": 36,
+  "title": "محيا فادي المؤمنين",
+  "hasChorus": false
+ },
+ {
+  "id": "h0037",
+  "number": 37,
+  "title": "في هذي الحياة لا أبالي بالهموم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0038",
+  "number": 38,
+  "title": "نبع سرور فاض في قلبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0039",
+  "number": 39,
+  "title": "عدونا مكير عدونا خطير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0040",
+  "number": 40,
+  "title": "رضي بي وحن علي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0041",
+  "number": 41,
+  "title": "ستستجيب طلبتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0042",
+  "number": 42,
+  "title": "أراك إلهي أراك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0043",
+  "number": 43,
+  "title": "سددت الدين عني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0044",
+  "number": 44,
+  "title": "جوعني ليك وإشبعني بيك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0045",
+  "number": 45,
+  "title": "ضاع جل العمر في إثر السراب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0046",
+  "number": 46,
+  "title": "قام المسيح يا شعب أبشر",
+  "hasChorus": true
+ },
+ {
+  "id": "h0047",
+  "number": 47,
+  "title": "هامسك إيدك وامشي معاك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0048",
+  "number": 48,
+  "title": "إذ كنت في أسر الردى ناديت: \"يا ربي\"",
+  "hasChorus": true
+ },
+ {
+  "id": "h0049",
+  "number": 49,
+  "title": "لو كان غيرك سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0050",
+  "number": 50,
+  "title": "سيدي إني أعود",
+  "hasChorus": true
+ },
+ {
+  "id": "h0051",
+  "number": 51,
+  "title": "كنت الرابع في الأتون",
+  "hasChorus": true
+ },
+ {
+  "id": "h0052",
+  "number": 52,
+  "title": "علم الحب وعلم الفرح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0053",
+  "number": 53,
+  "title": "رباه لا رجاء لي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0054",
+  "number": 54,
+  "title": "وسط الأزمات وعدك مضمون",
+  "hasChorus": true
+ },
+ {
+  "id": "h0055",
+  "number": 55,
+  "title": "سلام بقلبي سلام عظيم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0056",
+  "number": 56,
+  "title": "من البطن للشيب بي يعتني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0057",
+  "number": 57,
+  "title": "أمامك يا من بذلت الدم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0058",
+  "number": 58,
+  "title": "يا اللي بطول الرحلة معين",
+  "hasChorus": false
+ },
+ {
+  "id": "h0059",
+  "number": 59,
+  "title": "قوموا نسبح كلنا للكاهن العظيم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0060",
+  "number": 60,
+  "title": "طول ما في إيدك كل حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0061",
+  "number": 61,
+  "title": "اوعى تأجل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0062",
+  "number": 62,
+  "title": "إن قلنا أننا له",
+  "hasChorus": true
+ },
+ {
+  "id": "h0063",
+  "number": 63,
+  "title": "مات من أجل خطايانا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0064",
+  "number": 64,
+  "title": "إن باركنا في حياتنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0065",
+  "number": 65,
+  "title": "يده المثقوبة تنطق بالحب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0066",
+  "number": 66,
+  "title": "يا كاتب النشيد هل تدرك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0067",
+  "number": 67,
+  "title": "يرتفع فوق الأحقاد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0068",
+  "number": 68,
+  "title": "مهما لساني بيتكلم عن أفضالك باتعلم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0069",
+  "number": 69,
+  "title": "جايين يا أبانا اسمع لدعانا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0070",
+  "number": 70,
+  "title": "لن ينزع أحد فرحي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0071",
+  "number": 71,
+  "title": "أفرح في كل حين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0072",
+  "number": 72,
+  "title": "إني أحظى يا حبيبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0073",
+  "number": 73,
+  "title": "حب المسيح أطيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0074",
+  "number": 74,
+  "title": "في الأوقات الحلوه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0075",
+  "number": 75,
+  "title": "كل العمر معاك مضمون",
+  "hasChorus": true
+ },
+ {
+  "id": "h0076",
+  "number": 76,
+  "title": "ما أحلى الجلوس مع فادي النفوس",
+  "hasChorus": true
+ },
+ {
+  "id": "h0077",
+  "number": 77,
+  "title": "أتعب كتير واحزن كتير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0078",
+  "number": 78,
+  "title": "معي أنت يا حبيبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0079",
+  "number": 79,
+  "title": "كل خطاياك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0080",
+  "number": 80,
+  "title": "لست أحتاج سواك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0081",
+  "number": 81,
+  "title": "لنعبد الرب بالفرح والحمد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0082",
+  "number": 82,
+  "title": "أحبك يا من جعلت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0083",
+  "number": 83,
+  "title": "تعبت فقلت أجيب نداه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0084",
+  "number": 84,
+  "title": "مهما تزيد الصعاب وتكبر",
+  "hasChorus": true
+ },
+ {
+  "id": "h0085",
+  "number": 85,
+  "title": "عني قضى ربي الحنون",
+  "hasChorus": true
+ },
+ {
+  "id": "h0086",
+  "number": 86,
+  "title": "كم من عهود قطعناها",
+  "hasChorus": true
+ },
+ {
+  "id": "h0087",
+  "number": 87,
+  "title": "أسعى أنا نحو الغرض",
+  "hasChorus": true
+ },
+ {
+  "id": "h0088",
+  "number": 88,
+  "title": "ماشي معاك انا مش ندمان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0089",
+  "number": 89,
+  "title": "كل نفس عنك زاغت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0090",
+  "number": 90,
+  "title": "قوة ربي لا أملك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0091",
+  "number": 91,
+  "title": "هاعيش احبك واستناك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0092",
+  "number": 92,
+  "title": "ليت سلامك يأسرني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0093",
+  "number": 93,
+  "title": "عارفك مش قادر ترتاح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0094",
+  "number": 94,
+  "title": "أبدا أبدا ما تسيب إيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0095",
+  "number": 95,
+  "title": "سأكرس وأقدم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0096",
+  "number": 96,
+  "title": "في وسط هموم الحياه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0097",
+  "number": 97,
+  "title": "غنوا وشيدوا بالمسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0098",
+  "number": 98,
+  "title": "لما عدوي يحاربني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0099",
+  "number": 99,
+  "title": "إن فاض من قلبي نبع السلام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0100",
+  "number": 100,
+  "title": "ألله قوة لنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0101",
+  "number": 101,
+  "title": "مذ ربي قد أكرمني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0102",
+  "number": 102,
+  "title": "حالا تعالوا إلى المسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0103",
+  "number": 103,
+  "title": "خلني قرب الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0104",
+  "number": 104,
+  "title": "تعال إلى الفادي الحنان",
+  "hasChorus": false
+ },
+ {
+  "id": "h0105",
+  "number": 105,
+  "title": "إليك حاجتي في كل حين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0106",
+  "number": 106,
+  "title": "لم يأت كي يديننا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0107",
+  "number": 107,
+  "title": "أنجز يا ربي قصدك بي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0108",
+  "number": 108,
+  "title": "قد فديتني وامتلكتني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0109",
+  "number": 109,
+  "title": "صوت حبيبي أسمع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0110",
+  "number": 110,
+  "title": "يا ترى أي صديق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0111",
+  "number": 111,
+  "title": "إسمعوا بشرى الظفر",
+  "hasChorus": false
+ },
+ {
+  "id": "h0112",
+  "number": 112,
+  "title": "نبارك اسمك في كل يوم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0113",
+  "number": 113,
+  "title": "أحيا لربي حياة الوفاء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0114",
+  "number": 114,
+  "title": "كلمن ربي قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0115",
+  "number": 115,
+  "title": "شكرا من كل القلب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0116",
+  "number": 116,
+  "title": "ها حياتي سيدي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0117",
+  "number": 117,
+  "title": "كل شيء ليسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0118",
+  "number": 118,
+  "title": "بلطفه ناداني مخلصي الحبيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0119",
+  "number": 119,
+  "title": "يا منبع الحب اجعلن",
+  "hasChorus": true
+ },
+ {
+  "id": "h0120",
+  "number": 120,
+  "title": "يا مخلصي اصحبني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0121",
+  "number": 121,
+  "title": "يا عجيبا في محبته العظيمة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0122",
+  "number": 122,
+  "title": "حبك يا رب نوري",
+  "hasChorus": true
+ },
+ {
+  "id": "h0123",
+  "number": 123,
+  "title": "أخذتك المحبه يا حبيب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0124",
+  "number": 124,
+  "title": "لا بد يوما تنتهي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0125",
+  "number": 125,
+  "title": "حبك لي حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0126",
+  "number": 126,
+  "title": "كان بالأمس يجول",
+  "hasChorus": true
+ },
+ {
+  "id": "h0127",
+  "number": 127,
+  "title": "يرعاني راعي الأمين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0128",
+  "number": 128,
+  "title": "فهل يا قوم من حب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0129",
+  "number": 129,
+  "title": "حبيبي أيا من لأجلي جرحت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0130",
+  "number": 130,
+  "title": "أحبك ربي يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0131",
+  "number": 131,
+  "title": "من أنا يا رب حتى تحملن عني الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0132",
+  "number": 132,
+  "title": "قد مات بالصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0133",
+  "number": 133,
+  "title": "يا سيدي أحببتني بذلت لي الدما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0134",
+  "number": 134,
+  "title": "إنني أسبى بحب جارف",
+  "hasChorus": true
+ },
+ {
+  "id": "h0135",
+  "number": 135,
+  "title": "قد فداني في الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0136",
+  "number": 136,
+  "title": "هل قد ذبحت من أجلي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0137",
+  "number": 137,
+  "title": "مستر عنه الوجوه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0138",
+  "number": 138,
+  "title": "أحلى ما في حياتي إنت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0139",
+  "number": 139,
+  "title": "لولا موت الصلب يا فادي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0140",
+  "number": 140,
+  "title": "في الصليب يا إلهي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0141",
+  "number": 141,
+  "title": "ربي سبيت قلبي بودادك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0142",
+  "number": 142,
+  "title": "يا من وهبت حبا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0143",
+  "number": 143,
+  "title": "لو قضيت عمري لأعرفه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0144",
+  "number": 144,
+  "title": "من لي سواه في السما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0145",
+  "number": 145,
+  "title": "سيدي ايا حبيب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0146",
+  "number": 146,
+  "title": "لأجلكم شربت كأس مر رهيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0147",
+  "number": 147,
+  "title": "سألت ماء ذقت خلا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0148",
+  "number": 148,
+  "title": "لا أنسى يوما سيدي عند الصليب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0149",
+  "number": 149,
+  "title": "بحبه يسوع قد أنقذني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0150",
+  "number": 150,
+  "title": "بحر محبة الفادي لا يحد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0151",
+  "number": 151,
+  "title": "يا يسوع هناك في الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0152",
+  "number": 152,
+  "title": "أحبك إذ قد سمعت صلاتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0153",
+  "number": 153,
+  "title": "بين يديك الحانية",
+  "hasChorus": true
+ },
+ {
+  "id": "h0154",
+  "number": 154,
+  "title": "طبت نفسا يا يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0155",
+  "number": 155,
+  "title": "إني أحب الرب لا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0156",
+  "number": 156,
+  "title": "هيا ننسى ما وراء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0157",
+  "number": 157,
+  "title": "يا لعمق حب ربي ذاق عني موت الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0158",
+  "number": 158,
+  "title": "لولاك سيدي لكنت في شقاء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0159",
+  "number": 159,
+  "title": "كل فرحة للنفس كل بسمه في القلب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0160",
+  "number": 160,
+  "title": "يا سيدي املأ قلبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0161",
+  "number": 161,
+  "title": "لولا الصليب من أنا يا سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0162",
+  "number": 162,
+  "title": "قلبه حنين حبه يبين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0163",
+  "number": 163,
+  "title": "فرحا أفرح بالرب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0164",
+  "number": 164,
+  "title": "بحبك ربي يعزف قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0165",
+  "number": 165,
+  "title": "يا سيدي ربي العظيم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0166",
+  "number": 166,
+  "title": "كيف تبكي يا مسيحي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0167",
+  "number": 167,
+  "title": "أنظر إليه حاملا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0168",
+  "number": 168,
+  "title": "اختبرت حبك ذلك الحب الفريد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0169",
+  "number": 169,
+  "title": "نفسي تتوق في كل يوم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0170",
+  "number": 170,
+  "title": "أحبك إذ أحببتني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0171",
+  "number": 171,
+  "title": "يا رب ما أحلى الحياة قربك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0172",
+  "number": 172,
+  "title": "يا حياة القلب يا حبيب روحي ضامني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0173",
+  "number": 173,
+  "title": "جئتك أبي لأبتغي طعاما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0174",
+  "number": 174,
+  "title": "أنت لي المن الذي يشبع قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0175",
+  "number": 175,
+  "title": "فرحا تفرح نفسي بالحبيب أبدا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0176",
+  "number": 176,
+  "title": "أنت ربي السامري ذو الصلاح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0177",
+  "number": 177,
+  "title": "يا هناء النفس في",
+  "hasChorus": true
+ },
+ {
+  "id": "h0178",
+  "number": 178,
+  "title": "ربي اداني فرحه في قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0179",
+  "number": 179,
+  "title": "إن قوتي كلما قلبي يجوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0180",
+  "number": 180,
+  "title": "يسوع لحبه وحنانه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0181",
+  "number": 181,
+  "title": "ربي منقذي حبيبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0182",
+  "number": 182,
+  "title": "أنا لست أشبع من حبيبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0183",
+  "number": 183,
+  "title": "عايز أقضي حياتي بقربك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0184",
+  "number": 184,
+  "title": "قد فتحت الباب فادخل سيدي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0185",
+  "number": 185,
+  "title": "فيك ربحي ونصري الأكيد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0186",
+  "number": 186,
+  "title": "يا رب يا منتهى آمالي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0187",
+  "number": 187,
+  "title": "ربي في حضنك روحي تستريح تهدأ",
+  "hasChorus": true
+ },
+ {
+  "id": "h0188",
+  "number": 188,
+  "title": "بقربك يا حبيبي يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0189",
+  "number": 189,
+  "title": "حبي لربي يزيد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0190",
+  "number": 190,
+  "title": "يسوع أنت كنزي العظيم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0191",
+  "number": 191,
+  "title": "تحت ظلك حبيبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0192",
+  "number": 192,
+  "title": "رباه أنت آمالي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0193",
+  "number": 193,
+  "title": "حاجتي دوما إليك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0194",
+  "number": 194,
+  "title": "آتيك يا أبتاه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0195",
+  "number": 195,
+  "title": "العيش معك يحلو إذ ترعى نفسي ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0196",
+  "number": 196,
+  "title": "إلهي ادن مني لك لهفتي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0197",
+  "number": 197,
+  "title": "متكئ رأسي على صدره باطمئنان",
+  "hasChorus": false
+ },
+ {
+  "id": "h0198",
+  "number": 198,
+  "title": "يا إلهي ذا دعائي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0199",
+  "number": 199,
+  "title": "راحتي يا رب حقا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0200",
+  "number": 200,
+  "title": "هل ليسوع من مثيل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0201",
+  "number": 201,
+  "title": "في كل يوم ألمس دوما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0202",
+  "number": 202,
+  "title": "يا إلهي يا حبيبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0203",
+  "number": 203,
+  "title": "يا بسمة الصباح في وجه ذا الوجود",
+  "hasChorus": false
+ },
+ {
+  "id": "h0204",
+  "number": 204,
+  "title": "كلامك أيا رب نوري",
+  "hasChorus": true
+ },
+ {
+  "id": "h0205",
+  "number": 205,
+  "title": "عمري مادقت سعادة في قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0206",
+  "number": 206,
+  "title": "ربي زدني منك قربا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0207",
+  "number": 207,
+  "title": "مولاي زدني نعمة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0208",
+  "number": 208,
+  "title": "أيها السائح في البرية",
+  "hasChorus": true
+ },
+ {
+  "id": "h0209",
+  "number": 209,
+  "title": "وراءك يحلو المسير",
+  "hasChorus": false
+ },
+ {
+  "id": "h0210",
+  "number": 210,
+  "title": "سلمت أمري في يديك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0211",
+  "number": 211,
+  "title": "في انتظار نورك يجلو غيومي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0212",
+  "number": 212,
+  "title": "أثق يا سيدي أن يديك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0213",
+  "number": 213,
+  "title": "من لي هنا أو في السما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0214",
+  "number": 214,
+  "title": "لا لا تتركني وحدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0215",
+  "number": 215,
+  "title": "أخضع ذاتي دون عناد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0216",
+  "number": 216,
+  "title": "إذا استجبت طلبتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0217",
+  "number": 217,
+  "title": "علمني أنتظرك يا رب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0218",
+  "number": 218,
+  "title": "أحببت أن سيدي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0219",
+  "number": 219,
+  "title": "لأنه أشبع نفسا مشتهية",
+  "hasChorus": true
+ },
+ {
+  "id": "h0220",
+  "number": 220,
+  "title": "علمني كيف أصلي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0221",
+  "number": 221,
+  "title": "يا راويني يا يسوع بحنانك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0222",
+  "number": 222,
+  "title": "سألوذ بحضنك من جهلي من شهواتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0223",
+  "number": 223,
+  "title": "بمحبتي اللي بتتغير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0224",
+  "number": 224,
+  "title": "يا ليت عقلي يدرك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0225",
+  "number": 225,
+  "title": "وجهت قلبي نحوك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0226",
+  "number": 226,
+  "title": "يسوع ربي راعي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0227",
+  "number": 227,
+  "title": "أشدو للملك وأهلل",
+  "hasChorus": false
+ },
+ {
+  "id": "h0228",
+  "number": 228,
+  "title": "إن قلبي يا إلهي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0229",
+  "number": 229,
+  "title": "يهتم بي عوني منقذي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0230",
+  "number": 230,
+  "title": "في بعادي أنا عشت سنين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0231",
+  "number": 231,
+  "title": "يا مالكا حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0232",
+  "number": 232,
+  "title": "للعمق يا إلهي أرتجي المسير",
+  "hasChorus": false
+ },
+ {
+  "id": "h0233",
+  "number": 233,
+  "title": "ربي خيرك ورحمة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0234",
+  "number": 234,
+  "title": "يا إلهي أنت تعلم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0235",
+  "number": 235,
+  "title": "شامخ لا يحني رأسي أي ضيق",
+  "hasChorus": false
+ },
+ {
+  "id": "h0236",
+  "number": 236,
+  "title": "ربي لست أعلم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0237",
+  "number": 237,
+  "title": "يا سيدي إن لم يسر",
+  "hasChorus": true
+ },
+ {
+  "id": "h0238",
+  "number": 238,
+  "title": "حمل أحزاننا غفر آثامنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0239",
+  "number": 239,
+  "title": "في وسط عالم الظلام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0240",
+  "number": 240,
+  "title": "مين رايح يفصلني عنك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0241",
+  "number": 241,
+  "title": "انتظري الرب يا نفسي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0242",
+  "number": 242,
+  "title": "إلى هنا أعاننا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0243",
+  "number": 243,
+  "title": "انت قائدنا يسوع البار",
+  "hasChorus": true
+ },
+ {
+  "id": "h0244",
+  "number": 244,
+  "title": "في ليلك الحالك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0245",
+  "number": 245,
+  "title": "الساكن في ستر ربي القدير",
+  "hasChorus": false
+ },
+ {
+  "id": "h0246",
+  "number": 246,
+  "title": "نفسي اقربي بالشوق من",
+  "hasChorus": false
+ },
+ {
+  "id": "h0247",
+  "number": 247,
+  "title": "أنت معي كل الأيام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0248",
+  "number": 248,
+  "title": "في صليبك فدائي وعزائي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0249",
+  "number": 249,
+  "title": "سيرا مع يسوعي مع يسوعي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0250",
+  "number": 250,
+  "title": "يا سيدي الغالي يا كل آمالي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0251",
+  "number": 251,
+  "title": "أركض إليك أيها الحبيب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0252",
+  "number": 252,
+  "title": "لم أخاف حزنا أو ظلمة تدنو",
+  "hasChorus": true
+ },
+ {
+  "id": "h0253",
+  "number": 253,
+  "title": "تستطيع أن تشق البحر أو تطوي الجبال",
+  "hasChorus": true
+ },
+ {
+  "id": "h0254",
+  "number": 254,
+  "title": "يا أبانا لست أدري",
+  "hasChorus": false
+ },
+ {
+  "id": "h0255",
+  "number": 255,
+  "title": "في ضيقي دعوتك يا ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0256",
+  "number": 256,
+  "title": "اسمك ربي يسوع مانح الخلاص",
+  "hasChorus": true
+ },
+ {
+  "id": "h0257",
+  "number": 257,
+  "title": "لم تر عين إلها غيرك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0258",
+  "number": 258,
+  "title": "كنت رفيقي دائما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0259",
+  "number": 259,
+  "title": "لست أعلم ما قد يكون في غدي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0260",
+  "number": 260,
+  "title": "ربي وعودك سور لحياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0261",
+  "number": 261,
+  "title": "في مسيري مع يسوعي وسط آلام الحياه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0262",
+  "number": 262,
+  "title": "جاي وباسلم قلبي يا ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0263",
+  "number": 263,
+  "title": "مثل طفل أرتمي بين يديك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0264",
+  "number": 264,
+  "title": "في السما والأرض والبحار",
+  "hasChorus": false
+ },
+ {
+  "id": "h0265",
+  "number": 265,
+  "title": "أنا ماشي ونورك قدامي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0266",
+  "number": 266,
+  "title": "ربي يسوع لي لا أخشى من ظلام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0267",
+  "number": 267,
+  "title": "وسط آلامي لقيتك ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0268",
+  "number": 268,
+  "title": "من لي سواك يحميني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0269",
+  "number": 269,
+  "title": "ربي أنت لي الصديق",
+  "hasChorus": false
+ },
+ {
+  "id": "h0270",
+  "number": 270,
+  "title": "رجاء نفسي وحده",
+  "hasChorus": true
+ },
+ {
+  "id": "h0271",
+  "number": 271,
+  "title": "ذا يقين القلب ربي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0272",
+  "number": 272,
+  "title": "مواعيدي ليك في الأخطار",
+  "hasChorus": false
+ },
+ {
+  "id": "h0273",
+  "number": 273,
+  "title": "عندما أحتاج عونا أنظر إليك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0274",
+  "number": 274,
+  "title": "كنت في خوفي وضيقي تائها وسط الظلام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0275",
+  "number": 275,
+  "title": "سنين طويلة مضت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0276",
+  "number": 276,
+  "title": "كيف أنسى سيدي الغالي المسيح",
+  "hasChorus": false
+ },
+ {
+  "id": "h0277",
+  "number": 277,
+  "title": "يا رب فيك نصرتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0278",
+  "number": 278,
+  "title": "إن رب المجد راعي الكريم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0279",
+  "number": 279,
+  "title": "صخرتي العظمى حبيبي الرب لي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0280",
+  "number": 280,
+  "title": "أرنم لإسمك ربي العلي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0281",
+  "number": 281,
+  "title": "يقودك الرب على الدوام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0282",
+  "number": 282,
+  "title": "حين لا أدري بنفسي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0283",
+  "number": 283,
+  "title": "إذا بحر هذي الحياة اضطرب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0284",
+  "number": 284,
+  "title": "لما بكيت من جرح في قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0285",
+  "number": 285,
+  "title": "لست أدري كيف أحمي نفسي من شر الطريق",
+  "hasChorus": false
+ },
+ {
+  "id": "h0286",
+  "number": 286,
+  "title": "أيها الرب الحبيب طلبتي إليك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0287",
+  "number": 287,
+  "title": "إن ظننت يا صديقي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0288",
+  "number": 288,
+  "title": "لما الناس تنساني واشعر إني وحيد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0289",
+  "number": 289,
+  "title": "عندما يغشاك ليل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0290",
+  "number": 290,
+  "title": "عندما تدمى رجلي بأشواك الطريق",
+  "hasChorus": false
+ },
+ {
+  "id": "h0291",
+  "number": 291,
+  "title": "ما دمت ربي في الطريق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0292",
+  "number": 292,
+  "title": "إن كنت سمعت نداه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0293",
+  "number": 293,
+  "title": "أيامنا ع الأرض ظل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0294",
+  "number": 294,
+  "title": "مرني أن آتي إليك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0295",
+  "number": 295,
+  "title": "المؤمن الأمين",
+  "hasChorus": false
+ },
+ {
+  "id": "h0296",
+  "number": 296,
+  "title": "في ظلمة الليل في وحشة حولي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0297",
+  "number": 297,
+  "title": "حولن عيني ربي عما في هذا الزمان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0298",
+  "number": 298,
+  "title": "إلى الأمام دوما أسير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0299",
+  "number": 299,
+  "title": "أنت في عرش السماء يا حبيبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0300",
+  "number": 300,
+  "title": "أيها السيد أنت قد صنعت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0301",
+  "number": 301,
+  "title": "انظر إلى طير السما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0302",
+  "number": 302,
+  "title": "انت مش للذكريات",
+  "hasChorus": true
+ },
+ {
+  "id": "h0303",
+  "number": 303,
+  "title": "لما هموم القلب تزيد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0304",
+  "number": 304,
+  "title": "تزول الجبال وتفنى التلال",
+  "hasChorus": true
+ },
+ {
+  "id": "h0305",
+  "number": 305,
+  "title": "شكرا لك على الحرية",
+  "hasChorus": true
+ },
+ {
+  "id": "h0306",
+  "number": 306,
+  "title": "يسوع قال لي: \"أنا حارسك\"",
+  "hasChorus": true
+ },
+ {
+  "id": "h0307",
+  "number": 307,
+  "title": "ها آتي بطيبي فوق رأسك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0308",
+  "number": 308,
+  "title": "لا أنا لا أنا بل سيدي الوحيد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0309",
+  "number": 309,
+  "title": "صممت أني أتبع يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0310",
+  "number": 310,
+  "title": "أيها القدوس يا رب الحياة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0311",
+  "number": 311,
+  "title": "سيدي نفسي لديك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0312",
+  "number": 312,
+  "title": "أنا صابر ليك ومستنيك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0313",
+  "number": 313,
+  "title": "ربي أنت الغوث أنت نصرتي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0314",
+  "number": 314,
+  "title": "ها إنني أقترب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0315",
+  "number": 315,
+  "title": "الرب نوري وهداي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0316",
+  "number": 316,
+  "title": "ربي اجعلني أشبه ابنك يسوع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0317",
+  "number": 317,
+  "title": "إذ دخلت قدسك ورأيت عرشك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0318",
+  "number": 318,
+  "title": "أسجد في خشوع لك ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0319",
+  "number": 319,
+  "title": "بنحط حياتنا قدامك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0320",
+  "number": 320,
+  "title": "اترك كل شيء تعط كل شيء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0321",
+  "number": 321,
+  "title": "أيا رب إن شئت ترسلني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0322",
+  "number": 322,
+  "title": "كيف وأنت الحبيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0323",
+  "number": 323,
+  "title": "في سيرك في ذي الحياة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0324",
+  "number": 324,
+  "title": "يا سيدي اختبرني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0325",
+  "number": 325,
+  "title": "لو تركت الأرض حالا ودعاني الإله",
+  "hasChorus": false
+ },
+ {
+  "id": "h0326",
+  "number": 326,
+  "title": "أيها المتعب من حمل الذنوب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0327",
+  "number": 327,
+  "title": "أسكن تحت ظل جناحيك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0328",
+  "number": 328,
+  "title": "ربي حياتي تحلو بحبك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0329",
+  "number": 329,
+  "title": "إني أشدو لك ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0330",
+  "number": 330,
+  "title": "أنا باشهد عن إلهي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0331",
+  "number": 331,
+  "title": "رسالة أعطيتني يا سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0332",
+  "number": 332,
+  "title": "نشيدي يعلو بالهتاف وكذا التمجيد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0333",
+  "number": 333,
+  "title": "هل يستطيع الرب بي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0334",
+  "number": 334,
+  "title": "علمني يا رب كيف أعيش",
+  "hasChorus": false
+ },
+ {
+  "id": "h0335",
+  "number": 335,
+  "title": "الآيات والعجائب التي صنعها",
+  "hasChorus": false
+ },
+ {
+  "id": "h0336",
+  "number": 336,
+  "title": "في المسيح يعظم انتصاري",
+  "hasChorus": false
+ },
+ {
+  "id": "h0337",
+  "number": 337,
+  "title": "أدخل لقدسك أترجى وجهك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0338",
+  "number": 338,
+  "title": "في ذي الحياة أحيا لمن أحبني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0339",
+  "number": 339,
+  "title": "هيا يا شعب المسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0340",
+  "number": 340,
+  "title": "في اسم ربنا يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0341",
+  "number": 341,
+  "title": "في خضوع للإله أبتغي دوما هداه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0342",
+  "number": 342,
+  "title": "هيا نغني لرب السما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0343",
+  "number": 343,
+  "title": "في السماء أنت شمسي وضيائي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0344",
+  "number": 344,
+  "title": "الذي يغفر كل آثامك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0345",
+  "number": 345,
+  "title": "هيا نرنم لربنا المسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0346",
+  "number": 346,
+  "title": "من يوم ما قابلت حبيبي يسوع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0347",
+  "number": 347,
+  "title": "علوت جدا أيها الرب الإله",
+  "hasChorus": true
+ },
+ {
+  "id": "h0348",
+  "number": 348,
+  "title": "ربي في ستر دماك يا حبيبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0349",
+  "number": 349,
+  "title": "سيدي الفادي يسوع مبدع الأكوان",
+  "hasChorus": false
+ },
+ {
+  "id": "h0350",
+  "number": 350,
+  "title": "تعالوا تعالوا يا تعابى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0351",
+  "number": 351,
+  "title": "لأنه تعلق بي أنجيه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0352",
+  "number": 352,
+  "title": "أنا عايش في الفلك انا عايش",
+  "hasChorus": false
+ },
+ {
+  "id": "h0353",
+  "number": 353,
+  "title": "فرحت قلبي يوم ما قابلتك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0354",
+  "number": 354,
+  "title": "يا أيها الإنسان يسوع على الأبواب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0355",
+  "number": 355,
+  "title": "القلب كان قاسي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0356",
+  "number": 356,
+  "title": "الذي يغفر ذنوبك جميع ذنوبك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0357",
+  "number": 357,
+  "title": "لا تعد دون المسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0358",
+  "number": 358,
+  "title": "أنا قلبي يسجد لجلالك كل يوم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0359",
+  "number": 359,
+  "title": "فيك يا كل الأماني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0360",
+  "number": 360,
+  "title": "لن أعيش سيدي وسط حيرة الزمان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0361",
+  "number": 361,
+  "title": "ها يسوع الباب دوما يقرع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0362",
+  "number": 362,
+  "title": "كم سطرت ديون في كتب السماء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0363",
+  "number": 363,
+  "title": "حب عظيم قد سما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0364",
+  "number": 364,
+  "title": "مديون القلب يحمدك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0365",
+  "number": 365,
+  "title": "كنت في الماضي أثيم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0366",
+  "number": 366,
+  "title": "مبارك الرب إلهنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0367",
+  "number": 367,
+  "title": "إن قلبي ليس يهوى",
+  "hasChorus": false
+ },
+ {
+  "id": "h0368",
+  "number": 368,
+  "title": "في برية الفتور وسط وحشة الظلام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0369",
+  "number": 369,
+  "title": "بالأحضان الأبوية",
+  "hasChorus": true
+ },
+ {
+  "id": "h0370",
+  "number": 370,
+  "title": "قلبي هذا الأثيم حرره القدير",
+  "hasChorus": false
+ },
+ {
+  "id": "h0371",
+  "number": 371,
+  "title": "مش ممكن يرتاح قلبك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0372",
+  "number": 372,
+  "title": "يا إلهي قد خلقتني كاملا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0373",
+  "number": 373,
+  "title": "في شخص ربنا يسوع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0374",
+  "number": 374,
+  "title": "دي لحظه سعيده حقيقي مجيده",
+  "hasChorus": true
+ },
+ {
+  "id": "h0375",
+  "number": 375,
+  "title": "يا ربنا كل ما عندنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0376",
+  "number": 376,
+  "title": "ينبغي أن تزيد أنت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0377",
+  "number": 377,
+  "title": "ادينا كلام من عندك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0378",
+  "number": 378,
+  "title": "ليه يا مؤمن باكي وحزين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0379",
+  "number": 379,
+  "title": "يا من احتويتني في جراحك هناك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0380",
+  "number": 380,
+  "title": "كنت في طريقي تائها مسكين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0381",
+  "number": 381,
+  "title": "بشوق وحنين وصبر سنين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0382",
+  "number": 382,
+  "title": "لما الرب يسوع ادانا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0383",
+  "number": 383,
+  "title": "يا سيدي الفادي إليك حنيني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0384",
+  "number": 384,
+  "title": "قد مضى سيدي للسما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0385",
+  "number": 385,
+  "title": "سيدي هبني أراك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0386",
+  "number": 386,
+  "title": "أمين تعال يا ربي المبارك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0387",
+  "number": 387,
+  "title": "ومهما طال الزمان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0388",
+  "number": 388,
+  "title": "قلبي في اشتياق إلى لحظة اللقاء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0389",
+  "number": 389,
+  "title": "ليس لي مقر",
+  "hasChorus": true
+ },
+ {
+  "id": "h0390",
+  "number": 390,
+  "title": "بعد قليل جدا ييجي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0391",
+  "number": 391,
+  "title": "أتممت وعد الآب يوم قمت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0392",
+  "number": 392,
+  "title": "الرب عزي وترسي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0393",
+  "number": 393,
+  "title": "مهما طال الزمان في هذه الحياة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0394",
+  "number": 394,
+  "title": "أنشد نشيد الحرية",
+  "hasChorus": true
+ },
+ {
+  "id": "h0395",
+  "number": 395,
+  "title": "إن اشتياق القلب زاد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0396",
+  "number": 396,
+  "title": "يسوع ربي أحمد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0397",
+  "number": 397,
+  "title": "يا صاحب الحنان يا ملجأ نفسي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0398",
+  "number": 398,
+  "title": "ليتك تأتي سريعا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0399",
+  "number": 399,
+  "title": "في موكب جيش الغالبين",
+  "hasChorus": false
+ },
+ {
+  "id": "h0400",
+  "number": 400,
+  "title": "نرنم لربنا ونرفع اسمه العظيم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0401",
+  "number": 401,
+  "title": "ربي معي يسير في المروج",
+  "hasChorus": true
+ },
+ {
+  "id": "h0402",
+  "number": 402,
+  "title": "جيت لك وأنا مديون",
+  "hasChorus": true
+ },
+ {
+  "id": "h0403",
+  "number": 403,
+  "title": "هيا كلنا بالفرح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0404",
+  "number": 404,
+  "title": "يا مسيحي بهجة الأرض سراب سراب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0405",
+  "number": 405,
+  "title": "تاج راسي وملكي وسيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0406",
+  "number": 406,
+  "title": "في عهد ربي راسخ وفيه أسكن",
+  "hasChorus": true
+ },
+ {
+  "id": "h0407",
+  "number": 407,
+  "title": "أبتغي طول الحياة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0408",
+  "number": 408,
+  "title": "ربنا تعال نحن في انتظار",
+  "hasChorus": true
+ },
+ {
+  "id": "h0409",
+  "number": 409,
+  "title": "آتي إليك يا يسوعي أنت المريح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0410",
+  "number": 410,
+  "title": "هل دمك الزكي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0411",
+  "number": 411,
+  "title": "أشواق في القلب بتنادي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0412",
+  "number": 412,
+  "title": "أروح لمين غيرك يا يسوع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0413",
+  "number": 413,
+  "title": "لأنك الإله",
+  "hasChorus": true
+ },
+ {
+  "id": "h0414",
+  "number": 414,
+  "title": "قد كنت في لج الآثام",
+  "hasChorus": false
+ },
+ {
+  "id": "h0415",
+  "number": 415,
+  "title": "كنت ميت بالخطايا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0416",
+  "number": 416,
+  "title": "صوته الحلو أتاني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0417",
+  "number": 417,
+  "title": "لمجدك احفظ ربي حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0418",
+  "number": 418,
+  "title": "إني صغير ربي عن ألطافك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0419",
+  "number": 419,
+  "title": "هناك في بيت الآب دايما ها نبقي معاك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0420",
+  "number": 420,
+  "title": "يا رب إنني غريب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0421",
+  "number": 421,
+  "title": "سلام يسود حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0422",
+  "number": 422,
+  "title": "مش مستني ياربي موقف راح يفرحني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0423",
+  "number": 423,
+  "title": "محتاج لك تداريني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0424",
+  "number": 424,
+  "title": "لا بيت لي هنا لا موطنا مختار",
+  "hasChorus": true
+ },
+ {
+  "id": "h0425",
+  "number": 425,
+  "title": "نشكر كل حين إلهنا الأمين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0426",
+  "number": 426,
+  "title": "أنا في المسيح خليقه جديده",
+  "hasChorus": false
+ },
+ {
+  "id": "h0427",
+  "number": 427,
+  "title": "إنني ربي عارف ذنبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0428",
+  "number": 428,
+  "title": "تعال دا عشانك على الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0429",
+  "number": 429,
+  "title": "دربني يا إلهي كي أعيش في انتصار",
+  "hasChorus": false
+ },
+ {
+  "id": "h0430",
+  "number": 430,
+  "title": "قد علمت أنك تستطيع كل شيء",
+  "hasChorus": false
+ },
+ {
+  "id": "h0431",
+  "number": 431,
+  "title": "يحلو لي أن أقتفي آثار راعي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0432",
+  "number": 432,
+  "title": "أسبح الرب مدى الحياة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0433",
+  "number": 433,
+  "title": "أتينا إليك نلتمس وجهك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0434",
+  "number": 434,
+  "title": "أعيش معك للمدى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0435",
+  "number": 435,
+  "title": "يا رب انت وحدك فيك عزاء قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0436",
+  "number": 436,
+  "title": "نأتي لك يا سيد الكون يا من أحببتنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0437",
+  "number": 437,
+  "title": "يا من صنعت بل لي وهبت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0438",
+  "number": 438,
+  "title": "يا رب أنت نور قلبي وخلاصي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0439",
+  "number": 439,
+  "title": "ربي يسوع الغالي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0440",
+  "number": 440,
+  "title": "عما قريب يدوي بوق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0441",
+  "number": 441,
+  "title": "حب سما فوق كل حب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0442",
+  "number": 442,
+  "title": "يمكن اكون غلطت امبارح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0443",
+  "number": 443,
+  "title": "إنت مريحي إنت دوائي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0444",
+  "number": 444,
+  "title": "يا قاضي الأرامل يا أبو الأيتام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0445",
+  "number": 445,
+  "title": "إليك نضرع والباب نقرع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0446",
+  "number": 446,
+  "title": "الرب لي راع فلا يعوزني شيء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0447",
+  "number": 447,
+  "title": "الله الذي لنا هو لن يتركنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0448",
+  "number": 448,
+  "title": "قلبي اشتهى يا ربي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0449",
+  "number": 449,
+  "title": "أعود إلى موطني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0450",
+  "number": 450,
+  "title": "ماذا تروم النفس في",
+  "hasChorus": false
+ },
+ {
+  "id": "h0451",
+  "number": 451,
+  "title": "سلمت نفسي في يديك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0452",
+  "number": 452,
+  "title": "كم تمتلي حياتنا كلاما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0453",
+  "number": 453,
+  "title": "بقوة لاسم يسوع اشدوا وأنشدوا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0454",
+  "number": 454,
+  "title": "سأعيش أذكر فضلك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0455",
+  "number": 455,
+  "title": "يا إلهي كم من نفوس",
+  "hasChorus": false
+ },
+ {
+  "id": "h0456",
+  "number": 456,
+  "title": "يهيم فؤادي ليوم الرحيل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0457",
+  "number": 457,
+  "title": "معي في الطريق يا أعز صديق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0458",
+  "number": 458,
+  "title": "اوعى تأجل وتقول بكره",
+  "hasChorus": true
+ },
+ {
+  "id": "h0459",
+  "number": 459,
+  "title": "سلامك فاق العقول",
+  "hasChorus": true
+ },
+ {
+  "id": "h0460",
+  "number": 460,
+  "title": "كم أود أن أشيد بيسوعي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0461",
+  "number": 461,
+  "title": "أنا ماشي ولي معاك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0462",
+  "number": 462,
+  "title": "أنا هاستناك كل يوم لأنك حي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0463",
+  "number": 463,
+  "title": "إن اسمه يسوع اسمه يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0464",
+  "number": 464,
+  "title": "آتي إليك يا فادي حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0465",
+  "number": 465,
+  "title": "عابرين دايسين كل الصعوبات",
+  "hasChorus": true
+ },
+ {
+  "id": "h0466",
+  "number": 466,
+  "title": "هل تبغي عتقا من نير الآثام؟",
+  "hasChorus": true
+ },
+ {
+  "id": "h0467",
+  "number": 467,
+  "title": "أنا بيك خطاياي مغفوره",
+  "hasChorus": true
+ },
+ {
+  "id": "h0468",
+  "number": 468,
+  "title": "إن جود الله يدعو للسرور",
+  "hasChorus": true
+ },
+ {
+  "id": "h0469",
+  "number": 469,
+  "title": "كنت في طين الحمأه باقاسي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0470",
+  "number": 470,
+  "title": "في شرودي وابتعادي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0471",
+  "number": 471,
+  "title": "في بكائي وسقامي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0472",
+  "number": 472,
+  "title": "من يمطر الماء الغزير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0473",
+  "number": 473,
+  "title": "من مثل الرب إلهنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0474",
+  "number": 474,
+  "title": "قد ضاقت بي الحياة هنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0475",
+  "number": 475,
+  "title": "قاسيت ربي العذاب لفدائنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0476",
+  "number": 476,
+  "title": "يقرع المسيح باب الفؤاد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0477",
+  "number": 477,
+  "title": "هل أنسى يوما يا حبيب قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0478",
+  "number": 478,
+  "title": "مين غيرك يسمع لصلاتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0479",
+  "number": 479,
+  "title": "أحبني أحبه يسر بي أشدو له",
+  "hasChorus": true
+ },
+ {
+  "id": "h0480",
+  "number": 480,
+  "title": "فتح الآذان الصماء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0481",
+  "number": 481,
+  "title": "دي نفوسنا تتعلق بشخصك وتلاقيك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0482",
+  "number": 482,
+  "title": "أنا لست إلا غريبا هنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0483",
+  "number": 483,
+  "title": "سألوني فين هو إلهك؟",
+  "hasChorus": true
+ },
+ {
+  "id": "h0484",
+  "number": 484,
+  "title": "وتركت عمري يمضي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0485",
+  "number": 485,
+  "title": "من يطلب الرب يجد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0486",
+  "number": 486,
+  "title": "يسوع ملك الملوك مجدا هللويا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0487",
+  "number": 487,
+  "title": "لك المجد للأبد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0488",
+  "number": 488,
+  "title": "إن كانت حولي تجارب وآلام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0489",
+  "number": 489,
+  "title": "يا الله من مثلك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0490",
+  "number": 490,
+  "title": "الكل يمضي ويزول",
+  "hasChorus": false
+ },
+ {
+  "id": "h0491",
+  "number": 491,
+  "title": "لإسم ربي دوما أغني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0492",
+  "number": 492,
+  "title": "أنا جاي ومسنود على وعدك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0493",
+  "number": 493,
+  "title": "ما فيش وجود لقوة تانيه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0494",
+  "number": 494,
+  "title": "ملكوتك ماله حدود",
+  "hasChorus": true
+ },
+ {
+  "id": "h0495",
+  "number": 495,
+  "title": "يا رب انا جاي ليك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0496",
+  "number": 496,
+  "title": "مخلصي بالنعمة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0497",
+  "number": 497,
+  "title": "يا ربنا الحبيب يا مصدر الأفراح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0498",
+  "number": 498,
+  "title": "عايز ارجع تاني واترمي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0499",
+  "number": 499,
+  "title": "يا اللي بتعزيني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0500",
+  "number": 500,
+  "title": "قلبي بيهتف للي فدانى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0501",
+  "number": 501,
+  "title": "ربي قد صرت سكيبا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0502",
+  "number": 502,
+  "title": "سوف يمسح ربي الدموع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0503",
+  "number": 503,
+  "title": "في وقت ضعفي بانادي لك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0504",
+  "number": 504,
+  "title": "يسوع حبيبي نصيبي الرحيم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0505",
+  "number": 505,
+  "title": "في وقت ضعفي أراك تشفي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0506",
+  "number": 506,
+  "title": "حبيبي فتى مثل أرز لبنان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0507",
+  "number": 507,
+  "title": "يا صاحب السلطان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0508",
+  "number": 508,
+  "title": "يسوع وحده حوى",
+  "hasChorus": false
+ },
+ {
+  "id": "h0509",
+  "number": 509,
+  "title": "كما أنا وليس لي عذر لديك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0510",
+  "number": 510,
+  "title": "يا رب أنت الكل في عالمي هنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0511",
+  "number": 511,
+  "title": "رددي أوتار قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0512",
+  "number": 512,
+  "title": "لو لم يحبني المسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0513",
+  "number": 513,
+  "title": "احفظني في رضاك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0514",
+  "number": 514,
+  "title": "من أنا يا رب لتذكرني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0515",
+  "number": 515,
+  "title": "ما لي سواك يا سيدي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0516",
+  "number": 516,
+  "title": "يا سيدي الحبيب يا نور عمري",
+  "hasChorus": true
+ },
+ {
+  "id": "h0517",
+  "number": 517,
+  "title": "ربنا أظهرت حبا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0518",
+  "number": 518,
+  "title": "مثل عظيم رحمتك يا خالقي ارحمني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0519",
+  "number": 519,
+  "title": "ومهما تكوني حصينة راح تقعي يا أسوار",
+  "hasChorus": false
+ },
+ {
+  "id": "h0520",
+  "number": 520,
+  "title": "أتينا بانكسار نعبد شخصك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0521",
+  "number": 521,
+  "title": "يا عجبا مخلصي قد مات من أجلي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0522",
+  "number": 522,
+  "title": "خذني بقرب قلبك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0523",
+  "number": 523,
+  "title": "للمنتهى أحببتني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0524",
+  "number": 524,
+  "title": "يا خاطي اعرف طريقك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0525",
+  "number": 525,
+  "title": "يا إلهي يا إلهي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0526",
+  "number": 526,
+  "title": "ما انساش أصلي كنت أنا عاصي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0527",
+  "number": 527,
+  "title": "من يصلي مؤمنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0528",
+  "number": 528,
+  "title": "صليب المسيح رمز الانتصار",
+  "hasChorus": true
+ },
+ {
+  "id": "h0529",
+  "number": 529,
+  "title": "أدخلني الملك إلى حجاله",
+  "hasChorus": true
+ },
+ {
+  "id": "h0530",
+  "number": 530,
+  "title": "فرحا اغمرنا يا ربنا الحبيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0531",
+  "number": 531,
+  "title": "دم بيعلن انتصارات",
+  "hasChorus": true
+ },
+ {
+  "id": "h0532",
+  "number": 532,
+  "title": "أنا جيت علشانك إنت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0533",
+  "number": 533,
+  "title": "كنت أعمى لا أرى أين طريقي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0534",
+  "number": 534,
+  "title": "انت اللحن اللي باغنيه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0535",
+  "number": 535,
+  "title": "مرة تهت بعيدا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0536",
+  "number": 536,
+  "title": "أنت مدعو إلى العرس العظيم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0537",
+  "number": 537,
+  "title": "من بعدي ربي أنا عائد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0538",
+  "number": 538,
+  "title": "قانع أنا يا ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0539",
+  "number": 539,
+  "title": "أخليت نفسك وأنت من سما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0540",
+  "number": 540,
+  "title": "حلو بتغفر ذنوبي وتريحني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0541",
+  "number": 541,
+  "title": "لي اشتياق أكون مع المسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0542",
+  "number": 542,
+  "title": "قف يا جندي جانب الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0543",
+  "number": 543,
+  "title": "رفعت عيني إلى الجبال",
+  "hasChorus": false
+ },
+ {
+  "id": "h0544",
+  "number": 544,
+  "title": "لما دعاني ربي قال لي: تعال ارتاح",
+  "hasChorus": false
+ },
+ {
+  "id": "h0545",
+  "number": 545,
+  "title": "أحب سيدي وأفعل رضاه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0546",
+  "number": 546,
+  "title": "بحبك أنا مريض",
+  "hasChorus": false
+ },
+ {
+  "id": "h0547",
+  "number": 547,
+  "title": "رب أحسن لي فأحيا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0548",
+  "number": 548,
+  "title": "كما أنا آتي إلى",
+  "hasChorus": false
+ },
+ {
+  "id": "h0549",
+  "number": 549,
+  "title": "لما قابلني ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0550",
+  "number": 550,
+  "title": "حبيبتي هيا رجوعا إلي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0551",
+  "number": 551,
+  "title": "سيدي استلم حياتي كرسنها لك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0552",
+  "number": 552,
+  "title": "تزأر الريح ويأتينا صداها",
+  "hasChorus": true
+ },
+ {
+  "id": "h0553",
+  "number": 553,
+  "title": "ربي نزلت من أوج السما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0554",
+  "number": 554,
+  "title": "هل كل ذا عني أنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0555",
+  "number": 555,
+  "title": "ربي راعي وسلامي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0556",
+  "number": 556,
+  "title": "رب الأرباب يا يسوع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0557",
+  "number": 557,
+  "title": "من قلب بحب سبيته",
+  "hasChorus": true
+ },
+ {
+  "id": "h0558",
+  "number": 558,
+  "title": "هل حبا يغمر أركاني؟",
+  "hasChorus": true
+ },
+ {
+  "id": "h0559",
+  "number": 559,
+  "title": "عصفور دور إن سقط",
+  "hasChorus": true
+ },
+ {
+  "id": "h0560",
+  "number": 560,
+  "title": "أنت تحطم القيود",
+  "hasChorus": true
+ },
+ {
+  "id": "h0561",
+  "number": 561,
+  "title": "سيدي الفادي الغني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0562",
+  "number": 562,
+  "title": "يا مليك البر عفوا ذا صليبي ذا صليبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0563",
+  "number": 563,
+  "title": "تحت الصليب بأركع عندك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0564",
+  "number": 564,
+  "title": "لا مثل لك بين الآلهة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0565",
+  "number": 565,
+  "title": "يا اللي فديت حياتنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0566",
+  "number": 566,
+  "title": "أتكل عليك ألتجئ إليك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0567",
+  "number": 567,
+  "title": "يا اللي أمامك حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0568",
+  "number": 568,
+  "title": "أنت عظيم عظيم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0569",
+  "number": 569,
+  "title": "حقك دا في أراضينا هيعلا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0570",
+  "number": 570,
+  "title": "هل جلست في هدوء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0571",
+  "number": 571,
+  "title": "حيثما أكون لست أبغي لي سواك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0572",
+  "number": 572,
+  "title": "مجدك هيعود لك مش للإنسان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0573",
+  "number": 573,
+  "title": "رنموا بمجد الرب لاسمه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0574",
+  "number": 574,
+  "title": "حكمة الله العلي كيف تقسو",
+  "hasChorus": false
+ },
+ {
+  "id": "h0575",
+  "number": 575,
+  "title": "لأن رحمتك قد عظمت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0576",
+  "number": 576,
+  "title": "يا من بحضوره نفسي تطيب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0577",
+  "number": 577,
+  "title": "معا نعلي ربنا المسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0578",
+  "number": 578,
+  "title": "إن أحيا مع المسيح",
+  "hasChorus": false
+ },
+ {
+  "id": "h0579",
+  "number": 579,
+  "title": "هللويا سوف يأتي منهيا أتعابنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0580",
+  "number": 580,
+  "title": "في فرحي أراك سيدي تفرح معي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0581",
+  "number": 581,
+  "title": "نعلي مجدك يا مالك الشعوب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0582",
+  "number": 582,
+  "title": "سراج منير لنا في السبيل",
+  "hasChorus": false
+ },
+ {
+  "id": "h0583",
+  "number": 583,
+  "title": "أبي ضللت حين تركت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0584",
+  "number": 584,
+  "title": "مبدع الكون القدير سمر فوق الصليب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0585",
+  "number": 585,
+  "title": "حاولت اخدم يا ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0586",
+  "number": 586,
+  "title": "ها حملي الثقيل ربي أعيا كاهلي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0587",
+  "number": 587,
+  "title": "ليس شيء باقيا لي لكي أعمل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0588",
+  "number": 588,
+  "title": "ضللت في بحر الحياة وكان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0589",
+  "number": 589,
+  "title": "نأتي لك يا ربنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0590",
+  "number": 590,
+  "title": "أفراحنا بيك طول الطريق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0591",
+  "number": 591,
+  "title": "ها صلاة التوبة في شفتي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0592",
+  "number": 592,
+  "title": "مسيحي للأرض جيت وبينا مشيت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0593",
+  "number": 593,
+  "title": "كذبوا من قالوا إني وحيد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0594",
+  "number": 594,
+  "title": "لاسمك يا فادينا بصدق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0595",
+  "number": 595,
+  "title": "نجثو لك يا ربنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0596",
+  "number": 596,
+  "title": "أنت صنعت السماوات وسماء السماوات",
+  "hasChorus": true
+ },
+ {
+  "id": "h0597",
+  "number": 597,
+  "title": "حتى أرى دواما سلامك العجيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0598",
+  "number": 598,
+  "title": "ملوك الأرض يسجدون",
+  "hasChorus": true
+ },
+ {
+  "id": "h0599",
+  "number": 599,
+  "title": "سود يا يسوع في حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0600",
+  "number": 600,
+  "title": "أنا باسجد عندك وباسبح اسمك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0601",
+  "number": 601,
+  "title": "رحمتك أفضل من الحياه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0602",
+  "number": 602,
+  "title": "هو الإله رب الخليقة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0603",
+  "number": 603,
+  "title": "فأكون دائما في حضنك يا يسوع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0604",
+  "number": 604,
+  "title": "ربي يا من قد بذلت دماك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0605",
+  "number": 605,
+  "title": "هيا نهتف أمام الرب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0606",
+  "number": 606,
+  "title": "كيف ربي مع أنك الإله",
+  "hasChorus": false
+ },
+ {
+  "id": "h0607",
+  "number": 607,
+  "title": "لما اقعد معاك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0608",
+  "number": 608,
+  "title": "هيا افرحوا يا شعب الرب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0609",
+  "number": 609,
+  "title": "شعبك يعلن بيك إيمانه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0610",
+  "number": 610,
+  "title": "يا إله الكون مالك الدهور",
+  "hasChorus": false
+ },
+ {
+  "id": "h0611",
+  "number": 611,
+  "title": "سوف أدخل أبوابك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0612",
+  "number": 612,
+  "title": "نحن شعبك وغنم مرعاك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0613",
+  "number": 613,
+  "title": "في تعاون البلايا إذ تخونني القوى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0614",
+  "number": 614,
+  "title": "لا تفشل أيها الصديق ربي يحرسك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0615",
+  "number": 615,
+  "title": "يسوع يمشي بين الجموع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0616",
+  "number": 616,
+  "title": "اختبرني يا الله",
+  "hasChorus": false
+ },
+ {
+  "id": "h0617",
+  "number": 617,
+  "title": "يا كنيسه قومي وانهضي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0618",
+  "number": 618,
+  "title": "بعدما عشت في حبك العظيم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0619",
+  "number": 619,
+  "title": "تعال يا ربي بروحك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0620",
+  "number": 620,
+  "title": "أرسلتك بقوتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0621",
+  "number": 621,
+  "title": "إحمدوا الفادي جميعا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0622",
+  "number": 622,
+  "title": "ميزت صوت ربي عن سائر الأصوات",
+  "hasChorus": false
+ },
+ {
+  "id": "h0623",
+  "number": 623,
+  "title": "آدي قلبي اللي اتعود ينسى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0624",
+  "number": 624,
+  "title": "يا من له كل أمري",
+  "hasChorus": true
+ },
+ {
+  "id": "h0625",
+  "number": 625,
+  "title": "مستحق كل المجد يا يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0626",
+  "number": 626,
+  "title": "أيها الإنسان يا من تهت في كل طريق",
+  "hasChorus": false
+ },
+ {
+  "id": "h0627",
+  "number": 627,
+  "title": "سد علينا الآن",
+  "hasChorus": true
+ },
+ {
+  "id": "h0628",
+  "number": 628,
+  "title": "أوصنا أوصنا أوصنا في الأعالي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0629",
+  "number": 629,
+  "title": "جاي بذبيحة حمد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0630",
+  "number": 630,
+  "title": "عجز لساني عن التعبير",
+  "hasChorus": false
+ },
+ {
+  "id": "h0631",
+  "number": 631,
+  "title": "يا اللي عرفت الرب يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0632",
+  "number": 632,
+  "title": "روح قدسك فينا يعزينا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0633",
+  "number": 633,
+  "title": "فاض قلبي بكلام بكلام صالح",
+  "hasChorus": false
+ },
+ {
+  "id": "h0634",
+  "number": 634,
+  "title": "قد تجسد لأجلي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0635",
+  "number": 635,
+  "title": "ما أحوج القلب إلى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0636",
+  "number": 636,
+  "title": "أعد علي حديثا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0637",
+  "number": 637,
+  "title": "ما أحلى مساكنك يا رب الجنود",
+  "hasChorus": false
+ },
+ {
+  "id": "h0638",
+  "number": 638,
+  "title": "المركب آهي جات",
+  "hasChorus": true
+ },
+ {
+  "id": "h0639",
+  "number": 639,
+  "title": "ألبسني حلة العرس",
+  "hasChorus": false
+ },
+ {
+  "id": "h0640",
+  "number": 640,
+  "title": "هل أطرق بابك بعد ضياع الكل",
+  "hasChorus": false
+ },
+ {
+  "id": "h0641",
+  "number": 641,
+  "title": "هل عرفت كيف عاش؟",
+  "hasChorus": true
+ },
+ {
+  "id": "h0642",
+  "number": 642,
+  "title": "عالي لفوق انا رافع إيدي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0643",
+  "number": 643,
+  "title": "نعطي لمن أعطى ابنه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0644",
+  "number": 644,
+  "title": "ما أعجب النعمة لي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0645",
+  "number": 645,
+  "title": "أما أنا فبكثرة رحمتك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0646",
+  "number": 646,
+  "title": "ما عندي شيء أقدم لك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0647",
+  "number": 647,
+  "title": "حتى ولو قالوا عني كلام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0648",
+  "number": 648,
+  "title": "طول الحياة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0649",
+  "number": 649,
+  "title": "آدي سنه من السنين",
+  "hasChorus": false
+ },
+ {
+  "id": "h0650",
+  "number": 650,
+  "title": "كامل الجمال أشرق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0651",
+  "number": 651,
+  "title": "أدنو إليك أرتاح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0652",
+  "number": 652,
+  "title": "في مكان مرهوب في ظلال الغروب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0653",
+  "number": 653,
+  "title": "إن في القلب حنينا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0654",
+  "number": 654,
+  "title": "قد صعد الرب إلى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0655",
+  "number": 655,
+  "title": "لك ينبغي التسبيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0656",
+  "number": 656,
+  "title": "يا اللي بديت الرحله معايا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0657",
+  "number": 657,
+  "title": "لأنه هناك أمر الرب بالبركه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0658",
+  "number": 658,
+  "title": "جعلت الرب أمامي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0659",
+  "number": 659,
+  "title": "عيني إلى الحمل المذبوح",
+  "hasChorus": false
+ },
+ {
+  "id": "h0660",
+  "number": 660,
+  "title": "أجهل ما سوف يأتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0661",
+  "number": 661,
+  "title": "مؤتي الأغاني في ليل آلامي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0662",
+  "number": 662,
+  "title": "لي مقام بهيج سما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0663",
+  "number": 663,
+  "title": "ما هو ذنبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0664",
+  "number": 664,
+  "title": "من ذا الذي شاد السما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0665",
+  "number": 665,
+  "title": "فادي الورى يدعوك قل ها أنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0666",
+  "number": 666,
+  "title": "العالم يبني ويزرع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0667",
+  "number": 667,
+  "title": "يا سيدي ها ثقتي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0668",
+  "number": 668,
+  "title": "أنا ملك الفادي اللي فداني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0669",
+  "number": 669,
+  "title": "ياللي دفعت في أغلى الأتمان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0670",
+  "number": 670,
+  "title": "فوق كل قوة ورياسة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0671",
+  "number": 671,
+  "title": "من أنا لأصير من شعبك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0672",
+  "number": 672,
+  "title": "إنت الملك الوحيد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0673",
+  "number": 673,
+  "title": "ما للشمس تحجب وجهها",
+  "hasChorus": false
+ },
+ {
+  "id": "h0674",
+  "number": 674,
+  "title": "لا لن أرى حبا أعظم وأقوى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0675",
+  "number": 675,
+  "title": "سمعت نداءك يا ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0676",
+  "number": 676,
+  "title": "ياما شعرت بإني وحيد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0677",
+  "number": 677,
+  "title": "أتانا من عرش السما",
+  "hasChorus": true
+ },
+ {
+  "id": "h0678",
+  "number": 678,
+  "title": "تسبيح للرب يعلا وتعلا معاه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0679",
+  "number": 679,
+  "title": "يا أيها الخاطيء هل",
+  "hasChorus": false
+ },
+ {
+  "id": "h0680",
+  "number": 680,
+  "title": "علمني أن أكون صامتا كما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0681",
+  "number": 681,
+  "title": "إنت هدف أهداف العمر",
+  "hasChorus": true
+ },
+ {
+  "id": "h0682",
+  "number": 682,
+  "title": "آن أوان الانطلاق بانتصار",
+  "hasChorus": true
+ },
+ {
+  "id": "h0683",
+  "number": 683,
+  "title": "إكليله مضفور بالشوك من أجلي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0684",
+  "number": 684,
+  "title": "أنا جيت سلمتك قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0685",
+  "number": 685,
+  "title": "أمور الله عجيبه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0686",
+  "number": 686,
+  "title": "ماذا أنا أفعل كي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0687",
+  "number": 687,
+  "title": "قلبي أسير نعمتك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0688",
+  "number": 688,
+  "title": "ماذا أرد للرب الذي فدى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0689",
+  "number": 689,
+  "title": "راجع بعد بعادي كتير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0690",
+  "number": 690,
+  "title": "الله محبه وحبه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0691",
+  "number": 691,
+  "title": "ينقص كل ما لي وتزيد انت وحدك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0692",
+  "number": 692,
+  "title": "مال النهار سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0693",
+  "number": 693,
+  "title": "يزداد ألمي بيحزن قلبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0694",
+  "number": 694,
+  "title": "ضع في قلبي حبا واصنع منه لحنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0695",
+  "number": 695,
+  "title": "حب يسوع الفادي يحير العقول",
+  "hasChorus": false
+ },
+ {
+  "id": "h0696",
+  "number": 696,
+  "title": "إن هاج البحر والأمواج",
+  "hasChorus": true
+ },
+ {
+  "id": "h0697",
+  "number": 697,
+  "title": "يا يسوع انت احتياجي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0698",
+  "number": 698,
+  "title": "سمعت صوت حبيبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0699",
+  "number": 699,
+  "title": "مهما سمت آمالنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0700",
+  "number": 700,
+  "title": "يا ليت لي ألف لسان",
+  "hasChorus": false
+ },
+ {
+  "id": "h0701",
+  "number": 701,
+  "title": "اختبرتني إلهي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0702",
+  "number": 702,
+  "title": "اسم عزيز قد سما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0703",
+  "number": 703,
+  "title": "لا اسم يحلو ذكره",
+  "hasChorus": false
+ },
+ {
+  "id": "h0704",
+  "number": 704,
+  "title": "ينبوع جود من دم زاك جرى",
+  "hasChorus": false
+ },
+ {
+  "id": "h0705",
+  "number": 705,
+  "title": "أي حمل قد قبلت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0706",
+  "number": 706,
+  "title": "يا بهاء المجد رسم الجوهر",
+  "hasChorus": false
+ },
+ {
+  "id": "h0707",
+  "number": 707,
+  "title": "على الإله فاتكل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0708",
+  "number": 708,
+  "title": "كلمة الله غدا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0709",
+  "number": 709,
+  "title": "قم ونغم يا مرنم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0710",
+  "number": 710,
+  "title": "يسوع أعجب باسمه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0711",
+  "number": 711,
+  "title": "أنا محتاج لمسة روحك تغيرني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0712",
+  "number": 712,
+  "title": "ها نحن يا رب الورى",
+  "hasChorus": false
+ },
+ {
+  "id": "h0713",
+  "number": 713,
+  "title": "لك السجود والثنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0714",
+  "number": 714,
+  "title": "إذ ننظر إليك في المجد الرفيع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0715",
+  "number": 715,
+  "title": "يا يسوع كوكب الصبح المنير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0716",
+  "number": 716,
+  "title": "يا خالق الملا يا ساكن العلا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0717",
+  "number": 717,
+  "title": "هوذا قد صار ليل",
+  "hasChorus": false
+ },
+ {
+  "id": "h0718",
+  "number": 718,
+  "title": "قومي عروس الرب لا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0719",
+  "number": 719,
+  "title": "حولك نحن نجتمع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0720",
+  "number": 720,
+  "title": "سر عظيم قد بدا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0721",
+  "number": 721,
+  "title": "محبة الابن الحبيب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0722",
+  "number": 722,
+  "title": "بارفع ذبيحتي بفرح مليانه بالتسبيح",
+  "hasChorus": false
+ },
+ {
+  "id": "h0723",
+  "number": 723,
+  "title": "عجيج عدل الله قد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0724",
+  "number": 724,
+  "title": "يا سيد الأنام يا ربنا المهوب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0725",
+  "number": 725,
+  "title": "سر التقى سر عظيم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0726",
+  "number": 726,
+  "title": "يا أيها الراعي العظيم",
+  "hasChorus": false
+ },
+ {
+  "id": "h0727",
+  "number": 727,
+  "title": "يا نفسي دوما فكري",
+  "hasChorus": false
+ },
+ {
+  "id": "h0728",
+  "number": 728,
+  "title": "يا مليك المجد في ملء الزمان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0729",
+  "number": 729,
+  "title": "تسلني أعود لدرب الخطية",
+  "hasChorus": false
+ },
+ {
+  "id": "h0730",
+  "number": 730,
+  "title": "أي بهجة لنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0731",
+  "number": 731,
+  "title": "قبلما بنى الجبال",
+  "hasChorus": false
+ },
+ {
+  "id": "h0732",
+  "number": 732,
+  "title": "يا ساكن جوا قلوبنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0733",
+  "number": 733,
+  "title": "ثق يقينا في المسيح",
+  "hasChorus": false
+ },
+ {
+  "id": "h0734",
+  "number": 734,
+  "title": "رتبت لنا مائدة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0735",
+  "number": 735,
+  "title": "سأشدو حبا لإلهي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0736",
+  "number": 736,
+  "title": "في وسط أشواك البلاء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0737",
+  "number": 737,
+  "title": "هيا مؤمنون هيا مؤمنات",
+  "hasChorus": false
+ },
+ {
+  "id": "h0738",
+  "number": 738,
+  "title": "يا ثقيل الحمل أقبل",
+  "hasChorus": false
+ },
+ {
+  "id": "h0739",
+  "number": 739,
+  "title": "يا رب مين غيرك يقدر يعزيني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0740",
+  "number": 740,
+  "title": "مين يشفي القلب المكسور",
+  "hasChorus": false
+ },
+ {
+  "id": "h0741",
+  "number": 741,
+  "title": "إليك آتي يا يسوع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0742",
+  "number": 742,
+  "title": "كل الخليقة التي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0743",
+  "number": 743,
+  "title": "يسوع عند قدميك أجلس",
+  "hasChorus": true
+ },
+ {
+  "id": "h0744",
+  "number": 744,
+  "title": "يا أيها الخاطي انتبه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0745",
+  "number": 745,
+  "title": "يمكن يكون جوانا صوت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0746",
+  "number": 746,
+  "title": "محبة الله سمت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0747",
+  "number": 747,
+  "title": "يا من تعيش وحدك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0748",
+  "number": 748,
+  "title": "من نبع جنبك الطعين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0749",
+  "number": 749,
+  "title": "دا كل أمر في سلطانك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0750",
+  "number": 750,
+  "title": "أفرح باللي وهبني حياته",
+  "hasChorus": false
+ },
+ {
+  "id": "h0751",
+  "number": 751,
+  "title": "أحلى إسم نرنم بيه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0752",
+  "number": 752,
+  "title": "الرب ساكن جوا قلبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0753",
+  "number": 753,
+  "title": "قدموا للرب سبحا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0754",
+  "number": 754,
+  "title": "لا تذكروا لي من الدنيا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0755",
+  "number": 755,
+  "title": "بارفض وبإصرار أي حوار",
+  "hasChorus": true
+ },
+ {
+  "id": "h0756",
+  "number": 756,
+  "title": "ها قصتي مع الإله",
+  "hasChorus": false
+ },
+ {
+  "id": "h0757",
+  "number": 757,
+  "title": "لو يوم أحس إنك بعيد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0758",
+  "number": 758,
+  "title": "يا إلهي يا اللي بموتك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0759",
+  "number": 759,
+  "title": "بر سلام مع سرور",
+  "hasChorus": true
+ },
+ {
+  "id": "h0760",
+  "number": 760,
+  "title": "الكلمه منك مش أوهام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0761",
+  "number": 761,
+  "title": "في هذه الحياه والعمر يعبر",
+  "hasChorus": false
+ },
+ {
+  "id": "h0762",
+  "number": 762,
+  "title": "قول لي يا خاطي إمتى تتوب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0763",
+  "number": 763,
+  "title": "هيا اذكروا كم قادنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0764",
+  "number": 764,
+  "title": "انت تعرف المستقبل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0765",
+  "number": 765,
+  "title": "أنا جاي لك قلبي ذليل",
+  "hasChorus": false
+ },
+ {
+  "id": "h0766",
+  "number": 766,
+  "title": "ماشيين بنغني الأناشيد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0767",
+  "number": 767,
+  "title": "يا لسر فائق كل مديح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0768",
+  "number": 768,
+  "title": "لأننا به نحيا ونتحرك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0769",
+  "number": 769,
+  "title": "إذا اجتزت في المياه والأنهار",
+  "hasChorus": true
+ },
+ {
+  "id": "h0770",
+  "number": 770,
+  "title": "أذكروا لي اسم يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0771",
+  "number": 771,
+  "title": "ردد لي وعودك وكفايه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0772",
+  "number": 772,
+  "title": "مش خارج حر باحب سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0773",
+  "number": 773,
+  "title": "يا أبونا أوقاتنا في يدك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0774",
+  "number": 774,
+  "title": "يا أيها الآب الغني",
+  "hasChorus": false
+ },
+ {
+  "id": "h0775",
+  "number": 775,
+  "title": "قد علمتني النعمة أحيا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0776",
+  "number": 776,
+  "title": "كنت في جهلي عنيد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0777",
+  "number": 777,
+  "title": "لماذا جئت يا ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0778",
+  "number": 778,
+  "title": "أهديك كل المجد والكرامة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0779",
+  "number": 779,
+  "title": "ترجي الله وانتظريه يا نفسي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0780",
+  "number": 780,
+  "title": "أشواق للبركه جوانا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0781",
+  "number": 781,
+  "title": "في سيرنا في طريق الحياة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0782",
+  "number": 782,
+  "title": "أشتاق ربي أسبح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0783",
+  "number": 783,
+  "title": "أراك يسوع وأنت القدير",
+  "hasChorus": false
+ },
+ {
+  "id": "h0784",
+  "number": 784,
+  "title": "بعد ما كنت بعيد وضرير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0785",
+  "number": 785,
+  "title": "بين يديك سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0786",
+  "number": 786,
+  "title": "قلبك كبير مالهوش حدود",
+  "hasChorus": true
+ },
+ {
+  "id": "h0787",
+  "number": 787,
+  "title": "يا ربي إنت عارف",
+  "hasChorus": true
+ },
+ {
+  "id": "h0788",
+  "number": 788,
+  "title": "يوم بيوم عايز امشي فيها",
+  "hasChorus": true
+ },
+ {
+  "id": "h0789",
+  "number": 789,
+  "title": "أنا مستنيك تعمل بإيديك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0790",
+  "number": 790,
+  "title": "نفسي كانت ما تساويش",
+  "hasChorus": true
+ },
+ {
+  "id": "h0791",
+  "number": 791,
+  "title": "ربي الحبيب فوق الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0792",
+  "number": 792,
+  "title": "وقت الخوف وفي همي وتعبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0793",
+  "number": 793,
+  "title": "جازت من حولي التيارات",
+  "hasChorus": true
+ },
+ {
+  "id": "h0794",
+  "number": 794,
+  "title": "فوق الصليب منظر عجيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0795",
+  "number": 795,
+  "title": "قدام حاجات ما لهاش جواب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0796",
+  "number": 796,
+  "title": "يا خالق الأكوان والناس",
+  "hasChorus": true
+ },
+ {
+  "id": "h0797",
+  "number": 797,
+  "title": "قوموا من النوم إن الليل قد ولى",
+  "hasChorus": false
+ },
+ {
+  "id": "h0798",
+  "number": 798,
+  "title": "لا يستحيل عليه شي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0799",
+  "number": 799,
+  "title": "يسوع أنت تعلم أن",
+  "hasChorus": true
+ },
+ {
+  "id": "h0800",
+  "number": 800,
+  "title": "تجي تجارب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0801",
+  "number": 801,
+  "title": "مين غيرك عارف نفسي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0802",
+  "number": 802,
+  "title": "يا اللي مش لاقي لحياتك أي معنى",
+  "hasChorus": false
+ },
+ {
+  "id": "h0803",
+  "number": 803,
+  "title": "شخصك وحدك هو الصخره",
+  "hasChorus": true
+ },
+ {
+  "id": "h0804",
+  "number": 804,
+  "title": "لننس إذا ما هو في الوراء",
+  "hasChorus": true
+ },
+ {
+  "id": "h0805",
+  "number": 805,
+  "title": "باعترف إن التهاون والكسل غالبين علي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0806",
+  "number": 806,
+  "title": "يا اللي تعبت من الأحزان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0807",
+  "number": 807,
+  "title": "رغم اني قليل في عيني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0808",
+  "number": 808,
+  "title": "يا اللي حولت المرارة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0809",
+  "number": 809,
+  "title": "هللويا فهو الإله",
+  "hasChorus": true
+ },
+ {
+  "id": "h0810",
+  "number": 810,
+  "title": "أنا جاي لك بكل عيوبي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0811",
+  "number": 811,
+  "title": "بالحكمه إنت وحدك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0812",
+  "number": 812,
+  "title": "دا كام مره شفتك إله الأمانه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0813",
+  "number": 813,
+  "title": "في مشهد أدمى العيون",
+  "hasChorus": true
+ },
+ {
+  "id": "h0814",
+  "number": 814,
+  "title": "لما الظلام يغشى سبيلي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0815",
+  "number": 815,
+  "title": "ما اتعلمتش اعيش وانا خايف",
+  "hasChorus": true
+ },
+ {
+  "id": "h0816",
+  "number": 816,
+  "title": "آخذا صورة عبد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0817",
+  "number": 817,
+  "title": "علمني أن أثق بك يا سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0818",
+  "number": 818,
+  "title": "مخلصي ذبحت على الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0819",
+  "number": 819,
+  "title": "هل جئت ربي سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0820",
+  "number": 820,
+  "title": "يسوع نتوجك نعلن ملكك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0821",
+  "number": 821,
+  "title": "في مهد حقير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0822",
+  "number": 822,
+  "title": "حبك أطيب م الخمر",
+  "hasChorus": true
+ },
+ {
+  "id": "h0823",
+  "number": 823,
+  "title": "سوف يأتي في سحاب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0824",
+  "number": 824,
+  "title": "ربنا ينادي يا كل العباد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0825",
+  "number": 825,
+  "title": "سمعت صوتك يدعو",
+  "hasChorus": true
+ },
+ {
+  "id": "h0826",
+  "number": 826,
+  "title": "يا من تخير موت الصليب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0827",
+  "number": 827,
+  "title": "هو الرب هو الرب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0828",
+  "number": 828,
+  "title": "يا محبا مات عن جنس البشر",
+  "hasChorus": true
+ },
+ {
+  "id": "h0829",
+  "number": 829,
+  "title": "إني لرافع عيني إلى السما",
+  "hasChorus": false
+ },
+ {
+  "id": "h0830",
+  "number": 830,
+  "title": "في حزن شديد وانسحاق أكيد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0831",
+  "number": 831,
+  "title": "في الهزيع الرابع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0832",
+  "number": 832,
+  "title": "قد غرقت في الشرور",
+  "hasChorus": true
+ },
+ {
+  "id": "h0833",
+  "number": 833,
+  "title": "لدنيانا قد أتيت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0834",
+  "number": 834,
+  "title": "ما لقيتش غيرك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0835",
+  "number": 835,
+  "title": "يا سيدي لما أرى نجومك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0836",
+  "number": 836,
+  "title": "يسوع قد أحببتنا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0837",
+  "number": 837,
+  "title": "لا تلمني إن دهشت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0838",
+  "number": 838,
+  "title": "بسلامك ربي تغمرني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0839",
+  "number": 839,
+  "title": "إنت عارف ظروفي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0840",
+  "number": 840,
+  "title": "لندخلن لمحضر الملك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0841",
+  "number": 841,
+  "title": "ما أبهج اليوم الذي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0842",
+  "number": 842,
+  "title": "كل مخاوف جوايا زالت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0843",
+  "number": 843,
+  "title": "لمساتك بتعزينا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0844",
+  "number": 844,
+  "title": "القلب كفايته واحد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0845",
+  "number": 845,
+  "title": "كنت وحدي عائشا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0846",
+  "number": 846,
+  "title": "أترك الدنيا ودواماتها",
+  "hasChorus": false
+ },
+ {
+  "id": "h0847",
+  "number": 847,
+  "title": "سأدنو منك يا ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0848",
+  "number": 848,
+  "title": "سيدك وسيدي عظيم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0849",
+  "number": 849,
+  "title": "يا اللي بكلمه منك هل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0850",
+  "number": 850,
+  "title": "اطمن روح لطبيب الروح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0851",
+  "number": 851,
+  "title": "خليني أقدر أبوتك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0852",
+  "number": 852,
+  "title": "سأرى وجه يسوع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0853",
+  "number": 853,
+  "title": "يطلق قلبي فيك مديحا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0854",
+  "number": 854,
+  "title": "إلهنا عظيم إلهنا أمين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0855",
+  "number": 855,
+  "title": "أتراني قد سمعت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0856",
+  "number": 856,
+  "title": "لما اجي لك واناديك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0857",
+  "number": 857,
+  "title": "عندما نصلي لك ربنا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0858",
+  "number": 858,
+  "title": "يتهلل قلبي بك ويفرح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0859",
+  "number": 859,
+  "title": "أرسلتك للسعي لا لأجر",
+  "hasChorus": false
+ },
+ {
+  "id": "h0860",
+  "number": 860,
+  "title": "يا اللي معاك الرحله بتحلا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0861",
+  "number": 861,
+  "title": "ربي اجذبني وراك فأجري",
+  "hasChorus": false
+ },
+ {
+  "id": "h0862",
+  "number": 862,
+  "title": "إن لم تبن أنت البيت",
+  "hasChorus": false
+ },
+ {
+  "id": "h0863",
+  "number": 863,
+  "title": "ياما سنين عدت مني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0864",
+  "number": 864,
+  "title": "تغاضى عن خطايانا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0865",
+  "number": 865,
+  "title": "ارفع قلبك للحنان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0866",
+  "number": 866,
+  "title": "كلما أبصرت شيئا من جمالك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0867",
+  "number": 867,
+  "title": "سلمت قلبي خصصت حبي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0868",
+  "number": 868,
+  "title": "نعظم دم يسوع الخروف المذبوح",
+  "hasChorus": false
+ },
+ {
+  "id": "h0869",
+  "number": 869,
+  "title": "إلى بئر السامرة جئت وحدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0870",
+  "number": 870,
+  "title": "وسط الألام أراك إلهي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0871",
+  "number": 871,
+  "title": "ما انت إلهنا اللي مكفينا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0872",
+  "number": 872,
+  "title": "لذاك أحيا بالروح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0873",
+  "number": 873,
+  "title": "من آلاف السنين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0874",
+  "number": 874,
+  "title": "عارف إن انا غالي عندك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0875",
+  "number": 875,
+  "title": "أنا في المصلوب أحيا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0876",
+  "number": 876,
+  "title": "هل تركت للمسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0877",
+  "number": 877,
+  "title": "مين يحلي الغربة غيرك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0878",
+  "number": 878,
+  "title": "املا إيديك على قد ما تقدر",
+  "hasChorus": true
+ },
+ {
+  "id": "h0879",
+  "number": 879,
+  "title": "فمجدوا الرب بترنيم جديد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0880",
+  "number": 880,
+  "title": "يفرح لو تنادي له",
+  "hasChorus": true
+ },
+ {
+  "id": "h0881",
+  "number": 881,
+  "title": "إن فاض قلبي بالسلام صوتي يرنم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0882",
+  "number": 882,
+  "title": "يا سيدي ها أنا آتي إليك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0883",
+  "number": 883,
+  "title": "من غيرك في ذي الحياة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0884",
+  "number": 884,
+  "title": "انت وعدت وقلت تعال",
+  "hasChorus": true
+ },
+ {
+  "id": "h0885",
+  "number": 885,
+  "title": "يا ضامن حلمي وياك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0886",
+  "number": 886,
+  "title": "دماؤك التي جرت فوق الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0887",
+  "number": 887,
+  "title": "أنت ابتهاجي منيتي قصدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0888",
+  "number": 888,
+  "title": "واذا كان بنفسه نسبني ليه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0889",
+  "number": 889,
+  "title": "أحبك فحبك يعجز فيه الكلام",
+  "hasChorus": true
+ },
+ {
+  "id": "h0890",
+  "number": 890,
+  "title": "زي بحر بدون مياه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0891",
+  "number": 891,
+  "title": "إلهي غرني نظري",
+  "hasChorus": true
+ },
+ {
+  "id": "h0892",
+  "number": 892,
+  "title": "يوما فيوما فيوم كنت أمينا معي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0893",
+  "number": 893,
+  "title": "رغم ضياع الحب وصورته",
+  "hasChorus": false
+ },
+ {
+  "id": "h0894",
+  "number": 894,
+  "title": "نحن نعلن حضور يسوع",
+  "hasChorus": false
+ },
+ {
+  "id": "h0895",
+  "number": 895,
+  "title": "أنا يومها صرخت سامحني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0896",
+  "number": 896,
+  "title": "إن الأشبال احتاجت",
+  "hasChorus": true
+ },
+ {
+  "id": "h0897",
+  "number": 897,
+  "title": "كل يوم في هذا الزمان",
+  "hasChorus": false
+ },
+ {
+  "id": "h0898",
+  "number": 898,
+  "title": "قادر من مثلك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0899",
+  "number": 899,
+  "title": "أمانينا معاك تتحقق",
+  "hasChorus": false
+ },
+ {
+  "id": "h0900",
+  "number": 900,
+  "title": "لن أنسى يوما سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0901",
+  "number": 901,
+  "title": "سايبين الدنيا وأتعابها",
+  "hasChorus": true
+ },
+ {
+  "id": "h0902",
+  "number": 902,
+  "title": "أراك بالإيمان يا حمل الرحمان",
+  "hasChorus": false
+ },
+ {
+  "id": "h0903",
+  "number": 903,
+  "title": "جيت لك غيرت حياتي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0904",
+  "number": 904,
+  "title": "لما اشبع منك راح ادوس",
+  "hasChorus": true
+ },
+ {
+  "id": "h0905",
+  "number": 905,
+  "title": "أنا لي مين في العمر سواك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0906",
+  "number": 906,
+  "title": "فتح عينينا عشان نشوف بالإيمان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0907",
+  "number": 907,
+  "title": "سلمت إيدي في إيديك يا غالي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0908",
+  "number": 908,
+  "title": "دي خطة حياتي ضامنها في إيديك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0909",
+  "number": 909,
+  "title": "إزاي يا رب حنانك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0910",
+  "number": 910,
+  "title": "ليك مكان ليك مكان",
+  "hasChorus": false
+ },
+ {
+  "id": "h0911",
+  "number": 911,
+  "title": "رغم القيود كنت الوجود",
+  "hasChorus": false
+ },
+ {
+  "id": "h0912",
+  "number": 912,
+  "title": "ها حنين القلب زاد",
+  "hasChorus": true
+ },
+ {
+  "id": "h0913",
+  "number": 913,
+  "title": "روحك ساكن فينا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0914",
+  "number": 914,
+  "title": "ما فيش غيرك يا راعي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0915",
+  "number": 915,
+  "title": "في يوم مريت علي شفت قيودي في إيدي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0916",
+  "number": 916,
+  "title": "عايزين يا رب نكون",
+  "hasChorus": false
+ },
+ {
+  "id": "h0917",
+  "number": 917,
+  "title": "قوة روحك تهزم تسحق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0918",
+  "number": 918,
+  "title": "باكتب لك أيامي رسالة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0919",
+  "number": 919,
+  "title": "تعال وارتفع وسطينا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0920",
+  "number": 920,
+  "title": "أنت صخرة خلاصي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0921",
+  "number": 921,
+  "title": "يا سيدي ربي المعين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0922",
+  "number": 922,
+  "title": "يا رب ولادك عطشانين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0923",
+  "number": 923,
+  "title": "راجع لك أنا تاني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0924",
+  "number": 924,
+  "title": "يا فادي أنا آتي إليك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0925",
+  "number": 925,
+  "title": "عايز اتمتع بيك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0926",
+  "number": 926,
+  "title": "نلتمس عطفك علينا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0927",
+  "number": 927,
+  "title": "اشكر القلب اللي حبك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0928",
+  "number": 928,
+  "title": "أنا إناء إسود كسير عليل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0929",
+  "number": 929,
+  "title": "ما فيش غيرك يشبع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0930",
+  "number": 930,
+  "title": "وبنرفع يا رب جنودك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0931",
+  "number": 931,
+  "title": "فين المعنى في حياتي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0932",
+  "number": 932,
+  "title": "يا حياة المسيحيه يا مسيح الحياة",
+  "hasChorus": false
+ },
+ {
+  "id": "h0933",
+  "number": 933,
+  "title": "وجه نظري أيا حبيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0934",
+  "number": 934,
+  "title": "كل أيامي بتتكلم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0935",
+  "number": 935,
+  "title": "نأتي إليك يا ملك الملوك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0936",
+  "number": 936,
+  "title": "قلبي ينبض من جديد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0937",
+  "number": 937,
+  "title": "من العالم أقوى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0938",
+  "number": 938,
+  "title": "جمعنا شوق واحد إليك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0939",
+  "number": 939,
+  "title": "أنا المؤمن أنا المفدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0940",
+  "number": 940,
+  "title": "قلوبنا يا رب فرحانه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0941",
+  "number": 941,
+  "title": "يا عسكر الرحمان من تجندوا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0942",
+  "number": 942,
+  "title": "حين أرى صليب من",
+  "hasChorus": false
+ },
+ {
+  "id": "h0943",
+  "number": 943,
+  "title": "يسوع اسمه عجيب هو المسيا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0944",
+  "number": 944,
+  "title": "يسوع ما أعظمك ما أعظمك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0945",
+  "number": 945,
+  "title": "أنا غالي دايما على قلبك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0946",
+  "number": 946,
+  "title": "قد قلت أنت سيدي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0947",
+  "number": 947,
+  "title": "الذنب ذنبي يا ربي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0948",
+  "number": 948,
+  "title": "الرب نوري وخلاصي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0949",
+  "number": 949,
+  "title": "سألت نفسي أنا الشقي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0950",
+  "number": 950,
+  "title": "نعلي الهتاف أمامك يا رب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0951",
+  "number": 951,
+  "title": "ماشي ومهما طريقي يطول",
+  "hasChorus": true
+ },
+ {
+  "id": "h0952",
+  "number": 952,
+  "title": "يا رأسنا الغالي لقد زاد الحنين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0953",
+  "number": 953,
+  "title": "عمرك مش مضمون في إيديك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0954",
+  "number": 954,
+  "title": "السنين بتمر تجري",
+  "hasChorus": true
+ },
+ {
+  "id": "h0955",
+  "number": 955,
+  "title": "كنت في سجن الخطايا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0956",
+  "number": 956,
+  "title": "رايح بعيد لمين",
+  "hasChorus": true
+ },
+ {
+  "id": "h0957",
+  "number": 957,
+  "title": "العالم عطاياه وقتيه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0958",
+  "number": 958,
+  "title": "إني أرى نفسي تغوص في أمواج عالية",
+  "hasChorus": true
+ },
+ {
+  "id": "h0959",
+  "number": 959,
+  "title": "عايزين يدك تعمل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0960",
+  "number": 960,
+  "title": "مات على الصليب وفداني",
+  "hasChorus": true
+ },
+ {
+  "id": "h0961",
+  "number": 961,
+  "title": "ما بننساش الإيد الحلوة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0962",
+  "number": 962,
+  "title": "عندما أذكر كيف سمرت على الصليب",
+  "hasChorus": false
+ },
+ {
+  "id": "h0963",
+  "number": 963,
+  "title": "يطيب لي في ذي الحياة",
+  "hasChorus": true
+ },
+ {
+  "id": "h0964",
+  "number": 964,
+  "title": "وحدك لأنك من جزت عني ذا الصليب",
+  "hasChorus": true
+ },
+ {
+  "id": "h0965",
+  "number": 965,
+  "title": "هذه وصيتي أن يحب كل واحد أخاه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0966",
+  "number": 966,
+  "title": "اسمه سما قد علا عن كل اسم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0967",
+  "number": 967,
+  "title": "ما ألذ الاتكال",
+  "hasChorus": true
+ },
+ {
+  "id": "h0968",
+  "number": 968,
+  "title": "نادهم من ناءوا",
+  "hasChorus": true
+ },
+ {
+  "id": "h0969",
+  "number": 969,
+  "title": "يا إلهي في قربك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0970",
+  "number": 970,
+  "title": "قلبي الخفاق أضحى مضجعك",
+  "hasChorus": false
+ },
+ {
+  "id": "h0971",
+  "number": 971,
+  "title": "في ضلالي وظلامي",
+  "hasChorus": false
+ },
+ {
+  "id": "h0972",
+  "number": 972,
+  "title": "لماذا نحن فقراء وإلهنا غني؟",
+  "hasChorus": true
+ },
+ {
+  "id": "h0973",
+  "number": 973,
+  "title": "يا الله الكلمة الأزلي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0974",
+  "number": 974,
+  "title": "المحبه تتأنى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0975",
+  "number": 975,
+  "title": "بين يديك كيف أخاف",
+  "hasChorus": true
+ },
+ {
+  "id": "h0976",
+  "number": 976,
+  "title": "أمام الديان ساعة الميزان",
+  "hasChorus": false
+ },
+ {
+  "id": "h0977",
+  "number": 977,
+  "title": "نفسي قد احتاجت إليك",
+  "hasChorus": true
+ },
+ {
+  "id": "h0978",
+  "number": 978,
+  "title": "وا حبيبي وا حبيبي أي حال أنت فيه",
+  "hasChorus": false
+ },
+ {
+  "id": "h0979",
+  "number": 979,
+  "title": "أيها الحائر يا من تهت في فكر عميق",
+  "hasChorus": true
+ },
+ {
+  "id": "h0980",
+  "number": 980,
+  "title": "شهوة القلب مرار",
+  "hasChorus": true
+ },
+ {
+  "id": "h0981",
+  "number": 981,
+  "title": "اوعى تكون مشغول",
+  "hasChorus": true
+ },
+ {
+  "id": "h0982",
+  "number": 982,
+  "title": "أغلى من اللآلي",
+  "hasChorus": true
+ },
+ {
+  "id": "h0983",
+  "number": 983,
+  "title": "لا يمكن أبدا أستاهل",
+  "hasChorus": true
+ },
+ {
+  "id": "h0984",
+  "number": 984,
+  "title": "كنت عايش مغرور",
+  "hasChorus": true
+ },
+ {
+  "id": "h0985",
+  "number": 985,
+  "title": "أبانا نرفع إسمك الكريم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0986",
+  "number": 986,
+  "title": "أمجد الآيات غنوا بشروا الجموع",
+  "hasChorus": true
+ },
+ {
+  "id": "h0987",
+  "number": 987,
+  "title": "أفراحنا معاك هاتدوم",
+  "hasChorus": true
+ },
+ {
+  "id": "h0988",
+  "number": 988,
+  "title": "ربي كل الخليقه",
+  "hasChorus": true
+ },
+ {
+  "id": "h0989",
+  "number": 989,
+  "title": "صاخب الكل حولي ما أعلا الضجيج",
+  "hasChorus": true
+ },
+ {
+  "id": "h0990",
+  "number": 990,
+  "title": "من سيفصلنا عن محبة المسيح",
+  "hasChorus": true
+ },
+ {
+  "id": "h0991",
+  "number": 991,
+  "title": "نباركك يا مليك المجد",
+  "hasChorus": false
+ },
+ {
+  "id": "h0992",
+  "number": 992,
+  "title": "هايجي الاختطاف",
+  "hasChorus": true
+ },
+ {
+  "id": "h0993",
+  "number": 993,
+  "title": "والقادر أن يفعل",
+  "hasChorus": false
+ },
+ {
+  "id": "h0994",
+  "number": 994,
+  "title": "في البريه الشعب يسير",
+  "hasChorus": true
+ },
+ {
+  "id": "h0995",
+  "number": 995,
+  "title": "أحيا له طول المدى",
+  "hasChorus": true
+ },
+ {
+  "id": "h0996",
+  "number": 996,
+  "title": "قلبا نقيا طاهرا",
+  "hasChorus": false
+ },
+ {
+  "id": "h0997",
+  "number": 997,
+  "title": "إن أتاك الشر فاهرب دونما جدال",
+  "hasChorus": true
+ },
+ {
+  "id": "h0998",
+  "number": 998,
+  "title": "في ملء الزمان جاء للإنسان",
+  "hasChorus": true
+ },
+ {
+  "id": "h0999",
+  "number": 999,
+  "title": "حررن قلبي الأسير",
+  "hasChorus": true
+ },
+ {
+  "id": "h1000",
+  "number": 1000,
+  "title": "قول لي يا موت أشواكك فين",
   "hasChorus": true
  }
 ]

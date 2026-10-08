@@ -1,0 +1,42 @@
+hymn 11 "الأشبال يمكن تحتاج" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 12 "اوعى تفكر إني نسيتك" [layout A]: 3 stanzas (1) (1)[لازمة] (2)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "اوع تفكر إني نسيتك" — using RL2007 index title "اوعى تفكر إني نسيتك"
+
+hymn 13 "ليه تحمل الهموم" [layout A]: 3 stanzas (1)[لازمة] (1) (2)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "أرجوك يا ابني تعال" — using RL2007 index title "ليه تحمل الهموم"
+
+hymn 14 "اللي بيعزيني عن كل آلامي" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 15 "ماذا أرد لك يا حبيب هل فضتي والذهب" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "ماذا أرد لك يا حبيب" — using RL2007 index title "ماذا أرد لك يا حبيب هل فضتي والذهب"
+
+hymn 16 "دوسي يا نفس بعز" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 17 "ربي من لي في حيرتي" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 18 "مر بي ولقاني" [layout B]: 4 stanzas (1) (2) (3) (4)
+  refrain: NONE
+  !! no refrain detected / NO-REFRAIN — but these lines repeat across stanzas: "يا هنايا وفرحة قلبي" — check printed hymnal for a لازمة
+
+hymn 19 "ماشي معايا وما بتنساني" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 20 "لولا الحربه لولا التاج" [layout A]: 4 stanzas (1)[لازمة] (1) (2) (3)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "لولا يا ربي ما انت معانا" — using RL2007 index title "لولا الحربه لولا التاج"
+
+
+TOTAL: 10 hymns, 5 need review.

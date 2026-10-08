@@ -1,9 +1,8 @@
 /**
  * معلومات الترنيمة — the credits bottom sheet.
  *
- * Shows the metre (مقياس الكلام) when the book provides it, otherwise the
- * "not available" label — so a missing credit is distinguishable from a
- * loading fault.
+ * Shows the metre (مقياس الكلام) when the book provides it. No metre means no
+ * rows — the sheet stays ready and fills in the moment a metre is entered.
  */
 import { Modal, Pressable, View } from 'react-native';
 
@@ -24,9 +23,9 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
   const { t, direction } = useT();
   const { colors } = useTheme();
 
-  const rows: { label: TranslationKey; value: string | undefined }[] = [
-    { label: 'info.meter', value: hymn?.meter },
-  ];
+  const rows: { label: TranslationKey; value: string }[] = hymn?.meter?.trim()
+    ? [{ label: 'info.meter', value: hymn.meter }]
+    : [];
 
   return (
     <Modal
@@ -81,30 +80,25 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
             </AppText>
           ) : null}
 
-          {rows.map((row) => {
-            const value = row.value?.trim() ? row.value : t('info.missing');
-
-            return (
-              <View
-                key={row.label}
-                style={{
-                  flexDirection: direction.row,
-                  alignItems: 'center',
-                  justifyContent: 'space-between',
-                  paddingVertical: spacing.md,
-                  borderTopWidth: 1,
-                  borderTopColor: colors.border,
-                  opacity: row.value?.trim() ? 1 : 0.6,
-                }}>
-                <AppText variant="body" color={colors.textMuted}>
-                  {t(row.label)}
-                </AppText>
-                <AppText variant="body" style={{ fontWeight: '700', maxWidth: '60%' }} numberOfLines={2}>
-                  {value}
-                </AppText>
-              </View>
-            );
-          })}
+          {rows.map((row) => (
+            <View
+              key={row.label}
+              style={{
+                flexDirection: direction.row,
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                paddingVertical: spacing.md,
+                borderTopWidth: 1,
+                borderTopColor: colors.border,
+              }}>
+              <AppText variant="body" color={colors.textMuted}>
+                {t(row.label)}
+              </AppText>
+              <AppText variant="body" style={{ fontWeight: '700', maxWidth: '60%' }} numberOfLines={2}>
+                {row.value}
+              </AppText>
+            </View>
+          ))}
         </Pressable>
       </Pressable>
     </Modal>

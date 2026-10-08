@@ -18,7 +18,7 @@
  *   - الصدر + العجز filled = بيت تام joined with ❖; صدر alone = مشطور
  *   - ملاحظات/Notes column is never imported
  */
-import { readdirSync, statSync, writeFileSync } from 'node:fs';
+import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { basename, dirname, extname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import ExcelJS from 'exceljs';
@@ -315,6 +315,21 @@ async function convertFile(xlsxPath) {
   for (const lang of ['en', 'de']) {
     if (!parsed.has(lang)) continue;
     counts[lang] = mergeTranslations(hymns, parsed.get(lang), lang, `${basename(xlsxPath)}`, warnings, errors);
+  }
+
+  // Author credits live outside the workbook (extracted from the saved
+  // hymnary pages by scripts/extract-authors.mjs). Hymns without an entry
+  // simply carry no author — the app hides the line for those.
+  try {
+    const authors = JSON.parse(readFileSync(join(CONTENT_DIR, 'authors.json'), 'utf8'));
+    for (const hymn of hymns) {
+      const credit = authors[hymn.number] ?? authors[String(hymn.number)];
+      if (!credit) continue;
+      if (credit.author) hymn.author = credit.author;
+      if (credit.authorOriginal) hymn.authorOriginal = credit.authorOriginal;
+    }
+  } catch {
+    warnings.push('authors.json missing or unreadable — hymns imported without author credits');
   }
 
   hymns.sort((a, b) => a.number - b.number);

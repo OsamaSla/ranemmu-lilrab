@@ -4,7 +4,7 @@
  * translated is a type error rather than a blank label at runtime.
  */
 export const ar = {
-  appName: 'هلم نرنم',
+  appName: 'رنموا للرب',
 
   tabs: {
     home: 'الرئيسية',
@@ -47,11 +47,44 @@ export const ar = {
     fontSize: 'حجم الخط',
     fontFamily: 'نوع الخط',
     verseOf: 'المقطع',
+    translation: 'الترجمة',
+    jump: 'انتقال',
+    jumpPlaceholder: 'ابحث برقم أو كلمة...',
   },
 
   info: {
     meter: 'مقياس الكلام',
     missing: 'غير متوفر',
+  },
+
+  admin: {
+    title: 'الإدارة',
+    pinTitle: 'أدخل رمز الإدارة',
+    pinPlaceholder: 'الرمز',
+    unlock: 'فتح',
+    wrongPin: 'رمز خاطئ',
+    editHymn: 'تحرير ترنيمة',
+    pickNumber: 'رقم الترنيمة',
+    open: 'فتح',
+    notFound: 'الترنيمة غير موجودة',
+    save: 'حفظ التغييرات',
+    saved: 'تم الحفظ',
+    swapTitle: 'تبديل رقمين',
+    swap: 'تبديل',
+    swapped: 'تم التبديل',
+    newPin: 'رمز جديد (4 أرقام)',
+    pinSaved: 'تم تغيير الرمز',
+    export: 'تصدير التغييرات',
+    noChanges: 'لا توجد تغييرات بعد',
+    clearSynced: 'مسح بعد المزامنة',
+    cleared: 'تم المسح',
+    errBlank: 'العنوان والسطور لا يمكن أن تكون فارغة',
+    errCount: 'عدد المقاطع والسطور يجب أن يبقى كما هو (التعديل البنيوي من الكمبيوتر)',
+    errNumber: 'رقم مستخدم أو غير صالح',
+    author: 'المؤلف',
+    authorOriginal: 'المؤلف الأصلي',
+    chorus: 'القرار',
+    hymnTitle: 'العنوان',
   },
 
   structure: {
@@ -82,7 +115,6 @@ export const ar = {
     themeSystem: 'حسب النظام',
     appFontSize: 'حجم خط التطبيق',
     readerFontSize: 'حجم خط الترنيمة',
-    language: 'اللغة',
     data: 'البيانات',
     about: 'عن التطبيق',
     version: 'الإصدار',
@@ -113,6 +145,7 @@ export const ar = {
     structure: 'مقياس الكلام',
     favorites: 'الترنيمات المفضلة',
     settings: 'الإعدادات',
+    admin: 'الإدارة',
     rateApp: 'تقييم التطبيق',
     shareApp: 'مشاركة التطبيق',
     contactUs: 'تواصل معنا',

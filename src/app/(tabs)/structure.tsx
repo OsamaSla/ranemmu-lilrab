@@ -18,6 +18,7 @@ import { getSummaries } from '../../data/loader';
 import { groupByStructure } from '../../data/search';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { useOverrides } from '../../store/overrides';
 import { spacing } from '../../theme/tokens';
 
 export default function StructureScreen() {
@@ -25,8 +26,11 @@ export default function StructureScreen() {
   const { t, direction } = useT();
   const { colors } = useTheme();
   const [open, setOpen] = useState<Set<string>>(new Set());
+  const corpusVersion = useOverrides((s) => s.updatedAt);
 
-  const groups = useMemo(() => groupByStructure(getSummaries()), []);
+  // corpusVersion only retriggers this after admin edits land.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const groups = useMemo(() => groupByStructure(getSummaries()), [corpusVersion]);
 
   const toggle = (key: string) =>
     setOpen((prev) => {
@@ -60,6 +64,7 @@ export default function StructureScreen() {
               accessibilityRole="button"
               accessibilityLabel={typed.label}
               accessibilityState={{ expanded }}
+              android_ripple={{ color: colors.border }}
               style={({ pressed }) => [
                 {
                   flexDirection: direction.row,

@@ -32,7 +32,7 @@ const idFor = (number) => `h${String(number).padStart(4, '0')}`;
 
 async function readContent() {
   const entries = (await readdir(CONTENT_DIR))
-    .filter((name) => name.endsWith('.json'))
+    .filter((name) => name.endsWith('.json') && name !== 'authors.json')
     .sort();
 
   if (entries.length === 0) throw new Error(`no .json files in ${CONTENT_DIR}`);

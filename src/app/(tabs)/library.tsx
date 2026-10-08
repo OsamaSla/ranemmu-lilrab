@@ -19,6 +19,7 @@ import { getSummaries } from '../../data/loader';
 import type { HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { useOverrides } from '../../store/overrides';
 import { spacing } from '../../theme/tokens';
 
 /** Letter of the alphabet used to bucket the alphabetical sort. */
@@ -31,8 +32,12 @@ export default function LibraryScreen() {
   const { t } = useT();
   const { colors } = useTheme();
   const [order, setOrder] = useState<'number' | 'alpha'>('number');
+  // Re-reads the merged corpus whenever an admin override lands.
+  const corpusVersion = useOverrides((s) => s.updatedAt);
 
-  const summaries = getSummaries();
+  // corpusVersion only retriggers this after admin edits land.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const summaries = useMemo(() => getSummaries(), [corpusVersion]);
 
   const sections = useMemo(() => {
     if (order === 'number') {

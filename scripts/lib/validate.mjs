@@ -12,13 +12,16 @@
 const NON_ARABIC_LETTERS = /[A-Za-z\p{Script=Latin}가-힯぀-ヿ一-鿿]/u;
 
 /**
- * LTR text that *is* legitimate: metre cadences like "87.87.87", plus the
- * human translation fields (checked structurally, not by alphabet).
+ * LTR text that *is* legitimate: metre cadences like "87.87.87", the human
+ * translation fields (checked structurally, not by alphabet), the foreign
+ * original author, and transliterated Arabic author names hymnary only
+ * lists in Latin (a correct transliteration beats a guessed Arabic spelling).
  */
 const ALLOWED_LATIN_FIELDS = new Set([
   'meter',
   'title_en', 'chorus_en',
   'title_de', 'chorus_de',
+  'author', 'authorOriginal',
 ]);
 
 /** Harakat range, kept for the vocalisation-coverage report in check-hymns. */

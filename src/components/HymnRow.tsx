@@ -37,12 +37,14 @@ export function HymnRow({ hymn, onPress, subtitle, showStar = true, onToggleFavo
         style={{
           flexDirection: direction.row,
           alignItems: 'center',
-          padding: spacing.md,
+          paddingHorizontal: spacing.md,
+          paddingVertical: spacing.lg,
         }}>
         <Pressable
           onPress={onPress}
           accessibilityRole="button"
           accessibilityLabel={`${hymn.number} ${hymn.title}`}
+          android_ripple={{ color: colors.border }}
           style={({ pressed }) => [{ flex: 1, opacity: pressed ? 0.7 : 1 }]}>
           <View style={{ flexDirection: direction.row, alignItems: 'center' }}>
             <View
@@ -76,13 +78,14 @@ export function HymnRow({ hymn, onPress, subtitle, showStar = true, onToggleFavo
           <Pressable
             onPress={toggle}
             hitSlop={8}
+            android_ripple={{ color: colors.border }}
             accessibilityRole="button"
             accessibilityLabel={hymn.title}
             accessibilityState={{ selected: favorite }}
-            style={{ padding: spacing.xs }}>
+            style={({ pressed }) => [{ padding: spacing.xs, opacity: pressed ? 0.6 : 1 }]}>
             <MaterialCommunityIcons
               name={favorite ? 'star' : 'star-outline'}
-              size={22}
+              size={24}
               color={favorite ? colors.favorite : colors.textMuted}
             />
           </Pressable>

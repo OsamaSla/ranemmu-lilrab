@@ -26,6 +26,7 @@ export function TextButton({ label, variant = 'label', color, ...rest }: TextBut
       accessibilityRole="button"
       accessibilityLabel={label}
       hitSlop={HIT_SLOP}
+      android_ripple={{ color: colors.border }}
       style={({ pressed }) => ({
         minHeight: MIN_TOUCH,
         justifyContent: 'center',

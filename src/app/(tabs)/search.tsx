@@ -9,11 +9,12 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useMemo, useState } from 'react';
 import { FlatList, Pressable, Text as RNText, TextInput, View } from 'react-native';
-import { useRouter } from 'expo-router';
+import { useLocalSearchParams, useRouter } from 'expo-router';
 
 import { AppText } from '../../components/AppText';
 import { EmptyState } from '../../components/EmptyState';
 import { getCorpus } from '../../data/loader';
+import { useOverrides } from '../../store/overrides';
 import { highlight, searchHymns } from '../../data/search';
 import type { SearchMatch } from '../../data/types';
 import { useT } from '../../hooks/useT';
@@ -26,9 +27,14 @@ export default function SearchScreen() {
   const router = useRouter();
   const { t, direction } = useT();
   const { colors, fontFamily } = useTheme();
-  const [query, setQuery] = useState('');
+  // The reader's jump bar can land here with text prefilled.
+  const { q } = useLocalSearchParams<{ q?: string }>();
+  const [query, setQuery] = useState(typeof q === 'string' ? q : '');
+  const corpusVersion = useOverrides((s) => s.updatedAt);
 
-  const matches = useMemo(() => searchHymns(getCorpus(), query.trim(), 200), [query]);
+  // corpusVersion only retriggers this after admin edits land.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const matches = useMemo(() => searchHymns(getCorpus(), query.trim(), 200), [query, corpusVersion]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
@@ -48,7 +54,8 @@ export default function SearchScreen() {
           accessibilityRole="button"
           accessibilityLabel={t('common.back')}
           hitSlop={8}
-          style={{ padding: spacing.xs }}>
+          android_ripple={{ color: colors.border }}
+          style={({ pressed }) => [{ padding: spacing.xs, opacity: pressed ? 0.6 : 1 }]}>
           <MaterialCommunityIcons name={direction.isRTL ? 'chevron-right' : 'chevron-left'} size={26} />
         </Pressable>
 
@@ -87,8 +94,9 @@ export default function SearchScreen() {
               accessibilityRole="button"
               accessibilityLabel={t('search.clear')}
               hitSlop={8}
+              android_ripple={{ color: colors.border }}
               style={{ padding: spacing.xs }}>
-              <MaterialCommunityIcons name="close-circle" size={18} color={colors.textMuted} />
+              <MaterialCommunityIcons name="close-circle" size={24} color={colors.textMuted} />
             </Pressable>
           ) : null}
         </View>
@@ -134,6 +142,7 @@ function SearchResultRow({ match, onPress }: { match: SearchMatch; onPress: () =
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={`${t('common.hymnNumber')} ${match.hymn.number}`}
+      android_ripple={{ color: colors.border }}
       style={({ pressed }) => [
         {
           backgroundColor: colors.surface,

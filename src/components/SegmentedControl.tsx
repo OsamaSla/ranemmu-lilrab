@@ -57,9 +57,11 @@ export function SegmentedControl<T extends string>({
             accessibilityRole="tab"
             accessibilityState={{ selected }}
             accessibilityLabel={option.label}
+            android_ripple={{ color: colors.border }}
             style={({ pressed }) => [
               {
                 flex: 1,
+                minHeight: 48,
                 paddingVertical: spacing.sm,
                 borderRadius: radius.pill,
                 alignItems: 'center',

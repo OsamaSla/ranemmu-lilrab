@@ -1,0 +1,3 @@
+Your everyday loop is now: double-click start-dev.cmd, scan QR on the phone, view PC on 8081 — and npm run preview:build whenever hymns change.
+
+for inserting new hymns run on cmd: npm run add-batch

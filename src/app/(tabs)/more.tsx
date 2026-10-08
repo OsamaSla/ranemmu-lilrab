@@ -7,14 +7,17 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps } from 'react';
+import { useMemo } from 'react';
 import { Alert, Pressable, Share, ScrollView, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
+import { getSummaries } from '../../data/loader';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { useOverrides } from '../../store/overrides';
 import type { TranslationKey } from '../../i18n';
 import { spacing } from '../../theme/tokens';
 
@@ -28,6 +31,11 @@ export default function MoreScreen() {
   const { colors } = useTheme();
 
   const notConfigured = () => Alert.alert(t('more.title'), t('more.notConfigured'));
+
+  const corpusVersion = useOverrides((s) => s.updatedAt);
+  // corpusVersion only retriggers this after admin edits land.
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const hasMeter = useMemo(() => getSummaries().some((s) => s.meter?.trim()), [corpusVersion]);
 
   const shareApp = () => {
     Share.share({
@@ -49,17 +57,20 @@ export default function MoreScreen() {
       label: 'more.settings',
       onPress: () => router.push('/settings'),
     },
+    { icon: 'shield-lock-outline', label: 'more.admin', onPress: () => router.push('/admin') },
     { icon: 'star', label: 'more.rateApp', onPress: notConfigured },
     { icon: 'share-variant', label: 'more.shareApp', onPress: shareApp },
     { icon: 'email-outline', label: 'more.contactUs', onPress: notConfigured },
   ];
+
+  const visibleItems = items.filter((item) => item.label !== 'more.structure' || hasMeter);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={t('more.title')} />
 
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
-        {items.map((item, index) => (
+        {visibleItems.map((item, index) => (
           <Card
             key={item.label}
             padded={false}
@@ -68,7 +79,7 @@ export default function MoreScreen() {
               icon={item.icon}
               label={t(item.label)}
               onPress={item.onPress}
-              isLast={index === items.length - 1}
+              isLast={index === visibleItems.length - 1}
             />
           </Card>
         ))}
@@ -104,6 +115,7 @@ function CardRow({
       onPress={onPress}
       accessibilityRole="button"
       accessibilityLabel={label}
+      android_ripple={{ color: colors.border }}
       style={({ pressed }) => [
         {
           flexDirection: direction.row,
@@ -116,13 +128,13 @@ function CardRow({
           opacity: pressed ? 0.65 : 1,
         },
       ]}>
-      <MaterialCommunityIcons name={icon} size={22} color={colors.primary} />
+      <MaterialCommunityIcons name={icon} size={24} color={colors.primary} />
       <AppText variant="body" style={{ flex: 1, marginHorizontal: spacing.md }}>
         {label}
       </AppText>
       <MaterialCommunityIcons
         name={direction.isRTL ? 'chevron-left' : 'chevron-right'}
-        size={20}
+        size={24}
         color={colors.textMuted}
       />
     </Pressable>

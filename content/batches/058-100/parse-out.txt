@@ -1,0 +1,177 @@
+Loaded 43 index titles from D:\MegaDrive\Designs\שונות\My-Projects\رنموا للرب\content\batches\058-100\titles.json
+hymn 58 "يا اللي بطول الرحله معين" [layout ?]: 0 stanzas 
+  refrain: NONE
+  !! no refrain detected / NO-LYRICS: no stanza blocks found — page may be the wrong template / NO-REFRAIN detected — confirm against the printed hymnal
+
+hymn 59 "قوموا نسبح كلنا للكاهن العظيم" [layout B]: 3 stanzas (1) (2) (3)
+  refrain: NONE
+  !! no refrain detected / NO-REFRAIN detected — confirm against the printed hymnal
+
+hymn 60 "طول ما في إيدك كل حياتي" [layout B]: 3 stanzas (1) (1)[لازمة] (2)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 61 "اوعى تأجل" [layout B]: 5 stanzas (1) (1)[لازمة] (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 62 "إن قلنا أننا له" [layout B]: 4 stanzas (1)[لازمة] (1) (2) (3)
+  refrain: (1, high: explicit القرار header)
+  !! LOW CONFIDENCE stanza(s) / stanza 4: site numbers it (2) but that label is taken — renumbered to (3), confirm against printed hymnal
+
+hymn 63 "مات من أجل خطايانا" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 64 "إن باركنا في حياتنا" [layout B]: 3 stanzas (1) (1)[لازمة] (2)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 65 "يده المثقوبة تنطق بالحب" [layout A]: 3 stanzas (1) (2) (3)
+  refrain: NONE
+  !! no refrain detected / NO-REFRAIN — but these lines repeat across stanzas: "يده المثقوبة" — check printed hymnal for a لازمة / TITLE: site says "يده المثقوبة" — using RL2007 index title "يده المثقوبة تنطق بالحب"
+
+hymn 66 "يا كاتب النشيد هل تدرك" [layout B]: 4 stanzas (1) (2) (3) (4)
+  refrain: NONE
+  !! no refrain detected / NO-REFRAIN detected — confirm against the printed hymnal
+
+hymn 67 "يرتفع فوق الأحقاد" [layout B]: 4 stanzas (1)[لازمة] (1) (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 68 "مهما لساني بيتكلم عن أفضالك باتعلم" [layout A]: 5 stanzas (1)[لازمة] (1) (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "شكرا شكرا يا فادينا" — using RL2007 index title "مهما لساني بيتكلم عن أفضالك باتعلم"
+
+hymn 69 "جايين يا أبانا اسمع لدعانا" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 70 "لن ينزع أحد فرحي" [layout A]: 6 stanzas (1) (1)[لازمة] (2) (3) (4) (5)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 71 "أفرح في كل حين" [layout B]: 5 stanzas (1) (1)[لازمة] (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 72 "إني أحظى يا حبيبي" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 73 "حب المسيح أطيب" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 74 "في الأوقات الحلوه" [layout B]: 2 stanzas (1) (2)
+  refrain: NONE
+  !! no refrain detected / NO-REFRAIN — but these lines repeat across stanzas: "في الأوقات الحلوه" — check printed hymnal for a لازمة
+
+hymn 75 "كل العمر معاك مضمون" [layout B]: 3 stanzas (1) (1)[لازمة] (2)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 76 "ما أحلى الجلوس مع فادي النفوس" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "ما أحلى الجلوس" — using RL2007 index title "ما أحلى الجلوس مع فادي النفوس"
+
+hymn 77 "أتعب كتير واحزن كتير" [layout B]: 3 stanzas (1) (1)[لازمة] (2)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 78 "معي أنت يا حبيبي" [layout A]: 3 stanzas (1) (2) (3)
+  refrain: NONE
+  !! no refrain detected / NO-REFRAIN — but these lines repeat across stanzas: "يا حبيبي" — check printed hymnal for a لازمة
+
+hymn 79 "كل خطاياك" [layout B]: 4 stanzas (1)[لازمة] (1) (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 80 "لست أحتاج سواك" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 81 "لنعبد الرب بالفرح والحمد" [layout A]: 4 stanzas (1)[لازمة] (1) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  !! NUMBER-GAP: verse labels run (1, 3, 4) instead of (1, 2, 3) — confirm against printed hymnal / TITLE: site says "الرب هو الله" — using RL2007 index title "لنعبد الرب بالفرح والحمد"
+
+hymn 82 "أحبك يا من جعلت" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 83 "تعبت فقلت أجيب نداه" [layout A]: 3 stanzas (1) (2) (3)
+  refrain: NONE
+  !! no refrain detected / NO-REFRAIN detected — confirm against the printed hymnal
+
+hymn 84 "مهما تزيد الصعاب وتكبر" [layout B]: 3 stanzas (1)[لازمة] (1) (2)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 85 "عني قضى ربي الحنون" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  !! LOW CONFIDENCE stanza(s) / stanza 4: site numbers it (2) but that label is taken — renumbered to (3), confirm against printed hymnal
+
+hymn 86 "كم من عهود قطعناها" [layout A]: 4 stanzas (1)[لازمة] (1) (2) (3)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "ألا تعود فتحيينا" — using RL2007 index title "كم من عهود قطعناها"
+
+hymn 87 "أسعى أنا نحو الغرض" [layout B]: 5 stanzas (1) (1)[لازمة] (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 88 "ماشي معاك انا مش ندمان" [layout A]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "ماشي معاك أنا مش ندمان" — using RL2007 index title "ماشي معاك انا مش ندمان"
+
+hymn 89 "كل نفس عنك زاغت" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 90 "قوة ربي لا أملك" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 91 "هاعيش احبك واستناك" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 92 "ليت سلامك يأسرني" [layout B]: 2 stanzas (1) (2)
+  refrain: NONE
+  !! no refrain detected / NO-REFRAIN — but these lines repeat across stanzas: "تنزع حبك يا راعي" — check printed hymnal for a لازمة
+
+hymn 93 "عارفك مش قادر ترتاح" [layout A]: 5 stanzas (1) (1)[لازمة] (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 94 "أبدا أبدا ما تسيب إيدي" [layout B]: 4 stanzas (1)[لازمة] (1) (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 95 "سأكرس وأقدم" [layout B]: 4 stanzas (1)[لازمة] (1) (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 96 "في وسط هموم الحياه" [layout B]: 5 stanzas (1) (1)[لازمة] (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 97 "غنوا وشيدوا بالمسيح" [layout A]: 5 stanzas (1)[لازمة] (1) (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  !! TITLE: site says "يا شعب قد نال النصيب" — using RL2007 index title "غنوا وشيدوا بالمسيح"
+
+hymn 98 "لما عدوي يحاربني" [layout B]: 4 stanzas (1) (1)[لازمة] (2) (3)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 99 "إن فاض من قلبي نبع السلام" [layout B]: 5 stanzas (1) (1)[لازمة] (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  ok
+
+hymn 100 "ألله قوة لنا" [layout A]: 5 stanzas (1) (1)[لازمة] (2) (3) (4)
+  refrain: (1, high: explicit القرار header)
+  !! LOW CONFIDENCE stanza(s) / stanza 1 has no number and is not repeated — treated as verse (1), PLEASE REVIEW / stanza 3 has no number and is not repeated — treated as verse (2), PLEASE REVIEW / stanza 4 has no number and is not repeated — treated as verse (3), PLEASE REVIEW / stanza 5 has no number and is not repeated — treated as verse (4), PLEASE REVIEW
+
+
+TOTAL: 43 hymns, 17 need review.
+
+Wrote D:\MegaDrive\Designs\שונות\My-Projects\رنموا للرب\content\batches\058-100\input-batch-058-100.txt

@@ -16,6 +16,7 @@ import type { HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useLibrary } from '../../store/library';
+import { useOverrides } from '../../store/overrides';
 import { spacing } from '../../theme/tokens';
 
 export default function FavoritesScreen() {
@@ -23,6 +24,7 @@ export default function FavoritesScreen() {
   const { t } = useT();
   const { colors } = useTheme();
   const favorites = useLibrary((s) => s.favorites);
+  const corpusVersion = useOverrides((s) => s.updatedAt);
 
   const rows = useMemo(() => {
     const byId = new Map(getSummaries().map((s) => [s.id, s]));
@@ -32,7 +34,9 @@ export default function FavoritesScreen() {
       if (summary) resolved.push(summary);
     }
     return resolved;
-  }, [favorites]);
+    // corpusVersion only retriggers this after admin edits land.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [favorites, corpusVersion]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>

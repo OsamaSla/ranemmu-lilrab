@@ -22,8 +22,10 @@ interface AppBarProps {
 
 export function AppBar({ title, action, subtitle }: AppBarProps) {
   const { colors } = useTheme();
-  const { direction } = useT();
+  const { t, direction } = useT();
   const insets = useSafeAreaInsets();
+
+  const badge = t('appName').split(' ')[0];
 
   return (
     <View
@@ -47,8 +49,12 @@ export function AppBar({ title, action, subtitle }: AppBarProps) {
           alignItems: 'center',
           justifyContent: 'center',
         }}>
-        <AppText variant="label" color={colors.primaryDeep} style={{ fontWeight: '700' }}>
-          هلم
+        <AppText
+          variant="label"
+          color={colors.primaryDeep}
+          numberOfLines={1}
+          style={{ fontWeight: '700' }}>
+          {badge}
         </AppText>
       </View>
 

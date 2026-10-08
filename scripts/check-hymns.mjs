@@ -9,7 +9,9 @@ import { validateCorpus, formatIssues, DIACRITICS } from './lib/validate.mjs';
 
 const CONTENT_DIR = join(dirname(fileURLToPath(import.meta.url)), '..', 'content');
 
-const entries = (await readdir(CONTENT_DIR)).filter((f) => f.endsWith('.json')).sort();
+const entries = (await readdir(CONTENT_DIR))
+  .filter((f) => f.endsWith('.json') && f !== 'authors.json')
+  .sort();
 
 const hymns = [];
 for (const name of entries) {

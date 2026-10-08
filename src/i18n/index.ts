@@ -37,16 +37,9 @@ export const DICTIONARIES: Record<LocaleCode, FlatDictionary> = {
   de,
 };
 
-/** Locales offered in settings, in the order they should appear. */
-export const LOCALES: { code: LocaleCode; label: string; nativeLabel: string }[] = [
-  { code: 'ar', label: 'Arabic', nativeLabel: 'العربية' },
-  { code: 'en', label: 'English', nativeLabel: 'English' },
-  { code: 'de', label: 'German', nativeLabel: 'Deutsch' },
-];
-
 /**
  * Only Arabic is right-to-left. Adding a language here means adding it to
- * DICTIONARIES and LOCALES too — the type checker enforces the former.
+ * DICTIONARIES too — the type checker enforces it.
  */
 const RTL_LOCALES: ReadonlySet<LocaleCode> = new Set<LocaleCode>(['ar']);
 
