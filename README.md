@@ -112,16 +112,20 @@ tested) so corrections survive re-imports.
 
 ## Web deploy (GitHub Pages)
 
-The site is a static export served from the `gh-pages` branch under the
-subpath `/ranemmu-lilrab` (see `experiments.baseUrl` in `app.json`):
+The site is a static export served under the subpath `/ranemmu-lilrab`
+(see `experiments.baseUrl` in `app.json`). Every push to `main` auto-builds
+and deploys via `.github/workflows/pages.yml`:
 
 ```bash
-npm run deploy   # expo export -p web + 404 fallback, then push dist/ via gh-pages
+git push origin main   # build + deploy runs itself, lands at the URL below
 ```
 
-Then in the repo: Settings → Pages → Source **Deploy from a branch**,
-Branch **gh-pages** / root. The app lands at
-https://OsamaSla.github.io/ranemmu-lilrab/.
+One-time repo setup: Settings → Pages → Source **GitHub Actions**.
+The app lands at https://OsamaSla.github.io/ranemmu-lilrab/.
+
+Manual alternative (no Actions): `npm run deploy` pushes `dist/` to the
+`gh-pages` branch — then Pages Source must be **Deploy from a branch**,
+Branch **gh-pages** / root instead.
 
 Local preview uses `expo serve` (subpath-aware) — plain static servers at the
 domain root will 404 the assets.
