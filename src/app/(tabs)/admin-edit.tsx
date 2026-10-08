@@ -33,21 +33,23 @@ export default function AdminEditScreen() {
   // Whole form in one object so switching hymns resets cleanly
   // (render-time reset, same pattern as the reader's translation view).
   const blank = { title: '', author: '', authorOriginal: '', meter: '', chorus: '', lines: [] as string[][] };
-  const [form, setForm] = useState({ key: id, ...blank });
+  const toForm = (key: typeof id, h: typeof hymn) =>
+    h
+      ? {
+          key,
+          title: h.title,
+          author: h.author ?? '',
+          authorOriginal: h.authorOriginal ?? '',
+          meter: h.meter ?? '',
+          chorus: h.chorus ?? '',
+          lines: h.verses.map((v) => [...v.lines]),
+        }
+      : { key, ...blank };
+  // Lazy init so the first open already shows the hymn's current words
+  // (previously the form stayed blank until switching to another hymn).
+  const [form, setForm] = useState(() => toForm(id, hymn));
   if (form.key !== id) {
-    setForm(
-      hymn
-        ? {
-            key: id,
-            title: hymn.title,
-            author: hymn.author ?? '',
-            authorOriginal: hymn.authorOriginal ?? '',
-            meter: hymn.meter ?? '',
-            chorus: hymn.chorus ?? '',
-            lines: hymn.verses.map((v) => [...v.lines]),
-          }
-        : { key: id, ...blank },
-    );
+    setForm(toForm(id, hymn));
   }
   const [msg, setMsg] = useState('');
 
