@@ -57,7 +57,7 @@ export const ar = {
     missing: 'غير متوفر',
   },
 
-  admin: {
+admin: {
     title: 'الإدارة',
     pinTitle: 'أدخل رمز الإدارة',
     pinPlaceholder: 'الرمز',
@@ -85,6 +85,12 @@ export const ar = {
     authorOriginal: 'المؤلف الأصلي',
     chorus: 'القرار',
     hymnTitle: 'العنوان',
+    addHymn: 'إضافة ترنيمة جديدة',
+    hymnNumber: 'رقم الترنيمة',
+    stanzaLine: 'سطر المقطع',
+    backToAdmin: 'العودة للإدارة',
+    errExists: 'الترنيمة موجودة بالفعل',
+    findNextNumber: 'إيجاد الرقم التالي المتاح',
   },
 
   structure: {

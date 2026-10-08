@@ -70,6 +70,12 @@ export const en: PartialDictionary = {
   'admin.authorOriginal': 'Original author',
   'admin.chorus': 'Refrain',
   'admin.hymnTitle': 'Title',
+  'admin.addHymn': 'Add New Hymn',
+  'admin.hymnNumber': 'Hymn Number',
+  'admin.stanzaLine': 'Stanza Line',
+  'admin.backToAdmin': 'Back to Admin',
+  'admin.errExists': 'Hymn already exists',
+  'admin.findNextNumber': 'Find next available number',
 
   'structure.title': 'Metre',
   'structure.subtitle': 'Hymns sharing the same metre',

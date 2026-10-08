@@ -197,8 +197,15 @@ export default function AdminScreen() {
             </Card>
 
             <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
-              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
-                {t('admin.swapTitle')}
+                <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+                  {t('admin.addHymn')}
+                </AppText>
+                {button(t('admin.addHymn'), () => router.push('/(tabs)/admin-add'))}
+            </Card>
+
+            <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
+                <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+                  {t('admin.swapTitle')}
               </AppText>
               <View style={{ flexDirection: direction.row, gap: spacing.sm }}>
                 <TextInput

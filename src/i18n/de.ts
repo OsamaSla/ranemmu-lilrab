@@ -48,7 +48,7 @@ export const de: PartialDictionary = {
   'info.meter': 'Metrum',
   'info.missing': 'Nicht verfügbar',
 
-  'admin.title': 'Admin',
+'admin.title': 'Admin',
   'admin.pinTitle': 'Admin-PIN eingeben',
   'admin.pinPlaceholder': 'PIN',
   'admin.unlock': 'Entsperren',
@@ -75,6 +75,12 @@ export const de: PartialDictionary = {
   'admin.authorOriginal': 'Originalautor',
   'admin.chorus': 'Kehrvers',
   'admin.hymnTitle': 'Titel',
+  'admin.addHymn': 'Neues Lied hinzufügen',
+  'admin.hymnNumber': 'Liednummer',
+  'admin.stanzaLine': 'Strophenzeile',
+  'admin.backToAdmin': 'Zurück zum Admin',
+  'admin.errExists': 'Lied existiert bereits',
+  'admin.findNextNumber': 'Nächste freie Nummer finden',
 
   'structure.title': 'Metrum',
   'structure.subtitle': 'Lieder mit demselben Metrum',
