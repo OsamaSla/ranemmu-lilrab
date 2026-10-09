@@ -18,6 +18,8 @@ const TAGS = [
   '<!--pwa-head-->',
   `<link rel="manifest" href="${BASE}/manifest.json">`,
   `<link rel="apple-touch-icon" href="${BASE}/icons/apple-touch-icon.png">`,
+  `<link rel="icon" type="image/png" sizes="192x192" href="${BASE}/icons/icon-192.png">`,
+  `<link rel="icon" type="image/png" sizes="512x512" href="${BASE}/icons/icon-512.png">`,
   '<meta name="theme-color" content="#184D55">',
   '<meta name="mobile-web-app-capable" content="yes">',
   '<meta name="apple-mobile-web-app-capable" content="yes">',
