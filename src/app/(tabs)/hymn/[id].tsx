@@ -414,6 +414,14 @@ export default function ReaderScreen() {
             }}>
             {hymn.number}. {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
           </AppText>
+          {hymn.meter ? (
+            <AppText
+              variant="caption"
+              center
+              style={{ color: palette.readerText, opacity: 0.7, marginBottom: spacing.lg }}>
+              {t('info.meter')}: {hymn.meter}
+            </AppText>
+          ) : null}
           {versesView}
         </ScrollView>
       </Animated.View>
@@ -460,6 +468,12 @@ export default function ReaderScreen() {
             <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.85 }}>
               {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
             </AppText>
+            {/* Metre under the title when the book provides one. */}
+            {hymn.meter ? (
+              <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.7 }}>
+                {t('info.meter')}: {hymn.meter}
+              </AppText>
+            ) : null}
           </View>
           <IconButton
             name={isFavorite ? 'star' : 'star-outline'}

@@ -15,9 +15,17 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
-import { getHymnCount } from '../../data/loader';
+import { getBooks } from '../../data/loader';
+import type { BookId } from '../../data/types';
 import { useOverrides } from '../../store/overrides';
+import { useSettings } from '../../store/settings';
 import { radius, shadow, spacing } from '../../theme/tokens';
+
+/** Cover art per book, shown side by side as the book picker. */
+const BOOK_COVERS: Record<BookId, number> = {
+  main: require('../../../assets/images/book-cover.jpg'),
+  taranim: require('../../../assets/images/book-cover-taranim.jpg'),
+};
 
 export default function HomeScreen() {
   const router = useRouter();
@@ -25,9 +33,16 @@ export default function HomeScreen() {
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
   const corpusVersion = useOverrides((s) => s.updatedAt);
+  const book = useSettings((s) => s.book);
+  const setBook = useSettings((s) => s.setBook);
   // corpusVersion only retriggers this after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const hymnCount = useMemo(() => getHymnCount(), [corpusVersion]);
+  const books = useMemo(() => getBooks(), [corpusVersion]);
+
+  const chooseBook = (id: BookId) => {
+    setBook(id);
+    router.push('/library');
+  };
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
@@ -71,27 +86,63 @@ export default function HomeScreen() {
         />
 
         {/* The printed book's cover, as it looks on the shelf. */}
-        <RNImage
-          source={require('../../../assets/images/book-cover.jpg')}
-          resizeMode="cover"
+        <AppText variant="heading" center style={{ fontWeight: '700', marginBottom: spacing.md }}>
+          {t('book.choose')}
+        </AppText>
+
+        {/* Book picker: both covers side by side. Tapping one selects that
+            book everywhere (library, search, reader neighbours) and opens it. */}
+        <View
           style={{
-            alignSelf: 'center',
-            width: 170,
-            height: 240,
-            borderRadius: radius.lg,
+            flexDirection: direction.row,
+            justifyContent: 'center',
+            alignItems: 'flex-start',
+            gap: spacing.lg,
             marginBottom: spacing.lg,
-            borderWidth: 1,
-            borderColor: colors.border,
-            ...shadow.card,
-          }}
-        />
+          }}>
+          {books.map((b) => {
+            const selected = b.id === book;
+            return (
+              <Pressable
+                key={b.id}
+                accessibilityRole="button"
+                accessibilityLabel={t(`book.${b.id}` as const)}
+                accessibilityState={{ selected }}
+                onPress={() => chooseBook(b.id)}
+                android_ripple={{ color: colors.border }}
+                style={({ pressed }) => ({
+                  alignItems: 'center',
+                  opacity: pressed ? 0.75 : 1,
+                  maxWidth: 150,
+                })}>
+                <RNImage
+                  source={BOOK_COVERS[b.id]}
+                  resizeMode="cover"
+                  style={{
+                    width: 132,
+                    height: 190,
+                    borderRadius: radius.lg,
+                    borderWidth: selected ? 3 : 1,
+                    borderColor: selected ? colors.primary : colors.border,
+                    ...shadow.card,
+                  }}
+                />
+                <AppText
+                  variant="body"
+                  center
+                  style={{ fontWeight: selected ? '700' : '400', marginTop: spacing.sm }}>
+                  {t(`book.${b.id}` as const)}
+                </AppText>
+                <AppText variant="caption" center color={colors.textMuted}>
+                  {t('library.count')}: {b.count}
+                </AppText>
+              </Pressable>
+            );
+          })}
+        </View>
 
         <AppText variant="display" center style={{ marginBottom: spacing.sm }}>
           {t('appName')}
-        </AppText>
-
-        <AppText variant="body" center color={colors.textMuted} style={{ marginBottom: spacing.xxl }}>
-          {t('library.count')}: {hymnCount}
         </AppText>
 
         {/* Search trigger. A real field would need a keyboard on tap; routing to
