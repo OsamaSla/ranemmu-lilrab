@@ -201,14 +201,19 @@ merge. Reviewed files merge into content/hymns-imported.xlsx, then
 }
 
 async function main() {
-  const from = Number(process.argv[2] ?? 21);
-  const to = Number(process.argv[3] ?? 40);
+  const argv = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+  const bookFlag = process.argv.indexOf('--book');
+  const book = bookFlag !== -1 ? process.argv[bookFlag + 1] : 'main';
+  const masterFlag = process.argv.indexOf('--master');
+  const masterName = masterFlag !== -1 ? process.argv[masterFlag + 1] : 'book-hymns-imported.json';
+  const from = Number(argv[0] ?? 21);
+  const to = Number(argv[1] ?? 40);
   if (!Number.isInteger(from) || !Number.isInteger(to) || from < 1 || to < from) {
-    throw new Error(`usage: node scripts/make-translation-packet.mjs [from] [to] (got ${from} ${to})`);
+    throw new Error(`usage: node scripts/make-translation-packet.mjs [from] [to] [--book id] [--master file] (got ${from} ${to})`);
   }
 
-  const raw = JSON.parse(readFileSync(join(CONTENT_DIR, 'book-hymns-imported.json'), 'utf8'));
-  const all = Array.isArray(raw) ? raw : raw.hymns;
+  const raw = JSON.parse(readFileSync(join(CONTENT_DIR, masterName), 'utf8'));
+  const all = (Array.isArray(raw) ? raw : raw.hymns).filter((h) => (h.book ?? 'main') === book);
   const hymns = all
     .filter((h) => h.number >= from && h.number <= to)
     .sort((a, b) => a.number - b.number);
@@ -219,7 +224,8 @@ async function main() {
   if (problems.length > 0) throw new Error(`skeleton mismatch:\n${problems.join('\n')}`);
 
   const pad = (n) => String(n).padStart(3, '0');
-  const dir = join(CONTENT_DIR, `translation-packet-${pad(from)}-${pad(to)}`);
+  const tag = book === 'main' ? `${pad(from)}-${pad(to)}` : `${book}-${pad(from)}-${pad(to)}`;
+  const dir = join(CONTENT_DIR, `translation-packet-${tag}`);
   mkdirSync(dir, { recursive: true });
 
   writeFileSync(join(dir, 'source.md'), sourceMarkdown(hymns), 'utf8');

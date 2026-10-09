@@ -22,7 +22,10 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
 
-const AR = JSON.parse(readFileSync(join(CONTENT, 'book-hymns-imported.json'), 'utf8'));
+const AR = JSON.parse(readFileSync(join(CONTENT, (() => {
+  const i = process.argv.indexOf('--master');
+  return i !== -1 ? process.argv[i + 1] : 'book-hymns-imported.json';
+})()), 'utf8'));
 const AR_HYMNS = Array.isArray(AR) ? AR : AR.hymns;
 const byNum = new Map(AR_HYMNS.map((h) => [h.number, h]));
 
@@ -40,8 +43,11 @@ function styleSheet(ws, rtl) {
 }
 
 async function main() {
-  const [dataFile, outName] = process.argv.slice(2);
-  if (!dataFile || !outName) throw new Error('usage: node scripts/build-en-de-batch.mjs <drafts.json> <out.xlsx>');
+  const argv = process.argv.slice(2).filter((a) => !a.startsWith('--'));
+  const masterFlag = process.argv.indexOf('--master');
+  const masterName = masterFlag !== -1 ? process.argv[masterFlag + 1] : 'book-hymns-imported.json';
+  const [dataFile, outName] = argv;
+  if (!dataFile || !outName) throw new Error('usage: node scripts/build-en-de-batch.mjs <drafts.json> <out.xlsx> [--master file]');
 
   const data = JSON.parse(readFileSync(join(ROOT, dataFile), 'utf8'));
   const BATCH = data.hymns;
