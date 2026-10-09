@@ -141,8 +141,9 @@ export default function HomeScreen() {
           })}
         </View>
 
+        {/* Umbrella heading: the covers below already name each book. */}
         <AppText variant="display" center style={{ marginBottom: spacing.sm }}>
-          {t('appName')}
+          {t('library.title')}
         </AppText>
 
         {/* Search trigger. A real field would need a keyboard on tap; routing to
