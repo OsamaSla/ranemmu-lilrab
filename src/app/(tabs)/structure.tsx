@@ -19,6 +19,7 @@ import { groupByStructure } from '../../data/search';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
+import { useSettings } from '../../store/settings';
 import { spacing } from '../../theme/tokens';
 
 export default function StructureScreen() {
@@ -27,10 +28,11 @@ export default function StructureScreen() {
   const { colors } = useTheme();
   const [open, setOpen] = useState<Set<string>>(new Set());
   const corpusVersion = useOverrides((s) => s.updatedAt);
+  const book = useSettings((s) => s.book);
 
   // corpusVersion only retriggers this after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const groups = useMemo(() => groupByStructure(getSummaries()), [corpusVersion]);
+  const groups = useMemo(() => groupByStructure(getSummaries(book)), [corpusVersion, book]);
 
   const toggle = (key: string) =>
     setOpen((prev) => {

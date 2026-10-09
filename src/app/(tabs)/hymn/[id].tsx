@@ -102,13 +102,16 @@ export default function ReaderScreen() {
       hymn
         ? findSimilar(
             hymn,
-            getCorpus().map((h) => ({
-              id: h.id,
-              number: h.number,
-              title: h.title,
-              meter: h.meter,
-              hasChorus: h.verses.some((v) => v.chorus),
-            })),
+            getCorpus()
+              .filter((h) => (h.book ?? 'main') === (hymn.book ?? 'main'))
+              .map((h) => ({
+                id: h.id,
+                book: h.book ?? 'main',
+                number: h.number,
+                title: h.title,
+                meter: h.meter,
+                hasChorus: h.verses.some((v) => v.chorus),
+              })),
             5,
           )
         : [],
@@ -145,7 +148,7 @@ export default function ReaderScreen() {
   // Jump bar: a hymn number goes straight there, anything else opens the
   // full search with the text prefilled.
   // eslint-disable-next-line react-hooks/exhaustive-deps -- see above
-  const summaries = useMemo(() => getSummaries(), [corpusVersion]);
+  const summaries = useMemo(() => getSummaries(hymn?.book ?? 'main'), [corpusVersion, hymn?.book]);
   const [jump, setJump] = useState('');
   const submitJump = () => {
     const q = jump.trim();

@@ -72,6 +72,7 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
     return {
       summary: {
         id: hymn.id,
+        book: hymn.book ?? 'main',
         number: hymn.number,
         title: hymn.title,
         meter: hymn.meter,

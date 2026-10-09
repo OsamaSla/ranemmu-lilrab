@@ -25,6 +25,12 @@ export const ar = {
     alphabetical: 'أبجديًا',
   },
 
+  book: {
+    choose: 'الكتاب',
+    main: 'رنموا للرب',
+    taranim: 'ترنيمات روحية',
+  },
+
   search: {
     placeholder: 'ابحث في الترنيمات...',
     clear: 'مسح',

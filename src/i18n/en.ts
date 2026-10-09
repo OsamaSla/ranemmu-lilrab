@@ -17,6 +17,10 @@ export const en: PartialDictionary = {
   'library.byNumber': 'By number',
   'library.alphabetical': 'A–Z',
 
+  'book.choose': 'Book',
+  'book.main': 'Sing to the Lord',
+  'book.taranim': 'Spiritual Songs',
+
   'search.placeholder': 'Search the hymns...',
   'search.clear': 'Clear',
   'search.noResults': 'No results',

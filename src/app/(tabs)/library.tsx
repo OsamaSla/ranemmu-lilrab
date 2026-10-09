@@ -15,11 +15,12 @@ import { AppText } from '../../components/AppText';
 import { EmptyState } from '../../components/EmptyState';
 import { HymnRow } from '../../components/HymnRow';
 import { SegmentedControl } from '../../components/SegmentedControl';
-import { getSummaries } from '../../data/loader';
-import type { HymnSummary } from '../../data/types';
+import { getBooks, getSummaries } from '../../data/loader';
+import type { BookId, HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
+import { useSettings } from '../../store/settings';
 import { spacing } from '../../theme/tokens';
 
 /** Letter of the alphabet used to bucket the alphabetical sort. */
@@ -32,12 +33,15 @@ export default function LibraryScreen() {
   const { t } = useT();
   const { colors } = useTheme();
   const [order, setOrder] = useState<'number' | 'alpha'>('number');
+  const book = useSettings((s) => s.book);
+  const setBook = useSettings((s) => s.setBook);
   // Re-reads the merged corpus whenever an admin override lands.
   const corpusVersion = useOverrides((s) => s.updatedAt);
+  const books = useMemo(() => getBooks(), []);
 
   // corpusVersion only retriggers this after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const summaries = useMemo(() => getSummaries(), [corpusVersion]);
+  const summaries = useMemo(() => getSummaries(book), [corpusVersion, book]);
 
   const sections = useMemo(() => {
     if (order === 'number') {
@@ -65,6 +69,14 @@ export default function LibraryScreen() {
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={t('library.title')} subtitle={`${summaries.length}`} />
 
+      {books.length > 1 ? (
+        <SegmentedControl
+          options={books.map((b) => ({ value: b.id, label: t(`book.${b.id}` as const) }))}
+          value={book}
+          onChange={(value) => setBook(value as BookId)}
+          style={{ marginHorizontal: spacing.lg, marginTop: spacing.lg }}
+        />
+      ) : null}
       <SegmentedControl
         options={[
           { value: 'number', label: t('library.byNumber') },

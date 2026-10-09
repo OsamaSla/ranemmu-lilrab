@@ -11,6 +11,7 @@ import { createJSONStorage, persist } from 'zustand/middleware';
 import { DEFAULT_LOCALE, type LocaleCode } from '../i18n';
 import { DEFAULT_FONT_ID } from '../theme/fonts';
 import type { ThemeName } from '../theme/tokens';
+import type { BookId } from '../data/types';
 
 /** Reader text size bounds, in points. */
 export const READER_SIZE_MIN = 14;
@@ -35,10 +36,13 @@ interface SettingsState {
   readerSize: number;
   /** Admin area PIN. */
   adminPin: string;
+  /** Currently chosen hymn book. */
+  book: BookId;
 
   setTheme: (theme: ThemePreference) => void;
   setFontFamily: (id: string) => void;
   setAdminPin: (pin: string) => void;
+  setBook: (book: BookId) => void;
   setAppScale: (scale: number) => void;
   setReaderSize: (size: number) => void;
   increaseReaderSize: () => void;
@@ -59,10 +63,12 @@ export const useSettings = create<SettingsState>()(
       appScale: 1,
       readerSize: 20,
       adminPin: '1234',
+      book: 'main',
 
       setTheme: (theme) => set({ theme }),
       setFontFamily: (fontFamily) => set({ fontFamily }),
       setAdminPin: (adminPin) => set({ adminPin }),
+      setBook: (book) => set({ book }),
 
       setAppScale: (appScale) =>
         set({ appScale: clamp(snap(appScale, APP_SCALE_STEP), APP_SCALE_MIN, APP_SCALE_MAX) }),
@@ -86,9 +92,11 @@ export const useSettings = create<SettingsState>()(
       // v1: the settings language switch is gone (translations live per
       // hymn in the reader), so any stored non-Arabic locale resets to Arabic.
       // v2: adds the admin PIN (defaults to '1234' for older stores).
-      version: 2,
+      // v3: adds the chosen hymn book (defaults to 'main' for older stores).
+      version: 3,
       migrate: (persisted) => ({
         adminPin: '1234',
+        book: 'main',
         ...((persisted ?? {}) as Record<string, unknown>),
         locale: 'ar',
       }),

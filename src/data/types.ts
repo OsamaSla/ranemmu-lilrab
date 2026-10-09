@@ -14,9 +14,27 @@ export interface HymnVerse {
   chorus?: boolean;
 }
 
+/** Hymn book identifier. `main` is the original corpus (numbers 1-1000). */
+export type BookId = 'main' | 'taranim';
+
+/** Static metadata for each book bundled in the app. */
+export interface BookMeta {
+  id: BookId;
+  /** Stable hymn-id prefix for this book (`h0001`, `tr0001`, …). */
+  idPrefix: string;
+}
+
+/** Books shipped with the app, in display order. */
+export const BOOKS: BookMeta[] = [
+  { id: 'main', idPrefix: 'h' },
+  { id: 'taranim', idPrefix: 'tr' },
+];
+
 /** Lightweight record used by the library list, recents, favorites and structure screens. */
 export interface HymnSummary {
   id: string;
+  /** Owning book. Missing on legacy records means `main`. */
+  book?: BookId;
   number: number;
   title: string;
   /** مقياس الكلام — metre cadence, e.g. "87.87.87". Groups the "similar hymns" views. */

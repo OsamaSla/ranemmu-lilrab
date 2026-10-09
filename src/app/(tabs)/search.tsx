@@ -19,6 +19,7 @@ import { highlight, searchHymns } from '../../data/search';
 import type { SearchMatch } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { useSettings } from '../../store/settings';
 import { radius, spacing } from '../../theme/tokens';
 
 const QUERY_MIN_LENGTH = 1;
@@ -31,10 +32,11 @@ export default function SearchScreen() {
   const { q } = useLocalSearchParams<{ q?: string }>();
   const [query, setQuery] = useState(typeof q === 'string' ? q : '');
   const corpusVersion = useOverrides((s) => s.updatedAt);
+  const book = useSettings((s) => s.book);
 
   // corpusVersion only retriggers this after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const matches = useMemo(() => searchHymns(getCorpus(), query.trim(), 200), [query, corpusVersion]);
+  const matches = useMemo(() => searchHymns(getCorpus(book), query.trim(), 200), [query, corpusVersion, book]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>

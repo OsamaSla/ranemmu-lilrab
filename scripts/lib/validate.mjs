@@ -19,6 +19,7 @@ const NON_ARABIC_LETTERS = /[A-Za-z\p{Script=Latin}가-힯぀-ヿ一-鿿]/u;
  */
 const ALLOWED_LATIN_FIELDS = new Set([
   'meter',
+  'book',
   'title_en', 'chorus_en',
   'title_de', 'chorus_de',
   'author', 'authorOriginal',
@@ -58,6 +59,7 @@ export function validateCorpus(hymns) {
 
   hymns.forEach((hymn, i) => {
     const at = `hymn[${i}]`;
+    const book = hymn.book ?? 'main';
 
     if (typeof hymn.number !== 'number' || !Number.isInteger(hymn.number) || hymn.number < 1) {
       issues.push(`${at}: 'number' must be a positive integer (got ${JSON.stringify(hymn.number)})`);
@@ -79,10 +81,11 @@ export function validateCorpus(hymns) {
     }
 
     if (typeof hymn.number === 'number') {
-      if (seenNumbers.has(hymn.number)) {
-        issues.push(`${at}: duplicate number ${hymn.number} (also at ${seenNumbers.get(hymn.number)})`);
+      const key = `${book}:${hymn.number}`;
+      if (seenNumbers.has(key)) {
+        issues.push(`${at}: duplicate number ${hymn.number} in book '${book}' (also at ${seenNumbers.get(key)})`);
       } else {
-        seenNumbers.set(hymn.number, at);
+        seenNumbers.set(key, at);
       }
     }
 

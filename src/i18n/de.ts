@@ -22,6 +22,10 @@ export const de: PartialDictionary = {
   'library.byNumber': 'Nach Nummer',
   'library.alphabetical': 'A–Z',
 
+  'book.choose': 'Buch',
+  'book.main': 'Singet dem Herrn',
+  'book.taranim': 'Geistliche Lieder',
+
   'search.placeholder': 'Lieder durchsuchen...',
   'search.clear': 'Löschen',
   'search.noResults': 'Keine Ergebnisse',

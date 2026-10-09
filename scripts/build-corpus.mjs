@@ -27,8 +27,12 @@ const CHUNKS_FILE = join(ROOT, 'src', 'data', 'generated-chunks.ts');
 /** Hymns per chunk. 100 keeps each file ~400 KB, so search loads ~5 MB total. */
 const CHUNK_SIZE = 100;
 
-/** Stable id from the hymn number, zero-padded so ids sort naturally. */
-const idFor = (number) => `h${String(number).padStart(4, '0')}`;
+/** Stable id from book + hymn number. The original corpus keeps its `hNNNN`
+ *  ids so existing routes, favorites and recents keep working; other books
+ *  use their own prefix (`trNNNN`, …). */
+const ID_PREFIX = { main: 'h', taranim: 'tr' };
+const idFor = (book, number) =>
+  `${ID_PREFIX[book] ?? book.slice(0, 2)}${String(number).padStart(4, '0')}`;
 
 async function readContent() {
   const entries = (await readdir(CONTENT_DIR))
@@ -49,7 +53,8 @@ async function readContent() {
 
 function toSummary(hymn) {
   return {
-    id: hymn.id ?? idFor(hymn.number),
+    id: hymn.id ?? idFor(hymn.book ?? 'main', hymn.number),
+    book: hymn.book ?? 'main',
     number: hymn.number,
     title: hymn.title,
     meter: hymn.meter,
@@ -85,17 +90,19 @@ async function main() {
     process.exit(1);
   }
 
-  // Normalise: assign ids, sort by hymn number, and default the chorus flags.
+  // Normalise: assign ids, default the book, sort by book then hymn
+  // number, and default the chorus flags.
   const hymns = raw
     .map((hymn) => ({
       ...hymn,
-      id: hymn.id ?? idFor(hymn.number),
+      book: hymn.book ?? 'main',
+      id: hymn.id ?? idFor(hymn.book ?? 'main', hymn.number),
       verses: (hymn.verses ?? []).map((verse) => ({
         ...verse,
         chorus: verse.chorus ?? false,
       })),
     }))
-    .sort((a, b) => a.number - b.number);
+    .sort((a, b) => (a.book < b.book ? -1 : a.book > b.book ? 1 : a.number - b.number));
 
   const duplicates = hymns
     .map((h) => h.id)

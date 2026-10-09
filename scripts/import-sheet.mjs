@@ -282,7 +282,7 @@ function mergeTranslations(master, translated, lang, sourceName, warnings, error
   return attached;
 }
 
-async function convertFile(xlsxPath) {
+async function convertFile(xlsxPath, { book = null, authorsName = 'authors.json' } = {}) {
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.readFile(xlsxPath);
   if (wb.worksheets.length === 0) throw new Error(`${basename(xlsxPath)}: workbook has no sheets`);
@@ -321,7 +321,7 @@ async function convertFile(xlsxPath) {
   // hymnary pages by scripts/extract-authors.mjs). Hymns without an entry
   // simply carry no author — the app hides the line for those.
   try {
-    const authors = JSON.parse(readFileSync(join(CONTENT_DIR, 'authors.json'), 'utf8'));
+    const authors = JSON.parse(readFileSync(join(CONTENT_DIR, authorsName), 'utf8'));
     for (const hymn of hymns) {
       const credit = authors[hymn.number] ?? authors[String(hymn.number)];
       if (!credit) continue;
@@ -329,7 +329,11 @@ async function convertFile(xlsxPath) {
       if (credit.authorOriginal) hymn.authorOriginal = credit.authorOriginal;
     }
   } catch {
-    warnings.push('authors.json missing or unreadable — hymns imported without author credits');
+    warnings.push(`${authorsName} missing or unreadable — hymns imported without author credits`);
+  }
+
+  if (book) {
+    for (const hymn of hymns) hymn.book = book;
   }
 
   hymns.sort((a, b) => a.number - b.number);
@@ -352,6 +356,18 @@ async function main() {
     outPath = args[outFlag + 1];
     args.splice(outFlag, 2);
   }
+  const bookFlag = args.indexOf('--book');
+  let book = null;
+  if (bookFlag !== -1) {
+    book = args[bookFlag + 1];
+    args.splice(bookFlag, 2);
+  }
+  const authorsFlag = args.indexOf('--authors');
+  let authorsName = 'authors.json';
+  if (authorsFlag !== -1) {
+    authorsName = args[authorsFlag + 1];
+    args.splice(authorsFlag, 2);
+  }
 
   const input = args[0] ?? newestWorkbook();
   if (!input) {
@@ -359,7 +375,7 @@ async function main() {
     process.exit(1);
   }
 
-  const { hymns, warnings, errors, counts } = await convertFile(input);
+  const { hymns, warnings, errors, counts } = await convertFile(input, { book, authorsName });
 
   for (const w of warnings) console.warn(`warn: ${w}`);
 
