@@ -1,18 +1,25 @@
-# dependencies
-node_modules/
-
-# Excel & Binary files (Prevents OpenCode Review freeze)
+# Excel & Binary files (Prevents OpenCode freeze/crash)
 *.xlsx
 *.xls
 *.csv
 
-# Expo
+# OpenCode & IDE temporary files
+.opencode/
+.vscode/
+.idea/
+
+# Dependencies
+node_modules/
+
+# Expo & Web builds
 .expo/
 dist/
 web-build/
 expo-env.d.ts
 
-# Native
+# Native builds & mobile secrets
+/ios
+/android
 .kotlin/
 *.orig.*
 *.jks
@@ -21,27 +28,22 @@ expo-env.d.ts
 *.key
 *.mobileprovision
 
-# Metro
+# Metro bundler
 .metro-health-check*
 
-# debug
+# Logs & debugging
 npm-debug.*
 yarn-debug.*
 yarn-error.*
 *.log
 
-# macOS
+# System & OS files
 .DS_Store
+Thumbs.db
 *.pem
 
-# local env files
+# Local environment variables
 .env*.local
 
-# typescript
+# TypeScript cache
 *.tsbuildinfo
-
-example
-
-# generated native folders
-/ios
-/android
