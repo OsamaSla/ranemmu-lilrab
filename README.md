@@ -23,11 +23,10 @@ npm run preview:build  # refresh :8081 after hymn/code changes
 
 ## Daily dev loop (phone + PC)
 
-Double-click `start-dev.cmd` — it opens the static PC preview
-(`http://localhost:8081/ranemmu-lilrab/`) and Metro (`:8082`) in two windows,
-then warms the android/ios/web bundles so the first load is fast.
-(`npm run dev` followed by `npm run warm` does the same thing manually. Metro
-uses port 8082 because the static preview already occupies 8081.)
+Run `npm run dev`, then `npm run warm` — this opens Metro (`:8082`) and
+pre-compiles the bundles so the first load is fast. `npm run preview`
+serves the static PC preview (`http://localhost:8081/ranemmu-lilrab/`).
+(Metro uses port 8082 because the static preview already occupies 8081.)
 
 1. On your phone: same Wi-Fi as the PC, Expo Go updated to the SDK 57
    version. Scan the terminal QR with Expo Go's scanner, or use "Enter URL
