@@ -15,6 +15,7 @@ export const de: PartialDictionary = {
   'tabs.more': 'Mehr',
 
   'home.searchPlaceholder': 'Nach Liednummer oder Teil davon suchen...',
+  'home.pickHint': 'Tippe auf ein Buch, um es zu wählen, erneut zum Öffnen',
   'home.viewAllHymns': 'Alle Lieder anzeigen',
 
   'library.title': 'Lieder',

@@ -10,6 +10,7 @@ export const en: PartialDictionary = {
   'tabs.more': 'More',
 
   'home.searchPlaceholder': 'Search by hymn number or part of it...',
+  'home.pickHint': 'Tap a book to select it, tap again to open it',
   'home.viewAllHymns': 'View All Hymns',
 
   'library.title': 'Hymns',

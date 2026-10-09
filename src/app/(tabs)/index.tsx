@@ -39,9 +39,14 @@ export default function HomeScreen() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const books = useMemo(() => getBooks(), [corpusVersion]);
 
+  // First tap selects the book in place so the scoped search below serves
+  // it; tapping the already-selected cover opens the library.
   const chooseBook = (id: BookId) => {
+    if (id === book) {
+      router.push('/library');
+      return;
+    }
     setBook(id);
-    router.push('/library');
   };
 
   return (
@@ -90,15 +95,16 @@ export default function HomeScreen() {
           {t('book.choose')}
         </AppText>
 
-        {/* Book picker: both covers side by side. Tapping one selects that
-            book everywhere (library, search, reader neighbours) and opens it. */}
+        {/* Book picker: both covers side by side. First tap selects that
+            book everywhere (library, search, reader neighbours) so the scoped
+            actions below serve it; tapping the selected cover opens it. */}
         <View
           style={{
             flexDirection: direction.row,
             justifyContent: 'center',
             alignItems: 'flex-start',
             gap: spacing.lg,
-            marginBottom: spacing.lg,
+            marginBottom: spacing.sm,
           }}>
           {books.map((b) => {
             const selected = b.id === book;
@@ -140,6 +146,15 @@ export default function HomeScreen() {
             );
           })}
         </View>
+
+        {/* How the picker works: select first, then search or browse below. */}
+        <AppText
+          variant="caption"
+          center
+          color={colors.textMuted}
+          style={{ marginBottom: spacing.lg }}>
+          {t('home.pickHint')}
+        </AppText>
 
         {/* Umbrella heading: the covers above already name each book. The
             actions below act on the selected book only. */}

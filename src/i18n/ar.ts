@@ -15,6 +15,7 @@ export const ar = {
 
   home: {
     searchPlaceholder: 'بحث برقم الترنيمة أو جزء منها...',
+    pickHint: 'اضغط على الكتاب لاختياره، واضغط مجددًا لفتحه',
     viewAllHymns: 'عرض جميع الترنيمات',
   },
 
