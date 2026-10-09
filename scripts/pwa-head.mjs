@@ -15,13 +15,15 @@ const DIST = join(ROOT, 'dist');
 const BASE = '/ranemmu-lilrab';
 
 const TAGS = [
-  `<link rel="manifest" href="${BASE}/manifest.webmanifest">`,
+  '<!--pwa-head-->',
+  `<link rel="manifest" href="${BASE}/manifest.json">`,
   `<link rel="apple-touch-icon" href="${BASE}/icons/apple-touch-icon.png">`,
   '<meta name="theme-color" content="#184D55">',
   '<meta name="mobile-web-app-capable" content="yes">',
   '<meta name="apple-mobile-web-app-capable" content="yes">',
   '<meta name="apple-mobile-web-app-status-bar-style" content="default">',
   '<meta name="apple-mobile-web-app-title" content="رنموا للرب">',
+  `<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('${BASE}/sw.js',{scope:'${BASE}/'});});}</script>`,
 ].join('\n    ');
 
 function walk(dir, out = []) {
@@ -36,7 +38,7 @@ function walk(dir, out = []) {
 let touched = 0;
 for (const file of walk(DIST)) {
   const html = readFileSync(file, 'utf8');
-  if (html.includes('rel="manifest"')) continue;
+  if (html.includes('pwa-head')) continue;
   if (!html.includes('</head>')) {
     console.error(`pwa-head: ${file} has no </head> — skipped`);
     continue;
