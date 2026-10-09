@@ -27,6 +27,7 @@ export const de: PartialDictionary = {
   'book.taranim': 'Geistliche Lieder',
 
   'search.placeholder': 'Lieder durchsuchen...',
+  'search.inBook': 'Suchen in',
   'search.clear': 'Löschen',
   'search.noResults': 'Keine Ergebnisse',
   'search.noResultsHint': 'Versuche ein anderes Wort oder suche nach der Liednummer',

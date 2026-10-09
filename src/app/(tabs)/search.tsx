@@ -13,10 +13,11 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 
 import { AppText } from '../../components/AppText';
 import { EmptyState } from '../../components/EmptyState';
-import { getCorpus } from '../../data/loader';
+import { SegmentedControl } from '../../components/SegmentedControl';
+import { getBooks, getCorpus } from '../../data/loader';
 import { useOverrides } from '../../store/overrides';
 import { highlight, searchHymns } from '../../data/search';
-import type { SearchMatch } from '../../data/types';
+import type { BookId, SearchMatch } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useSettings } from '../../store/settings';
@@ -33,10 +34,13 @@ export default function SearchScreen() {
   const [query, setQuery] = useState(typeof q === 'string' ? q : '');
   const corpusVersion = useOverrides((s) => s.updatedAt);
   const book = useSettings((s) => s.book);
+  const setBook = useSettings((s) => s.setBook);
+  const books = useMemo(() => getBooks(), []);
 
+  const trimmed = query.trim();
   // corpusVersion only retriggers this after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const matches = useMemo(() => searchHymns(getCorpus(book), query.trim(), 200), [query, corpusVersion, book]);
+  const matches = useMemo(() => searchHymns(getCorpus(book), trimmed, 200), [trimmed, corpusVersion, book]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
@@ -104,6 +108,28 @@ export default function SearchScreen() {
         </View>
       </View>
 
+      {/* Book scope: private search runs on the selected book only. */}
+      {books.length > 1 ? (
+        <SegmentedControl
+          options={books.map((b) => ({ value: b.id, label: t(`book.${b.id}` as const) }))}
+          value={book}
+          onChange={(value) => setBook(value as BookId)}
+          style={{ marginHorizontal: spacing.lg, marginTop: spacing.md }}
+        />
+      ) : null}
+      <View
+        style={{
+          flexDirection: direction.row,
+          alignItems: 'center',
+          paddingHorizontal: spacing.lg,
+          paddingTop: spacing.sm,
+        }}>
+        <AppText variant="caption" color={colors.textMuted} style={{ flex: 1 }}>
+          {t('search.inBook')} {t(`book.${book}` as const)}
+          {trimmed.length >= QUERY_MIN_LENGTH ? ` • ${matches.length} ${t('search.resultCount')}` : ''}
+        </AppText>
+      </View>
+
       <FlatList
         data={matches}
         keyExtractor={(match, index) =>
@@ -115,11 +141,13 @@ export default function SearchScreen() {
         contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}
         ListEmptyComponent={
           <EmptyState
-            icon={query.trim().length < QUERY_MIN_LENGTH ? 'magnify' : 'text-search'}
-            title={
-              query.trim().length < QUERY_MIN_LENGTH ? t('search.placeholder') : t('search.noResults')
+            icon={trimmed.length < QUERY_MIN_LENGTH ? 'magnify' : 'text-search'}
+            title={trimmed.length < QUERY_MIN_LENGTH ? t('search.placeholder') : t('search.noResults')}
+            hint={
+              trimmed.length >= QUERY_MIN_LENGTH
+                ? t('search.noResultsHint')
+                : `${t('search.inBook')} ${t(`book.${book}` as const)}`
             }
-            hint={query.trim().length >= QUERY_MIN_LENGTH ? t('search.noResultsHint') : undefined}
           />
         }
         renderItem={({ item }) => (
@@ -205,11 +233,12 @@ function SearchResultRow({ match, onPress }: { match: SearchMatch; onPress: () =
         ))}
       </RNText>
 
-      {!match.inTitle && match.label ? (
-        <AppText variant="caption" color={colors.textMuted} style={{ marginTop: spacing.xs }}>
-          {t('reader.verseOf')} {match.label}
-        </AppText>
-      ) : null}
+      {/* Owning book on every hit, so a result is never ambiguous about
+          which book it comes from. */}
+      <AppText variant="caption" color={colors.textMuted} style={{ marginTop: spacing.xs }}>
+        {t(`book.${match.hymn.book ?? 'main'}` as const)}
+        {!match.inTitle && match.label ? ` • ${t('reader.verseOf')} ${match.label}` : ''}
+      </AppText>
     </Pressable>
   );
 }

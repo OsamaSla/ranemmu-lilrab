@@ -22,6 +22,7 @@ export const en: PartialDictionary = {
   'book.taranim': 'Spiritual Songs',
 
   'search.placeholder': 'Search the hymns...',
+  'search.inBook': 'Search in',
   'search.clear': 'Clear',
   'search.noResults': 'No results',
   'search.noResultsHint': 'Try another word, or search by hymn number',

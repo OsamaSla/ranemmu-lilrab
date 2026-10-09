@@ -141,16 +141,25 @@ export default function HomeScreen() {
           })}
         </View>
 
-        {/* Umbrella heading: the covers below already name each book. */}
-        <AppText variant="display" center style={{ marginBottom: spacing.sm }}>
+        {/* Umbrella heading: the covers above already name each book. The
+            actions below act on the selected book only. */}
+        <AppText variant="display" center style={{ marginBottom: spacing.xs }}>
           {t('library.title')}
+        </AppText>
+        <AppText
+          variant="caption"
+          center
+          color={colors.textMuted}
+          style={{ marginBottom: spacing.sm }}>
+          {t('search.inBook')} {t(`book.${book}` as const)}
         </AppText>
 
         {/* Search trigger. A real field would need a keyboard on tap; routing to
-            the search screen keeps focus handling in one place. */}
+            the search screen keeps focus handling in one place. Body-size text
+            so the long placeholder fits on one line. */}
         <Pressable
           accessibilityRole="search"
-          accessibilityLabel={t('home.searchPlaceholder')}
+          accessibilityLabel={`${t('home.searchPlaceholder')} — ${t(`book.${book}` as const)}`}
           onPress={() => router.push('/search')}
           android_ripple={{ color: colors.border }}
           style={({ pressed }) => [
@@ -167,11 +176,12 @@ export default function HomeScreen() {
               ...shadow.card,
             },
           ]}>
-          <MaterialCommunityIcons name="magnify" size={24} color={colors.textMuted} />
+          <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
           <AppText
-            variant="title"
+            variant="body"
             color={colors.textMuted}
             numberOfLines={1}
+            ellipsizeMode="tail"
             style={{ flex: 1, paddingHorizontal: spacing.md }}>
             {t('home.searchPlaceholder')}
           </AppText>

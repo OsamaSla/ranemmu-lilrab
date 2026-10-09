@@ -33,6 +33,7 @@ export const ar = {
 
   search: {
     placeholder: 'ابحث في الترنيمات...',
+    inBook: 'البحث في',
     clear: 'مسح',
     noResults: 'لا توجد نتائج',
     noResultsHint: 'جرّب كلمة أخرى أو ابحث برقم الترنيمة',
