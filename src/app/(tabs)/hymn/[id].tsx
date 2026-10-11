@@ -290,7 +290,7 @@ export default function ReaderScreen() {
     label: string;
     onPress: () => void;
     dark?: boolean;
-    position: { bottom: number } & ({ left: number } | { right: number });
+    position: ({ bottom: number } | { top: number }) & ({ left: number } | { right: number });
   }) => (
     <IconButton
       name={props.name}
@@ -458,8 +458,7 @@ export default function ReaderScreen() {
               label: t('common.back'),
               onPress: () => {
                 setToolsOpen(false);
-                if (fullscreen) exitFullscreen();
-                else router.back();
+                router.back();
               },
             })}
             {panelIcon({
@@ -652,6 +651,16 @@ export default function ReaderScreen() {
   if (fullscreen) {
     return (
       <Animated.View style={{ flex: 1, backgroundColor: palette.readerBg, opacity: fadeAnim }}>
+        {fabButton({
+          name: direction.isRTL ? 'chevron-right' : 'chevron-left',
+          label: t('common.back'),
+          onPress: () => router.back(),
+          dark: true,
+          position: {
+            top: insets.top + spacing.sm,
+            ...(direction.isRTL ? { right: spacing.sm } : { left: spacing.sm }),
+          },
+        })}
         <ScrollView
           ref={scrollRef}
           contentContainerStyle={{

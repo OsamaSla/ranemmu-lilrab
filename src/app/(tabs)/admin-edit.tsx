@@ -71,8 +71,12 @@ export default function AdminEditScreen() {
   const [form, setForm] = useState(() => toForm(id, hymn));
   if (form.key !== id) {
     setForm(toForm(id, hymn));
+    setSavedOnce(false);
   }
   const [msg, setMsg] = useState('');
+  // Tracks a successful save so the publish guidance below only appears
+  // once there is actually something to publish (not on validation errors).
+  const [savedOnce, setSavedOnce] = useState(false);
 
   if (!hymn) {
     return (
@@ -188,6 +192,7 @@ export default function AdminEditScreen() {
         : {}),
     });
     setMsg(t('admin.saved'));
+    setSavedOnce(true);
   };
 
   return (
@@ -333,6 +338,30 @@ export default function AdminEditScreen() {
           <AppText variant="body" center color={colors.primary} style={{ fontWeight: '700', marginTop: spacing.md }}>
             {msg}
           </AppText>
+        ) : null}
+
+        {savedOnce ? (
+          <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
+            <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
+              {t('admin.publishSteps')}
+            </AppText>
+            <Pressable
+              onPress={() => router.push('/admin')}
+              accessibilityRole="button"
+              accessibilityLabel={t('admin.export')}
+              android_ripple={{ color: colors.border }}
+              style={({ pressed }) => ({
+                paddingVertical: spacing.sm,
+                borderRadius: radius.pill,
+                backgroundColor: colors.accent,
+                alignItems: 'center',
+                opacity: pressed ? 0.75 : 1,
+              })}>
+              <AppText variant="label" color={colors.text} style={{ fontWeight: '700' }}>
+                {t('admin.export')}
+              </AppText>
+            </Pressable>
+          </Card>
         ) : null}
 
         <Pressable

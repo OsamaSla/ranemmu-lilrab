@@ -8,7 +8,7 @@
  * publishes it. The export card below spells out these steps.
  */
 import { useState } from 'react';
-import { Pressable, ScrollView, Share, TextInput, View } from 'react-native';
+import { Platform, Pressable, ScrollView, Share, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
@@ -146,6 +146,29 @@ export default function AdminScreen() {
     });
   };
 
+  // Web has no share sheet for large text: copy the same payload to the
+  // clipboard so it can be pasted into a file on the PC.
+  const doCopy = async () => {
+    const payload = JSON.stringify(
+      { app: 'ranemmu.lilrab', version: 1, exportedAt: new Date().toISOString(), overrides },
+      null,
+      1,
+    );
+    try {
+      const nav = navigator as unknown as { clipboard?: { writeText(text: string): Promise<void> } };
+      if (Platform.OS === 'web' && nav.clipboard) {
+        await nav.clipboard.writeText(payload);
+        setMsg(t('admin.copied'));
+      } else {
+        Share.share({ message: payload }).catch(() => {
+          /* Dismissed share sheet is not an error worth surfacing. */
+        });
+      }
+    } catch {
+      setMsg(t('admin.copyFailed'));
+    }
+  };
+
   const pendingCount = Object.keys(overrides).length;
 
   return (
@@ -260,6 +283,11 @@ export default function AdminScreen() {
                 {t('admin.publishSteps')}
               </AppText>
               {pendingCount > 0 ? button(t('admin.export'), doExport) : null}
+              {pendingCount > 0 && Platform.OS === 'web'
+                ? button(t('admin.copy'), () => {
+                    void doCopy();
+                  })
+                : null}
               {pendingCount > 0 ? button(t('admin.clearSynced'), () => {
                 clearAll();
                 setMsg(t('admin.cleared'));
