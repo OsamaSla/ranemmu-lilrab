@@ -7004,7 +7004,7 @@
   "book": "taranim",
   "number": 1,
   "title": "لنا في كلام الإله الصمد",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -7012,7 +7012,7 @@
   "book": "taranim",
   "number": 2,
   "title": "أنت عظيم البركات",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7020,7 +7020,7 @@
   "book": "taranim",
   "number": 3,
   "title": "للورى خل وحيد",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7028,7 +7028,7 @@
   "book": "taranim",
   "number": 4,
   "title": "ما أمجد الحبيب",
-  "meter": "66.86",
+  "meter": "6.6.8.6",
   "hasChorus": false
  },
  {
@@ -7036,7 +7036,7 @@
   "book": "taranim",
   "number": 5,
   "title": "قوموا نسبح كلنا",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7044,7 +7044,7 @@
   "book": "taranim",
   "number": 6,
   "title": "اذكرو لي اسم يسوع",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7060,7 +7060,7 @@
   "book": "taranim",
   "number": 8,
   "title": "يسوع ربي أحب الخطاه",
-  "meter": "10.10.10.10",
+  "meter": "10",
   "hasChorus": false
  },
  {
@@ -7068,7 +7068,7 @@
   "book": "taranim",
   "number": 9,
   "title": "كنت في سجن الخطايا",
-  "meter": "87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7076,7 +7076,7 @@
   "book": "taranim",
   "number": 10,
   "title": "يا بني الآب السماوي",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7084,7 +7084,7 @@
   "book": "taranim",
   "number": 11,
   "title": "لو لم يحبني المسيح",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7092,7 +7092,7 @@
   "book": "taranim",
   "number": 12,
   "title": "اسم عزيز قد سما",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7100,7 +7100,7 @@
   "book": "taranim",
   "number": 13,
   "title": "اسم يسوع قد حلا",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7108,7 +7108,7 @@
   "book": "taranim",
   "number": 14,
   "title": "علوت جدا أيها الرب الإله",
-  "meter": "12.12.12.12 - 8.8",
+  "meter": "12 - 8",
   "hasChorus": false
  },
  {
@@ -7116,7 +7116,7 @@
   "book": "taranim",
   "number": 15,
   "title": "علمني أنتظرك يا رب",
-  "meter": "99.48.88",
+  "meter": "9.9.4.8.8.8",
   "hasChorus": false
  },
  {
@@ -7124,7 +7124,7 @@
   "book": "taranim",
   "number": 16,
   "title": "المجد للآب الذي",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7132,7 +7132,7 @@
   "book": "taranim",
   "number": 17,
   "title": "أنا لست إلا غريبا هنا",
-  "meter": "11.8.11.8",
+  "meter": "11.8",
   "hasChorus": false
  },
  {
@@ -7140,7 +7140,7 @@
   "book": "taranim",
   "number": 18,
   "title": "مبدع الكون القدير",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7148,7 +7148,7 @@
   "book": "taranim",
   "number": 19,
   "title": "أمجد الآيات غنوا",
-  "meter": "85.85.85.85 – 85.85.55.85",
+  "meter": "8.5 – 8.5.8.5.5.5.8.5",
   "hasChorus": false
  },
  {
@@ -7156,7 +7156,7 @@
   "book": "taranim",
   "number": 20,
   "title": "ما أعجب الفادي",
-  "meter": "66.86",
+  "meter": "6.6.8.6",
   "hasChorus": false
  },
  {
@@ -7164,7 +7164,7 @@
   "book": "taranim",
   "number": 21,
   "title": "أراك بالإيمان",
-  "meter": "664.6664",
+  "meter": "6.6.4.6.6.6.4",
   "hasChorus": false
  },
  {
@@ -7172,7 +7172,7 @@
   "book": "taranim",
   "number": 22,
   "title": "أعد علي حديثا",
-  "meter": "88.88.88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7180,7 +7180,7 @@
   "book": "taranim",
   "number": 23,
   "title": "ليس للحب الذي أظهرت",
-  "meter": "87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7188,7 +7188,7 @@
   "book": "taranim",
   "number": 24,
   "title": "يا نفسي قومي هللي",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7196,7 +7196,7 @@
   "book": "taranim",
   "number": 25,
   "title": "نصيب أهل الدنيا",
-  "meter": "76.76",
+  "meter": "7.6",
   "hasChorus": false
  },
  {
@@ -7204,7 +7204,7 @@
   "book": "taranim",
   "number": 26,
   "title": "هوذا الحبيب وافى",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7212,7 +7212,7 @@
   "book": "taranim",
   "number": 27,
   "title": "يسوع قد أحببتنا",
-  "meter": "86.86-66.66",
+  "meter": "8.6-6",
   "hasChorus": false
  },
  {
@@ -7220,7 +7220,7 @@
   "book": "taranim",
   "number": 28,
   "title": "يسوع ربي موئلي",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7228,7 +7228,7 @@
   "book": "taranim",
   "number": 29,
   "title": "في بيت الآب في العلا",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7236,7 +7236,7 @@
   "book": "taranim",
   "number": 30,
   "title": "يا ترى أي صديق",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7244,7 +7244,7 @@
   "book": "taranim",
   "number": 31,
   "title": "خلني قرب الصليب",
-  "meter": "76.76 - 66.76",
+  "meter": "7.6 - 6.6.7.6",
   "hasChorus": false
  },
  {
@@ -7252,7 +7252,7 @@
   "book": "taranim",
   "number": 32,
   "title": "قف يا جندي جانب الصليب",
-  "meter": "96.99 – 77.78",
+  "meter": "9.6.9.9 – 7.7.7.8",
   "hasChorus": false
  },
  {
@@ -7260,7 +7260,7 @@
   "book": "taranim",
   "number": 33,
   "title": "قابلا حمل صليبي",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7268,7 +7268,7 @@
   "book": "taranim",
   "number": 34,
   "title": "يسوع أنت ربي",
-  "meter": "76.76.76.76",
+  "meter": "7.6",
   "hasChorus": false
  },
  {
@@ -7276,7 +7276,7 @@
   "book": "taranim",
   "number": 35,
   "title": "هوذا يسوع يأتي",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7284,7 +7284,7 @@
   "book": "taranim",
   "number": 36,
   "title": "نفسي اقربي بالشوق من",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7292,7 +7292,7 @@
   "book": "taranim",
   "number": 37,
   "title": "أجهل ما سوف يأتي",
-  "meter": "87.87.87 – 87.87",
+  "meter": "8.7 – 8.7",
   "hasChorus": false
  },
  {
@@ -7316,7 +7316,7 @@
   "book": "taranim",
   "number": 40,
   "title": "ها نحن يا رب الورى",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7324,7 +7324,7 @@
   "book": "taranim",
   "number": 41,
   "title": "نفسي سري باجتماع",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7332,7 +7332,7 @@
   "book": "taranim",
   "number": 42,
   "title": "يا نبع أفراحي الغني",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7340,7 +7340,7 @@
   "book": "taranim",
   "number": 43,
   "title": "أي حمل قد قبلت",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7348,7 +7348,7 @@
   "book": "taranim",
   "number": 44,
   "title": "قد صعد الرب إلى",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7356,7 +7356,7 @@
   "book": "taranim",
   "number": 45,
   "title": "لا يوجد اسم في السما",
-  "meter": "87.87 – 87.87",
+  "meter": "8.7 – 8.7",
   "hasChorus": false
  },
  {
@@ -7364,7 +7364,7 @@
   "book": "taranim",
   "number": 46,
   "title": "يا قوم ذوقوا وانظروا",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7372,7 +7372,7 @@
   "book": "taranim",
   "number": 47,
   "title": "ماذا تروم النفس في",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7380,7 +7380,7 @@
   "book": "taranim",
   "number": 48,
   "title": "الرب راعي فلا يعوزني شيء",
-  "meter": "66.86",
+  "meter": "6.6.8.6",
   "hasChorus": false
  },
  {
@@ -7388,7 +7388,7 @@
   "book": "taranim",
   "number": 49,
   "title": "إلهي أنت سندي",
-  "meter": "86.86.86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7396,7 +7396,7 @@
   "book": "taranim",
   "number": 50,
   "title": "هل قد ذبحت من أجلي",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7404,7 +7404,7 @@
   "book": "taranim",
   "number": 51,
   "title": "من حول مائدتك",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7412,7 +7412,7 @@
   "book": "taranim",
   "number": 52,
   "title": "اسم ربي برجي الحصين",
-  "meter": "55.55.55.55",
+  "meter": "5",
   "hasChorus": false
  },
  {
@@ -7428,7 +7428,7 @@
   "book": "taranim",
   "number": 54,
   "title": "على الإله فاتكل",
-  "meter": "86.86 - 86.86",
+  "meter": "8.6 - 8.6",
   "hasChorus": false
  },
  {
@@ -7436,7 +7436,7 @@
   "book": "taranim",
   "number": 55,
   "title": "قم ونغم يا مرنم",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7444,7 +7444,7 @@
   "book": "taranim",
   "number": 56,
   "title": "لاسمك القدوس نهدي",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7452,7 +7452,7 @@
   "book": "taranim",
   "number": 57,
   "title": "ما أحلى أن تجمعنا",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7460,7 +7460,7 @@
   "book": "taranim",
   "number": 58,
   "title": "من ذا الذي يفصلنا",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7468,7 +7468,7 @@
   "book": "taranim",
   "number": 59,
   "title": "يا أبا الآب إليك",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7476,7 +7476,7 @@
   "book": "taranim",
   "number": 60,
   "title": "يَا أَبَانَا قَدْ قَبِلْتَ",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7484,7 +7484,7 @@
   "book": "taranim",
   "number": 61,
   "title": "أنت يا رب يسوع",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7492,7 +7492,7 @@
   "book": "taranim",
   "number": 62,
   "title": "يا أيها الآب الغني",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7500,7 +7500,7 @@
   "book": "taranim",
   "number": 63,
   "title": "إذ ربنا رأس",
-  "meter": "66.86",
+  "meter": "6.6.8.6",
   "hasChorus": false
  },
  {
@@ -7508,7 +7508,7 @@
   "book": "taranim",
   "number": 64,
   "title": "كلامك أيا رب نوري",
-  "meter": "10.8.10.8 – 10.7",
+  "meter": "10.8 – 10.7",
   "hasChorus": false
  },
  {
@@ -7516,7 +7516,7 @@
   "book": "taranim",
   "number": 65,
   "title": "قومي عروس الرب لا",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7524,7 +7524,7 @@
   "book": "taranim",
   "number": 66,
   "title": "بعد قليل ربنا",
-  "meter": "88.88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7532,7 +7532,7 @@
   "book": "taranim",
   "number": 67,
   "title": "إنما الرب نصيبي",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7540,7 +7540,7 @@
   "book": "taranim",
   "number": 68,
   "title": "حبك اللهم يجعل",
-  "meter": "84.84.88.84",
+  "meter": "8.4.8.4.8.8.8.4",
   "hasChorus": false
  },
  {
@@ -7548,7 +7548,7 @@
   "book": "taranim",
   "number": 69,
   "title": "حبذا راع عظيم",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -7556,7 +7556,7 @@
   "book": "taranim",
   "number": 70,
   "title": "إنما للرب نحن",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7564,7 +7564,7 @@
   "book": "taranim",
   "number": 71,
   "title": "أنت يا ابن الله ربنا",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7572,7 +7572,7 @@
   "book": "taranim",
   "number": 72,
   "title": "باسمك يا رب لنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7580,7 +7580,7 @@
   "book": "taranim",
   "number": 73,
   "title": "ربنا يسوع أنت",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7588,7 +7588,7 @@
   "book": "taranim",
   "number": 74,
   "title": "قام حقا قام رئيس السلام",
-  "meter": "11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -7596,7 +7596,7 @@
   "book": "taranim",
   "number": 75,
   "title": "هلم نشد لاسم من",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7604,7 +7604,7 @@
   "book": "taranim",
   "number": 76,
   "title": "طوبى لمن قد آمنوا",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7612,7 +7612,7 @@
   "book": "taranim",
   "number": 77,
   "title": "أمشي في النور كل الحياة",
-  "meter": "10.9.10.9 – 10.9.9.9",
+  "meter": "10.9 – 10.9.9.9",
   "hasChorus": false
  },
  {
@@ -7620,7 +7620,7 @@
   "book": "taranim",
   "number": 78,
   "title": "يا رب من يروي ظما",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7628,7 +7628,7 @@
   "book": "taranim",
   "number": 79,
   "title": "أبانا أنت المصدر",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7636,7 +7636,7 @@
   "book": "taranim",
   "number": 80,
   "title": "لا اسم يحلو ذكره",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -7644,7 +7644,7 @@
   "book": "taranim",
   "number": 81,
   "title": "يا بهاء المجد رسم الجوهر",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -7652,7 +7652,7 @@
   "book": "taranim",
   "number": 82,
   "title": "يا من بحضوره نفسي تطيب",
-  "meter": "11.8.11.8",
+  "meter": "11.8",
   "hasChorus": false
  },
  {
@@ -7660,7 +7660,7 @@
   "book": "taranim",
   "number": 83,
   "title": "هيا نشد بسنا",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -7668,7 +7668,7 @@
   "book": "taranim",
   "number": 84,
   "title": "مبارك إلهنا إذ في ابنك باركتنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7676,7 +7676,7 @@
   "book": "taranim",
   "number": 85,
   "title": "لك يا رب الثنا",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -7684,7 +7684,7 @@
   "book": "taranim",
   "number": 86,
   "title": "هل ليسوع من مثيل",
-  "meter": "86.86 – 66.66",
+  "meter": "8.6 – 6",
   "hasChorus": false
  },
  {
@@ -7692,7 +7692,7 @@
   "book": "taranim",
   "number": 87,
   "title": "كلمة الله غدا",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -7700,7 +7700,7 @@
   "book": "taranim",
   "number": 88,
   "title": "ربنا أظهرت حبا",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7708,7 +7708,7 @@
   "book": "taranim",
   "number": 89,
   "title": "يسوع أعجب باسمه",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7716,7 +7716,7 @@
   "book": "taranim",
   "number": 90,
   "title": "لك السجود والثنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7724,7 +7724,7 @@
   "book": "taranim",
   "number": 91,
   "title": "يهوه يسوع ربنا قد كنت من قبل الجبال",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7732,7 +7732,7 @@
   "book": "taranim",
   "number": 92,
   "title": "يا سيدي أحببتني",
-  "meter": "86.86.88.86",
+  "meter": "8.6.8.6.8.8.8.6",
   "hasChorus": false
  },
  {
@@ -7740,7 +7740,7 @@
   "book": "taranim",
   "number": 93,
   "title": "اختبرتني إلهي وعرفت داخلي",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7748,7 +7748,7 @@
   "book": "taranim",
   "number": 94,
   "title": "قدموا للرب سبحا وسجودا قد وجب",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7756,7 +7756,7 @@
   "book": "taranim",
   "number": 95,
   "title": "بحبك السامي لقد نزلت من أعلى السما",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7764,7 +7764,7 @@
   "book": "taranim",
   "number": 96,
   "title": "هللويا ربنا قد فدانا للأبد",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -7772,7 +7772,7 @@
   "book": "taranim",
   "number": 97,
   "title": "سر عظيم قد بدا الله جاء في الجسد",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7780,7 +7780,7 @@
   "book": "taranim",
   "number": 98,
   "title": "نحن قديسيك طرا بانتظار فتعال",
-  "meter": "87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7788,7 +7788,7 @@
   "book": "taranim",
   "number": 99,
   "title": "نرى عجبا أن الكلمه صار جسدا هللويا",
-  "meter": "55.54",
+  "meter": "5.5.5.4",
   "hasChorus": false
  },
  {
@@ -7796,7 +7796,7 @@
   "book": "taranim",
   "number": 100,
   "title": "ما أعجب حب العلي",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7804,7 +7804,7 @@
   "book": "taranim",
   "number": 101,
   "title": "الله قوة لنا وحمانا الوطيد",
-  "meter": "87.87 – 76.75",
+  "meter": "8.7 – 7.6.7.5",
   "hasChorus": false
  },
  {
@@ -7812,7 +7812,7 @@
   "book": "taranim",
   "number": 102,
   "title": "يا نفس ماذا لي هنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7820,7 +7820,7 @@
   "book": "taranim",
   "number": 103,
   "title": "جمال ربنا البهي أبرع من بني البشر",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7828,7 +7828,7 @@
   "book": "taranim",
   "number": 104,
   "title": "يسوع ربي أحمد ولاسمه أسبح",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7836,7 +7836,7 @@
   "book": "taranim",
   "number": 105,
   "title": "هلم نهد سبحنا لاسم المسيح ربنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7844,7 +7844,7 @@
   "book": "taranim",
   "number": 106,
   "title": "يا أيها الراعي العظيم",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7852,7 +7852,7 @@
   "book": "taranim",
   "number": 107,
   "title": "إله كل نعمة نشكر كل حين",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7860,7 +7860,7 @@
   "book": "taranim",
   "number": 108,
   "title": "يا رب إنني غريب",
-  "meter": "97.87 – 98.98",
+  "meter": "9.7.8.7 – 9.8",
   "hasChorus": false
  },
  {
@@ -7875,7 +7875,7 @@
   "book": "taranim",
   "number": 110,
   "title": "هل لقاء نحظى فيه",
-  "meter": "87.89 – 87.89",
+  "meter": "8.7.8.9 – 8.7.8.9",
   "hasChorus": false
  },
  {
@@ -7883,7 +7883,7 @@
   "book": "taranim",
   "number": 111,
   "title": "ما دمنا هنا في العبور",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7891,7 +7891,7 @@
   "book": "taranim",
   "number": 112,
   "title": "أنت فادينا الأمين حبك للمنتهى",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -7899,7 +7899,7 @@
   "book": "taranim",
   "number": 113,
   "title": "أنجز يا ربي قصدك بي",
-  "meter": "99.99",
+  "meter": "9",
   "hasChorus": false
  },
  {
@@ -7907,7 +7907,7 @@
   "book": "taranim",
   "number": 114,
   "title": "ما أعجب الحب الذي أظهرت يا يسوع",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7915,7 +7915,7 @@
   "book": "taranim",
   "number": 115,
   "title": "حولك نحن نجتمع يا ربنا الحبيب",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7923,7 +7923,7 @@
   "book": "taranim",
   "number": 116,
   "title": "يا نفسي دوما باركي إلهنا العظيم",
-  "meter": "86.86 – 66.66",
+  "meter": "8.6 – 6",
   "hasChorus": false
  },
  {
@@ -7931,7 +7931,7 @@
   "book": "taranim",
   "number": 117,
   "title": "طبت نفسا يا يسوع مذ تعرفت بك",
-  "meter": "87.85",
+  "meter": "8.7.8.5",
   "hasChorus": false
  },
  {
@@ -7939,7 +7939,7 @@
   "book": "taranim",
   "number": 118,
   "title": "أي بهجة لنا وسرور وعزا",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -7947,7 +7947,7 @@
   "book": "taranim",
   "number": 119,
   "title": "هللويا الرب قام بعد إكمال العمل",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -7955,7 +7955,7 @@
   "book": "taranim",
   "number": 120,
   "title": "الرب راعينا الأمين وقلبه رقيق",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7963,7 +7963,7 @@
   "book": "taranim",
   "number": 121,
   "title": "يسوع وحده حوى جميع أوصاف الكمال",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -7971,7 +7971,7 @@
   "book": "taranim",
   "number": 122,
   "title": "باسمك نحن نجتمع يا رأسنا الوحيد",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7979,7 +7979,7 @@
   "book": "taranim",
   "number": 123,
   "title": "أشتاق أن أقترب لسيدي القدير",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -7987,7 +7987,7 @@
   "book": "taranim",
   "number": 124,
   "title": "هل كل ذا عني أنا",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -7995,7 +7995,7 @@
   "book": "taranim",
   "number": 125,
   "title": "سوف يمسح ربي الدموع",
-  "meter": "99.79 - 889",
+  "meter": "9.9.7.9 - 8.8.9",
   "hasChorus": false
  },
  {
@@ -8003,7 +8003,7 @@
   "book": "taranim",
   "number": 126,
   "title": "يرعاني راعي الأمين بالحب واليد اليمين",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -8011,7 +8011,7 @@
   "book": "taranim",
   "number": 127,
   "title": "أيها الآب المبارك مصدر الحب العجيب",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8019,7 +8019,7 @@
   "book": "taranim",
   "number": 128,
   "title": "إذ ننظر إليك في المجد الرفيع",
-  "meter": "12.12.12.12",
+  "meter": "12",
   "hasChorus": false
  },
  {
@@ -8027,7 +8027,7 @@
   "book": "taranim",
   "number": 129,
   "title": "قد بدا أمر عجيب بتجسد الإله",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8035,7 +8035,7 @@
   "book": "taranim",
   "number": 130,
   "title": "الرب ذو المجد الرفيع",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8043,7 +8043,7 @@
   "book": "taranim",
   "number": 131,
   "title": "ما أعجب اتضاعك يا ربنا المجيد",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8051,7 +8051,7 @@
   "book": "taranim",
   "number": 132,
   "title": "بحبه يسوع قد أنقذني",
-  "meter": "12.12.12.12 – 9.9.9.10",
+  "meter": "12 – 9.9.9.10",
   "hasChorus": false
  },
  {
@@ -8059,7 +8059,7 @@
   "book": "taranim",
   "number": 133,
   "title": "يا مليك المجد في ملء الزمان",
-  "meter": "11.11.11.11.11 – 12.12.12.12.11",
+  "meter": "11 – 12.12.12.12.11",
   "hasChorus": false
  },
  {
@@ -8067,7 +8067,7 @@
   "book": "taranim",
   "number": 134,
   "title": "أتوق للمستك الشافيه",
-  "meter": "11.11.11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -8075,7 +8075,7 @@
   "book": "taranim",
   "number": 135,
   "title": "هل دمك الزكي أريق عن ذنبي",
-  "meter": "66.66 - 8",
+  "meter": "6 - 8",
   "hasChorus": false
  },
  {
@@ -8083,7 +8083,7 @@
   "book": "taranim",
   "number": 136,
   "title": "يا وحيد الآب حقا أنت جئت من علاك",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8091,7 +8091,7 @@
   "book": "taranim",
   "number": 137,
   "title": "في نعمة الآب الغني نفتخر ونستريح",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8099,7 +8099,7 @@
   "book": "taranim",
   "number": 138,
   "title": "الرب هو عزنا فبه نشبع",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8107,7 +8107,7 @@
   "book": "taranim",
   "number": 139,
   "title": "هَا قَدْ دَنَا يَوْمُ اللِّقَا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8115,7 +8115,7 @@
   "book": "taranim",
   "number": 140,
   "title": "أنت يسوع ذو الجلال ومنك نرتجي النجاه",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8123,7 +8123,7 @@
   "book": "taranim",
   "number": 141,
   "title": "لنا السلام والثبات في الرب كل حين",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8131,7 +8131,7 @@
   "book": "taranim",
   "number": 142,
   "title": "الآن ربنا القدير أمامنا يسير",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8139,7 +8139,7 @@
   "book": "taranim",
   "number": 143,
   "title": "باسم المسيح نجتمع فإنه الفادي العظيم",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8147,7 +8147,7 @@
   "book": "taranim",
   "number": 144,
   "title": "الآن نحن نفرح بالرب رئيس الرعاه",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8155,7 +8155,7 @@
   "book": "taranim",
   "number": 145,
   "title": "شخصه طبيب نفسي صوته أيضا علاج",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8163,7 +8163,7 @@
   "book": "taranim",
   "number": 146,
   "title": "حدثوني عن يسوع",
-  "meter": "88.88.8",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8171,7 +8171,7 @@
   "book": "taranim",
   "number": 147,
   "title": "إن قوتي كلما نفسي تجوع",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -8179,7 +8179,7 @@
   "book": "taranim",
   "number": 148,
   "title": "محبه الابن الحبيب بدت في منظر غريب",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8187,7 +8187,7 @@
   "book": "taranim",
   "number": 149,
   "title": "يا حمل الله يسوع بالروح نجثو بالخشوع",
-  "meter": "88.88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8195,7 +8195,7 @@
   "book": "taranim",
   "number": 150,
   "title": "شهادتي أذيع بين الجموع",
-  "meter": "64.64.88.86",
+  "meter": "6.4.6.4.8.8.8.6",
   "hasChorus": false
  },
  {
@@ -8203,7 +8203,7 @@
   "book": "taranim",
   "number": 151,
   "title": "مَنْ يَطْلُبِ الرَّبَّ يَجِد",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8211,7 +8211,7 @@
   "book": "taranim",
   "number": 152,
   "title": "أبانا من حول المسيح في وحدة تجمعنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8219,7 +8219,7 @@
   "book": "taranim",
   "number": 153,
   "title": "نحن بنو الآب الرحيم وكلنا إخوان",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8227,7 +8227,7 @@
   "book": "taranim",
   "number": 154,
   "title": "علق الفادي على عود صلب وأهين",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -8235,7 +8235,7 @@
   "book": "taranim",
   "number": 155,
   "title": "احفظ حياتي ليكون تكريسها يا رب لك",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8243,7 +8243,7 @@
   "book": "taranim",
   "number": 156,
   "title": "في سيرك في ذي الحياه سوف تراك الجموع",
-  "meter": "87.88 – 8.8.11.8",
+  "meter": "8.7.8.8 – 8.8.11.8",
   "hasChorus": false
  },
  {
@@ -8251,7 +8251,7 @@
   "book": "taranim",
   "number": 157,
   "title": "ربي في حضنك روحي تستريح تهدأ",
-  "meter": "15.11.15.11 – 8.8.8.11",
+  "meter": "15.11 – 8.8.8.11",
   "hasChorus": false
  },
  {
@@ -8259,7 +8259,7 @@
   "book": "taranim",
   "number": 158,
   "title": "الرب قسمتي حظي ومنيتي",
-  "meter": "66.77.6 – 46.46",
+  "meter": "6.6.7.7.6 – 4.6",
   "hasChorus": false
  },
  {
@@ -8267,7 +8267,7 @@
   "book": "taranim",
   "number": 159,
   "title": "سار ربنا الغني في اتضاع بعد مجد",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -8275,7 +8275,7 @@
   "book": "taranim",
   "number": 160,
   "title": "يا ربنا اجتماعنا باسمك وارتباطنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8283,7 +8283,7 @@
   "book": "taranim",
   "number": 161,
   "title": "يا رب نرفع لك كل سجود ومديح",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8291,7 +8291,7 @@
   "book": "taranim",
   "number": 162,
   "title": "سيدي نفسي لديك عند موطئ قدميك",
-  "meter": "77.77 – 77.77",
+  "meter": "7 – 7",
   "hasChorus": false
  },
  {
@@ -8299,7 +8299,7 @@
   "book": "taranim",
   "number": 163,
   "title": "سر التقى سر عظيم الله بان في الجسد",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8307,7 +8307,7 @@
   "book": "taranim",
   "number": 164,
   "title": "عجيج عدل الله قد أسكته إلى الأبد",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8315,7 +8315,7 @@
   "book": "taranim",
   "number": 165,
   "title": "الله قد خلصتنا ودعوة دعوتنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8323,7 +8323,7 @@
   "book": "taranim",
   "number": 166,
   "title": "لك المجد للأبد يا يسوع ربنا",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -8331,7 +8331,7 @@
   "book": "taranim",
   "number": 167,
   "title": "من يزرع بالبركات بالبركات يحصد",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8339,7 +8339,7 @@
   "book": "taranim",
   "number": 168,
   "title": "يا رأسنا الغالي لقد زاد الحنين",
-  "meter": "12.12.12.12 – 12.12.12.12.12.12",
+  "meter": "12 – 12",
   "hasChorus": false
  },
  {
@@ -8347,7 +8347,7 @@
   "book": "taranim",
   "number": 169,
   "title": "محبة الآب سمت يا رب من يدركها",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8355,7 +8355,7 @@
   "book": "taranim",
   "number": 170,
   "title": "أيها الآب المبارك احفظنا سائرين",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8363,7 +8363,7 @@
   "book": "taranim",
   "number": 171,
   "title": "مخلصي بالنعمة وهبتني اليقين",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8371,7 +8371,7 @@
   "book": "taranim",
   "number": 172,
   "title": "تحت ظلك حبيبي أشتهي أن أجلس",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8379,7 +8379,7 @@
   "book": "taranim",
   "number": 173,
   "title": "هوذا قد صار ليل",
-  "meter": "87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8387,7 +8387,7 @@
   "book": "taranim",
   "number": 174,
   "title": "ما أخلى ساعات بها يجمعنا الروح معا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8395,7 +8395,7 @@
   "book": "taranim",
   "number": 175,
   "title": "هيا مؤمنون هيا مؤمنات",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -8403,7 +8403,7 @@
   "book": "taranim",
   "number": 176,
   "title": "أرضى بمرأى محيا مفتدي البشر",
-  "meter": "14.14",
+  "meter": "14",
   "hasChorus": false
  },
  {
@@ -8411,7 +8411,7 @@
   "book": "taranim",
   "number": 177,
   "title": "يا لسعدي عندما بالروح أشدو رافعا",
-  "meter": "15.11.15.11 – 8.8.8.11",
+  "meter": "15.11 – 8.8.8.11",
   "hasChorus": false
  },
  {
@@ -8419,7 +8419,7 @@
   "book": "taranim",
   "number": 178,
   "title": "يا يسوع كوكب الصبح المنير",
-  "meter": "11.11.11.11.11 – 12.12.12.12.11",
+  "meter": "11 – 12.12.12.12.11",
   "hasChorus": false
  },
  {
@@ -8427,7 +8427,7 @@
   "book": "taranim",
   "number": 179,
   "title": "من يصلي مؤمنا بيسوع لا يخيب",
-  "meter": "77.77 – 77.77",
+  "meter": "7 – 7",
   "hasChorus": false
  },
  {
@@ -8435,7 +8435,7 @@
   "book": "taranim",
   "number": 180,
   "title": "بذكرك نتغذى معا يا أيها المخلص المعبود",
-  "meter": "11.11.11.11 – 11.11",
+  "meter": "11 – 11",
   "hasChorus": false
  },
  {
@@ -8443,7 +8443,7 @@
   "book": "taranim",
   "number": 181,
   "title": "بِذِكْرِكَ نَتَغَذَّى مَعًا",
-  "meter": "10.10.10.10",
+  "meter": "10",
   "hasChorus": false
  },
  {
@@ -8451,7 +8451,7 @@
   "book": "taranim",
   "number": 182,
   "title": "باسمك يا رب تجمعنا حول شخصك بالحب النقي",
-  "meter": "10.10.10.10",
+  "meter": "10",
   "hasChorus": false
  },
  {
@@ -8459,7 +8459,7 @@
   "book": "taranim",
   "number": 183,
   "title": "يا رب ما أحلى الحياة قربك",
-  "meter": "12.12.12.12 – 12.12.12.12.12",
+  "meter": "12 – 12",
   "hasChorus": false
  },
  {
@@ -8467,7 +8467,7 @@
   "book": "taranim",
   "number": 184,
   "title": "اسم يسوع قد سما وقد علا وفاق",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8475,7 +8475,7 @@
   "book": "taranim",
   "number": 185,
   "title": "باسمك يا رب ندعو أيها الابن الحبيب",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8483,7 +8483,7 @@
   "book": "taranim",
   "number": 186,
   "title": "يا للصباح المنتظر إذ يقدم الرب المجيد",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8491,7 +8491,7 @@
   "book": "taranim",
   "number": 187,
   "title": "إن حل في القلب السرور قوموا احمدوا ورنموا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8499,7 +8499,7 @@
   "book": "taranim",
   "number": 188,
   "title": "سراج منير لنا في السبيل",
-  "meter": "11.8.11.8",
+  "meter": "11.8",
   "hasChorus": false
  },
  {
@@ -8507,7 +8507,7 @@
   "book": "taranim",
   "number": 189,
   "title": "سائل نعماك يلقى يا أبا الرأفه",
-  "meter": "85.85 – 85.85",
+  "meter": "8.5 – 8.5",
   "hasChorus": false
  },
  {
@@ -8515,7 +8515,7 @@
   "book": "taranim",
   "number": 190,
   "title": "محبة الله سمت ما قاسها عقل فطين",
-  "meter": "88.88.86.86 – 86.86",
+  "meter": "8.8.8.8.8.6.8.6 – 8.6",
   "hasChorus": false
  },
  {
@@ -8523,7 +8523,7 @@
   "book": "taranim",
   "number": 191,
   "title": "أيها الرب يسوع أنت نبع كل حب",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8531,7 +8531,7 @@
   "book": "taranim",
   "number": 192,
   "title": "ما أبهى أن نجتمع حول الحبيب للمديح",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -8539,7 +8539,7 @@
   "book": "taranim",
   "number": 193,
   "title": "مذ ربي قد أكرمني بنظرة لي باسما",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -8547,7 +8547,7 @@
   "book": "taranim",
   "number": 194,
   "title": "معشر الكرام هلم بنا لرب الأنام نهد سبحنا",
-  "meter": "65.65.65.65",
+  "meter": "6.5",
   "hasChorus": false
  },
  {
@@ -8555,7 +8555,7 @@
   "book": "taranim",
   "number": 195,
   "title": "معشر الأبطال قد آن الزمان ارفعوا في الحال راية الإيمان",
-  "meter": "65.65.65.65",
+  "meter": "6.5",
   "hasChorus": false
  },
  {
@@ -8563,7 +8563,7 @@
   "book": "taranim",
   "number": 196,
   "title": "لا تذكروا لي من الدنيا أمرا أقوم له سعيا",
-  "meter": "99.95 – 10.9.5",
+  "meter": "9.9.9.5 – 10.9.5",
   "hasChorus": false
  },
  {
@@ -8571,7 +8571,7 @@
   "book": "taranim",
   "number": 197,
   "title": "سيدي استلم حياتي كرسنها لك",
-  "meter": "15.11.15.11 – 8.8.8.11",
+  "meter": "15.11 – 8.8.8.11",
   "hasChorus": false
  },
  {
@@ -8579,7 +8579,7 @@
   "book": "taranim",
   "number": 198,
   "title": "ما أبهى أن نجتمع إلى اسم فادينا المسيح",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8587,7 +8587,7 @@
   "book": "taranim",
   "number": 199,
   "title": "إليك نهدي سبحنا يا أيها الفادي الكريم",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8595,7 +8595,7 @@
   "book": "taranim",
   "number": 200,
   "title": "قد سفك الدم الزكي من حمل الله الكريم",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8603,7 +8603,7 @@
   "book": "taranim",
   "number": 201,
   "title": "يا خالق الملا يا ساكن العلا",
-  "meter": "66.66.66.66",
+  "meter": "6",
   "hasChorus": false
  },
  {
@@ -8611,7 +8611,7 @@
   "book": "taranim",
   "number": 202,
   "title": "هَلُمَّ ارْفَعُوا الأَعْلاَمَ وَانْشَطُوا",
-  "meter": "11.5.11.5 – 7.7.11.11.7.11",
+  "meter": "11.5 – 7.7.11.11.7.11",
   "hasChorus": false
  },
  {
@@ -8619,7 +8619,7 @@
   "book": "taranim",
   "number": 203,
   "title": "من أنا يا رب حتى تحملن عني الصليب",
-  "meter": "15.15.15.15 – 14.14.14.14",
+  "meter": "15 – 14",
   "hasChorus": false
  },
  {
@@ -8627,7 +8627,7 @@
   "book": "taranim",
   "number": 204,
   "title": "يا عجبا مخلصي قد مات من أجلي",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8635,7 +8635,7 @@
   "book": "taranim",
   "number": 205,
   "title": "قصد التجسد العظيم حسب مشورات الأزل",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8643,7 +8643,7 @@
   "book": "taranim",
   "number": 206,
   "title": "يا صخرة الدهور قد ضربت من أجلي",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8651,7 +8651,7 @@
   "book": "taranim",
   "number": 207,
   "title": "ما ألذ الاتكال على سيدي المسيح",
-  "meter": "87.87 – 87.87",
+  "meter": "8.7 – 8.7",
   "hasChorus": false
  },
  {
@@ -8659,7 +8659,7 @@
   "book": "taranim",
   "number": 208,
   "title": "يَسُوعُ رَبِّي رَاعِيَّ",
-  "meter": "88.88.88.55",
+  "meter": "8.8.8.8.8.8.5.5",
   "hasChorus": false
  },
  {
@@ -8667,7 +8667,7 @@
   "book": "taranim",
   "number": 209,
   "title": "على صليب الجلجثه كل قصاصنا احتمل",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8683,7 +8683,7 @@
   "book": "taranim",
   "number": 211,
   "title": "لي مقام بهيج سما",
-  "meter": "99.99 – 69.69",
+  "meter": "9 – 6.9",
   "hasChorus": false
  },
  {
@@ -8691,7 +8691,7 @@
   "book": "taranim",
   "number": 212,
   "title": "الله حب فالسما والأرض تبدي حبه",
-  "meter": "88.88 - 88",
+  "meter": "8 - 8",
   "hasChorus": false
  },
  {
@@ -8699,7 +8699,7 @@
   "book": "taranim",
   "number": 213,
   "title": "إن قلبي ليس يهوى غير فادي الحبيب",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8707,7 +8707,7 @@
   "book": "taranim",
   "number": 214,
   "title": "يا إلهي أنت تعلم ضعف نفسي كم يكون",
-  "meter": "87.87 – 87.87",
+  "meter": "8.7 – 8.7",
   "hasChorus": false
  },
  {
@@ -8715,7 +8715,7 @@
   "book": "taranim",
   "number": 215,
   "title": "قد فديتني وامتلكتني يا مخلصي المجيد",
-  "meter": "10.7.10.7 - 9.7.10.7",
+  "meter": "10.7 - 9.7.10.7",
   "hasChorus": false
  },
  {
@@ -8723,7 +8723,7 @@
   "book": "taranim",
   "number": 216,
   "title": "أنت ابتهاجي منيتي قصدي",
-  "meter": "10.10.10.12 – 12.12",
+  "meter": "10.10.10.12 – 12",
   "hasChorus": false
  },
  {
@@ -8739,7 +8739,7 @@
   "book": "taranim",
   "number": 218,
   "title": "لله نفسي انتظري من عنده رجاي",
-  "meter": "86.86 – 66.66",
+  "meter": "8.6 – 6",
   "hasChorus": false
  },
  {
@@ -8747,7 +8747,7 @@
   "book": "taranim",
   "number": 219,
   "title": "لا بد أن يجيء من مات عن الأنام",
-  "meter": "86.86 – 66.66",
+  "meter": "8.6 – 6",
   "hasChorus": false
  },
  {
@@ -8755,7 +8755,7 @@
   "book": "taranim",
   "number": 220,
   "title": "بلطفه ناداني مخلصي الحبيب",
-  "meter": "76.76.88 – 66.99",
+  "meter": "7.6.7.6.8.8 – 6.6.9.9",
   "hasChorus": false
  },
  {
@@ -8771,7 +8771,7 @@
   "book": "taranim",
   "number": 222,
   "title": "أقبل لمفتدي الأنام يا عسكر الرب",
-  "meter": "86.86 – 66.66.66.6.67.66.6",
+  "meter": "8.6 – 6.6.6.6.6.6.6.6.7.6.6.6",
   "hasChorus": false
  },
  {
@@ -8779,7 +8779,7 @@
   "book": "taranim",
   "number": 223,
   "title": "أبانا حبك الصريح جمعنا حول المسيح",
-  "meter": "88.88.5 – 88.88.5",
+  "meter": "8.8.8.8.5 – 8.8.8.8.5",
   "hasChorus": false
  },
  {
@@ -8787,7 +8787,7 @@
   "book": "taranim",
   "number": 224,
   "title": "ما أحلى فادي الكريم",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8795,7 +8795,7 @@
   "book": "taranim",
   "number": 225,
   "title": "ما أعظم الحب السني",
-  "meter": "88.88 – 88.88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -8803,7 +8803,7 @@
   "book": "taranim",
   "number": 226,
   "title": "ربنا يسوع نهدي لاسمك السامي العجيب",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -8811,7 +8811,7 @@
   "book": "taranim",
   "number": 227,
   "title": "لا بد يوما تنتهي في ذي الديار غربتي",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -8819,7 +8819,7 @@
   "book": "taranim",
   "number": 228,
   "title": "يا ربنا يسوع حبيبنا الأمين",
-  "meter": "76.76.76.76 – 77.76",
+  "meter": "7.6 – 7.7.7.6",
   "hasChorus": false
  },
  {
@@ -8827,7 +8827,7 @@
   "book": "taranim",
   "number": 229,
   "title": "من يعيش بستر القدير",
-  "meter": "99.99 – 69.69",
+  "meter": "9 – 6.9",
   "hasChorus": false
  },
  {
@@ -8835,7 +8835,7 @@
   "book": "taranim",
   "number": 230,
   "title": "حبيبي فتى مثل أرز لبنان",
-  "meter": "11.8.11.8",
+  "meter": "11.8",
   "hasChorus": false
  },
  {
@@ -8843,7 +8843,7 @@
   "book": "taranim",
   "number": 231,
   "title": "ما أبهج اليوم الذي",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -8851,7 +8851,7 @@
   "book": "taranim",
   "number": 232,
   "title": "رجاء نفسي وحده دم يسوع واسمه",
-  "meter": "88.88 - 88",
+  "meter": "8 - 8",
   "hasChorus": false
  },
  {
@@ -8859,7 +8859,7 @@
   "book": "taranim",
   "number": 233,
   "title": "نفسي اسهري وواظبي دوما على الصلاه",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8867,7 +8867,7 @@
   "book": "taranim",
   "number": 234,
   "title": "عما قريب يدوي بوق ويهتف جند السماء",
-  "meter": "98.98 – 98.98",
+  "meter": "9.8 – 9.8",
   "hasChorus": false
  },
  {
@@ -8875,7 +8875,7 @@
   "book": "taranim",
   "number": 235,
   "title": "اهد نفسي يا يسوع عابرا وادي الدموع",
-  "meter": "77.77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -8883,7 +8883,7 @@
   "book": "taranim",
   "number": 236,
   "title": "طوبى لمن قد غفرت لهم ذنوبهم",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8891,7 +8891,7 @@
   "book": "taranim",
   "number": 237,
   "title": "حين أرى صليب من قضى فحاز الانتصار",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8899,7 +8899,7 @@
   "book": "taranim",
   "number": 238,
   "title": "إلهنا وربنا في ابنك قد أحببتنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8907,7 +8907,7 @@
   "book": "taranim",
   "number": 239,
   "title": "بشرى لنا بشرى لنا فالله قد أحبنا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8915,7 +8915,7 @@
   "book": "taranim",
   "number": 240,
   "title": "قد ناب عنا ربنا للموت كالحمل",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8923,7 +8923,7 @@
   "book": "taranim",
   "number": 241,
   "title": "صوت يسوع الحلو قد سمعت قائلا",
-  "meter": "14.14.14.14",
+  "meter": "14",
   "hasChorus": false
  },
  {
@@ -8931,7 +8931,7 @@
   "book": "taranim",
   "number": 242,
   "title": "الله قد أقامنا إذ كنا أمواتا خطاه",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -8939,7 +8939,7 @@
   "book": "taranim",
   "number": 243,
   "title": "إن خصم النفس يشهر صارم القتال",
-  "meter": "85.85 – 85.85",
+  "meter": "8.5 – 8.5",
   "hasChorus": false
  },
  {
@@ -8947,7 +8947,7 @@
   "book": "taranim",
   "number": 244,
   "title": "يا يسوع من سبيلي للعلى إلى ضياك",
-  "meter": "87.87.87.87 – 10.7.7.7.7.7",
+  "meter": "8.7 – 10.7.7.7.7.7",
   "hasChorus": false
  },
  {
@@ -8955,7 +8955,7 @@
   "book": "taranim",
   "number": 245,
   "title": "بم يزكي طرقه ويستنير الشاب",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8963,7 +8963,7 @@
   "book": "taranim",
   "number": 246,
   "title": "إني أحب الرب لا لأربح النعيم",
-  "meter": "86.86.86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -8971,7 +8971,7 @@
   "book": "taranim",
   "number": 247,
   "title": "في وسط أشواك البلا تنزف رجلاي دما",
-  "meter": "88.86 – 66.86",
+  "meter": "8.8.8.6 – 6.6.8.6",
   "hasChorus": false
  },
  {
@@ -8979,7 +8979,7 @@
   "book": "taranim",
   "number": 248,
   "title": "ألق على الرب همك فهو يعولك",
-  "meter": "87 – 87.87.87.87",
+  "meter": "8.7 – 8.7",
   "hasChorus": false
  },
  {
@@ -8987,7 +8987,7 @@
   "book": "taranim",
   "number": 249,
   "title": "رواية الحب حب الفادي العجيب",
-  "meter": "66.66.88.86 - 96",
+  "meter": "6.6.6.6.8.8.8.6 - 9.6",
   "hasChorus": false
  },
  {
@@ -8995,7 +8995,7 @@
   "book": "taranim",
   "number": 250,
   "title": "أبانا نحن في ابنك نقدم الحمد لك",
-  "meter": "88.88 - 88",
+  "meter": "8 - 8",
   "hasChorus": false
  },
  {
@@ -9003,7 +9003,7 @@
   "book": "taranim",
   "number": 251,
   "title": "يا نفسي دوما باركي اسم ربي",
-  "meter": "11.10.11.10 – 7.10.11",
+  "meter": "11.10 – 7.10.11",
   "hasChorus": false
  },
  {
@@ -9011,7 +9011,7 @@
   "book": "taranim",
   "number": 252,
   "title": "أحيا لربي حياة الوفاء",
-  "meter": "10.10.10.10 – 76.76.76.86",
+  "meter": "10 – 7.6.7.6.7.6.8.6",
   "hasChorus": false
  },
  {
@@ -9019,7 +9019,7 @@
   "book": "taranim",
   "number": 253,
   "title": "إذ لا أرى وجه الحبيب فالنور عندي كالظلام",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9027,7 +9027,7 @@
   "book": "taranim",
   "number": 254,
   "title": "إذا بحر هذي الحياة اضطرب",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -9035,7 +9035,7 @@
   "book": "taranim",
   "number": 255,
   "title": "يا سيدي حين أرى نجومك",
-  "meter": "11.10.11.10 – 10.8.10.8",
+  "meter": "11.10 – 10.8",
   "hasChorus": false
  },
  {
@@ -9043,7 +9043,7 @@
   "book": "taranim",
   "number": 256,
   "title": "خذ بيدي وقدني كما تشاء",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -9051,7 +9051,7 @@
   "book": "taranim",
   "number": 257,
   "title": "يا جميع من فديتم رنموا",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -9059,7 +9059,7 @@
   "book": "taranim",
   "number": 258,
   "title": "أهدي إلى ربي يسوع شكري وحمدي في خشوع",
-  "meter": "88.88.88.88 – 66.86",
+  "meter": "8 – 6.6.8.6",
   "hasChorus": false
  },
  {
@@ -9067,7 +9067,7 @@
   "book": "taranim",
   "number": 259,
   "title": "إن اشتياق القلب زاد وكثر الحنين",
-  "meter": "86.96 – 6.7.7.4.10.10.9",
+  "meter": "8.6.9.6 – 6.7.7.4.10.10.9",
   "hasChorus": false
  },
  {
@@ -9075,7 +9075,7 @@
   "book": "taranim",
   "number": 260,
   "title": "أتيت للفادي مقيدا كسير",
-  "meter": "66.66 – 66.76",
+  "meter": "6 – 6.6.7.6",
   "hasChorus": false
  },
  {
@@ -9083,7 +9083,7 @@
   "book": "taranim",
   "number": 261,
   "title": "لاسم ربنا يسوع رنموا يا مؤمنين",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9091,7 +9091,7 @@
   "book": "taranim",
   "number": 262,
   "title": "يا حمل الله الكريم نجثو لشخصك العظيم",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9107,7 +9107,7 @@
   "book": "taranim",
   "number": 264,
   "title": "لسنا من ظلام أو ليل ديجور",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -9115,7 +9115,7 @@
   "book": "taranim",
   "number": 265,
   "title": "لست أخشى من إهانه",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9123,7 +9123,7 @@
   "book": "taranim",
   "number": 266,
   "title": "ارفع القلب إليه وتأمل حبه",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9131,7 +9131,7 @@
   "book": "taranim",
   "number": 267,
   "title": "رتبت لنا مائده ونحن في العبور",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -9139,7 +9139,7 @@
   "book": "taranim",
   "number": 268,
   "title": "يا له حبا قد ظهر في ربنا الكريم",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -9147,7 +9147,7 @@
   "book": "taranim",
   "number": 269,
   "title": "قد بدا أمر عجيب لم ضاء الليل نور",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9155,7 +9155,7 @@
   "book": "taranim",
   "number": 270,
   "title": "سبحوا الرب اعبدوه فهو السيد العظيم",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9171,7 +9171,7 @@
   "book": "taranim",
   "number": 272,
   "title": "هلم نشد بالفرح في الرب كل حين",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -9179,7 +9179,7 @@
   "book": "taranim",
   "number": 273,
   "title": "أبارك الله الغني من أجل إحسانه لي",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9187,7 +9187,7 @@
   "book": "taranim",
   "number": 274,
   "title": "الله ملجأ لنا في كل أحوال الحياه",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9195,7 +9195,7 @@
   "book": "taranim",
   "number": 275,
   "title": "في شخص ربنا يسوع من مات عنا بالصليب",
-  "meter": "88.86.86 – 88.6.88",
+  "meter": "8.8.8.6.8.6 – 8.8.6.8.8",
   "hasChorus": false
  },
  {
@@ -9203,7 +9203,7 @@
   "book": "taranim",
   "number": 276,
   "title": "هلم بالترتيل والحمد والصلاه",
-  "meter": "76.76.66.66 – 55.55",
+  "meter": "7.6.7.6.6.6.6.6 – 5",
   "hasChorus": false
  },
  {
@@ -9211,7 +9211,7 @@
   "book": "taranim",
   "number": 277,
   "title": "أورشليم في السما الله باريها المجيد",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9219,7 +9219,7 @@
   "book": "taranim",
   "number": 278,
   "title": "لاسمك نهدي شكرنا يا ربنا المنان",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -9227,7 +9227,7 @@
   "book": "taranim",
   "number": 279,
   "title": "إكليله مضفور بالشوك من أجلي",
-  "meter": "76.76.76.76",
+  "meter": "7.6",
   "hasChorus": false
  },
  {
@@ -9235,7 +9235,7 @@
   "book": "taranim",
   "number": 280,
   "title": "يا إلهي هبني قلبا يقصد مسرتك",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9243,7 +9243,7 @@
   "book": "taranim",
   "number": 281,
   "title": "بر سلام وسرور أوصاف ملك الباري",
-  "meter": "87.87 – 88.66",
+  "meter": "8.7 – 8.8.6.6",
   "hasChorus": false
  },
  {
@@ -9251,7 +9251,7 @@
   "book": "taranim",
   "number": 282,
   "title": "يا نفسي قد وافى يسوع رب الفدى القدير",
-  "meter": "87.87 – 88.76",
+  "meter": "8.7 – 8.8.7.6",
   "hasChorus": false
  },
  {
@@ -9259,7 +9259,7 @@
   "book": "taranim",
   "number": 283,
   "title": "شامخ لا يحني رأسي أي ضيق",
-  "meter": "12.12.12.12.12",
+  "meter": "12",
   "hasChorus": false
  },
  {
@@ -9267,7 +9267,7 @@
   "book": "taranim",
   "number": 284,
   "title": "يا مخلصا كريما أرشدنا عابرين",
-  "meter": "87.87.87.87.7.87",
+  "meter": "8.7.8.7.8.7.8.7.7.8.7",
   "hasChorus": false
  },
  {
@@ -9275,7 +9275,7 @@
   "book": "taranim",
   "number": 285,
   "title": "أنت لي المن الذي يشبع قلبي",
-  "meter": "12.8.12.8 – 88",
+  "meter": "12.8 – 8",
   "hasChorus": false
  },
  {
@@ -9283,7 +9283,7 @@
   "book": "taranim",
   "number": 286,
   "title": "فليسر وجهك دائما أمامي",
-  "meter": "12.11.12.11 – 12",
+  "meter": "12.11 – 12",
   "hasChorus": false
  },
  {
@@ -9291,7 +9291,7 @@
   "book": "taranim",
   "number": 287,
   "title": "يا سيدي الفادي إليك حنيني",
-  "meter": "12.12.12.12.12",
+  "meter": "12",
   "hasChorus": false
  },
  {
@@ -9299,7 +9299,7 @@
   "book": "taranim",
   "number": 288,
   "title": "في ليل غيابك يا ربنا",
-  "meter": "11.8.11.8",
+  "meter": "11.8",
   "hasChorus": false
  },
  {
@@ -9307,7 +9307,7 @@
   "book": "taranim",
   "number": 289,
   "title": "ربنا آت سريعا فافرحوا يا مؤمنين",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9315,7 +9315,7 @@
   "book": "taranim",
   "number": 290,
   "title": "قبلما بنى الجبال ربنا ذو الاقتدار",
-  "meter": "77.77",
+  "meter": "7",
   "hasChorus": false
  },
  {
@@ -9323,7 +9323,7 @@
   "book": "taranim",
   "number": 291,
   "title": "يا سيد الأنام يا ربنا المهوب",
-  "meter": "76.76.66.66 – 55.55",
+  "meter": "7.6.7.6.6.6.6.6 – 5",
   "hasChorus": false
  },
  {
@@ -9331,7 +9331,7 @@
   "book": "taranim",
   "number": 292,
   "title": "يا يسوع قد سباني فيك لطف وخضوع",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9339,7 +9339,7 @@
   "book": "taranim",
   "number": 293,
   "title": "في ديار المجد حتما سنكون عن قريب",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9347,7 +9347,7 @@
   "book": "taranim",
   "number": 294,
   "title": "كل الخليقة التي في الأرض والسما معا",
-  "meter": "88.88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9355,7 +9355,7 @@
   "book": "taranim",
   "number": 295,
   "title": "ربي أحسن لي فأحيا حسب أمرك المهيب",
-  "meter": "87.87 – 12.7.7",
+  "meter": "8.7 – 12.7.7",
   "hasChorus": false
  },
  {
@@ -9363,7 +9363,7 @@
   "book": "taranim",
   "number": 296,
   "title": "لماذا أنت حزينه لماذا هذا الأنين",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9371,7 +9371,7 @@
   "book": "taranim",
   "number": 297,
   "title": "اسمك ربي يسوع مانح الخلاص",
-  "meter": "58.58 – 66.66.86",
+  "meter": "5.8 – 6.6.6.6.8.6",
   "hasChorus": false
  },
  {
@@ -9379,7 +9379,7 @@
   "book": "taranim",
   "number": 298,
   "title": "هل تبغي عتقا من نير الآثام",
-  "meter": "10.9.10.9 – 96.98",
+  "meter": "10.9 – 9.6.9.8",
   "hasChorus": false
  },
  {
@@ -9387,7 +9387,7 @@
   "book": "taranim",
   "number": 299,
   "title": "أيها السائح في البرية",
-  "meter": "11.5.11.5.11.5 – 5.5.11.5",
+  "meter": "11.5 – 5.5.11.5",
   "hasChorus": false
  },
  {
@@ -9395,7 +9395,7 @@
   "book": "taranim",
   "number": 300,
   "title": "ليس شيء باقيا لي لكي أعمل",
-  "meter": "75.75 – 55.75",
+  "meter": "7.5 – 5.5.7.5",
   "hasChorus": false
  },
  {
@@ -9403,7 +9403,7 @@
   "book": "taranim",
   "number": 301,
   "title": "هل جلست في هدوء ونظرت للعلاء",
-  "meter": "87.87.87.87 – 12.8.12.8",
+  "meter": "8.7 – 12.8",
   "hasChorus": false
  },
  {
@@ -9411,7 +9411,7 @@
   "book": "taranim",
   "number": 302,
   "title": "فادي مات بالصليب مجدا لذلك الحمل",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -9419,7 +9419,7 @@
   "book": "taranim",
   "number": 303,
   "title": "ليس لي هنا قرار لا ولا رجا العيان",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9427,7 +9427,7 @@
   "book": "taranim",
   "number": 304,
   "title": "يا يسوع هناك في الصليب",
-  "meter": "10.8.10.8 – 10.10.8.7.11.11",
+  "meter": "10.8 – 10.10.8.7.11.11",
   "hasChorus": false
  },
  {
@@ -9435,7 +9435,7 @@
   "book": "taranim",
   "number": 305,
   "title": "إن تبعنا الحبيب حاملين الصليب",
-  "meter": "669.669 – 46.76",
+  "meter": "6.6.9 – 4.6.7.6",
   "hasChorus": false
  },
  {
@@ -9443,7 +9443,7 @@
   "book": "taranim",
   "number": 306,
   "title": "سلمت نفسي في يديك يا سيدي يسوع",
-  "meter": "86.86.88.86 – 66.88.86",
+  "meter": "8.6.8.6.8.8.8.6 – 6.6.8.8.8.6",
   "hasChorus": false
  },
  {
@@ -9451,7 +9451,7 @@
   "book": "taranim",
   "number": 307,
   "title": "قد فداني بالصليب قد هداني ذا الحبيب",
-  "meter": "77.77 – 77.87",
+  "meter": "7 – 7.7.8.7",
   "hasChorus": false
  },
  {
@@ -9459,7 +9459,7 @@
   "book": "taranim",
   "number": 308,
   "title": "متكئا رأسي على صدره باطمئنان",
-  "meter": "14,14,14,14",
+  "meter": "14",
   "hasChorus": false
  },
  {
@@ -9467,7 +9467,7 @@
   "book": "taranim",
   "number": 309,
   "title": "يسوع ربي قد حباني ذا السلام التام",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -9475,7 +9475,7 @@
   "book": "taranim",
   "number": 310,
   "title": "سأرى وجه يسوع يا له مرأى عجيب",
-  "meter": "87.87 – 87.87",
+  "meter": "8.7 – 8.7",
   "hasChorus": false
  },
  {
@@ -9483,7 +9483,7 @@
   "book": "taranim",
   "number": 311,
   "title": "أيها السياح قولوا أين أنتم ذاهبون",
-  "meter": "87.87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9491,7 +9491,7 @@
   "book": "taranim",
   "number": 312,
   "title": "سوف يأتي في سحاب ذلك الفادي الأمين",
-  "meter": "87.87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9507,7 +9507,7 @@
   "book": "taranim",
   "number": 314,
   "title": "عصفور دور إن سقط ينس من الناس فقط",
-  "meter": "88.86 – 66.86",
+  "meter": "8.8.8.6 – 6.6.8.6",
   "hasChorus": false
  },
  {
@@ -9515,7 +9515,7 @@
   "book": "taranim",
   "number": 315,
   "title": "يا لسر فائق كل مديح سام في الكمال",
-  "meter": "11.5.11.5 – 7.7.11.11.7.11",
+  "meter": "11.5 – 7.7.11.11.7.11",
   "hasChorus": false
  },
  {
@@ -9523,7 +9523,7 @@
   "book": "taranim",
   "number": 316,
   "title": "ضع في قلبي حبا واصنع منه لحنا",
-  "meter": "12.9.12.9 – 12.9.12.9",
+  "meter": "12.9 – 12.9",
   "hasChorus": false
  },
  {
@@ -9531,7 +9531,7 @@
   "book": "taranim",
   "number": 317,
   "title": "على جبين المفتدي يبدو سنا الجمال",
-  "meter": "86.86",
+  "meter": "8.6",
   "hasChorus": false
  },
  {
@@ -9539,7 +9539,7 @@
   "book": "taranim",
   "number": 318,
   "title": "إله الحب نجاني بموت الصلب أحياني",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -9547,7 +9547,7 @@
   "book": "taranim",
   "number": 319,
   "title": "يا بسمة الصباح في وجه ذا الوجود",
-  "meter": "76.76.76.76",
+  "meter": "7.6",
   "hasChorus": false
  },
  {
@@ -9555,7 +9555,7 @@
   "book": "taranim",
   "number": 320,
   "title": "فاق الكل ذا الخليل في حبه",
-  "meter": "84.84.88.84",
+  "meter": "8.4.8.4.8.8.8.4",
   "hasChorus": false
  },
  {
@@ -9579,7 +9579,7 @@
   "book": "taranim",
   "number": 323,
   "title": "بين يديك الحانيات وضعت رأسي في سلام",
-  "meter": "88.88 – 89.88.88",
+  "meter": "8 – 8.9.8.8.8.8",
   "hasChorus": false
  },
  {
@@ -9587,7 +9587,7 @@
   "book": "taranim",
   "number": 324,
   "title": "ربنا يسوع أنت معنا ما دمنا هنا",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9595,7 +9595,7 @@
   "book": "taranim",
   "number": 325,
   "title": "معي أنت يا حبيبي كل حين يا حياتي",
-  "meter": "88.88.88.88.4",
+  "meter": "8.8.8.8.8.8.8.8.4",
   "hasChorus": false
  },
  {
@@ -9611,7 +9611,7 @@
   "book": "taranim",
   "number": 327,
   "title": "حب عظيم قد سما عن كل حب في الورى",
-  "meter": "88.88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9619,7 +9619,7 @@
   "book": "taranim",
   "number": 328,
   "title": "ما لي سواك يا سيدي حياتي رضاك يا سيدي",
-  "meter": "99.66",
+  "meter": "9.9.6.6",
   "hasChorus": false
  },
  {
@@ -9627,7 +9627,7 @@
   "book": "taranim",
   "number": 329,
   "title": "رسالة أعطيتني يا سيدي",
-  "meter": "12.12.12.12.12.12 – 8.8.8.6",
+  "meter": "12 – 8.8.8.6",
   "hasChorus": false
  },
  {
@@ -9635,7 +9635,7 @@
   "book": "taranim",
   "number": 330,
   "title": "أيها القدوس يا رب الحياه",
-  "meter": "11.11.11.11.11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -9650,7 +9650,7 @@
   "book": "taranim",
   "number": 332,
   "title": "كيف وأنت الحبيب يهوى قلبي سواك",
-  "meter": "76.86 – 76.77",
+  "meter": "7.6.8.6 – 7.6.7.7",
   "hasChorus": false
  },
  {
@@ -9658,7 +9658,7 @@
   "book": "taranim",
   "number": 333,
   "title": "هل يستطيع الرب بي أن يصنع العجائب",
-  "meter": "88.88 – 488.88",
+  "meter": "8 – 4.8.8.8.8",
   "hasChorus": false
  },
  {
@@ -9666,7 +9666,7 @@
   "book": "taranim",
   "number": 334,
   "title": "ها إنني أقترب وأطلب منك الرضا",
-  "meter": "88.88 – 99.97",
+  "meter": "8 – 9.9.9.7",
   "hasChorus": false
  },
  {
@@ -9674,7 +9674,7 @@
   "book": "taranim",
   "number": 335,
   "title": "ها آتي بطيبي فوق رأسك",
-  "meter": "11.11.11.11",
+  "meter": "11",
   "hasChorus": false
  },
  {
@@ -9682,7 +9682,7 @@
   "book": "taranim",
   "number": 336,
   "title": "أتراني قد سمعت صوت ربي يسأل",
-  "meter": "87.87.66.66",
+  "meter": "8.7.8.7.6.6.6.6",
   "hasChorus": false
  },
  {
@@ -9690,7 +9690,7 @@
   "book": "taranim",
   "number": 337,
   "title": "انتظري الرب يا نفسي واذكري جوده لا تنسي",
-  "meter": "99.99 – 95.95",
+  "meter": "9 – 9.5",
   "hasChorus": false
  },
  {
@@ -9698,7 +9698,7 @@
   "book": "taranim",
   "number": 338,
   "title": "أنت تحطم القيود وأنت تكشف الأسرار",
-  "meter": "88.88.77.77 – 88.88.88.88",
+  "meter": "8.8.8.8.7.7.7.7 – 8",
   "hasChorus": false
  },
  {
@@ -9706,7 +9706,7 @@
   "book": "taranim",
   "number": 339,
   "title": "سفك الدم الكريم بمحبه الإله",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9714,7 +9714,7 @@
   "book": "taranim",
   "number": 340,
   "title": "كنت الأثيم الجاني فرق لي يسوع",
-  "meter": "76.76.76.76",
+  "meter": "7.6",
   "hasChorus": false
  },
  {
@@ -9722,7 +9722,7 @@
   "book": "taranim",
   "number": 341,
   "title": "اسمعوا بشرى الظفر بيسوع الخلاص",
-  "meter": "76.76.77.76",
+  "meter": "7.6.7.6.7.7.7.6",
   "hasChorus": false
  },
  {
@@ -9737,7 +9737,7 @@
   "book": "taranim",
   "number": 343,
   "title": "حالا تعالوا إلى المسيح يا من تعبتم بحملكم",
-  "meter": "99.96 – 99.96",
+  "meter": "9.9.9.6 – 9.9.9.6",
   "hasChorus": false
  },
  {
@@ -9745,7 +9745,7 @@
   "book": "taranim",
   "number": 344,
   "title": "قام المسيح يا شعب أبشر",
-  "meter": "10.9.10.9 – 10.9.9.9",
+  "meter": "10.9 – 10.9.9.9",
   "hasChorus": false
  },
  {
@@ -9753,7 +9753,7 @@
   "book": "taranim",
   "number": 345,
   "title": "فادي الورى يدعوك قل ها أنا",
-  "meter": "74.74.74.74",
+  "meter": "7.4",
   "hasChorus": false
  },
  {
@@ -9761,7 +9761,7 @@
   "book": "taranim",
   "number": 346,
   "title": "كما أنا آتي إلى فادي الورى مستعجلا",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9769,7 +9769,7 @@
   "book": "taranim",
   "number": 347,
   "title": "أنت تدعو للوليمه كل خاطئ أثيم",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9785,7 +9785,7 @@
   "book": "taranim",
   "number": 349,
   "title": "يا ذوي الإثم تعالوا بؤسا مع فقرا",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9800,7 +9800,7 @@
   "book": "taranim",
   "number": 351,
   "title": "ها يسوع الباب دوما يقرع",
-  "meter": "11.11.11.11 – 6.6.11.11",
+  "meter": "11 – 6.6.11.11",
   "hasChorus": false
  },
  {
@@ -9808,7 +9808,7 @@
   "book": "taranim",
   "number": 352,
   "title": "يا ثقيل الحمل أقبل نحو فاديك الحبيب",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9816,7 +9816,7 @@
   "book": "taranim",
   "number": 353,
   "title": "قد غرقت في الشرور في حمأة الأثام",
-  "meter": "76.76.76.74 – 8.6.4",
+  "meter": "7.6.7.6.7.6.7.4 – 8.6.4",
   "hasChorus": false
  },
  {
@@ -9824,7 +9824,7 @@
   "book": "taranim",
   "number": 354,
   "title": "فارحا فارحا أمضي إلى المسكن المستنير بالحمل",
-  "meter": "10.10.10.10.10.10.10.10",
+  "meter": "10",
   "hasChorus": false
  },
  {
@@ -9832,7 +9832,7 @@
   "book": "taranim",
   "number": 355,
   "title": "عن قريب ستجيء والأملاك ينشدون",
-  "meter": "87.87",
+  "meter": "8.7",
   "hasChorus": false
  },
  {
@@ -9840,7 +9840,7 @@
   "book": "taranim",
   "number": 356,
   "title": "طوبى لمن قد رقد في الرب يسوع المسيح",
-  "meter": "88.88",
+  "meter": "8",
   "hasChorus": false
  },
  {
@@ -9848,7 +9848,7 @@
   "book": "taranim",
   "number": 357,
   "title": "ما أسعد البيت الذي قد حل فيه ابن العلي",
-  "meter": "88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -9856,7 +9856,7 @@
   "book": "taranim",
   "number": 358,
   "title": "يا سيدنا يا صاحب البهاء لك نهدي الحمد",
-  "meter": "11.5.11.5 – 7.7.11.11.7.11",
+  "meter": "11.5 – 7.7.11.11.7.11",
   "hasChorus": false
  },
  {
@@ -9864,7 +9864,7 @@
   "book": "taranim",
   "number": 359,
   "title": "إلهنا عظيم إلهنا أمين",
-  "meter": "10.10.10.10.10.10.10.10 – 999.999",
+  "meter": "10 – 9",
   "hasChorus": false
  },
  {
@@ -9872,7 +9872,7 @@
   "book": "taranim",
   "number": 360,
   "title": "جايين يا أبانا اسمع لدعانا",
-  "meter": "66.777 – 88.88.88.86",
+  "meter": "6.6.7.7.7 – 8.8.8.8.8.8.8.6",
   "hasChorus": false
  },
  {
@@ -9888,7 +9888,7 @@
   "book": "taranim",
   "number": 362,
   "title": "إنت ليك قصد في حياتي",
-  "meter": "88.88 – 87.87.87.87",
+  "meter": "8 – 8.7",
   "hasChorus": false
  },
  {
@@ -9896,7 +9896,7 @@
   "book": "taranim",
   "number": 363,
   "title": "صوته الحلو أتاني وبحنان حبه ناداني",
-  "meter": "88.77 - 7777",
+  "meter": "8.8.7.7 - 7",
   "hasChorus": false
  },
  {
@@ -9904,7 +9904,7 @@
   "book": "taranim",
   "number": 364,
   "title": "لولا النعمه ما كنت أشوفك ولا كان لي مكان في سماك",
-  "meter": "10.10.10.10 – 8.8.8.8",
+  "meter": "10 – 8",
   "hasChorus": false
  },
  {
@@ -9920,7 +9920,7 @@
   "book": "taranim",
   "number": 366,
   "title": "يا اللي حولت المراره اللي في حياتي لترنيمات",
-  "meter": "87.87.87.87 - 7",
+  "meter": "8.7 - 7",
   "hasChorus": false
  },
  {
@@ -9928,7 +9928,7 @@
   "book": "taranim",
   "number": 367,
   "title": "بالحكمه إنت وحدك ماسك زمام الأمر",
-  "meter": "76.76.76.76",
+  "meter": "7.6",
   "hasChorus": false
  },
  {
@@ -9936,7 +9936,7 @@
   "book": "taranim",
   "number": 368,
   "title": "يا اللي بديت الرحله معاي",
-  "meter": "88.88 – 88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -9944,7 +9944,7 @@
   "book": "taranim",
   "number": 369,
   "title": "الكلمه منك مش أوهام والوعد قلته ومش أحلام",
-  "meter": "88.88.88.88 – 88.88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -9952,7 +9952,7 @@
   "book": "taranim",
   "number": 370,
   "title": "ربي راعي وسلامي عمري ما احتاج لسواه",
-  "meter": "87.87.87.87 – 87.87.88",
+  "meter": "8.7 – 8.7.8.7.8.8",
   "hasChorus": false
  },
  {
@@ -9960,7 +9960,7 @@
   "book": "taranim",
   "number": 371,
   "title": "أشواق للبركه جوانا تشبعنا رضى وتفيض فينا",
-  "meter": "88.88.88.88 – 88.88",
+  "meter": "8 – 8",
   "hasChorus": false
  },
  {
@@ -9968,7 +9968,7 @@
   "book": "taranim",
   "number": 372,
   "title": "عايز أقضي حياتي بقربك وقت هنايَ ووقت آلامي",
-  "meter": "88.88 – 88.78",
+  "meter": "8 – 8.8.7.8",
   "hasChorus": false
  },
  {
@@ -9976,7 +9976,7 @@
   "book": "taranim",
   "number": 373,
   "title": "كنت كفاية الآب في صليبك لذة قلبه وشِبعه هناك",
-  "meter": "87.87 – 87.87",
+  "meter": "8.7 – 8.7",
   "hasChorus": false
  },
  {
@@ -9984,7 +9984,7 @@
   "book": "taranim",
   "number": 374,
   "title": "إنت مش للذكريات أو لمجد راح وفات",
-  "meter": "77.87 – 88.88",
+  "meter": "7.7.8.7 – 8",
   "hasChorus": false
  },
  {
@@ -9992,7 +9992,7 @@
   "book": "taranim",
   "number": 375,
   "title": "سنين طويله مضت والرب معتني بي",
-  "meter": "87.87.99",
+  "meter": "8.7.8.7.9.9",
   "hasChorus": false
  }
 ]
