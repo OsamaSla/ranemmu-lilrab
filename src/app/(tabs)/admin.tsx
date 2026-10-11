@@ -16,6 +16,7 @@ import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { getSummaries } from '../../data/loader';
 import { normalize } from '../../data/normalize';
+import { publishOverrides } from '../../data/publish';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -36,6 +37,8 @@ export default function AdminScreen() {
 
   const adminPin = useSettings((s) => s.adminPin);
   const setAdminPin = useSettings((s) => s.setAdminPin);
+  const githubToken = useSettings((s) => s.githubToken);
+  const setGithubToken = useSettings((s) => s.setGithubToken);
   const overrides = useOverrides((s) => s.overrides);
   const setOverride = useOverrides((s) => s.setOverride);
   const clearAll = useOverrides((s) => s.clearAll);
@@ -43,6 +46,8 @@ export default function AdminScreen() {
   const [unlocked, setUnlocked] = useState(false);
   const [pin, setPin] = useState('');
   const [pinError, setPinError] = useState(false);
+  const [tokenDraft, setTokenDraft] = useState('');
+  const [publishing, setPublishing] = useState(false);
   const [num, setNum] = useState('');
   const [swapA, setSwapA] = useState('');
   const [swapB, setSwapB] = useState('');
@@ -169,6 +174,15 @@ export default function AdminScreen() {
     }
   };
 
+  const doPublish = async () => {
+    if (publishing) return;
+    setPublishing(true);
+    setMsg(t('admin.publishing'));
+    const result = await publishOverrides(githubToken, overrides);
+    setPublishing(false);
+    setMsg(t(result.messageKey));
+  };
+
   const pendingCount = Object.keys(overrides).length;
 
   return (
@@ -270,6 +284,46 @@ export default function AdminScreen() {
                 style={fieldStyle}
               />
               {button(t('admin.save'), changePin)}
+            </Card>
+
+            <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
+              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+                {t('admin.publishTitle')} ({pendingCount})
+              </AppText>
+              <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
+                {githubToken ? t('admin.tokenSaved') : t('admin.noToken')}
+              </AppText>
+              <TextInput
+                value={tokenDraft}
+                onChangeText={setTokenDraft}
+                secureTextEntry
+                autoCapitalize="none"
+                autoCorrect={false}
+                placeholder={t('admin.tokenPlaceholder')}
+                placeholderTextColor={colors.textMuted}
+                style={fieldStyle}
+              />
+              <View style={{ flexDirection: direction.row, gap: spacing.sm }}>
+                <View style={{ flex: 1 }}>
+                  {button(t('admin.saveToken'), () => {
+                    setGithubToken(tokenDraft.trim());
+                    setTokenDraft('');
+                    setMsg(t('admin.tokenSaved'));
+                  })}
+                </View>
+                <View style={{ flex: 1 }}>
+                  {button(t('admin.clearToken'), () => {
+                    setGithubToken('');
+                    setTokenDraft('');
+                    setMsg(t('admin.tokenCleared'));
+                  })}
+                </View>
+              </View>
+              {pendingCount > 0
+                ? button(publishing ? t('admin.publishing') : t('admin.publishNow'), () => {
+                    void doPublish();
+                  })
+                : null}
             </Card>
 
             <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>

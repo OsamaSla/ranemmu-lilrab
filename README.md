@@ -109,6 +109,29 @@ hymn-number swaps, persisted to `src/store/overrides.ts` and merged at load.
 `scripts/apply-overrides.mjs` merges them back into the xlsx (round-trip
 tested) so corrections survive re-imports.
 
+### Publishing from the phone (no PC needed)
+
+Edits live on the device only until published. Admin has a **Publish**
+card that ships them straight to the live site:
+
+1. **One-time setup:** on github.com → Settings → Developer settings →
+   Personal access tokens → Fine-grained tokens → Generate new token:
+   select **only this repository**, grant **Contents: Read and write**,
+   set an expiry reminder. Copy the `github_pat_...` value.
+2. In the app: Admin → paste the token → Save token (stays on the device).
+3. Tap **Publish changes** after editing. The patch lands in
+   `pending-overrides/` on the `overrides-inbox` branch, and the
+   `apply-inbox` workflow merges it into the workbooks (incl. the book
+   `.xlsx` files), re-imports, validates (`check-hymns` gates the commit),
+   rebuilds the corpus, pushes to `main`, and Pages redeploys — live in a
+   few minutes. Processed inbox files are cleared automatically; failures
+   stay visible under Actions for manual handling.
+4. Revoke/rotate the token from the same GitHub page any time; clearing it
+   in Admin removes it from the device.
+
+Local overrides are kept after publishing (the phone app only picks up the
+rebuilt corpus with its next build, so the patch keeps showing the fix).
+
 ## Web deploy (GitHub Pages)
 
 The site is a static export served under the subpath `/ranemmu-lilrab`
