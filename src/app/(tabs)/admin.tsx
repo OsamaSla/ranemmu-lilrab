@@ -1,9 +1,11 @@
 /**
  * الإدارة — PIN-gated admin area.
  *
- * Edits land in the on-device override store (instant everywhere), never in
- * the bundled corpus. "Export" shares the patch set as JSON for
- * scripts/apply-overrides.mjs to merge into content/hymns-imported.xlsx.
+ * Edits land in the on-device override store (instant on this device only),
+ * never in the bundled corpus and never online by themselves. "Export"
+ * shares the patch set as JSON; on the PC scripts/apply-overrides.mjs
+ * merges it into the workbooks, then add-batch rebuilds and a push to main
+ * publishes it. The export card below spells out these steps.
  */
 import { useState } from 'react';
 import { Pressable, ScrollView, Share, TextInput, View } from 'react-native';
@@ -253,6 +255,9 @@ export default function AdminScreen() {
               </AppText>
               <AppText variant="caption" color={colors.textMuted}>
                 {pendingCount === 0 ? t('admin.noChanges') : t('admin.export')}
+              </AppText>
+              <AppText variant="caption" color={colors.textMuted} style={{ marginTop: spacing.xs }}>
+                {t('admin.publishSteps')}
               </AppText>
               {pendingCount > 0 ? button(t('admin.export'), doExport) : null}
               {pendingCount > 0 ? button(t('admin.clearSynced'), () => {

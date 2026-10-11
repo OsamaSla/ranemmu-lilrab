@@ -6,7 +6,8 @@
  * src/data/loader merges the patches over the bundled records — the change
  * is visible in the reader, lists and search immediately. The PC pipeline
  * stays the source of truth: "export" shares the patch set as JSON and
- * scripts/apply-overrides.mjs merges it into content/hymns-imported.xlsx.
+ * scripts/apply-overrides.mjs merges it into the books' workbooks
+ * (content/hymns-imported.xlsx, content/taranim-rohiya.xlsx).
  */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';

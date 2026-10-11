@@ -1,20 +1,22 @@
 /**
  * قارئ الترنيمة — the hymn reader.
  *
- * Layout mirrors the reference app: a vertical icon rail on the physical left
- * edge (star · search · home · fullscreen · settings · info), stanza cards
- * with Arabic-Indic labels and an indented chorus, and circular previous/next
- * controls at the bottom. Fullscreen switches to the pure-black reading
- * surface regardless of the app theme and survives rotation, since the app
- * allows both orientations.
+ * The hymn text owns the screen: every tool (favourite, share, search,
+ * fullscreen, text settings, info, translation switch, jump-to-number,
+ * previous/next, stanza jumps) hides behind one tiny floating button that
+ * opens an overlay panel, so nothing steals width from the text on mobile.
+ * A second tiny button jumps straight to the refrain — handy in a live
+ * assembly when the refrain sits far above the current stanza. Stanza chips
+ * in the panel jump to any stanza without scrolling. Fullscreen uses the
+ * same floating buttons over its pure-black reading surface.
  *
- * Opening a hymn records it in the recents list. Navigating here from search
- * may carry `?verse=<n>` to land on a specific stanza.
+ * Opening a hymn records it in the recents list. Navigating here from the
+ * library may carry `?verse=<n>` to land on a specific stanza.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
-import { Animated, Pressable, ScrollView, Share, Text as RNText, TextInput, View, type LayoutChangeEvent } from 'react-native';
+import { Animated, Modal, Pressable, ScrollView, Share, Text as RNText, TextInput, View, type LayoutChangeEvent } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../../components/AppText';
@@ -32,15 +34,12 @@ import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
 import { useLibrary } from '../../../store/library';
 import { useOverrides } from '../../../store/overrides';
-import {
-  READER_SIZE_MAX,
-  READER_SIZE_MIN,
-  useSettings,
-} from '../../../store/settings';
+import { useSettings } from '../../../store/settings';
 import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
 import { palette, radius, spacing } from '../../../theme/tokens';
 
-const RAIL_WIDTH = 56;
+/** Diameter of the tiny floating buttons — the only chrome sharing the screen. */
+const FAB_SIZE = 44;
 
 /**
  * Lets `expo export` and web deep links resolve every hymn statically.
@@ -61,6 +60,9 @@ export default function ReaderScreen() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
+  // Every tool hides behind one tiny floating button; the panel below is
+  // the only place they appear, as an overlay that never reflows the text.
+  const [toolsOpen, setToolsOpen] = useState(false);
 
   const readerSize = useSettings((s) => s.readerSize);
   const increaseReaderSize = useSettings((s) => s.increaseReaderSize);
@@ -146,7 +148,7 @@ export default function ReaderScreen() {
   ];
 
   // Jump bar: a hymn number goes straight there, anything else opens the
-  // full search with the text prefilled.
+  // library with the text prefilled as its search filter.
   // eslint-disable-next-line react-hooks/exhaustive-deps -- see above
   const summaries = useMemo(() => getSummaries(hymn?.book ?? 'main'), [corpusVersion, hymn?.book]);
   const [jump, setJump] = useState('');
@@ -164,7 +166,7 @@ export default function ReaderScreen() {
     } else {
       setJump('');
     }
-    router.push({ pathname: '/search', params: { q } });
+    router.push({ pathname: '/library', params: { q } });
   };
 
   useEffect(() => {
@@ -256,7 +258,11 @@ export default function ReaderScreen() {
   const readerFont = fontFamilyFor(fontId, false);
   const readerFontBold = fontFamilyFor(fontId, true);
 
-  const railButton = (props: {
+  /**
+   * One small circular icon for the tools panel rows. Everything lives on
+   * this bordered disc so the panel reads as a single toolbar.
+   */
+  const panelIcon = (props: {
     name: ComponentProps<typeof MaterialCommunityIcons>['name'];
     label: string;
     onPress: () => void;
@@ -268,11 +274,40 @@ export default function ReaderScreen() {
       onPress={props.onPress}
       color={props.color ?? colors.text}
       style={{
-        backgroundColor: colors.surface,
+        backgroundColor: colors.surfaceMuted,
         borderWidth: 1,
         borderColor: colors.border,
-        borderRadius: RAIL_WIDTH / 2,
-        marginBottom: spacing.sm,
+      }}
+    />
+  );
+
+  /**
+   * Tiny floating button overlaid on the text — tools opener and refrain
+   * shortcut. Absolute, translucent, one per corner at most.
+   */
+  const fabButton = (props: {
+    name: ComponentProps<typeof MaterialCommunityIcons>['name'];
+    label: string;
+    onPress: () => void;
+    dark?: boolean;
+    position: { bottom: number } & ({ left: number } | { right: number });
+  }) => (
+    <IconButton
+      name={props.name}
+      label={props.label}
+      onPress={props.onPress}
+      size={22}
+      color={props.dark ? palette.readerText : colors.text}
+      style={{
+        position: 'absolute',
+        width: FAB_SIZE,
+        height: FAB_SIZE,
+        borderRadius: FAB_SIZE / 2,
+        backgroundColor: props.dark ? 'rgba(255,255,255,0.16)' : colors.surface,
+        borderWidth: 1,
+        borderColor: props.dark ? 'rgba(255,255,255,0.3)' : colors.border,
+        opacity: 0.92,
+        ...props.position,
       }}
     />
   );
@@ -358,46 +393,270 @@ export default function ReaderScreen() {
     </>
   );
 
+  // Assembly-friendly jumps: the refrain's stanza index (if any) and a
+  // chip per stanza. Closing the panel first keeps the scroll smooth.
+  const chorusIndex = hymn.verses.findIndex((v) => v.chorus);
+  const goToVerse = (verseIndex: number) => {
+    setToolsOpen(false);
+    setTimeout(() => scrollToVerse(verseIndex), 60);
+  };
+
+  /**
+   * Every tool in one overlay panel, shared by normal and fullscreen modes:
+   * back · favourite · share · library search · home · fullscreen toggle ·
+   * font size · text settings · info · translation switch · jump-to-number ·
+   * previous/next · stanza chips. Nothing here reflows the hymn text.
+   */
+  const toolsPanel = (
+    <Modal
+      visible={toolsOpen}
+      transparent
+      animationType="fade"
+      onRequestClose={() => setToolsOpen(false)}
+      statusBarTranslucent>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityLabel={t('common.close')}
+        onPress={() => setToolsOpen(false)}
+        style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-end' }}>
+        <Pressable
+          onPress={() => {
+            /* Swallow: keeps the panel open while it's being interacted with. */
+          }}
+          style={{
+            backgroundColor: colors.surface,
+            borderTopLeftRadius: radius.lg,
+            borderTopRightRadius: radius.lg,
+            borderTopWidth: 1,
+            borderColor: colors.border,
+            paddingHorizontal: spacing.lg,
+            paddingTop: spacing.md,
+            paddingBottom: insets.bottom + spacing.lg,
+            maxHeight: '80%',
+          }}>
+          <View
+            style={{
+              flexDirection: direction.row,
+              alignItems: 'center',
+              marginBottom: spacing.md,
+            }}>
+            <AppText variant="heading" style={{ flex: 1, fontWeight: '700' }}>
+              {t('reader.tools')}
+            </AppText>
+            <IconButton name="close" label={t('common.close')} onPress={() => setToolsOpen(false)} />
+          </View>
+
+          <View
+            style={{
+              flexDirection: direction.row,
+              flexWrap: 'wrap',
+              gap: spacing.md,
+              marginBottom: spacing.md,
+            }}>
+            {panelIcon({
+              name: direction.isRTL ? 'chevron-right' : 'chevron-left',
+              label: t('common.back'),
+              onPress: () => {
+                setToolsOpen(false);
+                if (fullscreen) exitFullscreen();
+                else router.back();
+              },
+            })}
+            {panelIcon({
+              name: isFavorite ? 'star' : 'star-outline',
+              label: t('favorites.title'),
+              onPress: () => toggleFavorite(hymn.id),
+              color: isFavorite ? colors.favorite : colors.text,
+            })}
+            {panelIcon({ name: 'share-variant', label: t('reader.share'), onPress: shareHymn })}
+            {panelIcon({
+              name: 'magnify',
+              label: t('search.placeholder'),
+              onPress: () => {
+                setToolsOpen(false);
+                router.push('/library');
+              },
+            })}
+            {panelIcon({
+              name: 'home',
+              label: t('tabs.home'),
+              onPress: () => {
+                setToolsOpen(false);
+                router.push('/(tabs)');
+              },
+            })}
+            {panelIcon({
+              name: fullscreen ? 'fullscreen-exit' : 'fullscreen',
+              label: fullscreen ? t('reader.exitFullscreen') : t('reader.fullscreen'),
+              onPress: () => {
+                setToolsOpen(false);
+                if (fullscreen) exitFullscreen();
+                else setFullscreen(true);
+              },
+            })}
+            {panelIcon({
+              name: 'minus',
+              label: t('reader.decreaseFont'),
+              onPress: decreaseReaderSize,
+            })}
+            {panelIcon({
+              name: 'plus',
+              label: t('reader.increaseFont'),
+              onPress: increaseReaderSize,
+            })}
+            {panelIcon({
+              name: 'cog-outline',
+              label: t('reader.settings'),
+              onPress: () => {
+                setToolsOpen(false);
+                setSettingsOpen(true);
+              },
+            })}
+            {hymn.meter
+              ? panelIcon({
+                  name: 'information-outline',
+                  label: t('reader.info'),
+                  onPress: () => {
+                    setToolsOpen(false);
+                    setInfoHymn(true);
+                  },
+                })
+              : null}
+          </View>
+
+          {hasEn || hasDe ? (
+            <View style={{ marginBottom: spacing.md }}>
+              <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
+                {t('reader.translation')}
+              </AppText>
+              <SegmentedControl value={parallel} onChange={chooseParallel} options={translationOptions} />
+            </View>
+          ) : null}
+
+          <View
+            style={{
+              flexDirection: direction.row,
+              alignItems: 'center',
+              marginBottom: spacing.md,
+            }}>
+            <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
+            <TextInput
+              value={jump}
+              onChangeText={setJump}
+              onSubmitEditing={() => {
+                submitJump();
+                setToolsOpen(false);
+              }}
+              returnKeyType="search"
+              placeholder={t('reader.jumpPlaceholder')}
+              placeholderTextColor={colors.textMuted}
+              style={{
+                flex: 1,
+                marginHorizontal: spacing.sm,
+                color: colors.text,
+                fontFamily,
+                fontSize: 16,
+                writingDirection: direction.dir,
+                textAlign: direction.textAlign,
+              }}
+            />
+            <Pressable
+              onPress={() => {
+                submitJump();
+                setToolsOpen(false);
+              }}
+              accessibilityRole="button"
+              accessibilityLabel={t('reader.jump')}
+              android_ripple={{ color: colors.border }}
+              style={({ pressed }) => ({
+                paddingHorizontal: spacing.md,
+                paddingVertical: spacing.xs,
+                borderRadius: radius.pill,
+                backgroundColor: colors.primary,
+                opacity: pressed ? 0.75 : 1,
+              })}>
+              <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
+                {t('reader.jump')}
+              </AppText>
+            </Pressable>
+          </View>
+
+          <View
+            style={{
+              flexDirection: direction.row,
+              alignItems: 'center',
+              justifyContent: 'space-between',
+              marginBottom: spacing.md,
+            }}>
+            <NavCircle
+              name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
+              label={t('reader.previous')}
+              enabled={Boolean(neighbours.previous)}
+              onPress={() => {
+                setToolsOpen(false);
+                if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+              }}
+            />
+            <AppText variant="caption" color={colors.textMuted}>
+              {hymn.number}
+            </AppText>
+            <NavCircle
+              name={direction.isRTL ? 'chevron-left' : 'chevron-right'}
+              label={t('reader.next')}
+              enabled={Boolean(neighbours.next)}
+              onPress={() => {
+                setToolsOpen(false);
+                if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+              }}
+            />
+          </View>
+
+          <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
+            {t('reader.stanzas')}
+          </AppText>
+          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+            <View style={{ flexDirection: direction.row, gap: spacing.sm }}>
+              {hymn.verses.map((verseBlock, verseIndex) => (
+                <Pressable
+                  key={`${verseIndex}-${verseBlock.label}`}
+                  onPress={() => goToVerse(verseIndex)}
+                  accessibilityRole="button"
+                  accessibilityLabel={
+                    verseBlock.chorus ? (hymn.chorus ?? t('reader.refrain')) : `${t('reader.verseOf')} ${verseBlock.label}`
+                  }
+                  android_ripple={{ color: colors.border }}
+                  style={({ pressed }) => ({
+                    paddingHorizontal: spacing.md,
+                    paddingVertical: spacing.sm,
+                    borderRadius: radius.pill,
+                    backgroundColor: verseBlock.chorus ? colors.accent : colors.surfaceMuted,
+                    borderWidth: 1,
+                    borderColor: verseBlock.chorus ? colors.accent : colors.border,
+                    opacity: pressed ? 0.7 : 1,
+                  })}>
+                  <AppText
+                    variant="label"
+                    color={verseBlock.chorus ? colors.onPrimary : colors.text}
+                    style={{ fontWeight: '700' }}>
+                    {verseBlock.chorus ? (hymn.chorus ?? t('reader.refrain')) : verseBlock.label}
+                  </AppText>
+                </Pressable>
+              ))}
+            </View>
+          </ScrollView>
+        </Pressable>
+      </Pressable>
+    </Modal>
+  );
+
   if (fullscreen) {
     return (
       <Animated.View style={{ flex: 1, backgroundColor: palette.readerBg, opacity: fadeAnim }}>
-        <View
-          style={{
-            paddingTop: insets.top + spacing.sm,
-            paddingHorizontal: spacing.sm,
-            flexDirection: direction.row,
-            justifyContent: 'flex-start',
-            alignItems: 'center',
-          }}>
-          <IconButton
-            name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
-            label={t('common.back')}
-            color={palette.readerText}
-            onPress={exitFullscreen}
-          />
-          <View style={{ flex: 1 }} />
-          <IconButton
-            name="minus"
-            label={t('reader.decreaseFont')}
-            color={palette.readerText}
-            onPress={decreaseReaderSize}
-            disabled={readerSize <= READER_SIZE_MIN}
-            style={{ opacity: readerSize <= READER_SIZE_MIN ? 0.35 : 1 }}
-          />
-          <IconButton
-            name="plus"
-            label={t('reader.increaseFont')}
-            color={palette.readerText}
-            onPress={increaseReaderSize}
-            disabled={readerSize >= READER_SIZE_MAX}
-            style={{ opacity: readerSize >= READER_SIZE_MAX ? 0.35 : 1 }}
-          />
-        </View>
         <ScrollView
           ref={scrollRef}
           contentContainerStyle={{
             paddingHorizontal: spacing.xl,
-            paddingBottom: insets.bottom + spacing.xxl,
+            paddingBottom: insets.bottom + spacing.xxl + FAB_SIZE,
             maxWidth: READER_MAX_WIDTH,
             width: '100%',
             alignSelf: 'center',
@@ -424,13 +683,36 @@ export default function ReaderScreen() {
           ) : null}
           {versesView}
         </ScrollView>
+        {fabButton({
+          name: 'dots-horizontal',
+          label: t('reader.tools'),
+          onPress: () => setToolsOpen(true),
+          dark: true,
+          position: {
+            bottom: insets.bottom + spacing.lg,
+            ...(direction.isRTL ? { left: spacing.lg } : { right: spacing.lg }),
+          },
+        })}
+        {chorusIndex !== -1
+          ? fabButton({
+              name: 'repeat',
+              label: t('reader.refrain'),
+              onPress: () => scrollToVerse(chorusIndex),
+              dark: true,
+              position: {
+                bottom: insets.bottom + spacing.lg,
+                ...(direction.isRTL ? { right: spacing.lg } : { left: spacing.lg }),
+              },
+            })
+          : null}
+        {toolsPanel}
       </Animated.View>
     );
   }
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      {/* Header */}
+      {/* Slim header: navigation + title only — every tool moved to the panel. */}
       <View
         style={{
           paddingTop: insets.top + spacing.sm,
@@ -475,165 +757,56 @@ export default function ReaderScreen() {
               </AppText>
             ) : null}
           </View>
-          <IconButton
-            name={isFavorite ? 'star' : 'star-outline'}
-            label={t('favorites.title')}
-            color={isFavorite ? colors.favorite : colors.onPrimary}
-            onPress={() => toggleFavorite(hymn.id)}
-          />
-          <IconButton
-            name="share-variant"
-            label={t('reader.share')}
-            color={colors.onPrimary}
-            onPress={shareHymn}
-          />
         </View>
       </View>
 
-      {/* Translation toggle — only when this hymn carries a translation. */}
-      {hasEn || hasDe ? (
-        <View
-          style={{
-            paddingHorizontal: spacing.sm,
-            paddingTop: spacing.sm,
-            backgroundColor: colors.surface,
-            borderBottomWidth: 1,
-            borderBottomColor: colors.border,
-          }}>
-          <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
-            {t('reader.translation')}
-          </AppText>
-          <SegmentedControl value={parallel} onChange={chooseParallel} options={translationOptions} />
-          <View style={{ height: spacing.sm }} />
-        </View>
-      ) : null}
+      {/* Verses own the full width now — no side rail on mobile. */}
 
-      {/* Jump bar — a hymn number goes straight there, anything else opens search. */}
-      <View
-        style={{
-          flexDirection: direction.row,
-          alignItems: 'center',
-          paddingHorizontal: spacing.md,
-          paddingVertical: spacing.sm,
-          backgroundColor: colors.surface,
-          borderBottomWidth: 1,
-          borderBottomColor: colors.border,
+      <ScrollView
+        ref={scrollRef}
+        contentContainerStyle={{
+          flexGrow: 1,
+          padding: spacing.lg,
+          paddingBottom: insets.bottom + spacing.xxl + FAB_SIZE,
+          maxWidth: READER_MAX_WIDTH,
+          width: '100%',
+          alignSelf: 'center',
         }}>
-        <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
-        <TextInput
-          value={jump}
-          onChangeText={setJump}
-          onSubmitEditing={submitJump}
-          returnKeyType="search"
-          placeholder={t('reader.jumpPlaceholder')}
-          placeholderTextColor={colors.textMuted}
-          style={{
-            flex: 1,
-            marginHorizontal: spacing.sm,
-            color: colors.text,
-            fontFamily,
-            fontSize: 16,
-            writingDirection: direction.dir,
-            textAlign: direction.textAlign,
-          }}
-        />
-        <Pressable
-          onPress={submitJump}
-          accessibilityRole="button"
-          accessibilityLabel={t('reader.jump')}
-          android_ripple={{ color: colors.border }}
-          style={({ pressed }) => ({
-            paddingHorizontal: spacing.md,
-            paddingVertical: spacing.xs,
-            borderRadius: radius.pill,
-            backgroundColor: colors.primary,
-            opacity: pressed ? 0.75 : 1,
-          })}>
-          <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-            {t('reader.jump')}
-          </AppText>
-        </Pressable>
-      </View>
+        {versesView}
 
-      <View style={{ flex: 1, flexDirection: 'row' }}>
-        {/* Icon rail, pinned to the physical left edge per the reference design. */}
-        <View
-          style={{
-            width: RAIL_WIDTH,
-            paddingTop: spacing.lg,
-            alignItems: 'center',
-          }}>
-          {railButton({
-            name: isFavorite ? 'star' : 'star-outline',
-            label: t('favorites.title'),
-            onPress: () => toggleFavorite(hymn.id),
-            color: isFavorite ? colors.favorite : colors.text,
-          })}
-          {railButton({ name: 'magnify', label: t('search.placeholder'), onPress: () => router.push('/search') })}
-          {railButton({ name: 'home', label: t('tabs.home'), onPress: () => router.push('/(tabs)') })}
-          {railButton({
-            name: 'fullscreen',
-            label: t('reader.fullscreen'),
-            onPress: () => setFullscreen(true),
-          })}
-          {railButton({ name: 'cog-outline', label: t('reader.settings'), onPress: () => setSettingsOpen(true) })}
-          {hymn.meter
-            ? railButton({ name: 'information-outline', label: t('reader.info'), onPress: () => setInfoHymn(true) })
-            : null}
-        </View>
+        {similar.length > 0 ? (
+          <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
+            <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+              {t('reader.similar')}
+            </AppText>
+            {similar.map((s) => (
+              <HymnRow key={s.id} hymn={s} showStar={false} onPress={() => router.push(`/hymn/${s.id}`)} />
+            ))}
+          </Card>
+        ) : null}
+      </ScrollView>
 
-        {/* Verses */}
-        <ScrollView
-          ref={scrollRef}
-          contentContainerStyle={{
-            flexGrow: 1,
-            padding: spacing.lg,
-            paddingBottom: spacing.xl,
-            paddingStart: spacing.sm,
-          }}>
-          {versesView}
-
-          {similar.length > 0 ? (
-            <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
-              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
-                {t('reader.similar')}
-              </AppText>
-              {similar.map((s) => (
-                <HymnRow key={s.id} hymn={s} showStar={false} onPress={() => router.push(`/hymn/${s.id}`)} />
-              ))}
-            </Card>
-          ) : null}
-        </ScrollView>
-      </View>
-
-      {/* Previous / next */}
-      <View
-        style={{
-          flexDirection: direction.row,
-          justifyContent: 'space-between',
-          paddingHorizontal: spacing.xl,
-          paddingTop: spacing.sm,
-          paddingBottom: insets.bottom + spacing.sm,
-          backgroundColor: colors.surface,
-          borderTopWidth: 1,
-          borderTopColor: colors.border,
-        }}>
-        <NavCircle
-          name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
-          label={t('reader.previous')}
-          enabled={Boolean(neighbours.previous)}
-          onPress={() => neighbours.previous && router.replace(`/hymn/${neighbours.previous.id}`)}
-        />
-        <AppText variant="caption" color={colors.textMuted} style={{ alignSelf: 'center' }}>
-          {hymn.number}
-        </AppText>
-        <NavCircle
-          name={direction.isRTL ? 'chevron-left' : 'chevron-right'}
-          label={t('reader.next')}
-          enabled={Boolean(neighbours.next)}
-          onPress={() => neighbours.next && router.replace(`/hymn/${neighbours.next.id}`)}
-        />
-      </View>
+      {fabButton({
+        name: 'dots-horizontal',
+        label: t('reader.tools'),
+        onPress: () => setToolsOpen(true),
+        position: {
+          bottom: insets.bottom + spacing.lg,
+          ...(direction.isRTL ? { left: spacing.lg } : { right: spacing.lg }),
+        },
+      })}
+      {chorusIndex !== -1
+        ? fabButton({
+            name: 'repeat',
+            label: t('reader.refrain'),
+            onPress: () => scrollToVerse(chorusIndex),
+            position: {
+              bottom: insets.bottom + spacing.lg,
+              ...(direction.isRTL ? { right: spacing.lg } : { left: spacing.lg }),
+            },
+          })
+        : null}
+      {toolsPanel}
 
       <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} />
       <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />

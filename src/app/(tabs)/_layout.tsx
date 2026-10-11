@@ -68,7 +68,6 @@ export default function TabsLayout() {
       />
       {/* Hidden routes: pushed screens that keep the tab bar. */}
       <Tabs.Screen name="library" options={{ href: null, title: t('library.title') }} />
-      <Tabs.Screen name="search" options={{ href: null, title: t('search.placeholder') }} />
       <Tabs.Screen name="structure" options={{ href: null, title: t('structure.title') }} />
       <Tabs.Screen name="favorites" options={{ href: null, title: t('favorites.title') }} />
       <Tabs.Screen name="settings" options={{ href: null, title: t('settings.title') }} />

@@ -3,7 +3,7 @@
  *
  * On the client we write a partial `Hymn` into the overrides store (instant in UI)
  * and bundle it locally. The PC pipeline exports all pending overrides as JSON
- * and scripts/apply-overrides.mjs merges them into content/hymns-imported.xlsx
+ * and scripts/apply-overrides.mjs merges them into the books' workbooks
  * (which the translation scripts read to stage new EN/DE sheets).
  */
 import { useState } from 'react';

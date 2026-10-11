@@ -1,11 +1,6 @@
 /**
- * الرئيسية — the landing screen.
- *
- * Mirrors the reference app: a decorative backdrop, the app name, a search
- * field that opens the live search overlay, and a primary CTA into the library.
- * The audio toggle from the reference app's top bar is intentionally absent.
+ * الرئيسية — the landing screen: pick a book to open its library.
  */
-import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
 import { useMemo } from 'react';
 import { Image as RNImage, Pressable, ScrollView, View } from 'react-native';
@@ -39,14 +34,10 @@ export default function HomeScreen() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const books = useMemo(() => getBooks(), [corpusVersion]);
 
-  // First tap selects the book in place so the scoped search below serves
-  // it; tapping the already-selected cover opens the library.
+  // One tap selects the book and opens its library right away.
   const chooseBook = (id: BookId) => {
-    if (id === book) {
-      router.push('/library');
-      return;
-    }
     setBook(id);
+    router.push('/library');
   };
 
   return (
@@ -91,13 +82,19 @@ export default function HomeScreen() {
         />
 
         {/* The printed book's cover, as it looks on the shelf. */}
-        <AppText variant="heading" center style={{ fontWeight: '700', marginBottom: spacing.md }}>
+        <AppText variant="heading" center style={{ fontWeight: '700', marginBottom: spacing.xs }}>
           {t('book.choose')}
         </AppText>
+        <AppText
+          variant="caption"
+          center
+          color={colors.textMuted}
+          style={{ marginBottom: spacing.md }}>
+          {t('home.pickHint')}
+        </AppText>
 
-        {/* Book picker: both covers side by side. First tap selects that
-            book everywhere (library, search, reader neighbours) so the scoped
-            actions below serve it; tapping the selected cover opens it. */}
+        {/* Book picker: both covers side by side. One tap selects that
+            book everywhere (library, reader neighbours) and opens it. */}
         <View
           style={{
             flexDirection: direction.row,
@@ -146,80 +143,6 @@ export default function HomeScreen() {
             );
           })}
         </View>
-
-        {/* How the picker works: select first, then search or browse below. */}
-        <AppText
-          variant="caption"
-          center
-          color={colors.textMuted}
-          style={{ marginBottom: spacing.lg }}>
-          {t('home.pickHint')}
-        </AppText>
-
-        {/* Umbrella heading: the covers above already name each book. The
-            actions below act on the selected book only. */}
-        <AppText variant="display" center style={{ marginBottom: spacing.xs }}>
-          {t('library.title')}
-        </AppText>
-        <AppText
-          variant="caption"
-          center
-          color={colors.textMuted}
-          style={{ marginBottom: spacing.sm }}>
-          {t('search.inBook')} {t(`book.${book}` as const)}
-        </AppText>
-
-        {/* Search trigger. A real field would need a keyboard on tap; routing to
-            the search screen keeps focus handling in one place. Body-size text
-            so the long placeholder fits on one line. */}
-        <Pressable
-          accessibilityRole="search"
-          accessibilityLabel={`${t('home.searchPlaceholder')} — ${t(`book.${book}` as const)}`}
-          onPress={() => router.push('/search')}
-          android_ripple={{ color: colors.border }}
-          style={({ pressed }) => [
-            {
-              flexDirection: direction.row,
-              alignItems: 'center',
-              backgroundColor: colors.surface,
-              borderRadius: radius.pill,
-              borderWidth: 1,
-              borderColor: colors.border,
-              paddingHorizontal: spacing.lg,
-              minHeight: 56,
-              opacity: pressed ? 0.7 : 1,
-              ...shadow.card,
-            },
-          ]}>
-          <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
-          <AppText
-            variant="body"
-            color={colors.textMuted}
-            numberOfLines={1}
-            ellipsizeMode="tail"
-            style={{ flex: 1, paddingHorizontal: spacing.md }}>
-            {t('home.searchPlaceholder')}
-          </AppText>
-        </Pressable>
-
-        <Pressable
-          accessibilityRole="button"
-          onPress={() => router.push('/library')}
-          android_ripple={{ color: colors.border }}
-          style={({ pressed }) => [
-            {
-              marginTop: spacing.lg,
-              backgroundColor: colors.primary,
-              borderRadius: radius.md,
-              paddingVertical: spacing.lg,
-              alignItems: 'center',
-              opacity: pressed ? 0.8 : 1,
-            },
-          ]}>
-          <AppText variant="heading" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-            {t('home.viewAllHymns')}
-          </AppText>
-        </Pressable>
       </ScrollView>
     </View>
   );

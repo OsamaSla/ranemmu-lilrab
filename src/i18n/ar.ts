@@ -14,9 +14,7 @@ export const ar = {
   },
 
   home: {
-    searchPlaceholder: 'بحث برقم الترنيمة أو جزء منها...',
-    pickHint: 'اضغط على الكتاب لاختياره، واضغط مجددًا لفتحه',
-    viewAllHymns: 'عرض جميع الترنيمات',
+    pickHint: 'اضغط على الكتاب لفتحه',
   },
 
   library: {
@@ -58,6 +56,9 @@ export const ar = {
     translation: 'الترجمة',
     jump: 'انتقال',
     jumpPlaceholder: 'ابحث برقم أو كلمة...',
+    tools: 'الأدوات',
+    refrain: 'القرار',
+    stanzas: 'انتقال إلى مقطع',
   },
 
   info: {
@@ -76,15 +77,15 @@ admin: {
     open: 'فتح',
     notFound: 'الترنيمة غير موجودة',
     save: 'حفظ التغييرات',
-    saved: 'تم الحفظ',
+    saved: 'تم الحفظ على هذا الجهاز فقط',
+    publishSteps: 'للنشر على الموقع: صدّر التغييرات وأرسل الملف إلى الكمبيوتر، ثم نفّذ apply-overrides و add-batch، ثم ادفع إلى main.',
     swapTitle: 'تبديل رقمين',
     swap: 'تبديل',
     swapped: 'تم التبديل',
     newPin: 'رمز جديد (4 أرقام)',
     pinSaved: 'تم تغيير الرمز',
     export: 'تصدير التغييرات',
-    noChanges: 'لا توجد تغييرات بعد',
-    clearSynced: 'مسح بعد المزامنة',
+    noChanges: 'لا توجد تغييرات بعد',    clearSynced: 'مسح بعد المزامنة',
     cleared: 'تم المسح',
     errBlank: 'العنوان والسطور لا يمكن أن تكون فارغة',
     errCount: 'عدد المقاطع والسطور يجب أن يبقى كما هو (التعديل البنيوي من الكمبيوتر)',
@@ -93,6 +94,12 @@ admin: {
     authorOriginal: 'المؤلف الأصلي',
     chorus: 'القرار',
     hymnTitle: 'العنوان',
+    titleEn: 'العنوان بالإنجليزية',
+    chorusEn: 'القرار بالإنجليزية',
+    translationEn: 'الترجمة الإنجليزية',
+    titleDe: 'العنوان بالألمانية',
+    chorusDe: 'القرار بالألمانية',
+    translationDe: 'الترجمة الألمانية',
     addHymn: 'إضافة ترنيمة جديدة',
     hymnNumber: 'رقم الترنيمة',
     stanzaLine: 'سطر المقطع',
