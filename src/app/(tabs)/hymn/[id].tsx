@@ -1,16 +1,16 @@
 /**
  * قارئ الترنيمة — the hymn reader.
  *
- * The hymn text owns the screen: every tool (favourite, share, search,
- * fullscreen, text settings, info, translation switch, jump-to-number,
- * previous/next) hides behind one tiny floating button that
- * opens an overlay panel, so nothing steals width from the text on mobile.
+ * The hymn text owns the screen: frequent tools (favourite, share, search,
+ * fullscreen, text settings, info, previous/next) live in one slim compact
+ * icon row inside the header, so the bottom tab bar never hides and no tall
+ * sheet covers the text. Home is intentionally absent here — the tab bar
+ * already provides it. Font size lives inside the text-settings sheet.
  * Stanza jumps ("انتقال إلى مقطع") live in a slim vertical rail docked on the physical
  * right side of the text: it reserves its own narrow column in the layout,
  * so it never overlaps the hymn text, and its tiny dots stay usable on
  * small phones — the refrain has its own highlighted dot there.
- * Fullscreen uses the
- * same floating buttons over its pure-black reading surface.
+ * Fullscreen uses the same compact toolbar over its pure-black surface.
  *
  * Opening a hymn records it in the recents list. Navigating here from the
  * library may carry `?verse=<n>` to land on a specific stanza.
@@ -18,7 +18,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
-import { Animated, Modal, Pressable, ScrollView, Share, Text as RNText, TextInput, View, type LayoutChangeEvent } from 'react-native';
+import { Animated, Pressable, ScrollView, Share, Text as RNText, View, type LayoutChangeEvent } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../../components/AppText';
@@ -32,7 +32,6 @@ import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
 import { SegmentedControl, type SegmentOption } from '../../../components/SegmentedControl';
 import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
 import { displayMeter } from '../../../data/meterFamilies';
-import { normalize } from '../../../data/normalize';
 import { findSimilar } from '../../../data/search';
 import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
@@ -42,8 +41,8 @@ import { useSettings } from '../../../store/settings';
 import { fontFamilyFor, READER_MAX_WIDTH, type as typeScale } from '../../../theme/fonts';
 import { palette, radius, spacing } from '../../../theme/tokens';
 
-/** Diameter of the tiny floating buttons — the only chrome sharing the screen. */
-const FAB_SIZE = 44;
+/** Height of the slim compact toolbar row inside the header. */
+const TOOLBAR_HEIGHT = 48;
 
 /**
  * Width of the slim stanza-jump rail docked on the physical right side of
@@ -67,19 +66,14 @@ export default function ReaderScreen() {
   const navigation = useNavigation();
   const { id, verse } = useLocalSearchParams<{ id: string; verse?: string }>();
   const { t, direction } = useT();
-  const { colors, fontFamily } = useTheme();
+  const { colors } = useTheme();
   const insets = useSafeAreaInsets();
 
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
-  // Every tool hides behind one tiny floating button; the panel below is
-  // the only place they appear, as an overlay that never reflows the text.
-  const [toolsOpen, setToolsOpen] = useState(false);
 
   const readerSize = useSettings((s) => s.readerSize);
-  const increaseReaderSize = useSettings((s) => s.increaseReaderSize);
-  const decreaseReaderSize = useSettings((s) => s.decreaseReaderSize);
   const fontId = useSettings((s) => s.fontFamily);
   const touchRecent = useLibrary((s) => s.touchRecent);
   const toggleFavorite = useLibrary((s) => s.toggleFavorite);
@@ -159,28 +153,6 @@ export default function ReaderScreen() {
     ...(hasEn ? [{ value: 'en', label: 'English' } as const] : []),
     ...(hasDe ? [{ value: 'de', label: 'Deutsch' } as const] : []),
   ];
-
-  // Jump bar: a hymn number goes straight there, anything else opens the
-  // library with the text prefilled as its search filter.
-  // eslint-disable-next-line react-hooks/exhaustive-deps -- see above
-  const summaries = useMemo(() => getSummaries(hymn?.book ?? 'main'), [corpusVersion, hymn?.book]);
-  const [jump, setJump] = useState('');
-  const submitJump = () => {
-    const q = jump.trim();
-    if (!q) return;
-    const digits = normalize(q).text;
-    if (/^\d+$/.test(digits)) {
-      const target = summaries.find((s) => s.number === Number(digits));
-      setJump('');
-      if (target) {
-        router.replace(`/hymn/${target.id}`);
-        return;
-      }
-    } else {
-      setJump('');
-    }
-    router.push({ pathname: '/library', params: { q } });
-  };
 
   useEffect(() => {
     if (hymn) touchRecent(hymn.id);
@@ -276,55 +248,32 @@ export default function ReaderScreen() {
   const shownMeter = displayMeter(hymn.id, hymn.meter);
 
   /**
-   * One small circular icon for the tools panel rows. Everything lives on
-   * this bordered disc so the panel reads as a single toolbar.
+   * One compact icon inside the slim header toolbar row. Transparent so the
+   * row stays 48px tall; no duplicate Home (tab bar owns it) and no font
+   * +/- (inside the text-settings sheet).
    */
-  const panelIcon = (props: {
+  const toolIcon = (props: {
     name: ComponentProps<typeof MaterialCommunityIcons>['name'];
     label: string;
     onPress: () => void;
     color?: string;
-  }) => (
-    <IconButton
-      name={props.name}
-      label={props.label}
-      onPress={props.onPress}
-      color={props.color ?? colors.text}
-      style={{
-        backgroundColor: colors.surfaceMuted,
-        borderWidth: 1,
-        borderColor: colors.border,
-      }}
-    />
-  );
-
-  /**
-   * Tiny floating button overlaid on the text — tools opener and refrain
-   * shortcut. Absolute, translucent, one per corner at most.
-   */
-  const fabButton = (props: {
-    name: ComponentProps<typeof MaterialCommunityIcons>['name'];
-    label: string;
-    onPress: () => void;
     dark?: boolean;
-    position: ({ bottom: number } | { top: number }) & ({ left: number } | { right: number });
+    disabled?: boolean;
   }) => (
     <IconButton
       name={props.name}
       label={props.label}
       onPress={props.onPress}
+      disabled={props.disabled}
       size={22}
-      color={props.dark ? palette.readerText : colors.text}
+      color={props.color ?? (props.dark ? palette.readerText : colors.onPrimary)}
       style={{
-        position: 'absolute',
-        width: FAB_SIZE,
-        height: FAB_SIZE,
-        borderRadius: FAB_SIZE / 2,
-        backgroundColor: props.dark ? 'rgba(255,255,255,0.16)' : colors.surface,
-        borderWidth: 1,
-        borderColor: props.dark ? 'rgba(255,255,255,0.3)' : colors.border,
-        opacity: 0.92,
-        ...props.position,
+        width: 40,
+        height: 40,
+        borderRadius: 20,
+        backgroundColor: 'transparent',
+        borderWidth: 0,
+        opacity: props.disabled ? 0.35 : 1,
       }}
     />
   );
@@ -437,8 +386,7 @@ export default function ReaderScreen() {
           contentContainerStyle={{
             alignItems: 'center',
             paddingTop: spacing.md,
-            // Clears the bottom floating buttons so no dot hides behind them.
-            paddingBottom: insets.bottom + spacing.lg + FAB_SIZE,
+            paddingBottom: insets.bottom + spacing.lg,
             gap: spacing.xs,
           }}>
           {hymn.verses.map((verseBlock, verseIndex) => {
@@ -502,222 +450,115 @@ export default function ReaderScreen() {
   };
 
   /**
-   * Every tool in one overlay panel, shared by normal and fullscreen modes:
-   * back · favourite · share · library search · home · fullscreen toggle ·
-   * font size · text settings · info · translation switch · jump-to-number ·
-   * previous/next. Stanza jumps live in the side rail, not here. Nothing
-   * here reflows the hymn text.
+   * Slim compact toolbar shared by normal and fullscreen modes:
+   * favourite · share · library search · fullscreen toggle ·
+   * text settings · info · previous/next. No Home (the tab bar owns it),
+   * no back duplicate (the header owns it), no font +/- (inside settings).
+   * One 48px horizontal row — the tab bar stays visible.
    */
-  const toolsPanel = (
-    <Modal
-      visible={toolsOpen}
-      transparent
-      animationType="fade"
-      onRequestClose={() => setToolsOpen(false)}
-      statusBarTranslucent>
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel={t('common.close')}
-        onPress={() => setToolsOpen(false)}
-        style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-end' }}>
-        <Pressable
-          onPress={() => {
-            /* Swallow: keeps the panel open while it's being interacted with. */
-          }}
-          style={{
-            backgroundColor: colors.surface,
-            borderTopLeftRadius: radius.lg,
-            borderTopRightRadius: radius.lg,
-            borderTopWidth: 1,
-            borderColor: colors.border,
-            paddingHorizontal: spacing.lg,
-            paddingTop: spacing.md,
-            paddingBottom: insets.bottom + spacing.lg,
-            maxHeight: '80%',
-          }}>
-          <View
-            style={{
-              flexDirection: direction.row,
-              alignItems: 'center',
-              marginBottom: spacing.md,
-            }}>
-            <AppText variant="heading" style={{ flex: 1, fontWeight: '700' }}>
-              {t('reader.tools')}
-            </AppText>
-            <IconButton name="close" label={t('common.close')} onPress={() => setToolsOpen(false)} />
-          </View>
-
-          <View
-            style={{
-              flexDirection: direction.row,
-              flexWrap: 'wrap',
-              gap: spacing.md,
-              marginBottom: spacing.md,
-            }}>
-            {panelIcon({
-              name: direction.isRTL ? 'chevron-right' : 'chevron-left',
-              label: t('common.back'),
-              onPress: () => {
-                setToolsOpen(false);
-                router.back();
-              },
-            })}
-            {panelIcon({
-              name: isFavorite ? 'star' : 'star-outline',
-              label: t('favorites.title'),
-              onPress: () => toggleFavorite(hymn.id),
-              color: isFavorite ? colors.favorite : colors.text,
-            })}
-            {panelIcon({ name: 'share-variant', label: t('reader.share'), onPress: shareHymn })}
-            {panelIcon({
-              name: 'magnify',
-              label: t('search.placeholder'),
-              onPress: () => {
-                setToolsOpen(false);
-                router.push('/library');
-              },
-            })}
-            {panelIcon({
-              name: 'home',
-              label: t('tabs.home'),
-              onPress: () => {
-                setToolsOpen(false);
-                router.push('/(tabs)');
-              },
-            })}
-            {panelIcon({
-              name: fullscreen ? 'fullscreen-exit' : 'fullscreen',
-              label: fullscreen ? t('reader.exitFullscreen') : t('reader.fullscreen'),
-              onPress: () => {
-                setToolsOpen(false);
-                if (fullscreen) exitFullscreen();
-                else setFullscreen(true);
-              },
-            })}
-            {panelIcon({
-              name: 'minus',
-              label: t('reader.decreaseFont'),
-              onPress: decreaseReaderSize,
-            })}
-            {panelIcon({
-              name: 'plus',
-              label: t('reader.increaseFont'),
-              onPress: increaseReaderSize,
-            })}
-            {panelIcon({
-              name: 'cog-outline',
-              label: t('reader.settings'),
-              onPress: () => {
-                setToolsOpen(false);
-                setSettingsOpen(true);
-              },
-            })}
-            {hymn.meter
-              ? panelIcon({
-                  name: 'information-outline',
-                  label: t('reader.info'),
-                  onPress: () => {
-                    setToolsOpen(false);
-                    setInfoHymn(true);
-                  },
-                })
-              : null}
-          </View>
-
-          {hasEn || hasDe ? (
-            <View style={{ marginBottom: spacing.md }}>
-              <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
-                {t('reader.translation')}
-              </AppText>
-              <SegmentedControl value={parallel} onChange={chooseParallel} options={translationOptions} />
-            </View>
-          ) : null}
-
-          <View
-            style={{
-              flexDirection: direction.row,
-              alignItems: 'center',
-              marginBottom: spacing.md,
-            }}>
-            <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
-            <TextInput
-              value={jump}
-              onChangeText={setJump}
-              onSubmitEditing={() => {
-                submitJump();
-                setToolsOpen(false);
-              }}
-              returnKeyType="search"
-              placeholder={t('reader.jumpPlaceholder')}
-              placeholderTextColor={colors.textMuted}
-              style={{
-                flex: 1,
-                marginHorizontal: spacing.sm,
-                color: colors.text,
-                fontFamily,
-                fontSize: 16,
-                writingDirection: direction.dir,
-                textAlign: direction.textAlign,
-              }}
-            />
-            <Pressable
-              onPress={() => {
-                submitJump();
-                setToolsOpen(false);
-              }}
-              accessibilityRole="button"
-              accessibilityLabel={t('reader.jump')}
-              android_ripple={{ color: colors.border }}
-              style={({ pressed }) => ({
-                paddingHorizontal: spacing.md,
-                paddingVertical: spacing.xs,
-                borderRadius: radius.pill,
-                backgroundColor: colors.primary,
-                opacity: pressed ? 0.75 : 1,
-              })}>
-              <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-                {t('reader.jump')}
-              </AppText>
-            </Pressable>
-          </View>
-
-          <View
-            style={{
-              flexDirection: direction.row,
-              alignItems: 'center',
-              justifyContent: 'space-between',
-              marginBottom: spacing.md,
-            }}>
-            <NavCircle
-              name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
-              label={t('reader.previous')}
-              enabled={Boolean(neighbours.previous)}
-              onPress={() => {
-                setToolsOpen(false);
-                if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
-              }}
-            />
-            <AppText variant="caption" color={colors.textMuted}>
-              {hymn.number}
-            </AppText>
-            <NavCircle
-              name={direction.isRTL ? 'chevron-left' : 'chevron-right'}
-              label={t('reader.next')}
-              enabled={Boolean(neighbours.next)}
-              onPress={() => {
-                setToolsOpen(false);
-                if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
-              }}
-            />
-          </View>
-        </Pressable>
-      </Pressable>
-    </Modal>
+  const toolbar = (dark: boolean) => (
+    <ScrollView
+      horizontal
+      showsHorizontalScrollIndicator={false}
+      contentContainerStyle={{
+        flexDirection: direction.row,
+        alignItems: 'center',
+        paddingHorizontal: spacing.sm,
+        gap: 2,
+        minHeight: TOOLBAR_HEIGHT,
+      }}
+      style={{ flex: 1 }}>
+      {toolIcon({
+        name: isFavorite ? 'star' : 'star-outline',
+        label: t('favorites.title'),
+        onPress: () => toggleFavorite(hymn.id),
+        color: isFavorite ? colors.favorite : dark ? palette.readerText : colors.onPrimary,
+        dark,
+      })}
+      {toolIcon({ name: 'share-variant', label: t('reader.share'), onPress: shareHymn, dark })}
+      {toolIcon({
+        name: 'magnify',
+        label: t('search.placeholder'),
+        onPress: () => router.push('/library'),
+        dark,
+      })}
+      {toolIcon({
+        name: fullscreen ? 'fullscreen-exit' : 'fullscreen',
+        label: fullscreen ? t('reader.exitFullscreen') : t('reader.fullscreen'),
+        onPress: () => {
+          if (fullscreen) exitFullscreen();
+          else setFullscreen(true);
+        },
+        dark,
+      })}
+      {toolIcon({
+        name: 'cog-outline',
+        label: t('reader.settings'),
+        onPress: () => setSettingsOpen(true),
+        dark,
+      })}
+      {hymn.meter
+        ? toolIcon({
+            name: 'information-outline',
+            label: t('reader.info'),
+            onPress: () => setInfoHymn(true),
+            dark,
+          })
+        : null}
+      {toolIcon({
+        name: direction.isRTL ? 'chevron-right' : 'chevron-left',
+        label: t('reader.previous'),
+        disabled: !neighbours.previous,
+        onPress: () => {
+          if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+        },
+        dark,
+      })}
+      {toolIcon({
+        name: direction.isRTL ? 'chevron-left' : 'chevron-right',
+        label: t('reader.next'),
+        disabled: !neighbours.next,
+        onPress: () => {
+          if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+        },
+        dark,
+      })}
+    </ScrollView>
   );
+
+  const translationBar = (dark: boolean) => {
+    if (!hasEn && !hasDe) return null;
+    return (
+      <View
+        style={{
+          paddingHorizontal: dark ? spacing.xl : spacing.lg,
+          paddingVertical: spacing.sm,
+          backgroundColor: dark ? 'transparent' : colors.canvas,
+        }}>
+        <SegmentedControl value={parallel} onChange={chooseParallel} options={translationOptions} />
+      </View>
+    );
+  };
 
   if (fullscreen) {
     return (
       <Animated.View style={{ flex: 1, backgroundColor: palette.readerBg, opacity: fadeAnim }}>
+        <View
+          style={{
+            paddingTop: insets.top + spacing.sm,
+            flexDirection: direction.row,
+            alignItems: 'center',
+            paddingHorizontal: spacing.sm,
+          }}>
+          {toolIcon({
+            name: direction.isRTL ? 'chevron-right' : 'chevron-left',
+            label: t('common.back'),
+            onPress: () => router.back(),
+            dark: true,
+          })}
+          {toolbar(true)}
+        </View>
+        {translationBar(true)}
         {/* Body row: text scrolls on the left, stanza rail docks on the
             physical right in its own column — never over the text. */}
         <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
@@ -726,7 +567,7 @@ export default function ReaderScreen() {
             style={{ flex: 1 }}
             contentContainerStyle={{
               paddingHorizontal: spacing.xl,
-              paddingBottom: insets.bottom + spacing.xxl + FAB_SIZE,
+              paddingBottom: insets.bottom + spacing.xxl,
               maxWidth: READER_MAX_WIDTH,
               width: '100%',
               alignSelf: 'center',
@@ -755,40 +596,19 @@ export default function ReaderScreen() {
           </ScrollView>
           {stanzaRail(true)}
         </View>
-        {/* After the body row so it stays tappable above it; physical left,
-            since the stanza rail owns the full right edge. */}
-        {fabButton({
-          name: direction.isRTL ? 'chevron-right' : 'chevron-left',
-          label: t('common.back'),
-          onPress: () => router.back(),
-          dark: true,
-          position: {
-            top: insets.top + spacing.sm,
-            left: spacing.sm,
-          },
-        })}
-        {fabButton({
-          name: 'dots-horizontal',
-          label: t('reader.tools'),
-          onPress: () => setToolsOpen(true),
-          dark: true,
-          position: {
-            bottom: insets.bottom + spacing.lg,
-            ...(direction.isRTL ? { left: spacing.lg } : { right: spacing.lg }),
-          },
-        })}
-        {toolsPanel}
+        <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} />
+        <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
       </Animated.View>
     );
   }
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      {/* Slim header: navigation + title only — every tool moved to the panel. */}
+      {/* Header: navigation + title, then the slim compact toolbar row. */}
       <View
         style={{
           paddingTop: insets.top + spacing.sm,
-          paddingBottom: spacing.md,
+          paddingBottom: spacing.sm,
           paddingHorizontal: spacing.sm,
           backgroundColor: colors.primaryDeep,
         }}>
@@ -830,7 +650,11 @@ export default function ReaderScreen() {
             ) : null}
           </View>
         </View>
+        <View style={{ flexDirection: direction.row, alignItems: 'center', marginTop: spacing.xs }}>
+          {toolbar(false)}
+        </View>
       </View>
+      {translationBar(false)}
 
       {/* Body row: text keeps flex:1 on the left, the slim stanza rail
           docks on the physical right in its own column — never over text. */}
@@ -842,7 +666,7 @@ export default function ReaderScreen() {
           contentContainerStyle={{
             flexGrow: 1,
             padding: spacing.lg,
-            paddingBottom: insets.bottom + spacing.xxl + FAB_SIZE,
+            paddingBottom: insets.bottom + spacing.xxl,
             maxWidth: READER_MAX_WIDTH,
             width: '100%',
             alignSelf: 'center',
@@ -863,56 +687,8 @@ export default function ReaderScreen() {
         {stanzaRail(false)}
       </View>
 
-      {fabButton({
-        name: 'dots-horizontal',
-        label: t('reader.tools'),
-        onPress: () => setToolsOpen(true),
-        position: {
-          bottom: insets.bottom + spacing.lg,
-          ...(direction.isRTL ? { left: spacing.lg } : { right: spacing.lg }),
-        },
-      })}
-      {toolsPanel}
-
       <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} />
       <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
     </View>
-  );
-}
-
-function NavCircle({
-  name,
-  label,
-  enabled,
-  onPress,
-}: {
-  name: ComponentProps<typeof MaterialCommunityIcons>['name'];
-  label: string;
-  enabled: boolean;
-  onPress: () => void;
-}) {
-  const { colors } = useTheme();
-
-  return (
-    <Pressable
-      onPress={onPress}
-      disabled={!enabled}
-      android_ripple={{ color: colors.border }}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      hitSlop={8}
-      style={({ pressed }) => ({
-        width: 52,
-        height: 52,
-        borderRadius: 26,
-        backgroundColor: enabled ? colors.primary : colors.surfaceMuted,
-        borderWidth: 1,
-        borderColor: enabled ? colors.primary : colors.border,
-        alignItems: 'center',
-        justifyContent: 'center',
-        opacity: !enabled ? 0.4 : pressed ? 0.75 : 1,
-      })}>
-      <MaterialCommunityIcons name={name} size={26} color={enabled ? colors.onPrimary : colors.textMuted} />
-    </Pressable>
   );
 }
