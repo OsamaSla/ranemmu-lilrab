@@ -75,13 +75,14 @@ export default function StructureScreen() {
     });
 
   // Exact sub-metres inside one family: base (most hymns) first, the length
-  // variants after — mirroring the printed index.
+  // variants after — mirroring the printed index. A hymn with no exact
+  // metre joins under the family label itself.
   const familySections = (label: string) => {
     const family = families.find((f) => f.label === label);
     if (!family) return [];
     const buckets = new Map<string, HymnSummary[]>();
     for (const hymn of family.hymns) {
-      const key = (hymn.meter ?? '').trim() || t('structure.empty');
+      const key = (hymn.meter ?? '').trim() || label;
       const bucket = buckets.get(key);
       if (bucket) bucket.push(hymn);
       else buckets.set(key, [hymn]);
