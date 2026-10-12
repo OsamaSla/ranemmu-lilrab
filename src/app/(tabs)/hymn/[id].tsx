@@ -3,11 +3,14 @@
  *
  * The hymn text owns the screen: every tool (favourite, share, search,
  * fullscreen, text settings, info, translation switch, jump-to-number,
- * previous/next, stanza jumps) hides behind one tiny floating button that
+ * previous/next) hides behind one tiny floating button that
  * opens an overlay panel, so nothing steals width from the text on mobile.
  * A second tiny button jumps straight to the refrain — handy in a live
- * assembly when the refrain sits far above the current stanza. Stanza chips
- * in the panel jump to any stanza without scrolling. Fullscreen uses the
+ * assembly when the refrain sits far above the current stanza. Stanza jumps
+ * ("انتقال إلى مقطع") live in a slim vertical rail docked on the physical
+ * right side of the text: it reserves its own narrow column in the layout,
+ * so it never overlaps the hymn text, and its tiny dots stay usable on
+ * small phones. Fullscreen uses the
  * same floating buttons over its pure-black reading surface.
  *
  * Opening a hymn records it in the recents list. Navigating here from the
@@ -40,6 +43,15 @@ import { palette, radius, spacing } from '../../../theme/tokens';
 
 /** Diameter of the tiny floating buttons — the only chrome sharing the screen. */
 const FAB_SIZE = 44;
+
+/**
+ * Width of the slim stanza-jump rail docked on the physical right side of
+ * the text, and the diameter of one jump dot. The rail reserves its own
+ * column in the layout (it never overlays the text) and stays narrow enough
+ * for small phones.
+ */
+const RAIL_WIDTH = 36;
+const RAIL_DOT = 28;
 
 /**
  * Lets `expo export` and web deep links resolve every hymn statically.
@@ -393,19 +405,103 @@ export default function ReaderScreen() {
     </>
   );
 
-  // Assembly-friendly jumps: the refrain's stanza index (if any) and a
-  // chip per stanza. Closing the panel first keeps the scroll smooth.
+  // Assembly-friendly jumps: the refrain's stanza index (if any). Stanza
+  // jumps live in the slim side rail beside the text, not in the panel.
   const chorusIndex = hymn.verses.findIndex((v) => v.chorus);
-  const goToVerse = (verseIndex: number) => {
-    setToolsOpen(false);
-    setTimeout(() => scrollToVerse(verseIndex), 60);
+
+  /**
+   * Slim vertical stanza rail ("انتقال إلى مقطع") docked on the physical
+   * right side of the hymn text. It is an in-flow column with its own
+   * reserved width, so it can never cover the text, and each jump is a tiny
+   * dot that stays usable on small phones. Hidden for single-stanza hymns.
+   */
+  const stanzaRail = (dark: boolean) => {
+    if (hymn.verses.length < 2) return null;
+    return (
+      <View
+        accessibilityRole="menu"
+        accessibilityLabel={t('reader.stanzas')}
+        style={{
+          width: RAIL_WIDTH,
+          borderLeftWidth: 1,
+          borderLeftColor: dark ? 'rgba(255,255,255,0.22)' : colors.border,
+          backgroundColor: 'transparent',
+        }}>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          contentContainerStyle={{
+            alignItems: 'center',
+            paddingTop: spacing.md,
+            // Clears the bottom floating buttons so no dot hides behind them.
+            paddingBottom: insets.bottom + spacing.lg + FAB_SIZE,
+            gap: spacing.xs,
+          }}>
+          {hymn.verses.map((verseBlock, verseIndex) => {
+            const isChorus = verseBlock.chorus;
+            const label = isChorus
+              ? (hymn.chorus ?? t('reader.refrain'))
+              : `${t('reader.verseOf')} ${verseBlock.label}`;
+            return (
+              <Pressable
+                key={`${verseIndex}-${verseBlock.label}`}
+                onPress={() => scrollToVerse(verseIndex)}
+                accessibilityRole="button"
+                accessibilityLabel={label}
+                hitSlop={6}
+                android_ripple={{ color: colors.border }}
+                style={({ pressed }) => ({
+                  width: RAIL_DOT,
+                  height: RAIL_DOT,
+                  borderRadius: RAIL_DOT / 2,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  backgroundColor: isChorus
+                    ? colors.accent
+                    : dark
+                      ? 'rgba(255,255,255,0.14)'
+                      : colors.surfaceMuted,
+                  borderWidth: 1,
+                  borderColor: isChorus
+                    ? colors.accent
+                    : dark
+                      ? 'rgba(255,255,255,0.3)'
+                      : colors.border,
+                  opacity: pressed ? 0.6 : 1,
+                })}>
+                {isChorus ? (
+                  <MaterialCommunityIcons
+                    name="repeat"
+                    size={13}
+                    color={colors.onPrimary}
+                  />
+                ) : (
+                  <AppText
+                    variant="label"
+                    useAppFont={false}
+                    style={{
+                      fontFamily: readerFontBold,
+                      fontSize: 11,
+                      fontWeight: '700',
+                      color: dark ? palette.readerText : colors.text,
+                      lineHeight: 14,
+                    }}>
+                    {verseBlock.label}
+                  </AppText>
+                )}
+              </Pressable>
+            );
+          })}
+        </ScrollView>
+      </View>
+    );
   };
 
   /**
    * Every tool in one overlay panel, shared by normal and fullscreen modes:
    * back · favourite · share · library search · home · fullscreen toggle ·
    * font size · text settings · info · translation switch · jump-to-number ·
-   * previous/next · stanza chips. Nothing here reflows the hymn text.
+   * previous/next. Stanza jumps live in the side rail, not here. Nothing
+   * here reflows the hymn text.
    */
   const toolsPanel = (
     <Modal
@@ -609,40 +705,6 @@ export default function ReaderScreen() {
               }}
             />
           </View>
-
-          <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
-            {t('reader.stanzas')}
-          </AppText>
-          <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-            <View style={{ flexDirection: direction.row, gap: spacing.sm }}>
-              {hymn.verses.map((verseBlock, verseIndex) => (
-                <Pressable
-                  key={`${verseIndex}-${verseBlock.label}`}
-                  onPress={() => goToVerse(verseIndex)}
-                  accessibilityRole="button"
-                  accessibilityLabel={
-                    verseBlock.chorus ? (hymn.chorus ?? t('reader.refrain')) : `${t('reader.verseOf')} ${verseBlock.label}`
-                  }
-                  android_ripple={{ color: colors.border }}
-                  style={({ pressed }) => ({
-                    paddingHorizontal: spacing.md,
-                    paddingVertical: spacing.sm,
-                    borderRadius: radius.pill,
-                    backgroundColor: verseBlock.chorus ? colors.accent : colors.surfaceMuted,
-                    borderWidth: 1,
-                    borderColor: verseBlock.chorus ? colors.accent : colors.border,
-                    opacity: pressed ? 0.7 : 1,
-                  })}>
-                  <AppText
-                    variant="label"
-                    color={verseBlock.chorus ? colors.onPrimary : colors.text}
-                    style={{ fontWeight: '700' }}>
-                    {verseBlock.chorus ? (hymn.chorus ?? t('reader.refrain')) : verseBlock.label}
-                  </AppText>
-                </Pressable>
-              ))}
-            </View>
-          </ScrollView>
         </Pressable>
       </Pressable>
     </Modal>
@@ -661,37 +723,43 @@ export default function ReaderScreen() {
             ...(direction.isRTL ? { right: spacing.sm } : { left: spacing.sm }),
           },
         })}
-        <ScrollView
-          ref={scrollRef}
-          contentContainerStyle={{
-            paddingHorizontal: spacing.xl,
-            paddingBottom: insets.bottom + spacing.xxl + FAB_SIZE,
-            maxWidth: READER_MAX_WIDTH,
-            width: '100%',
-            alignSelf: 'center',
-          }}>
-          <AppText
-            variant="title"
-            center
-            useAppFont={false}
-            style={{
-              fontFamily: readerFontBold,
-              fontSize: Math.round(readerSize * 1.1),
-              color: palette.readerText,
-              marginVertical: spacing.lg,
+        {/* Body row: text scrolls on the left, stanza rail docks on the
+            physical right in its own column — never over the text. */}
+        <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
+          <ScrollView
+            ref={scrollRef}
+            style={{ flex: 1 }}
+            contentContainerStyle={{
+              paddingHorizontal: spacing.xl,
+              paddingBottom: insets.bottom + spacing.xxl + FAB_SIZE,
+              maxWidth: READER_MAX_WIDTH,
+              width: '100%',
+              alignSelf: 'center',
             }}>
-            {hymn.number}. {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
-          </AppText>
-          {hymn.meter ? (
             <AppText
-              variant="caption"
+              variant="title"
               center
-              style={{ color: palette.readerText, opacity: 0.7, marginBottom: spacing.lg }}>
-              {t('info.meter')}: {hymn.meter}
+              useAppFont={false}
+              style={{
+                fontFamily: readerFontBold,
+                fontSize: Math.round(readerSize * 1.1),
+                color: palette.readerText,
+                marginVertical: spacing.lg,
+              }}>
+              {hymn.number}. {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
             </AppText>
-          ) : null}
-          {versesView}
-        </ScrollView>
+            {hymn.meter ? (
+              <AppText
+                variant="caption"
+                center
+                style={{ color: palette.readerText, opacity: 0.7, marginBottom: spacing.lg }}>
+                {t('info.meter')}: {hymn.meter}
+              </AppText>
+            ) : null}
+            {versesView}
+          </ScrollView>
+          {stanzaRail(true)}
+        </View>
         {fabButton({
           name: 'dots-horizontal',
           label: t('reader.tools'),
@@ -769,31 +837,36 @@ export default function ReaderScreen() {
         </View>
       </View>
 
-      {/* Verses own the full width now — no side rail on mobile. */}
+      {/* Body row: text keeps flex:1 on the left, the slim stanza rail
+          docks on the physical right in its own column — never over text. */}
 
-      <ScrollView
-        ref={scrollRef}
-        contentContainerStyle={{
-          flexGrow: 1,
-          padding: spacing.lg,
-          paddingBottom: insets.bottom + spacing.xxl + FAB_SIZE,
-          maxWidth: READER_MAX_WIDTH,
-          width: '100%',
-          alignSelf: 'center',
-        }}>
-        {versesView}
+      <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
+        <ScrollView
+          ref={scrollRef}
+          style={{ flex: 1 }}
+          contentContainerStyle={{
+            flexGrow: 1,
+            padding: spacing.lg,
+            paddingBottom: insets.bottom + spacing.xxl + FAB_SIZE,
+            maxWidth: READER_MAX_WIDTH,
+            width: '100%',
+            alignSelf: 'center',
+          }}>
+          {versesView}
 
-        {similar.length > 0 ? (
-          <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
-            <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
-              {t('reader.similar')}
-            </AppText>
-            {similar.map((s) => (
-              <HymnRow key={s.id} hymn={s} showStar={false} onPress={() => router.push(`/hymn/${s.id}`)} />
-            ))}
-          </Card>
-        ) : null}
-      </ScrollView>
+          {similar.length > 0 ? (
+            <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
+              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+                {t('reader.similar')}
+              </AppText>
+              {similar.map((s) => (
+                <HymnRow key={s.id} hymn={s} showStar={false} onPress={() => router.push(`/hymn/${s.id}`)} />
+              ))}
+            </Card>
+          ) : null}
+        </ScrollView>
+        {stanzaRail(false)}
+      </View>
 
       {fabButton({
         name: 'dots-horizontal',
