@@ -108,6 +108,7 @@ export const en: PartialDictionary = {
   'structure.title': 'Metre',
   'structure.subtitle': 'Hymns sharing the same metre',
   'structure.empty': 'No categorised hymns',
+  'structure.unmapped': 'Other metres',
 
   'favorites.title': 'Favorite Hymns',
   'favorites.empty': 'No favorite hymns',

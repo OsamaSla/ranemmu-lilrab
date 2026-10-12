@@ -113,6 +113,7 @@ export const de: PartialDictionary = {
   'structure.title': 'Metrum',
   'structure.subtitle': 'Lieder mit demselben Metrum',
   'structure.empty': 'Keine eingeordneten Lieder',
+  'structure.unmapped': 'Weitere Metren',
 
   'favorites.title': 'Lieblingslieder',
   'favorites.empty': 'Keine Lieblingslieder',

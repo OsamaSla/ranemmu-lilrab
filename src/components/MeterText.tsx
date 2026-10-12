@@ -8,6 +8,8 @@
  */
 import { Text as RNText, type TextStyle } from 'react-native';
 
+import { splitPair } from '../data/meter';
+
 /** The "و" separator renders at this fraction of the digit size. */
 const SEPARATOR_SCALE = 0.72;
 
@@ -19,14 +21,26 @@ interface MeterToken {
 function tokenize(meter: string): MeterToken[] {
   return meter
     .trim()
-    .split(/(\d+|[.و&]+|[-–—]+|\s+)/g)
+    .split(/(\d+|[٠-٩]+|[.و&]+|[-–—]+|\s+)/g)
     .filter((part) => part !== undefined && part !== '')
-    .map((part) => {
-      if (/^\d+$/.test(part)) return { text: part, small: false };
-      if (/^[.و&]+$/.test(part)) return { text: 'و', small: true };
-      if (/^[-–—]+$/.test(part)) return { text: '–', small: true };
-      if (/^\s+$/.test(part)) return { text: ' ', small: false };
-      return { text: part, small: false };
+    .flatMap((part) => {
+      if (/^\d+$/.test(part)) {
+        const split = splitPair(part);
+        if (split !== part) {
+          const [a, b] = [split[0], split[2]];
+          return [
+            { text: a, small: false },
+            { text: 'و', small: true },
+            { text: b, small: false },
+          ];
+        }
+        return [{ text: part, small: false }];
+      }
+      if (/^[٠-٩]+$/.test(part)) return [{ text: part, small: false }];
+      if (/^[.و&]+$/.test(part)) return [{ text: 'و', small: true }];
+      if (/^[-–—]+$/.test(part)) return [{ text: '–', small: true }];
+      if (/^\s+$/.test(part)) return [{ text: ' ', small: false }];
+      return [{ text: part, small: false }];
     });
 }
 

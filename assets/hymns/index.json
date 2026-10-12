@@ -7868,8 +7868,8 @@
   "book": "taranim",
   "number": 109,
   "title": "يا مخلصي اصحبني",
-  "hasChorus": false,
-  "meter": "8و7"
+  "meter": "8و7",
+  "hasChorus": false
  },
  {
   "id": "tr0110",
@@ -8620,7 +8620,7 @@
   "book": "taranim",
   "number": 203,
   "title": "من أنا يا رب حتى تحملن عني الصليب",
-  "meter": "15 – 14",
+  "meter": "14.14.14.14–15.15.15.15",
   "hasChorus": false
  },
  {
@@ -8980,7 +8980,7 @@
   "book": "taranim",
   "number": 248,
   "title": "ألق على الرب همك فهو يعولك",
-  "meter": "8و7",
+  "meter": "87.87.87.87–87",
   "hasChorus": false
  },
  {
@@ -9268,7 +9268,7 @@
   "book": "taranim",
   "number": 284,
   "title": "يا مخلصا كريما أرشدنا عابرين",
-  "meter": "8و7",
+  "meter": "87.87.87.87.7.87",
   "hasChorus": false
  },
  {
@@ -9731,8 +9731,8 @@
   "book": "taranim",
   "number": 342,
   "title": "يا أيها الخاطي انتبه حتى متى تخدع",
-  "hasChorus": false,
-  "meter": "8و6"
+  "meter": "8و6",
+  "hasChorus": false
  },
  {
   "id": "tr0343",
@@ -9755,7 +9755,7 @@
   "book": "taranim",
   "number": 345,
   "title": "فادي الورى يدعوك قل ها أنا",
-  "meter": "7.4",
+  "meter": "74.74.74.74",
   "hasChorus": false
  },
  {
