@@ -91,3 +91,12 @@ export function familyOf(hymnId: string): string | null {
   }
   return null;
 }
+
+/**
+ * The metre to show on a single hymn (reader, info sheet): the short family
+ * form when the hymn's cell is transcribed (٥ instead of 55.55.55.55),
+ * otherwise the exact metre. Empty when neither exists.
+ */
+export function displayMeter(hymnId: string, meter?: string): string {
+  return familyOf(hymnId) ?? (meter ?? '').trim();
+}

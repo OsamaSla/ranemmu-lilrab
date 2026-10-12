@@ -31,6 +31,7 @@ import { MeterText } from '../../../components/MeterText';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
 import { SegmentedControl, type SegmentOption } from '../../../components/SegmentedControl';
 import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
+import { displayMeter } from '../../../data/meterFamilies';
 import { normalize } from '../../../data/normalize';
 import { findSimilar } from '../../../data/search';
 import { useT } from '../../../hooks/useT';
@@ -269,6 +270,10 @@ export default function ReaderScreen() {
 
   const readerFont = fontFamilyFor(fontId, false);
   const readerFontBold = fontFamilyFor(fontId, true);
+
+  // Hymn page shows the short family form (٥, not 55.55.55.55) whenever the
+  // hymn's cell is transcribed; otherwise the exact metre.
+  const shownMeter = displayMeter(hymn.id, hymn.meter);
 
   /**
    * One small circular icon for the tools panel rows. Everything lives on
@@ -749,12 +754,12 @@ export default function ReaderScreen() {
               }}>
               {hymn.number}. {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
             </AppText>
-            {hymn.meter ? (
+            {shownMeter ? (
               <AppText
                 variant="caption"
                 center
                 style={{ color: palette.readerText, opacity: 0.7, marginBottom: spacing.lg }}>
-                {t('info.meter')}: <MeterText meter={hymn.meter} fontSize={typeScale.caption} color={palette.readerText} align="center" />
+                {t('info.meter')}: <MeterText meter={shownMeter} fontSize={typeScale.caption} color={palette.readerText} align="center" />
               </AppText>
             ) : null}
             {versesView}
@@ -817,9 +822,9 @@ export default function ReaderScreen() {
               {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
             </AppText>
             {/* Metre under the title when the book provides one. */}
-            {hymn.meter ? (
+            {shownMeter ? (
               <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.7 }}>
-                {t('info.meter')}: <MeterText meter={hymn.meter} fontSize={typeScale.caption} color={colors.onPrimary} />
+                {t('info.meter')}: <MeterText meter={shownMeter} fontSize={typeScale.caption} color={colors.onPrimary} />
               </AppText>
             ) : null}
           </View>

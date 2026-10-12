@@ -9,6 +9,7 @@ import { Modal, Pressable, View } from 'react-native';
 import { AppText } from './AppText';
 import { IconButton } from './IconButton';
 import { MeterText } from './MeterText';
+import { displayMeter } from '../data/meterFamilies';
 import type { Hymn } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -25,8 +26,9 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
   const { t, direction } = useT();
   const { colors } = useTheme();
 
-  const rows: { label: TranslationKey; value: string }[] = hymn?.meter?.trim()
-    ? [{ label: 'info.meter', value: hymn.meter }]
+  const shownMeter = hymn ? displayMeter(hymn.id, hymn.meter) : '';
+  const rows: { label: TranslationKey; value: string }[] = shownMeter
+    ? [{ label: 'info.meter', value: shownMeter }]
     : [];
 
   return (
