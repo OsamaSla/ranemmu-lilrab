@@ -5,12 +5,11 @@
  * fullscreen, text settings, info, translation switch, jump-to-number,
  * previous/next) hides behind one tiny floating button that
  * opens an overlay panel, so nothing steals width from the text on mobile.
- * A second tiny button jumps straight to the refrain — handy in a live
- * assembly when the refrain sits far above the current stanza. Stanza jumps
- * ("انتقال إلى مقطع") live in a slim vertical rail docked on the physical
+ * Stanza jumps ("انتقال إلى مقطع") live in a slim vertical rail docked on the physical
  * right side of the text: it reserves its own narrow column in the layout,
  * so it never overlaps the hymn text, and its tiny dots stay usable on
- * small phones. Fullscreen uses the
+ * small phones — the refrain has its own highlighted dot there.
+ * Fullscreen uses the
  * same floating buttons over its pure-black reading surface.
  *
  * Opening a hymn records it in the recents list. Navigating here from the
@@ -28,6 +27,7 @@ import { EmptyState } from '../../../components/EmptyState';
 import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
 import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
+import { MeterText } from '../../../components/MeterText';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
 import { SegmentedControl, type SegmentOption } from '../../../components/SegmentedControl';
 import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
@@ -38,7 +38,7 @@ import { useTheme } from '../../../hooks/useTheme';
 import { useLibrary } from '../../../store/library';
 import { useOverrides } from '../../../store/overrides';
 import { useSettings } from '../../../store/settings';
-import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
+import { fontFamilyFor, READER_MAX_WIDTH, type as typeScale } from '../../../theme/fonts';
 import { palette, radius, spacing } from '../../../theme/tokens';
 
 /** Diameter of the tiny floating buttons — the only chrome sharing the screen. */
@@ -405,9 +405,9 @@ export default function ReaderScreen() {
     </>
   );
 
-  // Assembly-friendly jumps: the refrain's stanza index (if any). Stanza
-  // jumps live in the slim side rail beside the text, not in the panel.
-  const chorusIndex = hymn.verses.findIndex((v) => v.chorus);
+  // Stanza jumps live in the slim side rail beside the text, not in the
+  // panel. The refrain needs no extra button: it has its own highlighted
+  // dot in that rail.
 
   /**
    * Slim vertical stanza rail ("انتقال إلى مقطع") docked on the physical
@@ -753,7 +753,7 @@ export default function ReaderScreen() {
                 variant="caption"
                 center
                 style={{ color: palette.readerText, opacity: 0.7, marginBottom: spacing.lg }}>
-                {t('info.meter')}: {hymn.meter}
+                {t('info.meter')}: <MeterText meter={hymn.meter} fontSize={typeScale.caption} color={palette.readerText} align="center" />
               </AppText>
             ) : null}
             {versesView}
@@ -770,18 +770,6 @@ export default function ReaderScreen() {
             ...(direction.isRTL ? { left: spacing.lg } : { right: spacing.lg }),
           },
         })}
-        {chorusIndex !== -1
-          ? fabButton({
-              name: 'repeat',
-              label: t('reader.refrain'),
-              onPress: () => scrollToVerse(chorusIndex),
-              dark: true,
-              position: {
-                bottom: insets.bottom + spacing.lg,
-                ...(direction.isRTL ? { right: spacing.lg } : { left: spacing.lg }),
-              },
-            })
-          : null}
         {toolsPanel}
       </Animated.View>
     );
@@ -830,7 +818,7 @@ export default function ReaderScreen() {
             {/* Metre under the title when the book provides one. */}
             {hymn.meter ? (
               <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.7 }}>
-                {t('info.meter')}: {hymn.meter}
+                {t('info.meter')}: <MeterText meter={hymn.meter} fontSize={typeScale.caption} color={colors.onPrimary} />
               </AppText>
             ) : null}
           </View>
@@ -877,17 +865,6 @@ export default function ReaderScreen() {
           ...(direction.isRTL ? { left: spacing.lg } : { right: spacing.lg }),
         },
       })}
-      {chorusIndex !== -1
-        ? fabButton({
-            name: 'repeat',
-            label: t('reader.refrain'),
-            onPress: () => scrollToVerse(chorusIndex),
-            position: {
-              bottom: insets.bottom + spacing.lg,
-              ...(direction.isRTL ? { right: spacing.lg } : { left: spacing.lg }),
-            },
-          })
-        : null}
       {toolsPanel}
 
       <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} />

@@ -14,12 +14,14 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { EmptyState } from '../../components/EmptyState';
 import { HymnRow } from '../../components/HymnRow';
+import { MeterText } from '../../components/MeterText';
 import { getSummaries } from '../../data/loader';
 import { groupByStructure } from '../../data/search';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
 import { useSettings } from '../../store/settings';
+import { type as typeScale } from '../../theme/fonts';
 import { spacing } from '../../theme/tokens';
 
 export default function StructureScreen() {
@@ -82,9 +84,14 @@ export default function StructureScreen() {
                 },
               ]}>
               <MaterialCommunityIcons name="music-note" size={20} color={colors.primary} />
-              <AppText variant="body" style={{ fontWeight: '700', flex: 1, marginHorizontal: spacing.sm }} numberOfLines={1}>
-                {typed.label}
-              </AppText>
+              <MeterText
+                meter={typed.label}
+                fontSize={typeScale.body}
+                color={colors.text}
+                bold
+                numberOfLines={1}
+                style={{ flex: 1, marginHorizontal: spacing.sm }}
+              />
               <AppText variant="caption" color={colors.textMuted}>
                 {typed.hymns.length}
               </AppText>

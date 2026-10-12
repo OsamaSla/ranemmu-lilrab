@@ -8,10 +8,12 @@ import { Modal, Pressable, View } from 'react-native';
 
 import { AppText } from './AppText';
 import { IconButton } from './IconButton';
+import { MeterText } from './MeterText';
 import type { Hymn } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
 import type { TranslationKey } from '../i18n';
+import { type as typeScale } from '../theme/fonts';
 import { radius, spacing } from '../theme/tokens';
 
 interface HymnInfoSheetProps {
@@ -94,9 +96,14 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
               <AppText variant="body" color={colors.textMuted}>
                 {t(row.label)}
               </AppText>
-              <AppText variant="body" style={{ fontWeight: '700', maxWidth: '60%' }} numberOfLines={2}>
-                {row.value}
-              </AppText>
+              <MeterText
+                meter={row.value}
+                fontSize={typeScale.body}
+                color={colors.text}
+                bold
+                numberOfLines={2}
+                style={{ maxWidth: '60%' }}
+              />
             </View>
           ))}
         </Pressable>

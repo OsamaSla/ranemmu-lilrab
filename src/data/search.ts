@@ -12,6 +12,7 @@
  * the flattened search index is built once per loaded corpus and memoised.
  */
 import { normalize, type Normalized } from './normalize';
+import { normalizeMeter } from './meter';
 import type { Hymn, HymnSummary, SearchMatch } from './types';
 
 /** One searchable line, with its normalised form precomputed. */
@@ -205,8 +206,10 @@ export function findSimilar(hymn: HymnSummary, all: HymnSummary[], limit = 20): 
     .filter((candidate) => candidate.id !== hymn.id)
     .map((candidate) => {
       let score = 0;
-      if (hymn.meter && candidate.meter === hymn.meter) score += 25;
-      if (!score && !hymn.meter && hymn.hasChorus && candidate.hasChorus) score += 5;
+      const hymnMeter = hymn.meter ? normalizeMeter(hymn.meter) : '';
+      const candidateMeter = candidate.meter ? normalizeMeter(candidate.meter) : '';
+      if (hymnMeter && candidateMeter === hymnMeter) score += 25;
+      if (!score && !hymnMeter && hymn.hasChorus && candidate.hasChorus) score += 5;
       return { candidate, score };
     })
     .filter((entry) => entry.score > 0)
@@ -220,8 +223,9 @@ export function groupByStructure(all: HymnSummary[]): { key: string; label: stri
   const groups = new Map<string, HymnSummary[]>();
 
   for (const hymn of all) {
-    const key = hymn.meter?.trim() || '';
-    if (!key) continue;
+    const raw = hymn.meter?.trim() || '';
+    if (!raw) continue;
+    const key = normalizeMeter(raw);
     const bucket = groups.get(key);
     if (bucket) bucket.push(hymn);
     else groups.set(key, [hymn]);
@@ -230,7 +234,7 @@ export function groupByStructure(all: HymnSummary[]): { key: string; label: stri
   return [...groups.entries()]
     .map(([key, hymns]) => ({
       key,
-      label: hymns[0].meter?.trim() || key,
+      label: key,
       hymns: hymns.sort((a, b) => a.number - b.number),
     }))
     .sort((a, b) => a.label.localeCompare(b.label, 'ar'));
