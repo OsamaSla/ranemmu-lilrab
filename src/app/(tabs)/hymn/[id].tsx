@@ -720,7 +720,8 @@ export default function ReaderScreen() {
           dark: true,
           position: {
             top: insets.top + spacing.sm,
-            ...(direction.isRTL ? { right: spacing.sm } : { left: spacing.sm }),
+            // Physical left: the stanza rail owns the full right edge.
+            left: spacing.sm,
           },
         })}
         {/* Body row: text scrolls on the left, stanza rail docks on the
