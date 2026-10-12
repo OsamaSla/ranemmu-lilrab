@@ -158,4 +158,7 @@ export const en: PartialDictionary = {
   'common.loading': 'Loading...',
   'common.hymnNumber': 'Hymn',
   'common.notFound': 'This hymn could not be found',
+  'common.arShort': 'AR',
+  'common.enShort': 'EN',
+  'common.deShort': 'DE',
 };

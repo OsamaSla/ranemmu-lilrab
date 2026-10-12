@@ -163,4 +163,7 @@ export const de: PartialDictionary = {
   'common.loading': 'Wird geladen...',
   'common.hymnNumber': 'Lied',
   'common.notFound': 'Dieses Lied konnte nicht gefunden werden',
+  'common.arShort': 'AR',
+  'common.enShort': 'EN',
+  'common.deShort': 'DE',
 };

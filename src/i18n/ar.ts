@@ -196,6 +196,9 @@ admin: {
     loading: 'جارٍ التحميل...',
     hymnNumber: 'الترنيمة',
     notFound: 'لم يتم العثور على هذه الترنيمة',
+    arShort: 'عر',
+    enShort: 'EN',
+    deShort: 'DE',
   },
 } as const;
 
