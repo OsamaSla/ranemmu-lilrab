@@ -2,10 +2,11 @@
  * قارئ الترنيمة — the hymn reader.
  *
  * The hymn text owns the screen: frequent tools (favourite, share, search,
- * fullscreen, text settings, info, previous/next) live in one slim compact
- * icon row inside the header, so the bottom tab bar never hides and no tall
- * sheet covers the text. Home is intentionally absent here — the tab bar
- * already provides it. Font size lives inside the text-settings sheet.
+ * fullscreen, text settings, info, language chips, previous/next) live in
+ * one slim compact icon row inside the header, so the bottom tab bar never
+ * hides and no tall sheet covers the text. Home is intentionally absent
+ * here — the tab bar already provides it. Font size lives inside the
+ * text-settings sheet.
  * Stanza jumps ("انتقال إلى مقطع") live in a slim vertical rail docked on the physical
  * right side of the text: it reserves its own narrow column in the layout,
  * so it never overlaps the hymn text, and its tiny dots stay usable on
@@ -29,7 +30,7 @@ import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
 import { MeterText } from '../../../components/MeterText';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
-import { SegmentedControl, type SegmentOption } from '../../../components/SegmentedControl';
+import type { SegmentOption } from '../../../components/SegmentedControl';
 import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
 import { displayMeter } from '../../../data/meterFamilies';
 import { findSimilar } from '../../../data/search';
@@ -452,91 +453,119 @@ export default function ReaderScreen() {
   /**
    * Slim compact toolbar shared by normal and fullscreen modes:
    * favourite · share · library search · fullscreen toggle ·
-   * text settings · info · previous/next. No Home (the tab bar owns it),
-   * no back duplicate (the header owns it), no font +/- (inside settings).
-   * One 48px horizontal row — the tab bar stays visible.
+   * text settings · info · language chips · previous/next.
+   * No Home (the tab bar owns it), no back duplicate (the header owns it),
+   * no font +/- (inside settings). One 48px horizontal row — the tab bar
+   * stays visible, and there is no second translation row.
    */
-  const toolbar = (dark: boolean) => (
-    <ScrollView
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      contentContainerStyle={{
-        flexDirection: direction.row,
-        alignItems: 'center',
-        paddingHorizontal: spacing.sm,
-        gap: 2,
-        minHeight: TOOLBAR_HEIGHT,
-      }}
-      style={{ flex: 1 }}>
-      {toolIcon({
-        name: isFavorite ? 'star' : 'star-outline',
-        label: t('favorites.title'),
-        onPress: () => toggleFavorite(hymn.id),
-        color: isFavorite ? colors.favorite : dark ? palette.readerText : colors.onPrimary,
-        dark,
-      })}
-      {toolIcon({ name: 'share-variant', label: t('reader.share'), onPress: shareHymn, dark })}
-      {toolIcon({
-        name: 'magnify',
-        label: t('search.placeholder'),
-        onPress: () => router.push('/library'),
-        dark,
-      })}
-      {toolIcon({
-        name: fullscreen ? 'fullscreen-exit' : 'fullscreen',
-        label: fullscreen ? t('reader.exitFullscreen') : t('reader.fullscreen'),
-        onPress: () => {
-          if (fullscreen) exitFullscreen();
-          else setFullscreen(true);
-        },
-        dark,
-      })}
-      {toolIcon({
-        name: 'cog-outline',
-        label: t('reader.settings'),
-        onPress: () => setSettingsOpen(true),
-        dark,
-      })}
-      {hymn.meter
-        ? toolIcon({
-            name: 'information-outline',
-            label: t('reader.info'),
-            onPress: () => setInfoHymn(true),
-            dark,
-          })
-        : null}
-      {toolIcon({
-        name: direction.isRTL ? 'chevron-right' : 'chevron-left',
-        label: t('reader.previous'),
-        disabled: !neighbours.previous,
-        onPress: () => {
-          if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
-        },
-        dark,
-      })}
-      {toolIcon({
-        name: direction.isRTL ? 'chevron-left' : 'chevron-right',
-        label: t('reader.next'),
-        disabled: !neighbours.next,
-        onPress: () => {
-          if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
-        },
-        dark,
-      })}
-    </ScrollView>
-  );
-
-  const translationBar = (dark: boolean) => {
-    if (!hasEn && !hasDe) return null;
+  const toolbar = (dark: boolean) => {
+    const ink = dark ? palette.readerText : colors.onPrimary;
+    const selectedInk = dark ? '#000000' : colors.primaryDeep;
     return (
-      <View
-        style={{
-          paddingHorizontal: dark ? spacing.xl : spacing.lg,
-          paddingVertical: spacing.sm,
-          backgroundColor: dark ? 'transparent' : colors.canvas,
-        }}>
-        <SegmentedControl value={parallel} onChange={chooseParallel} options={translationOptions} />
-      </View>
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={{
+          flexDirection: direction.row,
+          alignItems: 'center',
+          paddingHorizontal: spacing.sm,
+          gap: 2,
+          minHeight: TOOLBAR_HEIGHT,
+        }}
+        style={{ flex: 1 }}>
+        {toolIcon({
+          name: isFavorite ? 'star' : 'star-outline',
+          label: t('favorites.title'),
+          onPress: () => toggleFavorite(hymn.id),
+          color: isFavorite ? colors.favorite : ink,
+          dark,
+        })}
+        {toolIcon({ name: 'share-variant', label: t('reader.share'), onPress: shareHymn, dark })}
+        {toolIcon({
+          name: 'magnify',
+          label: t('search.placeholder'),
+          onPress: () => router.push('/library'),
+          dark,
+        })}
+        {toolIcon({
+          name: fullscreen ? 'fullscreen-exit' : 'fullscreen',
+          label: fullscreen ? t('reader.exitFullscreen') : t('reader.fullscreen'),
+          onPress: () => {
+            if (fullscreen) exitFullscreen();
+            else setFullscreen(true);
+          },
+          dark,
+        })}
+        {toolIcon({
+          name: 'cog-outline',
+          label: t('reader.settings'),
+          onPress: () => setSettingsOpen(true),
+          dark,
+        })}
+        {hymn.meter
+          ? toolIcon({
+              name: 'information-outline',
+              label: t('reader.info'),
+              onPress: () => setInfoHymn(true),
+              dark,
+            })
+          : null}
+        {translationOptions.length > 1
+          ? translationOptions.map((option) => {
+              const selected = option.value === parallel;
+              const short = option.value === 'ar' ? 'عر' : option.value === 'en' ? 'EN' : 'DE';
+              return (
+                <Pressable
+                  key={option.value}
+                  onPress={() => chooseParallel(option.value)}
+                  accessibilityRole="button"
+                  accessibilityLabel={option.label}
+                  accessibilityState={{ selected }}
+                  hitSlop={6}
+                  android_ripple={{ color: dark ? 'rgba(255,255,255,0.3)' : colors.border }}
+                  style={({ pressed }) => ({
+                    minHeight: 36,
+                    minWidth: 44,
+                    paddingHorizontal: spacing.sm,
+                    paddingVertical: 6,
+                    borderRadius: radius.pill,
+                    borderWidth: 1,
+                    borderColor: selected ? 'transparent' : dark ? 'rgba(255,255,255,0.45)' : 'rgba(255,255,255,0.55)',
+                    backgroundColor: selected ? ink : 'transparent',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    opacity: pressed ? 0.7 : 1,
+                  })}>
+                  <AppText
+                    variant="label"
+                    numberOfLines={1}
+                    color={selected ? selectedInk : ink}
+                    style={{ fontWeight: selected ? '700' : '500', fontSize: 12, lineHeight: 16 }}>
+                    {short}
+                  </AppText>
+                </Pressable>
+              );
+            })
+          : null}
+        {toolIcon({
+          name: direction.isRTL ? 'chevron-right' : 'chevron-left',
+          label: t('reader.previous'),
+          disabled: !neighbours.previous,
+          onPress: () => {
+            if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+          },
+          dark,
+        })}
+        {toolIcon({
+          name: direction.isRTL ? 'chevron-left' : 'chevron-right',
+          label: t('reader.next'),
+          disabled: !neighbours.next,
+          onPress: () => {
+            if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+          },
+          dark,
+        })}
+      </ScrollView>
     );
   };
 
@@ -558,7 +587,6 @@ export default function ReaderScreen() {
           })}
           {toolbar(true)}
         </View>
-        {translationBar(true)}
         {/* Body row: text scrolls on the left, stanza rail docks on the
             physical right in its own column — never over the text. */}
         <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
@@ -654,7 +682,6 @@ export default function ReaderScreen() {
           {toolbar(false)}
         </View>
       </View>
-      {translationBar(false)}
 
       {/* Body row: text keeps flex:1 on the left, the slim stanza rail
           docks on the physical right in its own column — never over text. */}
