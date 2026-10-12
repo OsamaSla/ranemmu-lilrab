@@ -4,9 +4,7 @@
  *
  * Transcribed families render as a grid of cells; tapping a cell opens the
  * family with one section per exact sub-metre (base first, then variants).
- * Hymns whose cell is not transcribed yet fall back to exact-metre groups
- * under "مقاييس أخرى" so nothing ever disappears. Books without families
- * keep the plain exact-metre list.
+ * Books without families keep the plain exact-metre list.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useMemo, useState } from 'react';
@@ -45,8 +43,7 @@ export default function StructureScreen() {
 
   const byId = useMemo(() => new Map(summaries.map((s) => [s.id, s])), [summaries]);
 
-  // Families present in this book, in index order; the rest stays in
-  // exact-metre groups so untranscribed cells lose no hymns.
+  // Families present in this book, in index order.
   const families = useMemo(
     () =>
       METER_FAMILIES.map((f) => ({
@@ -58,13 +55,10 @@ export default function StructureScreen() {
       })).filter((f) => f.hymns.length > 0),
     [byId],
   );
-  const mappedIds = useMemo(() => new Set(families.flatMap((f) => f.hymns.map((h) => h.id))), [families]);
 
+  // Plain exact-metre groups, for books without transcribed families.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const fallbackGroups = useMemo(
-    () => groupByStructure(summaries.filter((s) => !mappedIds.has(s.id))),
-    [summaries, mappedIds],
-  );
+  const exactGroups = useMemo(() => groupByStructure(summaries), [summaries]);
 
   const toggle = (key: string) =>
     setOpen((prev) => {
@@ -142,7 +136,7 @@ export default function StructureScreen() {
       <View style={{ flex: 1, backgroundColor: colors.canvas }}>
         <AppBar title={t('structure.title')} subtitle={t('structure.subtitle')} />
         <SectionList
-          sections={fallbackGroups.map((group) => ({
+          sections={exactGroups.map((group) => ({
             key: group.key,
             label: group.label,
             hymns: group.hymns,
@@ -221,7 +215,7 @@ export default function StructureScreen() {
     );
   }
 
-  // Family grid with the remaining exact-metre groups underneath.
+  // Family grid only — no fallback list.
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={t('structure.title')} subtitle={t('structure.subtitle')} />
@@ -257,26 +251,6 @@ export default function StructureScreen() {
             </View>
           ))}
         </View>
-
-        {fallbackGroups.length > 0 ? (
-          <View style={{ marginTop: spacing.lg }}>
-            <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
-              {t('structure.unmapped')}
-            </AppText>
-            {fallbackGroups.map((group) => (
-              <View key={group.key}>
-                {headerRow(group.key, group.label, group.hymns.length)}
-                {open.has(group.key)
-                  ? group.hymns.map((hymn) => (
-                      <View key={hymn.id} style={{ paddingStart: spacing.lg }}>
-                        <HymnRow hymn={hymn} onPress={() => router.push(`/hymn/${hymn.id}`)} />
-                      </View>
-                    ))
-                  : null}
-              </View>
-            ))}
-          </View>
-        ) : null}
       </ScrollView>
     </View>
   );

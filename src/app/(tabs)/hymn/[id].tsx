@@ -718,17 +718,6 @@ export default function ReaderScreen() {
   if (fullscreen) {
     return (
       <Animated.View style={{ flex: 1, backgroundColor: palette.readerBg, opacity: fadeAnim }}>
-        {fabButton({
-          name: direction.isRTL ? 'chevron-right' : 'chevron-left',
-          label: t('common.back'),
-          onPress: () => router.back(),
-          dark: true,
-          position: {
-            top: insets.top + spacing.sm,
-            // Physical left: the stanza rail owns the full right edge.
-            left: spacing.sm,
-          },
-        })}
         {/* Body row: text scrolls on the left, stanza rail docks on the
             physical right in its own column — never over the text. */}
         <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
@@ -766,6 +755,18 @@ export default function ReaderScreen() {
           </ScrollView>
           {stanzaRail(true)}
         </View>
+        {/* After the body row so it stays tappable above it; physical left,
+            since the stanza rail owns the full right edge. */}
+        {fabButton({
+          name: direction.isRTL ? 'chevron-right' : 'chevron-left',
+          label: t('common.back'),
+          onPress: () => router.back(),
+          dark: true,
+          position: {
+            top: insets.top + spacing.sm,
+            left: spacing.sm,
+          },
+        })}
         {fabButton({
           name: 'dots-horizontal',
           label: t('reader.tools'),
