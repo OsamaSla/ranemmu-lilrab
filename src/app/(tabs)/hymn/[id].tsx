@@ -250,7 +250,9 @@ export default function ReaderScreen() {
 
   /**
    * Compact icon button for the header toolbar. Transparent background,
-   * 40px touch target, coloured icon.
+   * 40px touch target by default, coloured icon. The prev/next pair uses a
+   * narrower 34px box so the whole row fits small phones without scrolling —
+   * hitSlop still keeps the effective touch area above 48px.
    */
   const headerIcon = (props: {
     name: ComponentProps<typeof MaterialCommunityIcons>['name'];
@@ -259,24 +261,28 @@ export default function ReaderScreen() {
     color?: string;
     dark?: boolean;
     disabled?: boolean;
-  }) => (
-    <IconButton
-      name={props.name}
-      label={props.label}
-      onPress={props.onPress}
-      disabled={props.disabled}
-      size={22}
-      color={props.color ?? (props.dark ? palette.readerText : colors.onPrimary)}
-      style={{
-        width: 40,
-        height: 40,
-        borderRadius: 20,
-        backgroundColor: 'transparent',
-        borderWidth: 0,
-        opacity: props.disabled ? 0.35 : 1,
-      }}
-    />
-  );
+    box?: number;
+  }) => {
+    const box = props.box ?? 40;
+    return (
+      <IconButton
+        name={props.name}
+        label={props.label}
+        onPress={props.onPress}
+        disabled={props.disabled}
+        size={22}
+        color={props.color ?? (props.dark ? palette.readerText : colors.onPrimary)}
+        style={{
+          width: box,
+          height: 40,
+          borderRadius: box / 2,
+          backgroundColor: 'transparent',
+          borderWidth: 0,
+          opacity: props.disabled ? 0.35 : 1,
+        }}
+      />
+    );
+  };
 
   /**
    * Language selector chips: short labels (AR/EN/DE), pill style.
@@ -351,24 +357,28 @@ export default function ReaderScreen() {
           minHeight: TOOLBAR_HEIGHT,
         }}
         style={{ flex: 1 }}>
-        {headerIcon({
-          name: direction.isRTL ? 'chevron-right' : 'chevron-left',
-          label: t('reader.previous'),
-          disabled: !neighbours.previous,
-          onPress: () => {
-            if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
-          },
-          dark,
-        })}
-        {headerIcon({
-          name: direction.isRTL ? 'chevron-left' : 'chevron-right',
-          label: t('reader.next'),
-          disabled: !neighbours.next,
-          onPress: () => {
-            if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
-          },
-          dark,
-        })}
+        <View style={{ flexDirection: direction.row, alignItems: 'center', gap: 0 }}>
+          {headerIcon({
+            name: direction.isRTL ? 'chevron-right' : 'chevron-left',
+            label: t('reader.previous'),
+            disabled: !neighbours.previous,
+            onPress: () => {
+              if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+            },
+            dark,
+            box: 34,
+          })}
+          {headerIcon({
+            name: direction.isRTL ? 'chevron-left' : 'chevron-right',
+            label: t('reader.next'),
+            disabled: !neighbours.next,
+            onPress: () => {
+              if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+            },
+            dark,
+            box: 34,
+          })}
+        </View>
         {headerIcon({
           name: 'cog-outline',
           label: t('reader.settings'),
