@@ -185,19 +185,31 @@ export default function ReaderScreen() {
     }).start(() => setFullscreen(false));
   };
 
-  const verseOffsets = useRef<Map<number, number>>(new Map());
-
-  useEffect(() => {
-    verseOffsets.current.clear();
-  }, [id]);
+  // Scroll targets for the stanza rail. The store is tagged with the hymn
+  // it was measured for: the first onLayout of a new hymn resets it, so
+  // stale offsets from the previous hymn can never leak in. (A previous
+  // clear()-in-effect raced onLayout — after next/prev navigation the map
+  // was wiped and reused views don't always re-fire onLayout, leaving
+  // dots that do nothing when tapped.)
+  const verseOffsets = useRef<{ hymnId: string; offsets: Map<number, number> }>({
+    hymnId: '',
+    offsets: new Map(),
+  });
 
   const scrollToVerse = (verseIndex: number) => {
-    const y = verseOffsets.current.get(verseIndex);
+    const store = verseOffsets.current;
+    if (store.hymnId !== id) return;
+    const y = store.offsets.get(verseIndex);
     if (y !== undefined) scrollRef.current?.scrollTo({ y: Math.max(0, y - spacing.lg), animated: true });
   };
 
   const onVerseLayout = (verseIndex: number) => (event: LayoutChangeEvent) => {
-    verseOffsets.current.set(verseIndex, event.nativeEvent.layout.y);
+    const store = verseOffsets.current;
+    if (store.hymnId !== id) {
+      store.hymnId = id ?? '';
+      store.offsets = new Map();
+    }
+    store.offsets.set(verseIndex, event.nativeEvent.layout.y);
   };
 
   useEffect(() => {
@@ -628,7 +640,10 @@ export default function ReaderScreen() {
         {/* Body row: text scrolls on the left, stanza rail docks on the
             physical right in its own column — never over the text. */}
         <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
+          {/* Keyed by hymn: next/prev remounts, so every verse re-measures
+              for the rail and the new hymn opens at the top. */}
           <ScrollView
+            key={`fs-${hymn.id}`}
             ref={scrollRef}
             style={{ flex: 1 }}
             contentContainerStyle={{
@@ -725,7 +740,10 @@ export default function ReaderScreen() {
           docks on the physical right in its own column — never over text. */}
 
       <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
+        {/* Keyed by hymn: next/prev remounts, so every verse re-measures
+            for the rail and the new hymn opens at the top. */}
         <ScrollView
+          key={hymn.id}
           ref={scrollRef}
           style={{ flex: 1 }}
           contentContainerStyle={{
