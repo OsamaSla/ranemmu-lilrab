@@ -26,6 +26,9 @@ export default function Root({ children }: PropsWithChildren) {
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta name="apple-mobile-web-app-title" content="رنموا للرب" />
 
+        {/* Umami analytics - shared website ID, filter by Path in dashboard */}
+        <script defer src="https://cloud.umami.is/script.js" data-website-id="4bf9e517-428f-466b-a83e-5873974e1e8f" />
+
         {/* Service worker */}
         <script dangerouslySetInnerHTML={{ __html: sw }} />
 
