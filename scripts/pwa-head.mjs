@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
  * PWA head injection. Run after `expo export --platform web` (alongside
- * pages-fallback.mjs). Expo's static export emits no web manifest, so
- * "Add to Home Screen" installs without a proper icon. This inserts the
- * manifest / touch-icon / theme-color tags into every dist/*.html head.
+ * pages-fallback.mjs) as a backfill for any page missing PWA tags.
+ * The primary source of truth is src/app/+html.tsx; this script only
+ * touches pages without a manifest link.
  * Idempotent: pages already carrying a manifest link are left untouched.
  */
 import { readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
@@ -41,6 +41,7 @@ let touched = 0;
 for (const file of walk(DIST)) {
   const html = readFileSync(file, 'utf8');
   if (html.includes('pwa-head')) continue;
+  if (html.includes('rel="manifest"')) continue;
   if (!html.includes('</head>')) {
     console.error(`pwa-head: ${file} has no </head> — skipped`);
     continue;
