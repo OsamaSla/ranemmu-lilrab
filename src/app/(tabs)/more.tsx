@@ -8,7 +8,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps } from 'react';
 import { useMemo } from 'react';
-import { Alert, Pressable, Share, ScrollView, View } from 'react-native';
+import { Alert, Platform, Pressable, Share, ScrollView, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
@@ -43,10 +43,22 @@ export default function MoreScreen() {
   const hasMeter = useMemo(() => getSummaries().some((s) => s.meter?.trim()), [corpusVersion]);
 
   const shareApp = () => {
+    const text = t('more.shareAppMessage');
+    if (Platform.OS === 'web') {
+      // navigator.share renders `text` and `url` as separate entries, so
+      // the link lives only in `url` — embedding it in both prints it twice.
+      Share.share({ message: text, title: t('more.shareApp'), url: APP_SITE_URL }).catch(() => {
+        // Dismissed share sheet is not an error worth surfacing.
+      });
+      return;
+    }
     // Android ignores the separate `url` field, so the link must also be
     // part of `message`. iOS uses `url` for a tappable link preview.
-    const message = `${t('more.shareAppMessage')}\n${APP_SITE_URL}`;
-    Share.share({ message, title: t('more.shareApp'), url: APP_SITE_URL }).catch(() => {
+    Share.share({
+      message: `${text}\n${APP_SITE_URL}`,
+      title: t('more.shareApp'),
+      url: APP_SITE_URL,
+    }).catch(() => {
       // Dismissed share sheet is not an error worth surfacing.
     });
   };

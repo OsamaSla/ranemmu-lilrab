@@ -9,7 +9,8 @@
  * text-settings sheet.
  * Stanza jumps ("انتقال إلى مقطع") live in a slim vertical rail docked on the physical
  * right side of the text: it reserves its own narrow column in the layout,
- * so it never overlaps the hymn text, and its tiny dots stay usable on
+ * so it never overlaps the hymn text, and its dots sit inset from the
+ * screen edge with an extended tap area so they stay usable on
  * small phones — the refrain has its own highlighted dot there.
  * Fullscreen uses the same compact toolbar over its pure-black surface.
  *
@@ -40,7 +41,7 @@ import { useLibrary } from '../../../store/library';
 import { useOverrides } from '../../../store/overrides';
 import { useSettings } from '../../../store/settings';
 import { fontFamilyFor, READER_MAX_WIDTH, type as typeScale } from '../../../theme/fonts';
-import { palette, radius, spacing } from '../../../theme/tokens';
+import { palette, radius, spacing, HIT_SLOP } from '../../../theme/tokens';
 
 /** Height of the slim compact toolbar row inside the header. */
 const TOOLBAR_HEIGHT = 48;
@@ -49,10 +50,13 @@ const TOOLBAR_HEIGHT = 48;
  * Width of the slim stanza-jump rail docked on the physical right side of
  * the text, and the diameter of one jump dot. The rail reserves its own
  * column in the layout (it never overlays the text) and stays narrow enough
- * for small phones.
+ * for small phones. The dots sit on an 8px+ gutter off the screen edge —
+ * targets flush against the edge are hard to hit with a thumb and fight
+ * edge-swipe gestures — and hitSlop extends the tap area on native
+ * (react-native-web ignores hitSlop, hence the genuinely larger dots).
  */
-const RAIL_WIDTH = 36;
-const RAIL_DOT = 28;
+const RAIL_WIDTH = 52;
+const RAIL_DOT = 36;
 
 /**
  * Lets `expo export` and web deep links resolve every hymn statically.
@@ -500,8 +504,10 @@ export default function ReaderScreen() {
   /**
    * Slim vertical stanza rail ("انتقال إلى مقطع") docked on the physical
    * right side of the hymn text. It is an in-flow column with its own
-   * reserved width, so it can never cover the text, and each jump is a tiny
-   * dot that stays usable on small phones. Hidden for single-stanza hymns.
+   * reserved width, so it can never cover the text. Dots are inset from the
+   * screen edge by at least spacing.sm (plus the notch safe-area) and use
+   * HIT_SLOP on native, so they stay tappable on small phones. Hidden for
+   * single-stanza hymns.
    */
   const stanzaRail = (dark: boolean) => {
     if (hymn.verses.length < 2) return null;
@@ -511,6 +517,8 @@ export default function ReaderScreen() {
         accessibilityLabel={t('reader.stanzas')}
         style={{
           width: RAIL_WIDTH,
+          paddingStart: spacing.sm,
+          paddingEnd: Math.max(insets.right, spacing.sm),
           borderLeftWidth: 1,
           borderLeftColor: dark ? 'rgba(255,255,255,0.22)' : colors.border,
           backgroundColor: 'transparent',
@@ -521,7 +529,7 @@ export default function ReaderScreen() {
             alignItems: 'center',
             paddingTop: spacing.md,
             paddingBottom: insets.bottom + spacing.lg,
-            gap: spacing.xs,
+            gap: spacing.sm,
           }}>
           {hymn.verses.map((verseBlock, verseIndex) => {
             const isChorus = verseBlock.chorus;
@@ -534,7 +542,7 @@ export default function ReaderScreen() {
                 onPress={() => scrollToVerse(verseIndex)}
                 accessibilityRole="button"
                 accessibilityLabel={label}
-                hitSlop={6}
+                hitSlop={HIT_SLOP}
                 android_ripple={{ color: colors.border }}
                 style={({ pressed }) => ({
                   width: RAIL_DOT,
@@ -558,7 +566,7 @@ export default function ReaderScreen() {
                 {isChorus ? (
                   <MaterialCommunityIcons
                     name="repeat"
-                    size={13}
+                    size={16}
                     color={colors.onPrimary}
                   />
                 ) : (
@@ -567,10 +575,10 @@ export default function ReaderScreen() {
                     useAppFont={false}
                     style={{
                       fontFamily: readerFontBold,
-                      fontSize: 11,
+                      fontSize: 12,
                       fontWeight: '700',
                       color: dark ? palette.readerText : colors.text,
-                      lineHeight: 14,
+                      lineHeight: 16,
                     }}>
                     {verseBlock.label}
                   </AppText>
