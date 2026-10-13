@@ -153,6 +153,7 @@ export const de: PartialDictionary = {
   'more.admin': 'Admin',
   'more.rateApp': 'App bewerten',
   'more.shareApp': 'App teilen',
+  'more.shareAppMessage': 'Ranemmu-Lilrab-App — die Liederbücher Ranemmu Lilrab und geistliche Lieder',
   'more.contactUs': 'Kontakt',
   'more.notConfigured': 'Diese Funktion ist noch nicht eingerichtet',
 

@@ -25,6 +25,11 @@ type IconName = ComponentProps<typeof MaterialCommunityIcons>['name'];
 
 const ABOUT_VERSION = '1.0.0';
 
+// Canonical public link (README "Live demo"). The static export is served
+// under /ranemmu-lilrab, so share the full URL — a bare title is useless
+// to the recipient.
+const APP_SITE_URL = 'https://OsamaSla.github.io/ranemmu-lilrab/';
+
 export default function MoreScreen() {
   const router = useRouter();
   const { t } = useT();
@@ -38,9 +43,10 @@ export default function MoreScreen() {
   const hasMeter = useMemo(() => getSummaries().some((s) => s.meter?.trim()), [corpusVersion]);
 
   const shareApp = () => {
-    Share.share({
-      message: `${t('appName')} — ${t('more.title')}`,
-    }).catch(() => {
+    // Android ignores the separate `url` field, so the link must also be
+    // part of `message`. iOS uses `url` for a tappable link preview.
+    const message = `${t('more.shareAppMessage')}\n${APP_SITE_URL}`;
+    Share.share({ message, title: t('more.shareApp'), url: APP_SITE_URL }).catch(() => {
       // Dismissed share sheet is not an error worth surfacing.
     });
   };
