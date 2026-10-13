@@ -592,7 +592,7 @@ export default function ReaderScreen() {
             dark: true,
           })}
           <View style={{ flex: 1, paddingHorizontal: spacing.sm }}>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-end' }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start' }}>
               <AppText
                 variant="heading"
                 numberOfLines={1}
@@ -602,7 +602,7 @@ export default function ReaderScreen() {
               </AppText>
               {languageChips(true)}
             </View>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-end', marginTop: 2 }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start', marginTop: 2 }}>
               {iconToolbar(true)}
             </View>
           </View>
@@ -680,7 +680,7 @@ export default function ReaderScreen() {
             onPress={() => router.back()}
           />
           <View style={{ flex: 1, paddingHorizontal: spacing.sm }}>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-end' }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start' }}>
               <AppText
                 variant="heading"
                 numberOfLines={1}
@@ -690,7 +690,7 @@ export default function ReaderScreen() {
               </AppText>
               {languageChips(false)}
             </View>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-end', marginTop: 2 }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start', marginTop: 2 }}>
               {iconToolbar(false)}
             </View>
             {/* Metre under the title when the book provides one. */}
