@@ -30,7 +30,7 @@
      "label": "3",
      "lines": [
       "(كُلِّنَا فِي المَوَازِين إِلَى فُوق ❖ لَكِن جُوَّا قلُوبنَا فِيه شُوق)",
-      "نِحيَا لَك يَا رَبّ أَعِنَّامَا انتَ عَارِف ضَعف المَخْلُوق"
+      "نِحيَا لَك يَا رَبّ أَعِنَّا ❖ مَا انتَ عَارِف ضَعف المَخْلُوق"
      ]
     }
    ],
@@ -38,6 +38,8 @@
    "book": "main",
    "title_en": "Thank You for Your Kindness and the Gift of Faith",
    "chorus_en": "Refrain",
+   "title_de": "Danke fuer Deine Guete und die Gabe des Glaubens",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -69,8 +71,6 @@
      ]
     }
    ],
-   "title_de": "Danke fuer Deine Guete und die Gabe des Glaubens",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -132,14 +132,14 @@
     {
      "label": "3",
      "lines": [
-      "(عَايِز أَعِيش لَك زَيّ دَانيَاليَا رَبِّي وابقَى مِن الأَبطَال",
+      "(عَايِز أَعِيش لَك زَيّ دَانيَال ❖ يَا رَبِّي وابقَى مِن الأَبطَال",
       "وإِن كَان فِي ضَلمَه أَو وَسط لَمَّه ❖ واخِد قَرَارِي ومَا فِيش فِصَال)"
      ]
     },
     {
      "label": "4",
      "lines": [
-      "(عَايِزَك تكُون إِنت الأَسَاسفِي حَيَاتِي يَا يَسُوع والمِقيَاس",
+      "(عَايِزَك تكُون إِنت الأَسَاس ❖ فِي حَيَاتِي يَا يَسُوع والمِقيَاس",
       "وفِي الحِكمَه أَنمُو وفِي النِّعمَه أَنمُو ❖ وفِي القَامَه عِند الله والنَّاس)"
      ]
     }
@@ -148,6 +148,8 @@
    "book": "main",
    "title_en": "Forgive Me for Never Saying No",
    "chorus_en": "Refrain",
+   "title_de": "Vergib mir, dass ich nie Nein gesagt habe",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -186,8 +188,6 @@
      ]
     }
    ],
-   "title_de": "Vergib mir, dass ich nie Nein gesagt habe",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -260,10 +260,10 @@
     {
      "label": "3",
      "lines": [
-      "وَف ضِيقَتَك دَايمًا باتضَايِقوَف حُزنَك أَنَا بِيك دريَان",
+      "وَف ضِيقَتَك دَايمًا باتضَايِق ❖ وَف حُزنَك أَنَا بِيك دريَان",
       "بَسّ ف حُبِّي هافُكّ وابَارِك ❖ وهَانَجِّي كُلّ الأَيَّام",
       "زَيّ مَا إِبن أَبُوه بِيشِيلَه ❖ طُول السِّكَّة لَو تعبَان",
-      "إِنتَ ف حِضنِي يَا ابنِي مَكَانَكوَف قَلبِي رَحمَه وإِحسَان"
+      "إِنتَ ف حِضنِي يَا ابنِي مَكَانَك ❖ وَف قَلبِي رَحمَه وإِحسَان"
      ]
     }
    ],
@@ -271,6 +271,8 @@
    "book": "main",
    "title_en": "If Your Soul Is Weary and Broken",
    "chorus_en": "Refrain",
+   "title_de": "Wenn deine Seele muede und zerbrochen ist",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -308,8 +310,6 @@
      ]
     }
    ],
-   "title_de": "Wenn deine Seele muede und zerbrochen ist",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -379,6 +379,8 @@
    "book": "main",
    "title_en": "It Is a World, and Whoever Loves It Must Suffer",
    "chorus_en": "Refrain",
+   "title_de": "Es ist eine Welt, und wer sie liebt, muss leiden",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -403,8 +405,6 @@
      ]
     }
    ],
-   "title_de": "Es ist eine Welt, und wer sie liebt, muss leiden",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -468,6 +468,8 @@
    "book": "main",
    "title_en": "I Come to You, Lord, Exposing My Weakness",
    "chorus_en": "Refrain",
+   "title_de": "Ich komme zu dir, Herr, und lege meine Schwaeche offen",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -499,8 +501,6 @@
      ]
     }
    ],
-   "title_de": "Ich komme zu dir, Herr, und lege meine Schwaeche offen",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -555,7 +555,7 @@
     {
      "label": "2",
      "lines": [
-      "(يِمكِن اشُوف الدُّنيَا اسوَدَّتمِش شَايِف غِير الأَسوَار",
+      "(يِمكِن اشُوف الدُّنيَا اسوَدَّت ❖ مِش شَايِف غِير الأَسوَار",
       "أَلقَى ذِرَاعَك لِيَّ اتمَدَّت ❖ بِحَنَان قَلبَك لِيل ونَهَار)"
      ]
     },
@@ -570,7 +570,7 @@
      "label": "4",
      "lines": [
       "(يِمكِن ارُوح بِالفِكر بعِيد ❖ واغرَق فِي بَحر الأَشوَاك",
-      "لَكِن بَعد مَا بِالمَس شَخصَكمِش عَايِز فِي الأَرض سِوَاك)"
+      "لَكِن بَعد مَا بِالمَس شَخصَك ❖ مِش عَايِز فِي الأَرض سِوَاك)"
      ]
     }
    ],
@@ -578,6 +578,8 @@
    "book": "main",
    "title_en": "Perhaps I Grow Hard, Perhaps I Forget",
    "chorus_en": "Refrain",
+   "title_de": "Vielleicht werde ich hart, vielleicht vergesse ich",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -616,8 +618,6 @@
      ]
     }
    ],
-   "title_de": "Vielleicht werde ich hart, vielleicht vergesse ich",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -679,7 +679,7 @@
     {
      "label": "2",
      "lines": [
-      "بِالرُّوح والحَقّ اسجُد لَكمِش بَسّ كَلَام مِترَتِّب",
+      "بِالرُّوح والحَقّ اسجُد لَك ❖ مِش بَسّ كَلَام مِترَتِّب",
       "دَا القَلب المَسبِي بِحُبَّك ❖ بِيفيض وَحدُه ويِتعَبَّد"
      ]
     },
@@ -695,6 +695,8 @@
    "book": "main",
    "title_en": "Teach Me How to Worship You and Satisfy You",
    "chorus_en": "Refrain",
+   "title_de": "Lehre mich, wie ich dich anbete und dich erfreue",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -726,8 +728,6 @@
      ]
     }
    ],
-   "title_de": "Lehre mich, wie ich dich anbete und dich erfreue",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -799,6 +799,8 @@
    "book": "main",
    "title_en": "A Tear Sprang From My Heart Toward Heaven",
    "chorus_en": "Refrain",
+   "title_de": "Eine Traene entsprang meinem Herzen zum Himmel",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -831,8 +833,6 @@
      ]
     }
    ],
-   "title_de": "Eine Traene entsprang meinem Herzen zum Himmel",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -873,7 +873,7 @@
     {
      "label": "1",
      "lines": [
-      "(دِي إِيدِيك مِحَاوطَانِيفِي حِضنَك وضَمَانِي",
+      "(دِي إِيدِيك مِحَاوطَانِي ❖ فِي حِضنَك وضَمَانِي",
       "وعِنَايَه إِلَهِيَّه ❖ هِيَّ كُلّ ضَمَانِي)"
      ],
      "chorus": true
@@ -904,6 +904,8 @@
    "book": "main",
    "title_en": "Your Hands Surround Me in Your Embrace",
    "chorus_en": "Refrain",
+   "title_de": "Deine Haende umgeben mich in deiner Naehe",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -935,8 +937,6 @@
      ]
     }
    ],
-   "title_de": "Deine Haende umgeben mich in deiner Naehe",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1003,6 +1003,8 @@
    "book": "main",
    "title_en": "I Am Not Alone, You Are With Me",
    "chorus_en": "Refrain",
+   "title_de": "Ich bin nicht allein, du bist bei mir",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1030,8 +1032,6 @@
      ]
     }
    ],
-   "title_de": "Ich bin nicht allein, du bist bei mir",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1133,6 +1133,8 @@
    "book": "main",
    "title_en": "As The Years Pass By O Lord",
    "chorus_en": "Refrain",
+   "title_de": "Wenn Die Jahre Vergehen O Herr",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1199,8 +1201,6 @@
      ]
     }
    ],
-   "title_de": "Wenn Die Jahre Vergehen O Herr",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1275,7 +1275,7 @@
     {
      "label": "1",
      "lines": [
-      "(بَافْرَحْ وَاتْعَزَّى فِي وَسْط هُمُومِيمَا انتَ ضَمَنتْ لِي بُكْرَه وَيُومِي)"
+      "(بَافْرَحْ وَاتْعَزَّى فِي وَسْط هُمُومِي ❖ مَا انتَ ضَمَنتْ لِي بُكْرَه وَيُومِي)"
      ]
     },
     {
@@ -1308,6 +1308,8 @@
    "book": "main",
    "title_en": "I Rejoice And Find Comfort Amid Worries",
    "chorus_en": "Refrain",
+   "title_de": "Ich Freue Mich Und Finde Trost In Sorgen",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1341,8 +1343,6 @@
      ]
     }
    ],
-   "title_de": "Ich Freue Mich Und Finde Trost In Sorgen",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1410,6 +1410,8 @@
    "book": "main",
    "title_en": "All You Made Is Good",
    "chorus_en": "Refrain",
+   "title_de": "Alles Was Du Schufst Ist Gut",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1436,8 +1438,6 @@
      ]
     }
    ],
-   "title_de": "Alles Was Du Schufst Ist Gut",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1472,7 +1472,7 @@
     {
      "label": "1",
      "lines": [
-      "(بِالصَّلِيبِ كُنْتَ تَبْغِيأَن تُخَلِّصَ الأَثِيم",
+      "(بِالصَّلِيبِ كُنْتَ تَبْغِي ❖ أَن تُخَلِّصَ الأَثِيم",
       "بِسُرُورٍ رُمْتَ تَفْدِي ❖ بِالدَّمِ الزَّكِيِّ الكَرِيمِ",
       "(سِرْتَ وَحْدَكَ لِأَجْلِي ❖ فُوقَ تَلِّ الجُلْجُثَه",
       "تَحْمِلُ القِصَاصَ عَنِّي ❖ زَارِعًا فِيَّ الحَيَاه)"
@@ -1484,13 +1484,13 @@
       "(كُلْ أَحْزَانِي حَمَلْتَ ❖ مُعْلِنًا حُبًّا فَرِيدْ",
       "وَبِصُنْعِكَ خَلَقْتَ ❖ دَاخِلِي قَلْبًا جَدِيدْ)",
       "(قَد تَعَلَّقْتَ بِنَفْسِي ❖ حَتَّى مُتَّ بِالصَّلِيب",
-      "وَطَرَحْتَ كُلْ إِثْمِييَا لَحُبِّكَ العَجِيبْ)"
+      "وَطَرَحْتَ كُلْ إِثْمِي ❖ يَا لَحُبِّكَ العَجِيبْ)"
      ]
     },
     {
      "label": "3",
      "lines": [
-      "(يَا حَبِيبِي كَم لَقِيتَمِن يَدَيَّ مِن جِرَاحْ",
+      "(يَا حَبِيبِي كَم لَقِيتَ ❖ مِن يَدَيَّ مِن جِرَاحْ",
       "وَبِصَفْحٍ قَد نَادَيْتَ ❖ طَالِبًا لِيَّ السَّمَاحْ)",
       "(يَا حَبِيبِي قَد سَمَوْتَ ❖ لَيسَ مِثْلُكَ رَحِيمْ",
       "قَد جُرِحْتَ كَي تُضَمِّدْ ❖ كُلْ جِراحِ الأَثِيمْ)"
@@ -1508,6 +1508,8 @@
    ],
    "book": "main",
    "title_en": "By The Cross You Desired To Save",
+   "title_de": "Durch Das Kreuz Wolltest Du Retten",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1546,8 +1548,6 @@
      ]
     }
    ],
-   "title_de": "Durch Das Kreuz Wolltest Du Retten",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1604,7 +1604,7 @@
       "ارْحَمْنِي يَا رَبْ وَنَجِّينِي ❖ اسْتُرْنِي بِدَمَّكْ غَطِّينِي",
       "أَنَا هَالِكْ غَرْقَانْ فِي ذُنُوبِي ❖ تَعَال بْرُوحَكْ وَاحْيِينِي",
       "إِطْلُقْ نَفْسِي مِن الحُفْرَه ❖ وَمِن الذُّلْ وَم الحَسْرَه",
-      "جَاي مِش هَاسْتَنَّى لِبُكْرَهيَا اللي بِشُوقْ مِسْتَنِّينِي"
+      "جَاي مِش هَاسْتَنَّى لِبُكْرَه ❖ يَا اللي بِشُوقْ مِسْتَنِّينِي"
      ],
      "chorus": true
     },
@@ -1634,6 +1634,8 @@
    "book": "main",
    "title_en": "I Grew Weary And Tasted Shame",
    "chorus_en": "Refrain",
+   "title_de": "Ich Wurde Muede Und Kostete Schande",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1674,8 +1676,6 @@
      ]
     }
    ],
-   "title_de": "Ich Wurde Muede Und Kostete Schande",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1726,7 +1726,7 @@
      "lines": [
       "(دَايِس عَلَى عَسَلَك يَا عَالَمْ ❖ أَنَا بِإِلْهِي شَبْعَانْ",
       "مُرَّه المَيَّه اللي بِتِعْطِيهَا ❖ وَعُمْرْهَا مَا تِرْوِي العَطْشَانْ)",
-      "(مِهْمَا تِحَاوِل تِغْرِينِيأَو مِن مَجْدَكْ تِعْطِينِي)",
+      "(مِهْمَا تِحَاوِل تِغْرِينِي ❖ أَو مِن مَجْدَكْ تِعْطِينِي)",
       "أَنَا يِسُوعِي مِكَفِّينِي ❖ وَقَلْبِي بِحُبَّه مِلْيَانْ",
       "أَنَا نَفْسِي أَبِيَّه وَفَرْحَانَه ❖ (بِسَابِن الإِنْسَانْ)",
       "بِدَمُّه اشْتَرَانِي وَخَلَّانِي ❖ (مَلِيكْ وَسُلْطَانْ)",
@@ -1746,6 +1746,8 @@
    ],
    "book": "main",
    "title_en": "I Trample Your Honey O World",
+   "title_de": "Ich Zertrete Deinen Honig O Welt",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1770,8 +1772,6 @@
      ]
     }
    ],
-   "title_de": "Ich Zertrete Deinen Honig O Welt",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1804,7 +1804,7 @@
     {
      "label": "1",
      "lines": [
-      "(بِدُونْ حُبَّكْ أَنَا تَايِه أَنَا تَايِهمَا لِيشْ عُنْوَانْ مَا لِيشْ فِي مَكَانْ",
+      "(بِدُونْ حُبَّكْ أَنَا تَايِه أَنَا تَايِه ❖ مَا لِيشْ عُنْوَانْ مَا لِيشْ فِي مَكَانْ",
       "بِدُونْ رُوحَكْ أَنَا مَيِّتْ أَنَا مَيِّتْ ❖ بِلَا أَكْفَانْ بِلَا إِنْسَانْ)"
      ]
     },
@@ -1836,6 +1836,8 @@
    ],
    "book": "main",
    "title_en": "Without Your Love I Am Lost",
+   "title_de": "Ohne Deine Liebe Bin Ich Verloren",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1870,8 +1872,6 @@
      ]
     }
    ],
-   "title_de": "Ohne Deine Liebe Bin Ich Verloren",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -1916,7 +1916,7 @@
      "lines": [
       "أَنَا فِيكْ عَايِشْ مِتْهَنِّي ❖ أَنَا فِيكْ عَايِشْ مَسْرُورْ",
       "أَنَا فِيكْ عَايِشْ مُتْعَزِّي ❖ أَنَا فِيكْ عَايِشْ مَنْصُورْ",
-      "أَنَا فِيكْ عَايِشْ فِي حَمَايَهفِي عِينِيكْ مِنْ أَيِّ شُرُورْ",
+      "أَنَا فِيكْ عَايِشْ فِي حَمَايَه ❖ فِي عِينِيكْ مِنْ أَيِّ شُرُورْ",
       "وَكَفَايْتِي انْ أَنتَ مَعَايَا ❖ أَنَا فِيكْ عَايِشْ فِي النُّورْ"
      ],
      "chorus": true
@@ -1944,6 +1944,8 @@
    "book": "main",
    "title_en": "In You I Live Content",
    "chorus_en": "Refrain",
+   "title_de": "In Dir Lebe Ich Zufrieden",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -1974,8 +1976,6 @@
      ]
     }
    ],
-   "title_de": "In Dir Lebe Ich Zufrieden",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -2044,6 +2044,8 @@
    "book": "main",
    "title_en": "My Heart Clings To You",
    "chorus_en": "Refrain",
+   "title_de": "Mein Herz Haengt An Dir",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -2074,8 +2076,6 @@
      ]
     }
    ],
-   "title_de": "Mein Herz Haengt An Dir",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -2121,8 +2121,8 @@
     {
      "label": "1",
      "lines": [
-      "شُكْرًا يَا يَسُوعْيَا اللي مَاتْ عَنِّي وَفَدَانِي",
-      "شُكْرًا يَا يَسُوعْيَا اللي بِالحُبْ بِتْرْعَانِي",
+      "شُكْرًا يَا يَسُوعْ ❖ يَا اللي مَاتْ عَنِّي وَفَدَانِي",
+      "شُكْرًا يَا يَسُوعْ ❖ يَا اللي بِالحُبْ بِتْرْعَانِي",
       "وَكَمَانْ جَايْ تَانِي وَهَا تَاخُدْنِي ❖ لِأَحْلَى رُبُوعْ (شُكْرًا يَا يَسُوعْ)"
      ],
      "chorus": true
@@ -2153,6 +2153,8 @@
    "book": "main",
    "title_en": "However Much I Thank I Cannot Repay",
    "chorus_en": "Refrain",
+   "title_de": "Wie Sehr Ich Danke Es Genuegt Nie",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -2192,8 +2194,6 @@
      ]
     }
    ],
-   "title_de": "Wie Sehr Ich Danke Es Genuegt Nie",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -2248,7 +2248,7 @@
     {
      "label": "1",
      "lines": [
-      "هو عِنده لِلمَشاكِل أَلف حَلّهو وَحده يِمحي كُلّ خَوف وذُلّ",
+      "هو عِنده لِلمَشاكِل أَلف حَلّ ❖ هو وَحده يِمحي كُلّ خَوف وذُلّ",
       "لَو نِجي لُه ونِنادي لُه ها نِلاقيه ❖ فاتِح الأَحضان لِأَيّ حَدّ ضَلّ"
      ],
      "chorus": true
@@ -2270,7 +2270,7 @@
     {
      "label": "3",
      "lines": [
-      "انت عِندَك لِلمَشاكِل أَلف حَلّانت وَحدَك تِمحي كُلّ خَوف وذُلّ",
+      "انت عِندَك لِلمَشاكِل أَلف حَلّ ❖ انت وَحدَك تِمحي كُلّ خَوف وذُلّ",
       "لَو نِجي لَك ونِنادي لَك ها نِلاقيك ❖ فاتِح الأَحضان لِأَيّ حَدّ ضَلّ"
      ],
      "chorus": true
@@ -2280,6 +2280,8 @@
    "book": "main",
    "title_en": "The Doors Stand Open for Whoever Would Return",
    "chorus_en": "Refrain",
+   "title_de": "Die Tueren Stehen Offen Fuer Jeden Der Umkehrt",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -2319,8 +2321,6 @@
      "chorus": true
     }
    ],
-   "title_de": "Die Tueren Stehen Offen Fuer Jeden Der Umkehrt",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -2375,7 +2375,7 @@
     {
      "label": "2",
      "lines": [
-      "باحِبَّك عَشان في يَوم قَلبي خانراح كُورَه بَعيدَه في ذُلّ وهَوان",
+      "باحِبَّك عَشان في يَوم قَلبي خان ❖ راح كُورَه بَعيدَه في ذُلّ وهَوان",
       "باحِبَّك لِأَنَّك بِكُلّ حَنان ❖ فَرِحت بِرُجوعي وفَتَحت الأَحضان"
      ]
     },
@@ -2383,19 +2383,20 @@
      "label": "3",
      "lines": [
       "باحِبَّك عَشان ثِياب الخَلاص ❖ وبِرَّك كَساني وشِلت القِصاص",
-      "باحبك عشان السما ميراثولي في مِشواري مَلجأ ومَناص"
+      "باحبك عشان السما ميراث ❖ ولي في مِشواري مَلجأ ومَناص"
      ]
     },
     {
      "label": "4",
      "lines": [
-      "باحِبَّك عَشان بِتِملا الوُجوددا خِيرَك يا سِيدي ما فيش لُه حُدود",
-      "أَنَرت الحَياه أَنَرت الخُلودجاي أَركَع قُدَّامَك وأَقَدِّم سُجود"
+      "باحِبَّك عَشان بِتِملا الوُجود ❖ دا خِيرَك يا سِيدي ما فيش لُه حُدود",
+      "أَنَرت الحَياه أَنَرت الخُلود ❖ جاي أَركَع قُدَّامَك وأَقَدِّم سُجود"
      ]
     }
    ],
    "book": "main",
    "title_en": "I Love You for the Wounds of the Cross",
+   "title_de": "Ich Liebe Dich Fuer Die Wunden Des Kreuzes",
    "verses_en": [
     {
      "label": "1",
@@ -2426,7 +2427,6 @@
      ]
     }
    ],
-   "title_de": "Ich Liebe Dich Fuer Die Wunden Des Kreuzes",
    "verses_de": [
     {
      "label": "1",
@@ -2472,7 +2472,7 @@
     {
      "label": "1",
      "lines": [
-      "إِنت الرب الحِلو الصالحمين يِخزَى مِن مُنتظريك",
+      "إِنت الرب الحِلو الصالح ❖ مين يِخزَى مِن مُنتظريك",
       "طَيِّب لِلّي بِيترَجَّاك ❖ ضامِن لِلّي اتَّكِلوا عليك"
      ],
      "chorus": true
@@ -2495,13 +2495,13 @@
      "label": "4",
      "lines": [
       "بارجِع لَك واسجِد قُدَّامَك ❖ واستَنَّى خَلاصَك بِسُكون",
-      "واهدا مَعاك يِطَّمِّن قلبيدا خَلاصي في شخصك مَضمون"
+      "واهدا مَعاك يِطَّمِّن قلبي ❖ دا خَلاصي في شخصك مَضمون"
      ]
     },
     {
      "label": "5",
      "lines": [
-      "لو هانتظر الناس راح أَفشَلمِش هاستَنَّى يا ربي سِواك",
+      "لو هانتظر الناس راح أَفشَل ❖ مِش هاستَنَّى يا ربي سِواك",
       "رأي الناس يِتعِب ويِفَشِّل ❖ باترَجَّى مَشورِتك ورِضاك"
      ]
     }
@@ -2510,6 +2510,8 @@
    "book": "main",
    "title_en": "I Wait for You and Pour Out My Heart",
    "chorus_en": "Refrain",
+   "title_de": "Ich Warte Auf Dich Und Schuette Mein Herz Aus",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -2555,8 +2557,6 @@
      ]
     }
    ],
-   "title_de": "Ich Warte Auf Dich Und Schuette Mein Herz Aus",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -2611,9 +2611,9 @@
      "label": "1",
      "lines": [
       "جاي لَك بِخَطايايَ الثُّقال ❖ وعيوبي اللي عيب تتقال",
-      "جاي لك وخجلان م السؤالفِي حِمَا صَلِيبك",
-      "وهَمِّي فِي أَعماقي زادوما عادش ينفعني العناد",
-      "م التوهه جَاي والابتعادفِي حِمَا صَلِيبك"
+      "جاي لك وخجلان م السؤال ❖ فِي حِمَا صَلِيبك",
+      "وهَمِّي فِي أَعماقي زاد ❖ وما عادش ينفعني العناد",
+      "م التوهه جَاي والابتعاد ❖ فِي حِمَا صَلِيبك"
      ]
     },
     {
@@ -2629,7 +2629,7 @@
      "lines": [
       "أنا اللي عوّجت المعدول ❖ وظلمت في الفعل وفي القول",
       "مشتاق أعود وأكون مقبول ❖ اغفر لي",
-      "أنا ما استاهلش أنال عفوكلكن النجاه بس في وعدك",
+      "أنا ما استاهلش أنال عفوك ❖ لكن النجاه بس في وعدك",
       "جاي باعترف بالذنب إليك ❖ اغفر لي"
      ]
     }
@@ -2638,6 +2638,8 @@
    "book": "main",
    "title_en": "I Come to You with My Heavy Sins and Faults",
    "chorus_en": "Refrain",
+   "title_de": "Ich Komme Zu Dir Mit Meiner Schweren Schuld",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -2666,8 +2668,6 @@
      ]
     }
    ],
-   "title_de": "Ich Komme Zu Dir Mit Meiner Schweren Schuld",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -2726,7 +2726,7 @@
       "(رَاحْتَكْ هِنَا بَين أَحضَانِي ❖ عُودْ مِنْ تَانِي",
       "عَشَانْ سَايِبْنِي بِتعَانِي ❖ عَايِشْ مَرعُوب)",
       "سَامِعْنِي بَأَندَه وسَايِبْنِي ❖ ارْجَعْ يَا ابنِي",
-      "صَدَّقْنِي بُعدَك يِتعِبْنِييَا غَالِي ومَحبُوب"
+      "صَدَّقْنِي بُعدَك يِتعِبْنِي ❖ يَا غَالِي ومَحبُوب"
      ]
     },
     {
@@ -2743,6 +2743,8 @@
    "book": "main",
    "title_en": "I Know Your Works, I Know Your State",
    "chorus_en": "Refrain",
+   "title_de": "Ich Kenne Deine Werke Und Deinen Zustand",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -2782,8 +2784,6 @@
      ]
     }
    ],
-   "title_de": "Ich Kenne Deine Werke Und Deinen Zustand",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -2839,9 +2839,9 @@
      "label": "1",
      "lines": [
       "مَنْ تُرَى شَخْصٌ عَجِيبٌ ❖ فِيهِ رَاحَةُ نَفْسِي",
-      "حِينَ تَشْتَدُّ الرِّيَاحفِي مَهَالِكِ أُمْسِي",
+      "حِينَ تَشْتَدُّ الرِّيَاح ❖ فِي مَهَالِكِ أُمْسِي",
       "حِينَ تَمْتَلِي القُلُوب ❖ وَالعُقُولُ بِاليَأْسِ",
-      "تَبْقَى أَنْتَ أَمَلِيفِي غَدِي كَمَا أُمْسِي"
+      "تَبْقَى أَنْتَ أَمَلِي ❖ فِي غَدِي كَمَا أُمْسِي"
      ]
     },
     {
@@ -2850,7 +2850,7 @@
       "فِي مَرَارِ القَلْبِ رَبِّي ❖ تُسْرِعُ لِنَجْدَتِي",
       "تَفْتَحُ عَيْنِي حَتَّى ❖ أُبْصِرُ مَعُونَتِي",
       "تَعْمَلُ دَوْمًا لِخَيْرِي ❖ تُنْشِدُن رَاحَتِي",
-      "شَخْصُكَ هُوَ اكْتِفَائِيفِي دِيَارِ غُرْبَتِي"
+      "شَخْصُكَ هُوَ اكْتِفَائِي ❖ فِي دِيَارِ غُرْبَتِي"
      ]
     }
    ],
@@ -2858,6 +2858,8 @@
    "book": "main",
    "title_en": "You Hold My Right Hand, You Guide Me",
    "chorus_en": "Refrain",
+   "title_de": "Du Haeltst Meine Rechte Hand Du Leitest Mich",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -2885,8 +2887,6 @@
      ]
     }
    ],
-   "title_de": "Du Haeltst Meine Rechte Hand Du Leitest Mich",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -2937,15 +2937,15 @@
     {
      "label": "2",
      "lines": [
-      "(ربي انا عايش على مواعيدكمش مسنود على أيّ عِيان",
+      "(ربي انا عايش على مواعيدك ❖ مش مسنود على أيّ عِيان",
       "ثقتي ها تصنع وها تتمجّد ❖ وانا مُنتظرك بالإيمان)"
      ]
     },
     {
      "label": "3",
      "lines": [
-      "(كافي لكل قطيعك يا الليكنت المنّ لكل الشعب",
-      "واهتميت حتى بأقدامهممين زيّك يا حبيب القلب)"
+      "(كافي لكل قطيعك يا اللي ❖ كنت المنّ لكل الشعب",
+      "واهتميت حتى بأقدامهم ❖ مين زيّك يا حبيب القلب)"
      ]
     }
    ],
@@ -2953,6 +2953,8 @@
    "book": "main",
    "title_en": "You Were the Delight of the Father on the Cross",
    "chorus_en": "Refrain",
+   "title_de": "Du Warst Die Genuege Des Vaters An Deinem Kreuz",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -2984,8 +2986,6 @@
      ]
     }
    ],
-   "title_de": "Du Warst Die Genuege Des Vaters An Deinem Kreuz",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -3056,6 +3056,8 @@
    "book": "main",
    "title_en": "At Your Feet O Lord I Love to Sit",
    "chorus_en": "Refrain",
+   "title_de": "Zu Deinen Fuessen Herr Sitze Ich Gern",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -3087,8 +3089,6 @@
      ]
     }
    ],
-   "title_de": "Zu Deinen Fuessen Herr Sitze Ich Gern",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -3128,7 +3128,7 @@
     {
      "label": "1",
      "lines": [
-      "(مَا اسْتَاهِلْشْ تَمُوتْ لِأَجْلِيمَا اسْتَاهِلْشْ يَا يَسُوعْ",
+      "(مَا اسْتَاهِلْشْ تَمُوتْ لِأَجْلِي ❖ مَا اسْتَاهِلْشْ يَا يَسُوعْ",
       "وَلَا مِنْكَ الدَّمُّ يِجْرِي ❖ وَبِكَاءَكَ بِالدُّمُوعْ)"
      ]
     },
@@ -3150,8 +3150,8 @@
     {
      "label": "3",
      "lines": [
-      "(مَا اسْتَاهِلْشْ الرَّحْمَه أَبَدًامَا اسْتَاهِلْشْ يَا يَسُوعْ",
-      "وَلَا صُوتَ النِّعْمَه يِدْوِيفِي آذَانِي بِالرُّجُوعْ)"
+      "(مَا اسْتَاهِلْشْ الرَّحْمَه أَبَدًا ❖ مَا اسْتَاهِلْشْ يَا يَسُوعْ",
+      "وَلَا صُوتَ النِّعْمَه يِدْوِي ❖ فِي آذَانِي بِالرُّجُوعْ)"
      ]
     },
     {
@@ -3166,6 +3166,8 @@
    "book": "main",
    "title_en": "I Am Not Worthy of Your Death for Me",
    "chorus_en": "Refrain",
+   "title_de": "Ich Bin Nicht Wert Dass Du Fuer Mich Stirbst",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -3204,8 +3206,6 @@
      ]
     }
    ],
-   "title_de": "Ich Bin Nicht Wert Dass Du Fuer Mich Stirbst",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -3262,7 +3262,7 @@
      "lines": [
       "(عَايِشْ أَنَا فِي الْعَالَمْ أَيْوَه ❖ وَالْعَالَمْ مِشْ عَايِشْ فِيَّ)",
       "قَلْبِي اتْعَلَّقْ بِالْمَصْلُوبْ ❖ وَبَاحِبْ الْعَايِشِينْ فِي الْعَالَمْ",
-      "لَكِنْ بَاكْرَه كُلَّ خَطِيَّهلَا مُتَعْ تِغْرِينِي وَلَا ذُنُوبْ"
+      "لَكِنْ بَاكْرَه كُلَّ خَطِيَّه ❖ لَا مُتَعْ تِغْرِينِي وَلَا ذُنُوبْ"
      ],
      "chorus": true
     },
@@ -3287,6 +3287,8 @@
    "book": "main",
    "title_en": "Out Of Love For The World You Came And Died",
    "chorus_en": "Refrain",
+   "title_de": "Aus Liebe Zur Welt Kamst Du Und Starbst",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -3322,8 +3324,6 @@
      ]
     }
    ],
-   "title_de": "Aus Liebe Zur Welt Kamst Du Und Starbst",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -3377,7 +3377,7 @@
      "label": "2",
      "lines": [
       "(وقت لما تكون جِبالي ❖ واقفه ضدي بِمُستَحيل",
-      "والشُّكوك تِنهش فِي باليمين يشيل حِملي التقيل)",
+      "والشُّكوك تِنهش فِي بالي ❖ مين يشيل حِملي التقيل)",
       "(إنت وحدك تِستطيع يا يسوع ❖ تِجي تُنقُل الجِبال",
       "إنت يا حصني المنيع يا يسوع ❖ كَلِمَتك فُوق المحال)"
      ]
@@ -3387,13 +3387,14 @@
      "lines": [
       "(وقت لما السهل يصعب ❖ والحاجات تطرح فشل",
       "لَمَّا وعد الناس بِيهرَب ❖ والعمل خاب والأمل)",
-      "(إنت وحدك تِستطيع يا يسوعترد جُوايا اللي ضَاع",
+      "(إنت وحدك تِستطيع يا يسوع ❖ ترد جُوايا اللي ضَاع",
       "واللي يصعب ع الجميع يا يسوع ❖ يبقى عِندك مُستطاع)"
      ]
     }
    ],
    "book": "main",
    "title_en": "When My Trials Hide Heaven From My Eyes",
+   "title_de": "Wenn Meine Sorgen Mir Den Himmel Verdecken",
    "verses_en": [
     {
      "label": "1",
@@ -3423,7 +3424,6 @@
      ]
     }
    ],
-   "title_de": "Wenn Meine Sorgen Mir Den Himmel Verdecken",
    "verses_de": [
     {
      "label": "1",
@@ -3461,7 +3461,7 @@
     {
      "label": "1",
      "lines": [
-      "(لِيه أنا اعيش في الضعفمع انك قُمت من الأموات",
+      "(لِيه أنا اعيش في الضعف ❖ مع انك قُمت من الأموات",
       "قُمت بقوَّة ولِيَّ أعيشها ❖ وأسلُك أسْمَى حياة)"
      ]
     },
@@ -3476,14 +3476,14 @@
     {
      "label": "2",
      "lines": [
-      "(كِفايه أعيش فِي خَطِيَّهأو مَربوك وَأنَا شَايل نِير",
-      "تِعبت مِن العبُودِيَّهمع أنَّك لِيَّ إله تحرير)"
+      "(كِفايه أعيش فِي خَطِيَّه ❖ أو مَربوك وَأنَا شَايل نِير",
+      "تِعبت مِن العبُودِيَّه ❖ مع أنَّك لِيَّ إله تحرير)"
      ]
     },
     {
      "label": "3",
      "lines": [
-      "(كِفايه مَحَبَّه هزِيلهدَا حُبك لِيَّ ما يتغَيَّرش",
+      "(كِفايه مَحَبَّه هزِيله ❖ دَا حُبك لِيَّ ما يتغَيَّرش",
       "واحيَا بشكل أنَانِي ❖ وأتوه من تاني وما بارجعش)"
      ]
     },
@@ -3499,6 +3499,8 @@
    "book": "main",
    "title_en": "Why Should I Live In Weakness",
    "chorus_en": "Refrain",
+   "title_de": "Warum Sollte Ich In Schwaeche Leben",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -3537,8 +3539,6 @@
      ]
     }
    ],
-   "title_de": "Warum Sollte Ich In Schwaeche Leben",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -3588,7 +3588,7 @@
       "ها نسيب الدُّنيا وَمَا فيها ❖ نَظرِتنا هناك ع الأبدِيَّه",
       "عايشين علشان نكرم شخصك ❖ وحياتنا نقَدِّمها هدِيَّه",
       "مش راح نتأثَّر أو نمشي ❖ وَيَّا الأفكار البشرِيَّه",
-      "لكن وَرَا صُوتك وإرادَتك(ها نعيش إن كان لينا بقِيَّه)"
+      "لكن وَرَا صُوتك وإرادَتك ❖ (ها نعيش إن كان لينا بقِيَّه)"
      ]
     },
     {
@@ -3614,7 +3614,7 @@
      "lines": [
       "مَهما إن كَان فِي طريقنا ❖ صعوبات - إن كَانت - وآلام",
       "ها نكَمِّل طول ما انت معانا ❖ نفصِل في طريقنا لِقُدَّام",
-      "يمكن نتألَّم أو نتعبأو حَتَّى نعدِّي فِي ألغام",
+      "يمكن نتألَّم أو نتعب ❖ أو حَتَّى نعدِّي فِي ألغام",
       "تِمسك بإيدينا وتِدِّينا ❖ (نمشي فُوقها بالأقدام)"
      ]
     }
@@ -3623,6 +3623,8 @@
    "book": "main",
    "title_en": "We Will Leave The World And All In It",
    "chorus_en": "Refrain",
+   "title_de": "Wir Lassen Die Welt Und Alles Darin",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -3661,8 +3663,6 @@
      ]
     }
    ],
-   "title_de": "Wir Lassen Die Welt Und Alles Darin",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -3712,14 +3712,14 @@
       "جايِّين بنغَنِّي وبنقدِّم ❖ لإلهنا ذبيحة حمد",
       "وبنرفع شكر قلوبنا ❖ وبنهدي له كُل المجد",
       "عايشين أيَّامنا ف خِيره ❖ وبيمتِّعنا بكُل غِناه",
-      "إحنا ولاده وشعبهغنم مرعاه"
+      "إحنا ولاده وشعبه ❖ غنم مرعاه"
      ]
     },
     {
      "label": "1",
      "lines": [
       "وبِنِشهد ليك إنت الله العظيم ❖ بِنسجُد ليك يا راعينا الكريم",
-      "وبِنهتِف ليك يا ملك السَّلامدا ف غُربتنا النِّعمه بتكفينا",
+      "وبِنهتِف ليك يا ملك السَّلام ❖ دا ف غُربتنا النِّعمه بتكفينا",
       "وف شِدِّتنا فرَح الرَّبِّ يقوِّينا ❖ يعلا التَّسبيح ويدوم كلَّ الأيَّام"
      ],
      "chorus": true
@@ -3728,7 +3728,7 @@
      "label": "2",
      "lines": [
       "دا إلهنا حيَّ وعلشان كِدا ❖ بِنغنِّي ومِش خايفين",
-      "والضِّحك بِيملا حياتنالو في الوادي دموع وأنين",
+      "والضِّحك بِيملا حياتنا ❖ لو في الوادي دموع وأنين",
       "إحسان الرَّبِّ حامينا ❖ مَراحمُه جِديده ف كل صباح",
       "وبيملا ليل الغُربه ❖ بأفراح"
      ]
@@ -3747,6 +3747,8 @@
    "book": "main",
    "title_en": "We Come Singing To Offer Our God A Sacrifice Of Praise",
    "chorus_en": "Refrain",
+   "title_de": "Wir Kommen Singend Und Bringen Unserm Gott Ein Lobopfer",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -3785,8 +3787,6 @@
      ]
     }
    ],
-   "title_de": "Wir Kommen Singend Und Bringen Unserm Gott Ein Lobopfer",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -3855,8 +3855,8 @@
     {
      "label": "3",
      "lines": [
-      "أنا عارف انك يا ربي عايز حياتي تقولدا كلام كتير قلته من غير ما اعيش القول",
-      "قلته كتير عشته قليل من غير دليل أحياهلكن لقيتني باقول كلام كتير وانساه"
+      "أنا عارف انك يا ربي عايز حياتي تقول ❖ دا كلام كتير قلته من غير ما اعيش القول",
+      "قلته كتير عشته قليل من غير دليل أحياه ❖ لكن لقيتني باقول كلام كتير وانساه"
      ]
     }
    ],
@@ -3864,6 +3864,8 @@
    "book": "main",
    "title_en": "I Know O Lord That You Created Me For Your Glory",
    "chorus_en": "Refrain",
+   "title_de": "Ich Weiss O Herr Dass Du Mich Zu Deiner Ehre Schufst",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -3895,8 +3897,6 @@
      ]
     }
    ],
-   "title_de": "Ich Weiss O Herr Dass Du Mich Zu Deiner Ehre Schufst",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -3944,7 +3944,7 @@
     {
      "label": "1",
      "lines": [
-      "مره اتعبِّد مره اتسنِّدمره اتشدِّد وانا وياك",
+      "مره اتعبِّد مره اتسنِّد ❖ مره اتشدِّد وانا وياك",
       "والمرات التانيه امَّا ابعِد ❖ أرجع والقاك ما نسيتنيش",
       "ما فارقنيش أبدا أبدا ❖ إحسانك دا ما فارقنيش"
      ]
@@ -3952,7 +3952,7 @@
     {
      "label": "2",
      "lines": [
-      "واما بالاقي النفس انهارتتحت رحاية شك وضيق",
+      "واما بالاقي النفس انهارت ❖ تحت رحاية شك وضيق",
       "والنوم هارب مِنِّي أطالب ❖ قلبك واصرخ ما تسيبنيش",
       "ما فارقنيش أبدا أبدا ❖ إحسانك دا ما فارقنيش"
      ]
@@ -3961,7 +3961,7 @@
      "label": "3",
      "lines": [
       "واما اتحارب وانا في القارب ❖ بالموجه وبالريح والخوف",
-      "وابقى بانازع في هزيع رابعتجي تدافع عني أعيش",
+      "وابقى بانازع في هزيع رابع ❖ تجي تدافع عني أعيش",
       "ما فارقنيش أبدا أبدا ❖ إحسانك دا ما فارقنيش"
      ]
     },
@@ -3978,6 +3978,8 @@
    "book": "main",
    "title_en": "Your Goodness Never Ever Left Me",
    "chorus_en": "Refrain",
+   "title_de": "Deine Guete Hat Mich Niemals Niemals Verlassen",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4020,8 +4022,6 @@
      ]
     }
    ],
-   "title_de": "Deine Guete Hat Mich Niemals Niemals Verlassen",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4072,8 +4072,8 @@
     {
      "label": "1",
      "lines": [
-      "اختبارات المؤمنينفِي كل يوم تقول",
-      "دا إلهنا إله أمينفِي إيديه كل الحلول",
+      "اختبارات المؤمنين ❖ فِي كل يوم تقول",
+      "دا إلهنا إله أمين ❖ فِي إيديه كل الحلول",
       "لسه بيوعد ويوافي ❖ يدِّي حلاوه من الجافي",
       "ويشق بحور ظروفي ❖ ويضمَن لي الوصول"
      ]
@@ -4101,7 +4101,7 @@
       "وما بين ضلمه ونور ❖ إيماني يكون شهاده",
       "ينشر ريحة السرور ❖ بلسم شافي وضماده",
       "وانسى اني كنت خايف ❖ وانسى اني كنت جريح",
-      "واللي يشوفني يلاقيفي صورة المسيح"
+      "واللي يشوفني يلاقي ❖ في صورة المسيح"
      ]
     }
    ],
@@ -4109,6 +4109,8 @@
    "book": "main",
    "title_en": "The Testimonies Of Believers Speak Every Day",
    "chorus_en": "Refrain",
+   "title_de": "Die Erfahrungen Der Glaeubigen Sprechen Jeden Tag",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4146,8 +4148,6 @@
      ]
     }
    ],
-   "title_de": "Die Erfahrungen Der Glaeubigen Sprechen Jeden Tag",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4208,7 +4208,7 @@
     {
      "label": "2",
      "lines": [
-      "(قَادِرْ تِرْفَع نَفْسِيمِن كُلّ حِيرْتِي وَيَأْسِي)",
+      "(قَادِرْ تِرْفَع نَفْسِي ❖ مِن كُلّ حِيرْتِي وَيَأْسِي)",
       "مَا انتَ أَبُويَا وَعَارِفْ ❖ كُلّ افْكَاري وَهَمِّسِي"
      ]
     },
@@ -4224,6 +4224,8 @@
    "book": "main",
    "title_en": "You On High Are Able Above All My Circumstances",
    "chorus_en": "Refrain",
+   "title_de": "Du In Der Hoehe Bist Maechtiger Als Alle Meine Umstaende",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4255,8 +4257,6 @@
      ]
     }
    ],
-   "title_de": "Du In Der Hoehe Bist Maechtiger Als Alle Meine Umstaende",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4318,7 +4318,7 @@
     {
      "label": "3",
      "lines": [
-      "كُلّ الأَشْيَاءْ تَعْمَلْ لِلْخِيرْدَا يِخَلِّينَا مَا نِتْذَمَّرْشِي",
+      "كُلّ الأَشْيَاءْ تَعْمَلْ لِلْخِيرْ ❖ دَا يِخَلِّينَا مَا نِتْذَمَّرْشِي",
       "وَأَمَانْتُه مَا فِيهَاشْ تَغْيِيرْ ❖ رَبِّي دَا حَكِيمْ مَا بِيِغْلَطْشِي"
      ]
     },
@@ -4333,7 +4333,7 @@
      "label": "5",
      "lines": [
       "بِصَلَاحُه رَاح نِشْهَدْ عَلَى طُولْ ❖ وَهَا نِهْتِفْ لُه بِأَعْلَى الأَنَاشِيدْ",
-      "وَظُرُوفْنَا ان يُومْ عَاكْسِتْ هَا نْقُولْدِي أَمَانْتُه فِي كُلّ الْمَوَاعِيدْ"
+      "وَظُرُوفْنَا ان يُومْ عَاكْسِتْ هَا نْقُولْ ❖ دِي أَمَانْتُه فِي كُلّ الْمَوَاعِيدْ"
      ]
     }
    ],
@@ -4341,6 +4341,8 @@
    "book": "main",
    "title_en": "He Wounds and Binds Up, He Heals and Comforts",
    "chorus_en": "Refrain",
+   "title_de": "Er Verwundet und Verbindet, Er Heilt und Troestet",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4386,8 +4388,6 @@
      ]
     }
    ],
-   "title_de": "Er Verwundet und Verbindet, Er Heilt und Troestet",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4444,7 +4444,7 @@
       "(لَوْ فُرِضْ وَالدُّنْيَا ضِحْكِتْ ❖ وَالسَّعَادَه جَاتْ فِي يُومْ",
       "وَالْمَرَضْ وَالفَقْر غَابُوا ❖ وَكَان مَنَابَك أَعْلَى كُومْ)",
       "(وَالحَيَاه مَا بِقِتْش صَعْبَه ❖ وَاخْتَفِتْ كِلْمَة يَا غُرْبَه)",
-      "(إِسْمَع اللِّي فَصَّلْهَا بَعْدمَا شَاف أُصُولْهَا قَالَ لَك ايه)"
+      "(إِسْمَع اللِّي فَصَّلْهَا بَعْد ❖ مَا شَاف أُصُولْهَا قَالَ لَك ايه)"
      ]
     },
     {
@@ -4461,12 +4461,12 @@
     {
      "label": "2",
      "lines": [
-      "(خُدْ لِي جَنْبَك خِيمَهيَا أَبُويَا ابْرَاهِيم يَا غَرِيبْ",
+      "(خُدْ لِي جَنْبَك خِيمَه ❖ يَا أَبُويَا ابْرَاهِيم يَا غَرِيبْ",
       "نَفْسِي أَبْعِدْ عَنْ سَدُومْ ❖ حَتَّى لَوْ فِيهَا القَرِيبْ)",
       "(وَابْنِي مَذْبَحْ قَلْبِي يِفْرَحْ ❖ بِالصَّلَاه وَالتَّرْنِيمَاتْ",
       "رُوحِي تُسْبَحْ وَالقَى مَطْرَحْ ❖ لِلسَّكَنْ بَعْد المَمَاتْ)",
       "وَأَنْدَه اللِّي فَاكِرْهَا جَنَّه ❖ \"رَاجِعْ الحُسْبَه وَتَأَنَّى",
-      "وَاسْمَع اللِّي فَصَّلْهَا بَعْدمَا شَاف أُصُولْهَا قَالَ لَك ايه\""
+      "وَاسْمَع اللِّي فَصَّلْهَا بَعْد ❖ مَا شَاف أُصُولْهَا قَالَ لَك ايه\""
      ]
     }
    ],
@@ -4474,6 +4474,8 @@
    "book": "main",
    "title_en": "Even If the World Smiled and Happiness Came",
    "chorus_en": "Refrain",
+   "title_de": "Auch Wenn die Welt Lachte und Glueck Kaeme",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4507,8 +4509,6 @@
      ]
     }
    ],
-   "title_de": "Auch Wenn die Welt Lachte und Glueck Kaeme",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4566,7 +4566,7 @@
      "label": "2",
      "lines": [
       "(رَغْم عَدَم أَمَانْتِنَا أَمِين ❖ نِبْعِد وَنِرْجَع لِينَا بِتِسْمَع",
-      "تِفْضَل لِينَا صَدِيق وَمُعِينمَا انتَ إِلَهْنَا طُول السِّنِين)"
+      "تِفْضَل لِينَا صَدِيق وَمُعِين ❖ مَا انتَ إِلَهْنَا طُول السِّنِين)"
      ]
     },
     {
@@ -4581,6 +4581,8 @@
    "book": "main",
    "title_en": "O You to Whom All Eyes Are Lifted",
    "chorus_en": "Refrain",
+   "title_de": "O Du, Zu Dem Alle Augen Aufsehen",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4612,8 +4614,6 @@
      ]
     }
    ],
-   "title_de": "O Du, Zu Dem Alle Augen Aufsehen",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4654,7 +4654,7 @@
      "label": "1",
      "lines": [
       "الله بِيتْكَلِّم لِي وَلِيك ❖ الله بِيِكَلِّم كُلّ النَّاس",
-      "بِصُوت وَصُورَه مِن حَوَالِيكقُل لُه يِعْطِيك قَلب حَسَّاس"
+      "بِصُوت وَصُورَه مِن حَوَالِيك ❖ قُل لُه يِعْطِيك قَلب حَسَّاس"
      ],
      "chorus": true
     },
@@ -4687,6 +4687,8 @@
    "book": "main",
    "title_en": "God Speaks to Me and to You",
    "chorus_en": "Refrain",
+   "title_de": "Gott Spricht Zu Mir und Zu Dir",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4721,8 +4723,6 @@
      ]
     }
    ],
-   "title_de": "Gott Spricht Zu Mir und Zu Dir",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4766,7 +4766,7 @@
      "label": "1",
      "lines": [
       "(أَنَا مِش مِسْتَنِّي مَدِيح ❖ وَلَا خَايِف م التَّجْرِيح",
-      "مِش هَاسْعَ لِلإِنْسَانلَو حَتَّى كَلَامُه مُرِيح)"
+      "مِش هَاسْعَ لِلإِنْسَان ❖ لَو حَتَّى كَلَامُه مُرِيح)"
      ]
     },
     {
@@ -4780,7 +4780,7 @@
     {
      "label": "2",
      "lines": [
-      "(لَو فِيه كَلِمَات إِعْجَابأَو لُوم وَكَلَام بِعِتَّاب",
+      "(لَو فِيه كَلِمَات إِعْجَاب ❖ أَو لُوم وَكَلَام بِعِتَّاب",
       "أَو حَتَّى كَلَام جَذَّاب ❖ بَاطِل وَفِي نَظْرِي سَرَاب)"
      ]
     },
@@ -4796,6 +4796,8 @@
    "book": "main",
    "title_en": "I Wait for No Praise and Fear No Blame",
    "chorus_en": "Refrain",
+   "title_de": "Ich Warte Auf Kein Lob und Fuerchte Keinen Tadel",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4827,8 +4829,6 @@
      ]
     }
    ],
-   "title_de": "Ich Warte Auf Kein Lob und Fuerchte Keinen Tadel",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4894,6 +4894,8 @@
    "book": "main",
    "title_en": "What in This World Is Worth My Fear",
    "chorus_en": "Refrain",
+   "title_de": "Was in Dieser Welt Ist Meine Furcht Wert",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -4920,8 +4922,6 @@
      ]
     }
    ],
-   "title_de": "Was in Dieser Welt Ist Meine Furcht Wert",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -4984,6 +4984,8 @@
    "book": "main",
    "title_en": "Years Have Passed, Their Days Testify",
    "chorus_en": "Refrain",
+   "title_de": "Jahre Sind Vergangen, Ihre Tage Bezeugen",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -5012,8 +5014,6 @@
      ]
     }
    ],
-   "title_de": "Jahre Sind Vergangen, Ihre Tage Bezeugen",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -5071,6 +5071,8 @@
    ],
    "book": "main",
    "title_en": "King of Kings, Your Glory Fills All",
+   "title_de": "Koenig der Koenige, Deine Herrlichkeit Fuellt Alles",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -5094,8 +5096,6 @@
      ]
     }
    ],
-   "title_de": "Koenig der Koenige, Deine Herrlichkeit Fuellt Alles",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
@@ -5138,7 +5138,7 @@
      "lines": [
       "يَا إِلَهْنَا القُدُّوس القَادِر ❖ قَدَّسْنَا لِشَخْصَك نَقِّينَا",
       "قَوِّم كُلّ ضَعِيف أَو عَاثِر ❖ نُور بِقَدَاسْتَك لَيَالِينَا",
-      "عَايْزِين نَحْيَا لَك فِي طَهَارَهمِن غِير مَا العَالَم يِسْبِينَا",
+      "عَايْزِين نَحْيَا لَك فِي طَهَارَه ❖ مِن غِير مَا العَالَم يِسْبِينَا",
       "تَبْقَى حَيَاتْنَا سِرَاج وَمَنَارَه ❖ وَيِشُوف النَّاس عَمَلَك فِينَا"
      ],
      "chorus": true
@@ -5146,7 +5146,7 @@
     {
      "label": "2",
      "lines": [
-      "إِحْنَا الشَّعْب اللِّي انت فْدِيتُهمِن كُلّ قُيُودُه حَلِّيتُه",
+      "إِحْنَا الشَّعْب اللِّي انت فْدِيتُه ❖ مِن كُلّ قُيُودُه حَلِّيتُه",
       "القَلب المَيِّت أَحْيِيتُه ❖ وَمَرَار المَاضِي حَلِّيتُه",
       "المَاضِي بِمُوتَك سَتَرْتُه ❖ وَالحَاضِر وَحْدَك غَيَّرتُه",
       "وَمَصِيرْنَا الأَبَدِي نَوَّرتُه ❖ إِحْنَا الشَّعْب اللِّي انت فْدِيتُه"
@@ -5166,6 +5166,8 @@
    "book": "main",
    "title_en": "We Are the People You Redeemed",
    "chorus_en": "Refrain",
+   "title_de": "Wir Sind Das Volk, Das Du Erloest Hast",
+   "chorus_de": "Kehrvers",
    "verses_en": [
     {
      "label": "1",
@@ -5205,8 +5207,6 @@
      ]
     }
    ],
-   "title_de": "Wir Sind Das Volk, Das Du Erloest Hast",
-   "chorus_de": "Kehrvers",
    "verses_de": [
     {
      "label": "1",
