@@ -7003,85 +7003,85 @@
   "id": "h1001",
   "book": "main",
   "number": 1001,
-  "title": "غالبين قوي إحنا على قلبك",
+  "title": "شكرا علي الاحسان ونعمة الايمان",
   "hasChorus": true
  },
  {
   "id": "h1002",
   "book": "main",
   "number": 1002,
-  "title": "آسف لأني ما قلتش لأ",
+  "title": "اسف لاني ما قلتش لا",
   "hasChorus": true
  },
  {
   "id": "h1003",
   "book": "main",
   "number": 1003,
-  "title": "عالم الموت وين الحياة",
-  "hasChorus": false
+  "title": "لو نفسك تعبت وانهارت واتقلبت",
+  "hasChorus": true
  },
  {
   "id": "h1004",
   "book": "main",
   "number": 1004,
-  "title": "وفي قلبي رحمه وإحسان",
+  "title": "عالم ولازم اللي بيحبه يعاني",
   "hasChorus": true
  },
  {
   "id": "h1005",
   "book": "main",
   "number": 1005,
-  "title": "جاي لك ربي وكاشف",
+  "title": "جاي لك ربي وكاشف ضعفي",
   "hasChorus": true
  },
  {
   "id": "h1006",
   "book": "main",
   "number": 1006,
-  "title": "يمكن أقسى يمكن أنسى",
+  "title": "يمكن اقسي يمكن انسي يمكن",
   "hasChorus": true
  },
  {
   "id": "h1007",
   "book": "main",
   "number": 1007,
-  "title": "علمني ازاي اسجد لك",
+  "title": "علمني ازاي اسجد لك واشبع",
   "hasChorus": true
  },
  {
   "id": "h1008",
   "book": "main",
   "number": 1008,
-  "title": "نبع من قلبي دمعه",
+  "title": "نبع من قلبي دمعه للسما",
   "hasChorus": true
  },
  {
   "id": "h1009",
   "book": "main",
   "number": 1009,
-  "title": "دي إيديك محاوطاني في حضنك",
+  "title": "دي ايديك محاوطاني في حضنك",
   "hasChorus": true
  },
  {
   "id": "h1010",
   "book": "main",
   "number": 1010,
-  "title": "لو نفسك تعرف إيه اللي",
-  "hasChorus": false
+  "title": "انا مش وحيد انت معايا",
+  "hasChorus": true
  },
  {
   "id": "h1011",
   "book": "main",
   "number": 1011,
-  "title": "حاسس بيك شايفك وسامعني",
+  "title": "كل السنين ما تفوت يا",
   "hasChorus": true
  },
  {
   "id": "h1012",
   "book": "main",
   "number": 1012,
-  "title": "من نبع رعايتك يا راعي",
-  "hasChorus": false
+  "title": "بافرح واتعزى في وسط همومي",
+  "hasChorus": true
  },
  {
   "id": "h1013",
@@ -7101,7 +7101,7 @@
   "id": "h1015",
   "book": "main",
   "number": 1015,
-  "title": "تعبت وذقت الزوان الذل",
+  "title": "تعبت ودقت الوان الذل",
   "hasChorus": true
  },
  {
@@ -7115,7 +7115,7 @@
   "id": "h1017",
   "book": "main",
   "number": 1017,
-  "title": "بدون حبك أنا تايه",
+  "title": "بدون حبك أنا تايه أنا",
   "hasChorus": false
  },
  {
@@ -7129,7 +7129,7 @@
   "id": "h1019",
   "book": "main",
   "number": 1019,
-  "title": "قلبي اتعلق بيك وعيني",
+  "title": "قلبي اتعلق بيك وعيني عليك",
   "hasChorus": true
  },
  {
@@ -7143,8 +7143,8 @@
   "id": "h1021",
   "book": "main",
   "number": 1021,
-  "title": "دي الأبواب مفتوحة للي يعوز",
-  "hasChorus": false
+  "title": "دي الابواب مفتوحه للي يعوز",
+  "hasChorus": true
  },
  {
   "id": "h1022",
@@ -7157,28 +7157,28 @@
   "id": "h1023",
   "book": "main",
   "number": 1023,
-  "title": "بانتظرك وباصبر ليك",
+  "title": "بانتظرك وباصبر ليك واسكب قلبي",
   "hasChorus": true
  },
  {
   "id": "h1024",
   "book": "main",
   "number": 1024,
-  "title": "جاي لك بخطايا الثقال",
+  "title": "جاي لك بخطاياي الثقال وعيوبي",
   "hasChorus": true
  },
  {
   "id": "h1025",
   "book": "main",
   "number": 1025,
-  "title": "مع الخطايا بالاسم حي لكن ميت",
+  "title": "أنا اللي عارف أعمالك داري",
   "hasChorus": true
  },
  {
   "id": "h1026",
   "book": "main",
   "number": 1026,
-  "title": "من ترى شخص عجيب",
+  "title": "أمسكت بيدي اليمنى برأيك",
   "hasChorus": true
  },
  {
@@ -7206,21 +7206,21 @@
   "id": "h1030",
   "book": "main",
   "number": 1030,
-  "title": "من حبك للعالم جيت",
+  "title": "من حبك للعالم جيت مت",
   "hasChorus": true
  },
  {
   "id": "h1031",
   "book": "main",
   "number": 1031,
-  "title": "وقت لما تكون صعابي",
+  "title": "وقت لما تكون صعابي حاجبه",
   "hasChorus": false
  },
  {
   "id": "h1032",
   "book": "main",
   "number": 1032,
-  "title": "ليه أنا اعيش في الضعف",
+  "title": "ليه انا اعيش في الضعف",
   "hasChorus": true
  },
  {
@@ -7234,7 +7234,7 @@
   "id": "h1034",
   "book": "main",
   "number": 1034,
-  "title": "جايين بنغني وبنقدم",
+  "title": "جايين بنغني وبنقدم لالهنا ذبيحة",
   "hasChorus": true
  },
  {
@@ -7248,7 +7248,7 @@
   "id": "h1036",
   "book": "main",
   "number": 1036,
-  "title": "ما فارقتنيش أبدا أبدا",
+  "title": "ما فارقنيش أبدا أبدا إحسانك",
   "hasChorus": true
  },
  {
@@ -7256,27 +7256,27 @@
   "book": "main",
   "number": 1037,
   "title": "اختبارات المؤمنين في كل يوم",
-  "hasChorus": false
+  "hasChorus": true
  },
  {
   "id": "h1038",
   "book": "main",
   "number": 1038,
-  "title": "إنت في العلى أقدر",
+  "title": "انت في العلى أقدر على",
   "hasChorus": true
  },
  {
   "id": "h1039",
   "book": "main",
   "number": 1039,
-  "title": "بيجرح بيعصب بيسحق بيشفي",
+  "title": "يجرح يعصب يسحق يشفي يمسح",
   "hasChorus": true
  },
  {
   "id": "h1040",
   "book": "main",
   "number": 1040,
-  "title": "لو فرض والدنيا ضحكت",
+  "title": "لو فرض والدنيا ضحكت والسعادة",
   "hasChorus": true
  },
  {
@@ -7290,14 +7290,14 @@
   "id": "h1042",
   "book": "main",
   "number": 1042,
-  "title": "الله بيتكلم لي وليك",
+  "title": "الله بيتكلم لي وليك الله",
   "hasChorus": true
  },
  {
   "id": "h1043",
   "book": "main",
   "number": 1043,
-  "title": "أنا مش مستني مديح",
+  "title": "أنا مش مستني مديح ولا",
   "hasChorus": true
  },
  {
@@ -7311,14 +7311,14 @@
   "id": "h1045",
   "book": "main",
   "number": 1045,
-  "title": "سنين وعدت أيامها تشهد",
+  "title": "سنين وعدت أيامها تشهد بأن",
   "hasChorus": true
  },
  {
   "id": "h1046",
   "book": "main",
   "number": 1046,
-  "title": "ملك الملوك وجلالك",
+  "title": "ملك الملوك وجلالك مالي",
   "hasChorus": false
  },
  {
