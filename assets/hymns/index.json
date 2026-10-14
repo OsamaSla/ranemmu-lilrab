@@ -7000,6 +7000,335 @@
   "hasChorus": true
  },
  {
+  "id": "h1001",
+  "book": "main",
+  "number": 1001,
+  "title": "غالبين قوي إحنا على قلبك",
+  "hasChorus": true
+ },
+ {
+  "id": "h1002",
+  "book": "main",
+  "number": 1002,
+  "title": "آسف لأني ما قلتش لأ",
+  "hasChorus": true
+ },
+ {
+  "id": "h1003",
+  "book": "main",
+  "number": 1003,
+  "title": "عالم الموت وين الحياة",
+  "hasChorus": false
+ },
+ {
+  "id": "h1004",
+  "book": "main",
+  "number": 1004,
+  "title": "وفي قلبي رحمه وإحسان",
+  "hasChorus": true
+ },
+ {
+  "id": "h1005",
+  "book": "main",
+  "number": 1005,
+  "title": "جاي لك ربي وكاشف",
+  "hasChorus": true
+ },
+ {
+  "id": "h1006",
+  "book": "main",
+  "number": 1006,
+  "title": "يمكن أقسى يمكن أنسى",
+  "hasChorus": true
+ },
+ {
+  "id": "h1007",
+  "book": "main",
+  "number": 1007,
+  "title": "علمني ازاي اسجد لك",
+  "hasChorus": true
+ },
+ {
+  "id": "h1008",
+  "book": "main",
+  "number": 1008,
+  "title": "نبع من قلبي دمعه",
+  "hasChorus": true
+ },
+ {
+  "id": "h1009",
+  "book": "main",
+  "number": 1009,
+  "title": "دي إيديك محاوطاني في حضنك",
+  "hasChorus": true
+ },
+ {
+  "id": "h1010",
+  "book": "main",
+  "number": 1010,
+  "title": "لو نفسك تعرف إيه اللي",
+  "hasChorus": false
+ },
+ {
+  "id": "h1011",
+  "book": "main",
+  "number": 1011,
+  "title": "حاسس بيك شايفك وسامعني",
+  "hasChorus": true
+ },
+ {
+  "id": "h1012",
+  "book": "main",
+  "number": 1012,
+  "title": "من نبع رعايتك يا راعي",
+  "hasChorus": false
+ },
+ {
+  "id": "h1013",
+  "book": "main",
+  "number": 1013,
+  "title": "كل اللي صنعته خير",
+  "hasChorus": true
+ },
+ {
+  "id": "h1014",
+  "book": "main",
+  "number": 1014,
+  "title": "بالصليب كنت تبغي أن تخلص",
+  "hasChorus": false
+ },
+ {
+  "id": "h1015",
+  "book": "main",
+  "number": 1015,
+  "title": "تعبت وذقت الزوان الذل",
+  "hasChorus": true
+ },
+ {
+  "id": "h1016",
+  "book": "main",
+  "number": 1016,
+  "title": "دايس على عسلك يا عالم",
+  "hasChorus": false
+ },
+ {
+  "id": "h1017",
+  "book": "main",
+  "number": 1017,
+  "title": "بدون حبك أنا تايه",
+  "hasChorus": false
+ },
+ {
+  "id": "h1018",
+  "book": "main",
+  "number": 1018,
+  "title": "أنا فيك عايش متهني",
+  "hasChorus": true
+ },
+ {
+  "id": "h1019",
+  "book": "main",
+  "number": 1019,
+  "title": "قلبي اتعلق بيك وعيني",
+  "hasChorus": true
+ },
+ {
+  "id": "h1020",
+  "book": "main",
+  "number": 1020,
+  "title": "أنا مهما ان أشكر مش",
+  "hasChorus": true
+ },
+ {
+  "id": "h1021",
+  "book": "main",
+  "number": 1021,
+  "title": "دي الأبواب مفتوحة للي يعوز",
+  "hasChorus": false
+ },
+ {
+  "id": "h1022",
+  "book": "main",
+  "number": 1022,
+  "title": "باحبك عشان جروح الصليب",
+  "hasChorus": false
+ },
+ {
+  "id": "h1023",
+  "book": "main",
+  "number": 1023,
+  "title": "بانتظرك وباصبر ليك",
+  "hasChorus": true
+ },
+ {
+  "id": "h1024",
+  "book": "main",
+  "number": 1024,
+  "title": "جاي لك بخطايا الثقال",
+  "hasChorus": true
+ },
+ {
+  "id": "h1025",
+  "book": "main",
+  "number": 1025,
+  "title": "مع الخطايا بالاسم حي لكن ميت",
+  "hasChorus": true
+ },
+ {
+  "id": "h1026",
+  "book": "main",
+  "number": 1026,
+  "title": "من ترى شخص عجيب",
+  "hasChorus": true
+ },
+ {
+  "id": "h1027",
+  "book": "main",
+  "number": 1027,
+  "title": "كنت كفاية الآب في صليبك",
+  "hasChorus": true
+ },
+ {
+  "id": "h1028",
+  "book": "main",
+  "number": 1028,
+  "title": "عند قدميك سيدي يطيب لي",
+  "hasChorus": true
+ },
+ {
+  "id": "h1029",
+  "book": "main",
+  "number": 1029,
+  "title": "ما استاهلش تموت لأجلي",
+  "hasChorus": true
+ },
+ {
+  "id": "h1030",
+  "book": "main",
+  "number": 1030,
+  "title": "من حبك للعالم جيت",
+  "hasChorus": true
+ },
+ {
+  "id": "h1031",
+  "book": "main",
+  "number": 1031,
+  "title": "وقت لما تكون صعابي",
+  "hasChorus": false
+ },
+ {
+  "id": "h1032",
+  "book": "main",
+  "number": 1032,
+  "title": "ليه أنا اعيش في الضعف",
+  "hasChorus": true
+ },
+ {
+  "id": "h1033",
+  "book": "main",
+  "number": 1033,
+  "title": "ها نسيب الدنيا وما فيها",
+  "hasChorus": true
+ },
+ {
+  "id": "h1034",
+  "book": "main",
+  "number": 1034,
+  "title": "جايين بنغني وبنقدم",
+  "hasChorus": true
+ },
+ {
+  "id": "h1035",
+  "book": "main",
+  "number": 1035,
+  "title": "أنا عارف انك يا ربي",
+  "hasChorus": true
+ },
+ {
+  "id": "h1036",
+  "book": "main",
+  "number": 1036,
+  "title": "ما فارقتنيش أبدا أبدا",
+  "hasChorus": true
+ },
+ {
+  "id": "h1037",
+  "book": "main",
+  "number": 1037,
+  "title": "اختبارات المؤمنين في كل يوم",
+  "hasChorus": false
+ },
+ {
+  "id": "h1038",
+  "book": "main",
+  "number": 1038,
+  "title": "إنت في العلى أقدر",
+  "hasChorus": true
+ },
+ {
+  "id": "h1039",
+  "book": "main",
+  "number": 1039,
+  "title": "بيجرح بيعصب بيسحق بيشفي",
+  "hasChorus": true
+ },
+ {
+  "id": "h1040",
+  "book": "main",
+  "number": 1040,
+  "title": "لو فرض والدنيا ضحكت",
+  "hasChorus": true
+ },
+ {
+  "id": "h1041",
+  "book": "main",
+  "number": 1041,
+  "title": "يا اللي ليك عيون الكل",
+  "hasChorus": true
+ },
+ {
+  "id": "h1042",
+  "book": "main",
+  "number": 1042,
+  "title": "الله بيتكلم لي وليك",
+  "hasChorus": true
+ },
+ {
+  "id": "h1043",
+  "book": "main",
+  "number": 1043,
+  "title": "أنا مش مستني مديح",
+  "hasChorus": true
+ },
+ {
+  "id": "h1044",
+  "book": "main",
+  "number": 1044,
+  "title": "هو فيه في الدنيا ايه",
+  "hasChorus": true
+ },
+ {
+  "id": "h1045",
+  "book": "main",
+  "number": 1045,
+  "title": "سنين وعدت أيامها تشهد",
+  "hasChorus": true
+ },
+ {
+  "id": "h1046",
+  "book": "main",
+  "number": 1046,
+  "title": "ملك الملوك وجلالك",
+  "hasChorus": false
+ },
+ {
+  "id": "h1047",
+  "book": "main",
+  "number": 1047,
+  "title": "إحنا الشعب اللي انت فديته",
+  "hasChorus": true
+ },
+ {
   "id": "tr0001",
   "book": "taranim",
   "number": 1,

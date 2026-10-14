@@ -3,7 +3,7 @@
 
 import type { Hymn } from './types';
 
-/** Full hymn records, chunked. 14 chunk(s) of up to 100. */
+/** Full hymn records, chunked. 15 chunk(s) of up to 100. */
 export const HYMN_CHUNKS: Record<number, Hymn[]> = {
   0: require('../../assets/hymns/full/000.json') as Hymn[],
   1: require('../../assets/hymns/full/001.json') as Hymn[],
@@ -19,6 +19,7 @@ export const HYMN_CHUNKS: Record<number, Hymn[]> = {
   11: require('../../assets/hymns/full/011.json') as Hymn[],
   12: require('../../assets/hymns/full/012.json') as Hymn[],
   13: require('../../assets/hymns/full/013.json') as Hymn[],
+  14: require('../../assets/hymns/full/014.json') as Hymn[],
 };
 
-export const HYMN_CHUNK_COUNT = 14;
+export const HYMN_CHUNK_COUNT = 15;

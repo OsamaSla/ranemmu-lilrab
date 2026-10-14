@@ -132,6 +132,11 @@ export const en: PartialDictionary = {
   'settings.version': 'Version',
 
   'help.title': 'User Guide',
+  'help.video.title': 'Video tutorial',
+  'help.video.body': 'Watch how to use the app step by step — no reading needed.',
+  'help.video.play': 'Play tutorial',
+  'help.video.youtube': 'YouTube',
+  'help.video.soon': 'Coming soon',
   'help.search.title': 'Search',
   'help.search.body': 'Search by hymn number or any part of its words, with or without vowel marks.',
   'help.browse.title': 'Browse Hymns',

@@ -60,10 +60,10 @@ export default function HomeScreen() {
           resizeMode="contain"
           style={{
             alignSelf: 'center',
-            width: 280,
-            height: 120,
+            width: 340,
+            height: 150,
             marginBottom: spacing.md,
-            opacity: 0.35,
+            opacity: 0.5,
             tintColor: colors.text,
           }}
         />

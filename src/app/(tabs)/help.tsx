@@ -12,6 +12,7 @@ import { ScrollView, View } from 'react-native';
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
+import { TutorialVideoCard } from '../../components/TutorialVideoCard';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import type { TranslationKey } from '../../i18n';
@@ -35,6 +36,7 @@ export default function HelpScreen() {
       <AppBar title={t('help.title')} />
 
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
+        <TutorialVideoCard />
         <Card style={{ padding: spacing.lg }}>
           <View style={{ flexDirection: direction.row, alignItems: 'center', marginBottom: spacing.lg }}>
             <View

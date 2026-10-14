@@ -137,6 +137,11 @@ export const de: PartialDictionary = {
   'settings.version': 'Version',
 
   'help.title': 'Benutzerhandbuch',
+  'help.video.title': 'Videoanleitung',
+  'help.video.body': 'Sieh Schritt für Schritt, wie die App funktioniert — ohne zu lesen.',
+  'help.video.play': 'Anleitung abspielen',
+  'help.video.youtube': 'YouTube',
+  'help.video.soon': 'Bald',
   'help.search.title': 'Suche',
   'help.search.body': 'Suche nach Liednummer oder einem Teil des Textes, mit oder ohne Vokalzeichen.',
   'help.browse.title': 'Lieder durchsuchen',
