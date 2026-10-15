@@ -4,10 +4,10 @@
  * The bundled corpus is static, so admin edits cannot rewrite it. Instead
  * every confirmed edit lands here (persisted to AsyncStorage) and
  * src/data/loader merges the patches over the bundled records — the change
- * is visible in the reader, lists and search immediately. The PC pipeline
- * stays the source of truth: "export" shares the patch set as JSON and
- * scripts/apply-overrides.mjs merges it into the books' workbooks
- * (content/hymns-imported.xlsx, content/taranim-rohiya.xlsx).
+ * is visible in the reader, lists and search immediately. Edits additionally
+ * sync to Firestore (best-effort write-through plus the Publish button),
+ * and Firestore patches stream back in as remote overlays, so one admin's
+ * save appears on every device within seconds.
  */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';

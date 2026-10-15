@@ -13,6 +13,8 @@ import { I18nManager } from 'react-native';
 import { useTheme } from '../hooks/useTheme';
 import { DEFAULT_LOCALE, isRTL } from '../i18n';
 import { useAppFonts } from '../theme/fonts';
+import { startLiveSync } from '../data/liveSync';
+import { useSession } from '../store/session';
 
 // Prevent the auto-hide from racing the font load in the effect below.
 SplashScreen.preventAutoHideAsync().catch(() => {
@@ -33,6 +35,17 @@ export default function RootLayout() {
   useEffect(() => {
     if (fontsReady) SplashScreen.hideAsync().catch(() => {});
   }, [fontsReady]);
+
+  // Firebase admin session + live hymn sync. Both no-op offline or before
+  // the owner configures Firebase — the bundled corpus carries the app.
+  useEffect(() => {
+    const stopSession = useSession.getState().init();
+    const stopSync = startLiveSync();
+    return () => {
+      stopSession();
+      stopSync();
+    };
+  }, []);
 
   if (!fontsReady) return null;
 

@@ -8,6 +8,7 @@
 import { HYMN_CHUNKS, HYMN_CHUNK_COUNT } from './generated-chunks';
 import { BOOKS } from './types';
 import type { BookId, Hymn, HymnSummary } from './types';
+import { getRemoteFullDocs, getRemoteSummaries } from '../store/remote';
 import { invalidateSearchCache } from './search';
 
 const SUMMARIES = require('../../assets/hymns/index.json') as HymnSummary[];
@@ -46,7 +47,7 @@ export function getBooks(): { id: BookId; count: number }[] {
 /** All hymn summaries: numbers, titles and metres, overrides applied. */
 export function getSummaries(book?: BookId): HymnSummary[] {
   const overlays = overlayReader();
-  return SUMMARIES.filter((s) => !book || (s.book ?? 'main') === book).map((s) => {
+  const base = SUMMARIES.filter((s) => !book || (s.book ?? 'main') === book).map((s) => {
     const patch = overlays[s.id];
     if (!patch) return s;
     return {
@@ -57,7 +58,30 @@ export function getSummaries(book?: BookId): HymnSummary[] {
       hasChorus:
         patch.verses !== undefined ? patch.verses.some((v) => v.chorus) : (s.hasChorus ?? false),
     };
-  }).sort((a, b) => a.number - b.number);
+  });
+  // Hymns that exist only remotely (added from another device after this
+  // bundle shipped) join the lists; local edits still win per record.
+  const known = new Set(base.map((s) => s.id));
+  for (const s of getRemoteSummaries()) {
+    if (known.has(s.id)) continue;
+    if (book && (s.book ?? 'main') !== book) continue;
+    const patch = overlays[s.id];
+    base.push(
+      patch
+        ? {
+            ...s,
+            number: patch.number ?? s.number,
+            title: patch.title ?? s.title,
+            meter: patch.meter ?? s.meter,
+            hasChorus:
+              patch.verses !== undefined
+                ? patch.verses.some((v) => v.chorus)
+                : (s.hasChorus ?? false),
+          }
+        : s,
+    );
+  }
+  return base.sort((a, b) => a.number - b.number);
 }
 
 export function getHymnCount(): number {
@@ -99,6 +123,13 @@ export function getCorpus(book?: BookId): Hymn[] {
     const patch = overlays[hymn.id];
     return patch ? { ...hymn, ...patch } : hymn;
   });
+  const present = new Set(merged.map((h) => h.id));
+  for (const remote of getRemoteFullDocs()) {
+    if (present.has(remote.id)) continue;
+    if (book && (remote.book ?? 'main') !== book) continue;
+    const patch = overlays[remote.id];
+    merged.push(patch ? { ...remote, ...patch } : remote);
+  }
   if (!book) {
     corpus = merged;
     return merged;
@@ -121,6 +152,14 @@ export function getHymn(id: string): Hymn | undefined {
       byId.set(id, merged);
       return merged;
     }
+  }
+  // Hymns added from another device after this bundle shipped.
+  const remote = getRemoteFullDocs().find((hymn) => hymn.id === id);
+  if (remote) {
+    const patch = overlayReader()[id];
+    const merged = patch ? { ...remote, ...patch } : remote;
+    byId.set(id, merged);
+    return merged;
   }
   return undefined;
 }

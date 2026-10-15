@@ -34,17 +34,14 @@ interface SettingsState {
   appScale: number;
   /** Point size for hymn text. */
   readerSize: number;
-  /** Admin area PIN. */
+  /** Admin area PIN (legacy gate, used only before Firebase is configured). */
   adminPin: string;
-  /** GitHub fine-grained PAT for one-tap publishing (empty = not set up). */
-  githubToken: string;
   /** Currently chosen hymn book. */
   book: BookId;
 
   setTheme: (theme: ThemePreference) => void;
   setFontFamily: (id: string) => void;
   setAdminPin: (pin: string) => void;
-  setGithubToken: (token: string) => void;
   setBook: (book: BookId) => void;
   setAppScale: (scale: number) => void;
   setReaderSize: (size: number) => void;
@@ -66,13 +63,11 @@ export const useSettings = create<SettingsState>()(
       appScale: 1,
       readerSize: 20,
       adminPin: '1234',
-      githubToken: '',
       book: 'main',
 
       setTheme: (theme) => set({ theme }),
       setFontFamily: (fontFamily) => set({ fontFamily }),
       setAdminPin: (adminPin) => set({ adminPin }),
-      setGithubToken: (githubToken) => set({ githubToken }),
       setBook: (book) => set({ book }),
 
       setAppScale: (appScale) =>
@@ -99,14 +94,18 @@ export const useSettings = create<SettingsState>()(
       // v2: adds the admin PIN (defaults to '1234' for older stores).
       // v3: adds the chosen hymn book (defaults to 'main' for older stores).
       // v4: adds the GitHub token for one-tap publishing (defaults to '').
-      version: 4,
-      migrate: (persisted) => ({
-        adminPin: '1234',
-        githubToken: '',
-        book: 'main',
-        ...((persisted ?? {}) as Record<string, unknown>),
-        locale: 'ar',
-      }),
+      // v5: drops the GitHub token — publishing moved to Firebase.
+      version: 5,
+      migrate: (persisted) => {
+        const { githubToken: _dropped, ...rest } = (persisted ?? {}) as Record<string, unknown>;
+        void _dropped;
+        return {
+          adminPin: '1234',
+          book: 'main',
+          ...rest,
+          locale: 'ar',
+        };
+      },
     },
   ),
 );

@@ -1,10 +1,9 @@
 /**
- * Admin hymn creator (PC-only).
+ * Admin hymn creator.
  *
- * On the client we write a partial `Hymn` into the overrides store (instant in UI)
- * and bundle it locally. The PC pipeline exports all pending overrides as JSON
- * and scripts/apply-overrides.mjs merges them into the books' workbooks
- * (which the translation scripts read to stage new EN/DE sheets).
+ * On the client we write a partial `Hymn` into the overrides store (instant
+ * in UI) and upload it to Firestore best-effort, where it joins the library
+ * on every device via the remote overlay.
  */
 import { useState } from 'react';
 import { Pressable, ScrollView, TextInput, View } from 'react-native';
@@ -14,6 +13,7 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { getSummaries, getHymn } from '../../data/loader';
+import { syncHymnToCloud } from '../../data/liveSync';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -100,7 +100,7 @@ export default function AdminAddScreen() {
       setMsg(t('admin.errExists'));
       return;
     }
-    setOverride(String(form.number), {
+    const patch = {
       number: form.number,
       title: form.title.trim(),
       author: form.author.trim(),
@@ -112,7 +112,9 @@ export default function AdminAddScreen() {
         lines: [form.lines[0][0].trim()],
         chorus: false,
       }],
-    });
+    };
+    setOverride(String(form.number), patch);
+    void syncHymnToCloud(String(form.number), patch);
     setMsg(t('admin.saved'));
   };
 

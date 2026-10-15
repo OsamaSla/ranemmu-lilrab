@@ -1,0 +1,19 @@
+rules_version = '2';
+
+// Hymn book backend: the whole world reads, only the signed-in admin writes.
+// IMPORTANT: in Firebase console → Authentication → Settings, turn OFF
+// user sign-up ("Create" action) after creating the admin account, so no
+// one else can register. Deletion is disabled entirely — hymns are only
+// ever created or updated from the app's Admin panel.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /hymns/{hymnId} {
+      allow read: if true;
+      allow create, update: if request.auth != null;
+      allow delete: if false;
+    }
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -69,6 +69,15 @@ const TRANSLATION_NOTES = {
 } as const;
 
 /**
+ * Review badge shown above a translation, always in the viewed language.
+ * Arabic needs neither — it is the original text.
+ */
+const TRANSLATION_STATUS_LABEL = {
+  AI_DRAFT: { en: 'AI draft', de: 'KI-Entwurf' },
+  VERIFIED: { en: 'Verified', de: 'Geprüft' },
+} as const;
+
+/**
  * Lets `expo export` and web deep links resolve every hymn statically.
  * Native dev and production builds resolve the param at runtime and ignore this.
  */
@@ -83,6 +92,14 @@ export default function ReaderScreen() {
   const { t, direction } = useT();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
+
+  // Back chevron: return to whatever opened the hymn. With no history to
+  // pop (deep link, fresh launch) back() would fall through to home, so
+  // fall back to the library — the hymn's natural parent — instead.
+  const goBack = () => {
+    if (router.canGoBack()) router.back();
+    else router.replace('/library');
+  };
 
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
@@ -238,7 +255,7 @@ export default function ReaderScreen() {
           <IconButton
             name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
             label={t('common.back')}
-            onPress={() => router.back()}
+            onPress={goBack}
           />
         </View>
         <EmptyState icon="book-remove-outline" title={t('common.notFound')} />
@@ -471,13 +488,59 @@ export default function ReaderScreen() {
   const versesView = (
     <>
       {parallel !== 'ar' ? (
-        <AppText
-          variant="caption"
-          center
-          color={fullscreen ? palette.readerText : colors.textMuted}
-          style={{ opacity: fullscreen ? 0.75 : 1, marginBottom: spacing.md }}>
-          {TRANSLATION_NOTES[parallel]}
-        </AppText>
+        <View style={{ alignItems: 'center', marginBottom: spacing.md }}>
+          <View
+            style={{
+              flexDirection: direction.row,
+              alignItems: 'center',
+              gap: spacing.xs,
+              paddingHorizontal: spacing.md,
+              paddingVertical: spacing.xs,
+              borderRadius: radius.pill,
+              borderWidth: 1,
+              borderColor:
+                (hymn.translationStatus ?? 'AI_DRAFT') === 'VERIFIED'
+                  ? colors.primary
+                  : colors.textMuted,
+              backgroundColor:
+                (hymn.translationStatus ?? 'AI_DRAFT') === 'VERIFIED'
+                  ? colors.primary
+                  : 'transparent',
+            }}>
+            <MaterialCommunityIcons
+              name={
+                (hymn.translationStatus ?? 'AI_DRAFT') === 'VERIFIED'
+                  ? 'check-circle'
+                  : 'robot-outline'
+              }
+              size={16}
+              color={
+                (hymn.translationStatus ?? 'AI_DRAFT') === 'VERIFIED'
+                  ? colors.onPrimary
+                  : colors.textMuted
+              }
+            />
+            <AppText
+              variant="caption"
+              color={
+                (hymn.translationStatus ?? 'AI_DRAFT') === 'VERIFIED'
+                  ? colors.onPrimary
+                  : colors.textMuted
+              }
+              style={{ fontWeight: '700' }}>
+              {TRANSLATION_STATUS_LABEL[hymn.translationStatus ?? 'AI_DRAFT'][parallel]}
+            </AppText>
+          </View>
+          {(hymn.translationStatus ?? 'AI_DRAFT') === 'AI_DRAFT' ? (
+            <AppText
+              variant="caption"
+              center
+              color={fullscreen ? palette.readerText : colors.textMuted}
+              style={{ opacity: fullscreen ? 0.75 : 1, marginTop: spacing.xs }}>
+              {TRANSLATION_NOTES[parallel]}
+            </AppText>
+          ) : null}
+        </View>
       ) : null}
       {hymn.verses.map((verseBlock, verseIndex) => (
         <View
@@ -637,7 +700,7 @@ export default function ReaderScreen() {
           {headerIcon({
             name: direction.isRTL ? 'chevron-right' : 'chevron-left',
             label: t('common.back'),
-            onPress: () => router.back(),
+            onPress: goBack,
             dark: true,
           })}
           <View style={{ flex: 1, paddingHorizontal: spacing.sm }}>
@@ -729,7 +792,7 @@ export default function ReaderScreen() {
             name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
             label={t('common.back')}
             color={colors.onPrimary}
-            onPress={() => router.back()}
+            onPress={goBack}
           />
           <View style={{ flex: 1, paddingHorizontal: spacing.sm }}>
             <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start' }}>

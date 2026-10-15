@@ -6,6 +6,7 @@
  * rejects anything else. Saving therefore requires identical stanza and
  * line counts to the bundled record.
  */
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useState } from 'react';
 import { Pressable, ScrollView, TextInput, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -15,6 +16,7 @@ import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { EmptyState } from '../../components/EmptyState';
 import { getHymn } from '../../data/loader';
+import { syncHymnToCloud } from '../../data/liveSync';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -40,6 +42,7 @@ export default function AdminEditScreen() {
     authorOriginal: '',
     meter: '',
     chorus: '',
+    verified: false,
     lines: [] as string[][],
     title_en: '',
     chorus_en: '',
@@ -52,6 +55,7 @@ export default function AdminEditScreen() {
     h
       ? {
           key,
+          verified: h.translationStatus === 'VERIFIED',
           title: h.title,
           author: h.author ?? '',
           authorOriginal: h.authorOriginal ?? '',
@@ -155,7 +159,8 @@ export default function AdminEditScreen() {
         return;
       }
     }
-    setOverride(hymn.id, {
+    const patch = {
+      translationStatus: form.verified ? ('VERIFIED' as const) : ('AI_DRAFT' as const),
       title: form.title.trim(),
       author: form.author.trim(),
       authorOriginal: form.authorOriginal.trim(),
@@ -190,7 +195,11 @@ export default function AdminEditScreen() {
               : {}),
           }
         : {}),
-    });
+    };
+    setOverride(hymn.id, patch);
+    // Best-effort live upload: silent when offline, unconfigured or signed
+    // out — the local save above is the source of truth either way.
+    void syncHymnToCloud(hymn.id, patch);
     setMsg(t('admin.saved'));
     setSavedOnce(true);
   };
@@ -318,6 +327,37 @@ export default function AdminEditScreen() {
         ))}
 
         <Pressable
+          onPress={() => set({ verified: !form.verified })}
+          accessibilityRole="switch"
+          accessibilityState={{ checked: form.verified }}
+          android_ripple={{ color: colors.border }}
+          style={({ pressed }) => ({
+            flexDirection: direction.row,
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: spacing.sm,
+            paddingVertical: spacing.md,
+            marginBottom: spacing.sm,
+            borderRadius: radius.pill,
+            borderWidth: 1,
+            borderColor: form.verified ? colors.primary : colors.border,
+            backgroundColor: form.verified ? colors.primary : 'transparent',
+            opacity: pressed ? 0.75 : 1,
+          })}>
+          <MaterialCommunityIcons
+            name={form.verified ? 'check-circle' : 'check-circle-outline'}
+            size={20}
+            color={form.verified ? colors.onPrimary : colors.textMuted}
+          />
+          <AppText
+            variant="label"
+            color={form.verified ? colors.onPrimary : colors.text}
+            style={{ fontWeight: '700' }}>
+            {form.verified ? t('admin.verified') : t('admin.markVerified')}
+          </AppText>
+        </Pressable>
+
+        <Pressable
           onPress={save}
           accessibilityRole="button"
           accessibilityLabel={t('admin.save')}
@@ -342,9 +382,6 @@ export default function AdminEditScreen() {
 
         {savedOnce ? (
           <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
-            <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
-              {t('admin.publishSteps')}
-            </AppText>
             <Pressable
               onPress={() => router.push('/admin')}
               accessibilityRole="button"

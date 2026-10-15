@@ -71,6 +71,12 @@ export interface Hymn extends HymnSummary {
   authorOriginal?: string;
   /** Free-form notes shown in the info sheet. */
   info?: string;
+  /**
+   * Translation review state. Absent (legacy records) means AI_DRAFT —
+   * only an explicit VERIFIED, set by a proofreader in Admin, hides the
+   * AI-translation disclaimer in the reader.
+   */
+  translationStatus?: 'AI_DRAFT' | 'VERIFIED';
   verses: HymnVerse[];
 }
 
