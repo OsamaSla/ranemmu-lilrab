@@ -9,12 +9,13 @@
  * query then streams live edits. Initial quota cost is ~0 reads.
  */
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { collection, getDocs, onSnapshot, query, where } from 'firebase/firestore';
+import { collection, doc, getDoc, getDocs, onSnapshot, query, where } from 'firebase/firestore';
 
-import { getFirebaseDb, HYMNS_COLLECTION, isFirebaseConfigured } from './firebase';
+import { DELETED_DOC, getFirebaseDb, HYMNS_COLLECTION, isFirebaseConfigured } from './firebase';
 import { refreshOverlaidCorpus } from './loader';
 import { publishHymn } from './publish';
 import { useRemote } from '../store/remote';
+import { useOverrides } from '../store/overrides';
 import type { Hymn } from './types';
 
 const LAST_SYNC_KEY = 'helemenarnam.lastSync';
@@ -27,6 +28,14 @@ const LAST_SYNC_KEY = 'helemenarnam.lastSync';
  * default in sync with it).
  */
 export const BUNDLED_AT = '2026-10-15T00:00:00.000Z';
+
+/** ids array from a meta/deleted snapshot, or null when absent/invalid. */
+function readDeletedIds(data: unknown): string[] | null {
+  if (typeof data !== 'object' || data === null) return null;
+  const ids = (data as Record<string, unknown>).ids;
+  if (!Array.isArray(ids)) return null;
+  return ids.filter((id): id is string => typeof id === 'string');
+}
 
 let started = false;
 
@@ -64,25 +73,58 @@ export function startLiveSync(): () => void {
         );
         refreshOverlaidCorpus();
       }
-      writeLastSync(new Date().toISOString());
-      stop = onSnapshot(
-        q,
-        (live) => {
-          if (live.empty) return;
-          let newest = '';
-          const docs = live.docs.map((d) => {
-            const data = d.data() as Record<string, unknown>;
-            if (typeof data.updatedAt === 'string' && data.updatedAt > newest) newest = data.updatedAt;
-            return { id: d.id, data };
-          });
-          useRemote.getState().applyDocs(docs);
+      // Shared tombstones (admin deletions): one tiny document, fetched
+      // once and then watched. Union-merged locally — deletions propagate
+      // like edits and never resurrect.
+      const metaRef = doc(db, 'meta', DELETED_DOC);
+      try {
+        const metaSnap = await getDoc(metaRef);
+        const ids = metaSnap.exists() ? readDeletedIds(metaSnap.data()) : null;
+        if (ids && ids.length > 0) {
+          useOverrides.getState().mergeDeletedIds(ids);
           refreshOverlaidCorpus();
-          if (newest) writeLastSync(newest);
-        },
-        () => {
-          // Offline or permission-denied: the bundled corpus keeps working.
-        },
+        }
+      } catch {
+        // Missing doc or offline — nothing deleted yet, carry on.
+      }
+      writeLastSync(new Date().toISOString());
+      const stops: (() => void)[] = [];
+      stops.push(
+        onSnapshot(
+          q,
+          (live) => {
+            if (live.empty) return;
+            let newest = '';
+            const docs = live.docs.map((d) => {
+              const data = d.data() as Record<string, unknown>;
+              if (typeof data.updatedAt === 'string' && data.updatedAt > newest)
+                newest = data.updatedAt;
+              return { id: d.id, data };
+            });
+            useRemote.getState().applyDocs(docs);
+            refreshOverlaidCorpus();
+            if (newest) writeLastSync(newest);
+          },
+          () => {
+            // Offline or permission-denied: the bundled corpus keeps working.
+          },
+        ),
       );
+      stops.push(
+        onSnapshot(
+          metaRef,
+          (metaSnap) => {
+            if (!metaSnap.exists()) return;
+            const ids = readDeletedIds(metaSnap.data());
+            if (ids && ids.length > 0) {
+              useOverrides.getState().mergeDeletedIds(ids);
+              refreshOverlaidCorpus();
+            }
+          },
+          () => {},
+        ),
+      );
+      stop = () => stops.forEach((fn) => fn());
     } catch {
       // Same: offline-first, never crash the app over cloud state.
     }

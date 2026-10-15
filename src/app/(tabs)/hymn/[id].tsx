@@ -40,6 +40,7 @@ import { useTheme } from '../../../hooks/useTheme';
 import { useLibrary } from '../../../store/library';
 import { useOverrides } from '../../../store/overrides';
 import { useSettings } from '../../../store/settings';
+import { useGoBack } from '../../../hooks/useGoBack';
 import { fontFamilyFor, READER_MAX_WIDTH, type as typeScale } from '../../../theme/fonts';
 import { palette, radius, spacing, HIT_SLOP } from '../../../theme/tokens';
 
@@ -92,14 +93,7 @@ export default function ReaderScreen() {
   const { t, direction } = useT();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
-
-  // Back chevron: return to whatever opened the hymn. With no history to
-  // pop (deep link, fresh launch) back() would fall through to home, so
-  // fall back to the library — the hymn's natural parent — instead.
-  const goBack = () => {
-    if (router.canGoBack()) router.back();
-    else router.replace('/library');
-  };
+  const goBack = useGoBack();
 
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);

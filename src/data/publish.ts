@@ -7,10 +7,16 @@
  * Requires Firebase config + a signed-in admin — otherwise a clear
  * messageKey explains what is missing. No git, no CI involved.
  */
-import { doc, setDoc, writeBatch } from 'firebase/firestore';
+import { arrayUnion, doc, deleteDoc, setDoc, writeBatch } from 'firebase/firestore';
 
 import type { TranslationKey } from '../i18n';
-import { getFirebaseAuth, getFirebaseDb, HYMNS_COLLECTION, isFirebaseConfigured } from './firebase';
+import {
+  getFirebaseAuth,
+  getFirebaseDb,
+  DELETED_DOC,
+  HYMNS_COLLECTION,
+  isFirebaseConfigured,
+} from './firebase';
 import type { Hymn } from './types';
 
 export interface PublishResult {
@@ -64,8 +70,7 @@ export async function publishHymn(id: string, patch: Partial<Hymn>): Promise<boo
   }
 }
 
-/** Bulk upload of the whole local override set (the Publish button). */
-export async function publishOverrides(
+/** Bulk upload of the whole local override set (the Publish button). */export async function publishOverrides(
   overrides: Record<string, Partial<Hymn>>,
 ): Promise<PublishResult> {
   const ids = Object.keys(overrides);
@@ -93,5 +98,26 @@ export async function publishOverrides(
     return { ok: true, messageKey: 'admin.published', saved: ids.length };
   } catch {
     return { ok: false, messageKey: 'admin.publishFailed', saved: 0 };
+  }
+}
+
+/**
+ * Deletes a hymn everywhere: removes its Firestore document (for hymns
+ * added from another device) and union-appends its id to the shared
+ * `meta/deleted` tombstone set (hides bundled hymns on all devices).
+ * Local tombstoning happens in the overrides store alongside this call.
+ */
+export async function deleteHymnFromCloud(id: string): Promise<boolean> {
+  try {
+    const db = requireDb();
+    await deleteDoc(doc(db, HYMNS_COLLECTION, id));
+    await setDoc(
+      doc(db, 'meta', DELETED_DOC),
+      { ids: arrayUnion(id), updatedAt: new Date().toISOString() },
+      { merge: true },
+    );
+    return true;
+  } catch {
+    return false;
   }
 }

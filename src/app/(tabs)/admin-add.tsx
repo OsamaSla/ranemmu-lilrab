@@ -120,7 +120,7 @@ export default function AdminAddScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('admin.addHymn')} />
+      <AppBar title={t('admin.addHymn')} showBack />
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
           <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>

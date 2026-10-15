@@ -57,7 +57,7 @@ export default function SettingsScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('settings.title')} />
+      <AppBar title={t('settings.title')} showBack />
 
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         <Section title={t('settings.appearance')}>

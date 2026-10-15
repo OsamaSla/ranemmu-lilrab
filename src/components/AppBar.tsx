@@ -5,10 +5,12 @@
  * right and the action on the left, which is the mirror of the English layout.
  */
 import type { ReactNode } from 'react';
-import { View } from 'react-native';
+import { Pressable, View } from 'react-native';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from './AppText';
+import { useGoBack } from '../hooks/useGoBack';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
 import { spacing } from '../theme/tokens';
@@ -18,12 +20,15 @@ interface AppBarProps {
   /** Rendered at the trailing edge — usually an IconButton. */
   action?: ReactNode;
   subtitle?: string;
+  /** Leading back chevron (previous page, library fallback). Tab roots omit it. */
+  showBack?: boolean;
 }
 
-export function AppBar({ title, action, subtitle }: AppBarProps) {
+export function AppBar({ title, action, subtitle, showBack }: AppBarProps) {
   const { colors } = useTheme();
   const { t, direction } = useT();
   const insets = useSafeAreaInsets();
+  const goBack = useGoBack();
 
   const badge = t('appName').split(' ')[0];
 
@@ -37,6 +42,28 @@ export function AppBar({ title, action, subtitle }: AppBarProps) {
         flexDirection: direction.row,
         alignItems: 'center',
       }}>
+      {showBack ? (
+        <Pressable
+          onPress={goBack}
+          accessibilityRole="button"
+          accessibilityLabel={t('common.back')}
+          android_ripple={{ color: 'rgba(255,255,255,0.3)' }}
+          hitSlop={8}
+          style={({ pressed }) => ({
+            width: 36,
+            height: 36,
+            borderRadius: 18,
+            alignItems: 'center',
+            justifyContent: 'center',
+            opacity: pressed ? 0.7 : 1,
+          })}>
+          <MaterialCommunityIcons
+            name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
+            size={26}
+            color={colors.onPrimary}
+          />
+        </Pressable>
+      ) : null}
       <View
         accessible
         accessibilityRole="image"

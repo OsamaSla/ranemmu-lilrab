@@ -101,7 +101,7 @@ export default function LibraryScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('library.title')} subtitle={`${summaries.length}`} />
+      <AppBar title={t('library.title')} subtitle={`${summaries.length}`} showBack />
 
       {/* In-list search: filters the hymns below, no separate screen. */}
       <View

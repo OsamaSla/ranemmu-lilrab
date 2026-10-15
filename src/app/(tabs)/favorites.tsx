@@ -40,7 +40,7 @@ export default function FavoritesScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('favorites.title')} />
+      <AppBar title={t('favorites.title')} showBack />
 
       <FlatList
         data={rows}

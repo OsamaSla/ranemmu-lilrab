@@ -29,6 +29,9 @@ export const isFirebaseConfigured = Boolean(
 /** Firestore collection holding one document per hymn, keyed by hymn id. */
 export const HYMNS_COLLECTION = 'hymns';
 
+/** Firestore document carrying the shared tombstone set. */
+export const DELETED_DOC = 'deleted';
+
 let app: FirebaseApp | null = null;
 let auth: FirebaseAuth.Auth | null = null;
 let db: Firestore | null = null;

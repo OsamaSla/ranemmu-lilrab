@@ -24,6 +24,17 @@ export function setOverlayReader(reader: () => Record<string, Partial<Hymn>>): v
   overlayReader = reader;
 }
 
+/** Tombstoned ids, supplied by the overrides store (same cycle-free pattern). */
+let deletedReader: () => string[] = () => [];
+
+export function setDeletedReader(reader: () => string[]): void {
+  deletedReader = reader;
+}
+
+function deletedSet(): Set<string> {
+  return new Set(deletedReader());
+}
+
 /** Drops every memoised view so the next read re-merges the overrides. */
 export function refreshOverlaidCorpus(): void {
   corpus = null;
@@ -47,7 +58,9 @@ export function getBooks(): { id: BookId; count: number }[] {
 /** All hymn summaries: numbers, titles and metres, overrides applied. */
 export function getSummaries(book?: BookId): HymnSummary[] {
   const overlays = overlayReader();
-  const base = SUMMARIES.filter((s) => !book || (s.book ?? 'main') === book).map((s) => {
+  const deleted = deletedSet();
+  const base = SUMMARIES.filter((s) => !deleted.has(s.id))
+    .filter((s) => !book || (s.book ?? 'main') === book).map((s) => {
     const patch = overlays[s.id];
     if (!patch) return s;
     return {
@@ -63,7 +76,7 @@ export function getSummaries(book?: BookId): HymnSummary[] {
   // bundle shipped) join the lists; local edits still win per record.
   const known = new Set(base.map((s) => s.id));
   for (const s of getRemoteSummaries()) {
-    if (known.has(s.id)) continue;
+    if (known.has(s.id) || deleted.has(s.id)) continue;
     if (book && (s.book ?? 'main') !== book) continue;
     const patch = overlays[s.id];
     base.push(
@@ -124,17 +137,20 @@ export function getCorpus(book?: BookId): Hymn[] {
     return patch ? { ...hymn, ...patch } : hymn;
   });
   const present = new Set(merged.map((h) => h.id));
+  const deleted = deletedSet();
   for (const remote of getRemoteFullDocs()) {
-    if (present.has(remote.id)) continue;
+    if (present.has(remote.id) || deleted.has(remote.id)) continue;
     if (book && (remote.book ?? 'main') !== book) continue;
     const patch = overlays[remote.id];
     merged.push(patch ? { ...remote, ...patch } : remote);
+    present.add(remote.id);
   }
+  const visible = merged.filter((h) => !deleted.has(h.id));
   if (!book) {
-    corpus = merged;
-    return merged;
+    corpus = visible;
+    return visible;
   }
-  return merged.filter((hymn) => (hymn.book ?? 'main') === book);
+  return visible.filter((hymn) => (hymn.book ?? 'main') === book);
 }
 
 const byId = new Map<string, Hymn>();
@@ -143,6 +159,8 @@ const byId = new Map<string, Hymn>();
 export function getHymn(id: string): Hymn | undefined {
   const cached = byId.get(id);
   if (cached) return cached;
+  // Tombstoned hymns stay hidden everywhere (reader shows "not found").
+  if (deletedSet().has(id)) return undefined;
 
   for (const chunk of Object.values(HYMN_CHUNKS)) {
     const found = chunk.find((hymn) => hymn.id === id);

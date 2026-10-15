@@ -73,19 +73,21 @@ export default function AdminEditScreen() {
   // Lazy init so the first open already shows the hymn's current words
   // (previously the form stayed blank until switching to another hymn).
   const [form, setForm] = useState(() => toForm(id, hymn));
+  const [msg, setMsg] = useState('');
+  // Tracks a successful save so the publish guidance below only appears
+  // once there is actually something to publish (not on validation errors).
+  // Declared before the reset below: calling a later setter during render
+  // would throw (TDZ) and crash the app when switching hymns.
+  const [savedOnce, setSavedOnce] = useState(false);
   if (form.key !== id) {
     setForm(toForm(id, hymn));
     setSavedOnce(false);
   }
-  const [msg, setMsg] = useState('');
-  // Tracks a successful save so the publish guidance below only appears
-  // once there is actually something to publish (not on validation errors).
-  const [savedOnce, setSavedOnce] = useState(false);
 
   if (!hymn) {
     return (
       <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-        <AppBar title={t('admin.editHymn')} />
+        <AppBar title={t('admin.editHymn')} showBack />
         <EmptyState icon="book-remove-outline" title={t('admin.notFound')} />
       </View>
     );
@@ -206,7 +208,7 @@ export default function AdminEditScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={`${t('common.hymnNumber')} ${hymn.number}`} />
+      <AppBar title={`${t('common.hymnNumber')} ${hymn.number}`} showBack />
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
           <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
@@ -385,7 +387,7 @@ export default function AdminEditScreen() {
             <Pressable
               onPress={() => router.push('/admin')}
               accessibilityRole="button"
-              accessibilityLabel={t('admin.export')}
+              accessibilityLabel={t('admin.title')}
               android_ripple={{ color: colors.border }}
               style={({ pressed }) => ({
                 paddingVertical: spacing.sm,
@@ -395,7 +397,7 @@ export default function AdminEditScreen() {
                 opacity: pressed ? 0.75 : 1,
               })}>
               <AppText variant="label" color={colors.text} style={{ fontWeight: '700' }}>
-                {t('admin.export')}
+                {t('admin.title')}
               </AppText>
             </Pressable>
           </Card>

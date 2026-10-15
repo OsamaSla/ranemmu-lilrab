@@ -57,7 +57,6 @@ export default function StructureScreen() {
   );
 
   // Plain exact-metre groups, for books without transcribed families.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   const exactGroups = useMemo(() => groupByStructure(summaries), [summaries]);
 
   const toggle = (key: string) =>
@@ -134,7 +133,7 @@ export default function StructureScreen() {
   if (families.length === 0) {
     return (
       <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-        <AppBar title={t('structure.title')} subtitle={t('structure.subtitle')} />
+        <AppBar title={t('structure.title')} subtitle={t('structure.subtitle')} showBack />
         <SectionList
           sections={exactGroups.map((group) => ({
             key: group.key,
@@ -165,7 +164,7 @@ export default function StructureScreen() {
     const total = sections.reduce((n, s) => n + s.hymns.length, 0);
     return (
       <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-        <AppBar title={t('structure.title')} subtitle={t('structure.subtitle')} />
+        <AppBar title={t('structure.title')} subtitle={t('structure.subtitle')} showBack />
         <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
           <View style={{ flexDirection: direction.row, alignItems: 'center', marginBottom: spacing.md }}>
             <IconButton
@@ -218,7 +217,7 @@ export default function StructureScreen() {
   // Family grid only — no fallback list.
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('structure.title')} subtitle={t('structure.subtitle')} />
+      <AppBar title={t('structure.title')} subtitle={t('structure.subtitle')} showBack />
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         <View style={{ flexDirection: direction.row, flexWrap: 'wrap', marginHorizontal: -spacing.xs / 2 }}>
           {families.map((family) => (

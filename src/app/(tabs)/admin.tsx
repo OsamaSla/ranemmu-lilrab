@@ -6,16 +6,16 @@
  * button. "Export" shares the patch set as JSON for local backup.
  */
 import { useMemo, useState } from 'react';
-import { FlatList, Platform, Pressable, ScrollView, Share, TextInput, View } from 'react-native';
+import { Alert, FlatList, Pressable, ScrollView, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { getCorpus, getSummaries } from '../../data/loader';
-import { normalize } from '../../data/normalize';
+import { normalizeText } from '../../data/normalize';
 import { isFirebaseConfigured } from '../../data/firebase';
-import { publishOverrides } from '../../data/publish';
+import { deleteHymnFromCloud, publishOverrides } from '../../data/publish';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -26,7 +26,7 @@ import type { Hymn } from '../../data/types';
 import { radius, spacing } from '../../theme/tokens';
 
 function toNumber(raw: string): number | null {
-  const digits = normalize(raw.trim()).text;
+  const digits = normalizeText(raw.trim());
   if (!/^\d+$/.test(digits)) return null;
   const n = Number(digits);
   return Number.isInteger(n) && n >= 1 ? n : null;
@@ -40,8 +40,7 @@ export default function AdminScreen() {
   const adminPin = useSettings((s) => s.adminPin);
   const setAdminPin = useSettings((s) => s.setAdminPin);
   const overrides = useOverrides((s) => s.overrides);
-  const setOverride = useOverrides((s) => s.setOverride);
-  const clearAll = useOverrides((s) => s.clearAll);
+  const markDeleted = useOverrides((s) => s.markDeleted);
   const sessionUser = useSession((s) => s.user);
   const signIn = useSession((s) => s.signIn);
   const signOut = useSession((s) => s.signOut);
@@ -57,8 +56,7 @@ export default function AdminScreen() {
   const [reviewFilter, setReviewFilter] = useState<'all' | 'AI_DRAFT' | 'VERIFIED'>('AI_DRAFT');
   const remoteVersion = useRemote((s) => s.updatedAt);
   const [num, setNum] = useState('');
-  const [swapA, setSwapA] = useState('');
-  const [swapB, setSwapB] = useState('');
+  const [query, setQuery] = useState('');
   const [newPin, setNewPin] = useState('');
   const [msg, setMsg] = useState('');
 
@@ -105,37 +103,26 @@ export default function AdminScreen() {
     }
   };
 
-  const openForEdit = () => {
+  const doDelete = () => {
     const n = toNumber(num);
     const target = n === null ? undefined : getSummaries().find((s) => s.number === n);
     if (!target) {
       setMsg(t('admin.notFound'));
       return;
     }
-    setMsg('');
-    setNum('');
-    router.push({ pathname: '/admin-edit', params: { id: target.id } });
-  };
-
-  const doSwap = () => {
-    const a = toNumber(swapA);
-    const b = toNumber(swapB);
-    if (a === null || b === null || a === b) {
-      setMsg(t('admin.errNumber'));
-      return;
-    }
-    const summaries = getSummaries();
-    const ha = summaries.find((s) => s.number === a);
-    const hb = summaries.find((s) => s.number === b);
-    if (!ha || !hb) {
-      setMsg(t('admin.errNumber'));
-      return;
-    }
-    setOverride(ha.id, { number: b });
-    setOverride(hb.id, { number: a });
-    setSwapA('');
-    setSwapB('');
-    setMsg(t('admin.swapped'));
+    Alert.alert(t('admin.deleteConfirmTitle'), `${target.number}. ${target.title}`, [
+      { text: t('common.cancel'), style: 'cancel' },
+      {
+        text: t('admin.deleteHymn'),
+        style: 'destructive',
+        onPress: () => {
+          markDeleted(target.id);
+          void deleteHymnFromCloud(target.id);
+          setNum('');
+          setMsg(t('admin.deleted'));
+        },
+      },
+    ]);
   };
 
   const changePin = () => {
@@ -146,40 +133,6 @@ export default function AdminScreen() {
     setAdminPin(newPin.trim());
     setNewPin('');
     setMsg(t('admin.pinSaved'));
-  };
-
-  const doExport = () => {
-    const payload = JSON.stringify(
-      { app: 'ranemmu.lilrab', version: 1, exportedAt: new Date().toISOString(), overrides },
-      null,
-      1,
-    );
-    Share.share({ message: payload }).catch(() => {
-      /* Dismissed share sheet is not an error worth surfacing. */
-    });
-  };
-
-  // Web has no share sheet for large text: copy the same payload to the
-  // clipboard so it can be pasted into a file on the PC.
-  const doCopy = async () => {
-    const payload = JSON.stringify(
-      { app: 'ranemmu.lilrab', version: 1, exportedAt: new Date().toISOString(), overrides },
-      null,
-      1,
-    );
-    try {
-      const nav = navigator as unknown as { clipboard?: { writeText(text: string): Promise<void> } };
-      if (Platform.OS === 'web' && nav.clipboard) {
-        await nav.clipboard.writeText(payload);
-        setMsg(t('admin.copied'));
-      } else {
-        Share.share({ message: payload }).catch(() => {
-          /* Dismissed share sheet is not an error worth surfacing. */
-        });
-      }
-    } catch {
-      setMsg(t('admin.copyFailed'));
-    }
   };
 
   const doPublish = async () => {
@@ -214,27 +167,54 @@ export default function AdminScreen() {
   const canEdit = isFirebaseConfigured ? !!sessionUser : unlocked;
 
   // Proofreading queue: hymns carrying the selected translation, filtered
-  // by review status. Recomputes on local edits, remote syncs and filter
-  // changes; absent status counts as AI_DRAFT (legacy records).
+  // by review status. A typed query turns the box above into global search
+  // (number, title or any line, all languages) feeding this same list.
+  // Recomputes on local edits, remote syncs and filter changes; absent
+  // status counts as AI_DRAFT (legacy records).
   const review = useMemo(() => {
     const statusOf = (h: Hymn) => h.translationStatus ?? 'AI_DRAFT';
-    const all = getCorpus().filter((h) =>
-      reviewLang === 'en' ? h.verses_en?.length : h.verses_de?.length,
-    );
+    const bookOf = (h: Hymn) => h.book ?? 'main';
+    const q = normalizeText(query.trim());
+    let pool = getCorpus();
+    if (q.length > 0) {
+      const byNumber = /^\d+$/.test(q);
+      pool = pool.filter((h) => {
+        if (byNumber && String(h.number).includes(q)) return true;
+        if (normalizeText(h.title).includes(q)) return true;
+        const lines = [
+          ...h.verses.flatMap((v) => v.lines),
+          ...(h.verses_en ?? []).flatMap((v) => v.lines),
+          ...(h.verses_de ?? []).flatMap((v) => v.lines),
+        ];
+        return lines.some((line) => normalizeText(line).includes(q));
+      });
+    } else {
+      pool = pool.filter((h) => (reviewLang === 'en' ? h.verses_en?.length : h.verses_de?.length));
+    }
+    const all = pool;
     const verified = all.filter((h) => statusOf(h) === 'VERIFIED').length;
-    const items = (reviewFilter === 'all' ? all : all.filter((h) => statusOf(h) === reviewFilter))
+    const items = (q.length > 0 || reviewFilter === 'all'
+      ? all
+      : all.filter((h) => statusOf(h) === reviewFilter)
+    )
       .slice()
       .sort((a, b) => a.number - b.number)
-      .map((h) => ({ id: h.id, number: h.number, title: h.title, status: statusOf(h) }));
+      .map((h) => ({
+        id: h.id,
+        number: h.number,
+        title: h.title,
+        book: bookOf(h),
+        status: statusOf(h),
+      }));
     return { items, total: all.length, verified };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [overrides, remoteVersion, reviewLang, reviewFilter]);
+  }, [overrides, remoteVersion, reviewLang, reviewFilter, query]);
 
   const pendingCount = Object.keys(overrides).length;
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('admin.title')} />
+      <AppBar title={t('admin.title')} showBack />
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         {!canEdit ? (
           isFirebaseConfigured ? (
@@ -312,16 +292,13 @@ export default function AdminScreen() {
                 {t('admin.editHymn')}
               </AppText>
               <TextInput
-                value={num}
-                onChangeText={setNum}
-                onSubmitEditing={openForEdit}
-                returnKeyType="go"
-                keyboardType="number-pad"
-                placeholder={t('admin.pickNumber')}
+                value={query}
+                onChangeText={setQuery}
+                returnKeyType="search"
+                placeholder={t('search.placeholder')}
                 placeholderTextColor={colors.textMuted}
                 style={fieldStyle}
               />
-              {button(t('admin.open'), openForEdit)}
             </Card>
 
             <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
@@ -427,37 +404,34 @@ export default function AdminScreen() {
                           item.status === 'VERIFIED' ? colors.primary : colors.favorite,
                       }}
                     />
-                    <AppText variant="body" style={{ flex: 1, marginHorizontal: spacing.sm }}>
-                      {item.number}. {item.title}
-                    </AppText>
+                    <View style={{ flex: 1, marginHorizontal: spacing.sm }}>
+                      <AppText variant="body" numberOfLines={1}>
+                        {item.number}. {item.title}
+                      </AppText>
+                      <AppText variant="caption" color={colors.textMuted}>
+                        {item.book === 'taranim' ? t('book.taranim') : t('book.main')}
+                      </AppText>
+                    </View>
                   </Pressable>
                 )}
               />
             </Card>
 
             <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
-                <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
-                  {t('admin.swapTitle')}
+              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+                {t('admin.deleteHymn')}
               </AppText>
-              <View style={{ flexDirection: direction.row, gap: spacing.sm }}>
-                <TextInput
-                  value={swapA}
-                  onChangeText={setSwapA}
-                  keyboardType="number-pad"
-                  placeholder="55"
-                  placeholderTextColor={colors.textMuted}
-                  style={[fieldStyle, { flex: 1 }]}
-                />
-                <TextInput
-                  value={swapB}
-                  onChangeText={setSwapB}
-                  keyboardType="number-pad"
-                  placeholder="56"
-                  placeholderTextColor={colors.textMuted}
-                  style={[fieldStyle, { flex: 1 }]}
-                />
-              </View>
-              {button(t('admin.swap'), doSwap)}
+              <TextInput
+                value={num}
+                onChangeText={setNum}
+                onSubmitEditing={doDelete}
+                returnKeyType="go"
+                keyboardType="number-pad"
+                placeholder={t('admin.pickNumber')}
+                placeholderTextColor={colors.textMuted}
+                style={fieldStyle}
+              />
+              {button(t('admin.deleteHymn'), doDelete)}
             </Card>
 
             <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
@@ -498,25 +472,6 @@ export default function AdminScreen() {
                     void signOut();
                   })
                 : null}
-            </Card>
-
-            <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
-              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
-                {t('admin.export')} ({pendingCount})
-              </AppText>
-              <AppText variant="caption" color={colors.textMuted}>
-                {pendingCount === 0 ? t('admin.noChanges') : t('admin.export')}
-              </AppText>
-              {pendingCount > 0 ? button(t('admin.export'), doExport) : null}
-              {pendingCount > 0 && Platform.OS === 'web'
-                ? button(t('admin.copy'), () => {
-                    void doCopy();
-                  })
-                : null}
-              {pendingCount > 0 ? button(t('admin.clearSynced'), () => {
-                clearAll();
-                setMsg(t('admin.cleared'));
-              }) : null}
             </Card>
 
             {msg ? (

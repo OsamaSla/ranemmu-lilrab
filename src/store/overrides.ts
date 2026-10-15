@@ -13,24 +13,34 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
-import { refreshOverlaidCorpus, setOverlayReader } from '../data/loader';
+import { refreshOverlaidCorpus, setDeletedReader, setOverlayReader } from '../data/loader';
 import type { Hymn } from '../data/types';
 
 interface OverridesState {
   /** Patches by stable hymn id. Only text-level fields are ever written. */
   overrides: Record<string, Partial<Hymn>>;
+  /**
+   * Tombstoned hymn ids (admin deletions). Monotonic — never shrunk by
+   * sync, only by explicit local clear — so a deleted hymn stays hidden
+   * on every device. Persisted like overrides.
+   */
+  deletedIds: string[];
   /** Bumped on every write so screens re-read the merged corpus. */
   updatedAt: number;
 
   setOverride: (id: string, patch: Partial<Hymn>) => void;
   removeOverride: (id: string) => void;
   clearAll: () => void;
+  markDeleted: (id: string) => void;
+  /** Union-merge ids synced from Firestore (remote deletions win by union). */
+  mergeDeletedIds: (ids: string[]) => void;
 }
 
 export const useOverrides = create<OverridesState>()(
   persist(
     (set) => ({
       overrides: {},
+      deletedIds: [],
       updatedAt: 0,
 
       setOverride: (id, patch) => {
@@ -51,7 +61,30 @@ export const useOverrides = create<OverridesState>()(
       },
 
       clearAll: () => {
+        // Tombstones survive: clearing them would resurrect deleted hymns.
         set((state) => ({ overrides: {}, updatedAt: state.updatedAt + 1 }));
+        refreshOverlaidCorpus();
+      },
+
+      markDeleted: (id) => {
+        set((state) => {
+          if (state.deletedIds.includes(id)) return state;
+          const next = { ...state.overrides };
+          delete next[id];
+          return { overrides: next, deletedIds: [...state.deletedIds, id], updatedAt: state.updatedAt + 1 };
+        });
+        refreshOverlaidCorpus();
+      },
+
+      mergeDeletedIds: (ids) => {
+        set((state) => {
+          const missing = ids.filter((id) => !state.deletedIds.includes(id));
+          if (missing.length === 0) return state;
+          return {
+            deletedIds: [...state.deletedIds, ...missing],
+            updatedAt: state.updatedAt + 1,
+          };
+        });
         refreshOverlaidCorpus();
       },
     }),
@@ -70,3 +103,4 @@ export const useOverrides = create<OverridesState>()(
 
 // Feed the loader from this store (one direction only: store -> loader).
 setOverlayReader(() => useOverrides.getState().overrides);
+setDeletedReader(() => useOverrides.getState().deletedIds);
