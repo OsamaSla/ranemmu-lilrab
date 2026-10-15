@@ -59,6 +59,16 @@ const RAIL_WIDTH = 52;
 const RAIL_DOT = 36;
 
 /**
+ * AI-translation disclaimer, always in the language being viewed (not the
+ * UI language): English readers get the English note, German readers the
+ * German one. Arabic needs none — it is the original text.
+ */
+const TRANSLATION_NOTES = {
+  en: 'This English translation was made by AI and is not 100% reliable — it only gives the main idea of the hymn.',
+  de: 'Diese deutsche Übersetzung wurde von einer KI erstellt und ist nicht zu 100 % zuverlässig — sie gibt nur die Hauptidee des Liedes wieder.',
+} as const;
+
+/**
  * Lets `expo export` and web deep links resolve every hymn statically.
  * Native dev and production builds resolve the param at runtime and ignore this.
  */
@@ -460,13 +470,13 @@ export default function ReaderScreen() {
 
   const versesView = (
     <>
-      {transVerses ? (
+      {parallel !== 'ar' ? (
         <AppText
           variant="caption"
           center
           color={fullscreen ? palette.readerText : colors.textMuted}
           style={{ opacity: fullscreen ? 0.75 : 1, marginBottom: spacing.md }}>
-          {t('reader.translationNote')}
+          {TRANSLATION_NOTES[parallel]}
         </AppText>
       ) : null}
       {hymn.verses.map((verseBlock, verseIndex) => (

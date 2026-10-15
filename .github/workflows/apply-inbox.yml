@@ -77,11 +77,11 @@ jobs:
         run: |
           git config user.name "overrides-bot"
           git config user.email "overrides-bot@users.noreply.github.com"
-          # actions/checkout leaves a detached HEAD, on which pull/push refuse
-          # with "not currently on a branch" (exit 128). Get on main first —
-          # uncommitted worktree changes carry over since the trees agree.
-          git fetch origin main
-          git checkout -B main origin/main
+          # NOTE: do NOT `git pull --rebase` here — it refuses with exit 128
+          # ("cannot pull with rebase: ... uncommitted changes") whenever the
+          # tree staged above is dirty, which is exactly when this step runs.
+          # Commit first (works detached), then rebase the clean tree, then
+          # push the explicit refspec (bare `push origin main` needs a branch).
           git add content/book-hymns-imported.json content/book-taranim-rohiya.json \
             content/authors.json content/drafts/authors-taranim.json \
             assets/hymns src/data/generated-chunks.ts
@@ -89,9 +89,10 @@ jobs:
           if git diff --cached --quiet; then
             echo "nothing to commit"
           else
-            git pull --rebase origin main
             git commit -m "Apply overrides inbox"
-            git push origin main || (git pull --rebase origin main && git push origin main)
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main || (git fetch origin main && git rebase origin/main && git push origin HEAD:main)
           fi
 
       - name: Clear processed inbox files
