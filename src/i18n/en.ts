@@ -46,6 +46,8 @@ export const en: PartialDictionary = {
   'reader.tools': 'Tools',
   'reader.refrain': 'Refrain',
   'reader.stanzas': 'Go to stanza',
+  'reader.translationNote':
+    'English and German translations are AI-generated to convey the hymn’s main idea and may contain errors.',
 
   'info.meter': 'Metre',
   'info.missing': 'Not available',

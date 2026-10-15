@@ -460,6 +460,15 @@ export default function ReaderScreen() {
 
   const versesView = (
     <>
+      {transVerses ? (
+        <AppText
+          variant="caption"
+          center
+          color={fullscreen ? palette.readerText : colors.textMuted}
+          style={{ opacity: fullscreen ? 0.75 : 1, marginBottom: spacing.md }}>
+          {t('reader.translationNote')}
+        </AppText>
+      ) : null}
       {hymn.verses.map((verseBlock, verseIndex) => (
         <View
           key={`${verseIndex}-${verseBlock.label}`}

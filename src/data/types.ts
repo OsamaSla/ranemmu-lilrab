@@ -53,7 +53,8 @@ export interface Hymn extends HymnSummary {
   /**
    * Optional human translations. Each language is independent and partial:
    * a hymn shows the UI language's text wherever present and Arabic
-   * everywhere else. Never machine-generated — only the typist's wording.
+   * everywhere else. Hymns 1001-1047 carry AI-draft translations instead —
+   * the reader shows a disclaimer wherever a translation renders.
    */
   title_en?: string;
   verses_en?: HymnVerse[];

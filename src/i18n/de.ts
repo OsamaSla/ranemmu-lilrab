@@ -51,6 +51,8 @@ export const de: PartialDictionary = {
   'reader.tools': 'Werkzeuge',
   'reader.refrain': 'Kehrvers',
   'reader.stanzas': 'Zur Strophe springen',
+  'reader.translationNote':
+    'Die englischen und deutschen Übersetzungen sind KI-generiert und geben die Hauptidee des Liedes wieder; sie können Fehler enthalten.',
 
   'info.meter': 'Metrum',
   'info.missing': 'Nicht verfügbar',
