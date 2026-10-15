@@ -313,7 +313,7 @@
   "author": "فواز عميش"
  },
  "150": {
-  "source": "hymnary",
+  "source": "manual",
   "author": "ناجي فؤاد"
  },
  "151": {
@@ -338,6 +338,9 @@
  "156": {
   "source": "hymnary",
   "author": "هرماس سمير"
+ },
+ "157": {
+  "source": "manual"
  },
  "159": {
   "source": "hymnary",
@@ -1033,6 +1036,9 @@
  "469": {
   "source": "hymnary",
   "author": "فيليب إسكندر"
+ },
+ "471": {
+  "source": "manual"
  },
  "473": {
   "source": "hymnary",
