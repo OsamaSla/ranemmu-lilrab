@@ -97,12 +97,27 @@ jobs:
 
       - name: Clear processed inbox files
         if: steps.inbox.outputs.count != '0'
+        # Housekeeping only: re-applying the same inbox is idempotent, so
+        # this step must never fail the run — every fallible command below
+        # degrades to a warning instead.
         run: |
-          git checkout -B overrides-inbox origin/overrides-inbox
+          git fetch origin overrides-inbox || true
+          git checkout -B overrides-inbox origin/overrides-inbox || git checkout -B overrides-inbox
           git config user.name "overrides-bot"
           git config user.email "overrides-bot@users.noreply.github.com"
-          for f in ${{ steps.inbox.outputs.files }}; do git rm -q -- "$f"; done
-          git commit -m "Processed inbox files" && git push origin overrides-inbox || echo "inbox already clear"
+          for f in ${{ steps.inbox.outputs.files }}; do
+            if git ls-files --error-unmatch -- "$f" >/dev/null 2>&1; then
+              git rm -q -- "$f" && echo "cleared: $f" || echo "WARN: could not remove $f"
+            else
+              echo "already gone: $f"
+            fi
+          done
+          if git diff --cached --quiet; then
+            echo "nothing to clear"
+          else
+            git commit -m "Processed inbox files"
+            git push origin overrides-inbox || echo "WARN: inbox push skipped"
+          fi
 
   deploy:
     needs: apply
