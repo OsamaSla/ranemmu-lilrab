@@ -77,6 +77,11 @@ jobs:
         run: |
           git config user.name "overrides-bot"
           git config user.email "overrides-bot@users.noreply.github.com"
+          # actions/checkout leaves a detached HEAD, on which pull/push refuse
+          # with "not currently on a branch" (exit 128). Get on main first —
+          # uncommitted worktree changes carry over since the trees agree.
+          git fetch origin main
+          git checkout -B main origin/main
           git add content/book-hymns-imported.json content/book-taranim-rohiya.json \
             content/authors.json content/drafts/authors-taranim.json \
             assets/hymns src/data/generated-chunks.ts
@@ -86,7 +91,7 @@ jobs:
           else
             git pull --rebase origin main
             git commit -m "Apply overrides inbox"
-            git push origin main
+            git push origin main || (git pull --rebase origin main && git push origin main)
           fi
 
       - name: Clear processed inbox files
