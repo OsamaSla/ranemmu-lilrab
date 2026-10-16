@@ -18,6 +18,7 @@ import { EmptyState } from '../../components/EmptyState';
 import { TopicPicker } from '../../components/TopicPicker';
 import { getHymn } from '../../data/loader';
 import { syncHymnToCloud } from '../../data/liveSync';
+import { isValidMediaUrl } from '../../data/media';
 import type { TopicId } from '../../data/topics';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
@@ -44,6 +45,7 @@ export default function AdminEditScreen() {
     authorOriginal: '',
     meter: '',
     chorus: '',
+    mediaUrl: '',
     verified: false,
     primaryTopic: '' as TopicId | '',
     topics: [] as TopicId[],
@@ -65,6 +67,7 @@ export default function AdminEditScreen() {
           authorOriginal: h.authorOriginal ?? '',
           meter: h.meter ?? '',
           chorus: h.chorus ?? '',
+          mediaUrl: h.mediaUrl ?? '',
           primaryTopic: h.primaryTopic ?? ('' as TopicId | ''),
           topics: [...(h.topics ?? [])],
           lines: h.verses.map((v) => [...v.lines]),
@@ -145,6 +148,11 @@ export default function AdminEditScreen() {
       setMsg(t('admin.errBlank'));
       return;
     }
+    const mediaTrimmed = form.mediaUrl.trim();
+    if (mediaTrimmed && !isValidMediaUrl(mediaTrimmed)) {
+      setMsg(t('admin.errUrl'));
+      return;
+    }
     if (form.lines.length !== hymn.verses.length || form.lines.some((ls, i) => ls.length !== hymn.verses[i].lines.length)) {
       setMsg(t('admin.errCount'));
       return;
@@ -180,6 +188,7 @@ export default function AdminEditScreen() {
       authorOriginal: form.authorOriginal.trim(),
       meter: form.meter.trim(),
       chorus: form.chorus.trim(),
+      mediaUrl: mediaTrimmed,
       // Clearing the primary is not expressible through the overlay merge
       // (`??` falls back to the bundled value), so "no topic" keeps the
       // existing one — setting and retagging always work.
@@ -248,6 +257,21 @@ export default function AdminEditScreen() {
             {t('admin.chorus')}
           </AppText>
           <TextInput value={form.chorus} onChangeText={(v) => set({ chorus: v })} style={fieldStyle} />
+          <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
+            {t('admin.mediaUrl')}
+          </AppText>
+          <TextInput
+            value={form.mediaUrl}
+            onChangeText={(v) => set({ mediaUrl: v })}
+            style={[fieldStyle, { writingDirection: 'ltr', textAlign: 'left' }]}
+            keyboardType="url"
+            autoCapitalize="none"
+            placeholder="https://"
+            placeholderTextColor={colors.textMuted}
+          />
+          <AppText variant="label" color={colors.textMuted} style={{ marginTop: 4 }}>
+            {t('admin.mediaUrlHint')}
+          </AppText>
           {hasEn ? (
             <>
               <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>

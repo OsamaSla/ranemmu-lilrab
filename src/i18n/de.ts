@@ -64,6 +64,8 @@ export const de: PartialDictionary = {
   'reader.tools': 'Werkzeuge',
   'reader.refrain': 'Kehrvers',
   'reader.stanzas': 'Zur Strophe springen',
+  'reader.listen': 'Melodie anhören',
+  'reader.listenSearch': 'Melodie auf YouTube suchen',
 
   'info.meter': 'Metrum',
   'info.missing': 'Nicht verfügbar',
@@ -112,6 +114,9 @@ export const de: PartialDictionary = {
   'admin.authorOriginal': 'Originalautor',
   'admin.chorus': 'Kehrvers',
   'admin.hymnTitle': 'Titel',
+  'admin.mediaUrl': 'Melodie-Link (YouTube / Audio)',
+  'admin.mediaUrlHint': 'YouTube- oder Audio-Link für dieses Lied — leer lassen für automatische Suche',
+  'admin.errUrl': 'Ungültiger Link — er muss mit https:// beginnen',
   'admin.titleEn': 'Englischer Titel',
   'admin.chorusEn': 'Englischer Kehrvers',
   'admin.translationEn': 'Englische Übersetzung',

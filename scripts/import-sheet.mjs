@@ -39,6 +39,13 @@ const COLUMNS = new Map([
   ['Meter', 'meter'], ['Metrum', 'meter'],
   ['القرار', 'chorus'], ['اللازمة', 'chorus'], ['chorus', 'chorus'],
   ['Chorus label', 'chorus'], ['Kehrvers', 'chorus'],
+  // Curated melody link (optional, language-neutral like metre). The reader
+  // opens it directly; hymns without one fall back to a YouTube search.
+  ['رابط اللحن', 'media'], ['رابط الصوت', 'media'], ['رابط الفيديو', 'media'],
+  ['الرابط', 'media'], ['رابط', 'media'], ['media', 'media'],
+  ['mediaUrl', 'media'], ['audio', 'media'], ['video', 'media'],
+  ['Media URL', 'media'], ['Audio URL', 'media'], ['Video URL', 'media'],
+  ['Link', 'media'],
   ['نوع المقطع', 'kind'], ['نوع السطر', 'kind'], ['النوع', 'kind'], ['kind', 'kind'], ['type', 'kind'],
   ['Kind', 'kind'], ['Art', 'kind'],
   ['رقم المقطع', 'label'], ['المقطع', 'label'],
@@ -190,6 +197,12 @@ export function importWorksheet(ws, sourceName, lang = 'ar') {
     if (!current) {
       errors.push(`${where}: first data row must carry a hymn number`);
       continue;
+    }
+    // Curated melody link is hymn-level and language-neutral (Arabic master
+    // only): any row of the hymn may carry it, last value wins.
+    if (lang === 'ar') {
+      const media = at(row, 'media');
+      if (media) current.mediaUrl = media;
     }
     const titleField = lang === 'ar' ? 'title' : `title_${lang}`;
     if (title && !current[titleField]) current[titleField] = title;

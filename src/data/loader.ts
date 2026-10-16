@@ -77,6 +77,7 @@ function applySummaryPatch(s: HymnSummary, patch: Partial<Hymn>): HymnSummary {
     number: patch.number ?? s.number,
     title: patch.title ?? s.title,
     meter: patch.meter ?? s.meter,
+    mediaUrl: patch.mediaUrl ?? s.mediaUrl,
     primaryTopic: patch.primaryTopic ?? s.primaryTopic,
     topics: patch.topics ?? s.topics,
     hasChorus:
@@ -118,6 +119,7 @@ export function getSummaries(book?: BookId): HymnSummary[] {
       number: patch.number as number,
       title: patch.title as string,
       meter: patch.meter,
+      mediaUrl: patch.mediaUrl,
       hasChorus: verses.some((v) => v.chorus),
       primaryTopic: patch.primaryTopic,
       topics: patch.topics,

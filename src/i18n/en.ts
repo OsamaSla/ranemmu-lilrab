@@ -59,6 +59,8 @@ export const en: PartialDictionary = {
   'reader.tools': 'Tools',
   'reader.refrain': 'Refrain',
   'reader.stanzas': 'Go to stanza',
+  'reader.listen': 'Listen to the melody',
+  'reader.listenSearch': 'Search for the melody on YouTube',
 
   'info.meter': 'Metre',
   'info.missing': 'Not available',
@@ -107,6 +109,9 @@ export const en: PartialDictionary = {
   'admin.authorOriginal': 'Original author',
   'admin.chorus': 'Refrain',
   'admin.hymnTitle': 'Title',
+  'admin.mediaUrl': 'Melody link (YouTube / audio)',
+  'admin.mediaUrlHint': 'YouTube or audio link for this hymn — leave empty for automatic search',
+  'admin.errUrl': 'Invalid link — it must start with https://',
   'admin.titleEn': 'English title',
   'admin.chorusEn': 'English refrain',
   'admin.translationEn': 'English translation',

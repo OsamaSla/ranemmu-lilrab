@@ -44,6 +44,13 @@ export interface HymnSummary {
   /** True when the summary should be flagged as a chorus-bearing hymn. */
   hasChorus?: boolean;
   /**
+   * Optional curated recording link (YouTube video, SoundCloud track, direct
+   * MP3, …) where this hymn's melody can be heard. Absent when unknown — the
+   * reader falls back to a YouTube search for the hymn number + title, so
+   * every hymn stays listenable even before a link is curated.
+   */
+  mediaUrl?: string;
+  /**
    * Primary thematic topic (one of the 9 in ./topics), used for default
    * topic grouping. Absent until the hymn is classified.
    */

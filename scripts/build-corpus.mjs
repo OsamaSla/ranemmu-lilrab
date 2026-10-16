@@ -58,6 +58,7 @@ function toSummary(hymn) {
     number: hymn.number,
     title: hymn.title,
     meter: hymn.meter,
+    ...(hymn.mediaUrl ? { mediaUrl: hymn.mediaUrl } : {}),
     hasChorus: (hymn.verses ?? []).some((v) => v.chorus),
     ...(hymn.primaryTopic ? { primaryTopic: hymn.primaryTopic } : {}),
     ...(Array.isArray(hymn.topics) && hymn.topics.length > 0 ? { topics: hymn.topics } : {}),

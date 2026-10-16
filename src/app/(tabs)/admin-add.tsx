@@ -15,6 +15,7 @@ import { Card } from '../../components/Card';
 import { TopicPicker } from '../../components/TopicPicker';
 import { getSummaries, getHymn } from '../../data/loader';
 import { syncHymnToCloud } from '../../data/liveSync';
+import { isValidMediaUrl } from '../../data/media';
 import type { TopicId } from '../../data/topics';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
@@ -30,6 +31,7 @@ interface HymnForm {
   authorOriginal: string;
   meter: string;
   chorus: string;
+  mediaUrl: string;
   primaryTopic: TopicId | '';
   topics: TopicId[];
   lines: string[][];
@@ -60,6 +62,7 @@ export default function AdminAddScreen() {
     authorOriginal: '',
     meter: '',
     chorus: '',
+    mediaUrl: '',
     primaryTopic: '',
     topics: [],
     lines: [[]],
@@ -117,6 +120,11 @@ export default function AdminAddScreen() {
       setMsg(t('admin.errExists'));
       return;
     }
+    const mediaTrimmed = form.mediaUrl.trim();
+    if (mediaTrimmed && !isValidMediaUrl(mediaTrimmed)) {
+      setMsg(t('admin.errUrl'));
+      return;
+    }
     const patch = {
       number: form.number,
       title: form.title.trim(),
@@ -124,6 +132,7 @@ export default function AdminAddScreen() {
       authorOriginal: form.authorOriginal.trim(),
       meter: form.meter.trim(),
       chorus: form.chorus.trim(),
+      ...(mediaTrimmed ? { mediaUrl: mediaTrimmed } : {}),
       book,
       ...(form.primaryTopic ? { primaryTopic: form.primaryTopic } : {}),
       topics: form.topics.filter((x) => x !== form.primaryTopic),
@@ -194,6 +203,21 @@ export default function AdminAddScreen() {
             {t('admin.chorus')}
           </AppText>
           <TextInput value={form.chorus} onChangeText={(v) => set({ chorus: v })} style={fieldStyle} />
+          <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
+            {t('admin.mediaUrl')}
+          </AppText>
+          <TextInput
+            value={form.mediaUrl}
+            onChangeText={(v) => set({ mediaUrl: v })}
+            style={[fieldStyle, { writingDirection: 'ltr', textAlign: 'left' }]}
+            keyboardType="url"
+            autoCapitalize="none"
+            placeholder="https://"
+            placeholderTextColor={colors.textMuted}
+          />
+          <AppText variant="label" color={colors.textMuted} style={{ marginTop: 4 }}>
+            {t('admin.mediaUrlHint')}
+          </AppText>
         </Card>
 
         <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>

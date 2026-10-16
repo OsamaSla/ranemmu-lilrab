@@ -21,6 +21,7 @@ const NON_ARABIC_LETTERS = /[A-Za-z\p{Script=Latin}가-힯぀-ヿ一-鿿]/u;
 const ALLOWED_LATIN_FIELDS = new Set([
   'meter',
   'book',
+  'mediaUrl',
   'primaryTopic',
   'title_en', 'chorus_en',
   'title_de', 'chorus_de',
@@ -165,6 +166,18 @@ export function validateCorpus(hymns) {
 
     if (hymn.chorus !== undefined && isBlank(hymn.chorus)) {
       issues.push(`${at}: 'chorus' present but blank — omit the key instead`);
+    }
+
+    // Curated melody link: optional, but when present it must be a real URL
+    // (the reader opens it directly; blanks fall back to YouTube search).
+    if (hymn.mediaUrl !== undefined) {
+      if (typeof hymn.mediaUrl !== 'string' || isBlank(hymn.mediaUrl)) {
+        issues.push(`${at}: 'mediaUrl' present but blank — omit the key instead`);
+      } else if (!/^https?:\/\/\S+\.\S+/.test(hymn.mediaUrl.trim())) {
+        issues.push(
+          `${at} (${hymn.number}): 'mediaUrl' must be an http(s) URL (got ${JSON.stringify(hymn.mediaUrl.slice(0, 60))})`,
+        );
+      }
     }
 
     // Topic classification: one primary + secondary tags, all from the

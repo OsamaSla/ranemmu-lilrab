@@ -757,7 +757,7 @@ export default function ReaderScreen() {
           </ScrollView>
           {stanzaRail(true)}
         </View>
-        <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} />
+        <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} hymn={hymn} />
         <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
       </Animated.View>
     );
@@ -874,7 +874,7 @@ export default function ReaderScreen() {
         {stanzaRail(false)}
       </View>
 
-      <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} />
+      <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} hymn={hymn} />
       <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
     </View>
   );
