@@ -165,76 +165,116 @@ export function rowFromHymn(hymn, lang) {
 }
 
 /**
- * Diffs one imported row against the stored hymn.
- * Returns `{ patch }` (possibly empty = no changes) or `{ errors }`.
- * Labels/chorus flags always come from the stored record, never the sheet.
+ * Three-way merge of one imported row.
+ *
+ * Every field compares three versions — the sheet row, the shipped bundle
+ * (`base`) and live Firebase (`live`, i.e. bundle + app edits):
+ * - row == live → nothing to do (covers "both sides made the same edit").
+ * - row == base → the sheet is untouched here; the app's value stands,
+ *   even when it differs (stale sheets can never clobber app edits).
+ * - live == base → only the sheet changed → the sheet value is applied.
+ * - otherwise both sides changed the same field differently → collision:
+ *   the app's value is kept and reported in `warnings`, everything else
+ *   still applies (no whole-run abort for a valid conflict).
+ *
+ * `base` may be undefined for remote-only hymns (not in the bundle):
+ * those fall back to plain row-vs-live diffing. Labels/chorus flags
+ * always come from the live record, never the sheet.
+ *
+ * Returns `{ patch, warnings }` or `{ errors }`. Invalid data (blank
+ * title, broken stanza shape, unknown topics, bad booleans) is still an
+ * error and aborts the run; collisions are warnings.
  */
-export function diffRow(row, hymn, lang) {
+export function diffRow(row, base, live, lang) {
   const errors = [];
+  const warnings = [];
   const patch = {};
   const where = `${row.id || '?'} (#${row.number || '?'})`;
   const f = langFields(lang);
 
+  // r=row, b=base, l=live. Missing base (remote-only hymn) degrades to
+  // two-way: any row-vs-live difference applies.
+  const decide = (r, b, l, apply, label) => {
+    if (same(r, l)) return;
+    if (b !== undefined && same(r, b)) return;
+    if (b === undefined || same(l, b)) {
+      apply();
+      return;
+    }
+    warnings.push(`${where}: ${label} changed in the app and the sheet — kept the app's value`);
+  };
+
   const title = (row.title ?? '').trim();
   if (title === '') {
     errors.push(`${where}: Title (Arabic) must not be blank`);
-  } else if (title !== (hymn.title ?? '')) {
-    patch.title = title;
+  } else {
+    decide(title, base ? (base.title ?? '').trim() : undefined, (live.title ?? '').trim(), () => {
+      patch.title = title;
+    }, 'Title (Arabic)');
   }
 
+  const linesOf = (verses) => (verses ?? []).map((v) => v.lines);
   const parsedAr = parseVersesCell(row.arabic ?? '');
   if (parsedAr.error) {
     errors.push(`${where}: Arabic Text: ${parsedAr.error}`);
   } else {
-    const mismatch = shapeMismatch(hymn.verses ?? [], parsedAr.blocks);
+    const mismatch = shapeMismatch(live.verses ?? [], parsedAr.blocks);
     if (mismatch) {
       errors.push(`${where}: Arabic Text: ${mismatch}`);
     } else {
-      const verses = hymn.verses.map((v, i) => ({ ...v, lines: parsedAr.blocks[i].lines }));
-      if (!same(verses, hymn.verses)) patch.verses = verses;
+      const rowLines = parsedAr.blocks.map((b) => b.lines);
+      decide(
+        rowLines,
+        base ? linesOf(base.verses) : undefined,
+        linesOf(live.verses),
+        () => {
+          patch.verses = live.verses.map((v, i) => ({ ...v, lines: parsedAr.blocks[i].lines }));
+        },
+        'Arabic Text',
+      );
     }
   }
 
   const titleLang = (row.titleLang ?? '').trim();
-  if (titleLang !== (hymn[f.title] ?? '')) {
-    if (titleLang === '' && (hymn[f.title] ?? '') !== '') {
-      // Blank = no change: translations are never deleted from the sheet.
-    } else if (titleLang !== '') {
+  if (titleLang !== '') {
+    decide(titleLang, base ? (base[f.title] ?? '').trim() : undefined, (live[f.title] ?? '').trim(), () => {
       patch[f.title] = titleLang;
-    }
+    }, `${lang.toUpperCase()} Title`);
   }
+  // Blank translation cells mean "no change" — translations are never
+  // deleted from the sheet.
 
   const textLangRaw = (row.textLang ?? '').trim();
-  const storedLang = hymn[f.verses];
-  if (textLangRaw === '') {
-    // Blank = no change (never deletes an existing translation).
-  } else if (!storedLang) {
+  if (textLangRaw !== '') {
     const parsed = parseVersesCell(textLangRaw);
     if (parsed.error) {
       errors.push(`${where}: ${lang.toUpperCase()} Translation: ${parsed.error}`);
     } else {
-      const mismatch = shapeMismatch(hymn.verses ?? [], parsed.blocks);
+      const liveLang = live[f.verses];
+      const baseLang = base?.[f.verses];
+      // Shape anchor: the live translation when present (the write target),
+      // otherwise the Arabic verses for newly created translations.
+      const anchor = liveLang ?? live.verses ?? [];
+      const mismatch = shapeMismatch(anchor, parsed.blocks);
       if (mismatch) {
         errors.push(`${where}: ${lang.toUpperCase()} Translation: ${mismatch}`);
       } else {
-        patch[f.verses] = hymn.verses.map((v, i) => ({
-          label: v.label,
-          lines: parsed.blocks[i].lines,
-          ...(v.chorus ? { chorus: true } : {}),
-        }));
-      }
-    }
-  } else {
-    const parsed = parseVersesCell(textLangRaw);
-    if (parsed.error) {
-      errors.push(`${where}: ${lang.toUpperCase()} Translation: ${parsed.error}`);
-    } else {
-      const mismatch = shapeMismatch(storedLang, parsed.blocks);
-      if (mismatch) {
-        errors.push(`${where}: ${lang.toUpperCase()} Translation: ${mismatch}`);
-      } else {
-        const verses = storedLang.map((v, i) => ({ ...v, lines: parsed.blocks[i].lines }));
-        if (!same(verses, storedLang)) patch[f.verses] = verses;
+        const rowLines = parsed.blocks.map((b) => b.lines);
+        const built = anchor.map((v, i) => ({ ...v, lines: parsed.blocks[i].lines }));
+        if (!liveLang) {
+          // New translation: absent on both sides, or app-added meanwhile.
+          if (baseLang) {
+            decide(rowLines, linesOf(baseLang), linesOf(liveLang), () => {
+              patch[f.verses] = built;
+            }, `${lang.toUpperCase()} Translation`);
+          } else if (!same(built, liveLang ?? [])) {
+            patch[f.verses] = built;
+          }
+        } else {
+          decide(rowLines, base ? linesOf(baseLang) : undefined, linesOf(liveLang), () => {
+            patch[f.verses] = built;
+          }, `${lang.toUpperCase()} Translation`);
+        }
       }
     }
   }
@@ -243,16 +283,21 @@ export function diffRow(row, hymn, lang) {
   if (primary !== '') {
     if (!TOPIC_IDS.includes(primary)) {
       errors.push(`${where}: unknown Primary Category '${primary}' (valid: ${TOPIC_IDS.join(', ')})`);
-    } else if (primary !== (hymn.primaryTopic ?? '')) {
-      patch.primaryTopic = primary;
+    } else {
+      decide(primary, base ? base.primaryTopic ?? '' : undefined, live.primaryTopic ?? '', () => {
+        patch.primaryTopic = primary;
+      }, 'Primary Category');
     }
   }
+  // Blank Primary Category keeps the stored one (same as the Admin editor).
 
-  const parsedTags = parseTopicsCell(row.topics ?? '', primary || hymn.primaryTopic);
+  const parsedTags = parseTopicsCell(row.topics ?? '', primary || live.primaryTopic);
   if (parsedTags.error) {
     errors.push(`${where}: Tags: ${parsedTags.error}`);
-  } else if (!same(parsedTags.topics, hymn.topics ?? [])) {
-    patch.topics = parsedTags.topics;
+  } else {
+    decide(parsedTags.topics, base ? base.topics ?? [] : undefined, live.topics ?? [], () => {
+      patch.topics = parsedTags.topics;
+    }, 'Tags');
   }
 
   const parsedReview = parseReviewed(row.reviewed);
@@ -260,8 +305,12 @@ export function diffRow(row, hymn, lang) {
     errors.push(`${where}: ${parsedReview.error}`);
   } else if (parsedReview.value !== null) {
     const status = parsedReview.value ? 'VERIFIED' : 'AI_DRAFT';
-    if (status !== (hymn.translationStatus ?? 'AI_DRAFT')) patch.translationStatus = status;
+    decide(status, base ? base.translationStatus ?? 'AI_DRAFT' : undefined, live.translationStatus ?? 'AI_DRAFT', () => {
+      patch.translationStatus = status;
+    }, 'IsReviewed');
   }
+  // Blank IsReviewed means "no change" — never mass-unreviews.
 
-  return errors.length > 0 ? { errors } : { patch };
+  if (errors.length > 0) return { errors };
+  return { patch, warnings };
 }

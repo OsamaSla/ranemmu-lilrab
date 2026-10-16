@@ -261,7 +261,7 @@ async function main() {
   if (!REVIEW_LANGS.includes(lang)) throw new Error(`--lang must be one of ${REVIEW_LANGS.join(', ')}`);
   const local = process.argv.includes('--local');
   const wantCsv = process.argv.includes('--csv');
-  const out = resolve(ROOT, argValue('--out', 'content/review-sheet.xlsx'));
+  const out = resolve(ROOT, argValue('--out', 'review/review-sheet.xlsx'));
   if (extname(out).toLowerCase() !== '.xlsx') throw new Error('--out must end in .xlsx');
 
   const hymns = (await loadHymns(local))

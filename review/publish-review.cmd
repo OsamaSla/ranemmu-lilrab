@@ -6,6 +6,7 @@ rem before publishing to Firebase. Password is masked and never saved.
 
 setlocal EnableDelayedExpansion
 cd /d "%~dp0"
+cd ..
 
 where node >nul 2>nul
 if errorlevel 1 (
@@ -17,13 +18,13 @@ if errorlevel 1 (
 rem Sheet file: drag-drop target, else the default export. Optional 2nd
 rem argument is the review language (de/en) for non-default exports.
 set "SHEET=%~1"
-if "%SHEET%"=="" set "SHEET=content\review-sheet.xlsx"
+if "%SHEET%"=="" set "SHEET=review\review-sheet.xlsx"
 set "LANG=%~2"
 if "%LANG%"=="" set "LANG=de"
 if not exist "%SHEET%" (
   echo Sheet not found: %SHEET%
   echo Drag the edited .xlsx onto publish-review.cmd, or export first:
-  echo   npm run export:review -- --out content\review-sheet.xlsx
+  echo   npm run export:review -- --out review\review-sheet.xlsx
   pause
   exit /b 1
 )

@@ -11,6 +11,13 @@
  *   --local    content/*.json only — offline dry-run only, for testing
  *              the sheet without touching production.
  *
+ * Collision-free by three-way merge (sheet vs shipped bundle vs live
+ * Firebase, per field): sheet-only changes apply; app-only changes are
+ * protected even when the sheet is stale; both-sides-changed keeps the
+ * app's value and reports it as a warning without aborting the run.
+ * Invalid data (blank title, broken stanza shape, unknown topics or IDs,
+ * bad booleans) still aborts the whole run before a single write.
+ *
  * Safety (bulk writes to the live database):
  *   - Without --apply this is a dry run: every row is validated and the
  *     detected changes are reported, nothing is written.
@@ -26,6 +33,7 @@
  * cells mean "no change" (translations are never deleted from the sheet);
  * blank Tags clears the tags; blank Primary Category keeps the stored one.
  */
+import { spawnSync } from 'node:child_process';
 import { basename, dirname, extname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import ExcelJS from 'exceljs';
@@ -42,14 +50,16 @@ const BATCH_SIZE = 400;
 
 async function loadSource(local) {
   const bundle = loadLocalCorpus(CONTENT_DIR);
-  if (local) return { map: bundle, db: null };
+  if (local) return { bundle, map: bundle, db: null };
   // Diff against the same merged view the export produces (bundle overlaid
-  // with live Firebase edits), so untouched rows diff to nothing.
+  // with live Firebase edits), so untouched rows diff to nothing. The
+  // bundle map travels alongside as the merge base for collision
+  // detection (sheet vs bundle vs live, per field).
   const app = initializeApp(firebaseConfigFromEnv());
   const db = getFirestore(app);
   const snap = await getDocs(collection(db, 'hymns'));
   const remote = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
-  return { map: mergeRemote(bundle, remote), db };
+  return { bundle, map: mergeRemote(bundle, remote), db };
 }
 
 function argValue(name, fallback = null) {
@@ -135,9 +145,10 @@ async function main() {
     rows.push(row);
   }
 
-  const { map, db } = await loadSource(local);
+  const { bundle, map, db } = await loadSource(local);
 
   const errors = [];
+  const warnings = [];
   const changes = [];
   for (const row of rows) {
     const id = String(row.id ?? '').trim();
@@ -150,15 +161,18 @@ async function main() {
       errors.push(`row ${row.__line}: unknown ID '${id}' (not in ${local ? 'content/*.json' : 'Firebase'})`);
       continue;
     }
-    const { patch, errors: rowErrors } = diffRow(row, hymn, lang);
+    const { patch, errors: rowErrors, warnings: rowWarnings } = diffRow(row, bundle.get(id), hymn, lang);
     if (rowErrors) {
       for (const e of rowErrors) errors.push(`row ${row.__line}: ${e}`);
-    } else if (Object.keys(patch).length > 0) {
-      changes.push({ id, number: hymn.number, fields: Object.keys(patch), patch });
+    } else {
+      for (const w of rowWarnings ?? []) warnings.push(`row ${row.__line}: ${w}`);
+      if (Object.keys(patch).length > 0) {
+        changes.push({ id, number: hymn.number, fields: Object.keys(patch), patch });
+      }
     }
   }
 
-  console.log(`${rows.length} row(s) read, ${changes.length} hymn(s) with changes, ${errors.length} error(s)`);
+  console.log(`${rows.length} row(s) read, ${changes.length} hymn(s) with changes, ${errors.length} error(s), ${warnings.length} collision(s)`);
   if (errors.length > 0) {
     for (const e of errors.slice(0, 30)) console.error(`  - ${e}`);
     if (errors.length > 30) console.error(`  ... and ${errors.length - 30} more`);
@@ -169,6 +183,15 @@ async function main() {
   const preview = changes.slice(0, 20);
   for (const c of preview) console.log(`  ~ ${c.id} (#${c.number}): ${c.fields.join(', ')}`);
   if (changes.length > 20) console.log(`  ... and ${changes.length - 20} more`);
+
+  // Collisions (same field changed in the app and the sheet): the app's
+  // value is kept, everything else still applies. Align the sheet cell
+  // with the app's value (or re-export) to stop seeing the warning.
+  if (warnings.length > 0) {
+    console.log(`${warnings.length} collision(s) — app value kept:`);
+    for (const w of warnings.slice(0, 30)) console.log(`  ! ${w}`);
+    if (warnings.length > 30) console.log(`  ... and ${warnings.length - 30} more`);
+  }
 
   if (!apply) {
     console.log(`dry run: re-run with --apply to write ${changes.length} hymn(s) to Firebase`);
@@ -189,6 +212,27 @@ async function main() {
     console.log(`wrote ${written}/${changes.length}`);
   }
   console.log(`done: ${written} hymn(s) updated (updatedAt=${stamp}) — devices pick them up live`);
+
+  // Convergence: with zero collisions every sheet edit is live, so refresh
+  // the working file from Firebase — sheet and cloud end up identical.
+  // With collisions the file is left untouched (it still holds the
+  // reviewer's conflicting values); resolve them, then re-export.
+  // A locked file (open in Excel) fails safe with a manual-refresh note.
+  if (warnings.length === 0 && extname(file).toLowerCase() === '.xlsx') {
+    const refreshed = spawnSync(
+      process.execPath,
+      [join(ROOT, 'scripts', 'export-review-sheet.mjs'), '--lang', lang, '--out', file],
+      { cwd: ROOT, stdio: 'pipe', encoding: 'utf8', env: process.env },
+    );
+    if (refreshed.status === 0) {
+      console.log(`refreshed ${basename(file)} from live Firebase — sheet and cloud are identical`);
+    } else {
+      const hint = String(refreshed.stderr || '').split('\n').find((l) => l.trim() !== '');
+      console.log(`note: could not refresh the sheet (${hint || 'is it open in Excel?'}) — re-run the export manually`);
+    }
+  } else if (warnings.length > 0) {
+    console.log('sheet left untouched — resolve the collisions above, then re-export before the next round');
+  }
 }
 
 main().catch((err) => {
