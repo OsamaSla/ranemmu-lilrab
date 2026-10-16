@@ -21,6 +21,9 @@ export default function TabsLayout() {
 
   return (
     <Tabs
+      // `history` walks back through visited screens (hymn → library), while
+      // the default `firstRoute` would jump straight to the home tab.
+      backBehavior="history"
       screenOptions={{
         headerShown: false,
         tabBarActiveTintColor: colors.primary,
