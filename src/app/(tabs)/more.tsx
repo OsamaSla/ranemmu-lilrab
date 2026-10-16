@@ -85,7 +85,7 @@ export default function MoreScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('more.title')} />
+      <AppBar title={t('more.title')} showBack />
 
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         {visibleItems.map((item, index) => (

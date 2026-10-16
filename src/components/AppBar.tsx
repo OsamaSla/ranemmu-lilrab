@@ -20,7 +20,7 @@ interface AppBarProps {
   /** Rendered at the trailing edge — usually an IconButton. */
   action?: ReactNode;
   subtitle?: string;
-  /** Leading back chevron (previous page, library fallback). Tab roots omit it. */
+  /** Leading back chevron (previous page, home fallback). Only the home tab omits it. */
   showBack?: boolean;
 }
 

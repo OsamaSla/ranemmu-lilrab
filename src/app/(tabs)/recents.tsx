@@ -44,6 +44,7 @@ export default function RecentsScreen() {
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar
         title={t('recents.title')}
+        showBack
         action={
           rows.length > 0 ? (
             <TextButton label={t('recents.clear')} onPress={clearRecents} color={colors.onPrimary} />

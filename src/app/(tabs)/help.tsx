@@ -33,7 +33,7 @@ export default function HelpScreen() {
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('help.title')} />
+      <AppBar title={t('help.title')} showBack />
 
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         <TutorialVideoCard />
