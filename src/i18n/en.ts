@@ -15,6 +15,18 @@ export const en: PartialDictionary = {
   'library.count': 'Hymn count',
   'library.byNumber': 'By number',
   'library.alphabetical': 'A–Z',
+  'library.topics': 'Topic',
+  'library.allTopics': 'All',
+
+  'topic.worship': 'Worship & Praise',
+  'topic.cross': 'The Cross & Redemption',
+  'topic.comfort': 'Comfort & Hope in Affliction',
+  'topic.repentance': 'Repentance & Turning to God',
+  'topic.fellowship': 'Fellowship with the Lord',
+  'topic.warfare': 'Spiritual Warfare & Victory',
+  'topic.word': 'The Word of God',
+  'topic.eternity': 'Eternity & Heavenly Home',
+  'topic.church': 'The Church & Service',
 
   'book.choose': 'Book',
   'book.main': 'Sing to the Lord',
@@ -49,6 +61,7 @@ export const en: PartialDictionary = {
 
   'info.meter': 'Metre',
   'info.missing': 'Not available',
+  'info.topics': 'Topics',
 
   'admin.title': 'Admin',
   'admin.pinTitle': 'Enter admin PIN',
@@ -102,6 +115,10 @@ export const en: PartialDictionary = {
   'admin.addHymn': 'Add New Hymn',
   'admin.hymnNumber': 'Hymn Number',
   'admin.stanzaLine': 'Stanza Line',
+  'admin.topics': 'Topics',
+  'admin.primaryTopic': 'Primary topic',
+  'admin.secondaryTopics': 'Additional topics',
+  'admin.noTopic': 'No topic',
   'admin.backToAdmin': 'Back to Admin',
   'admin.errExists': 'Hymn already exists',
   'admin.findNextNumber': 'Find next available number',

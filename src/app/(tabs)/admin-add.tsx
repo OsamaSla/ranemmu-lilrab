@@ -12,8 +12,10 @@ import { useRouter } from 'expo-router';
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
+import { TopicPicker } from '../../components/TopicPicker';
 import { getSummaries, getHymn } from '../../data/loader';
 import { syncHymnToCloud } from '../../data/liveSync';
+import type { TopicId } from '../../data/topics';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -26,6 +28,8 @@ interface HymnForm {
   authorOriginal: string;
   meter: string;
   chorus: string;
+  primaryTopic: TopicId | '';
+  topics: TopicId[];
   lines: string[][];
 }
 
@@ -51,6 +55,8 @@ export default function AdminAddScreen() {
     authorOriginal: '',
     meter: '',
     chorus: '',
+    primaryTopic: '',
+    topics: [],
     lines: [[]],
   });
   const [form, setForm] = useState<HymnForm>(() => toForm(findNextAvailableNumber(summaries)));
@@ -71,6 +77,12 @@ export default function AdminAddScreen() {
   } as const;
 
   const set = (patch: Partial<typeof form>) => setForm((f) => ({ ...f, ...patch }));
+
+  const toggleSecondary = (id: TopicId) =>
+    setForm((f) => ({
+      ...f,
+      topics: f.topics.includes(id) ? f.topics.filter((x) => x !== id) : [...f.topics, id],
+    }));
 
   const setLine = (lineIndex: number, value: string) => {
     setForm((f) => ({
@@ -107,6 +119,8 @@ export default function AdminAddScreen() {
       authorOriginal: form.authorOriginal.trim(),
       meter: form.meter.trim(),
       chorus: form.chorus.trim(),
+      ...(form.primaryTopic ? { primaryTopic: form.primaryTopic } : {}),
+      topics: form.topics.filter((x) => x !== form.primaryTopic),
       verses: [{
         label: String(form.number),
         lines: [form.lines[0][0].trim()],
@@ -174,6 +188,18 @@ export default function AdminAddScreen() {
             {t('admin.chorus')}
           </AppText>
           <TextInput value={form.chorus} onChangeText={(v) => set({ chorus: v })} style={fieldStyle} />
+        </Card>
+
+        <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
+          <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+            {t('admin.topics')}
+          </AppText>
+          <TopicPicker
+            primary={form.primaryTopic}
+            secondary={form.topics}
+            onPrimary={(id) => set({ primaryTopic: id })}
+            onToggleSecondary={toggleSecondary}
+          />
         </Card>
 
         {form.lines.map((_, i) => (

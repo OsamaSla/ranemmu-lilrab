@@ -101,6 +101,10 @@
       "Fuer Dich wollen wir leben, Herr, hilf uns, denn Du kennst die Schwachheit des Geschoepfes"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -225,6 +229,10 @@
       "Und dass ich wachse an Weisheit und an Gnade und an Ansehen vor Gott und Menschen"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "word"
    ]
   },
   {
@@ -346,6 +354,11 @@
       "Dein Platz ist in meinen Armen, mein Sohn, und in meinem Herzen sind Barmherzigkeit und Gnade"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship"
    ]
   },
   {
@@ -428,6 +441,10 @@
       "Vor deiner Majestaet bekenne ich von dieser Stunde an, ich bin dein, Herr, und meine Finsternis wird zu Licht"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -531,6 +548,10 @@
       "Denn als ich zu anderen lief, fand ich als ganze Ernte nur Bitterkeit"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -655,6 +676,10 @@
       "Doch nachdem ich deine Person beruehrt habe, will ich auf Erden nichts als dich"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -758,7 +783,9 @@
       "Deine Schoenheit fesselt meine Augen, und mein Herz fliesst ueber mit Liedern"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 1008,
@@ -864,6 +891,10 @@
       "Ich will zu deiner Ehre leben, ich will in Freiheit leben"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -967,7 +998,9 @@
       "Ich will deine Guete erzaehlen und deine grosse Freigebigkeit preisen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 1010,
@@ -1058,6 +1091,10 @@
       "Alles in mir sucht dein Wohlgefallen, alles was ich habe, lasse ich bei dir"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -1266,6 +1303,12 @@
       "Wenn meine Augen weinen wischt sie meine Traenen ab"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship",
+    "cross",
+    "worship"
    ]
   },
   {
@@ -1375,7 +1418,9 @@
       "Du beruhigst mein Herz und erfreust meine Tage, Du erhellst meine Hoffnung und erneuerst meine Traeume"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 1013,
@@ -1463,7 +1508,9 @@
       "Es war eine grosse ueberstroemende Liebe, Stroeme aus Deinem Herzen zu mir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 1014,
@@ -1585,7 +1632,9 @@
       "Und loeschtest meine Schuld aus, so erfuellte mich Friede"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 1015,
@@ -1715,6 +1764,11 @@
       "O Du der Du den Verlorenen und Irrenden aufnimmst, und bei Dir Willkommen findet"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -1795,6 +1849,10 @@
       "Mein Herz wurde reich an dem Tag als es kniete vor Ihm der die Welten bereichert"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -1905,7 +1963,9 @@
       "In Christus bin ich Mensch, ich bin Mensch, ich bin Mensch"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 1018,
@@ -2005,6 +2065,11 @@
       "Gewiss dass die ewige Herrlichkeit groesser ist als alles Leiden"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -2105,6 +2170,11 @@
       "Du besitzt mein Wesen, mein Herz und meine Zunge, die stets zu Dir rufen"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "worship"
    ]
   },
   {
@@ -2232,6 +2302,10 @@
       "In Verwirrung leitet mich Dein Wort, klar und vernehmlich"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -2359,6 +2433,11 @@
      ],
      "chorus": true
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -2456,6 +2535,10 @@
       "Du hast das Leben erleuchtet und die Ewigkeit erleuchtet, ich komme um vor Dir anzubeten"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -2601,7 +2684,9 @@
       "Der Rat der Menschen ermuedet und scheitert, ich hoffe auf Deinen Rat und Dein Wohlgefallen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 1024,
@@ -2695,6 +2780,10 @@
       "Ich komme und bekenne Dir meine Schuld, vergib mir"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -2822,6 +2911,11 @@
       "Und siegreich wirst du mit Mir sein ueber jeden Kampf"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship",
+    "word"
    ]
   },
   {
@@ -2913,7 +3007,9 @@
       "Deine Person ist meine Genuege im Land meiner Fremde"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 1027,
@@ -3016,7 +3112,9 @@
       "Du hast Dich sogar um ihre Fuesse gesorgt, wer ist wie Du o Geliebter des Herzens"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 1028,
@@ -3119,6 +3217,10 @@
       "Wie ueberstroemende Fluten kommt Deine Lehre"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -3243,6 +3345,10 @@
       "Verschuldet will ich mein Leben lang Deiner Gnade gedenken mein Leben lang"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -3358,6 +3464,10 @@
       "Sie saettigen sich an Seinem geschriebenen Wort"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -3452,7 +3562,9 @@
       "Was bei allen schwer ist o Jesus ist bei Dir moeglich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 1032,
@@ -3576,7 +3688,9 @@
       "Bewahre mich nahe bei Dir und lass mich wahrhaft leben genug mit Worten"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 1033,
@@ -3700,7 +3814,9 @@
       "Du haeltst unsre Haende und gibst uns darueber zu Fuss zu gehen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 1034,
@@ -3824,6 +3940,10 @@
       "Und birgt uns durch Seinen maechtigen Namen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -4063,6 +4183,10 @@
       "Deine Guete hat mich niemals niemals verlassen Deine Guete hat mich nicht verlassen"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -4184,6 +4308,11 @@
       "Wer mich sieht findet in mir das Bild Christi"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "worship"
    ]
   },
   {
@@ -4287,7 +4416,9 @@
       "Ich werde mit Dir auf den Hoehen gehen und Deine Verheissung an mich ist siegreich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 1039,
@@ -4432,6 +4563,11 @@
       "Und wenn die Tage gegen uns stehen, sagen wir, dass Seine Zusagen treu sind"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship"
    ]
   },
   {
@@ -4541,6 +4677,10 @@
       "Und hoere, was Der, der alles bis zum Grund gewogen hat, dir gesagt hat"
      ]
     }
+   ],
+   "primaryTopic": "word",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -4644,6 +4784,12 @@
       "Und mit unseren Liedern erhoehen wir Dich, denn Du nimmst uns an und bist unser Koenig"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -4756,7 +4902,9 @@
       "Ich hoere Seine Stimme und werde von Ihm gesaettigt, und Seine Herrlichkeit und Sein Licht werden in mir leuchten"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 1043,
@@ -4859,6 +5007,11 @@
       "Beschaeftigt mit dem Gerede der Leute, mit meinem ganzen Wesen davon mitgerissen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "word"
    ]
   },
   {
@@ -4947,7 +5100,9 @@
       "Doch mein Ehrgeiz mehrte meine Wunden, und nach dem Schweigen kehrte ich zurueck zu sagen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 1045,
@@ -5041,7 +5196,9 @@
       "Und bis zum Tag der Begegnung sind meine Sehnsucht und mein Lied wahre Anbetung fuer meinen Herrn Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 1046,
@@ -5118,6 +5275,10 @@
       "Erhaben, alle Augen werden Dein Reich sehen, erhaben"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "word"
    ]
   },
   {
@@ -5245,6 +5406,11 @@
       "Und der Himmel freut sich ueber bussfertige Suender, wir wollen reden und Du wirst bestaetigen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance",
+    "eternity"
    ]
   }
  ]

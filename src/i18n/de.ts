@@ -20,6 +20,18 @@ export const de: PartialDictionary = {
   'library.count': 'Anzahl der Lieder',
   'library.byNumber': 'Nach Nummer',
   'library.alphabetical': 'A–Z',
+  'library.topics': 'Thema',
+  'library.allTopics': 'Alle',
+
+  'topic.worship': 'Anbetung und Lobpreis',
+  'topic.cross': 'Kreuz und Erlösung',
+  'topic.comfort': 'Trost und Zuversicht in Trübsal',
+  'topic.repentance': 'Buße und Umkehr',
+  'topic.fellowship': 'Gemeinschaft mit dem Herrn',
+  'topic.warfare': 'Geistlicher Kampf und Sieg',
+  'topic.word': 'Gottes Wort',
+  'topic.eternity': 'Ewigkeit und himmlische Heimat',
+  'topic.church': 'Gemeinde und Dienst',
 
   'book.choose': 'Buch',
   'book.main': 'Singet dem Herrn',
@@ -54,6 +66,7 @@ export const de: PartialDictionary = {
 
   'info.meter': 'Metrum',
   'info.missing': 'Nicht verfügbar',
+  'info.topics': 'Themen',
 
 'admin.title': 'Admin',
   'admin.pinTitle': 'Admin-PIN eingeben',
@@ -107,6 +120,10 @@ export const de: PartialDictionary = {
   'admin.addHymn': 'Neues Lied hinzufügen',
   'admin.hymnNumber': 'Liednummer',
   'admin.stanzaLine': 'Strophenzeile',
+  'admin.topics': 'Themen',
+  'admin.primaryTopic': 'Hauptthema',
+  'admin.secondaryTopics': 'Weitere Themen',
+  'admin.noTopic': 'Kein Thema',
   'admin.backToAdmin': 'Zurück zum Admin',
   'admin.errExists': 'Lied existiert bereits',
   'admin.findNextNumber': 'Nächste freie Nummer finden',

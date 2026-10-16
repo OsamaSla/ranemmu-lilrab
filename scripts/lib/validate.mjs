@@ -3,6 +3,7 @@
  *
  * Run directly with: npm run check:hymns
  */
+import { TOPIC_IDS } from './topic-keywords.mjs';
 
 /**
  * Arabic letters that must never appear in hymn content. These are the result
@@ -20,6 +21,7 @@ const NON_ARABIC_LETTERS = /[A-Za-z\p{Script=Latin}가-힯぀-ヿ一-鿿]/u;
 const ALLOWED_LATIN_FIELDS = new Set([
   'meter',
   'book',
+  'primaryTopic',
   'title_en', 'chorus_en',
   'title_de', 'chorus_de',
   'author', 'authorOriginal',
@@ -163,6 +165,28 @@ export function validateCorpus(hymns) {
 
     if (hymn.chorus !== undefined && isBlank(hymn.chorus)) {
       issues.push(`${at}: 'chorus' present but blank — omit the key instead`);
+    }
+
+    // Topic classification: one primary + secondary tags, all from the
+    // taxonomy, never duplicated across the two fields.
+    if (hymn.primaryTopic !== undefined && !TOPIC_IDS.includes(hymn.primaryTopic)) {
+      issues.push(`${at} (${hymn.number}): unknown 'primaryTopic' '${hymn.primaryTopic}'`);
+    }
+    if (hymn.topics !== undefined) {
+      if (!Array.isArray(hymn.topics)) {
+        issues.push(`${at} (${hymn.number}): 'topics' must be an array`);
+      } else {
+        for (const tag of hymn.topics) {
+          if (!TOPIC_IDS.includes(tag)) {
+            issues.push(`${at} (${hymn.number}): unknown secondary topic '${tag}'`);
+          } else if (tag === hymn.primaryTopic) {
+            issues.push(`${at} (${hymn.number}): '${tag}' is both primary and secondary — keep it primary only`);
+          }
+        }
+        if (new Set(hymn.topics).size !== hymn.topics.length) {
+          issues.push(`${at} (${hymn.number}): duplicate entries in 'topics'`);
+        }
+      }
     }
   });
 

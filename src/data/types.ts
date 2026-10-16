@@ -6,6 +6,8 @@
  * rather than one blob of text per stanza.
  */
 
+import type { TopicId } from './topics';
+
 /** One stanza (مقطع — a group of verses). `label` is the printed marker, usually Arabic-Indic digits. */
 export interface HymnVerse {
   label: string;
@@ -41,6 +43,16 @@ export interface HymnSummary {
   meter?: string;
   /** True when the summary should be flagged as a chorus-bearing hymn. */
   hasChorus?: boolean;
+  /**
+   * Primary thematic topic (one of the 9 in ./topics), used for default
+   * topic grouping. Absent until the hymn is classified.
+   */
+  primaryTopic?: TopicId;
+  /**
+   * Secondary thematic tags (never repeats `primaryTopic`). A hymn can
+   * belong to several topics at once without duplicating its record.
+   */
+  topics?: TopicId[];
 }
 
 export interface Hymn extends HymnSummary {

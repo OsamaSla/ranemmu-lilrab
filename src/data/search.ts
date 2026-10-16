@@ -78,6 +78,8 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
         title: hymn.title,
         meter: hymn.meter,
         hasChorus: hymn.verses.some((v) => v.chorus),
+        primaryTopic: hymn.primaryTopic,
+        topics: hymn.topics,
       },
       titles,
       lines,

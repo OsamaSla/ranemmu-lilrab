@@ -142,7 +142,9 @@
       "Das Tal in eine Quelle"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 2,
@@ -262,7 +264,9 @@
       "(Es ist Liebe, die in dir wohnt)"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 3,
@@ -415,7 +419,9 @@
       "Dein Siegeszug gehört auch uns"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 4,
@@ -694,6 +700,11 @@
       "Ich bin sein Gefangener, und er ist mein Anteil"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -784,7 +795,9 @@
       "(Meine Hoffnung ist in dir allein, gewiss)"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 7,
@@ -904,7 +917,9 @@
       "Ich bin sein kostbares Kind geworden"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 8,
@@ -1057,7 +1072,9 @@
       "Außer deiner ist Nichtigkeit"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 9,
@@ -1300,6 +1317,10 @@
       "Schafft ein brandneues Herz"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -1427,7 +1448,12 @@
      ]
     }
    ],
-   "author": "أماني سمير"
+   "author": "أماني سمير",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship"
+   ]
   },
   {
    "number": 12,
@@ -1650,7 +1676,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 14,
@@ -1753,7 +1783,9 @@
      ]
     }
    ],
-   "author": "كرمي صادق"
+   "author": "كرمي صادق",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 15,
@@ -1917,7 +1949,9 @@
     }
    ],
    "author": "ناجي فؤاد",
-   "authorOriginal": "John W. Peterson"
+   "authorOriginal": "John W. Peterson",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 16,
@@ -2044,7 +2078,11 @@
      ]
     }
    ],
-   "author": "أنور عبدالملك"
+   "author": "أنور عبدالملك",
+   "primaryTopic": "warfare",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 17,
@@ -2164,7 +2202,9 @@
       "In dir zufrieden bin, o Herr"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 18,
@@ -2284,6 +2324,10 @@
       "O meine Wonne und meines Herzens Freude!)"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -2414,7 +2458,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 20,
@@ -2541,7 +2589,11 @@
      ]
     }
    ],
-   "author": "سمير جرجس"
+   "author": "سمير جرجس",
+   "primaryTopic": "warfare",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 21,
@@ -2668,7 +2720,11 @@
      ]
     }
    ],
-   "author": "مكاري يونان"
+   "author": "مكاري يونان",
+   "primaryTopic": "warfare",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 22,
@@ -2821,6 +2877,12 @@
       "(Mein Kind, mein Liebling, mir so kostbar)"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "worship",
+    "warfare"
    ]
   },
   {
@@ -2948,7 +3010,9 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 24,
@@ -3107,6 +3171,11 @@
       "Ausgegossen zu deinen Füßen)"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross",
+    "warfare"
    ]
   },
   {
@@ -3233,6 +3302,11 @@
       "Und deine Liebe ist meine Hoffnung, und nichts sonst"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "comfort"
    ]
   },
   {
@@ -3329,7 +3403,9 @@
       "(Unser Gott, der wohnt) in unserm Geist"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 27,
@@ -3456,7 +3532,11 @@
      ]
     }
    ],
-   "author": "هاني منيبر حبيب"
+   "author": "هاني منيبر حبيب",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 28,
@@ -3604,7 +3684,11 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 29,
@@ -3730,6 +3814,11 @@
       "Und fluten meine Seele mit Ernte"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "eternity"
    ]
   },
   {
@@ -3857,7 +3946,12 @@
      ]
     }
    ],
-   "author": "جورج زيدان"
+   "author": "جورج زيدان",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "repentance"
+   ]
   },
   {
    "number": 31,
@@ -3983,6 +4077,10 @@
       "Und all das für euch"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -4112,6 +4210,10 @@
       "Und meine Finsternis wird Licht werden"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -4245,7 +4347,12 @@
      ]
     }
    ],
-   "author": "بول دانيال"
+   "author": "بول دانيال",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship"
+   ]
   },
   {
    "number": 34,
@@ -4371,6 +4478,11 @@
       "Und starb für seine Feinde"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross",
+    "fellowship"
    ]
   },
   {
@@ -4537,7 +4649,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 36,
@@ -4685,7 +4799,9 @@
      ]
     }
    ],
-   "author": "سامي حمارنة"
+   "author": "سامي حمارنة",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 37,
@@ -4778,7 +4894,9 @@
       "Denn er ist mein Herr, der mich behütet das Leben lang"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 38,
@@ -4944,7 +5062,12 @@
      ]
     }
    ],
-   "author": "Wafeeq Samuel Wahbi"
+   "author": "Wafeeq Samuel Wahbi",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "warfare"
+   ]
   },
   {
    "number": 39,
@@ -5079,7 +5202,9 @@
       "Was auch geschehe, im Herrn siegen wir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 40,
@@ -5200,7 +5325,11 @@
      ]
     }
    ],
-   "author": "أمجد سعد"
+   "author": "أمجد سعد",
+   "primaryTopic": "comfort",
+   "topics": [
+    "word"
+   ]
   },
   {
    "number": 41,
@@ -5326,6 +5455,12 @@
       "Erfüllend des Herzens Begehr"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -5477,7 +5612,9 @@
      ]
     }
    ],
-   "author": "Mīkhāʼīl Ṣawāyā"
+   "author": "Mīkhāʼīl Ṣawāyā",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 43,
@@ -5627,6 +5764,11 @@
       "Und wehe dem, der fernbleibt"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "repentance"
    ]
   },
   {
@@ -5738,6 +5880,10 @@
       "Mein Gott, es gibt keinen außer dir"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -5865,7 +6011,11 @@
      ]
     }
    ],
-   "author": "جورج زيدان"
+   "author": "جورج زيدان",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 46,
@@ -6018,6 +6168,10 @@
       "Und Lob häufen wir auf deine Herrlichkeit"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -6171,7 +6325,9 @@
       "Du sollst nicht irren — ich will wählen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 48,
@@ -6326,7 +6482,12 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "authorOriginal": "Charles Price Jones"
+   "authorOriginal": "Charles Price Jones",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 49,
@@ -6507,7 +6668,11 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 50,
@@ -6606,7 +6771,9 @@
       "In dir ist all mein Verlangen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 51,
@@ -6759,6 +6926,11 @@
       "Du bist der Erlöser und die Hoffnung"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "comfort",
+    "eternity"
    ]
   },
   {
@@ -6870,6 +7042,10 @@
       "Und Gottes Schönheit erscheint in mir"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -7017,7 +7193,9 @@
       "Außer in deiner wahren Verheißung"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 54,
@@ -7144,7 +7322,11 @@
      ]
     }
    ],
-   "author": "هاني أنيس كامل"
+   "author": "هاني أنيس كامل",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 55,
@@ -7292,7 +7474,9 @@
      ]
     }
    ],
-   "author": "سمير الشوملي"
+   "author": "سمير الشوملي",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 56,
@@ -7412,6 +7596,11 @@
       "Und du bist uns Licht — das Licht der Hoffnung"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "eternity"
    ]
   },
   {
@@ -7560,7 +7749,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 58,
@@ -7647,6 +7838,10 @@
       "Amen — komm, o Herr Jesus"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -7740,7 +7935,9 @@
       "Und unsre Lippen sollen bekennen seine grenzenlose Liebe"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 60,
@@ -7839,6 +8036,10 @@
       "Und meine Freude dauert, denn ich bin in deiner Umarmung"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -7992,6 +8193,10 @@
       "Und die Wandlung in dir wird sich zeigen"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "eternity"
    ]
   },
   {
@@ -8281,7 +8486,11 @@
      ]
     }
    ],
-   "author": "Nizār Ḥūrr"
+   "author": "Nizār Ḥūrr",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 64,
@@ -8380,6 +8589,10 @@
       "Nahte uns sein Erbarmen ihm"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -8519,7 +8732,12 @@
      ]
     }
    ],
-   "author": "سمير الشوملي"
+   "author": "سمير الشوملي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "repentance"
+   ]
   },
   {
    "number": 66,
@@ -8639,6 +8857,10 @@
       "Sondern dich kleiden in seine ehrfurchtgebietende Gerechtigkeit, wenn du Buße tust"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -8940,7 +9162,9 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 69,
@@ -9088,7 +9312,12 @@
      ]
     }
    ],
-   "author": "نبيل وصفي بباوي"
+   "author": "نبيل وصفي بباوي",
+   "primaryTopic": "worship",
+   "topics": [
+    "repentance",
+    "comfort"
+   ]
   },
   {
    "number": 70,
@@ -9269,7 +9498,11 @@
      ]
     }
    ],
-   "author": "سمير الشوملي"
+   "author": "سمير الشوملي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 71,
@@ -9422,6 +9655,10 @@
       "Schmückend meinen Weg mit Segen"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -9548,7 +9785,9 @@
       "So heile mich — du bist der Arzt"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 73,
@@ -9675,7 +9914,11 @@
      ]
     }
    ],
-   "author": "فواز عميش (1971)"
+   "author": "فواز عميش (1971)",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 74,
@@ -9771,6 +10014,10 @@
       "In den schweren Zeiten"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -9894,7 +10141,9 @@
       "Quell der Freude, Geber der Lieder"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 76,
@@ -10040,7 +10289,11 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "authorOriginal": "E. A. Hoffman"
+   "authorOriginal": "E. A. Hoffman",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 77,
@@ -10157,7 +10410,9 @@
       "Behüte mich vor meiner Schwachheit und (meinem blinden Abwärtszug)"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 78,
@@ -10296,7 +10551,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 79,
@@ -10422,7 +10679,9 @@
       "Glaube und vertraue mir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 80,
@@ -10542,6 +10801,10 @@
       "O mein Geliebter, o Jesus"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -10651,7 +10914,9 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 82,
@@ -10807,6 +11072,11 @@
       "\"Jesus, ich liebe dich\""
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "comfort"
    ]
   },
   {
@@ -10937,7 +11207,13 @@
      ]
     }
    ],
-   "author": "سمير فيليب المنشاوي"
+   "author": "سمير فيليب المنشاوي",
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship",
+    "comfort",
+    "cross"
+   ]
   },
   {
    "number": 84,
@@ -11036,7 +11312,9 @@
       "Mit dir werden wir gehen durch Furcht und Enge"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 85,
@@ -11174,6 +11452,10 @@
       "Ein Mittler der Vergebung und des Friedens"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -11301,7 +11583,9 @@
      ]
     }
    ],
-   "author": "نبيل وصفي بباوي"
+   "author": "نبيل وصفي بباوي",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 87,
@@ -11454,7 +11738,9 @@
       "Des Todes — mir ist er Friede"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 88,
@@ -11581,7 +11867,11 @@
      ]
     }
    ],
-   "author": "وجدي تادرس"
+   "author": "وجدي تادرس",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 89,
@@ -11707,7 +11997,9 @@
       "Du allein, Herr, gibst mir Ruhe"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 90,
@@ -11869,7 +12161,9 @@
       "Bewahre mein Vertrauen und handle"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 91,
@@ -11995,7 +12289,9 @@
       "O mein ganzes Leben, das ich lebe"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 92,
@@ -12085,7 +12381,9 @@
       "Könnten entreißen deine Liebe, o mein Hirte"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 93,
@@ -12239,7 +12537,11 @@
      ]
     }
    ],
-   "author": "باسم شكري"
+   "author": "باسم شكري",
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 94,
@@ -12365,7 +12667,9 @@
       "Seine Liebe, übersetzt in ein Leben"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 95,
@@ -12494,7 +12798,9 @@
       "Mit dir, o Jesus — mit dir, o Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 96,
@@ -12647,7 +12953,9 @@
       "Doch dich haben sie gekreuzigt"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 97,
@@ -12801,7 +13109,11 @@
      ]
     }
    ],
-   "author": "جون نمور"
+   "author": "جون نمور",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 98,
@@ -12927,6 +13239,10 @@
       "In dir berge ich mich"
      ]
     }
+   ],
+   "primaryTopic": "warfare",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -13074,7 +13390,9 @@
       "Und wir besingen den neuen Bund"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 100,
@@ -13228,7 +13546,12 @@
      ]
     }
    ],
-   "author": "غبريال رزق الله"
+   "author": "غبريال رزق الله",
+   "primaryTopic": "warfare",
+   "topics": [
+    "comfort",
+    "worship"
+   ]
   },
   {
    "number": 101,
@@ -13382,7 +13705,11 @@
      ]
     }
    ],
-   "authorOriginal": "Charles F. Butler"
+   "authorOriginal": "Charles F. Butler",
+   "primaryTopic": "worship",
+   "topics": [
+    "church"
+   ]
   },
   {
    "number": 102,
@@ -13510,7 +13837,12 @@
     }
    ],
    "author": "اسعد الشدودي",
-   "authorOriginal": "George F. Root"
+   "authorOriginal": "George F. Root",
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 103,
@@ -13665,7 +13997,11 @@
     }
    ],
    "author": "اسعد الشدودي",
-   "authorOriginal": "Fanny J. Crosby"
+   "authorOriginal": "Fanny J. Crosby",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 104,
@@ -13755,6 +14091,10 @@
       "Komm schon jetzt"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -14235,7 +14575,11 @@
      ]
     }
    ],
-   "authorOriginal": "Fanny Crosby"
+   "authorOriginal": "Fanny Crosby",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 109,
@@ -14389,7 +14733,11 @@
      ]
     }
    ],
-   "authorOriginal": "William C. Martin"
+   "authorOriginal": "William C. Martin",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 110,
@@ -14544,7 +14892,9 @@
     }
    ],
    "author": "اسعد الشدودي",
-   "authorOriginal": "Joseph Scriven"
+   "authorOriginal": "Joseph Scriven",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 111,
@@ -14714,7 +15064,9 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "authorOriginal": "Priscilla Jane Owens"
+   "authorOriginal": "Priscilla Jane Owens",
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 112,
@@ -14852,7 +15204,9 @@
       "Wir erreichen unsre Wohnungen, o Herr, für dich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 113,
@@ -14978,6 +15332,10 @@
       "Dass der müde Elende ruhe"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -15114,7 +15472,11 @@
      ]
     }
    ],
-   "authorOriginal": "L. L. Pickett"
+   "authorOriginal": "L. L. Pickett",
+   "primaryTopic": "word",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 115,
@@ -15163,7 +15525,9 @@
      ]
     }
    ],
-   "authorOriginal": "Henry Smith"
+   "authorOriginal": "Henry Smith",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 116,
@@ -15283,6 +15647,10 @@
       "Ich habe sie gestellt auf dich"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -15427,7 +15795,9 @@
       "Und er ist mein gutes Teil"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 118,
@@ -15553,6 +15923,11 @@
       "Genügt nicht, den Erlösten zu preisen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "worship"
    ]
   },
   {
@@ -15707,7 +16082,11 @@
      ]
     }
    ],
-   "authorOriginal": "Jennie Evelyn Hussey"
+   "authorOriginal": "Jennie Evelyn Hussey",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 120,
@@ -15759,7 +16138,11 @@
      ]
     }
    ],
-   "authorOriginal": "Fanny Crosby"
+   "authorOriginal": "Fanny Crosby",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 121,
@@ -15909,6 +16292,10 @@
       "Und meine Freude, und meine Freude"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -16095,7 +16482,9 @@
       "Wahrhaftig in Liebe zu dir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 123,
@@ -16158,7 +16547,9 @@
       "In deinem Himmel"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 124,
@@ -16437,6 +16828,11 @@
       "Während Friede füllt mein Herz"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -16651,7 +17047,12 @@
      ]
     }
    ],
-   "author": "شادي يوسف"
+   "author": "شادي يوسف",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "repentance"
+   ]
   },
   {
    "number": 127,
@@ -16779,7 +17180,9 @@
     }
    ],
    "author": "خليل أسعد غبرائيل",
-   "authorOriginal": "J. H. Gilmore"
+   "authorOriginal": "J. H. Gilmore",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 128,
@@ -16906,7 +17309,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 129,
@@ -17048,7 +17453,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض"
+   "author": "زكريا عوض",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 130,
@@ -17100,7 +17507,9 @@
      ]
     }
    ],
-   "author": "بولس بشرى"
+   "author": "بولس بشرى",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 131,
@@ -17254,7 +17663,11 @@
      ]
     }
    ],
-   "author": "وليم جندي"
+   "author": "وليم جندي",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 132,
@@ -17405,7 +17818,9 @@
      ]
     }
    ],
-   "author": "فيليب وسلي عياد"
+   "author": "فيليب وسلي عياد",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 133,
@@ -17613,7 +18028,11 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 134,
@@ -17725,7 +18144,12 @@
      ]
     }
    ],
-   "author": "صبري بطرس"
+   "author": "صبري بطرس",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "worship"
+   ]
   },
   {
    "number": 135,
@@ -17879,7 +18303,11 @@
      ]
     }
    ],
-   "author": "William Jundī"
+   "author": "William Jundī",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 136,
@@ -17969,7 +18397,9 @@
       "Da er mich erlöste am Kreuz"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 137,
@@ -18244,7 +18674,11 @@
      ]
     }
    ],
-   "author": "ناصف صبحي"
+   "author": "ناصف صبحي",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 139,
@@ -18392,7 +18826,9 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 140,
@@ -18540,7 +18976,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 141,
@@ -18652,7 +19090,11 @@
      ]
     }
    ],
-   "author": "Albert Haddad (1974)"
+   "author": "Albert Haddad (1974)",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 142,
@@ -18703,7 +19145,9 @@
       "Steigend über alle Schranken"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 143,
@@ -18760,6 +19204,10 @@
       "Wo ich lernen werde der Erlösung Geheimnis"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "eternity"
    ]
   },
   {
@@ -18854,7 +19302,9 @@
      ]
     }
    ],
-   "author": "نبيل وصفي بباوي"
+   "author": "نبيل وصفي بباوي",
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 145,
@@ -18930,7 +19380,9 @@
      ]
     }
    ],
-   "author": "عادل سمير"
+   "author": "عادل سمير",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 146,
@@ -19084,7 +19536,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 147,
@@ -19238,7 +19692,11 @@
      ]
     }
    ],
-   "author": "البابا شنودةالبابا شنود"
+   "author": "البابا شنودةالبابا شنود",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 148,
@@ -19371,7 +19829,9 @@
      ]
     }
    ],
-   "author": "وليم جندي"
+   "author": "وليم جندي",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 149,
@@ -19498,7 +19958,12 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 150,
@@ -19634,7 +20099,11 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 151,
@@ -19794,7 +20263,9 @@
      ]
     }
    ],
-   "author": "رضا رمسيس"
+   "author": "رضا رمسيس",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 152,
@@ -19932,6 +20403,10 @@
       "Herrliche Würze, bleibend froh"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -20065,7 +20540,9 @@
      ]
     }
    ],
-   "author": "ʻ ممدوح عزت"
+   "author": "ʻ ممدوح عزت",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 154,
@@ -20195,7 +20672,9 @@
      ]
     }
    ],
-   "authorOriginal": "Jean Sophia Pigott"
+   "authorOriginal": "Jean Sophia Pigott",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 155,
@@ -20326,7 +20805,9 @@
     }
    ],
    "author": "اسعد الشدودي",
-   "authorOriginal": "Edward Caswall"
+   "authorOriginal": "Edward Caswall",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 156,
@@ -20453,7 +20934,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 157,
@@ -20552,6 +21037,11 @@
       "Halleluja — er tilgte meine Sünde"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance",
+    "fellowship"
    ]
   },
   {
@@ -20702,7 +21192,9 @@
       "Werfend meine Furcht hinweg — ohne dich, mein Meister"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 159,
@@ -20760,7 +21252,11 @@
      ]
     }
    ],
-   "author": "ماجد وهيب"
+   "author": "ماجد وهيب",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 160,
@@ -20890,7 +21386,9 @@
      ]
     }
    ],
-   "author": "نبيل وصفي بباوي"
+   "author": "نبيل وصفي بباوي",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 161,
@@ -21014,7 +21512,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 162,
@@ -21168,7 +21668,12 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "word"
+   ]
   },
   {
    "number": 163,
@@ -21315,6 +21820,11 @@
       "Denn der Herr ist nah"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -21475,7 +21985,12 @@
      ]
     }
    ],
-   "author": "هاني منيير حبيب"
+   "author": "هاني منيير حبيب",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "comfort"
+   ]
   },
   {
    "number": 165,
@@ -21602,7 +22117,12 @@
      ]
     }
    ],
-   "author": "صموئيل صبحي"
+   "author": "صموئيل صبحي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "repentance",
+    "cross"
+   ]
   },
   {
    "number": 166,
@@ -21779,6 +22299,11 @@
       "Wie kostbar sein Lösegeld!"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "eternity"
    ]
   },
   {
@@ -21960,7 +22485,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 168,
@@ -22059,7 +22586,9 @@
       "Während mein Herz überfließt mit dir in Frieden und Freude"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 169,
@@ -22188,6 +22717,10 @@
       "Dank meinem Herrn lebenslang"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -22353,7 +22886,9 @@
       "O Meister"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 171,
@@ -22486,7 +23021,9 @@
      ]
     }
    ],
-   "author": "William Jundī"
+   "author": "William Jundī",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 172,
@@ -22619,7 +23156,11 @@
      ]
     }
    ],
-   "author": "ناصف صبحي"
+   "author": "ناصف صبحي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 173,
@@ -22868,6 +23409,12 @@
       "Wie sollte ich dich nicht anbeten, Vater, mein Geliebter"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -23016,7 +23563,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 175,
@@ -23136,6 +23685,10 @@
       "Während mein Anteil bleibt mein, zu meiner Freude"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -23389,7 +23942,12 @@
      "chorus": true
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "comfort"
+   ]
   },
   {
    "number": 177,
@@ -23522,7 +24080,11 @@
      ]
     }
    ],
-   "author": "ناصف صبحي"
+   "author": "ناصف صبحي",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 178,
@@ -23648,7 +24210,9 @@
       "Alle meine Schmerzen, und ich werde froh sein"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 179,
@@ -23795,6 +24359,11 @@
       "Der erkaufte meine Seele — Jesus mein Heiland"
      ]
     }
+   ],
+   "primaryTopic": "word",
+   "topics": [
+    "comfort",
+    "cross"
    ]
   },
   {
@@ -24023,6 +24592,11 @@
       "Versüßend mein Ringen durch seine Liebe"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -24161,7 +24735,9 @@
       "O du, der starb statt meiner"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 182,
@@ -24314,7 +24890,9 @@
       "Halleluja — wie süß ist Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 183,
@@ -24441,7 +25019,9 @@
      ]
     }
    ],
-   "author": "هاني منيبر حبيب"
+   "author": "هاني منيبر حبيب",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 184,
@@ -24618,6 +25198,12 @@
       "Mein Meister, flute mich mit deiner erhabnen Liebe"
      ]
     }
+   ],
+   "primaryTopic": "warfare",
+   "topics": [
+    "cross",
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -24667,7 +25253,11 @@
      ]
     }
    ],
-   "author": "ʻ ممدوح عزت"
+   "author": "ʻ ممدوح عزت",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 186,
@@ -24821,7 +25411,13 @@
      ]
     }
    ],
-   "author": "ألبير حداد (1979)"
+   "author": "ألبير حداد (1979)",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 187,
@@ -24975,7 +25571,9 @@
      ]
     }
    ],
-   "author": "Iliya Zackariya Awadallah"
+   "author": "Iliya Zackariya Awadallah",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 188,
@@ -25114,7 +25712,9 @@
      ]
     }
    ],
-   "author": "Wafeeq Samuel Wahbi"
+   "author": "Wafeeq Samuel Wahbi",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 189,
@@ -25180,7 +25780,9 @@
       "Meine Liebe zu meinem Herrn wächst immer"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 190,
@@ -25310,7 +25912,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 191,
@@ -25479,7 +26083,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 192,
@@ -25762,7 +26368,11 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 194,
@@ -25930,6 +26540,11 @@
       "Füllend meine Zeiten für mich"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -26054,7 +26669,9 @@
      ]
     }
    ],
-   "author": "هاني منيبر حبيب"
+   "author": "هاني منيبر حبيب",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 196,
@@ -26198,6 +26815,10 @@
       "Mein geliebter Jesus, des Lebens Hoffnung selbst"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -26457,6 +27078,10 @@
       "(Als wäre ich im Himmel schon)"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -26584,7 +27209,9 @@
      ]
     }
    ],
-   "author": "هاني منيبر حبيب"
+   "author": "هاني منيبر حبيب",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 200,
@@ -26792,7 +27419,12 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 201,
@@ -26919,7 +27551,9 @@
      ]
     }
    ],
-   "author": "هاني منيبر حبيب"
+   "author": "هاني منيبر حبيب",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 202,
@@ -27081,7 +27715,9 @@
       "Ja, geruhe zu wohnen innen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 203,
@@ -27175,7 +27811,11 @@
      ]
     }
    ],
-   "author": "إبراهيم عويس"
+   "author": "إبراهيم عويس",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 204,
@@ -27323,7 +27963,13 @@
      ]
     }
    ],
-   "author": "Nasef Subhi Naseef"
+   "author": "Nasef Subhi Naseef",
+   "primaryTopic": "comfort",
+   "topics": [
+    "word",
+    "cross",
+    "repentance"
+   ]
   },
   {
    "number": 205,
@@ -27450,7 +28096,11 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 206,
@@ -27576,7 +28226,9 @@
       "Bis du kommst hernieder von oben"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 207,
@@ -27724,7 +28376,9 @@
      ]
     }
    ],
-   "author": "وصفي وهبه"
+   "author": "وصفي وهبه",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 208,
@@ -27958,7 +28612,9 @@
       "Während dein Friede füllt mein Herz"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 210,
@@ -28088,7 +28744,12 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 211,
@@ -28209,7 +28870,12 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "eternity"
+   ]
   },
   {
    "number": 212,
@@ -28369,7 +29035,13 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance",
+    "fellowship"
+   ]
   },
   {
    "number": 213,
@@ -28444,7 +29116,9 @@
       "Du bist deines Knaben Führer"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 214,
@@ -28628,7 +29302,11 @@
      ]
     }
    ],
-   "author": "Nasef Subhi Naseef"
+   "author": "Nasef Subhi Naseef",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 215,
@@ -28882,7 +29560,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 217,
@@ -28985,7 +29665,9 @@
      ]
     }
    ],
-   "author": "أكرم لويس"
+   "author": "أكرم لويس",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 218,
@@ -29154,7 +29836,11 @@
      ]
     }
    ],
-   "author": "غبريال رزق الله"
+   "author": "غبريال رزق الله",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 219,
@@ -29399,7 +30085,9 @@
      ]
     }
    ],
-   "author": "ألبير حداد (1972)"
+   "author": "ألبير حداد (1972)",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 221,
@@ -29463,7 +30151,12 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 222,
@@ -29557,7 +30250,9 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 223,
@@ -29680,6 +30375,10 @@
       "Zu den stillen Wassern)"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -29862,7 +30561,13 @@
      ]
     }
    ],
-   "author": "وفيق صموئيل"
+   "author": "وفيق صموئيل",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 226,
@@ -30108,6 +30813,10 @@
       "Mein Herr, wie süß bist du"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -30161,7 +30870,9 @@
     }
    ],
    "author": "منال واصف",
-   "authorOriginal": "Rita Baloche"
+   "authorOriginal": "Rita Baloche",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 228,
@@ -30300,7 +31011,9 @@
      ]
     }
    ],
-   "author": "ممدوح عزت"
+   "author": "ممدوح عزت",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 229,
@@ -30423,7 +31136,9 @@
       "Süß ist ihm unser Lob"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 230,
@@ -30522,6 +31237,11 @@
       "Während meine Schuld schrie, mich schmerzend"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "eternity"
    ]
   },
   {
@@ -30868,7 +31588,9 @@
       "Wandelnd neben mir außer dir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 234,
@@ -31157,7 +31879,9 @@
       "Gewiss seiner Liebe, gebe ich ihm mein Herz"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 236,
@@ -31205,7 +31929,9 @@
       "Schenkend mir Triumph, o Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 237,
@@ -31389,7 +32115,9 @@
      ]
     }
    ],
-   "author": "مكرم نجيب"
+   "author": "مكرم نجيب",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 238,
@@ -31534,7 +32262,9 @@
      ]
     }
    ],
-   "author": "نيفين فكري"
+   "author": "نيفين فكري",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 239,
@@ -31714,6 +32444,11 @@
      ],
      "chorus": true
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "eternity"
    ]
   },
   {
@@ -31807,6 +32542,11 @@
       "Während alle Herrlichkeit kehrt zurück zu deiner Person"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort"
    ]
   },
   {
@@ -31987,6 +32727,11 @@
       "Mit ewiger Liebe — wie groß ist er"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "eternity"
    ]
   },
   {
@@ -32173,6 +32918,10 @@
       "All Danksagung ihm"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -32300,7 +33049,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "warfare",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 244,
@@ -32481,7 +33234,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض"
+   "author": "زكريا عوض",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 245,
@@ -32602,7 +33357,11 @@
      ]
     }
    ],
-   "author": "غبريال رزق الله"
+   "author": "غبريال رزق الله",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 246,
@@ -32750,7 +33509,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 247,
@@ -32912,7 +33673,9 @@
       "Denn mein Triumph wächst durch dich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 248,
@@ -33012,7 +33775,9 @@
      ]
     }
    ],
-   "author": "عاظف عدلي"
+   "author": "عاظف عدلي",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 249,
@@ -33169,7 +33934,13 @@
      ]
     }
    ],
-   "author": "Philip Wesley Ayyad"
+   "author": "Philip Wesley Ayyad",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross",
+    "warfare"
+   ]
   },
   {
    "number": 250,
@@ -33304,6 +34075,10 @@
       "Bleibst du erhaben in meinem Herzen — mein Geliebter, mein Halt"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -33448,6 +34223,10 @@
       "Kämpfend meine Kämpfe in der Nacht dunklen Wachen)"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -33612,7 +34391,9 @@
     }
    ],
    "author": "يوسف قسطة",
-   "authorOriginal": "Civilla D. Martin"
+   "authorOriginal": "Civilla D. Martin",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 253,
@@ -33795,6 +34576,10 @@
       "So singen wir sie in unserm Lied"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -33852,7 +34637,9 @@
       "Dein für immer — dein für immer"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 255,
@@ -33984,7 +34771,9 @@
       "Befestigend, mein Herr, meine Schritte"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 256,
@@ -34198,7 +34987,13 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 257,
@@ -34319,7 +35114,12 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "eternity",
+   "topics": [
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 258,
@@ -34449,7 +35249,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 259,
@@ -34723,6 +35525,10 @@
       "Rufend, dass ich bin mit dir"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -34872,7 +35678,12 @@
     }
    ],
    "author": "Youssef Farajallah",
-   "authorOriginal": "Avis B. Christiansen"
+   "authorOriginal": "Avis B. Christiansen",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 262,
@@ -35025,6 +35836,10 @@
       "Wie die Vergangenheit, gesichert in dir"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -35176,7 +35991,11 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 264,
@@ -35254,7 +36073,9 @@
       "Jesus ist mein, schon jetzt"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 265,
@@ -35375,7 +36196,13 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "worship",
+    "warfare"
+   ]
   },
   {
    "number": 266,
@@ -35556,7 +36383,9 @@
      ]
     }
    ],
-   "author": "Wesley Ayyad"
+   "author": "Wesley Ayyad",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 267,
@@ -35674,7 +36503,11 @@
      ]
     }
    ],
-   "author": "فايز بشرى"
+   "author": "فايز بشرى",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 268,
@@ -35825,7 +36658,9 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 269,
@@ -35954,6 +36789,10 @@
       "Mich zu entreißen zu seinem Himmel"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -36075,7 +36914,11 @@
      ]
     }
    ],
-   "authorOriginal": "Edward Mote"
+   "authorOriginal": "Edward Mote",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 271,
@@ -36204,7 +37047,9 @@
       "Dies ist meine Gewissheit, o Geliebter"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 272,
@@ -36511,6 +37356,11 @@
       "Zu dir, mein Herr, ist mein Gebet, schauend auf dich"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance"
    ]
   },
   {
@@ -36664,7 +37514,9 @@
       "Vertrauend seiner Festung stark, schlafe ich darin"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 275,
@@ -36848,7 +37700,13 @@
      ]
     }
    ],
-   "author": "Guirguis Muʻawwaḍ"
+   "author": "Guirguis Muʻawwaḍ",
+   "primaryTopic": "eternity",
+   "topics": [
+    "worship",
+    "cross",
+    "fellowship"
+   ]
   },
   {
    "number": 276,
@@ -36969,7 +37827,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 277,
@@ -37244,7 +38106,11 @@
     }
    ],
    "author": "غبريال رزق الله",
-   "authorOriginal": "P. P. Bliss"
+   "authorOriginal": "P. P. Bliss",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 279,
@@ -37355,6 +38221,10 @@
       "Fest steht mein Herz in dir, mein Meister"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -37562,6 +38432,10 @@
       "Du musst notwendend kommen zu uns vor langem"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -37688,7 +38562,9 @@
       "In jeder Gnade und jedem Reichtum"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 282,
@@ -37841,6 +38717,11 @@
       "Mit Zärtlichkeit und mit Wonne"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "cross"
    ]
   },
   {
@@ -37962,7 +38843,9 @@
      ]
     }
    ],
-   "author": "حبيب خوري"
+   "author": "حبيب خوري",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 284,
@@ -38115,6 +38998,10 @@
       "Wiederkehrend, belebst du mich"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -38253,6 +39140,12 @@
       "Wie kostbar deine eigne Liebe, wirkend Herrlichkeit für mich"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "cross",
+    "eternity"
    ]
   },
   {
@@ -38313,7 +39206,9 @@
       "Amen, amen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 287,
@@ -38442,6 +39337,10 @@
       "Ja, und mehr, als du begehrst"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -38587,7 +39486,9 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 289,
@@ -38747,7 +39648,11 @@
      ]
     }
    ],
-   "author": "نبيل وصفي بباوي"
+   "author": "نبيل وصفي بباوي",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 290,
@@ -38825,7 +39730,9 @@
       "Während mein Herz ruft zufrieden — deine Güte folgt mir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 291,
@@ -38964,7 +39871,12 @@
      ]
     }
    ],
-   "author": "هاني منيبر حبيب"
+   "author": "هاني منيبر حبيب",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 292,
@@ -39398,7 +40310,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 295,
@@ -39599,7 +40513,9 @@
       "Wenn Jesus kommt"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 296,
@@ -39716,7 +40632,9 @@
       "In jeder Lobpreisung — Herr, du bist mit mir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 297,
@@ -39996,7 +40914,13 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "cross",
+    "warfare"
+   ]
   },
   {
    "number": 299,
@@ -40152,6 +41076,10 @@
       "O mein Geliebter, o Jesus — du füllst mein innerstes Gebein"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "eternity"
    ]
   },
   {
@@ -40327,7 +41255,9 @@
       "Achtend keinerlei Sorge"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 302,
@@ -40481,7 +41411,9 @@
      ]
     }
    ],
-   "author": "سامح عبده"
+   "author": "سامح عبده",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 303,
@@ -40739,6 +41671,11 @@
       "Eine frohe Hymne — genießt sie voll"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "word"
    ]
   },
   {
@@ -40866,7 +41803,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 306,
@@ -41064,6 +42005,10 @@
       "Während dein Vater ist der König der Könige"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -41211,6 +42156,10 @@
       "Während der andren Marien Würze erkaltet"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -41340,6 +42289,12 @@
       "Nicht ich, nicht ich — sondern du, o Jesus"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -41548,7 +42503,12 @@
      ]
     }
    ],
-   "author": "فيليب سمير"
+   "author": "فيليب سمير",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "repentance"
+   ]
   },
   {
    "number": 311,
@@ -41751,7 +42711,9 @@
      ]
     }
    ],
-   "author": "هاني وهيب"
+   "author": "هاني وهيب",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 313,
@@ -41880,7 +42842,9 @@
       "Harrend deiner eignen Rettung"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 314,
@@ -42007,7 +42971,11 @@
      ]
     }
    ],
-   "author": "أمجد ناثان"
+   "author": "أمجد ناثان",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 315,
@@ -42161,7 +43129,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 316,
@@ -42308,6 +43278,12 @@
       "Sondern im Überfluss des Dankes hoffe ich auf mein Anliegen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "comfort",
+    "word"
    ]
   },
   {
@@ -42513,7 +43489,9 @@
      "chorus": true
     }
    ],
-   "author": "فيليب وسلي عياد"
+   "author": "فيليب وسلي عياد",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 318,
@@ -42640,7 +43618,9 @@
      ]
     }
    ],
-   "author": "صموئيل صبحي فام"
+   "author": "صموئيل صبحي فام",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 319,
@@ -42769,6 +43749,11 @@
       "(Und bewahre uns nur für dein Wohlgefallen)"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort"
    ]
   },
   {
@@ -43047,7 +44032,11 @@
      ]
     }
    ],
-   "author": "عزت زكي"
+   "author": "عزت زكي",
+   "primaryTopic": "warfare",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 322,
@@ -43174,7 +44163,9 @@
      ]
     }
    ],
-   "author": "هاني منيبر حبيب"
+   "author": "هاني منيبر حبيب",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 323,
@@ -43570,7 +44561,11 @@
      ]
     }
    ],
-   "authorOriginal": "Charles C. Luther"
+   "authorOriginal": "Charles C. Luther",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 326,
@@ -43762,6 +44757,10 @@
       "Seine überströmende Liebe macht dich reich im Fragen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -43855,7 +44854,9 @@
       "Fürchte nicht unter dem Schatten deiner Flügel"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 328,
@@ -43907,7 +44908,9 @@
      ]
     }
    ],
-   "author": "هاني منيبر حبيب"
+   "author": "هاني منيبر حبيب",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 329,
@@ -44060,6 +45063,10 @@
       "Bis sie überströmte mit Worten"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -44150,6 +45157,10 @@
       "Die Freuden meines Herzens sind bei ihm"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -44421,6 +45432,10 @@
       "Immer mein Wahlspruch sei: Jesus lebt in mir"
      ]
     }
+   ],
+   "primaryTopic": "warfare",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -44578,7 +45593,11 @@
      ]
     }
    ],
-   "author": "فيليب وسلي عياد"
+   "author": "فيليب وسلي عياد",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 334,
@@ -44746,6 +45765,12 @@
       "Deine Nähe belebt meine Hoffnungen"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "worship",
+    "cross"
    ]
   },
   {
@@ -44921,7 +45946,12 @@
      ]
     }
    ],
-   "author": "مجيد نصحي منصور"
+   "author": "مجيد نصحي منصور",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 337,
@@ -45026,6 +46056,11 @@
       "Ich habe niemanden als dich, o Gott"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "comfort"
    ]
   },
   {
@@ -45147,7 +46182,12 @@
      ]
     }
    ],
-   "author": "Edward Harvey"
+   "author": "Edward Harvey",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 339,
@@ -45327,6 +46367,10 @@
       "Wir werden sehen unseren Bräutigam"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -45461,7 +46505,9 @@
     }
    ],
    "author": "Youssef Farajallah",
-   "authorOriginal": "Bruce Ballinger"
+   "authorOriginal": "Bruce Ballinger",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 341,
@@ -45600,7 +46646,11 @@
      ]
     }
    ],
-   "author": "Najeeb Ibrahim"
+   "author": "Najeeb Ibrahim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 342,
@@ -45729,6 +46779,10 @@
       "Singt ihm, rufend"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "eternity"
    ]
   },
   {
@@ -45865,7 +46919,11 @@
      ]
     }
    ],
-   "author": "ʻ ممدوح عزت"
+   "author": "ʻ ممدوح عزت",
+   "primaryTopic": "eternity",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 344,
@@ -46001,7 +47059,11 @@
      ]
     }
    ],
-   "author": "ألبير حداد (1970)"
+   "author": "ألبير حداد (1970)",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 345,
@@ -46176,7 +47238,9 @@
      ]
     }
    ],
-   "author": "صموئيل صبحي فام"
+   "author": "صموئيل صبحي فام",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 346,
@@ -46383,6 +47447,10 @@
       "Und rufe den Herrn, denn er ist nah"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -46477,7 +47545,9 @@
      ]
     }
    ],
-   "author": "رفعت زكي جندي"
+   "author": "رفعت زكي جندي",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 348,
@@ -46640,7 +47710,11 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 349,
@@ -46691,7 +47765,9 @@
       "Du bist mein Leben, niemand als du"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 350,
@@ -46875,7 +47951,9 @@
      ]
     }
    ],
-   "author": "زكريا بطرس"
+   "author": "زكريا بطرس",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 351,
@@ -47092,7 +48170,11 @@
      ]
     }
    ],
-   "author": "أرميا بولس"
+   "author": "أرميا بولس",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 353,
@@ -47246,7 +48328,13 @@
      ]
     }
    ],
-   "author": "ʻ جرجس معوض"
+   "author": "ʻ جرجس معوض",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "fellowship",
+    "eternity"
+   ]
   },
   {
    "number": 354,
@@ -47369,7 +48457,9 @@
       "Wie zahlreich sie auch sind, er gibt dem Herzen Frieden"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 355,
@@ -47618,6 +48708,10 @@
       "Und vergiss nicht alle seine Wohltaten"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -47899,7 +48993,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 359,
@@ -48029,7 +49125,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 360,
@@ -48153,7 +49251,9 @@
      ]
     }
    ],
-   "author": "هاني أنيس كامل"
+   "author": "هاني أنيس كامل",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 361,
@@ -48307,7 +49407,12 @@
      ]
     }
    ],
-   "author": "عبدالله خضر"
+   "author": "عبدالله خضر",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance"
+   ]
   },
   {
    "number": 362,
@@ -48555,7 +49660,11 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "authorOriginal": "Frank M. Graham"
+   "authorOriginal": "Frank M. Graham",
+   "primaryTopic": "eternity",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 363,
@@ -48667,7 +49776,11 @@
      ]
     }
    ],
-   "author": "Nasef Subhi Naseef"
+   "author": "Nasef Subhi Naseef",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 364,
@@ -48827,7 +49940,9 @@
      ]
     }
    ],
-   "author": "بهاء نسيم"
+   "author": "بهاء نسيم",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 365,
@@ -48995,6 +50110,11 @@
       "Mit allen unseren Liebsten"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "eternity",
+    "worship"
    ]
   },
   {
@@ -49044,7 +50164,9 @@
      ]
     }
    ],
-   "author": "بولس بشرى"
+   "author": "بولس بشرى",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 367,
@@ -49174,7 +50296,11 @@
      ]
     }
    ],
-   "author": "حبيب جرجس"
+   "author": "حبيب جرجس",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 368,
@@ -49337,7 +50463,11 @@
      ]
     }
    ],
-   "author": "شادي يوسف"
+   "author": "شادي يوسف",
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 369,
@@ -49451,6 +50581,10 @@
       "Am Haus, schreiend zu dir"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -49553,7 +50687,9 @@
       "Mein Herz ist nun froh in der Gegenwart des Geliebten"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 371,
@@ -49721,6 +50857,10 @@
       "Als nur der Herr Jesus"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -49916,7 +51056,9 @@
       "Mit Flügel zu den Höhen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 374,
@@ -50042,6 +51184,12 @@
       "Ich komme schnell, ich werde nicht fern sein"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "fellowship",
+    "comfort"
    ]
   },
   {
@@ -50171,6 +51319,10 @@
       "Familie und Sicherheit und Gesundheit und Reichtum"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "church"
    ]
   },
   {
@@ -50240,7 +51392,9 @@
       "Und ich abnehmen, und ich abnehmen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 377,
@@ -50393,6 +51547,10 @@
       "Denn du bist all unser Verlangen"
      ]
     }
+   ],
+   "primaryTopic": "word",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -50540,6 +51698,10 @@
       "Und nimmt uns in die Wohnung der Seligkeit"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -50703,7 +51865,9 @@
      ]
     }
    ],
-   "author": "نبيل هنري"
+   "author": "نبيل هنري",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 380,
@@ -50857,7 +52021,13 @@
      ]
     }
    ],
-   "author": "رؤوف بدروس"
+   "author": "رؤوف بدروس",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship",
+    "warfare"
+   ]
   },
   {
    "number": 381,
@@ -51011,7 +52181,12 @@
      ]
     }
    ],
-   "author": "باسيلي نسيم"
+   "author": "باسيلي نسيم",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "worship"
+   ]
   },
   {
    "number": 382,
@@ -51542,6 +52717,11 @@
       "Vielleicht löschen sie mein Brennen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -51708,7 +52888,13 @@
      ]
     }
    ],
-   "author": "وليم جندي"
+   "author": "وليم جندي",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "eternity",
+    "comfort"
+   ]
   },
   {
    "number": 385,
@@ -51840,6 +53026,10 @@
       "Besitzend all mein Erbe"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -51964,7 +53154,9 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 387,
@@ -52090,6 +53282,12 @@
       "Denn ich bin sein durch seine Person"
      ]
     }
+   ],
+   "primaryTopic": "eternity",
+   "topics": [
+    "worship",
+    "cross",
+    "warfare"
    ]
   },
   {
@@ -52214,7 +53412,11 @@
      ]
     }
    ],
-   "author": "زكريا بطرس"
+   "author": "زكريا بطرس",
+   "primaryTopic": "eternity",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 389,
@@ -52340,7 +53542,9 @@
       "Ich habe kein Wehklagen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 390,
@@ -52494,7 +53698,9 @@
      ]
     }
    ],
-   "author": "فايز بشرى"
+   "author": "فايز بشرى",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 391,
@@ -52663,7 +53869,13 @@
      ]
     }
    ],
-   "author": "مجيد نصحي منصور"
+   "author": "مجيد نصحي منصور",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "cross",
+    "warfare"
+   ]
   },
   {
    "number": 392,
@@ -52714,6 +53926,10 @@
       "Denn er hat mein Flehen erhört"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -52868,7 +54084,11 @@
      ]
     }
    ],
-   "author": "ناصف صبحي"
+   "author": "ناصف صبحي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 394,
@@ -53049,7 +54269,11 @@
      ]
     }
    ],
-   "author": "حليم نصيف"
+   "author": "حليم نصيف",
+   "primaryTopic": "eternity",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 395,
@@ -53236,7 +54460,9 @@
      ]
     }
    ],
-   "author": "أنيس يونان"
+   "author": "أنيس يونان",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 396,
@@ -53356,7 +54582,9 @@
       "Er ist mein Teil und genug"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 397,
@@ -53513,7 +54741,11 @@
      ]
     }
    ],
-   "author": "أكرم لويس"
+   "author": "أكرم لويس",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 398,
@@ -53673,7 +54905,11 @@
      ]
     }
    ],
-   "author": "Philip Wesley Ayyad"
+   "author": "Philip Wesley Ayyad",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 399,
@@ -53842,7 +55078,11 @@
      ]
     }
    ],
-   "author": "Wafeeq Samuel Wahbi (1970)"
+   "author": "Wafeeq Samuel Wahbi (1970)",
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 400,
@@ -53887,6 +55127,10 @@
       "Und seines Todes am Kreuz, denn seine Liebe ist groß"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -54168,6 +55412,10 @@
       "Von meiner Krankheit und meinem Ächzen"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -54322,7 +55570,12 @@
      ]
     }
    ],
-   "author": "ناصف صبحي"
+   "author": "ناصف صبحي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 404,
@@ -54434,7 +55687,11 @@
      ]
     }
    ],
-   "author": "Aida Sweiss"
+   "author": "Aida Sweiss",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 405,
@@ -54533,7 +55790,9 @@
       "In deiner Größe, o Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 406,
@@ -54687,7 +55946,11 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "cross",
+   "topics": [
+    "word"
+   ]
   },
   {
    "number": 407,
@@ -54934,6 +56197,12 @@
       "Bis du kommst"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "eternity",
+    "cross",
+    "warfare"
    ]
   },
   {
@@ -55091,7 +56360,12 @@
      ]
     }
    ],
-   "author": "باسيلي نسيم"
+   "author": "باسيلي نسيم",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 410,
@@ -55223,7 +56497,9 @@
       "O Herr, ich weih dir mein Leben"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 411,
@@ -55322,6 +56598,10 @@
       "Und meine Augen werden sehen, der mich gesucht hat"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -55469,6 +56749,11 @@
       "Und meine Trauer und meine Irrtümer vernichtest"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -55595,7 +56880,9 @@
       "Und er fesselt mein Herz"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 414,
@@ -55725,7 +57012,12 @@
      ]
     }
    ],
-   "author": "Albert Haddad (1967)"
+   "author": "Albert Haddad (1967)",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "warfare"
+   ]
   },
   {
    "number": 415,
@@ -55830,6 +57122,10 @@
       "In Gnade durch den teuren Sohn)"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -55957,7 +57253,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 417,
@@ -56110,7 +57410,9 @@
       "Mit deinem Geist fülle mein ganzes Wesen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 418,
@@ -56427,7 +57729,12 @@
      ]
     }
    ],
-   "author": "رينا وديع جندي"
+   "author": "رينا وديع جندي",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 420,
@@ -56729,7 +58036,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 422,
@@ -56853,7 +58162,9 @@
      ]
     }
    ],
-   "author": "ألبير سمير"
+   "author": "ألبير سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 423,
@@ -56931,6 +58242,10 @@
       "Du nimmst mich in deinen Schoß und beschützest mich"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -57030,7 +58345,9 @@
       "Und er nimmt mich zum Himmel, Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 425,
@@ -57166,7 +58483,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 426,
@@ -57338,7 +58657,11 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 428,
@@ -57437,7 +58760,9 @@
       "Damit du errettet wurdest vor dem Verderben"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 429,
@@ -57530,6 +58855,10 @@
       "Wie viele Seelen, o mein Gott, rufen: gibt es Rettung?"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "church"
    ]
   },
   {
@@ -57747,6 +59076,10 @@
      ],
      "chorus": true
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -57846,6 +59179,10 @@
       "Eine Quelle wunderbarer Freude, überströmend"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -57912,6 +59249,10 @@
       "Die Weisheit und die Macht, die Stärke und die Vollmacht"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -58039,7 +59380,11 @@
      ]
     }
    ],
-   "author": "ناصف صبحي"
+   "author": "ناصف صبحي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 435,
@@ -58193,7 +59538,9 @@
      ]
     }
    ],
-   "author": "ناصف صبحي"
+   "author": "ناصف صبحي",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 436,
@@ -58317,7 +59664,9 @@
      ]
     }
    ],
-   "author": "منال فؤاد"
+   "author": "منال فؤاد",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 437,
@@ -58582,7 +59931,9 @@
      ]
     }
    ],
-   "author": "بول دانيال"
+   "author": "بول دانيال",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 439,
@@ -58739,7 +60090,12 @@
      ]
     }
    ],
-   "author": "ناصف صبحي"
+   "author": "ناصف صبحي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "eternity",
+    "cross"
+   ]
   },
   {
    "number": 440,
@@ -58892,6 +60248,10 @@
       "Zu ewigen Ewigkeiten"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "eternity"
    ]
   },
   {
@@ -59039,7 +60399,9 @@
       "Ich bete, ich singe mit frohem Herzen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 442,
@@ -59192,6 +60554,10 @@
       "Als wäre es von mir gegangen und gestorben"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -59319,7 +60685,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 444,
@@ -59446,7 +60816,9 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 445,
@@ -59533,7 +60905,9 @@
       "Und wir hoffen auf dein Versprechen mit dem Ausgießen deines Geists"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 446,
@@ -59618,7 +60992,11 @@
      ]
     }
    ],
-   "author": "فكتور شاكر"
+   "author": "فكتور شاكر",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 447,
@@ -59835,6 +61213,10 @@
       "O Hörer des Gebets"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -59989,7 +61371,12 @@
      ]
     }
    ],
-   "author": "نبيل أرتيل"
+   "author": "نبيل أرتيل",
+   "primaryTopic": "eternity",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 450,
@@ -60110,7 +61497,9 @@
      ]
     }
    ],
-   "author": "اسعد الشدودي"
+   "author": "اسعد الشدودي",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 451,
@@ -60279,7 +61668,11 @@
      ]
     }
    ],
-   "author": "نجيب ابراهيم"
+   "author": "نجيب ابراهيم",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 452,
@@ -60345,7 +61738,9 @@
       "Die Wirklichkeit von Christus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 453,
@@ -60520,7 +61915,11 @@
      ]
     }
    ],
-   "author": "Edward Perronet"
+   "author": "Edward Perronet",
+   "primaryTopic": "warfare",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 454,
@@ -60691,6 +62090,10 @@
       "Genug mit der Heuchelei"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -60812,7 +62215,11 @@
      ]
     }
    ],
-   "author": "يوسف بركات"
+   "author": "يوسف بركات",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 457,
@@ -60965,7 +62372,9 @@
       "Ich nehme Zuflucht im Blut (o Gekreuzigter)"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 458,
@@ -61139,6 +62548,12 @@
      ],
      "chorus": true
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "eternity",
+    "cross",
+    "warfare"
    ]
   },
   {
@@ -61260,7 +62675,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 460,
@@ -61415,7 +62832,13 @@
     }
    ],
    "author": "فواز عميش",
-   "authorOriginal": "Charles F. Weigle"
+   "authorOriginal": "Charles F. Weigle",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort",
+    "repentance"
+   ]
   },
   {
    "number": 461,
@@ -61568,7 +62991,9 @@
       "Du allein, o mein Herr, der teuerste König"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 462,
@@ -61742,6 +63167,11 @@
       "Und die Wartenden und die Sieger, ich werde auf dich warten"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "warfare",
+    "fellowship"
    ]
   },
   {
@@ -61931,6 +63361,10 @@
       "Und die Vollmacht deines Geists"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -62085,7 +63519,11 @@
      ]
     }
    ],
-   "author": "هاني أنيس كامل"
+   "author": "هاني أنيس كامل",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 466,
@@ -62238,6 +63676,10 @@
       "Komm zu dem Gekreuzigten, er hat überwunden"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -62355,6 +63797,10 @@
       "Und wir sagen: wir lieben dich"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -62510,7 +63956,9 @@
     }
    ],
    "author": "جورج فورد",
-   "authorOriginal": "Rev. Johnson Oatman, Jr."
+   "authorOriginal": "Rev. Johnson Oatman, Jr.",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 469,
@@ -62637,7 +64085,13 @@
      ]
     }
    ],
-   "author": "فيليب إسكندر"
+   "author": "فيليب إسكندر",
+   "primaryTopic": "worship",
+   "topics": [
+    "repentance",
+    "fellowship",
+    "warfare"
+   ]
   },
   {
    "number": 470,
@@ -62766,6 +64220,11 @@
       "Und ich rufte: o meine Hoffnung"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "worship",
+    "comfort"
    ]
   },
   {
@@ -62892,6 +64351,10 @@
       "Dort vergesse ich meine Leiden"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -63060,7 +64523,9 @@
       "Heilig, heilig, Herr dieses Lebens"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 473,
@@ -63133,7 +64598,9 @@
      ]
     }
    ],
-   "author": "بولس بشرى"
+   "author": "بولس بشرى",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 474,
@@ -63313,7 +64780,9 @@
       "Immer rufend vor Freude"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 475,
@@ -63406,6 +64875,11 @@
       "Durch deinen Tod hast du mir ein besseres Leben geschenkt"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
    ]
   },
   {
@@ -63587,7 +65061,11 @@
      ]
     }
    ],
-   "authorOriginal": "Will L. Thompson"
+   "authorOriginal": "Will L. Thompson",
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 477,
@@ -63713,7 +65191,9 @@
       "Gib mir das Heil"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 478,
@@ -63894,7 +65374,9 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 479,
@@ -64006,7 +65488,9 @@
      ]
     }
    ],
-   "author": "وهيب ولسن"
+   "author": "وهيب ولسن",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 480,
@@ -64186,6 +65670,10 @@
       "Um uns zu sammeln"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -64280,7 +65768,12 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "comfort"
+   ]
   },
   {
    "number": 482,
@@ -64429,7 +65922,12 @@
     }
    ],
    "author": "اسعد الشدودي",
-   "authorOriginal": "Thomas R. Taylor"
+   "authorOriginal": "Thomas R. Taylor",
+   "primaryTopic": "eternity",
+   "topics": [
+    "comfort",
+    "worship"
+   ]
   },
   {
    "number": 483,
@@ -64561,6 +66059,11 @@
       "Immer mit mir"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "eternity"
    ]
   },
   {
@@ -64980,7 +66483,9 @@
     }
    ],
    "author": "فواز عميش",
-   "authorOriginal": "Sophie Conty"
+   "authorOriginal": "Sophie Conty",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 487,
@@ -65154,6 +66659,10 @@
       "Und das ewige Heil"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -65328,6 +66837,12 @@
       "Halleluja halleluja halleluja"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -65563,7 +67078,12 @@
      ]
     }
    ],
-   "author": "Wafeeq Samuel Wahbi"
+   "author": "Wafeeq Samuel Wahbi",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "eternity"
+   ]
   },
   {
    "number": 491,
@@ -65771,7 +67291,9 @@
       "Der Tag, an dem die Verheißungen sich erfüllen für mich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 493,
@@ -65871,7 +67393,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 494,
@@ -66025,7 +67549,13 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare",
+    "worship",
+    "word"
+   ]
   },
   {
    "number": 495,
@@ -66151,6 +67681,12 @@
       "Auf Erden und in der Ewigkeit"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "repentance",
+    "cross",
+    "warfare"
    ]
   },
   {
@@ -66326,7 +67862,9 @@
      ]
     }
    ],
-   "authorOriginal": "John Newton"
+   "authorOriginal": "John Newton",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 497,
@@ -66503,7 +68041,9 @@
       "Erlöser der Seelen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 498,
@@ -66617,6 +68157,11 @@
       "Und am Ende hat deine Person Fürsprache gehalten"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship",
+    "comfort"
    ]
   },
   {
@@ -66722,7 +68267,9 @@
       "Bist für mich der Hirt und der Freund)"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 500,
@@ -66897,7 +68444,9 @@
      ]
     }
    ],
-   "author": "نبيل وصفي بباوي"
+   "author": "نبيل وصفي بباوي",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 501,
@@ -67138,7 +68687,12 @@
      "chorus": true
     }
    ],
-   "author": "Shādī Youssef"
+   "author": "Shādī Youssef",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "church"
+   ]
   },
   {
    "number": 502,
@@ -67313,7 +68867,11 @@
      ]
     }
    ],
-   "author": "وديع متى بهنام"
+   "author": "وديع متى بهنام",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 503,
@@ -67403,6 +68961,10 @@
       "Ich werde zu dir kommen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -67551,7 +69113,9 @@
      ]
     }
    ],
-   "author": "حنا خباز"
+   "author": "حنا خباز",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 505,
@@ -67684,7 +69248,12 @@
      ]
     }
    ],
-   "author": "بهجت عدلي"
+   "author": "بهجت عدلي",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 506,
@@ -67891,7 +69460,9 @@
       "Und er befiehlt hinauszuwerfen, die sie beschuldigten"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 507,
@@ -68044,6 +69615,10 @@
       "Und Wonne und Glück"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -68420,7 +69995,13 @@
      ]
     }
    ],
-   "authorOriginal": "Charlotte Elliott"
+   "authorOriginal": "Charlotte Elliott",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 510,
@@ -68525,6 +70106,11 @@
       "Dass du antwortest, wenn zu dir ich bete"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "warfare"
    ]
   },
   {
@@ -68672,6 +70258,12 @@
       "So werden die Härten leicht"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -68826,7 +70418,11 @@
      ]
     }
    ],
-   "author": "ابراهيم سركيس"
+   "author": "ابراهيم سركيس",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 513,
@@ -69001,7 +70597,9 @@
      ]
     }
    ],
-   "author": "مكاري يونان"
+   "author": "مكاري يونان",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 514,
@@ -69342,7 +70940,9 @@
      ]
     }
    ],
-   "author": "أكرم لويس"
+   "author": "أكرم لويس",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 517,
@@ -69516,6 +71116,10 @@
       "Wenn wir wie du werden"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -69667,7 +71271,9 @@
      ]
     }
    ],
-   "author": "ناصيف اليازجي"
+   "author": "ناصيف اليازجي",
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 519,
@@ -69797,7 +71403,9 @@
      ]
     }
    ],
-   "author": "سامح عبده"
+   "author": "سامح عبده",
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 520,
@@ -69846,7 +71454,9 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 521,
@@ -70053,7 +71663,9 @@
       "O mein Herr, der Geliebte"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 522,
@@ -70128,6 +71740,11 @@
       "Ich werde singen 'wer ist wie du'"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "worship"
    ]
   },
   {
@@ -70231,7 +71848,11 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 524,
@@ -70438,6 +72059,10 @@
       "Im Schatten des Herrn des Lebens"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -70619,7 +72244,9 @@
      ]
     }
    ],
-   "author": "Najeeb Ibrahim"
+   "author": "Najeeb Ibrahim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 526,
@@ -70773,7 +72400,11 @@
      ]
     }
    ],
-   "author": "نبيل اسحق بولس"
+   "author": "نبيل اسحق بولس",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 527,
@@ -70948,7 +72579,9 @@
      ]
     }
    ],
-   "author": "ابراهيم ناصيف عطية"
+   "author": "ابراهيم ناصيف عطية",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 528,
@@ -71071,6 +72704,10 @@
       "Durch das Kreuz meines Herrn erlöste uns Gott"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -71236,7 +72873,9 @@
       "Bis ich dich sehe und meine Trauer vergesse"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 530,
@@ -71347,6 +72986,10 @@
       "Zermalmend die Mächte des Teufels)"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -71474,7 +73117,9 @@
      ]
     }
    ],
-   "author": "جوزيف نصرالله"
+   "author": "جوزيف نصرالله",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 532,
@@ -71634,7 +73279,11 @@
      ]
     }
    ],
-   "author": "صلاح صالح"
+   "author": "صلاح صالح",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 533,
@@ -71815,7 +73464,13 @@
      ]
     }
    ],
-   "author": "شادي يوسف"
+   "author": "شادي يوسف",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship",
+    "eternity"
+   ]
   },
   {
    "number": 534,
@@ -72113,7 +73768,9 @@
       "Erschien mit einem Lächeln"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 536,
@@ -72281,6 +73938,11 @@
       "Es gibt keinen Ort"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "eternity",
+    "cross"
    ]
   },
   {
@@ -72408,7 +74070,9 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 538,
@@ -72552,6 +74216,11 @@
       "Und deinen Willen getan habe, dies sind meine Wünsche"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "warfare"
    ]
   },
   {
@@ -72672,7 +74341,9 @@
       "Habe ich gegeben für dich?"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 540,
@@ -72780,6 +74451,11 @@
       "Du verbandest all meine Wunden in der Mitte des Weges"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance",
+    "fellowship"
    ]
   },
   {
@@ -72903,6 +74579,10 @@
       "In jedem Umstand sehe ich ihn neben mir stehen"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -73057,7 +74737,11 @@
      ]
     }
    ],
-   "authorOriginal": "Daniel O. Teasley"
+   "authorOriginal": "Daniel O. Teasley",
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 543,
@@ -73241,7 +74925,13 @@
      ]
     }
    ],
-   "author": "نبيل أرتيل"
+   "author": "نبيل أرتيل",
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross",
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 545,
@@ -73334,7 +75024,9 @@
       "Und wie könnte ich ihn nicht lieben, o Menschen, denn ich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 546,
@@ -73454,6 +75146,10 @@
       "'Halte mich nahe an das Kreuz'"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -73753,7 +75449,9 @@
     }
    ],
    "author": "اسعد الشدودي",
-   "authorOriginal": "Charlotte Elliott"
+   "authorOriginal": "Charlotte Elliott",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 549,
@@ -73888,7 +75586,9 @@
       "Das Licht deines Angesichts"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 550,
@@ -74041,7 +75741,9 @@
       "Er ruft mich: meine Schwester, die Braut"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 551,
@@ -74167,6 +75869,10 @@
       "Und lass meine Seele sein für immer für Christus"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -74365,6 +76071,11 @@
       "O mein Licht, nach dieser Nacht ist mein Morgen"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "fellowship"
    ]
   },
   {
@@ -74545,6 +76256,11 @@
       "Wie kostbar ist deine Person"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross",
+    "eternity"
    ]
   },
   {
@@ -74699,7 +76415,9 @@
      ]
     }
    ],
-   "authorOriginal": "John M. Whyte"
+   "authorOriginal": "John M. Whyte",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 555,
@@ -74856,7 +76574,9 @@
      ]
     }
    ],
-   "author": "هاني روماني"
+   "author": "هاني روماني",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 556,
@@ -75018,6 +76738,11 @@
       "Eile dein Kommen, o unser Erlöser"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "fellowship"
    ]
   },
   {
@@ -75141,6 +76866,11 @@
       "Er möge verherrlicht werden in meinem kommenden Leben"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "worship"
    ]
   },
   {
@@ -75294,6 +77024,11 @@
       "Mein Herr, wie süß bist du als Hoffnung!"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -75556,7 +77291,13 @@
      ]
     }
    ],
-   "author": "أنسى أنس يونان"
+   "author": "أنسى أنس يونان",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship",
+    "repentance"
+   ]
   },
   {
    "number": 561,
@@ -75677,7 +77418,9 @@
      ]
     }
    ],
-   "authorOriginal": "Anna B. Warner"
+   "authorOriginal": "Anna B. Warner",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 562,
@@ -75788,7 +77531,9 @@
       "Das ist ein Rätsel, ich kenne keine Lösung darin, o mein Geliebter)"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 563,
@@ -75921,7 +77666,12 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "comfort"
+   ]
   },
   {
    "number": 564,
@@ -76073,7 +77823,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 566,
@@ -76154,7 +77906,9 @@
       "Und mein Glaube zunahm, weil ich..."
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 567,
@@ -76254,7 +78008,11 @@
      ]
     }
    ],
-   "author": "هاني روماني"
+   "author": "هاني روماني",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 568,
@@ -76427,7 +78185,12 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "worship",
+   "topics": [
+    "warfare",
+    "cross"
+   ]
   },
   {
    "number": 570,
@@ -76590,7 +78353,12 @@
      ]
     }
    ],
-   "author": "جورج زيدان"
+   "author": "جورج زيدان",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 571,
@@ -76683,7 +78451,9 @@
       "Denn wenn alles geht, sammelt dein Schoß mich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 572,
@@ -76819,7 +78589,11 @@
      ]
     }
    ],
-   "author": "منال سمير حنا"
+   "author": "منال سمير حنا",
+   "primaryTopic": "worship",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 573,
@@ -76976,7 +78750,9 @@
      ]
     }
    ],
-   "author": "ألبير حداد (1973)"
+   "author": "ألبير حداد (1973)",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 574,
@@ -77145,7 +78921,9 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 575,
@@ -77209,7 +78987,9 @@
      ]
     }
    ],
-   "author": "بولس بشرى"
+   "author": "بولس بشرى",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 576,
@@ -77302,6 +79082,10 @@
       "Und durch dich wird meine Seele satt"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -77417,7 +79201,9 @@
      ]
     }
    ],
-   "author": "جوزيف نصرالله"
+   "author": "جوزيف نصرالله",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 578,
@@ -77558,7 +79344,9 @@
       "Halleluja halleluja, hier kommt Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 580,
@@ -77657,6 +79445,12 @@
       "All meine Lobpreise und meine Hoffnungen für meinen Geliebten"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -77778,7 +79572,9 @@
      ]
     }
    ],
-   "author": "جوزيف نصرالله"
+   "author": "جوزيف نصرالله",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 582,
@@ -77899,7 +79695,12 @@
      ]
     }
    ],
-   "author": "ابراهيم سركيس"
+   "author": "ابراهيم سركيس",
+   "primaryTopic": "warfare",
+   "topics": [
+    "word",
+    "comfort"
+   ]
   },
   {
    "number": 583,
@@ -78028,7 +79829,9 @@
       "Und erbarme dich meiner, o Vergeber aller Sünden"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 584,
@@ -78148,7 +79951,9 @@
       "So verbeugen wir uns vor dir mit Liebe, o Herr, der Gott"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 585,
@@ -78259,7 +80064,9 @@
       "Hier wird er jedes meiner Bedürfnisse stillen)"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 586,
@@ -78353,7 +80160,9 @@
      ]
     }
    ],
-   "author": "Nasef Subhi Naseef"
+   "author": "Nasef Subhi Naseef",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 587,
@@ -78535,7 +80344,9 @@
     }
    ],
    "author": "اسعد الشدودي",
-   "authorOriginal": "James Proctor"
+   "authorOriginal": "James Proctor",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 588,
@@ -78661,6 +80472,10 @@
       "Ich wurde gerettet und erlangte die Sicherheit"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -78761,7 +80576,9 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 590,
@@ -78861,7 +80678,11 @@
      ]
     }
    ],
-   "author": "جوزيف نصرالله"
+   "author": "جوزيف نصرالله",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 591,
@@ -78933,6 +80754,10 @@
       "Wer ist wie du, wer gewährt mir Erlösung?"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -79033,7 +80858,11 @@
      ]
     }
    ],
-   "author": "إيهاب نبيل"
+   "author": "إيهاب نبيل",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 593,
@@ -79108,6 +80937,10 @@
       "Und er erfüllt die Hoffnungen, sie lügten"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -79235,7 +81068,9 @@
      ]
     }
    ],
-   "author": "هاني روماني"
+   "author": "هاني روماني",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 595,
@@ -79374,6 +81209,10 @@
       "(Und gepriesen sei der Name deiner Herrlichkeit, deiner Herrlichkeit, des Allerhöchsten)"
      ]
     }
+   ],
+   "primaryTopic": "eternity",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -79501,7 +81340,11 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 598,
@@ -79625,7 +81468,11 @@
      ]
     }
    ],
-   "author": "ʻ سعاد مكتبى"
+   "author": "ʻ سعاد مكتبى",
+   "primaryTopic": "worship",
+   "topics": [
+    "eternity"
+   ]
   },
   {
    "number": 599,
@@ -79752,7 +81599,11 @@
      ]
     }
    ],
-   "author": "بيتر نصر الله"
+   "author": "بيتر نصر الله",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 600,
@@ -79852,7 +81703,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 601,
@@ -80047,7 +81900,12 @@
     }
    ],
    "author": "نانسي فلتس",
-   "authorOriginal": "Betty Jean Robinson"
+   "authorOriginal": "Betty Jean Robinson",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "eternity"
+   ]
   },
   {
    "number": 603,
@@ -80119,7 +81977,9 @@
       "Alles von mir ist dein)"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 604,
@@ -80210,7 +82070,11 @@
      ]
     }
    ],
-   "author": "صموئيل صبحي فام"
+   "author": "صموئيل صبحي فام",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 605,
@@ -80310,7 +82174,9 @@
      ]
     }
    ],
-   "author": "بولس بشرى"
+   "author": "بولس بشرى",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 606,
@@ -80361,7 +82227,9 @@
       "Werde ich dort in deinem Himmel bleiben"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 607,
@@ -80538,6 +82406,10 @@
       "Und wir werden die Schmerzen einer vergänglichen Welt lassen"
      ]
     }
+   ],
+   "primaryTopic": "word",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -80604,7 +82476,9 @@
       "Denn der Herr ist hoch, hoch, hoch für immer"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 609,
@@ -80752,7 +82626,12 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "comfort",
+   "topics": [
+    "word",
+    "warfare"
+   ]
   },
   {
    "number": 610,
@@ -80848,6 +82727,11 @@
       "Lebe ich in Armut und Tod"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "cross"
    ]
   },
   {
@@ -80901,7 +82785,9 @@
     }
    ],
    "author": "بولس بشرى",
-   "authorOriginal": "Leona Von Brethorst"
+   "authorOriginal": "Leona Von Brethorst",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 612,
@@ -81007,7 +82893,9 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 613,
@@ -81142,6 +83030,11 @@
       "Du gibst, du nimmst, mein Gott, du bleibst mein treuer Herr"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -81271,7 +83164,9 @@
       "Und mit seiner Rechten leitet er dich und sorgt für dich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 615,
@@ -81391,7 +83286,9 @@
       "Und die Zuflucht der Sünder"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 616,
@@ -81624,7 +83521,11 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "church",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 618,
@@ -81750,6 +83651,10 @@
       "In dem unsere Liebe wächst, o mein Meister"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -81994,7 +83899,9 @@
       "Sende mich, o Herr der Menschen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "church",
+   "topics": []
   },
   {
    "number": 621,
@@ -82088,7 +83995,11 @@
      ]
     }
    ],
-   "author": "جريس دله"
+   "author": "جريس دله",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 622,
@@ -82218,7 +84129,12 @@
      ]
     }
    ],
-   "author": "حنا أغابي"
+   "author": "حنا أغابي",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance",
+    "fellowship"
+   ]
   },
   {
    "number": 623,
@@ -82365,6 +84281,11 @@
       "Einen Augenblick, mit dir gelebt"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship",
+    "comfort"
    ]
   },
   {
@@ -82491,6 +84412,10 @@
       "Bis ich meine Krone empfange"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -82576,7 +84501,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 626,
@@ -82696,6 +84623,11 @@
       "Ziehe Gerechtigkeit an als Gewand, und empfange den ausgegossenen Geist"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -83066,7 +84998,11 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 630,
@@ -83211,7 +85147,12 @@
      ]
     }
    ],
-   "author": "نبيل اسحق بولس"
+   "author": "نبيل اسحق بولس",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 631,
@@ -83386,7 +85327,13 @@
      ]
     }
    ],
-   "author": "فايز بشرى"
+   "author": "فايز بشرى",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship",
+    "word"
+   ]
   },
   {
    "number": 632,
@@ -83513,7 +85460,11 @@
      ]
     }
    ],
-   "author": "معاوية هلسة"
+   "author": "معاوية هلسة",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 633,
@@ -83565,7 +85516,9 @@
      ]
     }
    ],
-   "author": "بولس بشرى"
+   "author": "بولس بشرى",
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 634,
@@ -83719,7 +85672,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 635,
@@ -83846,7 +85801,9 @@
      ]
     }
    ],
-   "author": "ولسن رمزي"
+   "author": "ولسن رمزي",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 636,
@@ -84055,7 +86012,13 @@
     }
    ],
    "author": "متري الحداد",
-   "authorOriginal": "Fanny J. Crosby"
+   "authorOriginal": "Fanny J. Crosby",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "warfare",
+    "worship"
+   ]
   },
   {
    "number": 637,
@@ -84376,6 +86339,12 @@
       "In seiner Umarmung, drinnen beim Hochzeitsmahl"
      ]
     }
+   ],
+   "primaryTopic": "eternity",
+   "topics": [
+    "repentance",
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -84454,7 +86423,9 @@
       "Mein Herz zu wandeln und mich in weiße Gewänder zu kleiden"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 641,
@@ -84581,7 +86552,9 @@
      ]
     }
    ],
-   "author": "وهيب ولسن"
+   "author": "وهيب ولسن",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 642,
@@ -84710,6 +86683,11 @@
       "Der Herr der Herrlichkeit selbst beschützt dich"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "warfare"
    ]
   },
   {
@@ -84885,7 +86863,9 @@
      ]
     }
    ],
-   "author": "ابراهيم عويـس"
+   "author": "ابراهيم عويـس",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 644,
@@ -85034,7 +87014,9 @@
     }
    ],
    "author": "يوسف قسطة",
-   "authorOriginal": "John Newton"
+   "authorOriginal": "John Newton",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 645,
@@ -85086,7 +87068,9 @@
      ]
     }
    ],
-   "author": "شادية أسعد"
+   "author": "شادية أسعد",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 646,
@@ -85213,7 +87197,11 @@
      ]
     }
    ],
-   "author": "عصام حداد"
+   "author": "عصام حداد",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 647,
@@ -85358,7 +87346,9 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 648,
@@ -85617,6 +87607,10 @@
       "Er bleibt bei mir alle Jahre"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -85771,7 +87765,11 @@
      ]
     }
    ],
-   "author": "ʻ سعاد مكتبى"
+   "author": "ʻ سعاد مكتبى",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 651,
@@ -85898,7 +87896,11 @@
      ]
     }
    ],
-   "author": "هرماس سمير"
+   "author": "هرماس سمير",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 652,
@@ -86024,7 +88026,9 @@
       "Zu sterben für die Scharen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 653,
@@ -86178,7 +88182,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 654,
@@ -86341,7 +88347,13 @@
      ]
     }
    ],
-   "author": "أنطوان بدر"
+   "author": "أنطوان بدر",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 655,
@@ -86543,7 +88555,11 @@
      ]
     }
    ],
-   "author": "ألبير حداد (1971)"
+   "author": "ألبير حداد (1971)",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 656,
@@ -86691,7 +88707,9 @@
      ]
     }
    ],
-   "author": "(هاني رمزي صموئيل)"
+   "author": "(هاني رمزي صموئيل)",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 657,
@@ -86950,7 +88968,13 @@
      ]
     }
    ],
-   "author": "زكريا بطرس"
+   "author": "زكريا بطرس",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance",
+    "fellowship"
+   ]
   },
   {
    "number": 660,
@@ -87114,7 +89138,9 @@
     }
    ],
    "author": "يوسف قسطة",
-   "authorOriginal": "Ira F. Stanphill"
+   "authorOriginal": "Ira F. Stanphill",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 661,
@@ -87235,7 +89261,11 @@
      ]
     }
    ],
-   "author": "زكريا عوض الله"
+   "author": "زكريا عوض الله",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 662,
@@ -87411,7 +89441,13 @@
     }
    ],
    "author": "اسعد الشدودي",
-   "authorOriginal": "Sanford Fillmore Bennett"
+   "authorOriginal": "Sanford Fillmore Bennett",
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare",
+    "worship",
+    "comfort"
+   ]
   },
   {
    "number": 663,
@@ -87604,7 +89640,11 @@
      ]
     }
    ],
-   "author": "ولسن رمزي"
+   "author": "ولسن رمزي",
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 664,
@@ -87757,7 +89797,9 @@
       "Erde, über was er schuf"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 665,
@@ -87887,7 +89929,11 @@
      ]
     }
    ],
-   "authorOriginal": "William Ellsworth Witter"
+   "authorOriginal": "William Ellsworth Witter",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 666,
@@ -88040,7 +90086,9 @@
       "Während das Leben sie erwartet"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 667,
@@ -88130,6 +90178,10 @@
       "O Geliebter, Amen"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -88257,7 +90309,11 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 669,
@@ -88414,7 +90470,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 670,
@@ -88465,6 +90523,11 @@
       "Du erlöstest uns mit deinem Blut, wir lieben dich"
      ]
     }
+   ],
+   "primaryTopic": "warfare",
+   "topics": [
+    "worship",
+    "cross"
    ]
   },
   {
@@ -88590,7 +90653,11 @@
     }
    ],
    "author": "نانسي فلتس",
-   "authorOriginal": "Dawn Rogers"
+   "authorOriginal": "Dawn Rogers",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 672,
@@ -88717,7 +90784,9 @@
      ]
     }
    ],
-   "author": "جوزيف نصرالله"
+   "author": "جوزيف نصرالله",
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 673,
@@ -88864,7 +90933,9 @@
       "Und tilgte jedes Wehklagen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 674,
@@ -89026,6 +91097,11 @@
       "Deinen Schmerz mit deiner erneuerten Liebe"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "cross"
    ]
   },
   {
@@ -89333,6 +91409,10 @@
       "Der sein Wehklagen zu Liedern wandelt"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -89460,7 +91540,11 @@
      ]
     }
    ],
-   "author": "ولسن رمزي"
+   "author": "ولسن رمزي",
+   "primaryTopic": "eternity",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 678,
@@ -89551,7 +91635,9 @@
      ]
     }
    ],
-   "author": "أيمن سمير"
+   "author": "أيمن سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 679,
@@ -89699,7 +91785,11 @@
      ]
     }
    ],
-   "author": "اسعد الشدودي"
+   "author": "اسعد الشدودي",
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 680,
@@ -89820,7 +91910,12 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 681,
@@ -89974,7 +92069,13 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": [
+    "eternity",
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 682,
@@ -90134,7 +92235,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 683,
@@ -90265,7 +92368,12 @@
     }
    ],
    "author": "جورج خوري",
-   "authorOriginal": "James W. Alexander"
+   "authorOriginal": "James W. Alexander",
+   "primaryTopic": "cross",
+   "topics": [
+    "eternity",
+    "fellowship"
+   ]
   },
   {
    "number": 684,
@@ -90392,7 +92500,9 @@
      ]
     }
    ],
-   "author": "عاطف فؤاد"
+   "author": "عاطف فؤاد",
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 685,
@@ -90566,6 +92676,10 @@
       "Während er Regen sieht"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -90753,7 +92867,9 @@
      ]
     }
    ],
-   "author": "Iffah Najeeb Ibrahim"
+   "author": "Iffah Najeeb Ibrahim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 687,
@@ -90933,7 +93049,9 @@
       "Mein Herz sehnt sich, dreimal, nach deinem Kommen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 688,
@@ -91087,7 +93205,9 @@
      ]
     }
    ],
-   "author": "Albert Haddad (1976)"
+   "author": "Albert Haddad (1976)",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 689,
@@ -91375,6 +93495,11 @@
       "Und entfernt die Wolken"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "comfort"
    ]
   },
   {
@@ -91477,6 +93602,10 @@
       "Du bist mein Parfüm und mein Anteil, all meine Schönheit in dir"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -91622,7 +93751,12 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 693,
@@ -91724,7 +93858,9 @@
       "Und vergesse meine Krankheit"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 694,
@@ -91890,7 +94026,12 @@
      ]
     }
    ],
-   "author": "Shādī Youssef"
+   "author": "Shādī Youssef",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "church"
+   ]
   },
   {
    "number": 695,
@@ -92022,6 +94163,10 @@
       "Herrlichkeit, ich bin froh"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -92176,7 +94321,11 @@
      ]
     }
    ],
-   "author": "أنور عبدالملك"
+   "author": "أنور عبدالملك",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 697,
@@ -92303,7 +94452,12 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "repentance"
+   ]
   },
   {
    "number": 698,
@@ -92469,7 +94623,9 @@
      ]
     }
    ],
-   "author": "صلاح عباسي"
+   "author": "صلاح عباسي",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 699,
@@ -92623,7 +94779,12 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": [
+    "warfare",
+    "worship"
+   ]
   },
   {
    "number": 700,
@@ -92772,7 +94933,9 @@
     }
    ],
    "author": "ناصيف اليازجي",
-   "authorOriginal": "Charles Wesley"
+   "authorOriginal": "Charles Wesley",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 701,
@@ -92980,7 +95143,11 @@
      ]
     }
    ],
-   "author": "غبريال رزق الله"
+   "author": "غبريال رزق الله",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 702,
@@ -93102,7 +95269,9 @@
     }
    ],
    "author": "ناصيف اليازجي",
-   "authorOriginal": "Isaac Watts"
+   "authorOriginal": "Isaac Watts",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 703,
@@ -93276,6 +95445,10 @@
       "Herrlichkeit mit ihm und Wonne"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -93398,7 +95571,9 @@
     }
    ],
    "author": "ناصيف اليازجي",
-   "authorOriginal": "William Cowper"
+   "authorOriginal": "William Cowper",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 705,
@@ -93545,6 +95720,12 @@
       "Mit dir in des Himmels Herrlichkeit"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "comfort",
+    "worship"
    ]
   },
   {
@@ -93692,6 +95873,10 @@
       "Vor dir knien wir in Ehrfurcht, o Geliebter"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -93818,7 +96003,9 @@
       "Und sei geduldig für ihn"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 708,
@@ -93938,7 +96125,9 @@
       "Diese Stätte in dem Geliebten"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 709,
@@ -94113,7 +96302,9 @@
      ]
     }
    ],
-   "author": "اسعد الشدودي"
+   "author": "اسعد الشدودي",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 710,
@@ -94287,6 +96478,10 @@
       "Sein Kommen vom Himmel"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -94356,6 +96551,12 @@
       "Und tränke mich"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort",
+    "repentance"
    ]
   },
   {
@@ -94503,6 +96704,11 @@
       "Unser Vater und unser Gott"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
    ]
   },
   {
@@ -94623,6 +96829,10 @@
       "Bis in der Äonen Äon"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -94770,7 +96980,9 @@
       "Dies ist der Erde und des Himmels Lob für dich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 715,
@@ -94878,7 +97090,9 @@
       "In dir allezeit groß ist unser Sieg"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 716,
@@ -95214,6 +97428,11 @@
       "Rettend das Volk des Verderbens"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort"
    ]
   },
   {
@@ -95589,6 +97808,11 @@
       "Hier bis zu deinem Kommen"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "fellowship"
    ]
   },
   {
@@ -95817,6 +98041,11 @@
       "Bis wir ihn sehen bald"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "repentance"
    ]
   },
   {
@@ -95991,7 +98220,9 @@
       "Sehe und bei dir bleibe"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 722,
@@ -96063,7 +98294,9 @@
       "Lob und Ehre dir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 723,
@@ -96237,6 +98470,12 @@
       "In der Äonen Äon"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "repentance",
+    "fellowship"
    ]
   },
   {
@@ -96330,6 +98569,12 @@
       "Wir hoffen unsere Entrückung zur Herrlichkeit bald"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "worship",
+    "comfort"
    ]
   },
   {
@@ -96504,6 +98749,10 @@
       "Und sein vergossenes teures Blut"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -96678,6 +98927,10 @@
       "Unsere Herzen werden heil in dir"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -96906,6 +99159,10 @@
       "Dort im Haus der Ewigkeit"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -97014,7 +99271,9 @@
       "So rissest du die Seele aus der Flammen Mitte"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 729,
@@ -97170,6 +99429,10 @@
       "Ich kehre nicht zurück, ich kehre nimmer zurück"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -97491,6 +99754,11 @@
       "O Größe deiner Huld"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
    ]
   },
   {
@@ -97627,7 +99895,9 @@
      ]
     }
    ],
-   "author": "هاني فخري"
+   "author": "هاني فخري",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 733,
@@ -97708,7 +99978,9 @@
       "Denn er ist treu seiner Verheißung"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 734,
@@ -97828,7 +100100,9 @@
       "Für deine große Güte"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 735,
@@ -97930,6 +100204,10 @@
       "Sind mir bergende Zuflucht"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -98085,7 +100363,11 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "authorOriginal": "Edmund S. Lorenz"
+   "authorOriginal": "Edmund S. Lorenz",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 737,
@@ -98232,6 +100514,12 @@
       "Und sehen den Geliebten, der uns Ruhe gab"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "eternity",
+    "worship"
    ]
   },
   {
@@ -98407,7 +100695,11 @@
      ]
     }
    ],
-   "author": "اسعد عبدالله الراسي"
+   "author": "اسعد عبدالله الراسي",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 739,
@@ -98497,7 +100789,9 @@
       "Dein Bund durch die Jahre"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 740,
@@ -98608,6 +100902,12 @@
       "Dessen Güte durch mein Leben sättigt meine Seele"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross",
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -98755,6 +101055,11 @@
       "Und süß ist mir das Bleiben"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship"
    ]
   },
   {
@@ -98899,6 +101204,10 @@
       "Und unsere teure Narde"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -99020,7 +101329,12 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 744,
@@ -99173,7 +101487,9 @@
       "Mit all seinem Volk"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 745,
@@ -99299,6 +101615,10 @@
       "Deine Gnade meines Lebens Erzählung"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -99422,6 +101742,10 @@
       "Ihr Maß ist wunderbar"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -99545,6 +101869,10 @@
       "Zu dir nahe ich in Ehrfurcht"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -99699,7 +102027,12 @@
      ]
     }
    ],
-   "author": "William Jundī"
+   "author": "William Jundī",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 749,
@@ -99861,6 +102194,10 @@
       "Von aller Falschheit wende mich"
      ]
     }
+   ],
+   "primaryTopic": "word",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -100035,7 +102372,9 @@
       "Und durch deine Zärtlichkeit ward meine Seele gesund"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 751,
@@ -100197,7 +102536,9 @@
       "Süßester Name, dem wir singen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 752,
@@ -100341,6 +102682,10 @@
       "Durch seine Macht und Vollmacht verkünden wir unsern Sieg"
      ]
     }
+   ],
+   "primaryTopic": "warfare",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -100488,6 +102833,10 @@
       "Zum lieblichen Heil"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -100818,6 +103167,10 @@
       "Denn diese Welt ist besiegt um seinetwillen"
      ]
     }
+   ],
+   "primaryTopic": "warfare",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -100948,7 +103301,11 @@
      ]
     }
    ],
-   "author": "مجيد نصحي منصور"
+   "author": "مجيد نصحي منصور",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 757,
@@ -101092,6 +103449,10 @@
       "Vertreibst aus meinem Herzen die Leiden"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -101209,7 +103570,9 @@
       "Danke, mein geliebter Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 759,
@@ -101390,7 +103753,9 @@
      ]
     }
    ],
-   "author": "سليم كساب"
+   "author": "سليم كساب",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 760,
@@ -101558,7 +103923,9 @@
       "Mein Feind ist geschlagen, unbemitleidet"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 761,
@@ -101609,7 +103976,9 @@
       "Und eilen zu ihm und öffnen ihm das Herz"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 762,
@@ -101762,7 +104131,9 @@
       "Und lebe dein übriges Leben fröhlich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 763,
@@ -101864,6 +104235,10 @@
       "Weihend ihm mein Leben, nimmt er an in Liebe"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -101978,6 +104353,10 @@
       "Mein Lob, mein Geliebter, dauert"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -102108,7 +104487,11 @@
      ]
     }
    ],
-   "author": "جوزيف نصرالله"
+   "author": "جوزيف نصرالله",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 766,
@@ -102219,7 +104602,9 @@
       "Und auf den Wolken begegnest du uns"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 767,
@@ -102351,6 +104736,12 @@
       "Von des Himmels Höhe"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross",
+    "church"
    ]
   },
   {
@@ -102695,7 +105086,11 @@
      ]
     }
    ],
-   "author": "سليم دياب"
+   "author": "سليم دياب",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 771,
@@ -102848,6 +105243,10 @@
       "Kann nimmer beschämt zurückkehren"
      ]
     }
+   ],
+   "primaryTopic": "warfare",
+   "topics": [
+    "word"
    ]
   },
   {
@@ -102974,7 +105373,9 @@
       "Finde ich meine Sonne und Tag in ihm"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 773,
@@ -103097,6 +105498,11 @@
       "Und deine Barmherzigkeiten bleiben und mehren sich"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -103217,6 +105623,10 @@
       "Für uns bis in der Äonen Äon"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -103350,7 +105760,12 @@
      ]
     }
    ],
-   "author": "نجيب ابراهيم"
+   "author": "نجيب ابراهيم",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "worship"
+   ]
   },
   {
    "number": 776,
@@ -103503,6 +105918,11 @@
       "Und wirst meiner Seele Heil"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross",
+    "warfare"
    ]
   },
   {
@@ -103666,7 +106086,12 @@
      ]
     }
    ],
-   "author": "Shaddy Youssef Hanna (1970)"
+   "author": "Shaddy Youssef Hanna (1970)",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 778,
@@ -103738,7 +106163,9 @@
       "Du vermagst alle Dinge"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 779,
@@ -103900,6 +106327,12 @@
       "Vertraue Gott, denn sein Heil kommt"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "worship",
+    "cross"
    ]
   },
   {
@@ -104101,6 +106534,11 @@
       "Und unser Glaube wachse und vollende sie"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "worship",
+    "word"
    ]
   },
   {
@@ -104191,7 +106629,9 @@
       "Und lebt im Haus der Wonne"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 782,
@@ -104344,7 +106784,9 @@
       "Seine Gegenwart erreichte ihr Ziel"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 783,
@@ -104482,7 +106924,9 @@
       "Ich liebe dich, ich liebe dich, ich liebe dich, Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 784,
@@ -104581,7 +107025,9 @@
       "Und herrschest über all mein Denken"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 785,
@@ -104707,6 +107153,10 @@
       "Findet mein Herz Frieden"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -104833,6 +107283,10 @@
       "Ich lebe durch dein Wort und Verheißungen"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -104956,6 +107410,11 @@
       "Wartend, dass ich umkehre und Buße tue"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship",
+    "comfort"
    ]
   },
   {
@@ -105079,6 +107538,10 @@
       "Der dich bittet, freigebig"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -105169,6 +107632,11 @@
       "Du rettest mein Leben, und ich werde sehen dein Heil"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "warfare"
    ]
   },
   {
@@ -105307,6 +107775,10 @@
       "Kommst, mich zu nehmen zu meinem Himmel"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -105418,6 +107890,10 @@
       "Belebend Hoffnungen nach Starrsinn"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -105580,7 +108056,9 @@
       "Geborgen in dir vor Furcht und Gram"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 793,
@@ -105707,7 +108185,9 @@
      ]
     }
    ],
-   "author": "مكاري يونان"
+   "author": "مكاري يونان",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 794,
@@ -105806,7 +108286,9 @@
       "Und das Kreuz ist grausam, der Tod ist bitter"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 795,
@@ -106086,7 +108568,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 797,
@@ -106293,6 +108777,12 @@
       "Dass nun erwache, der erstarrte in seinem Schlaf"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "comfort",
+    "eternity"
    ]
   },
   {
@@ -106419,6 +108909,11 @@
       "Rufend, singend, o Geliebte"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -106704,6 +109199,10 @@
       "Scheint es ein Traum im Schlaf"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -106830,7 +109329,9 @@
       "Seine Verheißung vergisst mich nie"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 801,
@@ -106953,6 +109454,10 @@
       "Füllt dein Licht die Tage"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -107049,7 +109554,9 @@
       "Die Wahrheit, du musst öffnen dein Herz"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 803,
@@ -107148,6 +109655,10 @@
       "Deine Hut um mich ein Zaun"
      ]
     }
+   ],
+   "primaryTopic": "word",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -107302,7 +109813,11 @@
      ]
     }
    ],
-   "author": "فايز بشرى"
+   "author": "فايز بشرى",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 805,
@@ -107395,7 +109910,9 @@
       "Kehre mich zu dir, ich kehre, durch deine Gnade bezeuge ich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 806,
@@ -107521,6 +110038,10 @@
       "Und er begleicht alle Schulden"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -107701,7 +110222,9 @@
       "Denn ich bin teuer dir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 808,
@@ -107857,7 +110380,9 @@
       "Und wird vollenden, o Mächtiger"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 809,
@@ -108011,7 +110536,9 @@
      ]
     }
    ],
-   "author": "منال سمير"
+   "author": "منال سمير",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 810,
@@ -108137,6 +110664,10 @@
       "Schauend zu dir in vollem Glauben"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -108344,6 +110875,11 @@
       "Und durch Gnade stellst her meine Seele"
      ]
     }
+   ],
+   "primaryTopic": "word",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -108536,7 +111072,9 @@
       "Ich schätze dich, o Teurer, mein Herr Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 813,
@@ -108699,7 +111237,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 814,
@@ -108793,7 +111333,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 815,
@@ -108919,6 +111461,10 @@
       "Als wäre ich ohne Christus, nein"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -109088,7 +111634,11 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 817,
@@ -109328,7 +111878,9 @@
       "Dein Blut, dein Blut"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 819,
@@ -109536,7 +112088,12 @@
      ]
     }
    ],
-   "author": "ʻ عزت زكي"
+   "author": "ʻ عزت زكي",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "comfort"
+   ]
   },
   {
    "number": 820,
@@ -109587,7 +112144,9 @@
       "So komme und nimm deine Herrlichkeit"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 821,
@@ -109753,7 +112312,11 @@
      ]
     }
    ],
-   "author": "مجيد نصحي منصور"
+   "author": "مجيد نصحي منصور",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 822,
@@ -109858,7 +112421,9 @@
       "Halte meine Rechte und führe mich gefangen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 823,
@@ -110004,7 +112569,12 @@
     }
    ],
    "author": "ابراهيم سركيس",
-   "authorOriginal": "John Cennick"
+   "authorOriginal": "John Cennick",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 824,
@@ -110167,7 +112737,11 @@
      ]
     }
    ],
-   "author": "ʻ عزت زكي"
+   "author": "ʻ عزت زكي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 825,
@@ -110384,7 +112958,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 826,
@@ -110586,7 +113162,9 @@
      ]
     }
    ],
-   "author": "حسني البيطار"
+   "author": "حسني البيطار",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 827,
@@ -110834,7 +113412,12 @@
      ]
     }
    ],
-   "author": "جورج فورد"
+   "author": "جورج فورد",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance",
+    "fellowship"
+   ]
   },
   {
    "number": 829,
@@ -110979,7 +113562,12 @@
      ]
     }
    ],
-   "author": "سلفاتوري يونان"
+   "author": "سلفاتوري يونان",
+   "primaryTopic": "eternity",
+   "topics": [
+    "worship",
+    "comfort"
+   ]
   },
   {
    "number": 830,
@@ -111127,7 +113715,12 @@
      ]
     }
    ],
-   "author": "مجيد نصحي منصور"
+   "author": "مجيد نصحي منصور",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship"
+   ]
   },
   {
    "number": 831,
@@ -111323,7 +113916,11 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 832,
@@ -111487,7 +114084,12 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "authorOriginal": "James Rowe"
+   "authorOriginal": "James Rowe",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance"
+   ]
   },
   {
    "number": 833,
@@ -111641,7 +114243,11 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 834,
@@ -111767,7 +114373,9 @@
       "Sind bei dir, Herr"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 835,
@@ -111921,7 +114529,11 @@
      ]
     }
    ],
-   "author": "جريس دله"
+   "author": "جريس دله",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 836,
@@ -112076,7 +114688,11 @@
     }
    ],
    "author": "أنطوان بدر",
-   "authorOriginal": "Frederick Whitfield"
+   "authorOriginal": "Frederick Whitfield",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 837,
@@ -112188,7 +114804,12 @@
      ]
     }
    ],
-   "author": "Albert Haddad (1979)"
+   "author": "Albert Haddad (1979)",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 838,
@@ -112314,7 +114935,9 @@
       "Meine Wunden und Wesen werden geheilt"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 839,
@@ -112522,7 +115145,9 @@
      ]
     }
    ],
-   "author": "أنور عبدالملك"
+   "author": "أنور عبدالملك",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 840,
@@ -112853,6 +115478,10 @@
       "Schmelzen in deinem Frieden"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -113010,7 +115639,11 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 844,
@@ -113136,6 +115769,10 @@
       "Mein stolzes, rebellisches Selbst"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -113290,7 +115927,11 @@
      ]
     }
    ],
-   "author": "سمير الشوملي"
+   "author": "سمير الشوملي",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 846,
@@ -113402,7 +116043,9 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 847,
@@ -113562,7 +116205,9 @@
      "chorus": true
     }
    ],
-   "author": "سمير الشوملي"
+   "author": "سمير الشوملي",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 848,
@@ -113688,7 +116333,9 @@
       "Dein Herr trägt dich durch sie"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 849,
@@ -113824,7 +116471,9 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 850,
@@ -114062,7 +116711,12 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "word"
+   ]
   },
   {
    "number": 852,
@@ -114217,7 +116871,12 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "authorOriginal": "Mrs. Frank A. Breck"
+   "authorOriginal": "Mrs. Frank A. Breck",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 853,
@@ -114338,7 +116997,12 @@
      ]
     }
    ],
-   "author": "سمير الشوملي"
+   "author": "سمير الشوملي",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "word",
+    "worship"
+   ]
   },
   {
    "number": 854,
@@ -114506,6 +117170,12 @@
       "Kehrend wieder in Buße zu dir"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance",
+    "warfare",
+    "fellowship"
    ]
   },
   {
@@ -114675,7 +117345,11 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "cross",
+   "topics": [
+    "word"
+   ]
   },
   {
    "number": 856,
@@ -114795,7 +117469,9 @@
       "Und heilst mich, Halleluja"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 857,
@@ -114853,7 +117529,11 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 858,
@@ -114953,7 +117633,11 @@
      ]
     }
    ],
-   "author": "شادي عادل"
+   "author": "شادي عادل",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 859,
@@ -115101,7 +117785,12 @@
      ]
     }
    ],
-   "author": "روي عميش"
+   "author": "روي عميش",
+   "primaryTopic": "church",
+   "topics": [
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 860,
@@ -115412,7 +118101,9 @@
      ]
     }
    ],
-   "author": "نعيم عاطف"
+   "author": "نعيم عاطف",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 863,
@@ -115664,7 +118355,9 @@
       "Buße ohne Umkehr"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 865,
@@ -115817,7 +118510,9 @@
       "Du kannst besiegen alle Zweifel"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 866,
@@ -115920,7 +118615,12 @@
      ]
     }
    ],
-   "author": "سمير الشوملي"
+   "author": "سمير الشوملي",
+   "primaryTopic": "worship",
+   "topics": [
+    "word",
+    "cross"
+   ]
   },
   {
    "number": 867,
@@ -115984,7 +118684,11 @@
      ]
     }
    ],
-   "author": "ناجي فؤاد"
+   "author": "ناجي فؤاد",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 868,
@@ -116077,6 +118781,10 @@
       "Mit großem Triumph in dem, der uns liebte"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -116301,6 +119009,11 @@
       "Im Himmel mein Geliebter"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -116454,6 +119167,11 @@
       "Fliehen Leiden von unter uns"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "cross"
    ]
   },
   {
@@ -116833,6 +119551,11 @@
       "Füllend meine Jahre und bereichernd meine Tage"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "warfare"
    ]
   },
   {
@@ -116977,6 +119700,10 @@
       "Er ist meiner Hoffnung Melodie"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -117217,7 +119944,11 @@
      ]
     }
    ],
-   "author": "مكاري يونان"
+   "author": "مكاري يونان",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 878,
@@ -117370,6 +120101,11 @@
       "Und fliehe alsbald von deinen Lüsten"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "repentance"
    ]
   },
   {
@@ -117497,7 +120233,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 880,
@@ -117671,6 +120409,10 @@
       "Und trägt dich in seinen Händen"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "word"
    ]
   },
   {
@@ -117816,7 +120558,9 @@
      ]
     }
    ],
-   "author": "رؤوف بدروس"
+   "author": "رؤوف بدروس",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 882,
@@ -117876,7 +120620,9 @@
       "Wie verwerfe ich den, der mich wiederbrachte"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 883,
@@ -118003,7 +120749,11 @@
      ]
     }
    ],
-   "author": "سركيس سعد"
+   "author": "سركيس سعد",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 884,
@@ -118156,6 +120906,11 @@
       "Ich kehre singend, fröhlich"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance"
    ]
   },
   {
@@ -118454,7 +121209,9 @@
      ]
     }
    ],
-   "author": "فواز عميش"
+   "author": "فواز عميش",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 887,
@@ -118863,6 +121620,10 @@
       "Ich liebe dich, denn dein Blut hat getilgt meine Sünde"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "word"
    ]
   },
   {
@@ -118968,7 +121729,9 @@
       "Doch werde ich weiter singen dir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 891,
@@ -119145,6 +121908,11 @@
       "Ich, der lebte in Sünde"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance",
+    "cross"
    ]
   },
   {
@@ -119385,6 +122153,12 @@
       "Die süßesten Lieder"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "warfare",
+    "word"
    ]
   },
   {
@@ -119460,7 +122234,9 @@
       "Er ist gestern, heute, ewig"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 895,
@@ -119586,6 +122362,10 @@
       "Denn du bist mein Herr und Christus"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -119739,6 +122519,10 @@
       "Ich lebe wie eine Flamme von Feuer"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -119973,7 +122757,9 @@
      ]
     }
    ],
-   "author": "سحر غبور"
+   "author": "سحر غبور",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 899,
@@ -120087,7 +122873,9 @@
       "Und erfreuen dein Herz mit uns"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 900,
@@ -120213,6 +123001,11 @@
       "Dank dir, o Geliebter"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance",
+    "fellowship"
    ]
   },
   {
@@ -120367,7 +123160,9 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 902,
@@ -120525,7 +123320,11 @@
     }
    ],
    "author": "ناصيف اليازجي",
-   "authorOriginal": "Ray Palmer"
+   "authorOriginal": "Ray Palmer",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 903,
@@ -120954,6 +123753,11 @@
       "Als ein Blick deiner Liebe genügt mir"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -121053,6 +123857,10 @@
       "Erlöste unsere Seelen, schenkend uns Leben"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -121179,6 +123987,10 @@
       "Mit mir und mich gewiss erfreuen"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -121272,6 +124084,10 @@
       "Mein Herz und Segel in deinen Händen"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -121398,6 +124214,10 @@
       "Im Glauben zu seinen Füßen"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -121545,6 +124365,10 @@
       "Hebend mich mit deiner Hand aus meiner Klage"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "warfare"
    ]
   },
   {
@@ -121665,6 +124489,10 @@
       "Zu weiter Fruchtbarkeit brachten sie mich heraus"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -121911,6 +124739,10 @@
       "Keiner außer dir kommt, mich zu pflegen"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -122115,7 +124947,9 @@
       "Überflutend uns mit Reichtum und Barmherzigkeit"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 917,
@@ -122241,7 +125075,9 @@
       "In dir siegen wir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 918,
@@ -122406,6 +125242,10 @@
       "O meines Herzens Freude in dir"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
    ]
   },
   {
@@ -122532,6 +125372,10 @@
       "Herr der Heere, unser Erlöser"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -122585,7 +125429,9 @@
     }
    ],
    "author": "ماجد عادل",
-   "authorOriginal": "Teresa Muller"
+   "authorOriginal": "Teresa Muller",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 921,
@@ -122739,7 +125585,9 @@
      ]
     }
    ],
-   "author": "Wafeeq Samuel Wahbi"
+   "author": "Wafeeq Samuel Wahbi",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 922,
@@ -123016,7 +125864,9 @@
      ]
     }
    ],
-   "author": "فكتور إميل"
+   "author": "فكتور إميل",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 924,
@@ -123067,6 +125917,10 @@
       "Reinige mich, nimm mich an, o Jesus"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
    ]
   },
   {
@@ -123211,6 +126065,12 @@
       "Ehre kehrt zu dir"
      ]
     }
+   ],
+   "primaryTopic": "warfare",
+   "topics": [
+    "worship",
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -123331,7 +126191,9 @@
       "Deine Herrlichkeiten in ihnen, Träume erfüllt"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 927,
@@ -123454,6 +126316,10 @@
       "Rinnt wie ein Strom, beginne mit Dank"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -123571,6 +126437,10 @@
       "Und du schließt mich dir, mein Vater und Erlöser"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -123820,6 +126690,10 @@
       "Wir halten deine Verheißung"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -123937,6 +126811,11 @@
       "Stelle mich wieder her, Menschen zu lieben und das Licht zu sehen"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship",
+    "cross"
    ]
   },
   {
@@ -124009,7 +126888,9 @@
       "Mein Herr und König, Jesus Christus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 933,
@@ -124195,6 +127076,10 @@
       "Bleibt Jesus alles mir"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -124294,7 +127179,9 @@
       "Allezeit fest in dir, o Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 935,
@@ -124414,7 +127301,9 @@
       "Zu lieben alle anderen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 937,
@@ -124534,7 +127423,9 @@
       "Unser Gelingen von des Himmels Gott"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 938,
@@ -124615,6 +127506,11 @@
       "Wir erheben unsere Flügel in deinen Himmel"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -124792,6 +127688,11 @@
       "Keine Täuschungen, sagte Jesus mir"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance",
+    "fellowship"
    ]
   },
   {
@@ -124927,6 +127828,12 @@
       "Werden werfen alle unsere Kronen"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort",
+    "cross",
+    "fellowship"
    ]
   },
   {
@@ -125082,7 +127989,9 @@
     }
    ],
    "author": "اسعد عبدالله الراسي",
-   "authorOriginal": "Frederick L. Hosmer"
+   "authorOriginal": "Frederick L. Hosmer",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 942,
@@ -125231,7 +128140,9 @@
     }
    ],
    "author": "سليم عبد الأحد",
-   "authorOriginal": "Isaac Watts"
+   "authorOriginal": "Isaac Watts",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 943,
@@ -125339,7 +128250,9 @@
       "Im Gebet halte Wache, denn dein Bräutigam kommt wieder"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 944,
@@ -125382,7 +128295,9 @@
      ]
     }
    ],
-   "author": "فيليب ويصا"
+   "author": "فيليب ويصا",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 945,
@@ -125508,6 +128423,10 @@
       "Wenn ich laufe und werfe mich auf dich"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -125662,7 +128581,11 @@
      ]
     }
    ],
-   "author": "ولسن رمزي"
+   "author": "ولسن رمزي",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 947,
@@ -125791,6 +128714,10 @@
       "Und deine Liebe vergisst mich nicht"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -125911,7 +128838,9 @@
       "So bleibe ich nicht im Land der Finsternis"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 949,
@@ -126058,7 +128987,9 @@
       "Kommt, kommt zu Jesus"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 950,
@@ -126109,6 +129040,10 @@
       "O König der Könige"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -126236,7 +129171,12 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 952,
@@ -126368,6 +129308,12 @@
       "Bleibend Äonen in großer Herrlichkeit"
      ]
     }
+   ],
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross",
+    "eternity"
    ]
   },
   {
@@ -126494,6 +129440,11 @@
       "Er wird dir nichts nützen nach dem Tod"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "repentance"
    ]
   },
   {
@@ -126654,7 +129605,11 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 955,
@@ -126799,7 +129754,11 @@
      ]
     }
    ],
-   "author": "Henry Harris Jessup"
+   "author": "Henry Harris Jessup",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 956,
@@ -126925,7 +129884,9 @@
       "Und genug vergangenes Leben"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 957,
@@ -127015,6 +129976,11 @@
       "Bringe dein Herz, dein Leben in seine Hände, sicher"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "eternity"
    ]
   },
   {
@@ -127360,6 +130326,10 @@
       "Vergibst du ihm alle seine Sünden"
      ]
     }
+   ],
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -127598,7 +130568,9 @@
      ]
     }
    ],
-   "author": "فايز بشرى"
+   "author": "فايز بشرى",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 961,
@@ -127751,6 +130723,11 @@
       "Deine Liebe wahr, unvergessend"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -127919,7 +130896,9 @@
       "Ich verkünde des Kreuzes Herrlichkeit"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 963,
@@ -128082,7 +131061,12 @@
      ]
     }
    ],
-   "author": "سهيل مدانات"
+   "author": "سهيل مدانات",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 964,
@@ -128208,7 +131192,9 @@
       "So dir lebe ich"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 965,
@@ -128259,7 +131245,9 @@
       "Du bist meine Liebe und Hoffnung, dreimal"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 966,
@@ -128352,7 +131340,9 @@
       "In Ewigkeit deine Herrlichkeit"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 967,
@@ -128506,7 +131496,9 @@
      ]
     }
    ],
-   "authorOriginal": "Louisa M. R. Stead"
+   "authorOriginal": "Louisa M. R. Stead",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 968,
@@ -128605,7 +131597,9 @@
       "Ruft sie vor Sonnenuntergang"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 969,
@@ -128731,7 +131725,9 @@
       "Gibst du mir von deiner Liebe"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 970,
@@ -128860,6 +131856,10 @@
       "In meiner Brust Falten berge ich deine Stätte"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -128971,6 +131971,10 @@
       "Wie groß ist Gottes Liebe"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -129109,6 +132113,11 @@
       "Und mit seinem Licht erleuchtet er unsere Nächte"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship",
+    "cross"
    ]
   },
   {
@@ -129235,7 +132244,9 @@
       "Kehrend, hoffend auf Sicherheit"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 974,
@@ -129415,7 +132426,9 @@
       "Füreinander von Herzen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 975,
@@ -129541,7 +132554,9 @@
       "Wachse meine Liebe, dich zu kennen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 976,
@@ -129700,7 +132715,9 @@
       "Wenn du klug bist, tue jetzt Buße"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 977,
@@ -129973,6 +132990,10 @@
       "Durch deine Gebote, lebend ein Zeuge das Leben lang"
      ]
     }
+   ],
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
    ]
   },
   {
@@ -130135,6 +133156,11 @@
      ],
      "chorus": true
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
    ]
   },
   {
@@ -130489,6 +133515,11 @@
       "Denn Freude, dergleichen werden wir nie schauen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "comfort"
    ]
   },
   {
@@ -130639,6 +133670,10 @@
       "Schönheit und Glanz"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
    ]
   },
   {
@@ -130841,7 +133876,12 @@
      ]
     }
    ],
-   "author": "ماهر فايز"
+   "author": "ماهر فايز",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "eternity"
+   ]
   },
   {
    "number": 984,
@@ -130967,6 +134007,10 @@
       "Die Schlüssel sind in deinen Händen"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
    ]
   },
   {
@@ -131066,7 +134110,9 @@
       "Wir beugen uns dir"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 986,
@@ -131241,7 +134287,9 @@
      ]
     }
    ],
-   "authorOriginal": "Albert B. Simpson"
+   "authorOriginal": "Albert B. Simpson",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 987,
@@ -131574,7 +134622,9 @@
       "Kommt Speise hervor, denn du wirst erhören"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 990,
@@ -131704,7 +134754,13 @@
      ]
     }
    ],
-   "author": "شادي يوسف"
+   "author": "شادي يوسف",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "warfare",
+    "word",
+    "cross"
+   ]
   },
   {
    "number": 991,
@@ -131755,7 +134811,9 @@
       "Jesus, wir preisen deinen Namen"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 992,
@@ -131902,7 +134960,9 @@
       "Er kommt, nehmend die Gerechten, dreimal"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 993,
@@ -132125,6 +135185,11 @@
       "Bringt er uns zu seinem Himmel"
      ]
     }
+   ],
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare",
+    "worship"
    ]
   },
   {
@@ -132302,7 +135367,9 @@
       "Wohlgefällig vor dir, o Gott"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 997,
@@ -132506,6 +135573,10 @@
       "Und himmlischer Kraft durch seinen treuen Geist"
      ]
     }
+   ],
+   "primaryTopic": "comfort",
+   "topics": [
+    "eternity"
    ]
   },
   {
@@ -132632,7 +135703,9 @@
       "Du bist des Lösegelds Quell"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 1000,
@@ -132788,7 +135861,9 @@
       "Sage mir, Sünder, wohin gehst du"
      ]
     }
-   ]
+   ],
+   "primaryTopic": "cross",
+   "topics": []
   }
  ]
 }

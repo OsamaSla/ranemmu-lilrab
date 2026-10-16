@@ -29,6 +29,8 @@ const SYNCED_FIELDS = [
   'verses_de',
   'chorus_de',
   'translationStatus',
+  'primaryTopic',
+  'topics',
 ] as const;
 
 const same = (a: unknown, b: unknown): boolean => JSON.stringify(a) === JSON.stringify(b);
@@ -127,5 +129,7 @@ export function getRemoteSummaries(): HymnSummary[] {
     title: h.title,
     meter: h.meter,
     hasChorus: h.verses.some((v) => v.chorus),
+    primaryTopic: h.primaryTopic,
+    topics: h.topics,
   }));
 }

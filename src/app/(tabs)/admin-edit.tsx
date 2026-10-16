@@ -15,8 +15,10 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { EmptyState } from '../../components/EmptyState';
+import { TopicPicker } from '../../components/TopicPicker';
 import { getHymn } from '../../data/loader';
 import { syncHymnToCloud } from '../../data/liveSync';
+import type { TopicId } from '../../data/topics';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -43,6 +45,8 @@ export default function AdminEditScreen() {
     meter: '',
     chorus: '',
     verified: false,
+    primaryTopic: '' as TopicId | '',
+    topics: [] as TopicId[],
     lines: [] as string[][],
     title_en: '',
     chorus_en: '',
@@ -61,6 +65,8 @@ export default function AdminEditScreen() {
           authorOriginal: h.authorOriginal ?? '',
           meter: h.meter ?? '',
           chorus: h.chorus ?? '',
+          primaryTopic: h.primaryTopic ?? ('' as TopicId | ''),
+          topics: [...(h.topics ?? [])],
           lines: h.verses.map((v) => [...v.lines]),
           title_en: h.title_en ?? '',
           chorus_en: h.chorus_en ?? '',
@@ -109,6 +115,12 @@ export default function AdminEditScreen() {
   } as const;
 
   const set = (patch: Partial<typeof form>) => setForm((f) => ({ ...f, ...patch }));
+
+  const toggleSecondary = (id: TopicId) =>
+    setForm((f) => ({
+      ...f,
+      topics: f.topics.includes(id) ? f.topics.filter((x) => x !== id) : [...f.topics, id],
+    }));
 
   const setLine = (verseIndex: number, lineIndex: number, value: string) => {
     setForm((f) => ({
@@ -168,6 +180,11 @@ export default function AdminEditScreen() {
       authorOriginal: form.authorOriginal.trim(),
       meter: form.meter.trim(),
       chorus: form.chorus.trim(),
+      // Clearing the primary is not expressible through the overlay merge
+      // (`??` falls back to the bundled value), so "no topic" keeps the
+      // existing one — setting and retagging always work.
+      ...(form.primaryTopic ? { primaryTopic: form.primaryTopic as TopicId } : {}),
+      topics: form.topics.filter((x) => x !== form.primaryTopic),
       verses: hymn.verses.map((verse, i) => ({ ...verse, lines: form.lines[i].map((l) => l.trim()) })),
       ...(hasEn
         ? {
@@ -271,6 +288,18 @@ export default function AdminEditScreen() {
               />
             </>
           ) : null}
+        </Card>
+
+        <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
+          <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+            {t('admin.topics')}
+          </AppText>
+          <TopicPicker
+            primary={form.primaryTopic}
+            secondary={form.topics}
+            onPrimary={(id) => set({ primaryTopic: id })}
+            onToggleSecondary={toggleSecondary}
+          />
         </Card>
 
         {hymn.verses.map((verse, i) => (

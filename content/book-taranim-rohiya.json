@@ -176,7 +176,12 @@
    ],
    "author": "ناصيف اليازجي",
    "authorOriginal": "John Keene, Kirkham, John Keith",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "word",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 2,
@@ -354,7 +359,11 @@
    ],
    "author": "يوسف بركات",
    "authorOriginal": "Joseph Addison",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 3,
@@ -477,7 +486,11 @@
     }
    ],
    "author": "John Newton",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 4,
@@ -600,7 +613,11 @@
     }
    ],
    "author": "فيبي فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 5,
@@ -777,7 +794,9 @@
     }
    ],
    "author": "William Cowper",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 6,
@@ -1024,7 +1043,9 @@
    ],
    "author": "ناصيف اليازجي",
    "authorOriginal": "William Cowper",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 8,
@@ -1147,7 +1168,11 @@
     }
    ],
    "author": "أسعد الشدودي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 9,
@@ -1295,7 +1320,11 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Henry Francess Lyte",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 10,
@@ -1418,7 +1447,9 @@
     }
    ],
    "author": "ناصيف اليازجي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 11,
@@ -1568,7 +1599,12 @@
     }
    ],
    "author": "إبراهيم سركيس The God Of Love",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "repentance"
+   ]
   },
   {
    "number": 12,
@@ -1745,7 +1781,11 @@
     }
    ],
    "author": "ناصيف اليازجي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 13,
@@ -1922,7 +1962,11 @@
     }
    ],
    "author": "ناصيف اليازجيJohn Newton",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 14,
@@ -2012,7 +2056,9 @@
     }
    ],
    "author": "رفعت زكي جندي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 15,
@@ -2117,7 +2163,9 @@
     }
    ],
    "author": "أكرم لويز",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 16,
@@ -2266,7 +2314,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 17,
@@ -2417,7 +2467,13 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Thomas Rawson Taylor (1836)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "eternity",
+   "topics": [
+    "comfort",
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 18,
@@ -2587,7 +2643,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "warfare",
+   "topics": [
+    "cross",
+    "worship"
+   ]
   },
   {
    "number": 19,
@@ -2710,7 +2771,9 @@
     }
    ],
    "author": "Albert Benjamin Simpson (1890)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 20,
@@ -2886,7 +2949,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 21,
@@ -3010,7 +3077,11 @@
    ],
    "author": "ناصيف اليازجي",
    "authorOriginal": "Ray Pal­mer, 1830",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 22,
@@ -3182,7 +3253,12 @@
    ],
    "author": "متري الحداد",
    "authorOriginal": "Fanny Crosby",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 23,
@@ -3361,7 +3437,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 24,
@@ -3539,7 +3617,12 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "James Hamilton",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 25,
@@ -3661,7 +3744,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 26,
@@ -3783,7 +3870,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 27,
@@ -3933,7 +4022,11 @@
     }
    ],
    "author": "Frederick Whitfield",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 28,
@@ -4204,7 +4297,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "eternity"
+   ]
   },
   {
    "number": 30,
@@ -4337,7 +4435,9 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Joseph Medlicott Scriven",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 31,
@@ -4484,7 +4584,11 @@
     }
    ],
    "author": "Fanny Crosby",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 32,
@@ -4579,7 +4683,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 33,
@@ -4751,7 +4859,11 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Henry Francis Lyte",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 34,
@@ -4922,7 +5034,12 @@
     }
    ],
    "author": "خليل اليازجي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 35,
@@ -5073,7 +5190,12 @@
    ],
    "author": "أنطون بدر",
    "authorOriginal": "Fanny Crosby",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 36,
@@ -5196,7 +5318,9 @@
     }
    ],
    "author": "فواز عميش",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 37,
@@ -5317,7 +5441,9 @@
    ],
    "author": "يوسف قسطة",
    "authorOriginal": "Ira Forest Stanphill (1914-1993)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 38,
@@ -5439,7 +5565,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 39,
@@ -5738,7 +5869,12 @@
     }
    ],
    "author": "سعيد باز",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 41,
@@ -5914,7 +6050,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "church"
+   ]
   },
   {
    "number": 42,
@@ -6187,7 +6327,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "comfort",
+    "worship"
+   ]
   },
   {
    "number": 44,
@@ -6364,7 +6510,9 @@
     }
    ],
    "author": "أنطوان بدر",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 45,
@@ -6461,7 +6609,12 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "George Washington Bethune",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "eternity",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 46,
@@ -6707,7 +6860,9 @@
     }
    ],
    "author": "أسعد الشدودي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 48,
@@ -6910,7 +7065,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 49,
@@ -7041,7 +7198,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 50,
@@ -7164,7 +7325,9 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 51,
@@ -7313,7 +7476,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "fellowship"
+   ]
   },
   {
    "number": 52,
@@ -7436,7 +7604,11 @@
     }
    ],
    "author": "إبراهيم عويس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 53,
@@ -7571,7 +7743,9 @@
     }
    ],
    "author": "جورج مكرم",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 54,
@@ -7693,7 +7867,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 55,
@@ -7871,7 +8047,9 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "John Newton",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 56,
@@ -7994,7 +8172,11 @@
     }
    ],
    "author": "سَليم بن إلياس كساب",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 57,
@@ -8320,7 +8502,11 @@
     }
    ],
    "author": "أسعد الشدودي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 59,
@@ -8442,7 +8628,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 60,
@@ -8564,7 +8752,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 61,
@@ -8741,7 +8933,11 @@
     }
    ],
    "author": "سليم بن إلياس كساب",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 62,
@@ -8863,7 +9059,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 63,
@@ -8985,7 +9185,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 64,
@@ -9102,7 +9304,11 @@
     }
    ],
    "author": "ناصف صبحي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "word"
+   ]
   },
   {
    "number": 65,
@@ -9451,7 +9657,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 67,
@@ -9674,7 +9884,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 69,
@@ -9769,7 +9981,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 70,
@@ -9945,7 +10161,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 71,
@@ -10121,7 +10339,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "word"
+   ]
   },
   {
    "number": 72,
@@ -10298,7 +10520,11 @@
     }
    ],
    "author": "إبراهيم عويس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "eternity"
+   ]
   },
   {
    "number": 73,
@@ -10447,7 +10673,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 74,
@@ -10587,7 +10815,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "worship"
+   ]
   },
   {
    "number": 75,
@@ -10709,7 +10942,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 76,
@@ -10885,7 +11123,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 77,
@@ -11008,7 +11250,12 @@
     }
    ],
    "author": "Henry Jefferys Zelley",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "fellowship"
+   ]
   },
   {
    "number": 78,
@@ -11130,7 +11377,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 79,
@@ -11279,7 +11530,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 80,
@@ -11455,7 +11710,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 81,
@@ -11605,7 +11864,11 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 82,
@@ -11701,7 +11964,11 @@
     }
    ],
    "author": "Joseph Swain (1761-1796)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 83,
@@ -11877,7 +12144,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 84,
@@ -11999,7 +12270,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 85,
@@ -12238,7 +12511,12 @@
     }
    ],
    "author": "فواز عميش",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "fellowship"
+   ]
   },
   {
    "number": 87,
@@ -12360,7 +12638,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 88,
@@ -12536,7 +12816,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 89,
@@ -12712,7 +12996,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 90,
@@ -12834,7 +13122,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 91,
@@ -13106,7 +13398,11 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 93,
@@ -13387,7 +13683,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 95,
@@ -13563,7 +13863,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "eternity",
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 96,
@@ -13685,7 +13991,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 97,
@@ -13888,7 +14196,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 98,
@@ -14067,7 +14377,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "eternity",
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 99,
@@ -14249,7 +14565,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "word",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 100,
@@ -14453,7 +14774,11 @@
     }
    ],
    "author": "سارة جرجس روفائيل",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 101,
@@ -14604,7 +14929,11 @@
    ],
    "author": "غبريال رزق الله",
    "authorOriginal": "Elisha Albright Hoffman (1891)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "warfare",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 102,
@@ -14726,7 +15055,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 103,
@@ -14875,7 +15206,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 104,
@@ -14997,7 +15330,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 105,
@@ -15146,7 +15481,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 106,
@@ -15322,7 +15659,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 107,
@@ -15498,7 +15839,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 108,
@@ -15594,7 +15939,9 @@
     }
    ],
    "author": "صليب إلياس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 109,
@@ -15743,7 +16090,11 @@
     }
    ],
    "author": "Frances Jane (Fanny) Crosby, 1884",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 110,
@@ -15867,7 +16218,13 @@
    ],
    "author": "سليم كساب",
    "authorOriginal": "Robert Lowry",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "eternity",
+    "word"
+   ]
   },
   {
    "number": 111,
@@ -16016,7 +16373,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 112,
@@ -16165,7 +16526,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 113,
@@ -16439,7 +16804,12 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "James Montgomery",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 115,
@@ -16615,7 +16985,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 116,
@@ -16738,7 +17110,9 @@
     }
    ],
    "author": "Scot­tish Psal­ter, 1650, alt.",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 117,
@@ -16888,7 +17262,11 @@
     }
    ],
    "author": "Jean Sophia Pigott",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 118,
@@ -17064,7 +17442,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 119,
@@ -17240,7 +17623,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 120,
@@ -17389,7 +17774,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 121,
@@ -17689,7 +18076,9 @@
    ],
    "author": "إبراهيم سركيس",
    "authorOriginal": "Joseph Hoskins",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 123,
@@ -17840,7 +18229,9 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "William Cowper (1772)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 124,
@@ -17936,7 +18327,9 @@
     }
    ],
    "author": "John Marchant Whyte",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 125,
@@ -18056,7 +18449,11 @@
     }
    ],
    "author": "وديع متى بهنام",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 126,
@@ -18201,7 +18598,11 @@
    ],
    "author": "خليل أسعد جبريل",
    "authorOriginal": "Joseph Henry Gilmore",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 127,
@@ -18323,7 +18724,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 128,
@@ -18473,7 +18878,9 @@
     }
    ],
    "author": "فيبي فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 129,
@@ -18649,7 +19056,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 130,
@@ -18879,7 +19290,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 131,
@@ -19082,7 +19495,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "comfort"
+   ]
   },
   {
    "number": 132,
@@ -19205,7 +19623,12 @@
     }
    ],
    "author": "فواز عميش",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 133,
@@ -19310,7 +19733,9 @@
     }
    ],
    "author": "يوسف رياض",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 134,
@@ -19391,7 +19816,9 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 135,
@@ -19535,7 +19962,11 @@
     }
    ],
    "author": "زكي عطية سوريال",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "repentance"
+   ]
   },
   {
    "number": 136,
@@ -19684,7 +20115,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "comfort",
+    "eternity"
+   ]
   },
   {
    "number": 137,
@@ -19860,7 +20297,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 138,
@@ -19982,7 +20421,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 139,
@@ -20262,7 +20703,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 141,
@@ -20411,7 +20854,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 142,
@@ -20736,7 +21181,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 144,
@@ -20939,7 +21388,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "comfort"
+   ]
   },
   {
    "number": 145,
@@ -21061,7 +21515,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 146,
@@ -21286,7 +21742,13 @@
     }
    ],
    "author": "سمير الشوملي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance",
+    "fellowship"
+   ]
   },
   {
    "number": 147,
@@ -21436,7 +21898,12 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "word",
+   "topics": [
+    "comfort",
+    "cross"
+   ]
   },
   {
    "number": 148,
@@ -21612,7 +22079,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 149,
@@ -21792,7 +22261,9 @@
     }
    ],
    "author": "فيبي فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 150,
@@ -21927,7 +22398,11 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 151,
@@ -22154,7 +22629,9 @@
     }
    ],
    "author": "سعيد باز",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 153,
@@ -22481,7 +22958,9 @@
     }
    ],
    "author": "يواكيم مسعود الراسي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 155,
@@ -22849,7 +23328,9 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 158,
@@ -22980,7 +23461,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 159,
@@ -23156,7 +23641,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 160,
@@ -23305,7 +23794,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "church",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 161,
@@ -23427,7 +23920,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 162,
@@ -23523,7 +24020,11 @@
     }
    ],
    "author": "نجيب إبراهيم",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 163,
@@ -23699,7 +24200,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 164,
@@ -23875,7 +24378,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "repentance",
+    "fellowship"
+   ]
   },
   {
    "number": 165,
@@ -24024,7 +24533,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 166,
@@ -24200,7 +24711,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 167,
@@ -24451,7 +24966,13 @@
     }
    ],
    "author": "أمجد ماهر فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross",
+    "eternity"
+   ]
   },
   {
    "number": 169,
@@ -24627,7 +25148,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 170,
@@ -24776,7 +25299,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 171,
@@ -24952,7 +25479,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 172,
@@ -25045,7 +25574,9 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 173,
@@ -25225,7 +25756,9 @@
     }
    ],
    "author": "Samuel Trevor Francis",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 174,
@@ -25402,7 +25935,11 @@
     }
    ],
    "author": "William W. Walford (1772 – 1850)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "church"
+   ]
   },
   {
    "number": 175,
@@ -25551,7 +26088,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "eternity",
+    "worship"
+   ]
   },
   {
    "number": 176,
@@ -25792,7 +26335,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 178,
@@ -25896,7 +26441,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 179,
@@ -26191,7 +26738,9 @@
     }
    ],
    "author": "ناجي فؤاد",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 181,
@@ -26277,7 +26826,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 182,
@@ -26399,7 +26952,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 183,
@@ -26525,7 +27082,9 @@
     }
    ],
    "author": "وليم جندي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 184,
@@ -26878,7 +27437,9 @@
     }
    ],
    "author": "سليم كساب",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 186,
@@ -27027,7 +27588,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 187,
@@ -27149,7 +27712,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 188,
@@ -27272,7 +27837,12 @@
     }
    ],
    "author": "إبراهيم سركيس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "warfare",
+   "topics": [
+    "comfort",
+    "word"
+   ]
   },
   {
    "number": 189,
@@ -27517,7 +28087,11 @@
    ],
    "author": "خليل أسعد غبريل",
    "authorOriginal": "Frederick Martin Lehman",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 191,
@@ -27639,7 +28213,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 192,
@@ -27788,7 +28366,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 193,
@@ -27938,7 +28518,11 @@
     }
    ],
    "author": "Charles J. Butler",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "church"
+   ]
   },
   {
    "number": 194,
@@ -28060,7 +28644,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 195,
@@ -28182,7 +28770,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "warfare",
+   "topics": []
   },
   {
    "number": 196,
@@ -28505,7 +29095,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 198,
@@ -28627,7 +29221,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 199,
@@ -28776,7 +29372,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 200,
@@ -28925,7 +29525,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 201,
@@ -29199,7 +29801,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 203,
@@ -29322,7 +29928,11 @@
     }
    ],
    "author": "وليم جندي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 204,
@@ -29498,7 +30108,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 205,
@@ -29674,7 +30286,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 206,
@@ -29796,7 +30412,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 207,
@@ -30129,7 +30747,11 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 209,
@@ -30306,7 +30928,9 @@
     }
    ],
    "author": "داود قربان",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 210,
@@ -30429,7 +31053,12 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "eternity"
+   ]
   },
   {
    "number": 211,
@@ -30574,7 +31203,13 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Sanford Fillmore Bennett",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "warfare",
+   "topics": [
+    "worship",
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 212,
@@ -30718,7 +31353,12 @@
     }
    ],
    "author": "إبراهيم سركيس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "eternity",
+    "worship"
+   ]
   },
   {
    "number": 213,
@@ -30851,7 +31491,11 @@
    ],
    "author": "حبيب جرجس",
    "authorOriginal": "Henry Jackson Van Dyke",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 214,
@@ -31098,7 +31742,9 @@
    ],
    "author": "ملحم ذهبية",
    "authorOriginal": "Fanny Crosby",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 216,
@@ -31355,7 +32001,9 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Frances Ridley Havergal",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 218,
@@ -31471,7 +32119,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 219,
@@ -31588,7 +32238,9 @@
     }
    ],
    "author": "أسعد الشدودي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 220,
@@ -31709,7 +32361,12 @@
    ],
    "author": "خليل أسعد غبريل",
    "authorOriginal": "W. Spencer Walton",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 221,
@@ -31859,7 +32516,12 @@
     }
    ],
    "author": "هرماس سمير عزيز",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 222,
@@ -31991,7 +32653,13 @@
     }
    ],
    "author": "Jr. George Duffield",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "warfare",
+   "topics": [
+    "eternity",
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 223,
@@ -32186,7 +32854,11 @@
     }
    ],
    "author": "فيبي فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 224,
@@ -32362,7 +33034,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 225,
@@ -32491,7 +33165,11 @@
     }
    ],
    "author": "يواكيم الراسي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 226,
@@ -32613,7 +33291,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross"
+   ]
   },
   {
    "number": 227,
@@ -32880,7 +33563,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 229,
@@ -33056,7 +33741,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 230,
@@ -33151,7 +33840,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 231,
@@ -33419,7 +34110,11 @@
     }
    ],
    "author": "Edward Mote",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 233,
@@ -33596,7 +34291,11 @@
     }
    ],
    "author": "حبيب جرجس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 234,
@@ -33719,7 +34418,11 @@
     }
    ],
    "author": "بسام عفيش",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "eternity"
+   ]
   },
   {
    "number": 235,
@@ -33834,7 +34537,11 @@
    ],
    "author": "إبراهيم سركيس",
    "authorOriginal": "Edward Hopper",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 236,
@@ -33984,7 +34691,11 @@
     }
    ],
    "author": "ناصيف اليازجي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "repentance",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 237,
@@ -34108,7 +34819,9 @@
    ],
    "author": "سليم عبد الأحد",
    "authorOriginal": "Isaac Watts",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 238,
@@ -34284,7 +34997,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 239,
@@ -34460,7 +35177,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 240,
@@ -34636,7 +35357,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 241,
@@ -34909,7 +35632,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 243,
@@ -35060,7 +35788,11 @@
    ],
    "author": "سليم كساب",
    "authorOriginal": "Philip Paul Bliss",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 244,
@@ -35180,7 +35912,11 @@
     }
    ],
    "author": "نجيب إبراهيم",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 245,
@@ -35356,7 +36092,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 246,
@@ -35453,7 +36191,9 @@
    ],
    "author": "أسعد الشدودي (ناظم)",
    "authorOriginal": "Francis Xavier (writer)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 247,
@@ -35570,7 +36310,9 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 248,
@@ -35723,7 +36465,9 @@
     }
    ],
    "author": "نبيل وصفي بباوي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 249,
@@ -35849,7 +36593,12 @@
     }
    ],
    "author": "John Merritte Driver",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 250,
@@ -36020,7 +36769,11 @@
     }
    ],
    "author": "فيبي فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 251,
@@ -36140,7 +36893,9 @@
     }
    ],
    "author": "The Psalter (1912)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 252,
@@ -36266,7 +37021,11 @@
     }
    ],
    "author": "Thomas Obediah Chishlom",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 253,
@@ -36388,7 +37147,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 254,
@@ -36511,7 +37274,9 @@
     }
    ],
    "author": "حبيب خوري",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 255,
@@ -36662,7 +37427,13 @@
    ],
    "author": "جريس دلَّه",
    "authorOriginal": "Carl Gustaf Boberg",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "repentance",
+    "fellowship"
+   ]
   },
   {
    "number": 256,
@@ -36759,7 +37530,11 @@
    ],
    "author": "سليمان ضومط",
    "authorOriginal": "Julie Katharina Von Hausmann - Herman H. M. Brueckner -",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 257,
@@ -36908,7 +37683,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 258,
@@ -37022,7 +37803,9 @@
     }
    ],
    "author": "نجيب إبراهيم",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 259,
@@ -37175,7 +37958,9 @@
     }
    ],
    "author": "أنيس يونان",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 260,
@@ -37296,7 +38081,9 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Elivina Mable Hall (1822-1889)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 261,
@@ -37472,7 +38259,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 262,
@@ -37648,7 +38437,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 263,
@@ -37772,7 +38563,9 @@
    ],
    "author": "أسعد الراسي",
    "authorOriginal": "Julia Ward Howe",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 264,
@@ -37948,7 +38741,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 265,
@@ -38201,7 +38996,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "warfare",
+    "eternity"
+   ]
   },
   {
    "number": 267,
@@ -38341,7 +39142,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "repentance",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 268,
@@ -38481,7 +39287,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 269,
@@ -38659,7 +39467,11 @@
    ],
    "author": "متري الحداد",
    "authorOriginal": "Charles Wesley",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 270,
@@ -38836,7 +39648,9 @@
     }
    ],
    "author": "يواكيم الراسي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 271,
@@ -38968,7 +39782,11 @@
     }
    ],
    "author": "Ro­bert Walms­ley",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "eternity"
+   ]
   },
   {
    "number": 272,
@@ -39144,7 +39962,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "comfort"
+   ]
   },
   {
    "number": 273,
@@ -39320,7 +40143,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 274,
@@ -39496,7 +40321,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 275,
@@ -39615,7 +40442,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 276,
@@ -39704,7 +40533,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 277,
@@ -39854,7 +40687,9 @@
     }
    ],
    "author": "إبراهيم عويس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "eternity",
+   "topics": []
   },
   {
    "number": 278,
@@ -40030,7 +40865,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "comfort"
+   ]
   },
   {
    "number": 279,
@@ -40126,7 +40966,11 @@
     }
    ],
    "author": "Bernard of Clairvaux (Latin 1153)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "eternity"
+   ]
   },
   {
    "number": 280,
@@ -40297,7 +41141,13 @@
     }
    ],
    "author": "وسلي عياد",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "cross",
+    "comfort"
+   ]
   },
   {
    "number": 281,
@@ -40472,7 +41322,9 @@
    ],
    "author": "سليم كساب",
    "authorOriginal": "Lydia Odell Baxter (1809-18874)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 282,
@@ -40647,7 +41499,12 @@
    ],
    "author": "سليم كساب",
    "authorOriginal": "William Hunter",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance"
+   ]
   },
   {
    "number": 283,
@@ -40812,7 +41669,9 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 284,
@@ -40926,7 +41785,11 @@
     }
    ],
    "author": "فيبي فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 285,
@@ -41073,7 +41936,12 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship",
+    "worship"
+   ]
   },
   {
    "number": 286,
@@ -41214,7 +42082,11 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 287,
@@ -41378,7 +42250,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 288,
@@ -41554,7 +42428,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 289,
@@ -41730,7 +42606,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 290,
@@ -41906,7 +42786,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 291,
@@ -42019,7 +42904,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "worship",
+    "comfort"
+   ]
   },
   {
    "number": 292,
@@ -42150,7 +43041,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross",
+    "repentance"
+   ]
   },
   {
    "number": 293,
@@ -42282,7 +43178,11 @@
     }
    ],
    "author": "يوسف رياض – فيبي فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 294,
@@ -42429,7 +43329,12 @@
     }
    ],
    "author": "فيبي فارس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "eternity",
+   "topics": [
+    "cross",
+    "worship"
+   ]
   },
   {
    "number": 295,
@@ -42746,7 +43651,13 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "worship",
+    "comfort"
+   ]
   },
   {
    "number": 297,
@@ -42911,7 +43822,13 @@
     }
    ],
    "author": "فواز عميش",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 298,
@@ -43062,7 +43979,11 @@
    ],
    "author": "ملحم ذهبية",
    "authorOriginal": "Lewis Ellis Jones",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 299,
@@ -43405,7 +44326,9 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "James Proctor",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 301,
@@ -43564,7 +44487,12 @@
     }
    ],
    "author": "جورج زيدان",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 302,
@@ -43686,7 +44614,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 303,
@@ -43808,7 +44738,12 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "worship",
+    "cross"
+   ]
   },
   {
    "number": 304,
@@ -43961,7 +44896,9 @@
     }
    ],
    "author": "رضا رمسيس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 305,
@@ -44097,7 +45034,11 @@
    ],
    "author": "إبراهيم عويس",
    "authorOriginal": "John Henry Sammis",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 306,
@@ -44262,7 +45203,12 @@
     }
    ],
    "author": "نجيب إبراهيم",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort",
+    "cross"
+   ]
   },
   {
    "number": 307,
@@ -44412,7 +45358,11 @@
     }
    ],
    "author": "وليم جندي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 308,
@@ -44630,7 +45580,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 310,
@@ -44753,7 +45707,12 @@
     }
    ],
    "author": "ملحم ذهبية",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 311,
@@ -44994,7 +45953,11 @@
    ],
    "author": "إبراهيم سركيس",
    "authorOriginal": "John Cennick",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 313,
@@ -45363,7 +46326,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship",
+    "cross",
+    "church"
+   ]
   },
   {
    "number": 316,
@@ -45495,7 +46464,11 @@
     }
    ],
    "author": "شادي يوسف",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "church"
+   ]
   },
   {
    "number": 317,
@@ -45619,7 +46592,12 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Samuel Stennett",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship",
+    "fellowship"
+   ]
   },
   {
    "number": 318,
@@ -45742,7 +46720,11 @@
     }
    ],
    "author": "فواز عميش",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 319,
@@ -45838,7 +46820,12 @@
     }
    ],
    "author": "إبراهيم عويس",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross",
+    "worship"
+   ]
   },
   {
    "number": 320,
@@ -45913,7 +46900,11 @@
     }
    ],
    "author": "Marianne Nunn",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 321,
@@ -46072,7 +47063,9 @@
     }
    ],
    "author": "وحيد لطفي شنوده",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 322,
@@ -46186,7 +47179,11 @@
     }
    ],
    "author": "ألبير حداد",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 323,
@@ -46315,7 +47312,11 @@
     }
    ],
    "author": "ممدوح عزت",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 324,
@@ -46437,7 +47438,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 325,
@@ -46569,7 +47572,9 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 326,
@@ -46718,7 +47723,13 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship",
+    "eternity",
+    "warfare"
+   ]
   },
   {
    "number": 327,
@@ -46832,7 +47843,11 @@
     }
    ],
    "author": "ناصف صبحي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 328,
@@ -47165,7 +48180,12 @@
     }
    ],
    "author": "سمير فيليب المنشاوي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross",
+    "repentance"
+   ]
   },
   {
    "number": 331,
@@ -47322,7 +48342,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 332,
@@ -47445,7 +48467,9 @@
     }
    ],
    "author": "هاني منير حبيب",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 333,
@@ -47595,7 +48619,11 @@
     }
    ],
    "author": "فيليب عياد",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 334,
@@ -47718,7 +48746,11 @@
     }
    ],
    "author": "أمجد ناثان",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 335,
@@ -47841,7 +48873,11 @@
     }
    ],
    "author": "مكاري يونان",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 336,
@@ -48000,7 +49036,11 @@
     }
    ],
    "author": "ناجي فؤاد",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "word"
+   ]
   },
   {
    "number": 337,
@@ -48150,7 +49190,11 @@
     }
    ],
    "author": "صفاء صبحي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "eternity"
+   ]
   },
   {
    "number": 338,
@@ -48270,7 +49314,13 @@
     }
    ],
    "author": "أنسي أنيس يونان",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "fellowship",
+    "repentance"
+   ]
   },
   {
    "number": 339,
@@ -48392,7 +49442,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 340,
@@ -48564,7 +49618,11 @@
    ],
    "author": "ميخا الموصلِّي",
    "authorOriginal": "John Newton (1779)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 341,
@@ -48697,7 +49755,11 @@
    ],
    "author": "ملحم ذهبية",
    "authorOriginal": "Priscilla J. Owens",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "warfare"
+   ]
   },
   {
    "number": 342,
@@ -48846,7 +49908,9 @@
     }
    ],
    "author": "وفيق صموئيل وهبي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 343,
@@ -48970,7 +50034,12 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "George F. Root",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship",
+    "comfort"
+   ]
   },
   {
    "number": 344,
@@ -49093,7 +50162,9 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 345,
@@ -49189,7 +50260,9 @@
     }
    ],
    "author": "W. E. Witter",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 346,
@@ -49313,7 +50386,9 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "Charlotte Elliott",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 347,
@@ -49463,7 +50538,9 @@
     }
    ],
    "author": "سليم كساب",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 348,
@@ -49634,7 +50711,12 @@
     }
    ],
    "author": "زكريا عوض الله",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "eternity",
+    "cross"
+   ]
   },
   {
    "number": 349,
@@ -49811,7 +50893,9 @@
     }
    ],
    "author": "Joseph Hart",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 350,
@@ -49932,7 +51016,9 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 351,
@@ -50052,7 +51138,11 @@
     }
    ],
    "author": "عبد الله خضر",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 352,
@@ -50229,7 +51319,11 @@
     }
    ],
    "author": "أسعد الراسي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 353,
@@ -50383,7 +51477,12 @@
    ],
    "author": "ملحم ذهبية",
    "authorOriginal": "James Rowe (1912)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort",
+    "repentance"
+   ]
   },
   {
    "number": 354,
@@ -50477,7 +51576,9 @@
    ],
    "author": "أسعد الشدودي",
    "authorOriginal": "William Hunter (1843)",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 355,
@@ -50599,7 +51700,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "worship"
+   ]
   },
   {
    "number": 356,
@@ -50777,7 +51882,11 @@
    ],
    "author": "حبيب جرجس",
    "authorOriginal": "Thomas Raffles",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": [
+    "comfort"
+   ]
   },
   {
    "number": 357,
@@ -51079,7 +52188,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 359,
@@ -51244,7 +52357,13 @@
     }
    ],
    "author": "نبيل وصفي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "repentance",
+    "warfare",
+    "fellowship"
+   ]
   },
   {
    "number": 360,
@@ -51379,7 +52498,12 @@
     }
    ],
    "author": "نبيل وصفي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "repentance",
+    "comfort"
+   ]
   },
   {
    "number": 361,
@@ -51474,7 +52598,11 @@
      ]
     }
    ],
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "cross"
+   ]
   },
   {
    "number": 362,
@@ -51594,7 +52722,11 @@
     }
    ],
    "author": "باسم رشدي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "repentance",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 363,
@@ -51717,7 +52849,11 @@
     }
    ],
    "author": "هرماس سمير",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": [
+    "fellowship"
+   ]
   },
   {
    "number": 364,
@@ -51867,7 +53003,9 @@
     }
    ],
    "author": "نبيل إسحاق",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 365,
@@ -51972,7 +53110,9 @@
     }
    ],
    "author": "منال سمير فريد",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 366,
@@ -52125,7 +53265,9 @@
     }
    ],
    "author": "ماهر فايز",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 367,
@@ -52296,7 +53438,12 @@
     }
    ],
    "author": "باسم رشدي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "word",
+   "topics": [
+    "comfort",
+    "fellowship"
+   ]
   },
   {
    "number": 368,
@@ -52566,7 +53713,9 @@
     }
    ],
    "author": "باسم رشدي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "word",
+   "topics": []
   },
   {
    "number": 370,
@@ -52731,7 +53880,9 @@
     }
    ],
    "author": "هاني روماني",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "comfort",
+   "topics": []
   },
   {
    "number": 371,
@@ -52890,7 +54041,9 @@
     }
    ],
    "author": "باسم رشدي",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "repentance",
+   "topics": []
   },
   {
    "number": 372,
@@ -53013,7 +54166,9 @@
     }
    ],
    "author": "هاني منير",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "fellowship",
+   "topics": []
   },
   {
    "number": 373,
@@ -53136,7 +54291,9 @@
     }
    ],
    "author": "هاني منير",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "cross",
+   "topics": []
   },
   {
    "number": 374,
@@ -53286,7 +54443,9 @@
     }
    ],
    "author": "سامح عبده",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": []
   },
   {
    "number": 375,
@@ -53400,7 +54559,11 @@
     }
    ],
    "author": "جرجس معوض",
-   "book": "taranim"
+   "book": "taranim",
+   "primaryTopic": "worship",
+   "topics": [
+    "eternity"
+   ]
   }
  ]
 }

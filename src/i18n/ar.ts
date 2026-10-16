@@ -22,6 +22,20 @@ export const ar = {
     count: 'عدد الترنيمات',
     byNumber: 'بترقيمها',
     alphabetical: 'أبجديًا',
+    topics: 'الموضوع',
+    allTopics: 'الكل',
+  },
+
+  topic: {
+    worship: 'العبادة والتسبيح',
+    cross: 'الصليب والخلاص',
+    comfort: 'التعزية والرجاء في الضيق',
+    repentance: 'التوبة والرجوع إلى الله',
+    fellowship: 'الشركة مع الرب',
+    warfare: 'الحرب الروحية والنصرة',
+    word: 'كلمة الله',
+    eternity: 'الأبدية والوطن السماوي',
+    church: 'الكنيسة والخدمة',
   },
 
   book: {
@@ -64,6 +78,7 @@ export const ar = {
   info: {
     meter: 'مقياس الكلام',
     missing: 'غير متوفر',
+    topics: 'الموضوعات',
   },
 
 admin: {
@@ -119,6 +134,10 @@ admin: {
     addHymn: 'إضافة ترنيمة جديدة',
     hymnNumber: 'رقم الترنيمة',
     stanzaLine: 'سطر المقطع',
+    topics: 'الموضوعات',
+    primaryTopic: 'الموضوع الرئيسي',
+    secondaryTopics: 'موضوعات إضافية',
+    noTopic: 'بدون موضوع',
     backToAdmin: 'العودة للإدارة',
     errExists: 'الترنيمة موجودة بالفعل',
     findNextNumber: 'إيجاد الرقم التالي المتاح',

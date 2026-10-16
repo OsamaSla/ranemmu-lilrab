@@ -8,6 +8,7 @@
 import { HYMN_CHUNKS, HYMN_CHUNK_COUNT } from './generated-chunks';
 import { BOOKS } from './types';
 import type { BookId, Hymn, HymnSummary } from './types';
+import { matchesTopic, type TopicId } from './topics';
 import { getRemoteFullDocs, getRemoteSummaries } from '../store/remote';
 import { invalidateSearchCache } from './search';
 
@@ -55,6 +56,20 @@ export function getBooks(): { id: BookId; count: number }[] {
   }));
 }
 
+/** Applies an admin overlay patch to a summary (topic fields included). */
+function applySummaryPatch(s: HymnSummary, patch: Partial<Hymn>): HymnSummary {
+  return {
+    ...s,
+    number: patch.number ?? s.number,
+    title: patch.title ?? s.title,
+    meter: patch.meter ?? s.meter,
+    primaryTopic: patch.primaryTopic ?? s.primaryTopic,
+    topics: patch.topics ?? s.topics,
+    hasChorus:
+      patch.verses !== undefined ? patch.verses.some((v) => v.chorus) : (s.hasChorus ?? false),
+  };
+}
+
 /** All hymn summaries: numbers, titles and metres, overrides applied. */
 export function getSummaries(book?: BookId): HymnSummary[] {
   const overlays = overlayReader();
@@ -63,14 +78,7 @@ export function getSummaries(book?: BookId): HymnSummary[] {
     .filter((s) => !book || (s.book ?? 'main') === book).map((s) => {
     const patch = overlays[s.id];
     if (!patch) return s;
-    return {
-      ...s,
-      number: patch.number ?? s.number,
-      title: patch.title ?? s.title,
-      meter: patch.meter ?? s.meter,
-      hasChorus:
-        patch.verses !== undefined ? patch.verses.some((v) => v.chorus) : (s.hasChorus ?? false),
-    };
+    return applySummaryPatch(s, patch);
   });
   // Hymns that exist only remotely (added from another device after this
   // bundle shipped) join the lists; local edits still win per record.
@@ -79,22 +87,37 @@ export function getSummaries(book?: BookId): HymnSummary[] {
     if (known.has(s.id) || deleted.has(s.id)) continue;
     if (book && (s.book ?? 'main') !== book) continue;
     const patch = overlays[s.id];
-    base.push(
-      patch
-        ? {
-            ...s,
-            number: patch.number ?? s.number,
-            title: patch.title ?? s.title,
-            meter: patch.meter ?? s.meter,
-            hasChorus:
-              patch.verses !== undefined
-                ? patch.verses.some((v) => v.chorus)
-                : (s.hasChorus ?? false),
-          }
-        : s,
-    );
+    base.push(patch ? applySummaryPatch(s, patch) : s);
   }
   return base.sort((a, b) => a.number - b.number);
+}
+
+/**
+ * Hymns belonging to `topic` (primary or secondary tag), optionally
+ * narrowed to one book. Omit `book` to search both books combined.
+ */
+export function getSummariesByTopic(topic: TopicId, book?: BookId): HymnSummary[] {
+  return getSummaries(book).filter((s) => matchesTopic(s, topic));
+}
+
+/** Hymn count per topic (primary or secondary), optionally within one book. */
+export function getTopicCounts(book?: BookId): Record<TopicId, number> {
+  const counts = {
+    worship: 0,
+    cross: 0,
+    comfort: 0,
+    repentance: 0,
+    fellowship: 0,
+    warfare: 0,
+    word: 0,
+    eternity: 0,
+    church: 0,
+  } satisfies Record<TopicId, number>;
+  for (const s of getSummaries(book)) {
+    if (s.primaryTopic) counts[s.primaryTopic] += 1;
+    for (const t of s.topics ?? []) counts[t] += 1;
+  }
+  return counts;
 }
 
 export function getHymnCount(): number {

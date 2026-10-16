@@ -59,6 +59,8 @@ function toSummary(hymn) {
     title: hymn.title,
     meter: hymn.meter,
     hasChorus: (hymn.verses ?? []).some((v) => v.chorus),
+    ...(hymn.primaryTopic ? { primaryTopic: hymn.primaryTopic } : {}),
+    ...(Array.isArray(hymn.topics) && hymn.topics.length > 0 ? { topics: hymn.topics } : {}),
   };
 }
 
