@@ -85,6 +85,10 @@ Expected: `1422 hymn documents` (count grows with the corpus), written
 - **New hymns created in Admin** sync live too and appear in the
   library on all devices (reader/search pick them up; web static export
   includes them after the next site build).
+- **Bulk proofreading:** instead of editing hymn-by-hymn in Admin, use the
+  review-sheet pipeline (`REVIEW_SHEET.md`): export all hymns to a
+  spreadsheet, review in Google Sheets, and import back in bulk with
+  `npm run export:review` / `npm run import:review`.
 - The old GitHub-inbox publishing flow is gone: `apply-inbox.yml`,
   the `overrides-inbox` branch, and the GitHub token settings were
   removed. Local JSON export in Admin remains as a backup.
