@@ -174,8 +174,9 @@ export default function LibraryScreen() {
         ) : null}
       </View>
 
-      {/* One slim filter row: book + topic + order dropdowns. They combine
-          into a single hybrid query (topic counts follow the chosen book). */}
+      {/* Two slim filter rows: book + sort toggle, then topic full-width
+          so long topic names are never truncated. They combine into a
+          single hybrid query (topic counts follow the chosen book). */}
       <View
         style={{
           flexDirection: direction.row,
@@ -197,6 +198,30 @@ export default function LibraryScreen() {
             style={{ flex: 1 }}
           />
         ) : null}
+        <Pressable
+          onPress={() => setOrder(order === 'number' ? 'alpha' : 'number')}
+          accessibilityRole="button"
+          accessibilityLabel={`${t('library.sortOrder')}: ${t(order === 'number' ? 'library.byNumber' : 'library.alphabetical')}`}
+          android_ripple={{ color: colors.border }}
+          style={({ pressed }) => ({
+            width: 48,
+            minHeight: 48,
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: radius.md,
+            borderWidth: 1,
+            borderColor: colors.border,
+            backgroundColor: colors.surface,
+            opacity: pressed ? 0.75 : 1,
+          })}>
+          <MaterialCommunityIcons
+            name={order === 'number' ? 'sort-numeric-ascending' : 'sort-alphabetical-ascending'}
+            size={22}
+            color={colors.primary}
+          />
+        </Pressable>
+      </View>
+      <View style={{ paddingHorizontal: spacing.lg, marginTop: spacing.sm }}>
         <FilterSelect
           title={t('library.topics')}
           icon="tag-outline"
@@ -210,18 +235,6 @@ export default function LibraryScreen() {
           ]}
           value={topic ?? ''}
           onChange={(value) => setTopic(isTopicId(value) ? value : null)}
-          style={{ flex: 1.4 }}
-        />
-        <FilterSelect
-          title={t('library.sortOrder')}
-          icon="sort"
-          options={[
-            { value: 'number', label: t('library.byNumber') },
-            { value: 'alpha', label: t('library.alphabetical') },
-          ]}
-          value={order}
-          onChange={(value) => setOrder(value as 'number' | 'alpha')}
-          style={{ flex: 1 }}
         />
       </View>
 
@@ -255,7 +268,11 @@ export default function LibraryScreen() {
           <HymnRow
             hymn={item}
             subtitle={item.primaryTopic ? t(`topic.${item.primaryTopic}` as const) : undefined}
-            onPress={() => router.push(`/hymn/${item.id}`)}
+            onPress={() => {
+              // Returning lands on a clean search field, ready for lookup.
+              setQuery('');
+              router.push(`/hymn/${item.id}`);
+            }}
           />
         )}
         SectionSeparatorComponent={() => <View style={{ height: spacing.xs }} />}
