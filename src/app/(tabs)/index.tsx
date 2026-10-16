@@ -13,6 +13,7 @@ import { useTheme } from '../../hooks/useTheme';
 import { getBooks } from '../../data/loader';
 import type { BookId } from '../../data/types';
 import { useOverrides } from '../../store/overrides';
+import { useRemote } from '../../store/remote';
 import { useSettings } from '../../store/settings';
 import { radius, shadow, spacing } from '../../theme/tokens';
 
@@ -28,11 +29,12 @@ export default function HomeScreen() {
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
   const corpusVersion = useOverrides((s) => s.updatedAt);
+  const remoteVersion = useRemote((s) => s.updatedAt);
   const book = useSettings((s) => s.book);
   const setBook = useSettings((s) => s.setBook);
   // corpusVersion only retriggers this after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const books = useMemo(() => getBooks(), [corpusVersion]);
+  const books = useMemo(() => getBooks(), [corpusVersion, remoteVersion]);
 
   // One tap selects the book and opens its library right away.
   const chooseBook = (id: BookId) => {

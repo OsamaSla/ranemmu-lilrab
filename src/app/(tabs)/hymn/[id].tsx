@@ -40,6 +40,7 @@ import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
 import { useLibrary } from '../../../store/library';
 import { useOverrides } from '../../../store/overrides';
+import { useRemote } from '../../../store/remote';
 import { useSettings } from '../../../store/settings';
 import { useGoBack } from '../../../hooks/useGoBack';
 import { fontFamilyFor, READER_MAX_WIDTH, type as typeScale } from '../../../theme/fonts';
@@ -130,9 +131,11 @@ export default function ReaderScreen() {
   const hymn = id ? getHymn(id) : undefined;
   // Re-reads the merged corpus whenever an admin override lands.
   const corpusVersion = useOverrides((s) => s.updatedAt);
+  // Re-renders when cloud edits stream in (getHymn above re-merges).
+  const remoteVersion = useRemote((s) => s.updatedAt);
   // corpusVersion only retriggers these after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const neighbours = useMemo(() => (id ? getNeighbours(id) : {}), [id, corpusVersion]);
+  const neighbours = useMemo(() => (id ? getNeighbours(id) : {}), [id, corpusVersion, remoteVersion]);
   const similar = useMemo(
     () =>
       hymn

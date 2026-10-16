@@ -9,7 +9,7 @@ import { HYMN_CHUNKS, HYMN_CHUNK_COUNT } from './generated-chunks';
 import { BOOKS } from './types';
 import type { BookId, Hymn, HymnSummary } from './types';
 import { matchesTopic, type TopicId } from './topics';
-import { getRemoteFullDocs, getRemoteSummaries } from '../store/remote';
+import { getRemoteFullDocs, getRemoteSummaries, isFullDoc, useRemote } from '../store/remote';
 import { invalidateSearchCache } from './search';
 
 const SUMMARIES = require('../../assets/hymns/index.json') as HymnSummary[];
@@ -45,8 +45,10 @@ export function refreshOverlaidCorpus(): void {
 
 /** Books present in the bundled corpus, in display order, with hymn counts. */
 export function getBooks(): { id: BookId; count: number }[] {
+  // Counts run over the merged view so admin-added hymns show up and
+  // tombstoned ones stop being counted.
   const counts = new Map<BookId, number>();
-  for (const s of SUMMARIES) {
+  for (const s of getSummaries()) {
     const b = s.book ?? 'main';
     counts.set(b, (counts.get(b) ?? 0) + 1);
   }
@@ -54,6 +56,18 @@ export function getBooks(): { id: BookId; count: number }[] {
     id: b.id,
     count: counts.get(b.id) ?? 0,
   }));
+}
+
+/**
+ * Combined patch for one hymn: cloud diff under local overrides, so an
+ * admin's own unsynced edits always win on their own device. Either side
+ * may be absent.
+ */
+function mergedPatch(id: string): Partial<Hymn> | undefined {
+  const remote = useRemote.getState().patches[id];
+  const local = overlayReader()[id];
+  if (!remote && !local) return undefined;
+  return { ...remote, ...local };
 }
 
 /** Applies an admin overlay patch to a summary (topic fields included). */
@@ -76,7 +90,7 @@ export function getSummaries(book?: BookId): HymnSummary[] {
   const deleted = deletedSet();
   const base = SUMMARIES.filter((s) => !deleted.has(s.id))
     .filter((s) => !book || (s.book ?? 'main') === book).map((s) => {
-    const patch = overlays[s.id];
+    const patch = mergedPatch(s.id);
     if (!patch) return s;
     return applySummaryPatch(s, patch);
   });
@@ -88,6 +102,27 @@ export function getSummaries(book?: BookId): HymnSummary[] {
     if (book && (s.book ?? 'main') !== book) continue;
     const patch = overlays[s.id];
     base.push(patch ? applySummaryPatch(s, patch) : s);
+    known.add(s.id);
+  }
+  // Hymns added on this device but not published yet: the override patch
+  // itself is a complete record, so they appear immediately instead of
+  // waiting for the publish round-trip.
+  for (const [id, patch] of Object.entries(overlays)) {
+    if (known.has(id) || deleted.has(id)) continue;
+    if (!isFullDoc(patch as Record<string, unknown>)) continue;
+    if (book && (patch.book ?? 'main') !== book) continue;
+    const verses = patch.verses as Hymn['verses'];
+    base.push({
+      id,
+      book: patch.book ?? 'main',
+      number: patch.number as number,
+      title: patch.title as string,
+      meter: patch.meter,
+      hasChorus: verses.some((v) => v.chorus),
+      primaryTopic: patch.primaryTopic,
+      topics: patch.topics,
+    });
+    known.add(id);
   }
   return base.sort((a, b) => a.number - b.number);
 }
@@ -156,7 +191,7 @@ export function getCorpus(book?: BookId): Hymn[] {
   }
 
   const merged = all.map((hymn) => {
-    const patch = overlays[hymn.id];
+    const patch = mergedPatch(hymn.id);
     return patch ? { ...hymn, ...patch } : hymn;
   });
   const present = new Set(merged.map((h) => h.id));
@@ -167,6 +202,15 @@ export function getCorpus(book?: BookId): Hymn[] {
     const patch = overlays[remote.id];
     merged.push(patch ? { ...remote, ...patch } : remote);
     present.add(remote.id);
+  }
+  // Same unpublished-local-add handling as getSummaries above.
+  for (const [id, patch] of Object.entries(overlays)) {
+    if (present.has(id) || deleted.has(id)) continue;
+    if (!isFullDoc(patch as Record<string, unknown>)) continue;
+    if (book && (patch.book ?? 'main') !== book) continue;
+    const verses = (patch.verses as Hymn['verses']).map((v) => ({ ...v, chorus: v.chorus ?? false }));
+    merged.push({ ...(patch as Hymn), id, book: patch.book ?? 'main', verses });
+    present.add(id);
   }
   const visible = merged.filter((h) => !deleted.has(h.id));
   if (!book) {
@@ -188,7 +232,7 @@ export function getHymn(id: string): Hymn | undefined {
   for (const chunk of Object.values(HYMN_CHUNKS)) {
     const found = chunk.find((hymn) => hymn.id === id);
     if (found) {
-      const patch = overlayReader()[id];
+      const patch = mergedPatch(id);
       const merged = patch ? { ...found, ...patch } : found;
       byId.set(id, merged);
       return merged;
@@ -199,6 +243,17 @@ export function getHymn(id: string): Hymn | undefined {
   if (remote) {
     const patch = overlayReader()[id];
     const merged = patch ? { ...remote, ...patch } : remote;
+    byId.set(id, merged);
+    return merged;
+  }
+  // Hymns added on this device but not published yet.
+  const overlay = overlayReader()[id];
+  if (overlay && isFullDoc(overlay as Record<string, unknown>)) {
+    const verses = (overlay.verses as Hymn['verses']).map((v) => ({
+      ...v,
+      chorus: v.chorus ?? false,
+    }));
+    const merged = { ...(overlay as Hymn), id, book: overlay.book ?? 'main', verses };
     byId.set(id, merged);
     return merged;
   }

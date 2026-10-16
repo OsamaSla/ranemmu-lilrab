@@ -17,6 +17,7 @@ import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useLibrary } from '../../store/library';
 import { useOverrides } from '../../store/overrides';
+import { useRemote } from '../../store/remote';
 import { spacing } from '../../theme/tokens';
 
 export default function FavoritesScreen() {
@@ -25,6 +26,7 @@ export default function FavoritesScreen() {
   const { colors } = useTheme();
   const favorites = useLibrary((s) => s.favorites);
   const corpusVersion = useOverrides((s) => s.updatedAt);
+  const remoteVersion = useRemote((s) => s.updatedAt);
 
   const rows = useMemo(() => {
     const byId = new Map(getSummaries().map((s) => [s.id, s]));
@@ -36,7 +38,7 @@ export default function FavoritesScreen() {
     return resolved;
     // corpusVersion only retriggers this after admin edits land.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [favorites, corpusVersion]);
+  }, [favorites, corpusVersion, remoteVersion]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>

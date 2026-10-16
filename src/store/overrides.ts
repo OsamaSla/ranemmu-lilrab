@@ -93,9 +93,18 @@ export const useOverrides = create<OverridesState>()(
       storage: createJSONStorage(() => AsyncStorage),
       version: 1,
       // Loader caches must drop whenever the patch set changes, including
-      // the rehydrate that runs at startup.
-      onRehydrateStorage: () => () => {
+      // the rehydrate that runs at startup — otherwise screens memoised on
+      // the initial (empty) patch set keep showing unedited records until
+      // the next local edit bumps them.
+      onRehydrateStorage: () => (state) => {
         setOverlayReader(() => useOverrides.getState().overrides);
+        if (
+          state &&
+          (Object.keys(state.overrides ?? {}).length > 0 || (state.deletedIds ?? []).length > 0)
+        ) {
+          useOverrides.setState((s) => ({ ...s, updatedAt: s.updatedAt + 1 }));
+          refreshOverlaidCorpus();
+        }
       },
     },
   ),

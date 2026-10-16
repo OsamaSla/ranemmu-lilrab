@@ -44,7 +44,8 @@ function bundledById(id: string): Hymn | undefined {
   return undefined;
 }
 
-function isFullDoc(data: Record<string, unknown>): boolean {
+/** A patch/new record complete enough to stand alone (number+title+verses). */
+export function isFullDoc(data: Record<string, unknown>): boolean {
   return (
     Number.isInteger(data.number) &&
     typeof data.title === 'string' &&

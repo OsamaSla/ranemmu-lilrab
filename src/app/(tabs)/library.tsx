@@ -27,6 +27,7 @@ import type { BookId, HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
+import { useRemote } from '../../store/remote';
 import { useSettings } from '../../store/settings';
 import { radius, spacing } from '../../theme/tokens';
 
@@ -44,7 +45,10 @@ export default function LibraryScreen() {
   const setBook = useSettings((s) => s.setBook);
   // Re-reads the merged corpus whenever an admin override lands.
   const corpusVersion = useOverrides((s) => s.updatedAt);
-  const books = useMemo(() => getBooks(), []);
+  // Re-runs the queries below when cloud edits stream in.
+  const remoteVersion = useRemote((s) => s.updatedAt);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const books = useMemo(() => getBooks(), [corpusVersion, remoteVersion]);
 
   // Prefilled when arriving from the reader's jump bar with free text,
   // or from a topic link (`?topic=worship`) in the reader info sheet.
@@ -69,9 +73,9 @@ export default function LibraryScreen() {
 
   // corpusVersion only retriggers this after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const summaries = useMemo(() => getSummaries(book), [corpusVersion, book]);
+  const summaries = useMemo(() => getSummaries(book), [corpusVersion, remoteVersion, book]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const topicCounts = useMemo(() => getTopicCounts(book), [corpusVersion, book]);
+  const topicCounts = useMemo(() => getTopicCounts(book), [corpusVersion, remoteVersion, book]);
 
   // Topic filter first (primary or secondary tag), so book + topic combine
   // into one hybrid query and text search runs within the topic.

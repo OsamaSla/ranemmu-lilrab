@@ -19,6 +19,8 @@ import type { TopicId } from '../../data/topics';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
+import { useRemote } from '../../store/remote';
+import { useSettings } from '../../store/settings';
 import { radius, spacing } from '../../theme/tokens';
 
 interface HymnForm {
@@ -46,6 +48,9 @@ export default function AdminAddScreen() {
   const { colors, fontFamily } = useTheme();
 
   const setOverride = useOverrides((s) => s.setOverride);
+  // Re-reads the list when cloud hymns stream in (number-taken check below).
+  useRemote((s) => s.updatedAt);
+  const book = useSettings((s) => s.book);
   const summaries = getSummaries();
 
   const toForm = (number: number): HymnForm => ({
@@ -119,6 +124,7 @@ export default function AdminAddScreen() {
       authorOriginal: form.authorOriginal.trim(),
       meter: form.meter.trim(),
       chorus: form.chorus.trim(),
+      book,
       ...(form.primaryTopic ? { primaryTopic: form.primaryTopic } : {}),
       topics: form.topics.filter((x) => x !== form.primaryTopic),
       verses: [{
