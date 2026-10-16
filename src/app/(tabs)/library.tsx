@@ -12,14 +12,14 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useMemo, useState } from 'react';
-import { Pressable, ScrollView, SectionList, TextInput, View } from 'react-native';
+import { Pressable, SectionList, TextInput, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { EmptyState } from '../../components/EmptyState';
+import { FilterSelect } from '../../components/FilterSelect';
 import { HymnRow } from '../../components/HymnRow';
-import { SegmentedControl } from '../../components/SegmentedControl';
 import { getBooks, getSummaries, getTopicCounts } from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
 import { isTopicId, matchesTopic, TOPIC_IDS, type TopicId } from '../../data/topics';
@@ -174,62 +174,63 @@ export default function LibraryScreen() {
         ) : null}
       </View>
 
-      {books.length > 1 ? (
-        <SegmentedControl
-          options={books.map((b) => ({ value: b.id, label: t(`book.${b.id}` as const) }))}
-          value={book}
-          onChange={(value) => setBook(value as BookId)}
-          style={{ marginHorizontal: spacing.lg, marginTop: spacing.lg }}
-        />
-      ) : null}
-      {/* Topic filter chips: All + the 9 topics with per-book counts.
-          Combined with the book selector above into one hybrid query. */}
+      {/* One slim filter row: book + topic + order dropdowns. They combine
+          into a single hybrid query (topic counts follow the chosen book). */}
       <View
-        accessible
-        accessibilityRole="menu"
-        accessibilityLabel={t('library.topics')}
-        style={{ marginTop: spacing.md }}>
-        <ScrollView
-          horizontal
-          showsHorizontalScrollIndicator={false}
-          contentContainerStyle={{
-            flexDirection: direction.row,
-            alignItems: 'center',
-            gap: spacing.sm,
-            paddingHorizontal: spacing.lg,
-          }}>
-          <TopicChip
-            selected={topic === null}
-            label={t('library.allTopics')}
-            count={summaries.length}
-            onPress={() => setTopic(null)}
+        style={{
+          flexDirection: direction.row,
+          gap: spacing.sm,
+          paddingHorizontal: spacing.lg,
+          marginTop: spacing.md,
+        }}>
+        {books.length > 1 ? (
+          <FilterSelect
+            title={t('book.choose')}
+            icon="book-open-page-variant"
+            options={books.map((b) => ({
+              value: b.id,
+              label: t(`book.${b.id}` as const),
+              count: b.count,
+            }))}
+            value={book}
+            onChange={(value) => setBook(value as BookId)}
+            style={{ flex: 1 }}
           />
-          {TOPIC_IDS.map((id) => (
-            <TopicChip
-              key={id}
-              selected={topic === id}
-              label={t(`topic.${id}` as const)}
-              count={topicCounts[id]}
-              onPress={() => setTopic(topic === id ? null : id)}
-            />
-          ))}
-        </ScrollView>
+        ) : null}
+        <FilterSelect
+          title={t('library.topics')}
+          icon="tag-outline"
+          options={[
+            { value: '', label: t('library.allTopics'), count: summaries.length },
+            ...TOPIC_IDS.map((id) => ({
+              value: id,
+              label: t(`topic.${id}` as const),
+              count: topicCounts[id],
+            })),
+          ]}
+          value={topic ?? ''}
+          onChange={(value) => setTopic(isTopicId(value) ? value : null)}
+          style={{ flex: 1.4 }}
+        />
+        <FilterSelect
+          title={t('library.sortOrder')}
+          icon="sort"
+          options={[
+            { value: 'number', label: t('library.byNumber') },
+            { value: 'alpha', label: t('library.alphabetical') },
+          ]}
+          value={order}
+          onChange={(value) => setOrder(value as 'number' | 'alpha')}
+          style={{ flex: 1 }}
+        />
       </View>
-      <SegmentedControl
-        options={[
-          { value: 'number', label: t('library.byNumber') },
-          { value: 'alpha', label: t('library.alphabetical') },
-        ]}
-        value={order}
-        onChange={(value) => setOrder(value as 'number' | 'alpha')}
-        style={{ margin: spacing.lg, marginBottom: spacing.sm }}
-      />
 
       <SectionList
         sections={sections}
         keyExtractor={(hymn) => hymn.id}
         stickySectionHeadersEnabled={order === 'alpha' && !trimmed}
         keyboardShouldPersistTaps="handled"
+        style={{ marginTop: spacing.sm }}
         contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.xxl }}
         ListEmptyComponent={
           <EmptyState
@@ -253,65 +254,12 @@ export default function LibraryScreen() {
         renderItem={({ item }) => (
           <HymnRow
             hymn={item}
-            subtitle={
-              topic && item.primaryTopic ? t(`topic.${item.primaryTopic}` as const) : undefined
-            }
+            subtitle={item.primaryTopic ? t(`topic.${item.primaryTopic}` as const) : undefined}
             onPress={() => router.push(`/hymn/${item.id}`)}
           />
         )}
         SectionSeparatorComponent={() => <View style={{ height: spacing.xs }} />}
       />
     </View>
-  );
-}
-
-/** One pill in the topic filter row: label + count, filled when selected. */
-function TopicChip({
-  selected,
-  label,
-  count,
-  onPress,
-}: {
-  selected: boolean;
-  label: string;
-  count: number;
-  onPress: () => void;
-}) {
-  const { colors } = useTheme();
-
-  return (
-    <Pressable
-      onPress={onPress}
-      accessibilityRole="button"
-      accessibilityLabel={`${label} (${count})`}
-      accessibilityState={{ selected }}
-      android_ripple={{ color: colors.border }}
-      style={({ pressed }) => ({
-        flexDirection: 'row',
-        alignItems: 'center',
-        gap: spacing.xs,
-        paddingHorizontal: spacing.md,
-        paddingVertical: spacing.sm,
-        borderRadius: radius.pill,
-        borderWidth: 1,
-        borderColor: selected ? colors.primary : colors.border,
-        backgroundColor: selected ? colors.primary : colors.surface,
-        opacity: pressed ? 0.75 : 1,
-      })}>
-      <AppText
-        variant="label"
-        numberOfLines={1}
-        color={selected ? colors.onPrimary : colors.text}
-        style={{ fontWeight: selected ? '700' : '400' }}>
-        {label}
-      </AppText>
-      <AppText
-        variant="caption"
-        numberOfLines={1}
-        color={selected ? colors.onPrimary : colors.textMuted}
-        style={{ fontWeight: '700' }}>
-        {count}
-      </AppText>
-    </Pressable>
   );
 }

@@ -34,6 +34,7 @@ import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
 import type { SegmentOption } from '../../../components/SegmentedControl';
 import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
 import { displayMeter } from '../../../data/meterFamilies';
+import { allTopicsOf } from '../../../data/topics';
 import { findSimilar } from '../../../data/search';
 import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
@@ -807,6 +808,30 @@ export default function ReaderScreen() {
               <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.7, textAlign: 'right', direction: 'rtl' }}>
                 {t('info.meter')}: <MeterText meter={shownMeter} fontSize={typeScale.caption} color={colors.onPrimary} />
               </AppText>
+            ) : null}
+            {/* Topics under the title when classified. Tapping opens the
+                library filtered to the primary topic. */}
+            {allTopicsOf(hymn).length > 0 ? (
+              <Pressable
+                onPress={() => {
+                  const target = hymn.primaryTopic ?? allTopicsOf(hymn)[0];
+                  if (target) router.push(`/library?topic=${target}`);
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={t('info.topics')}
+                android_ripple={{ color: 'rgba(255,255,255,0.3)' }}
+                style={{ alignSelf: 'flex-end' }}>
+                <AppText
+                  variant="caption"
+                  numberOfLines={1}
+                  color={colors.onPrimary}
+                  style={{ opacity: 0.85, textAlign: 'right', direction: 'rtl' }}>
+                  {t('info.topics')}:{' '}
+                  {allTopicsOf(hymn)
+                    .map((id) => t(`topic.${id}` as const))
+                    .join(' · ')}
+                </AppText>
+              </Pressable>
             ) : null}
           </View>
         </View>

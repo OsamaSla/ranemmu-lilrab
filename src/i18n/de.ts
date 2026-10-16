@@ -22,6 +22,7 @@ export const de: PartialDictionary = {
   'library.alphabetical': 'A–Z',
   'library.topics': 'Thema',
   'library.allTopics': 'Alle',
+  'library.sortOrder': 'Sortierung',
 
   'topic.worship': 'Anbetung und Lobpreis',
   'topic.cross': 'Kreuz und Erlösung',

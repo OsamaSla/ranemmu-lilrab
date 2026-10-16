@@ -24,6 +24,7 @@ export const ar = {
     alphabetical: 'أبجديًا',
     topics: 'الموضوع',
     allTopics: 'الكل',
+    sortOrder: 'الترتيب',
   },
 
   topic: {

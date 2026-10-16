@@ -17,6 +17,7 @@ export const en: PartialDictionary = {
   'library.alphabetical': 'A–Z',
   'library.topics': 'Topic',
   'library.allTopics': 'All',
+  'library.sortOrder': 'Sort order',
 
   'topic.worship': 'Worship & Praise',
   'topic.cross': 'The Cross & Redemption',
