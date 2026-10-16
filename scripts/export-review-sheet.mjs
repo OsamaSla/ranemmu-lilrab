@@ -4,6 +4,16 @@
  *
  * Run with: npm run export:review [-- --local] [--lang de] [--out <file>] [--csv]
  *
+ * Layout (.xlsx):
+ *   Dashboard   — live metrics (total / reviewed / pending / progress %)
+ *                 plus per-category and per-book breakdowns. Values are
+ *                 spreadsheet formulas over the Review tab, so the board
+ *                 stays current while reviewers edit (Excel and Google
+ *                 Sheets both recalculate on open/upload).
+ *   Review      — one row per hymn: ID, Number, Book, Title (Arabic),
+ *                 Arabic Text, German/English Title, German/English
+ *                 Translation, Primary Category, Tags, IsReviewed.
+ *
  * Source (default: merged bundle + live Firebase edits):
  *   (default)  content/*.json overlaid with the Firebase `hymns`
  *              collection — the same picture the app itself renders.
@@ -16,21 +26,23 @@
  * Options:
  *   --lang de|en   reviewed translation language (default: de)
  *   --out <file>   output .xlsx path (default: content/review-sheet.xlsx)
- *   --csv          also write a .csv next to the output (same basename)
+ *   --csv          also write a .csv of the Review tab next to the output
  *
  * The .xlsx uploads straight into Google Sheets (Drive → New → File upload
  * → Open with Sheets): reviewers edit Title/Text/Category/Tags/IsReviewed
  * there, then File → Download → .xlsx and feed it to import-review-sheet.
- * ID/Number/Book columns are keys — never edit them.
+ * ID/Number/Book columns are keys — never edit them. Do not rename the
+ * Review tab — the import finds it by name.
  */
-import { basename, dirname, extname, join, resolve } from 'node:path';
+import { dirname, extname, join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import ExcelJS from 'exceljs';
 import { initializeApp } from 'firebase/app';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
-import { REVIEW_LANGS, rowFromHymn, sheetColumns } from './lib/review-sheet.mjs';
+import { REVIEW_LANGS, REVIEW_SHEET_NAME, rowFromHymn, sheetColumns } from './lib/review-sheet.mjs';
 import { loadLocalCorpus, mergeRemote } from './lib/review-source.mjs';
+import { TOPIC_IDS } from './lib/topic-keywords.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT_DIR = join(ROOT, 'content');
@@ -38,6 +50,19 @@ const CONTENT_DIR = join(ROOT, 'content');
 const TEAL = 'FF0F5B66';
 const HEADER_FONT = { name: 'Arial', size: 11, bold: true, color: { argb: 'FFFFFFFF' } };
 const BODY_FONT = { name: 'Arial', size: 11 };
+const TITLE_FONT = { name: 'Arial', size: 14, bold: true };
+
+/** 0-based column index → Excel letters (A … J … AA …). */
+function colLetter(i) {
+  let n = i + 1;
+  let s = '';
+  while (n > 0) {
+    const m = (n - 1) % 26;
+    s = String.fromCharCode(65 + m) + s;
+    n = Math.floor((n - 1) / 26);
+  }
+  return s;
+}
 
 function argValue(name, fallback = null) {
   const i = process.argv.indexOf(name);
@@ -75,6 +100,162 @@ async function loadHymns(local) {
   return [...mergeRemote(bundle, remote).values()];
 }
 
+function styleHeader(row) {
+  row.font = HEADER_FONT;
+  row.alignment = { horizontal: 'center', vertical: 'middle', wrapText: true };
+  row.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: TEAL } };
+  row.height = 30;
+}
+
+/** Fills a worksheet with the review rows (shared by the xlsx and csv outputs). */
+function fillReviewSheet(ws, columns, rows) {
+  ws.views = [{ state: 'frozen', ySplit: 1 }];
+  ws.columns = columns.map((c) => ({ header: c.header, key: c.key, width: c.width }));
+  styleHeader(ws.getRow(1));
+  ws.autoFilter = { from: 'A1', to: `${colLetter(columns.length - 1)}1` };
+
+  for (const row of rows) {
+    const excelRow = ws.addRow(row);
+    excelRow.font = BODY_FONT;
+    excelRow.alignment = { vertical: 'top', wrapText: true };
+    for (const c of columns) {
+      if (!c.rtl) continue;
+      excelRow.getCell(c.key).alignment = { horizontal: 'right', vertical: 'top', wrapText: true };
+    }
+  }
+
+  // Reviewer guardrails: fixed choice lists on the freetext-prone columns.
+  const last = rows.length + 1;
+  const reviewedCol = colLetter(columns.findIndex((c) => c.key === 'reviewed'));
+  ws.dataValidations.add(`${reviewedCol}2:${reviewedCol}${last}`, {
+    type: 'list',
+    formulae: ['"TRUE,FALSE"'],
+    allowBlank: true,
+    showErrorMessage: true,
+    errorTitle: 'IsReviewed',
+    error: 'Pick TRUE or FALSE from the list',
+  });
+}
+
+/**
+ * Dashboard tab: live metrics as formulas over the Review tab, each with
+ * the export-time value cached as `result` so the board reads correctly
+ * even before the first recalculation.
+ */
+function fillDashboard(ws, columns, rows, lang) {
+  const byKey = new Map(columns.map((c, i) => [c.key, colLetter(i)]));
+  const last = rows.length + 1;
+  const R = `${REVIEW_SHEET_NAME}!`;
+  const range = (key) => `${R}${byKey.get(key)}2:${byKey.get(key)}${last}`;
+
+  const total = rows.length;
+  const reviewed = rows.filter((r) => r.reviewed === 'TRUE').length;
+  const countWhere = (pred) => rows.filter(pred).length;
+
+  ws.columns = [
+    { width: 22 },
+    { width: 14 },
+    { width: 14 },
+    { width: 14 },
+  ];
+
+  let n = 1;
+  ws.getRow(n).getCell(1).value = 'Hymn Review Dashboard';
+  ws.getRow(n).getCell(1).font = TITLE_FONT;
+  n += 1;
+  ws.getRow(n).getCell(1).value =
+    `Review language: ${lang === 'de' ? 'German' : 'English'} · exported ${new Date().toISOString().slice(0, 10)}`;
+  ws.getRow(n).getCell(1).font = { ...BODY_FONT, italic: true, color: { argb: 'FF666666' } };
+  n += 2;
+
+  const metricHeader = ws.getRow(n);
+  metricHeader.getCell(1).value = 'Metric';
+  metricHeader.getCell(2).value = 'Value';
+  styleHeader(metricHeader);
+  n += 1;
+
+  const metric = (label, formula, result, format) => {
+    const row = ws.getRow(n);
+    row.getCell(1).value = label;
+    row.getCell(1).font = BODY_FONT;
+    row.getCell(2).value = { formula, result };
+    row.getCell(2).font = BODY_FONT;
+    if (format) row.getCell(2).numFmt = format;
+    n += 1;
+  };
+  const totalCell = `B${n}`;
+  metric('Total Hymns', `COUNTA(${range('id')})`, total);
+  const reviewedCell = `B${n}`;
+  metric('Reviewed', `COUNTIF(${range('reviewed')},"TRUE")`, reviewed);
+  metric('Pending', `${totalCell}-${reviewedCell}`, total - reviewed);
+  metric('Progress', `${reviewedCell}/${totalCell}`, total === 0 ? 0 : reviewed / total, '0%');
+  n += 1;
+
+  const breakdownHeader = ws.getRow(n);
+  breakdownHeader.getCell(1).value = 'Primary Category';
+  breakdownHeader.getCell(2).value = 'Total';
+  breakdownHeader.getCell(3).value = 'Reviewed';
+  breakdownHeader.getCell(4).value = 'Pending';
+  styleHeader(breakdownHeader);
+  n += 1;
+
+  const categoryRow = (label, criteria) => {
+    const row = ws.getRow(n);
+    const totalF = `COUNTIF(${range('primaryTopic')},${criteria})`;
+    const revF = `COUNTIFS(${range('primaryTopic')},${criteria},${range('reviewed')},"TRUE")`;
+    const t = countWhere((r) => (r.primaryTopic || '') === label);
+    const rv = countWhere((r) => (r.primaryTopic || '') === label && r.reviewed === 'TRUE');
+    row.getCell(1).value = label === '' ? '(uncategorized)' : label;
+    row.getCell(1).font = BODY_FONT;
+    row.getCell(2).value = { formula: totalF, result: t };
+    row.getCell(3).value = { formula: revF, result: rv };
+    row.getCell(4).value = { formula: `B${n}-C${n}`, result: t - rv };
+    for (let c = 2; c <= 4; c += 1) row.getCell(c).font = BODY_FONT;
+    n += 1;
+  };
+  for (const topic of TOPIC_IDS) categoryRow(topic, `"${topic}"`);
+  // Blank Primary Category cells: COUNTBLANK over the bounded range.
+  {
+    const row = ws.getRow(n);
+    const totalF = `COUNTBLANK(${range('primaryTopic')})`;
+    const revF = `COUNTIFS(${range('primaryTopic')},"",${range('reviewed')},"TRUE")`;
+    const t = countWhere((r) => (r.primaryTopic || '') === '');
+    const rv = countWhere((r) => (r.primaryTopic || '') === '' && r.reviewed === 'TRUE');
+    row.getCell(1).value = '(uncategorized)';
+    row.getCell(1).font = BODY_FONT;
+    row.getCell(2).value = { formula: totalF, result: t };
+    row.getCell(3).value = { formula: revF, result: rv };
+    row.getCell(4).value = { formula: `B${n}-C${n}`, result: t - rv };
+    for (let c = 2; c <= 4; c += 1) row.getCell(c).font = BODY_FONT;
+    n += 1;
+  }
+  n += 1;
+
+  const bookHeader = ws.getRow(n);
+  bookHeader.getCell(1).value = 'Book';
+  bookHeader.getCell(2).value = 'Total';
+  bookHeader.getCell(3).value = 'Reviewed';
+  bookHeader.getCell(4).value = 'Pending';
+  styleHeader(bookHeader);
+  n += 1;
+
+  const books = [...new Set(rows.map((r) => r.book))].sort();
+  for (const book of books) {
+    const row = ws.getRow(n);
+    const totalF = `COUNTIF(${range('book')},"${book}")`;
+    const revF = `COUNTIFS(${range('book')},"${book}",${range('reviewed')},"TRUE")`;
+    const t = countWhere((r) => r.book === book);
+    const rv = countWhere((r) => r.book === book && r.reviewed === 'TRUE');
+    row.getCell(1).value = book;
+    row.getCell(1).font = BODY_FONT;
+    row.getCell(2).value = { formula: totalF, result: t };
+    row.getCell(3).value = { formula: revF, result: rv };
+    row.getCell(4).value = { formula: `B${n}-C${n}`, result: t - rv };
+    for (let c = 2; c <= 4; c += 1) row.getCell(c).font = BODY_FONT;
+    n += 1;
+  }
+}
+
 async function main() {
   const lang = argValue('--lang', 'de');
   if (!REVIEW_LANGS.includes(lang)) throw new Error(`--lang must be one of ${REVIEW_LANGS.join(', ')}`);
@@ -89,49 +270,22 @@ async function main() {
   if (hymns.length === 0) throw new Error('no hymns found in the selected source');
 
   const columns = sheetColumns(lang);
+  const rows = hymns.map((h) => rowFromHymn(h, lang));
+  const verified = rows.filter((r) => r.reviewed === 'TRUE').length;
+
   const wb = new ExcelJS.Workbook();
   wb.creator = 'ranemmu.lilrab review pipeline';
-  const ws = wb.addWorksheet('Review');
-  ws.views = [{ state: 'frozen', ySplit: 1 }];
-  ws.columns = columns.map((c) => ({ header: c.header, key: c.key, width: c.width }));
-
-  const headerRow = ws.getRow(1);
-  headerRow.font = HEADER_FONT;
-  headerRow.alignment = { horizontal: 'center', vertical: 'middle', wrapText: true };
-  headerRow.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: TEAL } };
-  headerRow.height = 30;
-  ws.autoFilter = { from: 'A1', to: `${String.fromCharCode(64 + columns.length)}1` };
-
-  let verified = 0;
-  for (const hymn of hymns) {
-    const row = rowFromHymn(hymn, lang);
-    if (row.reviewed === 'TRUE') verified += 1;
-    const excelRow = ws.addRow(row);
-    excelRow.font = BODY_FONT;
-    excelRow.alignment = { vertical: 'top', wrapText: true };
-    for (const c of columns) {
-      if (!c.rtl) continue;
-      const cell = excelRow.getCell(c.key);
-      cell.alignment = { horizontal: 'right', vertical: 'top', wrapText: true };
-    }
-  }
-
-  // Reviewer guardrails: fixed choice lists on the freetext-prone columns.
-  const last = hymns.length + 1;
-  ws.dataValidations.add(`J2:J${last}`, {
-    type: 'list',
-    formulae: ['"TRUE,FALSE"'],
-    allowBlank: true,
-    showErrorMessage: true,
-    errorTitle: 'IsReviewed',
-    error: 'Pick TRUE or FALSE from the list',
-  });
+  fillDashboard(wb.addWorksheet('Dashboard'), columns, rows, lang);
+  fillReviewSheet(wb.addWorksheet(REVIEW_SHEET_NAME), columns, rows);
 
   await wb.xlsx.writeFile(out);
   console.log(`${hymns.length} hymn(s) [${lang}] -> ${out} (${verified} verified)`);
   if (wantCsv) {
+    // CSV holds a single sheet: rebuild just the Review tab on its own.
     const csvOut = out.replace(/\.xlsx$/i, '.csv');
-    await wb.csv.writeFile(csvOut);
+    const cb = new ExcelJS.Workbook();
+    fillReviewSheet(cb.addWorksheet(REVIEW_SHEET_NAME), columns, rows);
+    await cb.csv.writeFile(csvOut);
     console.log(`csv copy -> ${csvOut}`);
   }
 }

@@ -33,7 +33,7 @@ import { getApp, initializeApp } from 'firebase/app';
 import { getAuth, signInWithEmailAndPassword } from 'firebase/auth';
 import { collection, doc, getDocs, getFirestore, writeBatch } from 'firebase/firestore';
 
-import { REVIEW_LANGS, cellText, diffRow, sheetColumns } from './lib/review-sheet.mjs';
+import { REVIEW_LANGS, REVIEW_SHEET_NAME, cellText, diffRow, sheetColumns } from './lib/review-sheet.mjs';
 import { loadLocalCorpus, mergeRemote } from './lib/review-source.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -83,7 +83,16 @@ async function readRows(file) {
   if (ext === '.csv') await wb.csv.readFile(file);
   else if (ext === '.xlsx') await wb.xlsx.readFile(file);
   else throw new Error(`unsupported file ${basename(file)} — use .xlsx or .csv`);
-  const ws = wb.worksheets[0];
+  const ws =
+    wb.getWorksheet(REVIEW_SHEET_NAME) ??
+    wb.worksheets.find((s) => {
+      const first = [];
+      s.getRow(1).eachCell({ includeEmpty: true }, (cell, c) => {
+        first[c] = cellText(cell).trim().toLowerCase();
+      });
+      return first.includes('id') && first.includes('isreviewed');
+    }) ??
+    wb.worksheets[0];
   if (!ws) throw new Error(`${basename(file)}: workbook has no sheets`);
   return ws;
 }

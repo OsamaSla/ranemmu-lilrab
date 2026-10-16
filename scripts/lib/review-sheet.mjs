@@ -23,6 +23,9 @@ import { TOPIC_IDS } from './topic-keywords.mjs';
 /** Translation languages the review sheet supports. `de` is the default. */
 export const REVIEW_LANGS = ['de', 'en'];
 
+/** Name of the tab carrying the hymn rows (export writes it, import finds it by name). */
+export const REVIEW_SHEET_NAME = 'Review';
+
 /** Field names for the reviewed language. */
 export function langFields(lang) {
   return { title: `title_${lang}`, verses: `verses_${lang}`, chorus: `chorus_${lang}` };

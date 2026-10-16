@@ -10,6 +10,13 @@ npm run import:review -- content/review-sheet.xlsx [--lang de] [--local] [--appl
 
 ## Workflow (with Google Sheets)
 
+**Easiest — one click:** double-click `publish-review.cmd` (or drag the
+edited `.xlsx` onto it). It checks the sheet, asks once, then publishes.
+Password entry is masked and never saved; Firebase config is reused from
+`.env.local`.
+
+Manual alternative (same steps the `.cmd` runs):
+
 1. **Export:** `npm run export:review -- --out content/review-sheet.xlsx`
    (needs the `EXPO_PUBLIC_FIREBASE_*` env vars — read is public, no
    sign-in required). The export is the bundle overlaid with live Firebase
@@ -18,6 +25,16 @@ npm run import:review -- content/review-sheet.xlsx [--lang de] [--local] [--appl
    Title (Arabic), Arabic Text, German Title, German Translation, Primary
    Category, Tags, IsReviewed. `--lang en` exports the English columns
    instead; `--local` uses the bundle only (offline).
+
+   The workbook has two tabs:
+   - **Dashboard** (first): live metrics — Total Hymns, Reviewed,
+     Pending, Progress % — plus per-category and per-book breakdowns
+     (Total / Reviewed / Pending each). Values are formulas over the
+     Review tab, so the board stays current as reviewers edit.
+   - **Review**: the hymn rows. Header frozen, Auto-Filter on, dropdown
+     guardrails on IsReviewed. Do not rename this tab — the import
+     finds it by name (older single-sheet exports still import: any tab
+     whose header holds ID + IsReviewed is accepted).
 2. **Review in Google Sheets:** Drive → New → File upload → open with
    Sheets → share with proofreaders. They edit the text/category/review
    columns directly, hundreds of hymns per session.
