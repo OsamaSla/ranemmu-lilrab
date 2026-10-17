@@ -13,5 +13,7 @@
  */
 export const TUTORIAL_YOUTUBE_URL: string = '';
 
-/** Direct video file for in-app playback. Leave empty to use YouTube only. */
+/** Direct video file for in-app playback. Leave empty to use YouTube only.
+ *  Filled by scripts/tutorial/publish_video.mjs after Firebase Storage upload.
+ */
 export const TUTORIAL_MP4_URL: string = '';
