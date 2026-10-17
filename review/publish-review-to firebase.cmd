@@ -20,7 +20,7 @@ rem argument is the review language (de/en) for non-default exports.
 set "SHEET=%~1"
 if "%SHEET%"=="" set "SHEET=review\review-sheet.xlsx"
 set "LANG=%~2"
-if "%LANG%"=="" set "LANG=de"
+if "%LANG%"=="" set "LANG=both"
 if not exist "%SHEET%" (
   echo Sheet not found: %SHEET%
   echo Drag the edited .xlsx onto publish-review.cmd, or export first:

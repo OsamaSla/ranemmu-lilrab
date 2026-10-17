@@ -4,8 +4,8 @@ Two scripts move the 1422 hymns between Firebase and a spreadsheet, so
 reviewers correct texts, retag topics and flip review status in bulk:
 
 ```
-npm run export:review -- --out review/review-sheet.xlsx [--lang de] [--local] [--csv]
-npm run import:review -- review/review-sheet.xlsx [--lang de] [--local] [--apply]
+npm run export:review -- --out review/review-sheet.xlsx [--lang de|en|both] [--local] [--csv]
+npm run import:review -- review/review-sheet.xlsx [--lang de|en|both] [--local] [--apply]
 ```
 
 ## Workflow (with Google Sheets)
@@ -22,11 +22,11 @@ Manual alternative (same steps the `.cmd` runs):
    sign-in required). The export is the bundle overlaid with live Firebase
    edits (the same picture the app renders), since Firebase only holds
    hymns an admin has touched. One row per hymn: ID, Number, Book,
-   Title (Arabic), Arabic Text, German Title, German Translation, Primary
+   Title (Arabic), Arabic Text, translation columns (default both EN+DE), Primary
    Category, Tags, IsReviewed. `--lang en` exports the English columns
    instead; `--local` uses the bundle only (offline).
 
-   The workbook has two tabs:
+   The workbook has three tabs:
    - **Dashboard** (first): live metrics — Total Hymns, Reviewed,
      Pending, Progress % — plus per-category and per-book breakdowns
      (Total / Reviewed / Pending each). Values are formulas over the

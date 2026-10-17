@@ -35,6 +35,7 @@
  * Review tab — the import finds it by name.
  */
 import { dirname, extname, join, resolve } from 'node:path';
+import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import ExcelJS from 'exceljs';
 import { initializeApp } from 'firebase/app';
@@ -137,6 +138,52 @@ function fillReviewSheet(ws, columns, rows) {
   });
 }
 
+/** Fills a Search tab: type a number or title in B3; the first match is shown below (works in all Excel versions). */
+function fillSearch(ws, columns, rows) {
+  ws.getCell('A1').value = 'Find a hymn by number or title';
+  ws.getCell('A1').font = TITLE_FONT;
+  ws.getCell('A3').value = 'Search (number or title):';
+  ws.getCell('A3').font = { ...BODY_FONT, bold: true };
+  const input = ws.getCell('B3');
+  input.value = '';
+  input.fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFFFFF99' } };
+  input.border = {
+    top: { style: 'thin' }, left: { style: 'thin' },
+    bottom: { style: 'thin' }, right: { style: 'thin' },
+  };
+  ws.getCell('D3').value = 'Type a hymn number or part of the Arabic title, then press Enter.';
+  ws.getCell('D3').font = { ...BODY_FONT, italic: true, color: { argb: 'FF666666' } };
+
+  const last = rows.length + 1; // Review data rows are 2..last
+  const numRange = `Review!$B$2:$B$${last}`;
+  const titleRange = `Review!$D$2:$D$${last}`;
+  ws.getCell('A4').value = 'Matched hymn number:';
+  ws.getCell('A4').font = { ...BODY_FONT, bold: true };
+  const matchedFormula =
+    `=IF(TRIM($B$3)="","",IFERROR(INDEX(${numRange},MATCH(TRUE,INDEX(((ISNUMBER(SEARCH(TRIM($B$3),${titleRange})))+(${numRange}=IFERROR(VALUE(TRIM($B$3)),0)))>0,0),0)),"No match"))`;
+  ws.getCell('B4').value = { formula: matchedFormula };
+  ws.getCell('B4').font = { ...BODY_FONT, bold: true };
+
+  ws.getCell('A6').value = 'Result (first match):';
+  ws.getCell('A6').font = { ...BODY_FONT, bold: true, color: { argb: 'FF0F5B66' } };
+  const headerRow = 7;
+  const header = ws.getRow(headerRow);
+  columns.forEach((c, i) => { header.getCell(i + 1).value = c.header; });
+  styleHeader(header);
+
+  const resultRow = 8;
+  for (let i = 0; i < columns.length; i++) {
+    const letter = String.fromCharCode(65 + i);
+    const formula = `=IFERROR(INDEX(Review!${letter}$2:${letter}$${last},MATCH($B$4,Review!$B$2:$B$${last},0)),"")`;
+    ws.getCell(`${letter}${resultRow}`).value = { formula };
+  }
+
+  ws.getCell('A10').value = 'Tip: for multiple matches, use the filter arrows in the Review tab header (Number / Title).';
+  ws.getCell('A10').font = { ...BODY_FONT, italic: true, color: { argb: 'FF666666' } };
+
+  ws.columns = columns.map((c) => ({ width: c.width }));
+}
+
 /**
  * Dashboard tab: live metrics as formulas over the Review tab, each with
  * the export-time value cached as `result` so the board reads correctly
@@ -164,7 +211,7 @@ function fillDashboard(ws, columns, rows, lang) {
   ws.getRow(n).getCell(1).font = TITLE_FONT;
   n += 1;
   ws.getRow(n).getCell(1).value =
-    `Review language: ${lang === 'de' ? 'German' : 'English'} · exported ${new Date().toISOString().slice(0, 10)}`;
+    `Review language: ${lang === 'de' ? 'German' : lang === 'en' ? 'English' : 'English + German'} · exported ${new Date().toISOString().slice(0, 10)}`;
   ws.getRow(n).getCell(1).font = { ...BODY_FONT, italic: true, color: { argb: 'FF666666' } };
   n += 2;
 
@@ -257,8 +304,8 @@ function fillDashboard(ws, columns, rows, lang) {
 }
 
 async function main() {
-  const lang = argValue('--lang', 'de');
-  if (!REVIEW_LANGS.includes(lang)) throw new Error(`--lang must be one of ${REVIEW_LANGS.join(', ')}`);
+  const lang = argValue('--lang', 'both');
+  if (!REVIEW_LANGS.includes(lang) && lang !== 'both') throw new Error(`--lang must be one of ${REVIEW_LANGS.join(', ')}, both`);
   const local = process.argv.includes('--local');
   const wantCsv = process.argv.includes('--csv');
   const out = resolve(ROOT, argValue('--out', 'review/review-sheet.xlsx'));
@@ -275,10 +322,22 @@ async function main() {
 
   const wb = new ExcelJS.Workbook();
   wb.creator = 'ranemmu.lilrab review pipeline';
-  fillDashboard(wb.addWorksheet('Dashboard'), columns, rows, lang);
+  const dashboard = wb.addWorksheet('Dashboard');
+  fillDashboard(dashboard, columns, rows, lang);
+  // Clickable shortcut to the Search tab (Excel has no macro button without
+  // VBA, so a styled hyperlink cell is the portable equivalent).
+  {
+    const linkRow = dashboard.rowCount + 2;
+    dashboard.getCell(`A${linkRow}`).value = { text: 'Find a hymn by number or title →', hyperlink: '#Search!A1' };
+    dashboard.getCell(`A${linkRow}`).font = { name: 'Arial', size: 12, bold: true, color: { argb: 'FF0F5B66' }, underline: true };
+  }
   fillReviewSheet(wb.addWorksheet(REVIEW_SHEET_NAME), columns, rows);
+  fillSearch(wb.addWorksheet('Search'), columns, rows);
 
   await wb.xlsx.writeFile(out);
+  // Force Excel to recalculate on open (fullCalcOnLoad), so the Search
+  // sheet's formulas show results immediately instead of stale blanks.
+  spawnSync('python', [join(ROOT, 'scripts', 'patch-fullcalc.py'), out], { stdio: 'inherit' });
   console.log(`${hymns.length} hymn(s) [${lang}] -> ${out} (${verified} verified)`);
   if (wantCsv) {
     // CSV holds a single sheet: rebuild just the Review tab on its own.

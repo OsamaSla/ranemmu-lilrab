@@ -113,20 +113,31 @@ async function main() {
     throw new Error('usage: node scripts/import-review-sheet.mjs <file.xlsx|file.csv> [--lang de] [--local] [--apply]');
   }
   const file = resolve(ROOT, input);
-  const lang = argValue('--lang', 'de');
-  if (!REVIEW_LANGS.includes(lang)) throw new Error(`--lang must be one of ${REVIEW_LANGS.join(', ')}`);
+  let lang = argValue('--lang', null);
   const local = process.argv.includes('--local');
   const apply = process.argv.includes('--apply');
   if (local && apply) throw new Error('--local is dry-run only (it has nowhere to write); drop --apply');
-
-  const columns = sheetColumns(lang);
-  const byHeader = new Map(columns.map((c) => [c.header.toLowerCase(), c.key]));
 
   const ws = await readRows(file);
   const headerCells = [];
   ws.getRow(1).eachCell({ includeEmpty: true }, (cell, c) => {
     headerCells[c] = cellText(cell).trim().toLowerCase();
   });
+  if (lang === null) {
+    const lower = headerCells.filter(Boolean);
+    const hasEn = lower.includes('english title');
+    const hasDe = lower.includes('german title');
+    if (hasEn && hasDe) lang = 'both';
+    else if (hasEn) lang = 'en';
+    else if (hasDe) lang = 'de';
+    else lang = 'de';
+  }
+  if (!REVIEW_LANGS.includes(lang) && lang !== 'both') {
+    throw new Error(`--lang must be one of ${REVIEW_LANGS.join(', ')}, both`);
+  }
+
+  const columns = sheetColumns(lang);
+  const byHeader = new Map(columns.map((c) => [c.header.toLowerCase(), c.key]));
   const colIndex = new Map();
   headerCells.forEach((h, c) => {
     if (h && byHeader.has(h)) colIndex.set(byHeader.get(h), c);

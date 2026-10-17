@@ -47,3 +47,14 @@ Thumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
+
+# Tutorial video pipeline — keep sources (slides.json, scripts), ignore outputs
+tutorial/frames/
+tutorial/slides_png/
+tutorial/audio/
+tutorial/clips/
+tutorial/scene_kit/
+tutorial/final.mp4
+tutorial/1-edited.pptx
+tutorial/client_secret.json
+tutorial/.youtube-token.json

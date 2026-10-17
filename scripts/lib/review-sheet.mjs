@@ -39,6 +39,22 @@ export const CHORUS_HEADERS = new Set(['قرار', 'القرار']);
  * columns identify the hymn and are never written back.
  */
 export function sheetColumns(lang) {
+  if (lang === 'both') {
+    return [
+      { key: 'id', header: 'ID', width: 10, readonly: true },
+      { key: 'number', header: 'Number', width: 10, readonly: true },
+      { key: 'book', header: 'Book', width: 12, readonly: true },
+      { key: 'title', header: 'Title (Arabic)', width: 30, rtl: true },
+      { key: 'arabic', header: 'Arabic Text', width: 70, rtl: true, multiline: true },
+      { key: 'titleEn', header: 'English Title', width: 30 },
+      { key: 'textEn', header: 'English Translation', width: 70, multiline: true },
+      { key: 'titleDe', header: 'German Title', width: 30 },
+      { key: 'textDe', header: 'German Translation', width: 70, multiline: true },
+      { key: 'primaryTopic', header: 'Primary Category', width: 18 },
+      { key: 'topics', header: 'Tags', width: 30 },
+      { key: 'reviewed', header: 'IsReviewed', width: 12 },
+    ];
+  }
   const languageName = lang === 'de' ? 'German' : 'English';
   return [
     { key: 'id', header: 'ID', width: 10, readonly: true },
@@ -148,6 +164,24 @@ const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
 /** Builds one export row from a hymn record. */
 export function rowFromHymn(hymn, lang) {
+  if (lang === 'both') {
+    const versesEn = hymn.verses_en;
+    const versesDe = hymn.verses_de;
+    return {
+      id: hymn.id,
+      number: hymn.number,
+      book: hymn.book ?? 'main',
+      title: hymn.title ?? '',
+      arabic: encodeVerses(hymn.verses ?? []),
+      titleEn: hymn.title_en ?? '',
+      textEn: versesEn ? encodeVerses(versesEn) : '',
+      titleDe: hymn.title_de ?? '',
+      textDe: versesDe ? encodeVerses(versesDe) : '',
+      primaryTopic: hymn.primaryTopic ?? '',
+      topics: (hymn.topics ?? []).join(', '),
+      reviewed: (hymn.translationStatus ?? 'AI_DRAFT') === 'VERIFIED' ? 'TRUE' : 'FALSE',
+    };
+  }
   const f = langFields(lang);
   const versesLang = hymn[f.verses];
   return {
@@ -190,7 +224,6 @@ export function diffRow(row, base, live, lang) {
   const warnings = [];
   const patch = {};
   const where = `${row.id || '?'} (#${row.number || '?'})`;
-  const f = langFields(lang);
 
   // r=row, b=base, l=live. Missing base (remote-only hymn) degrades to
   // two-way: any row-vs-live difference applies.
@@ -235,45 +268,55 @@ export function diffRow(row, base, live, lang) {
     }
   }
 
-  const titleLang = (row.titleLang ?? '').trim();
-  if (titleLang !== '') {
-    decide(titleLang, base ? (base[f.title] ?? '').trim() : undefined, (live[f.title] ?? '').trim(), () => {
-      patch[f.title] = titleLang;
-    }, `${lang.toUpperCase()} Title`);
-  }
-  // Blank translation cells mean "no change" — translations are never
-  // deleted from the sheet.
+  // Translation columns: one language (de/en) or both in a single sheet.
+  const langsToReview = lang === 'both' ? ['en', 'de'] : [lang];
+  for (const l of langsToReview) {
+    const isBoth = lang === 'both';
+    const titleField = isBoth ? (l === 'en' ? 'titleEn' : 'titleDe') : 'titleLang';
+    const textField = isBoth ? (l === 'en' ? 'textEn' : 'textDe') : 'textLang';
+    const f = langFields(l);
+    const langLabel = l.toUpperCase();
 
-  const textLangRaw = (row.textLang ?? '').trim();
-  if (textLangRaw !== '') {
-    const parsed = parseVersesCell(textLangRaw);
-    if (parsed.error) {
-      errors.push(`${where}: ${lang.toUpperCase()} Translation: ${parsed.error}`);
-    } else {
-      const liveLang = live[f.verses];
-      const baseLang = base?.[f.verses];
-      // Shape anchor: the live translation when present (the write target),
-      // otherwise the Arabic verses for newly created translations.
-      const anchor = liveLang ?? live.verses ?? [];
-      const mismatch = shapeMismatch(anchor, parsed.blocks);
-      if (mismatch) {
-        errors.push(`${where}: ${lang.toUpperCase()} Translation: ${mismatch}`);
+    const titleLang = (row[titleField] ?? '').trim();
+    if (titleLang !== '') {
+      decide(titleLang, base ? (base[f.title] ?? '').trim() : undefined, (live[f.title] ?? '').trim(), () => {
+        patch[f.title] = titleLang;
+      }, `${langLabel} Title`);
+    }
+    // Blank translation cells mean "no change" — translations are never
+    // deleted from the sheet.
+
+    const textLangRaw = (row[textField] ?? '').trim();
+    if (textLangRaw !== '') {
+      const parsed = parseVersesCell(textLangRaw);
+      if (parsed.error) {
+        errors.push(`${where}: ${langLabel} Translation: ${parsed.error}`);
       } else {
-        const rowLines = parsed.blocks.map((b) => b.lines);
-        const built = anchor.map((v, i) => ({ ...v, lines: parsed.blocks[i].lines }));
-        if (!liveLang) {
-          // New translation: absent on both sides, or app-added meanwhile.
-          if (baseLang) {
-            decide(rowLines, linesOf(baseLang), linesOf(liveLang), () => {
-              patch[f.verses] = built;
-            }, `${lang.toUpperCase()} Translation`);
-          } else if (!same(built, liveLang ?? [])) {
-            patch[f.verses] = built;
-          }
+        const liveLang = live[f.verses];
+        const baseLang = base?.[f.verses];
+        // Shape anchor: the live translation when present (the write target),
+        // otherwise the Arabic verses for newly created translations.
+        const anchor = liveLang ?? live.verses ?? [];
+        const mismatch = shapeMismatch(anchor, parsed.blocks);
+        if (mismatch) {
+          errors.push(`${where}: ${langLabel} Translation: ${mismatch}`);
         } else {
-          decide(rowLines, base ? linesOf(baseLang) : undefined, linesOf(liveLang), () => {
-            patch[f.verses] = built;
-          }, `${lang.toUpperCase()} Translation`);
+          const rowLines = parsed.blocks.map((b) => b.lines);
+          const built = anchor.map((v, i) => ({ ...v, lines: parsed.blocks[i].lines }));
+          if (!liveLang) {
+            // New translation: absent on both sides, or app-added meanwhile.
+            if (baseLang) {
+              decide(rowLines, linesOf(baseLang), linesOf(liveLang), () => {
+                patch[f.verses] = built;
+              }, `${langLabel} Translation`);
+            } else if (!same(built, liveLang ?? [])) {
+              patch[f.verses] = built;
+            }
+          } else {
+            decide(rowLines, base ? linesOf(baseLang) : undefined, linesOf(liveLang), () => {
+              patch[f.verses] = built;
+            }, `${langLabel} Translation`);
+          }
         }
       }
     }

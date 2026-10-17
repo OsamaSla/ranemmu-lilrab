@@ -63,6 +63,13 @@
     "import:review": "node scripts/import-review-sheet.mjs",
     "import:input": "node scripts/converter.mjs content/input-temp.txt content/from-input.xlsx",
     "add-batch": "node scripts/add-batch.mjs",
+    "tutorial:deck": "python scripts/tutorial/edit_deck.py",
+    "tutorial:slides": "powershell -ExecutionPolicy Bypass -File scripts/tutorial/export_slides.ps1 -In C:\\temptest\\1-edited.pptx -Out C:\\temptest\\slides_hd",
+    "tutorial:import": "python scripts/tutorial/import_slides.py C:\\temptest\\slides_hd tutorial/slides_png",
+    "tutorial:video": "python scripts/tutorial/make_video.py",
+    "tutorial:timeline": "python scripts/tutorial/timeline.py",
+    "tutorial:publish": "node --env-file=.env.local scripts/tutorial/publish_video.mjs",
+    "tutorial:youtube": "python scripts/tutorial/upload_youtube.py",
     "predeploy": "expo export -p web && node scripts/pages-fallback.mjs && node scripts/pwa-head.mjs",
     "deploy": "gh-pages --nojekyll -d dist"
   },
