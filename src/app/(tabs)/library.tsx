@@ -155,9 +155,9 @@ export default function LibraryScreen() {
           placeholder={t('search.placeholder')}
           placeholderTextColor={colors.textMuted}
           keyboardType={(() => {
-            const trimmedNum = query.trim();
-            const isNumericQuery = /^\d+$/.test(trimmedNum);
-            const digits = isNumericQuery ? trimmedNum.replace(/^0+(?=\d)/, '') : '';
+            const norm = normalizeText(query.trim());
+            const isNumericQuery = /^\d+$/.test(norm) && norm.length <= 4;
+            const digits = isNumericQuery ? norm.replace(/^0+(?=\d)/, '') : '';
             const hasMatch = isNumericQuery && (digits.length > 0) && (
               topicFiltered.some((s) => String(s.number) === digits) ||
               topicFiltered.some((s) => String(s.number).startsWith(digits))
