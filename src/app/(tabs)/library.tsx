@@ -151,7 +151,13 @@ export default function LibraryScreen() {
         <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
         <TextInput
           value={query}
-          onChangeText={setQuery}
+          onChangeText={(text) => {
+            // Auto-convert Arabic-Indic digits (٠-٩) to Western (0-9) so number search works seamlessly
+            const converted = text.replace(/[\u0660-\u0669\u06F0-\u06F9]/g, (ch) => {
+              return String.fromCharCode(ch.charCodeAt(0) - 0x0660 + 48);
+            });
+            setQuery(converted);
+          }}
           placeholder={t('search.placeholder')}
           placeholderTextColor={colors.textMuted}
           keyboardType={(() => {
