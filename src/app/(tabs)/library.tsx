@@ -154,6 +154,7 @@ export default function LibraryScreen() {
           onChangeText={setQuery}
           placeholder={t('search.placeholder')}
           placeholderTextColor={colors.textMuted}
+          keyboardType={/^\d*$/.test(query.trim()) ? 'numeric' : 'default'}
           returnKeyType="search"
           style={{
             flex: 1,
