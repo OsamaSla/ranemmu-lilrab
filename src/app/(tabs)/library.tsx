@@ -134,7 +134,9 @@ export default function LibraryScreen() {
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={t('library.title')} subtitle={`${summaries.length}`} showBack />
 
-      {/* In-list search: filters the hymns below, no separate screen. */}
+      {/* Hymn list takes all remaining space above the bottom search */}
+      <View style={{ flex: 1 }}>
+        <SectionList
       <View
         style={{
           flexDirection: direction.row,
@@ -292,5 +294,135 @@ export default function LibraryScreen() {
         SectionSeparatorComponent={() => <View style={{ height: spacing.xs }} />}
       />
     </View>
+
+    {/* Bottom search + filters — stays visible when keyboard opens */}
+    <View style={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.md, backgroundColor: colors.surfaceMuted }}>
+      <View
+        style={{
+          flexDirection: direction.row,
+          alignItems: 'center',
+          marginTop: spacing.md,
+          backgroundColor: colors.surface,
+          borderRadius: radius.pill,
+          borderWidth: 1,
+          borderColor: colors.border,
+          paddingHorizontal: spacing.md,
+          height: 48,
+        }}>
+        <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
+        <TextInput
+          value={query}
+          onChangeText={setQuery}
+          placeholder={t('search.placeholder')}
+          placeholderTextColor={colors.textMuted}
+          keyboardType={(() => {
+            const norm = normalizeText(query.trim());
+            const isNumericQuery = /^\d+$/.test(norm) && norm.length <= 4;
+            const digits = isNumericQuery ? norm.replace(/^0+(?=\d)/, '') : '';
+            const hasMatch = isNumericQuery && (digits.length > 0) && (
+              topicFiltered.some((s) => String(s.number) === digits) ||
+              topicFiltered.some((s) => String(s.number).startsWith(digits))
+            );
+            return hasMatch ? 'numeric' : 'default';
+          })()}
+          returnKeyType="search"
+          style={{
+            flex: 1,
+            marginHorizontal: spacing.sm,
+            color: colors.text,
+            fontFamily,
+            fontSize: 16,
+            writingDirection: direction.dir,
+            textAlign: direction.textAlign,
+          }}
+        />
+        {query.length > 0 ? (
+          <Pressable
+            onPress={() => setQuery('')}
+            accessibilityRole="button"
+            accessibilityLabel={t('search.clear')}
+            hitSlop={8}
+            android_ripple={{ color: colors.border }}
+            style={{ padding: spacing.xs }}>
+            <MaterialCommunityIcons name="close-circle" size={24} color={colors.textMuted} />
+          </Pressable>
+        ) : null}
+      </View>
+
+      {/* Book pills + sort + topic dropdown */}
+      <View
+        style={{
+          flexDirection: direction.row,
+          gap: spacing.sm,
+          paddingHorizontal: spacing.lg,
+          marginTop: spacing.sm,
+        }}>
+        {books.length > 1 ? (
+          <View style={{ flexDirection: direction.row, gap: 6 }}>
+            {books.map((b) => (
+              <Pressable
+                key={b.id}
+                onPress={() => setBook(b.id as BookId)}
+                accessibilityRole="button"
+                accessibilityLabel={`${t('book.choose')}: ${t(`book.${b.id}` as const)}`}
+                android_ripple={{ color: colors.border }}
+                style={({ pressed }) => ({
+                  paddingVertical: 5,
+                  paddingHorizontal: 14,
+                  borderRadius: 18,
+                  borderWidth: 1.5,
+                  borderColor: book === b.id ? colors.primary : colors.border,
+                  backgroundColor: book === b.id ? colors.primary : colors.surface,
+                  opacity: pressed ? 0.75 : 1,
+                })}>
+                <AppText variant="label" color={book === b.id ? colors.onPrimary : colors.text} style={{ fontWeight: '600', fontSize: 12 }}>
+                  {t(`book.${b.id}` as const)}
+                </AppText>
+              </Pressable>
+            ))}
+          </View>
+        ) : null}
+        <View style={{ flex: 1 }} />
+        <Pressable
+          onPress={() => setOrder(order === 'number' ? 'alpha' : 'number')}
+          accessibilityRole="button"
+          accessibilityLabel={`${t('library.sortOrder')}: ${t(order === 'number' ? 'library.byNumber' : 'library.alphabetical')}`}
+          android_ripple={{ color: colors.border }}
+          style={({ pressed }) => ({
+            width: 44,
+            minHeight: 36,
+            alignItems: 'center',
+            justifyContent: 'center',
+            borderRadius: radius.md,
+            borderWidth: 1,
+            borderColor: colors.border,
+            backgroundColor: colors.surface,
+            opacity: pressed ? 0.75 : 1,
+          })}>
+          <MaterialCommunityIcons
+            name={order === 'number' ? 'sort-numeric-ascending' : 'sort-alphabetical-ascending'}
+            size={22}
+            color={colors.primary}
+          />
+        </Pressable>
+        <View style={{ width: 160, minHeight: 36 }}>
+          <FilterSelect
+            title={t('library.topics')}
+            icon="tag-outline"
+            options={[
+              { value: '', label: t('library.allTopics'), count: summaries.length },
+              ...TOPIC_IDS.map((id) => ({
+                value: id,
+                label: t(`topic.${id}` as const),
+                count: topicCounts[id],
+              })),
+            ]}
+            value={topic ?? ''}
+            onChange={(value) => setTopic(isTopicId(value) ? value : null)}
+          />
+        </View>
+      </View>
+    </View>
   );
+}
 }
