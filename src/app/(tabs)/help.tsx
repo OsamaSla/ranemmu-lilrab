@@ -6,8 +6,8 @@
  * each entry are reviewable at a glance.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import type { ComponentProps } from 'react';
-import { ScrollView, View } from 'react-native';
+import * as WebBrowser from 'expo-web-browser';
+import { Linking, Pressable, ScrollView, View } from 'react-native';
 
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
@@ -37,6 +37,36 @@ export default function HelpScreen() {
 
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         <TutorialVideoCard />
+        {/* Installation guide video — easily reachable for non-technical users */}
+        <Card style={{ padding: spacing.lg, marginTop: spacing.md }}>
+          <Pressable
+            onPress={() => {
+              const url = 'https://www.youtube.com/shorts/55dNrcoMhwc';
+              try {
+                WebBrowser.openBrowserAsync(url).catch(() => Linking.openURL(url).catch(() => {}));
+              } catch {}
+            }}
+            accessibilityRole="button"
+            accessibilityLabel={t('installApp.title')}
+            android_ripple={{ color: colors.border }}
+            style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.md }}>
+            <View
+              style={{
+                backgroundColor: colors.primary,
+                borderRadius: radius.md,
+                paddingHorizontal: spacing.md,
+                paddingVertical: spacing.xs,
+              }}>
+              <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
+                {t('installApp.title')}
+              </AppText>
+            </View>
+            <MaterialCommunityIcons name="cellphone-link" size={22} color={colors.textMuted} />
+            <AppText variant="body" style={{ flex: 1 }} numberOfLines={2}>
+              {t('installApp.body')}
+            </AppText>
+          </Pressable>
+        </Card>
         <Card style={{ padding: spacing.lg }}>
           <View style={{ flexDirection: direction.row, alignItems: 'center', marginBottom: spacing.lg }}>
             <View
