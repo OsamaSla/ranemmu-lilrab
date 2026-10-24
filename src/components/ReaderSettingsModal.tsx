@@ -17,7 +17,7 @@ import { AppText } from './AppText';
 import { FontChips } from './FontChips';
 import { IconButton } from './IconButton';
 import { SegmentedControl } from './SegmentedControl';
-import { openHymnMedia, resolveHymnMediaUrl } from '../data/media';
+import { openHymnMedia, resolveHymnMediaUrl, youtubeSearchUrl } from '../data/media';
 import type { Hymn } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -163,34 +163,60 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
           </View>
 
           {media ? (
-            <Pressable
-              onPress={() => {
-                void openHymnMedia(media.url);
-              }}
-              accessibilityRole="link"
-              accessibilityLabel={t(media.curated ? 'reader.listen' : 'reader.listenSearch')}
-              android_ripple={{ color: colors.border }}
-              style={({ pressed }) => ({
-                flexDirection: direction.row,
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: spacing.sm,
-                marginTop: spacing.lg,
-                paddingVertical: spacing.md,
-                paddingHorizontal: spacing.md,
-                borderRadius: radius.pill,
-                backgroundColor: colors.primary,
-                opacity: pressed ? 0.8 : 1,
-              })}>
-              <MaterialCommunityIcons
-                name={media.curated ? 'play-circle-outline' : 'youtube'}
-                size={22}
-                color={colors.onPrimary}
-              />
-              <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-                {t(media.curated ? 'reader.listen' : 'reader.listenSearch')}
-              </AppText>
-            </Pressable>
+            <>
+              {media.curated ? (
+                <Pressable
+                  onPress={() => {
+                    void openHymnMedia(media.url);
+                  }}
+                  accessibilityRole="link"
+                  accessibilityLabel={t('reader.listen')}
+                  android_ripple={{ color: colors.border }}
+                  style={({ pressed }) => ({
+                    flexDirection: direction.row,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    gap: spacing.sm,
+                    marginTop: spacing.lg,
+                    paddingVertical: spacing.md,
+                    paddingHorizontal: spacing.md,
+                    borderRadius: radius.pill,
+                    backgroundColor: colors.primary,
+                    opacity: pressed ? 0.8 : 1,
+                  })}>
+                  <MaterialCommunityIcons name="play-circle-outline" size={22} color={colors.onPrimary} />
+                  <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
+                    {t('reader.listen')}
+                  </AppText>
+                </Pressable>
+              ) : null}
+              <Pressable
+                onPress={() => {
+                  void openHymnMedia(youtubeSearchUrl(hymn!));
+                }}
+                accessibilityRole="link"
+                accessibilityLabel={t('reader.listenSearch')}
+                android_ripple={{ color: colors.border }}
+                style={({ pressed }) => ({
+                  flexDirection: direction.row,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: spacing.sm,
+                  marginTop: spacing.sm,
+                  paddingVertical: spacing.md,
+                  paddingHorizontal: spacing.md,
+                  borderRadius: radius.pill,
+                  borderWidth: 1,
+                  borderColor: colors.primary,
+                  backgroundColor: 'transparent',
+                  opacity: pressed ? 0.8 : 1,
+                })}>
+                <MaterialCommunityIcons name="youtube" size={22} color={colors.primary} />
+                <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
+                  {t('reader.listenSearch')}
+                </AppText>
+              </Pressable>
+            </>
           ) : null}
 
           {hymn ? (
