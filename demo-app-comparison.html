@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مقارنة — النسخة الحالية مقابل الجديدة</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: '#0F5B66', tealDeep: '#184D55', accent: '#20808D',
+            canvas: '#FAFAFA', surface: '#FFFFFF', border: '#E5E5E5',
+            text: '#111111', muted: '#555555', favorite: '#C9A227',
+            ink: '#0f2a1e', parchment: '#f7f4e9', cream: '#fdfbf7',
+            gold: '#c8a84d', goldDeep: '#a8842e', sage: '#8a9a87', clay: '#c4a896',
+          },
+          fontFamily: {
+            arabic: ['"Noto Naskh Arabic"', 'serif'],
+            display: ['"Amiri"', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Naskh Arabic', serif; background: #fdfbf7; color: #111; }
+    ::selection { background: #c8a84d33; }
+  </style>
+</head>
+
+<body class="min-h-screen">
+
+  <header class="sticky top-0 z-40 bg-ink/90 backdrop-blur text-parchment shadow-xl">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <h1 class="font-display text-2xl font-bold">مقارنة النسخ — الحالي مقابل الجديد</h1>
+      <p class="text-sm text-parchment/70">النسخة القديمة محفوظة · النسخة الجديدة تجريبية</p>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Section 1: Navigation -->
+    <section>
+      <h2 class="font-display text-3xl font-bold text-ink mb-6">شريط التنقل</h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+
+        <!-- Old Nav -->
+        <div class="rounded-2xl overflow-hidden shadow ring-1 ring-stone/10 bg-canvas">
+          <div class="bg-teal px-6 py-4 flex items-center justify-between text-white shadow-md shadow-teal/20">
+            <span class="font-bold text-lg">رنموا للرب</span>
+            <span class="text-xs opacity-70">نسخة حالية</span>
+          </div>
+          <div class="p-6 space-y-4">
+            <div class="flex gap-3">
+              <a href="#" class="px-3 py-1.5 rounded-lg bg-teal text-white text-sm font-bold shadow">المكتبة</a>
+              <a href="#" class="px-3 py-1.5 rounded-lg bg-canvas border border-border text-muted text-sm font-bold hover:bg-surface">القارئ</a>
+            </div>
+            <p class="text-xs text-muted">ألوان بسيطة، بدون تأثيرات زجاجية، بدون خطوط عربية خاصة.</p>
+          </div>
+        </div>
+
+        <!-- New Nav -->
+        <div class="rounded-[2rem] overflow-hidden shadow-2xl shadow-ink/10 ring-1 ring-ink/5 bg-parchment">
+          <div class="backdrop-blur-xl bg-white/80 border-b border-white/40 px-8 py-5 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+              <span class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-goldDeep text-white flex items-center justify-center shadow-lg shadow-gold/30">
+                <i class="fa-solid fa-music text-sm"></i>
+              </span>
+              <span class="font-display text-xl font-bold text-ink">رنموا للرب</span>
+            </a>
+            <span class="text-xs font-extrabold tracking-widest text-goldDeep uppercase">نسخة جديدة</span>
+          </div>
+          <div class="p-8 space-y-4">
+            <div class="flex gap-4 text-sm font-bold text-stone">
+              <a href="#" class="hover:text-ink transition">المكتبة</a>
+              <a href="#" class="hover:text-ink transition">القارئ</a>
+              <a href="#" class="hover:text-ink transition">الكتب</a>
+            </div>
+            <p class="text-xs text-stone">زجاج (glassmorphism)، ألوان ذهبية، خط Amiri، تأثيرات ظل ناعمة.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Library List -->
+    <section>
+      <h2 class="font-display text-3xl font-bold text-ink mb-6">قائمة المكتبة</h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+
+        <!-- Old Library -->
+        <div class="bg-canvas rounded-2xl p-6 shadow ring-1 ring-stone/10">
+          <div class="flex items-center justify-between mb-5">
+            <h3 class="font-bold text-lg text-teal">المكتبة</h3>
+            <div class="flex gap-2">
+              <span class="px-3 py-0.5 rounded-full bg-teal text-white text-xs font-bold">الرئيسي</span>
+              <span class="px-3 py-0.5 rounded-full bg-surface border border-border text-muted text-xs">روحية</span>
+            </div>
+          </div>
+          <div class="space-y-3">
+            <a href="#" class="block bg-white rounded-xl p-4 shadow-sm border border-border hover:border-teal/30 transition">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-lg bg-teal text-white flex items-center justify-center text-sm font-extrabold">11</span>
+                <div>
+                  <h4 class="font-bold text-text">لنا في كلام الإله</h4>
+                  <p class="text-xs text-muted">مقياس 87.87.87</p>
+                </div>
+                <i class="fa-solid fa-star text-gold text-sm ml-auto"></i>
+              </div>
+            </a>
+            <a href="#" class="block bg-white rounded-xl p-4 shadow-sm border border-border hover:border-teal/30 transition">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-lg bg-teal text-white flex items-center justify-center text-sm font-extrabold">15</span>
+                <div>
+                  <h4 class="font-bold text-text">في كلمتك يا رب</h4>
+                  <p class="text-xs text-muted">مقياس 88.88</p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <p class="text-xs text-muted mt-4">بطاقات بسيطة، ألوان مسطحة، بدون تأثيرات زجاجية.</p>
+        </div>
+
+        <!-- New Library -->
+        <div class="bg-gradient-to-b from-cream/60 to-parchment/30 rounded-[2rem] p-6 shadow-xl shadow-ink/5">
+          <div class="flex items-center justify-between mb-6">
+            <h3 class="font-display text-2xl font-bold text-ink">المكتبة</h3>
+            <div class="flex gap-2">
+              <button onclick="filterBtn(this, 'main')" class="filter-btn active px-4 py-1.5 rounded-full text-xs font-extrabold bg-ink text-parchment shadow">الرئيسي</button>
+              <button onclick="filterBtn(this, 'taranim')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-extrabold bg-white/60 text-stone border border-white/50">روحية</button>
+              <button onclick="filterBtn(this, 'extra')" class="filter-btn px-4 py-1.5 rounded-full text-xs font-extrabold bg-white/60 text-stone border border-white/50">إضافي</button>
+            </div>
+          </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <a href="#" class="group block rounded-[1.75rem] bg-white/70 backdrop-blur border border-white/50 p-5 shadow hover:shadow-xl hover:-translate-y-0.5 transition">
+              <div class="flex items-start justify-between mb-2">
+                <span class="text-[10px] font-extrabold tracking-wider text-goldDeep uppercase">الرئيسي</span>
+                <span class="text-xs font-mono bg-ink/5 text-ink px-2 py-0.5 rounded-md">11</span>
+              </div>
+              <h4 class="font-display text-lg font-bold text-ink group-hover:text-goldDeep transition">لنا في كلام الإله</h4>
+              <p class="text-xs text-stone">مقياس 87.87.87</p>
+            </a>
+            <a href="#" class="group block rounded-[1.75rem] bg-white/70 backdrop-blur border border-white/50 p-5 shadow hover:shadow-xl hover:-translate-y-0.5 transition">
+              <div class="flex items-start justify-between mb-2">
+                <span class="text-[10px] font-extrabold tracking-wider text-goldDeep uppercase">الرئيسي</span>
+                <span class="text-xs font-mono bg-ink/5 text-ink px-2 py-0.5 rounded-md">15</span>
+              </div>
+              <h4 class="font-display text-lg font-bold text-ink group-hover:text-goldDeep transition">في كلمتك يا رب</h4>
+              <p class="text-xs text-stone">مقياس 88.88</p>
+            </a>
+            <a href="#" class="group block rounded-[1.75rem] bg-gradient-to-br from-white/90 to-[#fffdf5] border border-gold/30 p-5 shadow hover:shadow-xl hover:-translate-y-0.5 transition relative overflow-hidden">
+              <span class="absolute top-3 left-3 bg-gold text-ink text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow">جديد</span>
+              <div class="flex items-start justify-between mb-2">
+                <span class="text-[10px] font-extrabold tracking-wider text-clay uppercase">إضافي</span>
+                <span class="text-xs font-mono bg-ink/5 text-ink px-2 py-0.5 rounded-md">1201</span>
+              </div>
+              <h4 class="font-display text-lg font-bold text-ink group-hover:text-goldDeep transition">لنا في كلام الإله الصمد</h4>
+              <p class="text-xs text-stone">مقياس 87.87.87</p>
+            </a>
+          </div>
+          <p class="text-xs text-stone mt-5">بطاقات زجاجية، تأثيرات ظل، أزرار فلترة، وخط Amiri.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Reader -->
+    <section>
+      <h2 class="font-display text-3xl font-bold text-ink mb-6">صفحة القارئ</h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+
+        <!-- Old Reader -->
+        <div class="bg-black rounded-2xl overflow-hidden shadow-2xl ring-1 ring-black/20 text-white">
+          <div class="bg-tealDeep px-6 py-4 flex items-center justify-between text-white/90">
+            <span class="font-bold">القارئ</span>
+            <span class="text-xs opacity-60">نسخة حالية</span>
+          </div>
+          <div class="p-8 md:p-10 space-y-6 text-lg leading-[1.9]">
+            <h2 class="font-bold text-2xl text-white">لنا في كلام الإله</h2>
+            <div class="border-r-4 border-teal/40 pr-5 space-y-2 text-white/90">
+              <p>لَنَا فِي كَلَامِ الْإِلٰهِ الصَّمَد</p>
+              <p>أَسَاسٌ لإِيمَانِنَا كَالْجَبَل</p>
+            </div>
+            <div class="border-r-4 border-tealDeep pr-5 space-y-2 text-white/80 text-base">
+              <p>وَهَلْ مِنْ مَزِيدٍ عَلَى مَا وَعَد</p>
+              <p>لِمَنْ جَاءَهُ وَعَلَيْهِ اتَّكَل؟</p>
+            </div>
+            <div class="pt-4 flex gap-3 text-sm">
+              <button class="px-3 py-1 rounded bg-teal text-white text-xs font-bold">أعجبني</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- New Reader -->
+        <div class="rounded-[2.5rem] overflow-hidden bg-gradient-to-b from-[#f4efe8] to-[#ebe5d6] shadow-2xl shadow-ink/8 ring-1 ring-ink/5">
+          <div class="backdrop-blur bg-white/60 border-b border-white/40 px-8 py-5 flex items-center justify-between">
+            <a href="#" class="text-xs font-bold text-stone hover:text-ink"><i class="fa-solid fa-arrow-right ml-1"></i> المكتبة</a>
+            <span class="text-xs font-extrabold tracking-widest text-goldDeep uppercase">نسخة جديدة</span>
+          </div>
+          <div class="p-8 md:p-12">
+            <header class="text-center mb-10">
+              <span class="inline-block text-xs font-extrabold tracking-widest text-ink/40 uppercase mb-2">ترنيمة جديدة · كتاب إضافي</span>
+              <h1 class="font-display text-4xl md:text-5xl font-bold text-ink leading-tight mb-2">لنا في كلام الإله الصمد</h1>
+              <p class="text-stone text-base">رقم <span class="font-bold text-ink">1201</span> · مقياس <span class="font-mono text-sm bg-white/60 px-1.5 py-0.5 rounded">87.87.87</span></p>
+            </header>
+
+            <div class="space-y-8 text-ink text-xl md:text-2xl leading-[1.85] text-justify">
+              <div class="border-r-4 border-gold/40 pr-5 bg-gradient-to-l from-gold/[0.06] to-transparent rounded-r-xl py-1">
+                <p class="font-display text-xl md:text-2xl text-ink/90">لَنَا فِي كَلَامِ الْإِلٰهِ الصَّمَد</p>
+                <p>أَسَاسٌ لإِيمَانِنَا كَالْجَبَل</p>
+              </div>
+              <div class="border-r-4 border-sage/40 pr-5 bg-gradient-to-l from-sage/[0.06] to-transparent rounded-r-xl py-1">
+                <p>وَهَلْ مِنْ مَزِيدٍ عَلَى مَا وَعَد</p>
+                <p>لِمَنْ جَاءَهُ وَعَلَيْهِ اتَّكَل؟</p>
+              </div>
+            </div>
+
+            <div class="mt-10 pt-8 border-t border-ink/10 flex items-center justify-between">
+              <div class="flex gap-3">
+                <button onclick="like(this)" class="w-10 h-10 rounded-full bg-white/60 border border-white/60 text-stone hover:text-red-500 hover:border-red-200 transition flex items-center justify-center shadow-sm" aria-label="أعجبني"><i class="fa-solid fa-heart"></i></button>
+                <a href="#" class="w-10 h-10 rounded-full bg-white/60 border border-white/60 text-stone hover:text-ink transition flex items-center justify-center shadow-sm" aria-label="استمع"><i class="fa-solid fa-headphones"></i></a>
+              </div>
+              <div class="text-xs text-stone">ترجمة: <span class="font-bold text-ink">عربية فصحى</span> · حالة: <span class="font-bold text-goldDeep">مُعتمدة</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Book Cards -->
+    <section>
+      <h2 class="font-display text-3xl font-bold text-ink mb-6">بطاقات الكتب</h2>
+      <div class="grid lg:grid-cols-2 gap-6">
+
+        <!-- Old Books -->
+        <div class="grid grid-cols-2 gap-4">
+          <a href="#" class="bg-white rounded-xl p-5 shadow border border-border hover:border-teal/30 transition">
+            <div class="w-10 h-10 rounded-lg bg-teal text-white flex items-center justify-center mb-3 text-sm"><i class="fa-solid fa-book-bible"></i></div>
+            <h4 class="font-bold text-ink">الرئيسي</h4>
+            <p class="text-xs text-muted mt-1">1 — 1000+</p>
+          </a>
+          <a href="#" class="bg-white rounded-xl p-5 shadow border border-border hover:border-teal/30 transition">
+            <div class="w-10 h-10 rounded-lg bg-teal text-white flex items-center justify-center mb-3 text-sm"><i class="fa-solid fa-feather-pointed"></i></div>
+            <h4 class="font-bold text-ink">روحية</h4>
+            <p class="text-xs text-muted mt-1">ترانيم جديدة</p>
+          </a>
+        </div>
+
+        <!-- New Books -->
+        <div class="grid grid-cols-3 gap-4">
+          <a href="#" class="glass-card rounded-[2rem] p-6 hover:shadow-2xl transition hover:-translate-y-1 group block">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-ink to-[#1a3a2e] text-parchment flex items-center justify-center text-xl shadow-lg mb-4"><i class="fa-solid fa-book-bible"></i></div>
+            <h4 class="font-display text-lg font-bold text-ink">الرئيسي</h4>
+            <p class="text-xs text-stone">1 — 1000+</p>
+          </a>
+          <a href="#" class="glass-card rounded-[2rem] p-6 hover:shadow-2xl transition hover:-translate-y-1 group block">
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-goldDeep to-[#8a6a2a] text-white flex items-center justify-center text-xl shadow-lg mb-4"><i class="fa-solid fa-feather-pointed"></i></div>
+            <h4 class="font-display text-lg font-bold text-ink">روحية</h4>
+            <p class="text-xs text-stone">ترانيم جديدة</p>
+          </a>
+          <a href="#" class="glass-card rounded-[2.5rem] p-6 hover:shadow-2xl transition hover:-translate-y-1 ring-1 ring-gold/30 bg-gradient-to-br from-white/90 to-[#fffdf5] relative overflow-hidden block">
+            <span class="absolute top-3 left-3 bg-gold text-ink text-[10px] font-extrabold px-2 py-0.5 rounded-full shadow">جديد</span>
+            <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-clay to-[#b08b6e] text-white flex items-center justify-center text-xl shadow-lg mb-4"><i class="fa-solid fa-star-and-crescent"></i></div>
+            <h4 class="font-display text-lg font-bold text-ink">إضافي</h4>
+            <p class="text-xs text-stone">ترانيم مستقلة</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-ink text-parchment/80 text-sm mt-16">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid md:grid-cols-2 gap-6">
+      <div>
+        <h4 class="font-display text-xl font-bold text-parchment mb-2">ملاحظات مقارنة</h4>
+        <ul class="space-y-2">
+          <li>· <strong>القديم:</strong> ألوان مسطحة، بدون زجاج، بدون تأثيرات، خطوط افتراضية.</li>
+          <li>· <strong>الجديد:</strong> زجاج (glassmorphism)، ألوان ذهبية/حجرية، خط Amiri، ظلال ناعمة.</li>
+          <li>· <strong>المحتوى محفوظ:</strong> نفس البيانات (الأرقام، العناوين، المقاييس، المفضلات).</li>
+        </ul>
+      </div>
+      <div class="md:text-left">
+        <p class="text-parchment/60">النسخة الحالية: <code class="bg-white/10 px-1 rounded">src/</code></p>
+        <p class="text-parchment/60">التجربة الجديدة: <code class="bg-white/10 px-1 rounded">demo-app.html</code></p>
+        <p class="text-parchment/60">المقارنة: <code class="bg-white/10 px-1 rounded">demo-app-comparison.html</code></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function filterBtn(btn, book) {
+      document.querySelectorAll('.filter-btn').forEach(b => {
+        b.classList.remove('bg-ink', 'text-parchment', 'shadow');
+        b.classList.add('bg-white/60', 'text-stone', 'border');
+      });
+      btn.classList.remove('bg-white/60', 'text-stone');
+      btn.classList.add('bg-ink', 'text-parchment', 'shadow');
+    }
+    function like(btn) {
+      btn.classList.toggle('text-red-500');
+      btn.classList.toggle('bg-red-50');
+      btn.classList.toggle('text-stone');
+    }
+  </script>
+</body>
+</html>

@@ -31,6 +31,8 @@ export function HymnRow({ hymn, onPress, subtitle, showStar = true, onToggleFavo
 
   const toggle = onToggleFavorite ?? (() => useLibrary.getState().toggleFavorite(hymn.id));
 
+  const numberBg = hymn.book === 'taranim' ? '#c8a84d' : hymn.book === 'extra' ? '#b08b6e' : colors.primary;
+
   return (
     <Card padded={false} style={{ marginBottom: spacing.sm }}>
       <View
@@ -53,7 +55,7 @@ export function HymnRow({ hymn, onPress, subtitle, showStar = true, onToggleFavo
                 paddingHorizontal: spacing.sm,
                 paddingVertical: spacing.xs,
                 borderRadius: radius.md,
-                backgroundColor: colors.primary,
+                backgroundColor: numberBg,
                 alignItems: 'center',
               }}>
               <AppText variant="label" color={colors.onPrimary} useAppFont={false} style={{ fontWeight: '700' }}>

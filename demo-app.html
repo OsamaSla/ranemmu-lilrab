@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>رنموا للرب — تجربة بصرية محسّنة</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink: '#0f2a1e',
+            parchment: '#f7f4e9',
+            cream: '#fdfbf7',
+            gold: '#c8a84d',
+            goldDeep: '#a8842e',
+            sage: '#8a9a87',
+            clay: '#c4a896',
+            stone: '#6b635d',
+          },
+          fontFamily: {
+            arabic: ['"Noto Naskh Arabic"', '"Amiri"', 'serif'],
+            display: ['"Amiri"', 'serif'],
+          },
+        },
+      },
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Naskh Arabic', 'Amiri', serif; background: #fdfbf7; color: #0f2a1e; }
+    ::selection { background: #c8a84d33; color: #0f2a1e; }
+    .glass-card {
+      background: rgba(255,255,255,0.72);
+      backdrop-filter: blur(14px) saturate(1.3);
+      -webkit-backdrop-filter: blur(14px) saturate(1.3);
+      border: 1px solid rgba(255,255,255,0.45);
+      box-shadow: 0 10px 40px rgba(15,42,30,0.06), 0 2px 8px rgba(15,42,30,0.04);
+    }
+    .glass-nav {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(15,42,30,0.06);
+    }
+    .text-balance { text-wrap: balance; }
+  </style>
+</head>
+
+<body class="min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="glass-nav fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-6">
+    <a href="#home" class="flex items-center gap-2.5 group">
+      <span class="w-9 h-9 rounded-full bg-gradient-to-br from-gold to-goldDeep text-white flex items-center justify-center shadow-md shadow-gold/30 group-hover:shadow-lg transition">
+        <i class="fa-solid fa-music text-sm"></i>
+      </span>
+      <span class="font-display text-xl font-bold tracking-tight text-ink">رنموا للرب</span>
+    </a>
+    <div class="flex items-center gap-5 text-sm font-semibold text-stone">
+      <a href="#library" class="hover:text-ink transition">المكتبة</a>
+      <a href="#reader" class="hover:text-ink transition">القارئ</a>
+      <a href="#books" class="hover:text-ink transition">الكتب</a>
+    </div>
+  </nav>
+
+  <main class="pt-16">
+
+    <!-- Hero / Home -->
+    <section id="home" class="relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-parchment via-cream to-[#ede8d8] pointer-events-none"></div>
+      <!-- Decorative shapes -->
+      <div class="absolute -top-24 -right-24 w-[28rem] h-[28rem] rounded-full bg-gradient-to-tr from-gold/20 to-clay/20 blur-3xl"></div>
+      <div class="absolute -bottom-32 -left-16 w-[24rem] h-[24rem] rounded-full bg-gradient-to-bl from-sage/20 to-gold/10 blur-3xl"></div>
+
+      <div class="relative max-w-6xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-12 items-center">
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/60 border border-white/50 px-3.5 py-1.5 text-xs font-bold tracking-wide text-stone shadow-sm">
+            <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+            تطبيق جديد ومُحسّن
+          </div>
+          <h1 class="font-display text-5xl md:text-6xl font-bold leading-[1.15] text-balance text-ink drop-shadow-sm">
+            ترانيم الإيمان <br />
+            <span class="italic text-goldDeep">بلمسة جديدة</span>
+          </h1>
+          <p class="text-lg md:text-xl text-stone leading-relaxed max-w-md">
+            مكتبة روحية غنية بأجمل الترانيم، مع قارئ احترافي، وترجمات، وموضوعات، وملاحظات — كل ذلك في تجربة بصرية هادئة ومريحة.
+          </p>
+          <div class="flex items-center gap-3 pt-2">
+            <a href="#library" class="inline-flex items-center gap-2 rounded-2xl bg-ink text-parchment px-7 py-3.5 font-bold shadow-xl shadow-ink/20 hover:bg-[#153828] transition hover:-translate-y-0.5">
+              <i class="fa-solid fa-book-open"></i>
+              تصفّح المكتبة
+            </a>
+            <a href="#books" class="inline-flex items-center gap-2 rounded-2xl bg-white/70 text-ink border border-white/60 px-7 py-3.5 font-bold shadow hover:bg-white transition hover:-translate-y-0.5 backdrop-blur">
+              <i class="fa-solid fa-layer-group"></i>
+              استكشف الكتب
+            </a>
+          </div>
+        </div>
+
+        <!-- Featured card (new feature demo) -->
+        <a href="#reader" class="group relative block rounded-[2rem] overflow-hidden shadow-2xl shadow-ink/10 hover:shadow-[0_32px_64px_-12px_rgba(15,42,30,0.25)] transition">
+          <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?q=80&w=1200&auto=format&fit=crop" alt="nature" class="w-full h-80 md:h-[28rem] object-cover group-hover:scale-[1.03] transition duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/30 to-transparent"></div>
+          <div class="absolute bottom-0 right-0 left-0 p-8 md:p-10">
+            <span class="inline-block rounded-full bg-gold text-ink text-xs font-extrabold px-3 py-1 mb-3 shadow-lg shadow-gold/20">ترنيمة جديدة</span>
+            <h2 class="font-display text-3xl md:text-4xl text-white font-bold leading-tight mb-2">لنا في كلام الإله</h2>
+            <p class="text-white/90 text-base">من كتاب الترانيم الروحية — ترجمة عربية · مقياس 87.87.87</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Books / New Book Section -->
+    <section id="books" class="relative py-20 md:py-28">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-end justify-between mb-12">
+          <div>
+            <h2 class="font-display text-3xl md:text-4xl font-bold text-ink">الكتب المتاحة</h2>
+            <p class="text-stone mt-2">ثلاث مجموعات روحية — مع إضافة كتاب جديد مستقل</p>
+          </div>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Main -->
+          <a href="#library" class="glass-card rounded-[2rem] p-8 hover:shadow-2xl transition hover:-translate-y-1 group">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-ink to-[#1a3a2e] text-parchment flex items-center justify-center text-2xl shadow-lg shadow-ink/20 mb-6">
+              <i class="fa-solid fa-book-bible"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-ink mb-2">الكتاب الرئيسي</h3>
+            <p class="text-stone leading-relaxed mb-4">مجموعة الترانيم الكلاسيكية من 1 إلى 1000 وما بعدها. قلب المكتبة الروحية.</p>
+            <span class="inline-flex items-center gap-2 text-goldDeep font-bold text-sm">
+              تصفّح الكتاب <i class="fa-solid fa-arrow-left-long"></i>
+            </span>
+          </a>
+
+          <!-- Taranim -->
+          <a href="#library" class="glass-card rounded-[2rem] p-8 hover:shadow-2xl transition hover:-translate-y-1 group">
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-goldDeep to-[#8a6a2a] text-white flex items-center justify-center text-2xl shadow-lg shadow-goldDeep/25 mb-6">
+              <i class="fa-solid fa-feather-pointed"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-ink mb-2">ترانيم روحية</h3>
+            <p class="text-stone leading-relaxed mb-4">ترانيم جديدة ومختارة بعناية. تجربة روحانية أعمق بلغة شعرية.</p>
+            <span class="inline-flex items-center gap-2 text-goldDeep font-bold text-sm">
+              تصفّح الكتاب <i class="fa-solid fa-arrow-left-long"></i>
+            </span>
+          </a>
+
+          <!-- Extra / New -->
+          <a href="#library" class="glass-card rounded-[2.5rem] p-8 hover:shadow-2xl transition hover:-translate-y-1 ring-1 ring-gold/40 bg-gradient-to-br from-white/90 to-[#fffdf5] relative overflow-hidden">
+            <div class="absolute -top-10 -left-10 w-40 h-40 bg-gold/10 rounded-full blur-2xl"></div>
+            <span class="absolute top-4 left-4 bg-gold text-ink text-[10px] font-extrabold px-2.5 py-1 rounded-full shadow-md">جديد</span>
+            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-clay to-[#b08b6e] text-white flex items-center justify-center text-2xl shadow-lg shadow-clay/30 mb-6">
+              <i class="fa-solid fa-star-and-crescent"></i>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-ink mb-2">كتاب إضافي</h3>
+            <p class="text-stone leading-relaxed mb-4">ترانيم لا تنتمي للكتابين السابقين — مجموعة مستقلة جاهزة للتوسّع مستقبلاً.</p>
+            <span class="inline-flex items-center gap-2 text-goldDeep font-bold text-sm">
+              تصفّح الكتاب <i class="fa-solid fa-arrow-left-long"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Library List -->
+    <section id="library" class="py-20 md:py-28 bg-gradient-to-b from-cream/60 to-parchment/30">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="flex items-center justify-between mb-10">
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-ink">المكتبة</h2>
+          <div class="flex gap-2">
+            <button onclick="filterBook('main')" class="filter-btn active px-4 py-2 rounded-full text-sm font-bold bg-ink text-parchment shadow-md hover:shadow-lg transition" data-book="main">الرئيسي</button>
+            <button onclick="filterBook('taranim')" class="filter-btn px-4 py-2 rounded-full text-sm font-bold bg-white/60 text-stone border border-white/50 hover:bg-white transition" data-book="taranim">روحية</button>
+            <button onclick="filterBook('extra')" class="filter-btn px-4 py-2 rounded-full text-sm font-bold bg-white/60 text-stone border border-white/50 hover:bg-white transition" data-book="extra">إضافي</button>
+          </div>
+        </div>
+
+        <div id="library-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Cards generated by script -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Reader Screen -->
+    <section id="reader" class="relative min-h-[92vh] flex items-start justify-center">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#f4efe8] to-[#ebe5d6]"></div>
+      <div class="absolute top-20 right-10 w-72 h-72 bg-gold/10 rounded-full blur-3xl"></div>
+      <div class="absolute bottom-20 left-10 w-60 h-60 bg-sage/10 rounded-full blur-3xl"></div>
+
+      <div class="relative max-w-3xl mx-auto px-6 pt-28 pb-20 w-full">
+        <a href="#library" class="inline-flex items-center gap-2 text-stone hover:text-ink mb-8 text-sm font-bold transition"><i class="fa-solid fa-arrow-right"></i> العودة للمكتبة</a>
+
+        <article class="glass-card rounded-[2.5rem] p-8 md:p-14 shadow-2xl shadow-ink/8">
+          <header class="mb-10 text-center">
+            <span class="inline-block text-xs font-extrabold tracking-widest text-goldDeep uppercase mb-3">ترنيمة جديدة · كتاب إضافي</span>
+            <h1 class="font-display text-4xl md:text-5xl font-bold text-ink leading-tight mb-3">لنا في كلام الإله الصمد</h1>
+            <p class="text-stone text-base">رقم <span class="font-bold text-ink">1201</span> · مقياس <span class="font-mono text-sm bg-white/40 px-1.5 py-0.5 rounded">87.87.87</span></p>
+          </header>
+
+          <div class="space-y-8 text-ink text-xl md:text-2xl leading-[1.85] text-justify">
+            <div class="border-r-4 border-gold/40 pr-5 bg-gradient-to-l from-gold/[0.06] to-transparent rounded-r-xl py-1">
+              <p class="font-display text-xl md:text-2xl text-ink/90">لَنَا فِي كَلَامِ الْإِلٰهِ الصَّمَد</p>
+              <p>أَسَاسٌ لإِيمَانِنَا كَالْجَبَل</p>
+            </div>
+            <div class="border-r-4 border-sage/40 pr-5 bg-gradient-to-l from-sage/[0.06] to-transparent rounded-r-xl py-1">
+              <p>وَهَلْ مِنْ مَزِيدٍ عَلَى مَا وَعَد</p>
+              <p>لِمَنْ جَاءَهُ وَعَلَيْهِ اتَّكَل؟</p>
+            </div>
+          </div>
+
+          <div class="mt-10 pt-8 border-t border-ink/10 flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+              <button onclick="toggleLike(this)" class="w-10 h-10 rounded-full bg-white/60 border border-white/60 text-stone hover:text-red-500 hover:border-red-200 hover:bg-red-50 transition flex items-center justify-center shadow-sm" aria-label="أعجبني">
+                <i class="fa-solid fa-heart"></i>
+              </button>
+              <a href="#" class="w-10 h-10 rounded-full bg-white/60 border border-white/60 text-stone hover:text-ink hover:border-ink/20 transition flex items-center justify-center shadow-sm" aria-label="استمع">
+                <i class="fa-solid fa-headphones"></i>
+              </a>
+            </div>
+            <div class="text-xs text-stone">ترجمة: <span class="font-bold text-ink">عربية فصحى</span> · حالة الترجمة: <span class="font-bold text-goldDeep">مُعتمدة</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="bg-ink text-parchment/80 text-sm py-12">
+    <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="font-display text-xl font-bold text-parchment mb-3">رنموا للرب</h4>
+        <p class="leading-relaxed">تجربة روحية حديثة تجمع بين الأصالة والجمال البصري، لتكون رفيقك اليومي في العبادة والتأمل.</p>
+      </div>
+      <div>
+        <h4 class="font-display text-lg font-bold text-parchment mb-3">مميزات جديدة</h4>
+        <ul class="space-y-1.5">
+          <li>· كتاب إضافي مستقل</li>
+          <li>· قارئ احترافي مع ترجمات</li>
+          <li>· تصميم زجاجي حديث</li>
+          <li>· تصنيف حسب الكتب</li>
+        </ul>
+      </div>
+      <div class="text-left md:text-right">
+        <p class="text-parchment/40">تصميم تجريبي</p>
+        <p class="text-parchment/40">لإظهار الإمكانيات البصرية</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hymns = [
+      { id: 'h11', title: 'لنا في كلام الإله', number: 11, book: 'main', meter: '87.87.87' },
+      { id: 'h15', title: 'في كلمتك يا رب', number: 15, book: 'main', meter: '88.88' },
+      { id: 'h20', title: 'أحبك يا رب', number: 20, book: 'main', meter: '87.87' },
+      { id: 'h27', title: 'نعمته عظيمة', number: 27, book: 'main', meter: '87.87.87' },
+      { id: 'h30', title: 'يسوع محبتي', number: 30, book: 'main', meter: '76.76.D' },
+      { id: 'h150', title: 'في صليب يسوع', number: 150, book: 'main', meter: '87.87' },
+      { id: 'tr1', title: 'لنا في كلام الإله الصمد', number: 1, book: 'taranim', meter: '87.87.87' },
+      { id: 'tr4', title: 'يا إلهنا العظيم', number: 4, book: 'taranim', meter: '88.88' },
+      { id: 'tr7', title: 'روحك القدوس', number: 7, book: 'taranim', meter: '76.76.D' },
+      { id: 'e1201', title: 'لنا في كلام الإله الصمد', number: 1201, book: 'extra', meter: '87.87.87' },
+      { id: 'e1202', title: 'في حضنك يا رب', number: 1202, book: 'extra', meter: '88.88' },
+      { id: 'e1203', title: 'نورك في قلبي', number: 1203, book: 'extra', meter: '87.87' },
+    ];
+
+    function renderGrid(book) {
+      const grid = document.getElementById('library-grid');
+      const filtered = book === 'all' ? hymns : hymns.filter(h => h.book === book);
+      grid.innerHTML = filtered.map(h => `
+        <a href="#reader" class="glass-card rounded-[1.75rem] p-6 hover:shadow-xl transition hover:-translate-y-0.5 group block">
+          <div class="flex items-start justify-between mb-3">
+            <span class="text-[10px] font-extrabold tracking-wider text-goldDeep uppercase">${h.book === 'extra' ? 'كتاب إضافي' : h.book === 'taranim' ? 'ترانيم روحية' : 'الكتاب الرئيسي'}</span>
+            <span class="text-xs font-mono bg-ink/5 text-ink px-2 py-0.5 rounded-md">${h.number}</span>
+          </div>
+          <h3 class="font-display text-xl font-bold text-ink mb-1 group-hover:text-goldDeep transition">${h.title}</h3>
+          <p class="text-sm text-stone">مقياس ${h.meter}</p>
+        </a>
+      `).join('');
+    }
+
+    function filterBook(book) {
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        const active = btn.dataset.book === book;
+        btn.classList.toggle('bg-ink', active);
+        btn.classList.toggle('text-parchment', active);
+        btn.classList.toggle('shadow-md', active);
+        btn.classList.toggle('bg-white/60', !active);
+        btn.classList.toggle('text-stone', !active);
+      });
+      renderGrid(book);
+    }
+
+    function toggleLike(btn) {
+      btn.classList.toggle('text-red-500');
+      btn.classList.toggle('bg-red-50');
+      btn.classList.toggle('border-red-200');
+      btn.classList.toggle('text-stone');
+    }
+
+    renderGrid('main');
+  </script>
+</body>
+</html>
