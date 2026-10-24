@@ -88,6 +88,9 @@ export default function AdminEditScreen() {
   // Declared before the reset below: calling a later setter during render
   // would throw (TDZ) and crash the app when switching hymns.
   const [savedOnce, setSavedOnce] = useState(false);
+  const [expandedBasic, setExpandedBasic] = useState(true);
+  const [expandedTopics, setExpandedTopics] = useState(true);
+  const [expandedVerses, setExpandedVerses] = useState(true);
   if (form.key !== id) {
     setForm(toForm(id, hymn));
     setSavedOnce(false);
@@ -236,6 +239,11 @@ export default function AdminEditScreen() {
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={`${t('common.hymnNumber')} ${hymn.number}`} showBack />
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
+        <Pressable onPress={() => setExpandedBasic(!expandedBasic)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
+          <AppText variant="label" color={colors.textMuted} style={{ fontWeight: '700' }}>{t('admin.hymnTitle')} · {expandedBasic ? '−' : '+'}</AppText>
+          <MaterialCommunityIcons name={expandedBasic ? 'chevron-up' : 'chevron-down'} size={20} color={colors.textMuted} />
+        </Pressable>
+        {expandedBasic ? (
         <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
           <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
             {t('admin.hymnTitle')}
@@ -313,7 +321,13 @@ export default function AdminEditScreen() {
             </>
           ) : null}
         </Card>
+        ) : null}
 
+        <Pressable onPress={() => setExpandedTopics(!expandedTopics)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
+          <AppText variant="label" color={colors.textMuted} style={{ fontWeight: '700' }}>{t('admin.topics')} · {expandedTopics ? '−' : '+'}</AppText>
+          <MaterialCommunityIcons name={expandedTopics ? 'chevron-up' : 'chevron-down'} size={20} color={colors.textMuted} />
+        </Pressable>
+        {expandedTopics ? (
         <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
           <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
             {t('admin.topics')}
@@ -325,7 +339,14 @@ export default function AdminEditScreen() {
             onToggleSecondary={toggleSecondary}
           />
         </Card>
+        ) : null}
 
+        <Pressable onPress={() => setExpandedVerses(!expandedVerses)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
+          <AppText variant="label" color={colors.textMuted} style={{ fontWeight: '700' }}>{t('admin.verses')} · {expandedVerses ? '−' : '+'}</AppText>
+          <MaterialCommunityIcons name={expandedVerses ? 'chevron-up' : 'chevron-down'} size={20} color={colors.textMuted} />
+        </Pressable>
+        {expandedVerses ? (
+        <View>
         {hymn.verses.map((verse, i) => (
           <Card key={`${i}-${verse.label}`} style={{ marginBottom: spacing.md, padding: spacing.md }}>
             <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
@@ -380,6 +401,9 @@ export default function AdminEditScreen() {
             ) : null}
           </Card>
         ))}
+
+        </View>
+        ) : null}
 
         <Pressable
           onPress={() => set({ verified: !form.verified })}

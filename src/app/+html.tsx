@@ -39,4 +39,4 @@ export default function Root({ children }: PropsWithChildren) {
   );
 }
 
-const sw = `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/ranemmu-lilrab/sw.js',{scope:'/ranemmu-lilrab/'});});}`;
+const sw = `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/sw.js',{scope:'/ranemmu-lilrab/'});});}`;

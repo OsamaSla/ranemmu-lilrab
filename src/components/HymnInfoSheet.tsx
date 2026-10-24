@@ -11,7 +11,7 @@ import { AppText } from './AppText';
 import { IconButton } from './IconButton';
 import { MeterText } from './MeterText';
 import { displayMeter } from '../data/meterFamilies';
-import { allTopicsOf } from '../data/topics';
+import { TOPIC_COLORS, allTopicsOf } from '../data/topics';
 import type { Hymn } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -141,8 +141,8 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
                         paddingVertical: spacing.xs,
                         borderRadius: radius.pill,
                         borderWidth: 1,
-                        borderColor: isPrimary ? colors.primary : colors.border,
-                        backgroundColor: isPrimary ? colors.primary : 'transparent',
+                        borderColor: TOPIC_COLORS[id],
+                        backgroundColor: isPrimary ? TOPIC_COLORS[id] : `${TOPIC_COLORS[id]}22`,
                         opacity: pressed ? 0.7 : 1,
                       })}>
                       <AppText

@@ -6,7 +6,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps } from 'react';
 import { useState } from 'react';
-import { Modal, Pressable, ScrollView, View, type StyleProp, type ViewStyle } from 'react-native';
+import { Modal, Pressable, ScrollView, TouchableOpacity, View, type StyleProp, type ViewStyle } from 'react-native';
 
 import { AppText } from './AppText';
 import { useT } from '../hooks/useT';
@@ -18,6 +18,8 @@ export interface FilterOption {
   label: string;
   /** Shown muted after the label when present. */
   count?: number;
+  /** Optional color dot shown before the label. */
+  color?: string;
 }
 
 interface FilterSelectProps {
@@ -31,7 +33,7 @@ interface FilterSelectProps {
 }
 
 export function FilterSelect({ title, icon, options, value, onChange, style }: FilterSelectProps) {
-  const { t, direction } = useT();
+  const { direction } = useT();
   const { colors } = useTheme();
   const [open, setOpen] = useState(false);
 
@@ -70,15 +72,10 @@ export function FilterSelect({ title, icon, options, value, onChange, style }: F
         animationType="fade"
         onRequestClose={close}
         statusBarTranslucent>
-        <Pressable
-          accessibilityRole="button"
-          accessibilityLabel={t('common.close')}
-          onPress={close}
-          style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-end' }}>
-          <Pressable
-            onPress={() => {
-              /* Swallow: keeps the sheet open while it's being interacted with. */
-            }}
+        <View style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-end' }}>
+          <Pressable onPress={close} style={{ flex: 1 }} />
+          <View
+            onTouchStart={(e) => e.stopPropagation()}
             style={{
               backgroundColor: colors.surface,
               borderTopLeftRadius: radius.lg,
@@ -104,7 +101,7 @@ export function FilterSelect({ title, icon, options, value, onChange, style }: F
               {options.map((option) => {
                 const active = option.value === value;
                 return (
-                  <Pressable
+                  <TouchableOpacity
                     key={option.value}
                     onPress={() => {
                       onChange(option.value);
@@ -123,12 +120,17 @@ export function FilterSelect({ title, icon, options, value, onChange, style }: F
                       borderTopColor: colors.border,
                       opacity: pressed ? 0.65 : 1,
                     })}>
-                    <AppText
-                      variant="body"
-                      style={{ flex: 1, fontWeight: active ? '700' : '400' }}
-                      color={active ? colors.primary : colors.text}>
-                      {option.label}
-                    </AppText>
+                    <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.sm, flex: 1 }}>
+                      {option.color ? (
+                        <View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: option.color }} />
+                      ) : null}
+                      <AppText
+                        variant="body"
+                        style={{ flex: 1, fontWeight: active ? '700' : '400' }}
+                        color={active ? colors.primary : colors.text}>
+                        {option.label}
+                      </AppText>
+                    </View>
                     {option.count !== undefined ? (
                       <AppText variant="caption" color={colors.textMuted}>
                         {option.count}
@@ -137,12 +139,12 @@ export function FilterSelect({ title, icon, options, value, onChange, style }: F
                     {active ? (
                       <MaterialCommunityIcons name="check" size={20} color={colors.primary} />
                     ) : null}
-                  </Pressable>
+                  </TouchableOpacity>
                 );
               })}
             </ScrollView>
-          </Pressable>
-        </Pressable>
+          </View>
+        </View>
       </Modal>
     </View>
   );

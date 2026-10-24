@@ -73,8 +73,8 @@ export function SegmentedControl<T extends string>({
             <AppText
               variant="label"
               numberOfLines={1}
-              color={selected ? colors.onPrimary : colors.textMuted}
-              style={{ fontWeight: selected ? '700' : '500' }}>
+              color={selected ? colors.onPrimary : colors.text}
+              style={{ fontWeight: selected ? '900' : '700', fontSize: 17 }}>
               {option.label}
             </AppText>
           </Pressable>

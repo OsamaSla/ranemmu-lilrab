@@ -61,15 +61,10 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
       onRequestClose={onClose}
       statusBarTranslucent>
       {/* Tap the scrim to dismiss, but not the sheet itself. */}
-      <Pressable
-        accessibilityRole="button"
-        accessibilityLabel={t('common.close')}
-        onPress={onClose}
-        style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-end' }}>
-        <Pressable
-          onPress={() => {
-            /* Swallow: keeps the sheet open while it's being interacted with. */
-          }}
+      <View style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-end' }}>
+        <Pressable onPress={onClose} style={{ flex: 1 }} />
+        <View
+          onTouchStart={(e) => e.stopPropagation()}
           style={{
             backgroundColor: colors.surface,
             borderTopLeftRadius: radius.lg,
@@ -227,8 +222,8 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
               </AppText>
             </Pressable>
           ) : null}
-        </Pressable>
-      </Pressable>
+        </View>
+      </View>
     </Modal>
   );
 }

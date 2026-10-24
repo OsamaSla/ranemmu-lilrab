@@ -8,7 +8,7 @@
 import { Pressable, View } from 'react-native';
 
 import { AppText } from './AppText';
-import { TOPIC_IDS, type TopicId } from '../data/topics';
+import { TOPIC_COLORS, TOPIC_IDS, type TopicId } from '../data/topics';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
 import { radius, spacing } from '../theme/tokens';
@@ -25,32 +25,35 @@ export function TopicPicker({ primary, secondary, onPrimary, onToggleSecondary }
   const { t, direction } = useT();
   const { colors } = useTheme();
 
-  const chip = (id: TopicId, selected: boolean, onPress: () => void) => (
-    <Pressable
-      key={id}
-      onPress={onPress}
-      accessibilityRole="button"
-      accessibilityLabel={t(`topic.${id}` as const)}
-      accessibilityState={{ selected }}
-      android_ripple={{ color: colors.border }}
-      style={({ pressed }) => ({
-        paddingHorizontal: spacing.md,
-        paddingVertical: spacing.sm,
-        borderRadius: radius.pill,
-        borderWidth: 1,
-        borderColor: selected ? colors.primary : colors.border,
-        backgroundColor: selected ? colors.primary : colors.surface,
-        opacity: pressed ? 0.75 : 1,
-      })}>
-      <AppText
-        variant="label"
-        numberOfLines={1}
-        color={selected ? colors.onPrimary : colors.text}
-        style={{ fontWeight: selected ? '700' : '400' }}>
-        {t(`topic.${id}` as const)}
-      </AppText>
-    </Pressable>
-  );
+  const chip = (id: TopicId, selected: boolean, onPress: () => void) => {
+    const topicColor = TOPIC_COLORS[id];
+    return (
+      <Pressable
+        key={id}
+        onPress={onPress}
+        accessibilityRole="button"
+        accessibilityLabel={t(`topic.${id}` as const)}
+        accessibilityState={{ selected }}
+        android_ripple={{ color: colors.border }}
+        style={({ pressed }) => ({
+          paddingHorizontal: spacing.md,
+          paddingVertical: spacing.sm,
+          borderRadius: radius.pill,
+          borderWidth: 1,
+          borderColor: selected ? topicColor : colors.border,
+          backgroundColor: selected ? topicColor : colors.surface,
+          opacity: pressed ? 0.75 : 1,
+        })}>
+        <AppText
+          variant="label"
+          numberOfLines={1}
+          color={selected ? '#FFFFFF' : colors.text}
+          style={{ fontWeight: selected ? '700' : '400' }}>
+          {t(`topic.${id}` as const)}
+        </AppText>
+      </Pressable>
+    );
+  };
 
   return (
     <View>

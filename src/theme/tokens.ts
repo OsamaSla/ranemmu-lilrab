@@ -7,29 +7,29 @@
  */
 
 export const palette = {
-  /** Primary teal — header bars, active tab, primary CTA. */
-  teal: '#0F5B66',
-  /** Slightly deeper teal used for the top bar in the reference app. */
-  tealDeep: '#184D55',
+  /** Primary gold — header bars, active tab, primary CTA. */
+  gold: '#D4B85F',
+  /** Deeper gold used for top bar in reference app. */
+  goldDeep: '#C8A84D',
   /** Interactive accents: sliders, chips, focus rings. */
-  accent: '#20808D',
+  accent: '#8A9A87',
 
-  canvas: '#FAFAFA',
-  canvasAlt: '#EFEFEF',
-  surface: '#FFFFFF',
-  border: '#E5E5E5',
+  canvas: '#0A1A14',
+  canvasAlt: '#122A20',
+  surface: '#1A2E24',
+  border: 'rgba(255,255,255,0.08)',
 
-  text: '#111111',
-  textMuted: '#555555',
-  textInverse: '#FFFFFF',
+  text: '#F7F4E9',
+  textMuted: '#B8B0A8',
+  textInverse: '#0A1A14',
 
   /** Fullscreen reading mode. */
   readerBg: '#000000',
   readerText: '#FFFFFF',
 
-  favorite: '#C9A227',
-  danger: '#B3261E',
-  overlay: 'rgba(0,0,0,0.45)',
+  favorite: '#C8A84D',
+  danger: '#F2B8B5',
+  overlay: 'rgba(0,0,0,0.65)',
 } as const;
 
 export const radius = {
@@ -92,32 +92,32 @@ export interface ThemeColors {
 
 export const themes: Record<ThemeName, ThemeColors> = {
   light: {
-    canvas: palette.canvas,
-    surface: palette.surface,
-    surfaceMuted: palette.canvasAlt,
-    border: palette.border,
-    text: palette.text,
-    textMuted: palette.textMuted,
-    primary: palette.teal,
-    primaryDeep: palette.tealDeep,
-    accent: palette.accent,
-    onPrimary: palette.textInverse,
-    favorite: palette.favorite,
-    danger: palette.danger,
-    overlay: palette.overlay,
+    canvas: '#FDFBF7',
+    surface: '#FFFFFF',
+    surfaceMuted: '#F7F4E9',
+    border: 'rgba(15,42,30,0.08)',
+    text: '#0F2A1E',
+    textMuted: '#6B635D',
+    primary: '#C8A84D',
+    primaryDeep: '#A8842E',
+    accent: '#8A9A87',
+    onPrimary: '#0A1A14',
+    favorite: '#C8A84D',
+    danger: '#B3261E',
+    overlay: 'rgba(0,0,0,0.45)',
   },
   dark: {
-    canvas: '#1A1A1A',
-    surface: '#2A2A2A',
-    surfaceMuted: '#232323',
-    border: '#3A3A3A',
-    text: '#F5F5F5',
-    textMuted: '#CFCFCF',
-    primary: '#2E8C99',
-    primaryDeep: '#1B5A65',
-    accent: '#3FA3B0',
-    onPrimary: '#FFFFFF',
-    favorite: '#E0BC4A',
+    canvas: '#0A1A14',
+    surface: '#1A2E24',
+    surfaceMuted: '#122A20',
+    border: 'rgba(255,255,255,0.08)',
+    text: '#F7F4E9',
+    textMuted: '#B8B0A8',
+    primary: '#C8A84D',
+    primaryDeep: '#A8842E',
+    accent: '#8A9A87',
+    onPrimary: '#0A1A14',
+    favorite: '#C8A84D',
     danger: '#F2B8B5',
     overlay: 'rgba(0,0,0,0.65)',
   },

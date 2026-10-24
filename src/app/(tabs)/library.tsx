@@ -22,7 +22,7 @@ import { FilterSelect } from '../../components/FilterSelect';
 import { HymnRow } from '../../components/HymnRow';
 import { getBooks, getSummaries, getTopicCounts } from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
-import { isTopicId, matchesTopic, TOPIC_IDS, type TopicId } from '../../data/topics';
+import { isTopicId, matchesTopic, TOPIC_COLORS, TOPIC_IDS, type TopicId } from '../../data/topics';
 import type { BookId, HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
@@ -254,6 +254,7 @@ export default function LibraryScreen() {
               value: id,
               label: t(`topic.${id}` as const),
               count: topicCounts[id],
+              color: TOPIC_COLORS[id],
             })),
           ]}
           value={topic ?? ''}

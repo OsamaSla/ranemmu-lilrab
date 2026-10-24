@@ -30,6 +30,19 @@ export function isTopicId(value: unknown): value is TopicId {
   return typeof value === 'string' && (TOPIC_IDS as readonly string[]).includes(value);
 }
 
+/** Colors for each topic, used in UI chips and badges. */
+export const TOPIC_COLORS: Record<TopicId, string> = {
+  worship: '#C8A84D',
+  cross: '#B3261E',
+  comfort: '#8A9A87',
+  repentance: '#C4A896',
+  fellowship: '#20808D',
+  warfare: '#6B635D',
+  word: '#0F5B66',
+  eternity: '#A8842E',
+  church: '#2E8C99',
+};
+
 /** Every topic of a hymn, primary first. */
 export function allTopicsOf(hymn: {
   primaryTopic?: TopicId;
