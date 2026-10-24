@@ -1237,7 +1237,8 @@
   "primaryTopic": "worship",
   "topics": [],
   "book": "main",
-  "id": "h0612"
+  "id": "h0612",
+  "mediaUrl": "https://www.youtube.com/watch?v=GE0FsYEBzXg"
  },
  {
   "number": 613,
@@ -2028,7 +2029,8 @@
    "fellowship"
   ],
   "book": "main",
-  "id": "h0618"
+  "id": "h0618",
+  "mediaUrl": "https://www.youtube.com/watch?v=v7maBYlKt3M"
  },
  {
   "number": 619,
@@ -3042,7 +3044,8 @@
    "fellowship"
   ],
   "book": "main",
-  "id": "h0626"
+  "id": "h0626",
+  "mediaUrl": "https://www.youtube.com/watch?v=vgkkMbQGvnc"
  },
  {
   "number": 627,
@@ -5871,7 +5874,8 @@
   "primaryTopic": "word",
   "topics": [],
   "book": "main",
-  "id": "h0647"
+  "id": "h0647",
+  "mediaUrl": "https://www.youtube.com/watch?v=gCuvqdJ_xSM"
  },
  {
   "number": 648,
@@ -7399,7 +7403,8 @@
    }
   ],
   "book": "main",
-  "id": "h0658"
+  "id": "h0658",
+  "mediaUrl": "https://www.youtube.com/watch?v=AKFYBra220M"
  },
  {
   "number": 659,
@@ -7560,7 +7565,8 @@
    "fellowship"
   ],
   "book": "main",
-  "id": "h0659"
+  "id": "h0659",
+  "mediaUrl": "https://www.youtube.com/watch?v=h6pzcyiLEIg"
  },
  {
   "number": 660,
@@ -10087,7 +10093,8 @@
    "cross"
   ],
   "book": "main",
-  "id": "h0676"
+  "id": "h0676",
+  "mediaUrl": "https://www.youtube.com/watch?v=S0SQwnm5jEY"
  },
  {
   "number": 677,
@@ -12942,7 +12949,8 @@
    "fellowship"
   ],
   "book": "main",
-  "id": "h0695"
+  "id": "h0695",
+  "mediaUrl": "https://www.youtube.com/watch?v=wQnswxxZ9ZQ"
  },
  {
   "number": 696,
@@ -13739,6 +13747,7 @@
   "primaryTopic": "cross",
   "topics": [],
   "book": "main",
-  "id": "h0700"
+  "id": "h0700",
+  "mediaUrl": "https://www.youtube.com/watch?v=NE3NOdNL_yE"
  }
 ]
