@@ -9,15 +9,20 @@
  * screen. Route groups don't change URLs, so `/library` etc. keep working.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Pressable } from 'react-native';
 import { Tabs } from 'expo-router';
 
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { useSettings } from '../../store/settings';
 import { shadow } from '../../theme/tokens';
 
 export default function TabsLayout() {
-  const { colors } = useTheme();
+  const { colors, isDark } = useTheme();
   const { t } = useT();
+  const setTheme = useSettings((s) => s.setTheme);
+
+  const toggleTheme = () => setTheme(isDark ? 'light' : 'dark');
 
   return (
     <Tabs
@@ -66,6 +71,23 @@ export default function TabsLayout() {
           title: t('tabs.more'),
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="dots-horizontal" color={color} size={24} />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="theme-toggle"
+        options={{
+          title: t('settings.theme'),
+          tabBarIcon: ({ color }) => (
+            <MaterialCommunityIcons name={isDark ? 'eye-off-outline' : 'eye-outline'} color={color} size={24} />
+          ),
+          tabBarButton: (props: any) => (
+            <Pressable
+              {...props}
+              onPress={toggleTheme}
+              accessibilityRole="button"
+              accessibilityLabel={t('settings.theme')}
+            />
           ),
         }}
       />
