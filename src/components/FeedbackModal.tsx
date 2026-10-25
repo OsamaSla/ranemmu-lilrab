@@ -2,7 +2,7 @@
  * Client-side feedback modal for 'تقييم التطبيق'.
  */
 import { useState } from 'react';
-import { Modal, Pressable, ScrollView, TextInput, View } from 'react-native';
+import { Modal, Pressable, ScrollView, TextInput, View, Alert } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 import { AppBar } from './AppBar';
@@ -31,7 +31,10 @@ export function FeedbackModal({ visible, onClose }: { visible: boolean; onClose:
   const [submitted, setSubmitted] = useState(false);
 
   const submit = async () => {
-    if (rating < 1) return;
+    if (rating < 1) {
+      Alert.alert('تنبيه', 'يرجى اختيار تقييم (نجمة واحدة على الأقل)');
+      return;
+    }
     setSubmitting(true);
     const ok = await submitFeedback({ rating, category, comment: comment.trim() || '' });
     setSubmitting(false);
@@ -40,10 +43,13 @@ export function FeedbackModal({ visible, onClose }: { visible: boolean; onClose:
       setRating(0);
       setCategory('other');
       setComment('');
+      Alert.alert('تم الإرسال', 'شكراً لتقييمك، تم إرسال الملاحظات');
       setTimeout(() => {
         setSubmitted(false);
         onClose();
       }, 1200);
+    } else {
+      Alert.alert('خطأ', 'لم يتم الإرسال، يرجى المحاولة لاحقاً');
     }
   };
 

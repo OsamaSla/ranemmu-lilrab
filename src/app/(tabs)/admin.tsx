@@ -436,6 +436,23 @@ export default function AdminScreen() {
             </Card>
 
             <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
+              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>إدارة التقييمات</AppText>
+              <Pressable onPress={() => void loadFeedback()} style={{ paddingVertical: spacing.sm, borderRadius: radius.pill, backgroundColor: colors.primary, alignItems: 'center' }}>
+                <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>تحديث القائمة</AppText>
+              </Pressable>
+              {feedbacks.length === 0 ? (
+                <AppText variant="caption" color={colors.textMuted} style={{ marginTop: spacing.md }}>لا توجد تقييمات</AppText>
+              ) : (
+                feedbacks.map((fb) => (
+                  <View key={fb.id} style={{ borderTopWidth: 1, borderTopColor: colors.border, paddingVertical: spacing.md }}>
+                    <AppText variant="label" style={{ fontWeight: '700' }}>{fb.rating}/5 — {fb.category}</AppText>
+                    <AppText variant="body">{fb.comment || '—'}</AppText>
+                  </View>
+                ))
+              )}
+            </Card>
+
+            <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
               <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
                 {t('admin.deleteHymn')}
               </AppText>
