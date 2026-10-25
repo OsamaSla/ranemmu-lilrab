@@ -9,6 +9,7 @@
  * because the search field is the only place text is typed.
  */
 import { useMemo } from 'react';
+import { Platform } from 'react-native';
 
 import { isRTL, translate, type LocaleCode, type TranslationKey } from '../i18n';
 import { useSettings } from '../store/settings';
@@ -44,7 +45,11 @@ export function useT(): Translator {
       direction: {
         dir: rtl ? 'rtl' : 'ltr',
         isRTL: rtl,
-        row: rtl ? 'row-reverse' : 'row',
+        // On web the root shell sets `dir="rtl"`, so CSS already lays out
+        // `row` right-to-left; adding `row-reverse` there would flip twice
+        // and land back on LTR. Native has no CSS direction, so it needs the
+        // explicit reversal.
+        row: rtl ? (Platform.OS === 'web' ? 'row' : 'row-reverse') : 'row',
         textAlign: rtl ? 'right' : 'left',
       },
     };

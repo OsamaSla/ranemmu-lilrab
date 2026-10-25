@@ -779,7 +779,7 @@ export default function ReaderScreen() {
             variant="caption"
             numberOfLines={1}
             color={colors.onPrimary}
-            style={{ opacity: 0.75, fontSize: 11, textAlign: 'left', paddingHorizontal: spacing.sm }}>
+            style={{ opacity: 0.75, fontSize: 11, textAlign: direction.textAlign, paddingHorizontal: spacing.sm }}>
             {hymn.author ?? ''}
             {hymn.author && hymn.authorOriginal ? ' · ' : ''}
             {hymn.authorOriginal ?? ''}
