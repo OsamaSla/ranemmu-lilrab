@@ -5,7 +5,7 @@
  * sync to Firestore: silently on every save plus explicitly via the Publish
  * button. "Export" shares the patch set as JSON for local backup.
  */
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import { Alert, FlatList, Pressable, ScrollView, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
@@ -183,6 +183,12 @@ export default function AdminScreen() {
   // Firebase configured: the signed-in admin edits. Otherwise the legacy
   // on-device PIN gate applies and everything stays local-only.
   const canEdit = isFirebaseConfigured ? !!sessionUser : unlocked;
+
+  useEffect(() => {
+    if (canEdit) {
+      void loadFeedback();
+    }
+  }, [canEdit]);
 
   // Proofreading queue: hymns carrying the selected translation, filtered
   // by review status. A typed query turns the box above into global search
