@@ -83,11 +83,13 @@ export default function TabsLayout() {
           ),
           tabBarButton: (props: any) => (
             <Pressable
-              {...props}
+              style={props.style}
               onPress={toggleTheme}
               accessibilityRole="button"
               accessibilityLabel={t('settings.theme')}
-            />
+              hitSlop={8}>
+              {props.children}
+            </Pressable>
           ),
         }}
       />
