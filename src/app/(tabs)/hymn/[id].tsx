@@ -822,8 +822,7 @@ export default function ReaderScreen() {
                 }}
                 accessibilityRole="button"
                 accessibilityLabel={t('info.topics')}
-                android_ripple={{ color: 'rgba(255,255,255,0.3)' }}
-                style={{ alignSelf: 'flex-end' }}>
+                android_ripple={{ color: 'rgba(255,255,255,0.3)' }}>
                 <AppText
                   variant="caption"
                   numberOfLines={1}
