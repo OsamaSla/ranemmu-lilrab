@@ -234,7 +234,7 @@ export default function AdminScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [overrides, remoteVersion, reviewLang, reviewFilter, query]);
 
-  const pendingCount = Object.keys(overrides).length;
+  const pendingCount = Object.keys(overrides ?? {}).length;
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
