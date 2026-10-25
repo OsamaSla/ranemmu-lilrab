@@ -239,7 +239,7 @@ export default function AdminEditScreen() {
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={`${t('common.hymnNumber')} ${hymn.number}`} showBack />
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
-        <Pressable onPress={() => setExpandedBasic(!expandedBasic)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
+        <Pressable onPress={() => setExpandedBasic(!expandedBasic)} style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
           <AppText variant="label" color={colors.textMuted} style={{ fontWeight: '700' }}>{t('admin.hymnTitle')} · {expandedBasic ? '−' : '+'}</AppText>
           <MaterialCommunityIcons name={expandedBasic ? 'chevron-up' : 'chevron-down'} size={20} color={colors.textMuted} />
         </Pressable>
@@ -323,7 +323,7 @@ export default function AdminEditScreen() {
         </Card>
         ) : null}
 
-        <Pressable onPress={() => setExpandedTopics(!expandedTopics)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
+        <Pressable onPress={() => setExpandedTopics(!expandedTopics)} style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
           <AppText variant="label" color={colors.textMuted} style={{ fontWeight: '700' }}>{t('admin.topics')} · {expandedTopics ? '−' : '+'}</AppText>
           <MaterialCommunityIcons name={expandedTopics ? 'chevron-up' : 'chevron-down'} size={20} color={colors.textMuted} />
         </Pressable>
@@ -341,7 +341,7 @@ export default function AdminEditScreen() {
         </Card>
         ) : null}
 
-        <Pressable onPress={() => setExpandedVerses(!expandedVerses)} style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
+        <Pressable onPress={() => setExpandedVerses(!expandedVerses)} style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
           <AppText variant="label" color={colors.textMuted} style={{ fontWeight: '700' }}>{t('admin.verses')} · {expandedVerses ? '−' : '+'}</AppText>
           <MaterialCommunityIcons name={expandedVerses ? 'chevron-up' : 'chevron-down'} size={20} color={colors.textMuted} />
         </Pressable>

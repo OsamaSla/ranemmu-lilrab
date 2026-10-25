@@ -8,6 +8,7 @@
 import { Pressable, View } from 'react-native';
 
 import { AppText } from './AppText';
+import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
 import { FONT_FAMILIES } from '../theme/fonts';
 import { radius, spacing } from '../theme/tokens';
@@ -19,9 +20,10 @@ interface FontChipsProps {
 
 export function FontChips({ value, onChange }: FontChipsProps) {
   const { colors } = useTheme();
+  const { direction } = useT();
 
   return (
-    <View style={{ flexDirection: 'row', flexWrap: 'wrap', gap: spacing.sm }}>
+    <View style={{ flexDirection: direction.row, flexWrap: 'wrap', gap: spacing.sm }}>
       {FONT_FAMILIES.map((family) => {
         const selected = family.id === value;
 

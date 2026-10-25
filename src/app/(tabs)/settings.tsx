@@ -33,7 +33,7 @@ import { spacing } from '../../theme/tokens';
 const APP_VERSION = Constants.expoConfig?.version ?? '1.0.0';
 
 export default function SettingsScreen() {
-  const { t } = useT();
+  const { t, direction } = useT();
   const { colors } = useTheme();
 
   const theme = useSettings((s) => s.theme);
@@ -111,7 +111,7 @@ export default function SettingsScreen() {
         </Section>
 
         <Section title={t('settings.about')}>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+          <View style={{ flexDirection: direction.row, justifyContent: 'space-between' }}>
             <AppText variant="body">{t('appName')}</AppText>
             <AppText variant="body" color={colors.textMuted}>
               {t('settings.version')} {APP_VERSION}
