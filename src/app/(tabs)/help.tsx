@@ -6,6 +6,7 @@
  * each entry are reviewable at a glance.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import type { ComponentProps } from 'react';
 import * as WebBrowser from 'expo-web-browser';
 import { Linking, Pressable, ScrollView, View } from 'react-native';
 
@@ -47,7 +48,7 @@ export default function HelpScreen() {
               } catch {}
             }}
             accessibilityRole="button"
-            accessibilityLabel={t('installApp.title')}
+            accessibilityLabel={t('help.installApp.title')}
             android_ripple={{ color: colors.border }}
             style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.md }}>
             <View
@@ -58,12 +59,12 @@ export default function HelpScreen() {
                 paddingVertical: spacing.xs,
               }}>
               <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-                {t('installApp.title')}
+                {t('help.installApp.title')}
               </AppText>
             </View>
             <MaterialCommunityIcons name="cellphone-link" size={22} color={colors.textMuted} />
             <AppText variant="body" style={{ flex: 1 }} numberOfLines={2}>
-              {t('installApp.body')}
+              {t('help.installApp.body')}
             </AppText>
           </Pressable>
         </Card>

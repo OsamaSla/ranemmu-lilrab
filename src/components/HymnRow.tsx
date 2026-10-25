@@ -31,7 +31,7 @@ export function HymnRow({ hymn, onPress, subtitle, showStar = true, onToggleFavo
 
   const toggle = onToggleFavorite ?? (() => useLibrary.getState().toggleFavorite(hymn.id));
 
-  const numberBg = !hymn.book ? colors.primary : hymn.book === 'taranim' ? '#8A9A87' : hymn.book === 'extra' ? '#C4A896' : colors.primary;
+  const numberBg = !hymn.book ? colors.primary : hymn.book === 'taranim' ? '#8A9A87' : colors.primary;
 
   return (
     <Card padded={false} style={{ marginBottom: spacing.sm }}>

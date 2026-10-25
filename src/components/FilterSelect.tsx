@@ -110,16 +110,15 @@ export function FilterSelect({ title, icon, options, value, onChange, style }: F
                     accessibilityRole="button"
                     accessibilityLabel={option.label}
                     accessibilityState={{ selected: active }}
-                    android_ripple={{ color: colors.border }}
-                    style={({ pressed }) => ({
+                    activeOpacity={0.65}
+                    style={{
                       flexDirection: direction.row,
                       alignItems: 'center',
                       gap: spacing.sm,
                       paddingVertical: spacing.md,
                       borderTopWidth: 1,
                       borderTopColor: colors.border,
-                      opacity: pressed ? 0.65 : 1,
-                    })}>
+                    }}>
                     <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.sm, flex: 1 }}>
                       {option.color ? (
                         <View style={{ width: 10, height: 10, borderRadius: 5, backgroundColor: option.color }} />

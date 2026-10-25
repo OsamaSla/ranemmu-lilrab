@@ -147,6 +147,7 @@ admin: {
     backToAdmin: 'العودة للإدارة',
     errExists: 'الترنيمة موجودة بالفعل',
     findNextNumber: 'إيجاد الرقم التالي المتاح',
+    verses: 'البيوت',
   },
 
   structure: {

@@ -128,6 +128,7 @@ export const en: PartialDictionary = {
   'admin.backToAdmin': 'Back to Admin',
   'admin.errExists': 'Hymn already exists',
   'admin.findNextNumber': 'Find next available number',
+  'admin.verses': 'Verses',
 
   'structure.title': 'Metre',
   'structure.subtitle': 'Hymns sharing the same metre',
@@ -169,6 +170,8 @@ export const en: PartialDictionary = {
   'help.fullscreen.body': 'Tap the fullscreen icon to hide the menus and read the hymn on its own.',
   'help.share.title': 'Share',
   'help.share.body': 'Share the hymn, or a passage from it, through any app on your device.',
+  'help.installApp.title': 'Install App',
+  'help.installApp.body': 'Open the site in your browser, then tap "Add to Home Screen" to use the app without a browser.',
 
   'more.title': 'More',
   'more.structure': 'Metre',

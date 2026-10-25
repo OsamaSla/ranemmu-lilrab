@@ -133,6 +133,7 @@ export const de: PartialDictionary = {
   'admin.backToAdmin': 'Zurück zum Admin',
   'admin.errExists': 'Lied existiert bereits',
   'admin.findNextNumber': 'Nächste freie Nummer finden',
+  'admin.verses': 'Strophen',
 
   'structure.title': 'Metrum',
   'structure.subtitle': 'Lieder mit demselben Metrum',
@@ -174,6 +175,8 @@ export const de: PartialDictionary = {
   'help.fullscreen.body': 'Tippe auf das Vollbild-Symbol, um die Menüs auszublenden und das Lied allein zu lesen.',
   'help.share.title': 'Teilen',
   'help.share.body': 'Teile das Lied oder eine Strecke daraus über eine beliebige App auf deinem Gerät.',
+  'help.installApp.title': 'App installieren',
+  'help.installApp.body': 'Öffne die Website im Browser und tippe dann auf "Zum Startbildschirm hinzufügen", um die App ohne Browser zu nutzen.',
 
   'more.title': 'Mehr',
   'more.structure': 'Metrum',
