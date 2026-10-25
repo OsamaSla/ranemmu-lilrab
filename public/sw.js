@@ -5,7 +5,7 @@
  * caches below when the shell changes; old versioned caches are purged on
  * activate. Static export only — no build step touches this file.
  */
-const VERSION = 'v2';
+const VERSION = 'v3';
 const STATIC_CACHE = `ranemmu-static-${VERSION}`;
 const PAGES_CACHE = `ranemmu-pages-${VERSION}`;
 const BASE = '/ranemmu-lilrab';
