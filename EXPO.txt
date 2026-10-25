@@ -1,0 +1,5 @@
+npx expo start          # dev server (Expo Go via QR)
+npx expo start --web    # web build locally
+npx expo start -c       # clear Metro cache if styles look stale
+npx expo run:android    # native Android dev build (true native RTL)
+npx expo run:ios        # native iOS dev build

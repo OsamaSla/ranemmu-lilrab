@@ -16,6 +16,13 @@ import { getCorpus, getSummaries } from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
 import { isFirebaseConfigured } from '../../data/firebase';
 import { deleteHymnFromCloud, publishOverrides } from '../../data/publish';
+import {
+  fetchFeedbacks,
+  updateFeedbackStatus,
+  updateFeedbackNotes,
+  deleteFeedback,
+  type Feedback,
+} from '../../data/feedback';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -56,6 +63,10 @@ export default function AdminScreen() {
   const [reviewFilter, setReviewFilter] = useState<'all' | 'AI_DRAFT' | 'VERIFIED'>('AI_DRAFT');
   const remoteVersion = useRemote((s) => s.updatedAt);
   const [num, setNum] = useState('');
+  const [feedbacks, setFeedbacks] = useState<(Feedback & { id: string })[]>([]);
+  const [feedbackFilter, setFeedbackFilter] = useState<'all' | 'pending' | 'in_progress' | 'completed'>('all');
+  const [feedbackNotesEdit, setFeedbackNotesEdit] = useState<Record<string, string>>({});
+  const [feedbackLoading, setFeedbackLoading] = useState(false);
   const [query, setQuery] = useState('');
   const [newPin, setNewPin] = useState('');
   const [msg, setMsg] = useState('');
@@ -160,6 +171,13 @@ export default function AdminScreen() {
     } else {
       setMsg(t('admin.authFailed'));
     }
+  };
+
+  const loadFeedback = async () => {
+    setFeedbackLoading(true);
+    const data = await fetchFeedbacks(feedbackFilter === 'all' ? undefined : feedbackFilter);
+    setFeedbacks(data);
+    setFeedbackLoading(false);
   };
 
   // Firebase configured: the signed-in admin edits. Otherwise the legacy

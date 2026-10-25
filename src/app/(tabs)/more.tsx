@@ -8,7 +8,8 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps } from 'react';
 import { useMemo } from 'react';
-import { Alert, Platform, Pressable, Share, ScrollView, View } from 'react-native';
+import { useState } from 'react';
+import { Alert, Platform, Pressable, ScrollView, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
@@ -16,6 +17,7 @@ import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { getSummaries } from '../../data/loader';
 import { useT } from '../../hooks/useT';
+import { FeedbackModal } from '../../components/FeedbackModal';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
 import { useRemote } from '../../store/remote';
@@ -35,6 +37,8 @@ export default function MoreScreen() {
   const router = useRouter();
   const { t } = useT();
   const { colors } = useTheme();
+
+  const [feedbackVisible, setFeedbackVisible] = useState(false);
 
   const notConfigured = () => Alert.alert(t('more.title'), t('more.notConfigured'));
 
@@ -78,7 +82,7 @@ export default function MoreScreen() {
       onPress: () => router.push('/settings'),
     },
     { icon: 'shield-lock-outline', label: 'more.admin', onPress: () => router.push('/admin') },
-    { icon: 'star', label: 'more.rateApp', onPress: notConfigured },
+    { icon: 'star', label: 'more.rateApp', onPress: () => setFeedbackVisible(true) },
     { icon: 'share-variant', label: 'more.shareApp', onPress: shareApp },
     { icon: 'email-outline', label: 'more.contactUs', onPress: notConfigured },
   ];
@@ -111,6 +115,8 @@ export default function MoreScreen() {
           style={{ marginTop: spacing.xl }}>
           {t('settings.version')} {ABOUT_VERSION}
         </AppText>
+
+        <FeedbackModal visible={feedbackVisible} onClose={() => setFeedbackVisible(false)} />
       </ScrollView>
     </View>
   );
