@@ -95,7 +95,7 @@ export const useSettings = create<SettingsState>()(
       // v3: adds the chosen hymn book (defaults to 'main' for older stores).
       // v4: adds the GitHub token for one-tap publishing (defaults to '').
       // v5: drops the GitHub token — publishing moved to Firebase.
-      version: 5,
+      version: 6,
       migrate: (persisted) => {
         const { githubToken: _dropped, ...rest } = (persisted ?? {}) as Record<string, unknown>;
         void _dropped;
