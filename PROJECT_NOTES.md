@@ -8,7 +8,10 @@ are not repeated every session.
   chunks), `63f89a0` (regenerated corpus) and `4d88940` (editing gate), `main`;
   live site deployed and checked signed-out (locked editor routes, no reader
   edit button). Same day: the ratings panel was split into its own
-  `(tabs)/admin-feedback` screen.
+  `(tabs)/admin-feedback` screen, then Admin was restructured into one frame
+  with a section ruler (`admin` · `admin-hymns` · `admin-feedback` ·
+  `admin-publish` · `admin-security`), the hymn-search box was dropped, and the
+  PIN moved to offline builds only.
 - **Update rule:** see [§13](#13-general-rule-for-any-project). Touch only the
   sections a change affected and bump "Last verified".
 - Speak Arabic with the owner (Osama). Code comments and commits are English.
@@ -57,10 +60,13 @@ From `package.json` / `app.json`:
 src/app/            Expo Router routes (screens only; keep helpers outside)
   _layout.tsx, +html.tsx (web <head>, SW registration, umami)
   (tabs)/_layout.tsx, index (home), library, favorites, recents, help, more,
-        settings, structure, admin, admin-add, admin-edit, admin-feedback,
-        hymn/[id]
+        settings, structure, admin (review), admin-hymns, admin-publish,
+        admin-security, admin-feedback, admin-add, admin-edit, hymn/[id]
 src/components/     Shared UI: AppBar, AppText, Card, FeedbackModal, … (all text
                     goes through AppText; never raw <Text>)
+  components/admin/ Admin frame: AdminScreenShell (AppBar + gate + tabs),
+                    AdminSectionTabs (the section ruler), AdminGate (sign-in or
+                    PIN), AdminButton
 src/data/           corpus + cloud: loader (sync reads), chunks (lazy import),
                     generated-chunks (from assets/hymns/full), types, normalize,
                     search, topics, meter, media, firebase, liveSync, publish,
@@ -186,17 +192,27 @@ public web API key are fine; test writes belong in the emulator.
 - Icons: `MaterialCommunityIcons` from `@expo/vector-icons`.
 - **On web `Alert.alert` is an empty function** (react-native-web 0.21). Any
   user-visible confirm/result must be inline UI or `Platform.OS !== 'web'`
-  gated. Current known offenders: hymn-delete confirm + PIN messages in
-  `admin.tsx`, "contact us" in `more.tsx`, clear-recents in `settings.tsx`.
+  gated. Current known offenders: hymn-delete confirm (`admin-hymns.tsx`, the
+  confirm silently no-ops on web), "contact us" in `more.tsx`, clear-recents in
+  `settings.tsx`.
 - React Compiler rules: no setState synchronously in `useEffect`; derive with
   `useMemo`; effects for external reads only, with a `cancelled` flag.
 - **Editing is gated by `useCanEdit()`** (`src/hooks/useCanEdit.ts`): a signed-in
   admin when Firebase is configured, otherwise the session PIN unlock in
-  `store/adminGate` (set from `admin.tsx`). Every entry point must call it —
-  the reader's edit button in `ReaderSettingsModal`, the `admin-edit`,
-  `admin-add` and `admin-feedback` routes (URL-reachable, so the route itself is
-  gated, not just the button). Adding another editor without this hook re-opens
-  the old hole.
+  `store/adminGate` (set from `components/admin/AdminGate.tsx`). Every entry
+  point must call it — the reader's edit button in `ReaderSettingsModal` and
+  every `admin*` route (URL-reachable, so the route itself is gated, not just the
+  button). The Admin sections get it from `AdminScreenShell`, so a new section
+  that uses the shell is covered automatically. Adding an editor screen without
+  that hook re-opens the old hole.
+- **Admin is one frame with a section ruler**, not one long page:
+  `admin` (review queue) · `admin-hymns` (add/delete) · `admin-feedback` ·
+  `admin-publish` · `admin-security` (offline builds only). Each is a separate
+  route registered with `href: null`; `AdminSectionTabs` switches them with
+  `router.replace` so the back stack does not grow. There is no hymn-search box
+  in Admin on purpose — the library already searches number/title/lyrics and
+  every hymn page has its own edit button; the review queue is the only place
+  that lists *which* translations are still unreviewed.
 
 ## 8. App ratings ("تقييم التطبيق") — current design
 
@@ -208,15 +224,16 @@ public web API key are fine; test writes belong in the emulator.
   `where('status') + orderBy('createdAt')` needs a composite index and fails
   the whole list when missing.
 - Admin: "إدارة التقييمات" lives on its own screen, `(tabs)/admin-feedback.tsx`
-  (`href: null`), reached from a link card in `admin.tsx`. It was inline before;
+  (`href: null`), reached from the Admin section ruler (`admin-feedback` tab).
+  It was inline before;
   it moved because one rating row carries three status pills and a notes field,
   so the list dominated a page that is otherwise a few settings. Two
   consequences worth knowing: `admin.tsx` no longer reads `feedbacks` at all
   (opening Admin costs zero feedback reads), and the rows render in a `FlatList`
   (virtualized, one `Card` per rating) instead of a `ScrollView` + `.map`.
   Filter chips (الكل/جديدة/قيد المعالجة/مكتملة) stay client-side for the same
-  composite-index reason; the route calls `useCanEdit()` because it is
-  URL-reachable. Reads require a signed-in admin by rule design.
+  composite-index reason; `AdminScreenShell` gates the route with `useCanEdit()`
+  because it is URL-reachable. Reads require a signed-in admin by rule design.
 - History: originally the rules had no `feedbacks` block (catch-all denied
   writes *and* reads) and the modal relied on `Alert` → button appeared dead on
   web. Fixed in `a15e501` (rules + error surfacing + admin panel).
@@ -288,9 +305,11 @@ public web API key are fine; test writes belong in the emulator.
   bar still only jumps by number.
 - Editing UI is gated by `useCanEdit()`, but the **on-device** override store is
   still writable from devtools/localStorage, and the PIN defaults to `1234`
-  (`store/settings.ts`). Only Firestore writes are actually enforced — by rules,
-  against a signed-in admin. Do not present the PIN or the hidden button as real
-  security.
+  (`store/settings.ts`). The PIN is only consulted when Firebase is *not*
+  configured, so it is dead weight on the deployed site — which is why the
+  `admin-security` tab is hidden and that route shows an explanation there. Only
+  Firestore writes are actually enforced — by rules, against a signed-in admin.
+  Do not present the PIN or the hidden button as real security.
 - **Web bundle baseline after the lazy-chunk change** (`npx expo export -p web`,
   2026-10-26): entry `entry-*.js` 3.14 MB raw / 0.79 MB gzip, plus 15 chunk
   files (5.85 MB raw together) that load on demand; 16 JS files, 2872 HTML

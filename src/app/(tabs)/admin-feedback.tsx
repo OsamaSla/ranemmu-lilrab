@@ -11,13 +11,10 @@
  */
 import { useEffect, useState } from 'react';
 import { FlatList, Pressable, TextInput, View } from 'react-native';
-import { useRouter } from 'expo-router';
 
-import { AppBar } from '../../components/AppBar';
+import { AdminScreenShell } from '../../components/admin/AdminScreenShell';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
-import { EmptyState } from '../../components/EmptyState';
-import { TextButton } from '../../components/TextButton';
 import {
   deleteFeedback,
   fetchFeedbacks,
@@ -64,10 +61,9 @@ function formatFeedbackDate(value: unknown): string {
 }
 
 export default function AdminFeedbackScreen() {
-  const router = useRouter();
   const { t, direction } = useT();
   const { colors, fontFamily } = useTheme();
-  // URL-reachable, so the route itself is gated — same reasoning as admin-edit.
+  // Guards the fetch; the route itself is gated by AdminScreenShell.
   const canEdit = useCanEdit();
 
   const [items, setItems] = useState<(Feedback & { id: string })[]>([]);
@@ -198,21 +194,8 @@ export default function AdminFeedbackScreen() {
     setMsg('تم حذف التقييم');
   };
 
-  if (!canEdit) {
-    return (
-      <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-        <AppBar title={t('admin.feedbackTitle')} showBack />
-        <EmptyState icon="lock-outline" title={t('admin.lockedTitle')} hint={t('admin.lockedHint')} />
-        <View style={{ flexDirection: direction.row, justifyContent: 'center' }}>
-          <TextButton label={t('admin.backToAdmin')} onPress={() => router.push('/admin')} />
-        </View>
-      </View>
-    );
-  }
-
   return (
-    <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      <AppBar title={t('admin.feedbackTitle')} showBack />
+    <AdminScreenShell active="feedback">
       <FlatList
         data={items}
         keyExtractor={(fb) => fb.id}
@@ -403,6 +386,6 @@ export default function AdminFeedbackScreen() {
           );
         }}
       />
-    </View>
+    </AdminScreenShell>
   );
 }
