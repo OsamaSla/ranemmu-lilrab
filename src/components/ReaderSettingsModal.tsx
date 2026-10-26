@@ -19,6 +19,7 @@ import { IconButton } from './IconButton';
 import { SegmentedControl } from './SegmentedControl';
 import { openHymnMedia, resolveHymnMediaUrl, youtubeSearchUrl } from '../data/media';
 import type { Hymn } from '../data/types';
+import { useCanEdit } from '../hooks/useCanEdit';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
 import {
@@ -40,6 +41,8 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
   const { t, direction } = useT();
   const { colors } = useTheme();
   const router = useRouter();
+  // Editing is admin-only; the button used to show for every reader.
+  const canEdit = useCanEdit();
 
   const readerSize = useSettings((s) => s.readerSize);
   const increaseReaderSize = useSettings((s) => s.increaseReaderSize);
@@ -219,7 +222,7 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
             </>
           ) : null}
 
-          {hymn ? (
+          {hymn && canEdit ? (
             <Pressable
               onPress={() => {
                 onClose();

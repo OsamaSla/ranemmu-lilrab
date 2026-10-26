@@ -129,6 +129,8 @@ export const en: PartialDictionary = {
   'admin.secondaryTopics': 'Additional topics',
   'admin.noTopic': 'No topic',
   'admin.backToAdmin': 'Back to Admin',
+  'admin.lockedTitle': 'Editors only',
+  'admin.lockedHint': 'Sign in from the Admin tab (or enter the admin PIN), then open the editor again.',
   'admin.errExists': 'Hymn already exists',
   'admin.findNextNumber': 'Find next available number',
   'admin.verses': 'Verses',

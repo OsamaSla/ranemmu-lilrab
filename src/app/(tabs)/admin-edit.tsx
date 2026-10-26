@@ -15,12 +15,14 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { EmptyState } from '../../components/EmptyState';
+import { TextButton } from '../../components/TextButton';
 import { TopicPicker } from '../../components/TopicPicker';
 import { getHymn, ensureHymn, isHymnPending } from '../../data/loader';
 import { syncHymnToCloud } from '../../data/liveSync';
 import { isValidMediaUrl } from '../../data/media';
 import type { TopicId } from '../../data/topics';
 import { useT } from '../../hooks/useT';
+import { useCanEdit } from '../../hooks/useCanEdit';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
 import { radius, spacing } from '../../theme/tokens';
@@ -30,6 +32,9 @@ export default function AdminEditScreen() {
   const { id } = useLocalSearchParams<{ id: string }>();
   const { t, direction } = useT();
   const { colors, fontFamily } = useTheme();
+  // Same gate as the Admin screen and the reader's edit button: this route is
+  // reachable by URL, so hiding the button is not enough.
+  const canEdit = useCanEdit();
 
   const setOverride = useOverrides((s) => s.setOverride);
 
@@ -99,7 +104,7 @@ export default function AdminEditScreen() {
   const [, setChunkVersion] = useState(0);
   const pendingChunk = typeof id === 'string' && isHymnPending(id);
   useEffect(() => {
-    if (typeof id !== 'string') return;
+    if (!canEdit || typeof id !== 'string') return;
     let active = true;
     ensureHymn(id)
       .then(() => {
@@ -111,11 +116,23 @@ export default function AdminEditScreen() {
     return () => {
       active = false;
     };
-  }, [id]);
+  }, [canEdit, id]);
 
   if (form.key !== id || form.sourceId !== (hymn?.id ?? '')) {
     setForm(toForm(id, hymn));
     setSavedOnce(false);
+  }
+
+  if (!canEdit) {
+    return (
+      <View style={{ flex: 1, backgroundColor: colors.canvas }}>
+        <AppBar title={t('admin.editHymn')} showBack />
+        <EmptyState icon="lock-outline" title={t('admin.lockedTitle')} hint={t('admin.lockedHint')} />
+        <View style={{ flexDirection: direction.row, justifyContent: 'center' }}>
+          <TextButton label={t('admin.backToAdmin')} onPress={() => router.push('/admin')} />
+        </View>
+      </View>
+    );
   }
 
   if (!hymn) {

@@ -134,6 +134,8 @@ export const de: PartialDictionary = {
   'admin.secondaryTopics': 'Weitere Themen',
   'admin.noTopic': 'Kein Thema',
   'admin.backToAdmin': 'Zurück zum Admin',
+  'admin.lockedTitle': 'Nur für Bearbeiter',
+  'admin.lockedHint': 'Melde dich im Admin-Bereich an (oder gib die Admin-PIN ein) und öffne den Editor erneut.',
   'admin.errExists': 'Lied existiert bereits',
   'admin.findNextNumber': 'Nächste freie Nummer finden',
   'admin.verses': 'Strophen',

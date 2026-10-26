@@ -12,11 +12,14 @@ import { useRouter } from 'expo-router';
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
+import { EmptyState } from '../../components/EmptyState';
+import { TextButton } from '../../components/TextButton';
 import { TopicPicker } from '../../components/TopicPicker';
 import { getSummaries } from '../../data/loader';
 import { syncHymnToCloud } from '../../data/liveSync';
 import { isValidMediaUrl } from '../../data/media';
 import type { TopicId } from '../../data/topics';
+import { useCanEdit } from '../../hooks/useCanEdit';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -48,6 +51,8 @@ export default function AdminAddScreen() {
   const router = useRouter();
   const { t, direction } = useT();
   const { colors, fontFamily } = useTheme();
+  // Reachable by URL, so the route is gated too, not just the Admin button.
+  const canEdit = useCanEdit();
 
   const setOverride = useOverrides((s) => s.setOverride);
   // Re-reads the list when cloud hymns stream in (number-taken check below).
@@ -142,6 +147,18 @@ export default function AdminAddScreen() {
     void syncHymnToCloud(String(form.number), patch);
     setMsg(t('admin.saved'));
   };
+
+  if (!canEdit) {
+    return (
+      <View style={{ flex: 1, backgroundColor: colors.canvas }}>
+        <AppBar title={t('admin.addHymn')} showBack />
+        <EmptyState icon="lock-outline" title={t('admin.lockedTitle')} hint={t('admin.lockedHint')} />
+        <View style={{ flexDirection: direction.row, justifyContent: 'center' }}>
+          <TextButton label={t('admin.backToAdmin')} onPress={() => router.push('/admin')} />
+        </View>
+      </View>
+    );
+  }
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>

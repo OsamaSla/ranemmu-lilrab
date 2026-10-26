@@ -25,7 +25,9 @@ import {
   type FeedbackStatus,
 } from '../../data/feedback';
 import { useT } from '../../hooks/useT';
+import { useCanEdit } from '../../hooks/useCanEdit';
 import { useTheme } from '../../hooks/useTheme';
+import { useAdminGate } from '../../store/adminGate';
 import { useOverrides } from '../../store/overrides';
 import { useRemote } from '../../store/remote';
 import { useSession } from '../../store/session';
@@ -85,7 +87,10 @@ export default function AdminScreen() {
   const signIn = useSession((s) => s.signIn);
   const signOut = useSession((s) => s.signOut);
 
-  const [unlocked, setUnlocked] = useState(false);
+  // Unlock state is shared so admin-edit/admin-add and the reader's edit
+  // button honour the same gate; see hooks/useCanEdit.
+  const unlockAdmin = useAdminGate((s) => s.unlock);
+
   const [pin, setPin] = useState('');
   const [pinError, setPinError] = useState(false);
   const [email, setEmail] = useState('');
@@ -171,7 +176,7 @@ export default function AdminScreen() {
 
   const unlock = () => {
     if (pin === adminPin) {
-      setUnlocked(true);
+      unlockAdmin();
       setPinError(false);
       setPin('');
     } else {
@@ -287,7 +292,7 @@ export default function AdminScreen() {
 
   // Firebase configured: the signed-in admin edits. Otherwise the legacy
   // on-device PIN gate applies and everything stays local-only.
-  const canEdit = isFirebaseConfigured ? !!sessionUser : unlocked;
+  const canEdit = useCanEdit();
 
   // The review queue and its global search need every hymn body, which lives
   // in lazily imported chunks. Load them once the admin unlocks the area.
