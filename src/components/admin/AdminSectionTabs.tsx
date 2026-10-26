@@ -11,7 +11,7 @@
  * on-device PIN is never consulted (`hooks/useCanEdit`), so the tab would offer
  * a control that nothing reads.
  */
-import { Pressable, ScrollView } from 'react-native';
+import { Pressable, ScrollView, View } from 'react-native';
 import { useRouter, type Href } from 'expo-router';
 
 import { AppText } from '../AppText';
