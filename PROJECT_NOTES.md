@@ -4,7 +4,8 @@ Living knowledge base for agents and humans. **Read this before exploring the
 repo** — it exists so `npm ci`, live Firebase probes and file-by-file reading
 are not repeated every session.
 
-- **Last verified:** 2026-10-26, commit `a15e501`, `main`, live site checked.
+- **Last verified:** 2026-10-26, commits `b320dab` (lyric search + lazy
+  chunks) and `63f89a0` (regenerated corpus), `main`, live site checked.
 - **Update rule:** see [§13](#13-general-rule-for-any-project). Touch only the
   sections a change affected and bump "Last verified".
 - Speak Arabic with the owner (Osama). Code comments and commits are English.
@@ -56,16 +57,18 @@ src/app/            Expo Router routes (screens only; keep helpers outside)
         settings, structure, admin, admin-add, admin-edit, hymn/[id]
 src/components/     Shared UI: AppBar, AppText, Card, FeedbackModal, … (all text
                     goes through AppText; never raw <Text>)
-src/data/           corpus + cloud: loader, types, normalize, search, topics,
-                    meter, media, firebase, liveSync, publish, feedback,
-                    generated-chunks (from assets/hymns/chunks)
+src/data/           corpus + cloud: loader (sync reads), chunks (lazy import),
+                    generated-chunks (from assets/hymns/full), types, normalize,
+                    search, topics, meter, media, firebase, liveSync, publish,
+                    feedback
 src/store/          zustand: settings (locale/theme/font/pin), overrides
                     (local admin edits), remote (downloaded live docs),
                     session (Firebase auth user), library (sort/filters)
 src/hooks/          useT (translate + direction), useTheme, useGoBack
 src/i18n/           ar.ts (nested, source of truth) + en.ts/de.ts (flat)
 src/theme/          tokens.ts (colors light/dark, spacing, radius), fonts.ts
-assets/hymns/       index.json (summaries) + chunks/*.json (full hymn bodies)
+assets/hymns/       index.json (summaries, bundled statically) + full/NNN.json
+                    (hymn bodies, dynamic import() per chunk — generated)
 content/            authoring sources (.xlsx, imports); scripts/ builds assets
 scripts/            corpus build/check, review sheets, pages fallback, tutorials
 public/             manifest.json, sw.js, icons — copied into dist
@@ -100,6 +103,32 @@ file instead.
 Read path: `loader.ts` merges **bundled corpus** → **local overrides**
 (`store/overrides`) → **remote docs** (`store/remote`). Screens use
 `getCorpus()`, `getSummaries()`; search index lives in `data/search.ts`.
+`getHymn()`/`getCorpus()` stay **synchronous** — they read whatever chunks are
+already in memory.
+
+Lazy hymn bodies (added 2026-10-26):
+
+- `assets/hymns/index.json` (summaries, 214 KB) is still a static `require`.
+  `src/data/generated-chunks.ts` (generated) lists each `full/NNN.json` as a
+  literal `import('…')` plus `HYMN_CHUNK_BY_ID`, so Metro emits one JS file per
+  chunk and the entry bundle carries no hymn text.
+- `src/data/chunks.ts` owns the cache: `ensureHymn(id)` (one chunk),
+  `ensureAllChunks()` (all 15, ~3.3 MB — full-text search and the admin review
+  queue), `isHymnPending(id)` (bundled but not yet imported),
+  `loadedChunksInOrder()`, `areAllChunksLoaded()`.
+- Reads stay sync by contract: callers `await` the ensure call, then bump a
+  local version state. `chunks.ts` calls one listener registered by `loader.ts`
+  (`refreshOverlaidCorpus`), which drops the memoised corpus and search index.
+- New screen pattern (reader, admin-edit): `getHymn(id)` → `undefined` +
+  `isHymnPending(id)` → show `common.loading`, `ensureHymn` in an effect,
+  bump state. Without the `isHymnPending` branch the screen flashes "not
+  found" before the chunk lands.
+- `assets/hymns/full/*.json` are written **minified** on purpose (`JSON.stringify`
+  without indent): they are the exact bytes a search downloads. `index.json`
+  keeps one-space indentation so its diffs stay reviewable.
+- `store/remote.ts` cannot diff a bundled hymn whose chunk is not loaded, so it
+  keeps the whole cloud record as the patch (`isBundledId(id)`),
+  and `getRemoteFullDocs` skips bundled ids.
 
 Cloud (Firestore):
 
@@ -196,11 +225,52 @@ public web API key are fine; test writes belong in the emulator.
    expected and harmless).
 7. `TUTORIAL_VIDEO.md` / `tutorial/` and the root `.mp4`/`.jpg` files are
    content assets, not app code.
+8. **`assets/hymns` had drifted ahead of `content/`.** The generated JSON was
+   hand-patched for months: `221d593` removed SoundCloud links from `content/`
+   but the assets kept all 366, and `140862e` wrote YouTube links straight into
+   `assets/`. Regenerating therefore looks like data loss. Verified 2026-10-26:
+   all 251 curated YouTube links exist identically in `content/`, so
+   `npm run build:corpus` drops only the 183 SoundCloud links that are no
+   longer in `content/` and adds 21 newer ones. **Never "restore" the dropped
+   SoundCloud links** — they were removed on purpose (the reader falls back to
+   the YouTube search button). Verify with: diff `mediaUrl` by id between
+   `git show HEAD:assets/hymns/index.json` and the working copy.
+9. Full-text search needs every chunk, so the first text query upgrades the
+   page from 3.14 MB to 8.99 MB of JS (entry + 15 chunks, raw). Expected;
+   numbers stay on the summaries, and opening one hymn loads one 0.2–0.5 MB
+   chunk.
+10. `npx expo export -p web` pre-renders each hymn in Node, where effects do not
+    run, so the exported HTML for `/hymn/<id>` contains the loading shell until
+    the client hydrates and imports the chunk. The title is still server-rendered;
+    the body is client-rendered now. Any future `<head>` SEO/metadata for hymn
+    bodies must be fed from `index.json`, not from `getHymn()`.
 
 ## 11. Known issues / cleanup candidates
 
 - Admin hymn delete, "contact us", clear-recents use `Alert` → no-ops on web
-  (see §7).
+  (see §7). `recents.tsx` clears without any confirmation, unlike settings.
+- Search lives only in `library.tsx` (no separate route): digits are a summary
+  lookup, text matches titles immediately and lyrics after the chunks load,
+  in two sections with match highlights (`HymnRow highlight`,
+  `LyricsMatchRow`). Cap: 2 lines per hymn, 60 lyric rows. The reader's jump
+  bar still only jumps by number.
+- **`admin-edit.tsx` has no auth gate**, and `ReaderSettingsModal` shows an
+  "تحرير الترنيمة" button to every reader. The PIN only gates `admin.tsx`;
+  overrides are local-first, so any visitor can edit text on their device and
+  see it persisted (Firestore writes still require auth).
+- **Web bundle baseline after the lazy-chunk change** (`npx expo export -p web`,
+  2026-10-26): entry `entry-*.js` 3.14 MB raw / 0.79 MB gzip, plus 15 chunk
+  files (5.85 MB raw together) that load on demand; 16 JS files, 2872 HTML
+  pages, dist 104 MB. Previously one 8.98 MB / 2.11 MB gzip entry. Re-measure
+  after anything that touches fonts, icons or the i18n dictionaries.
+- Alphabetical sort buckets by raw first character, so `أ`/`إ`/`ا` are three
+  separate headers (169/77/80 hymns at `3f6c26b`). Fold before bucketing.
+- `admin.tsx` is the only screen with hardcoded Arabic strings; it also shows a
+  default PIN of `1234` (`store/settings.ts`), which is not real security.
+- Installed but not imported anywhere in `src/`: `@expo/ui`, `expo-device`,
+  `expo-glass-effect`, `expo-image`, `expo-symbols`, `expo-system-ui`,
+  `expo-localization`. Verify with `expo-doctor` before removing.
+- No test runner at all; CI only runs `expo export` (no typecheck/lint).
 - `admin.tsx` edits are local-first (`overrides`) + cloud publish; there is no
   per-field conflict resolution.
 - `src/app/(tabs)/*.py` scratch files should be removed.
@@ -216,7 +286,10 @@ public web API key are fine; test writes belong in the emulator.
 4. Firestore changes: rules updated **and** deployment step stated to the owner.
 5. Live verification: Actions run green + new `entry-*.js` hash on
    https://OsamaSla.github.io/ranemmu-lilrab/.
-6. Update this file (§13).
+6. Corpus or content changes: `npm run build:corpus` run, assets +
+   `generated-chunks.ts` committed, and the `mediaUrl` delta checked by id
+   against `HEAD` (§10.8) so curated links are not silently dropped.
+7. Update this file (§13).
 
 ---
 
