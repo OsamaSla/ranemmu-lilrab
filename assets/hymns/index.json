@@ -165,12 +165,12 @@
   "book": "main",
   "number": 19,
   "title": "ماشي معايا وما بتنساني",
+  "mediaUrl": "https://www.youtube.com/watch?v=06Ipnz3CI04",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=06Ipnz3CI04"
+  ]
  },
  {
   "id": "h0020",
@@ -263,12 +263,12 @@
   "book": "main",
   "number": 28,
   "title": "نهتف لسيدنا فادينا",
+  "mediaUrl": "https://www.youtube.com/watch?v=UpbivbMyXlc",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=UpbivbMyXlc"
+  ]
  },
  {
   "id": "h0029",
@@ -280,8 +280,7 @@
   "topics": [
    "fellowship",
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/mat-josh/9z9xtfxytlqw"
+  ]
  },
  {
   "id": "h0030",
@@ -362,9 +361,9 @@
   "book": "main",
   "number": 37,
   "title": "في هذي الحياة لا أبالي بالهموم",
+  "mediaUrl": "https://www.youtube.com/watch?v=hiOLrap1UOM",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=hiOLrap1UOM"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0038",
@@ -408,8 +407,7 @@
    "cross",
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-518806294-422410800/si7l7orvnsho"
+  ]
  },
  {
   "id": "h0042",
@@ -417,8 +415,7 @@
   "number": 42,
   "title": "أراك إلهي أراك",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/user-518806294-422410800/knjdhvm5txq8"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0043",
@@ -452,29 +449,28 @@
   "primaryTopic": "comfort",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf722g/idaved66uedv"
+  ]
  },
  {
   "id": "h0046",
   "book": "main",
   "number": 46,
   "title": "قام المسيح يا شعب أبشر",
+  "mediaUrl": "https://www.youtube.com/watch?v=ZUI9BVLmAHY",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=ZUI9BVLmAHY"
+  ]
  },
  {
   "id": "h0047",
   "book": "main",
   "number": 47,
   "title": "هامسك إيدك وامشي معاك",
+  "mediaUrl": "https://www.youtube.com/watch?v=2skSZrQqt6c",
   "hasChorus": true,
-  "primaryTopic": "word",
-  "mediaUrl": "https://www.youtube.com/watch?v=2skSZrQqt6c"
+  "primaryTopic": "word"
  },
  {
   "id": "h0048",
@@ -497,8 +493,7 @@
   "primaryTopic": "comfort",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf731/a2kqojkpj1gx"
+  ]
  },
  {
   "id": "h0050",
@@ -513,13 +508,13 @@
   "book": "main",
   "number": 51,
   "title": "كنت الرابع في الأتون",
+  "mediaUrl": "https://www.youtube.com/watch?v=P_ywYj0LFJk",
   "hasChorus": true,
   "primaryTopic": "repentance",
   "topics": [
    "comfort",
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=P_ywYj0LFJk"
+  ]
  },
  {
   "id": "h0052",
@@ -577,8 +572,7 @@
   "number": 57,
   "title": "أمامك يا من بذلت الدم",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/safwatg/rajlgbiyzvtd"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0058",
@@ -597,20 +591,19 @@
   "number": 59,
   "title": "قوموا نسبح كلنا للكاهن العظيم",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf743g/ylgudz3cgmzd"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0060",
   "book": "main",
   "number": 60,
   "title": "طول ما في إيدك كل حياتي",
+  "mediaUrl": "https://www.youtube.com/watch?v=ktu8LRI7Y6M",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=ktu8LRI7Y6M"
+  ]
  },
  {
   "id": "h0061",
@@ -639,8 +632,7 @@
   "primaryTopic": "cross",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf744g/hxmddq8wpgbb"
+  ]
  },
  {
   "id": "h0064",
@@ -674,8 +666,7 @@
   "primaryTopic": "repentance",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf747g/sctj8dvbgo2c"
+  ]
  },
  {
   "id": "h0067",
@@ -690,8 +681,7 @@
   "number": 68,
   "title": "مهما لساني بيتكلم عن أفضالك باتعلم",
   "hasChorus": true,
-  "primaryTopic": "word",
-  "mediaUrl": "https://soundcloud.com/saf750g/26r9ijbd6txp"
+  "primaryTopic": "word"
  },
  {
   "id": "h0069",
@@ -703,8 +693,7 @@
   "topics": [
    "repentance",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf750g/gw5h5lwwvniq"
+  ]
  },
  {
   "id": "h0070",
@@ -715,8 +704,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf748g/kvqdqnf03c7h"
+  ]
  },
  {
   "id": "h0071",
@@ -746,8 +734,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf752g/bo9czhn9bvof"
+  ]
  },
  {
   "id": "h0074",
@@ -765,9 +752,9 @@
   "book": "main",
   "number": 75,
   "title": "كل العمر معاك مضمون",
+  "mediaUrl": "https://www.youtube.com/watch?v=Q1xMHwKwdDM",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=Q1xMHwKwdDM"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0076",
@@ -809,12 +796,12 @@
   "book": "main",
   "number": 80,
   "title": "لست أحتاج سواك",
+  "mediaUrl": "https://www.youtube.com/watch?v=pXibQcpQ9A0",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=pXibQcpQ9A0"
+  ]
  },
  {
   "id": "h0081",
@@ -829,13 +816,13 @@
   "book": "main",
   "number": 82,
   "title": "أحبك يا من جعلت",
+  "mediaUrl": "https://www.youtube.com/watch?v=aDdSu7ssUJU",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=aDdSu7ssUJU"
+  ]
  },
  {
   "id": "h0083",
@@ -856,8 +843,7 @@
   "number": 84,
   "title": "مهما تزيد الصعاب وتكبر",
   "hasChorus": true,
-  "primaryTopic": "warfare",
-  "mediaUrl": "https://soundcloud.com/saf1018/whatsapp-audio-2024-03-04-at"
+  "primaryTopic": "warfare"
  },
  {
   "id": "h0085",
@@ -868,8 +854,7 @@
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat483-g/os3uddlnywdx"
+  ]
  },
  {
   "id": "h0086",
@@ -912,8 +897,7 @@
   "number": 90,
   "title": "قوة ربي لا أملك",
   "hasChorus": true,
-  "primaryTopic": "warfare",
-  "mediaUrl": "https://soundcloud.com/safwat484-g/dzsrlk5l7lhc"
+  "primaryTopic": "warfare"
  },
  {
   "id": "h0091",
@@ -956,8 +940,7 @@
   "number": 95,
   "title": "سأكرس وأقدم",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf560g/vkswk9hyx7fj"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0096",
@@ -965,8 +948,7 @@
   "number": 96,
   "title": "في وسط هموم الحياه",
   "hasChorus": true,
-  "primaryTopic": "warfare",
-  "mediaUrl": "https://soundcloud.com/andrew-magdy-244033758/wsqxylsbgooa"
+  "primaryTopic": "warfare"
  },
  {
   "id": "h0097",
@@ -977,8 +959,7 @@
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat484-g/aozkv2wlkjam"
+  ]
  },
  {
   "id": "h0098",
@@ -989,8 +970,7 @@
   "primaryTopic": "warfare",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf1018/f02a5a4d-2e64-48a6-9a5f-b0fb8c97e1fe"
+  ]
  },
  {
   "id": "h0099",
@@ -998,8 +978,7 @@
   "number": 99,
   "title": "إن فاض من قلبي نبع السلام",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/saf692g/rxgwiom3dfwh"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0100",
@@ -1011,8 +990,7 @@
   "topics": [
    "comfort",
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/safsaf-andy/7ilos0k1ydp4"
+  ]
  },
  {
   "id": "h0101",
@@ -1035,8 +1013,7 @@
   "topics": [
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat484-g/6wruemiv8xgj"
+  ]
  },
  {
   "id": "h0103",
@@ -1058,32 +1035,28 @@
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/andrew835g/sc7yk09kicne"
+  ]
  },
  {
   "id": "h0105",
   "book": "main",
   "number": 105,
   "title": "إليك حاجتي في كل حين",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/andrew835g/9iizdbsw544s"
+  "hasChorus": true
  },
  {
   "id": "h0106",
   "book": "main",
   "number": 106,
   "title": "لم يأت كي يديننا",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/safwat484-g/swnes8lkmbgw"
+  "hasChorus": false
  },
  {
   "id": "h0107",
   "book": "main",
   "number": 107,
   "title": "أنجز يا ربي قصدك بي",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/andrew835g/hw0hcmkzy0ge"
+  "hasChorus": false
  },
  {
   "id": "h0108",
@@ -1094,8 +1067,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/seham/track-13"
+  ]
  },
  {
   "id": "h0109",
@@ -1106,8 +1078,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/fibe-saf/ym7gmjpawnde"
+  ]
  },
  {
   "id": "h0110",
@@ -1115,8 +1086,7 @@
   "number": 110,
   "title": "يا ترى أي صديق",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/seham/track-9"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0111",
@@ -1124,8 +1094,7 @@
   "number": 111,
   "title": "إسمعوا بشرى الظفر",
   "hasChorus": false,
-  "primaryTopic": "warfare",
-  "mediaUrl": "https://soundcloud.com/andrew835g/nciyupnwlj2g"
+  "primaryTopic": "warfare"
  },
  {
   "id": "h0112",
@@ -1133,8 +1102,7 @@
   "number": 112,
   "title": "نبارك اسمك في كل يوم",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf1018/d603249d-e24a-4899-954a-64c96668d5ea"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0113",
@@ -1145,8 +1113,7 @@
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/hfakhry/angez-ya-rabbi"
+  ]
  },
  {
   "id": "h0114",
@@ -1157,8 +1124,7 @@
   "primaryTopic": "word",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/edward-azab/5-1"
+  ]
  },
  {
   "id": "h0115",
@@ -1166,8 +1132,7 @@
   "number": 115,
   "title": "شكرا من كل القلب",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/andrew835g/gg1kcbrostlc"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0116",
@@ -1178,8 +1143,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf725g/8rctyt6n93wc"
+  ]
  },
  {
   "id": "h0117",
@@ -1187,8 +1151,7 @@
   "number": 117,
   "title": "كل شيء ليسوع",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/5wbrurxxu8z6"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0118",
@@ -1200,8 +1163,7 @@
   "topics": [
    "fellowship",
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat482-g/lpdjrnb0s4cc"
+  ]
  },
  {
   "id": "h0119",
@@ -1212,8 +1174,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat483-g/gm3gqfdicjpc"
+  ]
  },
  {
   "id": "h0120",
@@ -1224,8 +1185,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf839saf/h2wutn3kolqk"
+  ]
  },
  {
   "id": "h0121",
@@ -1236,8 +1196,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/andrew835g/gbcbg0xdpbj0"
+  ]
  },
  {
   "id": "h0122",
@@ -1253,8 +1212,7 @@
   "number": 123,
   "title": "أخذتك المحبه يا حبيب",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/koko-joy-690294747/8ujpssl1gbxm"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0124",
@@ -1285,8 +1243,7 @@
   "topics": [
    "fellowship",
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-282465658/ghtd6fjswlp0"
+  ]
  },
  {
   "id": "h0127",
@@ -1294,8 +1251,7 @@
   "number": 127,
   "title": "يرعاني راعي الأمين",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/saf839saf/w62sfsarzo3j"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0128",
@@ -1311,8 +1267,7 @@
   "number": 129,
   "title": "حبيبي أيا من لأجلي جرحت",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safwat480-garas/dnnsv08jg6ea"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0130",
@@ -1350,8 +1305,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/andrew835g/dezankcafv6o"
+  ]
  },
  {
   "id": "h0134",
@@ -1363,8 +1317,7 @@
   "topics": [
    "cross",
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/ghnema/07a"
+  ]
  },
  {
   "id": "h0135",
@@ -1375,8 +1328,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/khalas_nfoos/icne-caai-as-final-1"
+  ]
  },
  {
   "id": "h0136",
@@ -1384,16 +1336,14 @@
   "number": 136,
   "title": "هل قد ذبحت من أجلي",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/seham/in83eml2hwga"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0137",
   "book": "main",
   "number": 137,
   "title": "مستر عنه الوجوه",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/saf839saf/cksjm7qfgopp"
+  "hasChorus": true
  },
  {
   "id": "h0138",
@@ -1404,8 +1354,7 @@
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf839saf/s443"
+  ]
  },
  {
   "id": "h0139",
@@ -1413,8 +1362,7 @@
   "number": 139,
   "title": "لولا موت الصلب يا فادي",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/andrew835g/ewj07q6jwyzm"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0140",
@@ -1422,8 +1370,7 @@
   "number": 140,
   "title": "في الصليب يا إلهي",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf837saf/gvegfrv7e7jk"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0141",
@@ -1434,8 +1381,7 @@
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf840f/3ptg9hrdjvzv"
+  ]
  },
  {
   "id": "h0142",
@@ -1443,8 +1389,7 @@
   "number": 142,
   "title": "يا من وهبت حبا",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf840f/vhumpir9ggnr"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0143",
@@ -1463,8 +1408,7 @@
   "number": 144,
   "title": "من لي سواه في السما",
   "hasChorus": true,
-  "primaryTopic": "eternity",
-  "mediaUrl": "https://soundcloud.com/saf842s/kr328mbmswvt"
+  "primaryTopic": "eternity"
  },
  {
   "id": "h0145",
@@ -1472,8 +1416,7 @@
   "number": 145,
   "title": "سيدي ايا حبيب",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf693g/b01"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0146",
@@ -1481,8 +1424,7 @@
   "number": 146,
   "title": "لأجلكم شربت كأس مر رهيب",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/saf722g/kxmsswik5q86"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0147",
@@ -1493,8 +1435,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/ghnema/01a-1"
+  ]
  },
  {
   "id": "h0148",
@@ -1502,8 +1443,7 @@
   "number": 148,
   "title": "لا أنسى يوما سيدي عند الصليب",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf843saf/ya9d0wqz2hlm"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0149",
@@ -1515,8 +1455,7 @@
   "topics": [
    "fellowship",
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/sdomskzyqfmq"
+  ]
  },
  {
   "id": "h0150",
@@ -1527,8 +1466,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf722g/q6wrud7bhnm0"
+  ]
  },
  {
   "id": "h0151",
@@ -1536,8 +1474,7 @@
   "number": 151,
   "title": "يا يسوع هناك في الصليب",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/safwat484-g/gvsn4splosos"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0152",
@@ -1548,8 +1485,7 @@
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf844saf/fxaeevgkony4"
+  ]
  },
  {
   "id": "h0153",
@@ -1557,8 +1493,7 @@
   "number": 153,
   "title": "بين يديك الحانية",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/user-282465658/zrpftowwt8er"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0154",
@@ -1566,8 +1501,7 @@
   "number": 154,
   "title": "طبت نفسا يا يسوع",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safwat480-garas/tkxlkfrtge5y"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0155",
@@ -1575,8 +1509,7 @@
   "number": 155,
   "title": "إني أحب الرب لا",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safwat559g/xrngc3e5ejmr"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0156",
@@ -1599,8 +1532,7 @@
   "topics": [
    "repentance",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/ghnema/09a-1"
+  ]
  },
  {
   "id": "h0158",
@@ -1608,20 +1540,19 @@
   "number": 158,
   "title": "لولاك سيدي لكنت في شقاء",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/kehmkchbbonc"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0159",
   "book": "main",
   "number": 159,
   "title": "كل فرحة للنفس كل بسمه في القلب",
+  "mediaUrl": "https://www.youtube.com/watch?v=u9hV2suNtqU",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=u9hV2suNtqU"
+  ]
  },
  {
   "id": "h0160",
@@ -1661,8 +1592,7 @@
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf853saf/45kzp6lizd4u"
+  ]
  },
  {
   "id": "h0164",
@@ -1674,8 +1604,7 @@
   "topics": [
    "fellowship",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/jesse-joshua-25030658/zen7mkg3qfyt"
+  ]
  },
  {
   "id": "h0165",
@@ -1687,8 +1616,7 @@
   "topics": [
    "repentance",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf853saf/57tt9erqsudo"
+  ]
  },
  {
   "id": "h0166",
@@ -1700,17 +1628,16 @@
   "topics": [
    "fellowship",
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/fahmy561g/2dhqzminnzfj"
+  ]
  },
  {
   "id": "h0167",
   "book": "main",
   "number": 167,
   "title": "أنظر إليه حاملا",
+  "mediaUrl": "https://www.youtube.com/watch?v=-3Ebg6RZIYA",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=-3Ebg6RZIYA"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0168",
@@ -1729,8 +1656,7 @@
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf1861saf/fc0zwppwegd0"
+  ]
  },
  {
   "id": "h0170",
@@ -1738,8 +1664,7 @@
   "number": 170,
   "title": "أحبك إذ أحببتني",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf1861saf/e5uzviafdz2n"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0171",
@@ -1747,8 +1672,7 @@
   "number": 171,
   "title": "يا رب ما أحلى الحياة قربك",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/randa-safwat5/f3uktde0negd"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0172",
@@ -1759,8 +1683,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat523-garas/oqiiqdob9qcq"
+  ]
  },
  {
   "id": "h0173",
@@ -1781,8 +1704,7 @@
   "number": 174,
   "title": "أنت لي المن الذي يشبع قلبي",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/saf1860saf/gi32x34nrhhc"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0175",
@@ -1805,20 +1727,19 @@
   "topics": [
    "fellowship",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/6jsnwdgxijjv"
+  ]
  },
  {
   "id": "h0177",
   "book": "main",
   "number": 177,
   "title": "يا هناء النفس في",
+  "mediaUrl": "https://www.youtube.com/watch?v=RVqh-fCexWA",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=RVqh-fCexWA"
+  ]
  },
  {
   "id": "h0178",
@@ -1826,8 +1747,7 @@
   "number": 178,
   "title": "ربي اداني فرحه في قلبي",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf1864saf24/ov7gjqvphqp9"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0179",
@@ -1839,8 +1759,7 @@
   "topics": [
    "comfort",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/josh-jesse-624495607/9eprxam4j1le"
+  ]
  },
  {
   "id": "h0180",
@@ -1860,8 +1779,7 @@
   "number": 181,
   "title": "ربي منقذي حبيبي",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/andy-fahmy-803654135/bmr8vy2zqsxm"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0182",
@@ -1869,8 +1787,7 @@
   "number": 182,
   "title": "أنا لست أشبع من حبيبي",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/user-161388548/pnfr8lmtz6uu"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0183",
@@ -1902,8 +1819,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/safsaf-341838819/e27qsn01gjh0"
+  ]
  },
  {
   "id": "h0186",
@@ -1924,8 +1840,7 @@
   "number": 187,
   "title": "ربي في حضنك روحي تستريح تهدأ",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf751880/qdahmymymesc"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0188",
@@ -1941,8 +1856,7 @@
   "number": 189,
   "title": "حبي لربي يزيد",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/ghnema/03a-1"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0190",
@@ -1958,16 +1872,15 @@
   "number": 191,
   "title": "تحت ظلك حبيبي",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safwat893saf/1yx6004fd1fs"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0192",
   "book": "main",
   "number": 192,
   "title": "رباه أنت آمالي",
-  "hasChorus": true,
-  "mediaUrl": "https://www.youtube.com/watch?v=WCWMUSenFg0"
+  "mediaUrl": "https://www.youtube.com/watch?v=WCWMUSenFg0",
+  "hasChorus": true
  },
  {
   "id": "h0193",
@@ -1978,8 +1891,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/zfg4xtxrucrk"
+  ]
  },
  {
   "id": "h0194",
@@ -1991,8 +1903,7 @@
   "topics": [
    "fellowship",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf896/hgioxaaxd4rv"
+  ]
  },
  {
   "id": "h0195",
@@ -2000,8 +1911,7 @@
   "number": 195,
   "title": "العيش معك يحلو إذ ترعى نفسي ربي",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf896/riolejka4jfu"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0196",
@@ -2019,8 +1929,7 @@
   "book": "main",
   "number": 197,
   "title": "متكئ رأسي على صدره باطمئنان",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/user-732308728/zml3x347oncp"
+  "hasChorus": false
  },
  {
   "id": "h0198",
@@ -2031,8 +1940,7 @@
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat896g/cvekoshrieni"
+  ]
  },
  {
   "id": "h0199",
@@ -2040,8 +1948,7 @@
   "number": 199,
   "title": "راحتي يا رب حقا",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safwat896g/2l9ggtln0lfg"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0200",
@@ -2053,17 +1960,16 @@
   "topics": [
    "worship",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat896g/zws0kzlfqyyw"
+  ]
  },
  {
   "id": "h0201",
   "book": "main",
   "number": 201,
   "title": "في كل يوم ألمس دوما",
+  "mediaUrl": "https://www.youtube.com/watch?v=qhyfNSVOCok",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=qhyfNSVOCok"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0202",
@@ -2071,8 +1977,7 @@
   "number": 202,
   "title": "يا إلهي يا حبيبي",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/main40/oqeoaclt7fao"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0203",
@@ -2107,17 +2012,16 @@
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/ghnema/ff7"
+  ]
  },
  {
   "id": "h0206",
   "book": "main",
   "number": 206,
   "title": "ربي زدني منك قربا",
+  "mediaUrl": "https://www.youtube.com/watch?v=NsnbyZGBtQg",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=NsnbyZGBtQg"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0207",
@@ -2125,25 +2029,23 @@
   "number": 207,
   "title": "مولاي زدني نعمة",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf751880/tysva5h2mnxv"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0208",
   "book": "main",
   "number": 208,
   "title": "أيها السائح في البرية",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/user-864207466/fk0yhpwyf9be"
+  "hasChorus": true
  },
  {
   "id": "h0209",
   "book": "main",
   "number": 209,
   "title": "وراءك يحلو المسير",
+  "mediaUrl": "https://www.youtube.com/watch?v=sqSMV-dkfFA",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=sqSMV-dkfFA"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0210",
@@ -2174,14 +2076,14 @@
   "book": "main",
   "number": 212,
   "title": "أثق يا سيدي أن يديك",
+  "mediaUrl": "https://www.youtube.com/watch?v=NsnbyZGBtQg",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "repentance",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=NsnbyZGBtQg"
+  ]
  },
  {
   "id": "h0213",
@@ -2189,8 +2091,7 @@
   "number": 213,
   "title": "من لي هنا أو في السما",
   "hasChorus": false,
-  "primaryTopic": "eternity",
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/mk812f28aisg"
+  "primaryTopic": "eternity"
  },
  {
   "id": "h0214",
@@ -2208,8 +2109,7 @@
   "book": "main",
   "number": 215,
   "title": "أخضع ذاتي دون عناد",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/saf722g/xnr3etwmssll"
+  "hasChorus": true
  },
  {
   "id": "h0216",
@@ -2217,8 +2117,7 @@
   "number": 216,
   "title": "إذا استجبت طلبتي",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/ghnema/02a-1"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0217",
@@ -2226,8 +2125,7 @@
   "number": 217,
   "title": "علمني أنتظرك يا رب",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/jesse-jesse-708938767/ckeufcrx757p"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0218",
@@ -2238,16 +2136,14 @@
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/fahmy410/2fro40umyuik"
+  ]
  },
  {
   "id": "h0219",
   "book": "main",
   "number": 219,
   "title": "لأنه أشبع نفسا مشتهية",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/fahmy410/ud2w7syrdc3c"
+  "hasChorus": true
  },
  {
   "id": "h0220",
@@ -2255,8 +2151,7 @@
   "number": 220,
   "title": "علمني كيف أصلي",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/7pv5fqgzbfcb"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0221",
@@ -2268,8 +2163,7 @@
   "topics": [
    "worship",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/coshlfnruiej/marlyalbert-2"
+  ]
  },
  {
   "id": "h0222",
@@ -2288,8 +2182,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/gyyssrpsraqc"
+  ]
  },
  {
   "id": "h0224",
@@ -2309,8 +2202,7 @@
    "fellowship",
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-282465658/mbmzehwjbzpa"
+  ]
  },
  {
   "id": "h0226",
@@ -2329,8 +2221,7 @@
   "number": 227,
   "title": "أشدو للملك وأهلل",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/seham/in7qklshaey3"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0228",
@@ -2358,8 +2249,7 @@
   "topics": [
    "comfort",
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/ran-saf17645/8d5yqeyuhn80"
+  ]
  },
  {
   "id": "h0231",
@@ -2380,9 +2270,9 @@
   "book": "main",
   "number": 233,
   "title": "ربي خيرك ورحمة",
+  "mediaUrl": "https://www.youtube.com/watch?v=hoy3EgwkAvo",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=hoy3EgwkAvo"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0234",
@@ -2397,8 +2287,7 @@
   "number": 235,
   "title": "شامخ لا يحني رأسي أي ضيق",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/andy-fahmy-795345542/ker5dnw3lcm8"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0236",
@@ -2422,21 +2311,20 @@
   "number": 238,
   "title": "حمل أحزاننا غفر آثامنا",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf422-garas/y5q9tx4iodcu"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0239",
   "book": "main",
   "number": 239,
   "title": "في وسط عالم الظلام",
+  "mediaUrl": "https://www.youtube.com/watch?v=QhO9aNbyPxM",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship",
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=QhO9aNbyPxM"
+  ]
  },
  {
   "id": "h0240",
@@ -2448,8 +2336,7 @@
   "topics": [
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/phar-374946768/c6befaeb-12e3-425e-91d9-bcfefa8d32f6"
+  ]
  },
  {
   "id": "h0241",
@@ -2461,20 +2348,19 @@
   "topics": [
    "comfort",
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf724g/nhvwyna66icg"
+  ]
  },
  {
   "id": "h0242",
   "book": "main",
   "number": 242,
   "title": "إلى هنا أعاننا",
+  "mediaUrl": "https://www.youtube.com/watch?v=NJp7UofIXak",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=NJp7UofIXak"
+  ]
  },
  {
   "id": "h0243",
@@ -2485,8 +2371,7 @@
   "primaryTopic": "warfare",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/kugrzeanoaef"
+  ]
  },
  {
   "id": "h0244",
@@ -2505,8 +2390,7 @@
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/andy-fahmy-795345542/th1uwnigeawk"
+  ]
  },
  {
   "id": "h0246",
@@ -2522,8 +2406,7 @@
   "number": 247,
   "title": "أنت معي كل الأيام",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/fah17147/uqitl9azwiii"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0248",
@@ -2544,8 +2427,7 @@
    "fellowship",
    "cross",
    "warfare"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf560g/pkvnceabm2rs"
+  ]
  },
  {
   "id": "h0250",
@@ -2556,8 +2438,7 @@
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/rob-safwat/pj6afd6tohjs"
+  ]
  },
  {
   "id": "h0251",
@@ -2575,9 +2456,9 @@
   "book": "main",
   "number": 252,
   "title": "لم أخاف حزنا أو ظلمة تدنو",
+  "mediaUrl": "https://www.youtube.com/watch?v=ppVp4qHY_Ok",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=ppVp4qHY_Ok"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0253",
@@ -2604,8 +2485,7 @@
   "number": 255,
   "title": "في ضيقي دعوتك يا ربي",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/user-864207466/y3nxcqat977i"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0256",
@@ -2638,28 +2518,26 @@
   "number": 258,
   "title": "كنت رفيقي دائما",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/user-864207466/wflg3qktltxg"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0259",
   "book": "main",
   "number": 259,
   "title": "لست أعلم ما قد يكون في غدي",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/seham/track-18"
+  "hasChorus": false
  },
  {
   "id": "h0260",
   "book": "main",
   "number": 260,
   "title": "ربي وعودك سور لحياتي",
+  "mediaUrl": "https://www.youtube.com/watch?v=7FLDb53aFR4",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=7FLDb53aFR4"
+  ]
  },
  {
   "id": "h0261",
@@ -2682,20 +2560,19 @@
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/safsaf956/188df801-18d1-4b98-ab62-fd4f73b09058"
+  ]
  },
  {
   "id": "h0263",
   "book": "main",
   "number": 263,
   "title": "مثل طفل أرتمي بين يديك",
+  "mediaUrl": "https://www.youtube.com/watch?v=jZDaPpnjiiw",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=jZDaPpnjiiw"
+  ]
  },
  {
   "id": "h0264",
@@ -2703,8 +2580,7 @@
   "number": 264,
   "title": "في السما والأرض والبحار",
   "hasChorus": false,
-  "primaryTopic": "eternity",
-  "mediaUrl": "https://soundcloud.com/sfgarass/8e451daf-8d6c-467d-b058-247706a61e97"
+  "primaryTopic": "eternity"
  },
  {
   "id": "h0265",
@@ -2725,20 +2601,19 @@
   "number": 266,
   "title": "ربي يسوع لي لا أخشى من ظلام",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/ghnema/ff10"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0267",
   "book": "main",
   "number": 267,
   "title": "وسط آلامي لقيتك ربي",
+  "mediaUrl": "https://www.youtube.com/watch?v=FCIqXCVkSGc",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=FCIqXCVkSGc"
+  ]
  },
  {
   "id": "h0268",
@@ -2757,8 +2632,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-533830726/mdgt8ocdfagl"
+  ]
  },
  {
   "id": "h0270",
@@ -2776,9 +2650,9 @@
   "book": "main",
   "number": 271,
   "title": "ذا يقين القلب ربي",
+  "mediaUrl": "https://www.youtube.com/watch?v=W50uIlUJ9jo",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=W50uIlUJ9jo"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0272",
@@ -2797,8 +2671,7 @@
   "topics": [
    "comfort",
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/andrewjosh77/bnizpld8bugr"
+  ]
  },
  {
   "id": "h0274",
@@ -2830,16 +2703,14 @@
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/srdvqiivt4zx"
+  ]
  },
  {
   "id": "h0277",
   "book": "main",
   "number": 277,
   "title": "يا رب فيك نصرتي",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/safwat809s/8ixomjsofdnc"
+  "hasChorus": true
  },
  {
   "id": "h0278",
@@ -2850,8 +2721,7 @@
   "primaryTopic": "comfort",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/sfg-647308499/f71bcf45-be71-4f66-aef0-e856ed44ce0b"
+  ]
  },
  {
   "id": "h0279",
@@ -2862,8 +2732,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/zuukedkzed1e"
+  ]
  },
  {
   "id": "h0280",
@@ -2874,17 +2743,16 @@
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-282465658/7dsv5acdw1jx"
+  ]
  },
  {
   "id": "h0281",
   "book": "main",
   "number": 281,
   "title": "يقودك الرب على الدوام",
+  "mediaUrl": "https://www.youtube.com/watch?v=G6WjpBbhfbM",
   "hasChorus": true,
-  "primaryTopic": "warfare",
-  "mediaUrl": "https://www.youtube.com/watch?v=G6WjpBbhfbM"
+  "primaryTopic": "warfare"
  },
  {
   "id": "h0282",
@@ -2896,8 +2764,7 @@
   "topics": [
    "comfort",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf725g/8qkibk8utgpt"
+  ]
  },
  {
   "id": "h0283",
@@ -2912,12 +2779,12 @@
   "book": "main",
   "number": 284,
   "title": "لما بكيت من جرح في قلبي",
+  "mediaUrl": "https://www.youtube.com/watch?v=TPfqvWDnzKw",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=TPfqvWDnzKw"
+  ]
  },
  {
   "id": "h0285",
@@ -2938,8 +2805,7 @@
   "number": 286,
   "title": "أيها الرب الحبيب طلبتي إليك",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/user-864207466/e2g9jduky50a"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0287",
@@ -2958,8 +2824,7 @@
   "number": 288,
   "title": "لما الناس تنساني واشعر إني وحيد",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/fahmy561g/4vwyq5lzkuss"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0289",
@@ -2970,8 +2835,7 @@
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/jesse881961/lfjbaomhwus2"
+  ]
  },
  {
   "id": "h0290",
@@ -2979,8 +2843,7 @@
   "number": 290,
   "title": "عندما تدمى رجلي بأشواك الطريق",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf1041/wpicuhkmqcjc"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0291",
@@ -2992,8 +2855,7 @@
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/fahmy1049/c990e8eb-0d12-4640-ba01-b3c3dfca5575"
+  ]
  },
  {
   "id": "h0292",
@@ -3007,8 +2869,7 @@
   "book": "main",
   "number": 293,
   "title": "أيامنا ع الأرض ظل",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/seham/c0ybj52azrwz"
+  "hasChorus": true
  },
  {
   "id": "h0294",
@@ -3024,8 +2885,7 @@
   "number": 295,
   "title": "المؤمن الأمين",
   "hasChorus": false,
-  "primaryTopic": "repentance",
-  "mediaUrl": "https://soundcloud.com/saf725g/olixsr65k9os"
+  "primaryTopic": "repentance"
  },
  {
   "id": "h0296",
@@ -3033,8 +2893,7 @@
   "number": 296,
   "title": "في ظلمة الليل في وحشة حولي",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/bs2eeebx96tv"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0297",
@@ -3054,8 +2913,7 @@
    "worship",
    "cross",
    "warfare"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/c46h2aa4afhx"
+  ]
  },
  {
   "id": "h0299",
@@ -3080,9 +2938,9 @@
   "book": "main",
   "number": 301,
   "title": "انظر إلى طير السما",
+  "mediaUrl": "https://www.youtube.com/watch?v=pF6KC9KdMRc",
   "hasChorus": true,
-  "primaryTopic": "eternity",
-  "mediaUrl": "https://www.youtube.com/watch?v=pF6KC9KdMRc"
+  "primaryTopic": "eternity"
  },
  {
   "id": "h0302",
@@ -3090,8 +2948,7 @@
   "number": 302,
   "title": "انت مش للذكريات",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/matabots/aud-20210226-wa0005-aac"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0303",
@@ -3105,13 +2962,13 @@
   "book": "main",
   "number": 304,
   "title": "تزول الجبال وتفنى التلال",
+  "mediaUrl": "https://www.youtube.com/watch?v=3LEK_RvgHqE",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "cross",
    "word"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=3LEK_RvgHqE"
+  ]
  },
  {
   "id": "h0305",
@@ -3157,8 +3014,7 @@
    "worship",
    "fellowship",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/khalas_nfoos/hh5uzjsoxuxs"
+  ]
  },
  {
   "id": "h0309",
@@ -3177,16 +3033,14 @@
   "topics": [
    "cross",
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/o9ahgp6btejz"
+  ]
  },
  {
   "id": "h0311",
   "book": "main",
   "number": 311,
   "title": "سيدي نفسي لديك",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/seham/e1xztfbb2vy1"
+  "hasChorus": true
  },
  {
   "id": "h0312",
@@ -3202,8 +3056,7 @@
   "number": 313,
   "title": "ربي أنت الغوث أنت نصرتي",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/seham/track-12"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0314",
@@ -3214,8 +3067,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/mik8plzwkanb"
+  ]
  },
  {
   "id": "h0315",
@@ -3223,8 +3075,7 @@
   "number": 315,
   "title": "الرب نوري وهداي",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/user-282465658/x7iv7nkpewlf"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0316",
@@ -3237,8 +3088,7 @@
    "worship",
    "comfort",
    "word"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf695g/b17"
+  ]
  },
  {
   "id": "h0317",
@@ -3246,8 +3096,7 @@
   "number": 317,
   "title": "إذ دخلت قدسك ورأيت عرشك",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/main-main-855563167/vhcqque9ofpd"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0318",
@@ -3255,8 +3104,7 @@
   "number": 318,
   "title": "أسجد في خشوع لك ربي",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/fibi-sam-975845451/5a60nea4u4eg"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0319",
@@ -3275,8 +3123,7 @@
   "book": "main",
   "number": 320,
   "title": "اترك كل شيء تعط كل شيء",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/safwat483-g/qh6yhr9cpffz"
+  "hasChorus": true
  },
  {
   "id": "h0321",
@@ -3320,8 +3167,7 @@
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/mafdymousa/you-are-with-me-my-love"
+  ]
  },
  {
   "id": "h0326",
@@ -3332,8 +3178,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/joy-fahmy-154543602/gmx7arlreox5"
+  ]
  },
  {
   "id": "h0327",
@@ -3341,8 +3186,7 @@
   "number": 327,
   "title": "أسكن تحت ظل جناحيك",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/jessejesse-jesse/53ow647x2n5p"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0328",
@@ -3350,8 +3194,7 @@
   "number": 328,
   "title": "ربي حياتي تحلو بحبك",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safwat583/n3xjsrpnkbab"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0329",
@@ -3362,8 +3205,7 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/jdg-12/gcqan0ngipui"
+  ]
  },
  {
   "id": "h0330",
@@ -3374,28 +3216,26 @@
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-570063999/ayoha-el-kdoos-yarb-better-life"
+  ]
  },
  {
   "id": "h0331",
   "book": "main",
   "number": 331,
   "title": "رسالة أعطيتني يا سيدي",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/user-282465658/xwnqjm3vgatg"
+  "hasChorus": true
  },
  {
   "id": "h0332",
   "book": "main",
   "number": 332,
   "title": "نشيدي يعلو بالهتاف وكذا التمجيد",
+  "mediaUrl": "https://www.youtube.com/watch?v=rzVeGg3R7_s",
   "hasChorus": true,
   "primaryTopic": "warfare",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=rzVeGg3R7_s"
+  ]
  },
  {
   "id": "h0333",
@@ -3406,8 +3246,7 @@
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/rob-safwat/s0peptpcrd0w"
+  ]
  },
  {
   "id": "h0334",
@@ -3427,8 +3266,8 @@
   "book": "main",
   "number": 335,
   "title": "الآيات والعجائب التي صنعها",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=nq-JPJiubI8"
+  "mediaUrl": "https://www.youtube.com/watch?v=nq-JPJiubI8",
+  "hasChorus": false
  },
  {
   "id": "h0336",
@@ -3440,21 +3279,20 @@
   "topics": [
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf725g/brnctmvrqq6x"
+  ]
  },
  {
   "id": "h0337",
   "book": "main",
   "number": 337,
   "title": "أدخل لقدسك أترجى وجهك",
+  "mediaUrl": "https://www.youtube.com/watch?v=F5ZFNrvp-Jc",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "fellowship",
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=F5ZFNrvp-Jc"
+  ]
  },
  {
   "id": "h0338",
@@ -3485,8 +3323,7 @@
   "number": 340,
   "title": "في اسم ربنا يسوع",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/uy06ivwgljwe"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0341",
@@ -3508,8 +3345,7 @@
   "primaryTopic": "worship",
   "topics": [
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/moa-me/1985a-9"
+  ]
  },
  {
   "id": "h0343",
@@ -3520,20 +3356,19 @@
   "primaryTopic": "eternity",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/r28i5k0hcb95"
+  ]
  },
  {
   "id": "h0344",
   "book": "main",
   "number": 344,
   "title": "الذي يغفر كل آثامك",
+  "mediaUrl": "https://www.youtube.com/watch?v=fPu7chyw-kI",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=fPu7chyw-kI"
+  ]
  },
  {
   "id": "h0345",
@@ -3541,8 +3376,7 @@
   "number": 345,
   "title": "هيا نرنم لربنا المسيح",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/user-282465658/quh9aejrzdn0"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0346",
@@ -3553,8 +3387,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/4ywlej87cr9v"
+  ]
  },
  {
   "id": "h0347",
@@ -3562,20 +3395,19 @@
   "number": 347,
   "title": "علوت جدا أيها الرب الإله",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf724g/oszlnglbzjwq"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0348",
   "book": "main",
   "number": 348,
   "title": "ربي في ستر دماك يا حبيبي",
+  "mediaUrl": "https://www.youtube.com/watch?v=5TuMOLWkLlA",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=5TuMOLWkLlA"
+  ]
  },
  {
   "id": "h0349",
@@ -3591,16 +3423,15 @@
   "number": 350,
   "title": "تعالوا تعالوا يا تعابى",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/reinhard-khella/350a1"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0351",
   "book": "main",
   "number": 351,
   "title": "لأنه تعلق بي أنجيه",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=GE0FsYEBzXg"
+  "mediaUrl": "https://www.youtube.com/watch?v=GE0FsYEBzXg",
+  "hasChorus": false
  },
  {
   "id": "h0352",
@@ -3611,8 +3442,7 @@
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/jdg-12/3hgtswfx6n1n"
+  ]
  },
  {
   "id": "h0353",
@@ -3625,8 +3455,7 @@
    "cross",
    "fellowship",
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/afpbld9bokxl"
+  ]
  },
  {
   "id": "h0354",
@@ -3659,8 +3488,7 @@
   "book": "main",
   "number": 357,
   "title": "لا تعد دون المسيح",
-  "hasChorus": true,
-  "mediaUrl": "https://soundcloud.com/adel-safy-149425131/hqdnopypumpi"
+  "hasChorus": true
  },
  {
   "id": "h0358",
@@ -3676,17 +3504,16 @@
   "number": 359,
   "title": "فيك يا كل الأماني",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/dryoyoscience/wkabyy3ovg4x"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0360",
   "book": "main",
   "number": 360,
   "title": "لن أعيش سيدي وسط حيرة الزمان",
+  "mediaUrl": "https://www.youtube.com/watch?v=InNsZoZA0Iw",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=InNsZoZA0Iw"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0361",
@@ -3709,8 +3536,7 @@
   "primaryTopic": "eternity",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf570/xqaoacrnusrs"
+  ]
  },
  {
   "id": "h0363",
@@ -3721,8 +3547,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/rob-safwat/4h9kfw9j5hws"
+  ]
  },
  {
   "id": "h0364",
@@ -3730,21 +3555,20 @@
   "number": 364,
   "title": "مديون القلب يحمدك",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/faithchurchegypt/7bz9sy3dsagq"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0365",
   "book": "main",
   "number": 365,
   "title": "كنت في الماضي أثيم",
+  "mediaUrl": "https://www.youtube.com/watch?v=ZCVd3h18sew",
   "hasChorus": true,
   "primaryTopic": "repentance",
   "topics": [
    "eternity",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=ZCVd3h18sew"
+  ]
  },
  {
   "id": "h0366",
@@ -3752,8 +3576,7 @@
   "number": 366,
   "title": "مبارك الرب إلهنا",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/mohsen-akr/ntpl7okzdvju"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0367",
@@ -3764,20 +3587,19 @@
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/bassemroshdy/esnedny2-7"
+  ]
  },
  {
   "id": "h0368",
   "book": "main",
   "number": 368,
   "title": "في برية الفتور وسط وحشة الظلام",
+  "mediaUrl": "https://www.youtube.com/watch?v=BlR8Vj0BkV0",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=BlR8Vj0BkV0"
+  ]
  },
  {
   "id": "h0369",
@@ -3788,8 +3610,7 @@
   "primaryTopic": "fellowship",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/daniel-daniel-22258898/epigiwppsyoi"
+  ]
  },
  {
   "id": "h0370",
@@ -3808,16 +3629,15 @@
   "primaryTopic": "repentance",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/laura_medhat/5ts1cou0gdlq"
+  ]
  },
  {
   "id": "h0372",
   "book": "main",
   "number": 372,
   "title": "يا إلهي قد خلقتني كاملا",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=8_vX7Tm0jjg"
+  "mediaUrl": "https://www.youtube.com/watch?v=8_vX7Tm0jjg",
+  "hasChorus": false
  },
  {
   "id": "h0373",
@@ -3825,8 +3645,7 @@
   "number": 373,
   "title": "في شخص ربنا يسوع",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/bassemroshdy/esnedny2-1"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0374",
@@ -3839,8 +3658,7 @@
    "cross",
    "fellowship",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/samy-s-salib/n7uj7lrhchi4"
+  ]
  },
  {
   "id": "h0375",
@@ -3851,17 +3669,16 @@
   "primaryTopic": "cross",
   "topics": [
    "church"
-  ],
-  "mediaUrl": "https://soundcloud.com/garas-fahmy/nagib-25-1"
+  ]
  },
  {
   "id": "h0376",
   "book": "main",
   "number": 376,
   "title": "ينبغي أن تزيد أنت",
+  "mediaUrl": "https://www.youtube.com/watch?v=CXGx24buKVE",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=CXGx24buKVE"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0377",
@@ -3898,14 +3715,14 @@
   "book": "main",
   "number": 380,
   "title": "كنت في طريقي تائها مسكين",
+  "mediaUrl": "https://www.youtube.com/watch?v=E_dzLdJzwaI",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "comfort",
    "fellowship",
    "warfare"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=E_dzLdJzwaI"
+  ]
  },
  {
   "id": "h0381",
@@ -4151,12 +3968,12 @@
   "book": "main",
   "number": 404,
   "title": "يا مسيحي بهجة الأرض سراب سراب",
+  "mediaUrl": "https://www.youtube.com/watch?v=w0DX6q1EUe4",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=w0DX6q1EUe4"
+  ]
  },
  {
   "id": "h0405",
@@ -4337,12 +4154,12 @@
   "book": "main",
   "number": 423,
   "title": "محتاج لك تداريني",
+  "mediaUrl": "https://www.youtube.com/watch?v=NBVTRsuomlM",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=NBVTRsuomlM"
+  ]
  },
  {
   "id": "h0424",
@@ -4420,12 +4237,12 @@
   "book": "main",
   "number": 432,
   "title": "أسبح الرب مدى الحياة",
+  "mediaUrl": "https://www.youtube.com/watch?v=BkFtP8fP2Gs",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=BkFtP8fP2Gs"
+  ]
  },
  {
   "id": "h0433",
@@ -4454,9 +4271,9 @@
   "book": "main",
   "number": 435,
   "title": "يا رب انت وحدك فيك عزاء قلبي",
+  "mediaUrl": "https://www.youtube.com/watch?v=-3Ebg6RZIYA",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=-3Ebg6RZIYA"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0436",
@@ -4584,13 +4401,13 @@
   "book": "main",
   "number": 449,
   "title": "أعود إلى موطني",
+  "mediaUrl": "https://www.youtube.com/watch?v=f_cUZ-SRckk",
   "hasChorus": true,
   "primaryTopic": "eternity",
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=f_cUZ-SRckk"
+  ]
  },
  {
   "id": "h0450",
@@ -4635,8 +4452,8 @@
   "book": "main",
   "number": 454,
   "title": "سأعيش أذكر فضلك",
-  "hasChorus": true,
-  "mediaUrl": "https://www.youtube.com/watch?v=bDFtFeGtELw"
+  "mediaUrl": "https://www.youtube.com/watch?v=bDFtFeGtELw",
+  "hasChorus": true
  },
  {
   "id": "h0455",
@@ -4673,14 +4490,14 @@
   "book": "main",
   "number": 458,
   "title": "اوعى تأجل وتقول بكره",
+  "mediaUrl": "https://www.youtube.com/watch?v=_Y-e6DVoQDA",
   "hasChorus": true,
   "primaryTopic": "repentance",
   "topics": [
    "eternity",
    "cross",
    "warfare"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=_Y-e6DVoQDA"
+  ]
  },
  {
   "id": "h0459",
@@ -4695,14 +4512,14 @@
   "book": "main",
   "number": 460,
   "title": "كم أود أن أشيد بيسوعي",
+  "mediaUrl": "https://www.youtube.com/watch?v=WTVX5O4g0CA",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "cross",
    "comfort",
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=WTVX5O4g0CA"
+  ]
  },
  {
   "id": "h0461",
@@ -4975,14 +4792,14 @@
   "book": "main",
   "number": 488,
   "title": "إن كانت حولي تجارب وآلام",
+  "mediaUrl": "https://www.youtube.com/watch?v=yC0EbnfQIQw",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "comfort",
    "fellowship",
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=yC0EbnfQIQw"
+  ]
  },
  {
   "id": "h0489",
@@ -5260,12 +5077,12 @@
   "book": "main",
   "number": 517,
   "title": "ربنا أظهرت حبا",
+  "mediaUrl": "https://www.youtube.com/watch?v=X-7NrbP30f0",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=X-7NrbP30f0"
+  ]
  },
  {
   "id": "h0518",
@@ -5395,9 +5212,9 @@
   "book": "main",
   "number": 531,
   "title": "دم بيعلن انتصارات",
+  "mediaUrl": "https://www.youtube.com/watch?v=papK3qWsI3E",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=papK3qWsI3E"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0532",
@@ -5455,22 +5272,22 @@
   "book": "main",
   "number": 537,
   "title": "من بعدي ربي أنا عائد",
+  "mediaUrl": "https://www.youtube.com/watch?v=sq0babeVpC0",
   "hasChorus": true,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=sq0babeVpC0"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0538",
   "book": "main",
   "number": 538,
   "title": "قانع أنا يا ربي",
+  "mediaUrl": "https://www.youtube.com/watch?v=2skSZrQqt6c",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "warfare"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=2skSZrQqt6c"
+  ]
  },
  {
   "id": "h0539",
@@ -5539,9 +5356,9 @@
   "book": "main",
   "number": 545,
   "title": "أحب سيدي وأفعل رضاه",
+  "mediaUrl": "https://www.youtube.com/watch?v=oaTCTrZkTO0",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=oaTCTrZkTO0"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0546",
@@ -5766,13 +5583,13 @@
   "book": "main",
   "number": 569,
   "title": "حقك دا في أراضينا هيعلا",
+  "mediaUrl": "https://www.youtube.com/watch?v=tyE2W-ksl-w",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "warfare",
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=tyE2W-ksl-w"
+  ]
  },
  {
   "id": "h0570",
@@ -5933,21 +5750,21 @@
   "book": "main",
   "number": 587,
   "title": "ليس شيء باقيا لي لكي أعمل",
+  "mediaUrl": "https://www.youtube.com/watch?v=Pp25vvgqBV0",
   "hasChorus": true,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=Pp25vvgqBV0"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0588",
   "book": "main",
   "number": 588,
   "title": "ضللت في بحر الحياة وكان",
+  "mediaUrl": "https://www.youtube.com/watch?v=Cp1YQNfF4os",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=Cp1YQNfF4os"
+  ]
  },
  {
   "id": "h0589",
@@ -6032,24 +5849,24 @@
   "book": "main",
   "number": 597,
   "title": "حتى أرى دواما سلامك العجيب",
+  "mediaUrl": "https://www.youtube.com/watch?v=YXQJ89IOy78",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=YXQJ89IOy78"
+  ]
  },
  {
   "id": "h0598",
   "book": "main",
   "number": 598,
   "title": "ملوك الأرض يسجدون",
+  "mediaUrl": "https://www.youtube.com/watch?v=pQ2yXrIqdaw",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=pQ2yXrIqdaw"
+  ]
  },
  {
   "id": "h0599",
@@ -6180,9 +5997,9 @@
   "book": "main",
   "number": 612,
   "title": "نحن شعبك وغنم مرعاك",
+  "mediaUrl": "https://www.youtube.com/watch?v=GE0FsYEBzXg",
   "hasChorus": true,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=GE0FsYEBzXg"
+  "primaryTopic": "worship"
  },
  {
   "id": "h0613",
@@ -6235,12 +6052,12 @@
   "book": "main",
   "number": 618,
   "title": "بعدما عشت في حبك العظيم",
+  "mediaUrl": "https://www.youtube.com/watch?v=v7maBYlKt3M",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=v7maBYlKt3M"
+  ]
  },
  {
   "id": "h0619",
@@ -6316,13 +6133,13 @@
   "book": "main",
   "number": 626,
   "title": "أيها الإنسان يا من تهت في كل طريق",
+  "mediaUrl": "https://www.youtube.com/watch?v=vgkkMbQGvnc",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=vgkkMbQGvnc"
+  ]
  },
  {
   "id": "h0627",
@@ -6517,9 +6334,9 @@
   "book": "main",
   "number": 647,
   "title": "حتى ولو قالوا عني كلام",
+  "mediaUrl": "https://www.youtube.com/watch?v=gCuvqdJ_xSM",
   "hasChorus": true,
-  "primaryTopic": "word",
-  "mediaUrl": "https://www.youtube.com/watch?v=gCuvqdJ_xSM"
+  "primaryTopic": "word"
  },
  {
   "id": "h0648",
@@ -6621,22 +6438,22 @@
   "book": "main",
   "number": 658,
   "title": "جعلت الرب أمامي",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=AKFYBra220M"
+  "mediaUrl": "https://www.youtube.com/watch?v=AKFYBra220M",
+  "hasChorus": false
  },
  {
   "id": "h0659",
   "book": "main",
   "number": 659,
   "title": "عيني إلى الحمل المذبوح",
+  "mediaUrl": "https://www.youtube.com/watch?v=h6pzcyiLEIg",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "repentance",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=h6pzcyiLEIg"
+  ]
  },
  {
   "id": "h0660",
@@ -6801,12 +6618,12 @@
   "book": "main",
   "number": 676,
   "title": "ياما شعرت بإني وحيد",
+  "mediaUrl": "https://www.youtube.com/watch?v=S0SQwnm5jEY",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=S0SQwnm5jEY"
+  ]
  },
  {
   "id": "h0677",
@@ -6993,12 +6810,12 @@
   "book": "main",
   "number": 695,
   "title": "حب يسوع الفادي يحير العقول",
+  "mediaUrl": "https://www.youtube.com/watch?v=wQnswxxZ9ZQ",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=wQnswxxZ9ZQ"
+  ]
  },
  {
   "id": "h0696",
@@ -7048,9 +6865,9 @@
   "book": "main",
   "number": 700,
   "title": "يا ليت لي ألف لسان",
+  "mediaUrl": "https://www.youtube.com/watch?v=NE3NOdNL_yE",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=NE3NOdNL_yE"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0701",
@@ -7377,9 +7194,9 @@
   "book": "main",
   "number": 733,
   "title": "ثق يقينا في المسيح",
+  "mediaUrl": "https://www.youtube.com/watch?v=kq1qa-L46kc",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=kq1qa-L46kc"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0734",
@@ -7394,12 +7211,12 @@
   "book": "main",
   "number": 735,
   "title": "سأشدو حبا لإلهي",
+  "mediaUrl": "https://www.youtube.com/watch?v=oFUa6_GMDw8",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=oFUa6_GMDw8"
+  ]
  },
  {
   "id": "h0736",
@@ -7588,12 +7405,12 @@
   "book": "main",
   "number": 753,
   "title": "قدموا للرب سبحا",
+  "mediaUrl": "https://www.youtube.com/watch?v=aY_aN0hAO4E",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=aY_aN0hAO4E"
+  ]
  },
  {
   "id": "h0754",
@@ -7691,12 +7508,12 @@
   "book": "main",
   "number": 764,
   "title": "انت تعرف المستقبل",
+  "mediaUrl": "https://www.youtube.com/watch?v=S5fvT9h9meA",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=S5fvT9h9meA"
+  ]
  },
  {
   "id": "h0765",
@@ -7846,14 +7663,14 @@
   "book": "main",
   "number": 779,
   "title": "ترجي الله وانتظريه يا نفسي",
+  "mediaUrl": "https://www.youtube.com/watch?v=3LEK_RvgHqE",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship",
    "worship",
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=3LEK_RvgHqE"
+  ]
  },
  {
   "id": "h0780",
@@ -8189,9 +8006,9 @@
   "book": "main",
   "number": 814,
   "title": "لما الظلام يغشى سبيلي",
+  "mediaUrl": "https://www.youtube.com/watch?v=fe4EhtVxUmk",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=fe4EhtVxUmk"
+  "primaryTopic": "comfort"
  },
  {
   "id": "h0815",
@@ -8220,8 +8037,8 @@
   "book": "main",
   "number": 817,
   "title": "علمني أن أثق بك يا سيدي",
-  "hasChorus": true,
-  "mediaUrl": "https://www.youtube.com/watch?v=DVC6hNN86Pg"
+  "mediaUrl": "https://www.youtube.com/watch?v=DVC6hNN86Pg",
+  "hasChorus": true
  },
  {
   "id": "h0818",
@@ -8441,9 +8258,9 @@
   "book": "main",
   "number": 839,
   "title": "إنت عارف ظروفي",
+  "mediaUrl": "https://www.youtube.com/watch?v=S5fvT9h9meA",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=S5fvT9h9meA"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0840",
@@ -8571,13 +8388,13 @@
   "book": "main",
   "number": 853,
   "title": "يطلق قلبي فيك مديحا",
+  "mediaUrl": "https://www.youtube.com/watch?v=oMriJj9RYnc",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "word",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=oMriJj9RYnc"
+  ]
  },
  {
   "id": "h0854",
@@ -8657,8 +8474,8 @@
   "book": "main",
   "number": 861,
   "title": "ربي اجذبني وراك فأجري",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=miOP1wnuaJc"
+  "mediaUrl": "https://www.youtube.com/watch?v=miOP1wnuaJc",
+  "hasChorus": false
  },
  {
   "id": "h0862",
@@ -8730,8 +8547,8 @@
   "book": "main",
   "number": 869,
   "title": "إلى بئر السامرة جئت وحدي",
-  "hasChorus": true,
-  "mediaUrl": "https://www.youtube.com/watch?v=vVpGk5hv-ZQ"
+  "mediaUrl": "https://www.youtube.com/watch?v=vVpGk5hv-ZQ",
+  "hasChorus": true
  },
  {
   "id": "h0870",
@@ -8762,8 +8579,8 @@
   "book": "main",
   "number": 872,
   "title": "لذاك أحيا بالروح",
-  "hasChorus": true,
-  "mediaUrl": "https://www.youtube.com/watch?v=umtY3aZD7bI"
+  "mediaUrl": "https://www.youtube.com/watch?v=umtY3aZD7bI",
+  "hasChorus": true
  },
  {
   "id": "h0873",
@@ -8777,13 +8594,13 @@
   "book": "main",
   "number": 874,
   "title": "عارف إن انا غالي عندك",
+  "mediaUrl": "https://www.youtube.com/watch?v=dAZsqw_9pqI",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort",
    "warfare"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=dAZsqw_9pqI"
+  ]
  },
  {
   "id": "h0875",
@@ -8918,12 +8735,12 @@
   "book": "main",
   "number": 889,
   "title": "أحبك فحبك يعجز فيه الكلام",
+  "mediaUrl": "https://www.youtube.com/watch?v=P_ywYj0LFJk",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "word"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=P_ywYj0LFJk"
+  ]
  },
  {
   "id": "h0890",
@@ -8989,12 +8806,12 @@
   "book": "main",
   "number": 896,
   "title": "إن الأشبال احتاجت",
+  "mediaUrl": "https://www.youtube.com/watch?v=6QMrNaBbFKY",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=6QMrNaBbFKY"
+  ]
  },
  {
   "id": "h0897",
@@ -9092,12 +8909,12 @@
   "book": "main",
   "number": 907,
   "title": "سلمت إيدي في إيديك يا غالي",
+  "mediaUrl": "https://www.youtube.com/watch?v=XVK5MD8g9x8",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=XVK5MD8g9x8"
+  ]
  },
  {
   "id": "h0908",
@@ -9133,24 +8950,24 @@
   "book": "main",
   "number": 911,
   "title": "رغم القيود كنت الوجود",
+  "mediaUrl": "https://www.youtube.com/watch?v=yxk9Y_SsWyw",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "warfare"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=yxk9Y_SsWyw"
+  ]
  },
  {
   "id": "h0912",
   "book": "main",
   "number": 912,
   "title": "ها حنين القلب زاد",
+  "mediaUrl": "https://www.youtube.com/watch?v=7aD8GMNxDIg",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=7aD8GMNxDIg"
+  ]
  },
  {
   "id": "h0913",
@@ -9362,17 +9179,17 @@
   "book": "main",
   "number": 935,
   "title": "نأتي إليك يا ملك الملوك",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=bDFtFeGtELw"
+  "mediaUrl": "https://www.youtube.com/watch?v=bDFtFeGtELw",
+  "hasChorus": false
  },
  {
   "id": "h0936",
   "book": "main",
   "number": 936,
   "title": "قلبي ينبض من جديد",
+  "mediaUrl": "https://www.youtube.com/watch?v=sqSMV-dkfFA",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=sqSMV-dkfFA"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0937",
@@ -9411,14 +9228,14 @@
   "book": "main",
   "number": 940,
   "title": "قلوبنا يا رب فرحانه",
+  "mediaUrl": "https://www.youtube.com/watch?v=q_75WQRcC5Q",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "comfort",
    "cross",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=q_75WQRcC5Q"
+  ]
  },
  {
   "id": "h0941",
@@ -9498,9 +9315,9 @@
   "book": "main",
   "number": 949,
   "title": "سألت نفسي أنا الشقي",
+  "mediaUrl": "https://www.youtube.com/watch?v=ZRYqej7jAgY",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=ZRYqej7jAgY"
+  "primaryTopic": "cross"
  },
  {
   "id": "h0950",
@@ -9530,27 +9347,27 @@
   "book": "main",
   "number": 952,
   "title": "يا رأسنا الغالي لقد زاد الحنين",
+  "mediaUrl": "https://www.youtube.com/watch?v=G6WjpBbhfbM",
   "hasChorus": true,
   "primaryTopic": "worship",
   "topics": [
    "fellowship",
    "cross",
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=G6WjpBbhfbM"
+  ]
  },
  {
   "id": "h0953",
   "book": "main",
   "number": 953,
   "title": "عمرك مش مضمون في إيديك",
+  "mediaUrl": "https://www.youtube.com/watch?v=RN9pu_odz74",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=RN9pu_odz74"
+  ]
  },
  {
   "id": "h0954",
@@ -9606,12 +9423,12 @@
   "book": "main",
   "number": 959,
   "title": "عايزين يدك تعمل",
+  "mediaUrl": "https://www.youtube.com/watch?v=kvsAqO3L43w",
   "hasChorus": true,
   "primaryTopic": "repentance",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=kvsAqO3L43w"
+  ]
  },
  {
   "id": "h0960",
@@ -9756,9 +9573,9 @@
   "book": "main",
   "number": 975,
   "title": "بين يديك كيف أخاف",
+  "mediaUrl": "https://www.youtube.com/watch?v=irTAGoKyRfw",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=irTAGoKyRfw"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0976",
@@ -9915,17 +9732,17 @@
   "book": "main",
   "number": 992,
   "title": "هايجي الاختطاف",
+  "mediaUrl": "https://www.youtube.com/watch?v=5Zoim2uqCt0",
   "hasChorus": true,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=5Zoim2uqCt0"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "h0993",
   "book": "main",
   "number": 993,
   "title": "والقادر أن يفعل",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=r6WkdbFxwRI"
+  "mediaUrl": "https://www.youtube.com/watch?v=r6WkdbFxwRI",
+  "hasChorus": false
  },
  {
   "id": "h0994",
@@ -9993,37 +9810,37 @@
   "book": "main",
   "number": 1001,
   "title": "شكرا علي الاحسان ونعمة الايمان",
+  "mediaUrl": "https://www.youtube.com/watch?v=J7TF3ptnhkE",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=J7TF3ptnhkE"
+  ]
  },
  {
   "id": "h1002",
   "book": "main",
   "number": 1002,
   "title": "اسف لاني ما قلتش لا",
+  "mediaUrl": "https://www.youtube.com/watch?v=JyQAz0k92YU",
   "hasChorus": true,
   "primaryTopic": "repentance",
   "topics": [
    "word"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=JyQAz0k92YU"
+  ]
  },
  {
   "id": "h1003",
   "book": "main",
   "number": 1003,
   "title": "لو نفسك تعبت وانهارت واتقلبت",
+  "mediaUrl": "https://www.youtube.com/watch?v=nldbhNTaHuU",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "cross",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=nldbhNTaHuU"
+  ]
  },
  {
   "id": "h1004",
@@ -10071,12 +9888,12 @@
   "book": "main",
   "number": 1008,
   "title": "نبع من قلبي دمعه للسما",
+  "mediaUrl": "https://www.youtube.com/watch?v=a4pnp43laUo",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=a4pnp43laUo"
+  ]
  },
  {
   "id": "h1009",
@@ -10091,26 +9908,26 @@
   "book": "main",
   "number": 1010,
   "title": "انا مش وحيد انت معايا",
+  "mediaUrl": "https://www.youtube.com/watch?v=KHRvRqDVBcI",
   "hasChorus": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=KHRvRqDVBcI"
+  ]
  },
  {
   "id": "h1011",
   "book": "main",
   "number": 1011,
   "title": "كل السنين ما تفوت يا",
+  "mediaUrl": "https://www.youtube.com/watch?v=YWMQaHKw14c",
   "hasChorus": true,
   "primaryTopic": "repentance",
   "topics": [
    "fellowship",
    "cross",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=YWMQaHKw14c"
+  ]
  },
  {
   "id": "h1012",
@@ -10196,12 +10013,12 @@
   "book": "main",
   "number": 1020,
   "title": "أنا مهما ان أشكر مش",
+  "mediaUrl": "https://www.youtube.com/watch?v=G6WjpBbhfbM",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=G6WjpBbhfbM"
+  ]
  },
  {
   "id": "h1021",
@@ -10289,12 +10106,12 @@
   "book": "main",
   "number": 1029,
   "title": "ما استاهلش تموت لأجلي",
+  "mediaUrl": "https://www.youtube.com/watch?v=18ipuMiYtzM",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=18ipuMiYtzM"
+  ]
  },
  {
   "id": "h1030",
@@ -10336,12 +10153,12 @@
   "book": "main",
   "number": 1034,
   "title": "جايين بنغني وبنقدم لالهنا ذبيحة",
+  "mediaUrl": "https://www.youtube.com/watch?v=VM_iPpyXwzA",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=VM_iPpyXwzA"
+  ]
  },
  {
   "id": "h1035",
@@ -10355,12 +10172,12 @@
   "book": "main",
   "number": 1036,
   "title": "ما فارقنيش أبدا أبدا إحسانك",
+  "mediaUrl": "https://www.youtube.com/watch?v=r5W-dr0P95w",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=r5W-dr0P95w"
+  ]
  },
  {
   "id": "h1037",
@@ -10387,25 +10204,25 @@
   "book": "main",
   "number": 1039,
   "title": "يجرح يعصب يسحق يشفي يمسح",
+  "mediaUrl": "https://www.youtube.com/watch?v=-z90uL3iso4",
   "hasChorus": true,
   "primaryTopic": "comfort",
   "topics": [
    "cross",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=-z90uL3iso4"
+  ]
  },
  {
   "id": "h1040",
   "book": "main",
   "number": 1040,
   "title": "لو فرض والدنيا ضحكت والسعادة",
+  "mediaUrl": "https://www.youtube.com/watch?v=AEIGNwrhDFY",
   "hasChorus": true,
   "primaryTopic": "word",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=AEIGNwrhDFY"
+  ]
  },
  {
   "id": "h1041",
@@ -10472,13 +10289,13 @@
   "book": "main",
   "number": 1047,
   "title": "إحنا الشعب اللي انت فديته",
+  "mediaUrl": "https://www.youtube.com/watch?v=Lt4auar6V0E",
   "hasChorus": true,
   "primaryTopic": "cross",
   "topics": [
    "repentance",
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=Lt4auar6V0E"
+  ]
  },
  {
   "id": "tr0001",
@@ -10486,13 +10303,13 @@
   "number": 1,
   "title": "لنا في كلام الإله الصمد",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=PMwa_VYjh4A",
   "hasChorus": false,
   "primaryTopic": "word",
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=PMwa_VYjh4A"
+  ]
  },
  {
   "id": "tr0002",
@@ -10500,12 +10317,12 @@
   "number": 2,
   "title": "أنت عظيم البركات",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=1TpOWBc3ZZ8",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=1TpOWBc3ZZ8"
+  ]
  },
  {
   "id": "tr0003",
@@ -10513,12 +10330,12 @@
   "number": 3,
   "title": "للورى خل وحيد",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=q8MTH5iEmBc",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=q8MTH5iEmBc"
+  ]
  },
  {
   "id": "tr0004",
@@ -10526,12 +10343,12 @@
   "number": 4,
   "title": "ما أمجد الحبيب",
   "meter": "66.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=l8ZVTnA1q4E",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=l8ZVTnA1q4E"
+  ]
  },
  {
   "id": "tr0005",
@@ -10539,9 +10356,9 @@
   "number": 5,
   "title": "قوموا نسبح كلنا",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=3-rXsx2QqH0",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=3-rXsx2QqH0"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0006",
@@ -10549,8 +10366,8 @@
   "number": 6,
   "title": "اذكرو لي اسم يسوع",
   "meter": "87.87",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/shorts/8AZojl_oIOs"
+  "mediaUrl": "https://www.youtube.com/shorts/8AZojl_oIOs",
+  "hasChorus": false
  },
  {
   "id": "tr0007",
@@ -10558,9 +10375,9 @@
   "number": 7,
   "title": "ينبوع جود من دم الفادي جرى",
   "meter": "12.12.8.8",
+  "mediaUrl": "https://www.youtube.com/watch?v=UZYlEs4rvSk",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=UZYlEs4rvSk"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0008",
@@ -10568,12 +10385,12 @@
   "number": 8,
   "title": "يسوع ربي أحب الخطاه",
   "meter": "10.10.10.10",
+  "mediaUrl": "https://www.youtube.com/watch?v=fhRFk6UwK_Q",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=fhRFk6UwK_Q"
+  ]
  },
  {
   "id": "tr0009",
@@ -10581,12 +10398,12 @@
   "number": 9,
   "title": "كنت في سجن الخطايا",
   "meter": "87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=8gEmNcSIaMo",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=8gEmNcSIaMo"
+  ]
  },
  {
   "id": "tr0010",
@@ -10594,9 +10411,9 @@
   "number": 10,
   "title": "يا بني الآب السماوي",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/shorts/p5GzC8W0Hyo",
   "hasChorus": false,
-  "primaryTopic": "eternity",
-  "mediaUrl": "https://www.youtube.com/shorts/p5GzC8W0Hyo"
+  "primaryTopic": "eternity"
  },
  {
   "id": "tr0011",
@@ -10604,13 +10421,13 @@
   "number": 11,
   "title": "لو لم يحبني المسيح",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/shorts/Alu1Yl-MRFg",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/shorts/Alu1Yl-MRFg"
+  ]
  },
  {
   "id": "tr0012",
@@ -10618,12 +10435,12 @@
   "number": 12,
   "title": "اسم عزيز قد سما",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/shorts/nhdO7YslRHs",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/shorts/nhdO7YslRHs"
+  ]
  },
  {
   "id": "tr0013",
@@ -10631,12 +10448,12 @@
   "number": 13,
   "title": "اسم يسوع قد حلا",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/shorts/lGP12x98I50",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/shorts/lGP12x98I50"
+  ]
  },
  {
   "id": "tr0014",
@@ -10644,9 +10461,9 @@
   "number": 14,
   "title": "علوت جدا أيها الرب الإله",
   "meter": "12.12.12.12 - 8.8",
+  "mediaUrl": "https://www.youtube.com/watch?v=20T-5s59Fes",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=20T-5s59Fes"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0015",
@@ -10654,9 +10471,9 @@
   "number": 15,
   "title": "علمني أنتظرك يا رب",
   "meter": "99.48.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=056ZZMDVPjY",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=056ZZMDVPjY"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0016",
@@ -10664,9 +10481,9 @@
   "number": 16,
   "title": "المجد للآب الذي",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/shorts/OlCVMhCdRb8",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/shorts/OlCVMhCdRb8"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0017",
@@ -10674,14 +10491,14 @@
   "number": 17,
   "title": "أنا لست إلا غريبا هنا",
   "meter": "11.8.11.8",
+  "mediaUrl": "https://www.youtube.com/watch?v=QQRbtgw8LuU",
   "hasChorus": false,
   "primaryTopic": "eternity",
   "topics": [
    "comfort",
    "worship",
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=QQRbtgw8LuU"
+  ]
  },
  {
   "id": "tr0018",
@@ -10689,13 +10506,13 @@
   "number": 18,
   "title": "مبدع الكون القدير",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=aoD5GmE6eY4",
   "hasChorus": false,
   "primaryTopic": "warfare",
   "topics": [
    "cross",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=aoD5GmE6eY4"
+  ]
  },
  {
   "id": "tr0019",
@@ -10703,9 +10520,9 @@
   "number": 19,
   "title": "أمجد الآيات غنوا",
   "meter": "85.85.85.85 – 85.85.55.85",
+  "mediaUrl": "https://www.youtube.com/watch?v=Lo2PK560_Lw",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=Lo2PK560_Lw"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0020",
@@ -10713,12 +10530,12 @@
   "number": 20,
   "title": "ما أعجب الفادي",
   "meter": "66.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=LTFQ5cw1PBs",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=LTFQ5cw1PBs"
+  ]
  },
  {
   "id": "tr0021",
@@ -10726,12 +10543,12 @@
   "number": 21,
   "title": "أراك بالإيمان",
   "meter": "664.6664",
+  "mediaUrl": "https://www.youtube.com/watch?v=q2pae0BZn2o",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=q2pae0BZn2o"
+  ]
  },
  {
   "id": "tr0022",
@@ -10739,13 +10556,13 @@
   "number": 22,
   "title": "أعد علي حديثا",
   "meter": "88.88.88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=atiDeQh4Hes",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=atiDeQh4Hes"
+  ]
  },
  {
   "id": "tr0023",
@@ -10753,9 +10570,9 @@
   "number": 23,
   "title": "ليس للحب الذي أظهرت",
   "meter": "87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=WsTHlrq2GWg",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=WsTHlrq2GWg"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0024",
@@ -10763,13 +10580,13 @@
   "number": 24,
   "title": "يا نفسي قومي هللي",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=AXVWZEKMSEY",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship",
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=AXVWZEKMSEY"
+  ]
  },
  {
   "id": "tr0025",
@@ -10777,12 +10594,12 @@
   "number": 25,
   "title": "نصيب أهل الدنيا",
   "meter": "76.76",
+  "mediaUrl": "https://www.youtube.com/watch?v=YRir2Ey50CE",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=YRir2Ey50CE"
+  ]
  },
  {
   "id": "tr0026",
@@ -10790,9 +10607,9 @@
   "number": 26,
   "title": "هوذا الحبيب وافى",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=HZPefVtuNSk",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=HZPefVtuNSk"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0027",
@@ -10800,12 +10617,12 @@
   "number": 27,
   "title": "يسوع قد أحببتنا",
   "meter": "86.86-66.66",
+  "mediaUrl": "https://www.youtube.com/watch?v=Pd_8EyXEXLQ",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=Pd_8EyXEXLQ"
+  ]
  },
  {
   "id": "tr0028",
@@ -10813,8 +10630,8 @@
   "number": 28,
   "title": "يسوع ربي موئلي",
   "meter": "86.86",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=ALp5HtHdjPs"
+  "mediaUrl": "https://www.youtube.com/watch?v=ALp5HtHdjPs",
+  "hasChorus": false
  },
  {
   "id": "tr0029",
@@ -10822,13 +10639,13 @@
   "number": 29,
   "title": "في بيت الآب في العلا",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/mat-josh/9z9xtfxytlqw",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship",
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/mat-josh/9z9xtfxytlqw"
+  ]
  },
  {
   "id": "tr0030",
@@ -10836,9 +10653,9 @@
   "number": 30,
   "title": "يا ترى أي صديق",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=5P8upGj2uW8",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=5P8upGj2uW8"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0031",
@@ -10846,12 +10663,12 @@
   "number": 31,
   "title": "خلني قرب الصليب",
   "meter": "76.76 - 66.76",
+  "mediaUrl": "https://www.youtube.com/watch?v=JzdcnM8wvzQ",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=JzdcnM8wvzQ"
+  ]
  },
  {
   "id": "tr0032",
@@ -10859,12 +10676,12 @@
   "number": 32,
   "title": "قف يا جندي جانب الصليب",
   "meter": "96.99 – 77.78",
+  "mediaUrl": "https://www.youtube.com/watch?v=xgleskfWBjE",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "warfare"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=xgleskfWBjE"
+  ]
  },
  {
   "id": "tr0033",
@@ -10872,12 +10689,12 @@
   "number": 33,
   "title": "قابلا حمل صليبي",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=ZWg_58a67UY",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=ZWg_58a67UY"
+  ]
  },
  {
   "id": "tr0034",
@@ -10885,13 +10702,13 @@
   "number": 34,
   "title": "يسوع أنت ربي",
   "meter": "76.76.76.76",
+  "mediaUrl": "https://www.youtube.com/watch?v=o3pV4jh2rG4",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=o3pV4jh2rG4"
+  ]
  },
  {
   "id": "tr0035",
@@ -10899,13 +10716,13 @@
   "number": 35,
   "title": "هوذا يسوع يأتي",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=3-BPcykx26Q",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=3-BPcykx26Q"
+  ]
  },
  {
   "id": "tr0036",
@@ -10913,9 +10730,9 @@
   "number": 36,
   "title": "نفسي اقربي بالشوق من",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=HvHjQr3OYFM",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=HvHjQr3OYFM"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0037",
@@ -10923,9 +10740,9 @@
   "number": 37,
   "title": "أجهل ما سوف يأتي",
   "meter": "87.87.87 – 87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=W0JGkfm_gbc",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=W0JGkfm_gbc"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0038",
@@ -10933,13 +10750,13 @@
   "number": 38,
   "title": "يا نفسي قومي ربك نعم الرقيب",
   "meter": "12.12.8.8",
+  "mediaUrl": "https://www.youtube.com/watch?v=fIwW0KUAk3Q",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=fIwW0KUAk3Q"
+  ]
  },
  {
   "id": "tr0039",
@@ -10947,8 +10764,8 @@
   "number": 39,
   "title": "نصيبك يا نفسي مولاك الأمين",
   "meter": "12.12.8.8",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=KOnYRLtnXWI"
+  "mediaUrl": "https://www.youtube.com/watch?v=KOnYRLtnXWI",
+  "hasChorus": false
  },
  {
   "id": "tr0040",
@@ -10956,13 +10773,13 @@
   "number": 40,
   "title": "ها نحن يا رب الورى",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=wf1JRUrT5j8",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=wf1JRUrT5j8"
+  ]
  },
  {
   "id": "tr0041",
@@ -10970,12 +10787,12 @@
   "number": 41,
   "title": "نفسي سري باجتماع",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/user-518806294-422410800/si7l7orvnsho",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "church"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-518806294-422410800/si7l7orvnsho"
+  ]
  },
  {
   "id": "tr0042",
@@ -10983,8 +10800,8 @@
   "number": 42,
   "title": "يا نبع أفراحي الغني",
   "meter": "86.86",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/user-518806294-422410800/knjdhvm5txq8"
+  "mediaUrl": "https://soundcloud.com/user-518806294-422410800/knjdhvm5txq8",
+  "hasChorus": false
  },
  {
   "id": "tr0043",
@@ -10992,14 +10809,14 @@
   "number": 43,
   "title": "أي حمل قد قبلت",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=SeMVPQUsCL8",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "comfort",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=SeMVPQUsCL8"
+  ]
  },
  {
   "id": "tr0044",
@@ -11007,9 +10824,9 @@
   "number": 44,
   "title": "قد صعد الرب إلى",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=iCvcg5ZW33g",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=iCvcg5ZW33g"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0045",
@@ -11017,13 +10834,13 @@
   "number": 45,
   "title": "لا يوجد اسم في السما",
   "meter": "87.87 – 87.87",
+  "mediaUrl": "https://soundcloud.com/saf722g/idaved66uedv",
   "hasChorus": false,
   "primaryTopic": "eternity",
   "topics": [
    "worship",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf722g/idaved66uedv"
+  ]
  },
  {
   "id": "tr0046",
@@ -11031,8 +10848,8 @@
   "number": 46,
   "title": "يا قوم ذوقوا وانظروا",
   "meter": "86.86",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=OBxcdlgZZJI"
+  "mediaUrl": "https://www.youtube.com/watch?v=OBxcdlgZZJI",
+  "hasChorus": false
  },
  {
   "id": "tr0047",
@@ -11040,9 +10857,9 @@
   "number": 47,
   "title": "ماذا تروم النفس في",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=wYz4aBuIaJA",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=wYz4aBuIaJA"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0048",
@@ -11050,9 +10867,9 @@
   "number": 48,
   "title": "الرب راعي فلا يعوزني شيء",
   "meter": "66.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=Tl-t0Lz-h-A",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=Tl-t0Lz-h-A"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0049",
@@ -11060,12 +10877,12 @@
   "number": 49,
   "title": "إلهي أنت سندي",
   "meter": "86.86.86.86",
+  "mediaUrl": "https://soundcloud.com/saf731/a2kqojkpj1gx",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf731/a2kqojkpj1gx"
+  ]
  },
  {
   "id": "tr0050",
@@ -11073,9 +10890,9 @@
   "number": 50,
   "title": "هل قد ذبحت من أجلي",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=8QH82iSDkP0",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=8QH82iSDkP0"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0051",
@@ -11083,6 +10900,7 @@
   "number": 51,
   "title": "من حول مائدتك",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/samir-samy-1/l8y9zjcccriv",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
@@ -11096,12 +10914,12 @@
   "number": 52,
   "title": "اسم ربي برجي الحصين",
   "meter": "55.55.55.55",
+  "mediaUrl": "https://www.youtube.com/watch?v=PAaxHlPGk_c",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=PAaxHlPGk_c"
+  ]
  },
  {
   "id": "tr0053",
@@ -11109,9 +10927,9 @@
   "number": 53,
   "title": "لا أنسى يوما سيدي عند الصليب",
   "meter": "12.12.8.8.4",
+  "mediaUrl": "https://www.youtube.com/watch?v=ByL3lugvCXw",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=ByL3lugvCXw"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0054",
@@ -11119,9 +10937,9 @@
   "number": 54,
   "title": "على الإله فاتكل",
   "meter": "86.86 - 86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=GW8bp1HkxOQ",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=GW8bp1HkxOQ"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0055",
@@ -11129,9 +10947,9 @@
   "number": 55,
   "title": "قم ونغم يا مرنم",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=bhlaTOWB0Mw",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=bhlaTOWB0Mw"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0056",
@@ -11139,12 +10957,12 @@
   "number": 56,
   "title": "لاسمك القدوس نهدي",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=ajwGvVQYw8w",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=ajwGvVQYw8w"
+  ]
  },
  {
   "id": "tr0057",
@@ -11152,8 +10970,8 @@
   "number": 57,
   "title": "ما أحلى أن تجمعنا",
   "meter": "86.86",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/safwatg/rajlgbiyzvtd"
+  "mediaUrl": "https://soundcloud.com/safwatg/rajlgbiyzvtd",
+  "hasChorus": false
  },
  {
   "id": "tr0058",
@@ -11161,12 +10979,12 @@
   "number": 58,
   "title": "من ذا الذي يفصلنا",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=Gn4dA3ilZoc",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "warfare"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=Gn4dA3ilZoc"
+  ]
  },
  {
   "id": "tr0059",
@@ -11174,9 +10992,9 @@
   "number": 59,
   "title": "يا أبا الآب إليك",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/saf743g/ylgudz3cgmzd",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf743g/ylgudz3cgmzd"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0060",
@@ -11184,6 +11002,7 @@
   "number": 60,
   "title": "يَا أَبَانَا قَدْ قَبِلْتَ",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/user-864207466/pyzkxysxyqgf",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
@@ -11196,12 +11015,12 @@
   "number": 61,
   "title": "أنت يا رب يسوع",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=Gqk1yGvp1t0",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=Gqk1yGvp1t0"
+  ]
  },
  {
   "id": "tr0062",
@@ -11209,12 +11028,12 @@
   "number": 62,
   "title": "يا أيها الآب الغني",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=ru7oBhDretw",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=ru7oBhDretw"
+  ]
  },
  {
   "id": "tr0063",
@@ -11222,9 +11041,9 @@
   "number": 63,
   "title": "إذ ربنا رأس",
   "meter": "66.86",
+  "mediaUrl": "https://soundcloud.com/saf744g/hxmddq8wpgbb",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/saf744g/hxmddq8wpgbb"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0064",
@@ -11232,12 +11051,12 @@
   "number": 64,
   "title": "كلامك أيا رب نوري",
   "meter": "10.8.10.8 – 10.7",
+  "mediaUrl": "https://www.youtube.com/watch?v=603ZcNip9NU",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "word"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=603ZcNip9NU"
+  ]
  },
  {
   "id": "tr0065",
@@ -11245,8 +11064,8 @@
   "number": 65,
   "title": "قومي عروس الرب لا",
   "meter": "86.86",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=yJRgVaYEgjM"
+  "mediaUrl": "https://www.youtube.com/watch?v=yJRgVaYEgjM",
+  "hasChorus": false
  },
  {
   "id": "tr0066",
@@ -11254,12 +11073,12 @@
   "number": 66,
   "title": "بعد قليل ربنا",
   "meter": "88.88.88",
+  "mediaUrl": "https://soundcloud.com/saf747g/sctj8dvbgo2c",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf747g/sctj8dvbgo2c"
+  ]
  },
  {
   "id": "tr0067",
@@ -11267,8 +11086,8 @@
   "number": 67,
   "title": "إنما الرب نصيبي",
   "meter": "87.87",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=tlH7D_vuZIw"
+  "mediaUrl": "https://www.youtube.com/watch?v=tlH7D_vuZIw",
+  "hasChorus": false
  },
  {
   "id": "tr0068",
@@ -11276,9 +11095,9 @@
   "number": 68,
   "title": "حبك اللهم يجعل",
   "meter": "84.84.88.84",
+  "mediaUrl": "https://soundcloud.com/saf750g/26r9ijbd6txp",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf750g/26r9ijbd6txp"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0069",
@@ -11286,12 +11105,12 @@
   "number": 69,
   "title": "حبذا راع عظيم",
   "meter": "77.77",
+  "mediaUrl": "https://soundcloud.com/saf750g/gw5h5lwwvniq",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf750g/gw5h5lwwvniq"
+  ]
  },
  {
   "id": "tr0070",
@@ -11299,9 +11118,9 @@
   "number": 70,
   "title": "إنما للرب نحن",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/saf748g/kvqdqnf03c7h",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf748g/kvqdqnf03c7h"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0071",
@@ -11321,12 +11140,12 @@
   "number": 72,
   "title": "باسمك يا رب لنا",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=v7fH9dgdcog",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=v7fH9dgdcog"
+  ]
  },
  {
   "id": "tr0073",
@@ -11334,9 +11153,9 @@
   "number": 73,
   "title": "ربنا يسوع أنت",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/saf752g/bo9czhn9bvof",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf752g/bo9czhn9bvof"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0074",
@@ -11344,13 +11163,13 @@
   "number": 74,
   "title": "قام حقا قام رئيس السلام",
   "meter": "11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=ELiMbrf6VFo",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "cross",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=ELiMbrf6VFo"
+  ]
  },
  {
   "id": "tr0075",
@@ -11358,6 +11177,7 @@
   "number": 75,
   "title": "هلم نشد لاسم من",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat484-g/vo0bmrlemorc",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
@@ -11371,12 +11191,12 @@
   "number": 76,
   "title": "طوبى لمن قد آمنوا",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=BNU5JRabuUs",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=BNU5JRabuUs"
+  ]
  },
  {
   "id": "tr0077",
@@ -11384,13 +11204,13 @@
   "number": 77,
   "title": "أمشي في النور كل الحياة",
   "meter": "10.9.10.9 – 10.9.9.9",
+  "mediaUrl": "https://www.youtube.com/watch?v=KFZrExMm8Rs",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "cross",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=KFZrExMm8Rs"
+  ]
  },
  {
   "id": "tr0078",
@@ -11398,12 +11218,12 @@
   "number": 78,
   "title": "يا رب من يروي ظما",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=9x1KNso39-g",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=9x1KNso39-g"
+  ]
  },
  {
   "id": "tr0079",
@@ -11411,12 +11231,12 @@
   "number": 79,
   "title": "أبانا أنت المصدر",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=PJDKYoWEOvM",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=PJDKYoWEOvM"
+  ]
  },
  {
   "id": "tr0080",
@@ -11424,12 +11244,12 @@
   "number": 80,
   "title": "لا اسم يحلو ذكره",
   "meter": "77.77",
+  "mediaUrl": "https://www.youtube.com/watch?v=IBuvulLzaBU",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=IBuvulLzaBU"
+  ]
  },
  {
   "id": "tr0081",
@@ -11437,12 +11257,12 @@
   "number": 81,
   "title": "يا بهاء المجد رسم الجوهر",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=DkpXdEMonSo",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=DkpXdEMonSo"
+  ]
  },
  {
   "id": "tr0082",
@@ -11450,12 +11270,12 @@
   "number": 82,
   "title": "يا من بحضوره نفسي تطيب",
   "meter": "11.8.11.8",
+  "mediaUrl": "https://www.youtube.com/watch?v=i5vIebbjvbI",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=i5vIebbjvbI"
+  ]
  },
  {
   "id": "tr0083",
@@ -11463,12 +11283,12 @@
   "number": 83,
   "title": "هيا نشد بسنا",
   "meter": "77.77",
+  "mediaUrl": "https://www.youtube.com/watch?v=EM4BSz3G7r8",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=EM4BSz3G7r8"
+  ]
  },
  {
   "id": "tr0084",
@@ -11476,9 +11296,9 @@
   "number": 84,
   "title": "مبارك إلهنا إذ في ابنك باركتنا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf1018/whatsapp-audio-2024-03-04-at",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf1018/whatsapp-audio-2024-03-04-at"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0085",
@@ -11486,8 +11306,8 @@
   "number": 85,
   "title": "لك يا رب الثنا",
   "meter": "77.77",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/safwat483-g/os3uddlnywdx"
+  "mediaUrl": "https://soundcloud.com/safwat483-g/os3uddlnywdx",
+  "hasChorus": false
  },
  {
   "id": "tr0086",
@@ -11495,13 +11315,13 @@
   "number": 86,
   "title": "هل ليسوع من مثيل",
   "meter": "86.86 – 66.66",
+  "mediaUrl": "https://www.youtube.com/watch?v=yGBz9kJvW-E",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=yGBz9kJvW-E"
+  ]
  },
  {
   "id": "tr0087",
@@ -11509,9 +11329,9 @@
   "number": 87,
   "title": "كلمة الله غدا",
   "meter": "77.77",
+  "mediaUrl": "https://www.youtube.com/watch?v=8C0mJsnDk1M",
   "hasChorus": false,
-  "primaryTopic": "word",
-  "mediaUrl": "https://www.youtube.com/watch?v=8C0mJsnDk1M"
+  "primaryTopic": "word"
  },
  {
   "id": "tr0088",
@@ -11519,12 +11339,12 @@
   "number": 88,
   "title": "ربنا أظهرت حبا",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=X-7NrbP30f0",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=X-7NrbP30f0"
+  ]
  },
  {
   "id": "tr0089",
@@ -11544,12 +11364,12 @@
   "number": 90,
   "title": "لك السجود والثنا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat484-g/dzsrlk5l7lhc",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat484-g/dzsrlk5l7lhc"
+  ]
  },
  {
   "id": "tr0091",
@@ -11565,12 +11385,12 @@
   "number": 92,
   "title": "يا سيدي أحببتني",
   "meter": "86.86.88.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=CPKUZJKa_zE",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=CPKUZJKa_zE"
+  ]
  },
  {
   "id": "tr0093",
@@ -11578,8 +11398,8 @@
   "number": 93,
   "title": "اختبرتني إلهي وعرفت داخلي",
   "meter": "87.87.87.87",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=hXW_jZtNYf8"
+  "mediaUrl": "https://www.youtube.com/watch?v=hXW_jZtNYf8",
+  "hasChorus": false
  },
  {
   "id": "tr0094",
@@ -11587,12 +11407,12 @@
   "number": 94,
   "title": "قدموا للرب سبحا وسجودا قد وجب",
   "meter": "87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=fyxpmMvxFQA",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=fyxpmMvxFQA"
+  ]
  },
  {
   "id": "tr0095",
@@ -11600,14 +11420,14 @@
   "number": 95,
   "title": "بحبك السامي لقد نزلت من أعلى السما",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf560g/vkswk9hyx7fj",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "eternity",
    "worship",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf560g/vkswk9hyx7fj"
+  ]
  },
  {
   "id": "tr0096",
@@ -11615,9 +11435,9 @@
   "number": 96,
   "title": "هللويا ربنا قد فدانا للأبد",
   "meter": "77.77",
+  "mediaUrl": "https://soundcloud.com/andrew-magdy-244033758/wsqxylsbgooa",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/andrew-magdy-244033758/wsqxylsbgooa"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0097",
@@ -11625,9 +11445,9 @@
   "number": 97,
   "title": "سر عظيم قد بدا الله جاء في الجسد",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat484-g/aozkv2wlkjam",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/safwat484-g/aozkv2wlkjam"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0098",
@@ -11635,14 +11455,14 @@
   "number": 98,
   "title": "نحن قديسيك طرا بانتظار فتعال",
   "meter": "87.87.87",
+  "mediaUrl": "https://soundcloud.com/saf1018/f02a5a4d-2e64-48a6-9a5f-b0fb8c97e1fe",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "eternity",
    "fellowship",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf1018/f02a5a4d-2e64-48a6-9a5f-b0fb8c97e1fe"
+  ]
  },
  {
   "id": "tr0099",
@@ -11650,13 +11470,13 @@
   "number": 99,
   "title": "نرى عجبا أن الكلمه صار جسدا هللويا",
   "meter": "55.54",
+  "mediaUrl": "https://soundcloud.com/saf692g/rxgwiom3dfwh",
   "hasChorus": false,
   "primaryTopic": "word",
   "topics": [
    "worship",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf692g/rxgwiom3dfwh"
+  ]
  },
  {
   "id": "tr0100",
@@ -11664,12 +11484,12 @@
   "number": 100,
   "title": "ما أعجب حب العلي",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safsaf-andy/7ilos0k1ydp4",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/safsaf-andy/7ilos0k1ydp4"
+  ]
  },
  {
   "id": "tr0101",
@@ -11677,12 +11497,12 @@
   "number": 101,
   "title": "الله قوة لنا وحمانا الوطيد",
   "meter": "87.87 – 76.75",
+  "mediaUrl": "https://www.youtube.com/watch?v=GjoiFMWPebQ",
   "hasChorus": false,
   "primaryTopic": "warfare",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=GjoiFMWPebQ"
+  ]
  },
  {
   "id": "tr0102",
@@ -11690,9 +11510,9 @@
   "number": 102,
   "title": "يا نفس ماذا لي هنا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat484-g/6wruemiv8xgj",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safwat484-g/6wruemiv8xgj"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0103",
@@ -11700,9 +11520,9 @@
   "number": 103,
   "title": "جمال ربنا البهي أبرع من بني البشر",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=ebXk6KiSEKk",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=ebXk6KiSEKk"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0104",
@@ -11710,9 +11530,9 @@
   "number": 104,
   "title": "يسوع ربي أحمد ولاسمه أسبح",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/andrew835g/sc7yk09kicne",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/andrew835g/sc7yk09kicne"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0105",
@@ -11720,9 +11540,9 @@
   "number": 105,
   "title": "هلم نهد سبحنا لاسم المسيح ربنا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/andrew835g/9iizdbsw544s",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/andrew835g/9iizdbsw544s"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0106",
@@ -11730,12 +11550,12 @@
   "number": 106,
   "title": "يا أيها الراعي العظيم",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat484-g/swnes8lkmbgw",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat484-g/swnes8lkmbgw"
+  ]
  },
  {
   "id": "tr0107",
@@ -11743,12 +11563,12 @@
   "number": 107,
   "title": "إله كل نعمة نشكر كل حين",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/andrew835g/hw0hcmkzy0ge",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/andrew835g/hw0hcmkzy0ge"
+  ]
  },
  {
   "id": "tr0108",
@@ -11756,21 +11576,21 @@
   "number": 108,
   "title": "يا رب إنني غريب",
   "meter": "97.87 – 98.98",
+  "mediaUrl": "https://soundcloud.com/seham/track-13",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/seham/track-13"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0109",
   "book": "taranim",
   "number": 109,
   "title": "يا مخلصي اصحبني",
+  "mediaUrl": "https://soundcloud.com/fibe-saf/ym7gmjpawnde",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/fibe-saf/ym7gmjpawnde"
+  ]
  },
  {
   "id": "tr0110",
@@ -11778,14 +11598,14 @@
   "number": 110,
   "title": "هل لقاء نحظى فيه",
   "meter": "87.89 – 87.89",
+  "mediaUrl": "https://soundcloud.com/seham/track-9",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship",
    "eternity",
    "word"
-  ],
-  "mediaUrl": "https://soundcloud.com/seham/track-9"
+  ]
  },
  {
   "id": "tr0111",
@@ -11793,12 +11613,12 @@
   "number": 111,
   "title": "ما دمنا هنا في العبور",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/andrew835g/nciyupnwlj2g",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/andrew835g/nciyupnwlj2g"
+  ]
  },
  {
   "id": "tr0112",
@@ -11806,12 +11626,12 @@
   "number": 112,
   "title": "أنت فادينا الأمين حبك للمنتهى",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/saf1018/d603249d-e24a-4899-954a-64c96668d5ea",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf1018/d603249d-e24a-4899-954a-64c96668d5ea"
+  ]
  },
  {
   "id": "tr0113",
@@ -11819,8 +11639,8 @@
   "number": 113,
   "title": "أنجز يا ربي قصدك بي",
   "meter": "99.99",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/hfakhry/angez-ya-rabbi"
+  "mediaUrl": "https://soundcloud.com/hfakhry/angez-ya-rabbi",
+  "hasChorus": false
  },
  {
   "id": "tr0114",
@@ -11828,13 +11648,13 @@
   "number": 114,
   "title": "ما أعجب الحب الذي أظهرت يا يسوع",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/edward-azab/5-1",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/edward-azab/5-1"
+  ]
  },
  {
   "id": "tr0115",
@@ -11842,9 +11662,9 @@
   "number": 115,
   "title": "حولك نحن نجتمع يا ربنا الحبيب",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/andrew835g/gg1kcbrostlc",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/andrew835g/gg1kcbrostlc"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0116",
@@ -11852,9 +11672,9 @@
   "number": 116,
   "title": "يا نفسي دوما باركي إلهنا العظيم",
   "meter": "86.86 – 66.66",
+  "mediaUrl": "https://soundcloud.com/saf725g/8rctyt6n93wc",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf725g/8rctyt6n93wc"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0117",
@@ -11862,12 +11682,12 @@
   "number": 117,
   "title": "طبت نفسا يا يسوع مذ تعرفت بك",
   "meter": "87.85",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/5wbrurxxu8z6",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/5wbrurxxu8z6"
+  ]
  },
  {
   "id": "tr0118",
@@ -11875,13 +11695,13 @@
   "number": 118,
   "title": "أي بهجة لنا وسرور وعزا",
   "meter": "77.77",
+  "mediaUrl": "https://soundcloud.com/safwat482-g/lpdjrnb0s4cc",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat482-g/lpdjrnb0s4cc"
+  ]
  },
  {
   "id": "tr0119",
@@ -11889,9 +11709,9 @@
   "number": 119,
   "title": "هللويا الرب قام بعد إكمال العمل",
   "meter": "77.77",
+  "mediaUrl": "https://soundcloud.com/safwat483-g/gm3gqfdicjpc",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/safwat483-g/gm3gqfdicjpc"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0120",
@@ -11899,9 +11719,9 @@
   "number": 120,
   "title": "الرب راعينا الأمين وقلبه رقيق",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/saf839saf/h2wutn3kolqk",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/saf839saf/h2wutn3kolqk"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0121",
@@ -11909,8 +11729,8 @@
   "number": 121,
   "title": "يسوع وحده حوى جميع أوصاف الكمال",
   "meter": "88.88",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/andrew835g/gbcbg0xdpbj0"
+  "mediaUrl": "https://soundcloud.com/andrew835g/gbcbg0xdpbj0",
+  "hasChorus": false
  },
  {
   "id": "tr0122",
@@ -11918,9 +11738,9 @@
   "number": 122,
   "title": "باسمك نحن نجتمع يا رأسنا الوحيد",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=q8MTH5iEmBc",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=q8MTH5iEmBc"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0123",
@@ -11928,9 +11748,9 @@
   "number": 123,
   "title": "أشتاق أن أقترب لسيدي القدير",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/koko-joy-690294747/8ujpssl1gbxm",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/koko-joy-690294747/8ujpssl1gbxm"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0124",
@@ -11938,9 +11758,9 @@
   "number": 124,
   "title": "هل كل ذا عني أنا",
   "meter": "88.88 – 88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=ecyB8ygwzJ8",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=ecyB8ygwzJ8"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0125",
@@ -11948,12 +11768,12 @@
   "number": 125,
   "title": "سوف يمسح ربي الدموع",
   "meter": "99.79 - 889",
+  "mediaUrl": "https://www.youtube.com/watch?v=4X15rRfMz9w",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=4X15rRfMz9w"
+  ]
  },
  {
   "id": "tr0126",
@@ -11961,12 +11781,12 @@
   "number": 126,
   "title": "يرعاني راعي الأمين بالحب واليد اليمين",
   "meter": "88.88 – 88.88",
+  "mediaUrl": "https://soundcloud.com/user-282465658/ghtd6fjswlp0",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-282465658/ghtd6fjswlp0"
+  ]
  },
  {
   "id": "tr0127",
@@ -11974,12 +11794,12 @@
   "number": 127,
   "title": "أيها الآب المبارك مصدر الحب العجيب",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/saf839saf/w62sfsarzo3j",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf839saf/w62sfsarzo3j"
+  ]
  },
  {
   "id": "tr0128",
@@ -11987,9 +11807,9 @@
   "number": 128,
   "title": "إذ ننظر إليك في المجد الرفيع",
   "meter": "12.12.12.12",
+  "mediaUrl": "https://www.youtube.com/watch?v=GSd5xqKGmMI",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=GSd5xqKGmMI"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0129",
@@ -11997,12 +11817,12 @@
   "number": 129,
   "title": "قد بدا أمر عجيب بتجسد الإله",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/safwat480-garas/dnnsv08jg6ea",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat480-garas/dnnsv08jg6ea"
+  ]
  },
  {
   "id": "tr0130",
@@ -12010,9 +11830,9 @@
   "number": 130,
   "title": "الرب ذو المجد الرفيع",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=tni-tE8kAI8",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=tni-tE8kAI8"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0131",
@@ -12020,13 +11840,13 @@
   "number": 131,
   "title": "ما أعجب اتضاعك يا ربنا المجيد",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=3AOtB1UR6_E",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship",
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=3AOtB1UR6_E"
+  ]
  },
  {
   "id": "tr0132",
@@ -12034,13 +11854,13 @@
   "number": 132,
   "title": "بحبه يسوع قد أنقذني",
   "meter": "12.12.12.12 – 9.9.9.10",
+  "mediaUrl": "https://www.youtube.com/watch?v=t6ei589hYPU",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=t6ei589hYPU"
+  ]
  },
  {
   "id": "tr0133",
@@ -12048,9 +11868,9 @@
   "number": 133,
   "title": "يا مليك المجد في ملء الزمان",
   "meter": "11.11.11.11.11 – 12.12.12.12.11",
+  "mediaUrl": "https://soundcloud.com/andrew835g/dezankcafv6o",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/andrew835g/dezankcafv6o"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0134",
@@ -12058,9 +11878,9 @@
   "number": 134,
   "title": "أتوق للمستك الشافيه",
   "meter": "11.11.11.11.11.11",
+  "mediaUrl": "https://soundcloud.com/ghnema/07a",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/ghnema/07a"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0135",
@@ -12068,12 +11888,12 @@
   "number": 135,
   "title": "هل دمك الزكي أريق عن ذنبي",
   "meter": "66.66 - 8",
+  "mediaUrl": "https://soundcloud.com/khalas_nfoos/icne-caai-as-final-1",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/khalas_nfoos/icne-caai-as-final-1"
+  ]
  },
  {
   "id": "tr0136",
@@ -12081,14 +11901,14 @@
   "number": 136,
   "title": "يا وحيد الآب حقا أنت جئت من علاك",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/seham/in83eml2hwga",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "comfort",
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/seham/in83eml2hwga"
+  ]
  },
  {
   "id": "tr0137",
@@ -12096,9 +11916,9 @@
   "number": 137,
   "title": "في نعمة الآب الغني نفتخر ونستريح",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf839saf/cksjm7qfgopp",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf839saf/cksjm7qfgopp"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0138",
@@ -12106,9 +11926,9 @@
   "number": 138,
   "title": "الرب هو عزنا فبه نشبع",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/saf839saf/s443",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf839saf/s443"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0139",
@@ -12116,8 +11936,8 @@
   "number": 139,
   "title": "هَا قَدْ دَنَا يَوْمُ اللِّقَا",
   "meter": "88.88",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/andrew835g/ewj07q6jwyzm"
+  "mediaUrl": "https://soundcloud.com/andrew835g/ewj07q6jwyzm",
+  "hasChorus": false
  },
  {
   "id": "tr0140",
@@ -12125,9 +11945,9 @@
   "number": 140,
   "title": "أنت يسوع ذو الجلال ومنك نرتجي النجاه",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf837saf/gvegfrv7e7jk",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf837saf/gvegfrv7e7jk"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0141",
@@ -12135,9 +11955,9 @@
   "number": 141,
   "title": "لنا السلام والثبات في الرب كل حين",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/saf840f/3ptg9hrdjvzv",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/saf840f/3ptg9hrdjvzv"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0142",
@@ -12145,8 +11965,8 @@
   "number": 142,
   "title": "الآن ربنا القدير أمامنا يسير",
   "meter": "86.86",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/saf840f/vhumpir9ggnr"
+  "mediaUrl": "https://soundcloud.com/saf840f/vhumpir9ggnr",
+  "hasChorus": false
  },
  {
   "id": "tr0143",
@@ -12154,12 +11974,12 @@
   "number": 143,
   "title": "باسم المسيح نجتمع فإنه الفادي العظيم",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=mZOBS_U4S50",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=mZOBS_U4S50"
+  ]
  },
  {
   "id": "tr0144",
@@ -12167,13 +11987,13 @@
   "number": 144,
   "title": "الآن نحن نفرح بالرب رئيس الرعاه",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf842s/kr328mbmswvt",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf842s/kr328mbmswvt"
+  ]
  },
  {
   "id": "tr0145",
@@ -12181,9 +12001,9 @@
   "number": 145,
   "title": "شخصه طبيب نفسي صوته أيضا علاج",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/saf693g/b01",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf693g/b01"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0146",
@@ -12191,14 +12011,14 @@
   "number": 146,
   "title": "حدثوني عن يسوع",
   "meter": "88.88.8",
+  "mediaUrl": "https://soundcloud.com/saf722g/kxmsswik5q86",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "repentance",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf722g/kxmsswik5q86"
+  ]
  },
  {
   "id": "tr0147",
@@ -12206,13 +12026,13 @@
   "number": 147,
   "title": "إن قوتي كلما نفسي تجوع",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://soundcloud.com/ghnema/01a-1",
   "hasChorus": false,
   "primaryTopic": "word",
   "topics": [
    "comfort",
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/ghnema/01a-1"
+  ]
  },
  {
   "id": "tr0148",
@@ -12220,9 +12040,9 @@
   "number": 148,
   "title": "محبه الابن الحبيب بدت في منظر غريب",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf843saf/ya9d0wqz2hlm",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf843saf/ya9d0wqz2hlm"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0149",
@@ -12230,9 +12050,9 @@
   "number": 149,
   "title": "يا حمل الله يسوع بالروح نجثو بالخشوع",
   "meter": "88.88.88",
+  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/sdomskzyqfmq",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/sdomskzyqfmq"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0150",
@@ -12240,12 +12060,12 @@
   "number": 150,
   "title": "شهادتي أذيع بين الجموع",
   "meter": "64.64.88.86",
+  "mediaUrl": "https://soundcloud.com/saf722g/q6wrud7bhnm0",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf722g/q6wrud7bhnm0"
+  ]
  },
  {
   "id": "tr0151",
@@ -12253,8 +12073,8 @@
   "number": 151,
   "title": "مَنْ يَطْلُبِ الرَّبَّ يَجِد",
   "meter": "88.88",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/safwat484-g/gvsn4splosos"
+  "mediaUrl": "https://soundcloud.com/safwat484-g/gvsn4splosos",
+  "hasChorus": false
  },
  {
   "id": "tr0152",
@@ -12262,9 +12082,9 @@
   "number": 152,
   "title": "أبانا من حول المسيح في وحدة تجمعنا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf844saf/fxaeevgkony4",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf844saf/fxaeevgkony4"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0153",
@@ -12272,8 +12092,8 @@
   "number": 153,
   "title": "نحن بنو الآب الرحيم وكلنا إخوان",
   "meter": "86.86",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/user-282465658/zrpftowwt8er"
+  "mediaUrl": "https://soundcloud.com/user-282465658/zrpftowwt8er",
+  "hasChorus": false
  },
  {
   "id": "tr0154",
@@ -12281,9 +12101,9 @@
   "number": 154,
   "title": "علق الفادي على عود صلب وأهين",
   "meter": "77.77",
+  "mediaUrl": "https://soundcloud.com/safwat480-garas/tkxlkfrtge5y",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/safwat480-garas/tkxlkfrtge5y"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0155",
@@ -12291,8 +12111,8 @@
   "number": 155,
   "title": "احفظ حياتي ليكون تكريسها يا رب لك",
   "meter": "88.88",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/safwat559g/xrngc3e5ejmr"
+  "mediaUrl": "https://soundcloud.com/safwat559g/xrngc3e5ejmr",
+  "hasChorus": false
  },
  {
   "id": "tr0156",
@@ -12300,8 +12120,8 @@
   "number": 156,
   "title": "في سيرك في ذي الحياه سوف تراك الجموع",
   "meter": "87.88 – 8.8.11.8",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=bD-xosA3yXo"
+  "mediaUrl": "https://www.youtube.com/watch?v=bD-xosA3yXo",
+  "hasChorus": false
  },
  {
   "id": "tr0157",
@@ -12309,9 +12129,9 @@
   "number": 157,
   "title": "ربي في حضنك روحي تستريح تهدأ",
   "meter": "15.11.15.11 – 8.8.8.11",
+  "mediaUrl": "https://soundcloud.com/ghnema/09a-1",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/ghnema/09a-1"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0158",
@@ -12319,12 +12139,12 @@
   "number": 158,
   "title": "الرب قسمتي حظي ومنيتي",
   "meter": "66.77.6 – 46.46",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/kehmkchbbonc",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/kehmkchbbonc"
+  ]
  },
  {
   "id": "tr0159",
@@ -12332,6 +12152,7 @@
   "number": 159,
   "title": "سار ربنا الغني في اتضاع بعد مجد",
   "meter": "77.77",
+  "mediaUrl": "https://soundcloud.com/saf850saf/cyfukhdqyhl8",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
@@ -12344,12 +12165,12 @@
   "number": 160,
   "title": "يا ربنا اجتماعنا باسمك وارتباطنا",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=Zp9XwAJAKVY",
   "hasChorus": false,
   "primaryTopic": "church",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=Zp9XwAJAKVY"
+  ]
  },
  {
   "id": "tr0161",
@@ -12357,12 +12178,12 @@
   "number": 161,
   "title": "يا رب نرفع لك كل سجود ومديح",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=GSd5xqKGmMI",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=GSd5xqKGmMI"
+  ]
  },
  {
   "id": "tr0162",
@@ -12370,12 +12191,12 @@
   "number": 162,
   "title": "سيدي نفسي لديك عند موطئ قدميك",
   "meter": "77.77 – 77.77",
+  "mediaUrl": "https://www.youtube.com/watch?v=O7yOJwtPYfY",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=O7yOJwtPYfY"
+  ]
  },
  {
   "id": "tr0163",
@@ -12383,9 +12204,9 @@
   "number": 163,
   "title": "سر التقى سر عظيم الله بان في الجسد",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf853saf/45kzp6lizd4u",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf853saf/45kzp6lizd4u"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0164",
@@ -12393,14 +12214,14 @@
   "number": 164,
   "title": "عجيج عدل الله قد أسكته إلى الأبد",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/jesse-joshua-25030658/zen7mkg3qfyt",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross",
    "repentance",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/jesse-joshua-25030658/zen7mkg3qfyt"
+  ]
  },
  {
   "id": "tr0165",
@@ -12408,9 +12229,9 @@
   "number": 165,
   "title": "الله قد خلصتنا ودعوة دعوتنا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf853saf/57tt9erqsudo",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf853saf/57tt9erqsudo"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0166",
@@ -12418,12 +12239,12 @@
   "number": 166,
   "title": "لك المجد للأبد يا يسوع ربنا",
   "meter": "77.77",
+  "mediaUrl": "https://soundcloud.com/fahmy561g/2dhqzminnzfj",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/fahmy561g/2dhqzminnzfj"
+  ]
  },
  {
   "id": "tr0167",
@@ -12431,8 +12252,8 @@
   "number": 167,
   "title": "من يزرع بالبركات بالبركات يحصد",
   "meter": "88.88",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=ElacA6-JTy4"
+  "mediaUrl": "https://www.youtube.com/watch?v=ElacA6-JTy4",
+  "hasChorus": false
  },
  {
   "id": "tr0168",
@@ -12440,14 +12261,14 @@
   "number": 168,
   "title": "يا رأسنا الغالي لقد زاد الحنين",
   "meter": "12.12.12.12 – 12.12.12.12.12.12",
+  "mediaUrl": "https://www.youtube.com/watch?v=G6WjpBbhfbM",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship",
    "cross",
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=G6WjpBbhfbM"
+  ]
  },
  {
   "id": "tr0169",
@@ -12455,9 +12276,9 @@
   "number": 169,
   "title": "محبة الآب سمت يا رب من يدركها",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf1861saf/fc0zwppwegd0",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/saf1861saf/fc0zwppwegd0"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0170",
@@ -12465,12 +12286,12 @@
   "number": 170,
   "title": "أيها الآب المبارك احفظنا سائرين",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/saf1861saf/e5uzviafdz2n",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf1861saf/e5uzviafdz2n"
+  ]
  },
  {
   "id": "tr0171",
@@ -12478,9 +12299,9 @@
   "number": 171,
   "title": "مخلصي بالنعمة وهبتني اليقين",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/randa-safwat5/f3uktde0negd",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/randa-safwat5/f3uktde0negd"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0172",
@@ -12488,9 +12309,9 @@
   "number": 172,
   "title": "تحت ظلك حبيبي أشتهي أن أجلس",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://soundcloud.com/safwat523-garas/oqiiqdob9qcq",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safwat523-garas/oqiiqdob9qcq"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0173",
@@ -12498,9 +12319,9 @@
   "number": 173,
   "title": "هوذا قد صار ليل",
   "meter": "87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=YfxHhfyRqyc",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=YfxHhfyRqyc"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0174",
@@ -12508,12 +12329,12 @@
   "number": 174,
   "title": "ما أخلى ساعات بها يجمعنا الروح معا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf1860saf/gi32x34nrhhc",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "church"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf1860saf/gi32x34nrhhc"
+  ]
  },
  {
   "id": "tr0175",
@@ -12521,14 +12342,14 @@
   "number": 175,
   "title": "هيا مؤمنون هيا مؤمنات",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=JegwX9AZttc",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship",
    "eternity",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=JegwX9AZttc"
+  ]
  },
  {
   "id": "tr0176",
@@ -12536,8 +12357,8 @@
   "number": 176,
   "title": "أرضى بمرأى محيا مفتدي البشر",
   "meter": "14.14",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/6jsnwdgxijjv"
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/6jsnwdgxijjv",
+  "hasChorus": false
  },
  {
   "id": "tr0177",
@@ -12545,6 +12366,7 @@
   "number": 177,
   "title": "يا لسعدي عندما بالروح أشدو رافعا",
   "meter": "15.11.15.11 – 8.8.8.11",
+  "mediaUrl": "https://soundcloud.com/saf1864saf24/oxa0mgzkfk98",
   "hasChorus": false,
   "primaryTopic": "cross"
  },
@@ -12554,9 +12376,9 @@
   "number": 178,
   "title": "يا يسوع كوكب الصبح المنير",
   "meter": "11.11.11.11.11 – 12.12.12.12.11",
+  "mediaUrl": "https://soundcloud.com/saf1864saf24/ov7gjqvphqp9",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf1864saf24/ov7gjqvphqp9"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0179",
@@ -12564,8 +12386,8 @@
   "number": 179,
   "title": "من يصلي مؤمنا بيسوع لا يخيب",
   "meter": "77.77 – 77.77",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/josh-jesse-624495607/9eprxam4j1le"
+  "mediaUrl": "https://soundcloud.com/josh-jesse-624495607/9eprxam4j1le",
+  "hasChorus": false
  },
  {
   "id": "tr0180",
@@ -12582,12 +12404,12 @@
   "number": 181,
   "title": "بِذِكْرِكَ نَتَغَذَّى مَعًا",
   "meter": "10.10.10.10",
+  "mediaUrl": "https://soundcloud.com/andy-fahmy-803654135/bmr8vy2zqsxm",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/andy-fahmy-803654135/bmr8vy2zqsxm"
+  ]
  },
  {
   "id": "tr0182",
@@ -12595,12 +12417,12 @@
   "number": 182,
   "title": "باسمك يا رب تجمعنا حول شخصك بالحب النقي",
   "meter": "10.10.10.10",
+  "mediaUrl": "https://soundcloud.com/user-161388548/pnfr8lmtz6uu",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-161388548/pnfr8lmtz6uu"
+  ]
  },
  {
   "id": "tr0183",
@@ -12608,9 +12430,9 @@
   "number": 183,
   "title": "يا رب ما أحلى الحياة قربك",
   "meter": "12.12.12.12 – 12.12.12.12.12",
+  "mediaUrl": "https://www.youtube.com/watch?v=u9JNibTOVD0",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=u9JNibTOVD0"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0184",
@@ -12618,8 +12440,8 @@
   "number": 184,
   "title": "اسم يسوع قد سما وقد علا وفاق",
   "meter": "86.86",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=sGhqNV2k_cY"
+  "mediaUrl": "https://www.youtube.com/watch?v=sGhqNV2k_cY",
+  "hasChorus": false
  },
  {
   "id": "tr0185",
@@ -12627,9 +12449,9 @@
   "number": 185,
   "title": "باسمك يا رب ندعو أيها الابن الحبيب",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/safsaf-341838819/e27qsn01gjh0",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/safsaf-341838819/e27qsn01gjh0"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0186",
@@ -12646,9 +12468,9 @@
   "number": 187,
   "title": "إن حل في القلب السرور قوموا احمدوا ورنموا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf751880/qdahmymymesc",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/saf751880/qdahmymymesc"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0188",
@@ -12656,13 +12478,13 @@
   "number": 188,
   "title": "سراج منير لنا في السبيل",
   "meter": "11.8.11.8",
+  "mediaUrl": "https://www.youtube.com/watch?v=cEpeIbD8n3Y",
   "hasChorus": false,
   "primaryTopic": "warfare",
   "topics": [
    "comfort",
    "word"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=cEpeIbD8n3Y"
+  ]
  },
  {
   "id": "tr0189",
@@ -12670,8 +12492,8 @@
   "number": 189,
   "title": "سائل نعماك يلقى يا أبا الرأفه",
   "meter": "85.85 – 85.85",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/ghnema/03a-1"
+  "mediaUrl": "https://soundcloud.com/ghnema/03a-1",
+  "hasChorus": false
  },
  {
   "id": "tr0190",
@@ -12679,12 +12501,12 @@
   "number": 190,
   "title": "محبة الله سمت ما قاسها عقل فطين",
   "meter": "88.88.86.86 – 86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=RFvmp3mHFbc",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=RFvmp3mHFbc"
+  ]
  },
  {
   "id": "tr0191",
@@ -12692,12 +12514,12 @@
   "number": 191,
   "title": "أيها الرب يسوع أنت نبع كل حب",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/safwat893saf/1yx6004fd1fs",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat893saf/1yx6004fd1fs"
+  ]
  },
  {
   "id": "tr0192",
@@ -12705,6 +12527,7 @@
   "number": 192,
   "title": "ما أبهى أن نجتمع حول الحبيب للمديح",
   "meter": "88.88 – 88.88",
+  "mediaUrl": "https://soundcloud.com/sfg77885/lisg4cbx5x6e",
   "hasChorus": false,
   "primaryTopic": "fellowship"
  },
@@ -12714,12 +12537,12 @@
   "number": 193,
   "title": "مذ ربي قد أكرمني بنظرة لي باسما",
   "meter": "88.88 – 88.88",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/zfg4xtxrucrk",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "church"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/zfg4xtxrucrk"
+  ]
  },
  {
   "id": "tr0194",
@@ -12727,12 +12550,12 @@
   "number": 194,
   "title": "معشر الكرام هلم بنا لرب الأنام نهد سبحنا",
   "meter": "65.65.65.65",
+  "mediaUrl": "https://soundcloud.com/saf896/hgioxaaxd4rv",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf896/hgioxaaxd4rv"
+  ]
  },
  {
   "id": "tr0195",
@@ -12740,9 +12563,9 @@
   "number": 195,
   "title": "معشر الأبطال قد آن الزمان ارفعوا في الحال راية الإيمان",
   "meter": "65.65.65.65",
+  "mediaUrl": "https://soundcloud.com/saf896/riolejka4jfu",
   "hasChorus": false,
-  "primaryTopic": "warfare",
-  "mediaUrl": "https://soundcloud.com/saf896/riolejka4jfu"
+  "primaryTopic": "warfare"
  },
  {
   "id": "tr0196",
@@ -12750,8 +12573,8 @@
   "number": 196,
   "title": "لا تذكروا لي من الدنيا أمرا أقوم له سعيا",
   "meter": "99.95 – 10.9.5",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=ToheiUjOiAs"
+  "mediaUrl": "https://www.youtube.com/watch?v=ToheiUjOiAs",
+  "hasChorus": false
  },
  {
   "id": "tr0197",
@@ -12759,12 +12582,12 @@
   "number": 197,
   "title": "سيدي استلم حياتي كرسنها لك",
   "meter": "15.11.15.11 – 8.8.8.11",
+  "mediaUrl": "https://soundcloud.com/user-732308728/zml3x347oncp",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-732308728/zml3x347oncp"
+  ]
  },
  {
   "id": "tr0198",
@@ -12772,9 +12595,9 @@
   "number": 198,
   "title": "ما أبهى أن نجتمع إلى اسم فادينا المسيح",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat896g/cvekoshrieni",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/safwat896g/cvekoshrieni"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0199",
@@ -12782,12 +12605,12 @@
   "number": 199,
   "title": "إليك نهدي سبحنا يا أيها الفادي الكريم",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat896g/2l9ggtln0lfg",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat896g/2l9ggtln0lfg"
+  ]
  },
  {
   "id": "tr0200",
@@ -12795,9 +12618,9 @@
   "number": 200,
   "title": "قد سفك الدم الزكي من حمل الله الكريم",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat896g/zws0kzlfqyyw",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/safwat896g/zws0kzlfqyyw"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0201",
@@ -12805,6 +12628,7 @@
   "number": 201,
   "title": "يا خالق الملا يا ساكن العلا",
   "meter": "66.66.66.66",
+  "mediaUrl": "https://soundcloud.com/saher-samuel/wvk634jje6o5",
   "hasChorus": false
  },
  {
@@ -12813,12 +12637,12 @@
   "number": 202,
   "title": "هَلُمَّ ارْفَعُوا الأَعْلاَمَ وَانْشَطُوا",
   "meter": "11.5.11.5 – 7.7.11.11.7.11",
+  "mediaUrl": "https://soundcloud.com/main40/oqeoaclt7fao",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "warfare"
-  ],
-  "mediaUrl": "https://soundcloud.com/main40/oqeoaclt7fao"
+  ]
  },
  {
   "id": "tr0203",
@@ -12826,12 +12650,12 @@
   "number": 203,
   "title": "من أنا يا رب حتى تحملن عني الصليب",
   "meter": "15.15.15.15 – 14.14.14.14",
+  "mediaUrl": "https://www.youtube.com/watch?v=WaLEPi3dv-w",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=WaLEPi3dv-w"
+  ]
  },
  {
   "id": "tr0204",
@@ -12839,9 +12663,9 @@
   "number": 204,
   "title": "يا عجبا مخلصي قد مات من أجلي",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=3lNCjAX8c7A",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=3lNCjAX8c7A"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0205",
@@ -12849,12 +12673,12 @@
   "number": 205,
   "title": "قصد التجسد العظيم حسب مشورات الأزل",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/ghnema/ff7",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/ghnema/ff7"
+  ]
  },
  {
   "id": "tr0206",
@@ -12862,6 +12686,7 @@
   "number": 206,
   "title": "يا صخرة الدهور قد ضربت من أجلي",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/garas2772/wxtdcdpocixy",
   "hasChorus": false,
   "primaryTopic": "cross"
  },
@@ -12871,8 +12696,8 @@
   "number": 207,
   "title": "ما ألذ الاتكال على سيدي المسيح",
   "meter": "87.87 – 87.87",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/saf751880/tysva5h2mnxv"
+  "mediaUrl": "https://soundcloud.com/saf751880/tysva5h2mnxv",
+  "hasChorus": false
  },
  {
   "id": "tr0208",
@@ -12880,12 +12705,12 @@
   "number": 208,
   "title": "يَسُوعُ رَبِّي رَاعِيَّ",
   "meter": "88.88.88.55",
+  "mediaUrl": "https://soundcloud.com/user-864207466/fk0yhpwyf9be",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/fk0yhpwyf9be"
+  ]
  },
  {
   "id": "tr0209",
@@ -12893,6 +12718,7 @@
   "number": 209,
   "title": "على صليب الجلجثه كل قصاصنا احتمل",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf560g/0tqgbrvntlp7",
   "hasChorus": false,
   "primaryTopic": "cross"
  },
@@ -12902,13 +12728,13 @@
   "number": 210,
   "title": "في انتظار نورك يجلو غيومي",
   "meter": "12.12.12.7",
+  "mediaUrl": "https://www.youtube.com/watch?v=FC0L4onOQWU",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship",
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=FC0L4onOQWU"
+  ]
  },
  {
   "id": "tr0211",
@@ -12916,14 +12742,14 @@
   "number": 211,
   "title": "لي مقام بهيج سما",
   "meter": "99.99 – 69.69",
+  "mediaUrl": "https://www.youtube.com/watch?v=Cp6QnG0VE0I",
   "hasChorus": false,
   "primaryTopic": "warfare",
   "topics": [
    "worship",
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=Cp6QnG0VE0I"
+  ]
  },
  {
   "id": "tr0212",
@@ -12931,13 +12757,13 @@
   "number": 212,
   "title": "الله حب فالسما والأرض تبدي حبه",
   "meter": "88.88 - 88",
+  "mediaUrl": "https://www.youtube.com/watch?v=uYzUVl-j7yo",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "eternity",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=uYzUVl-j7yo"
+  ]
  },
  {
   "id": "tr0213",
@@ -12945,12 +12771,12 @@
   "number": 213,
   "title": "إن قلبي ليس يهوى غير فادي الحبيب",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/mk812f28aisg",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/mk812f28aisg"
+  ]
  },
  {
   "id": "tr0214",
@@ -12958,8 +12784,8 @@
   "number": 214,
   "title": "يا إلهي أنت تعلم ضعف نفسي كم يكون",
   "meter": "87.87 – 87.87",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=IgAUm3wqXFg"
+  "mediaUrl": "https://www.youtube.com/watch?v=IgAUm3wqXFg",
+  "hasChorus": false
  },
  {
   "id": "tr0215",
@@ -12967,9 +12793,9 @@
   "number": 215,
   "title": "قد فديتني وامتلكتني يا مخلصي المجيد",
   "meter": "10.7.10.7 - 9.7.10.7",
+  "mediaUrl": "https://soundcloud.com/saf722g/xnr3etwmssll",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/saf722g/xnr3etwmssll"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0216",
@@ -12977,8 +12803,8 @@
   "number": 216,
   "title": "أنت ابتهاجي منيتي قصدي",
   "meter": "10.10.10.12 – 12.12",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/ghnema/02a-1"
+  "mediaUrl": "https://soundcloud.com/ghnema/02a-1",
+  "hasChorus": false
  },
  {
   "id": "tr0217",
@@ -12986,9 +12812,9 @@
   "number": 217,
   "title": "أخليت نفسك وأنت مَن سما",
   "meter": "12.12.8.6",
+  "mediaUrl": "https://soundcloud.com/jesse-jesse-708938767/ckeufcrx757p",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/jesse-jesse-708938767/ckeufcrx757p"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0218",
@@ -12996,9 +12822,9 @@
   "number": 218,
   "title": "لله نفسي انتظري من عنده رجاي",
   "meter": "86.86 – 66.66",
+  "mediaUrl": "https://soundcloud.com/fahmy410/2fro40umyuik",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/fahmy410/2fro40umyuik"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0219",
@@ -13006,9 +12832,9 @@
   "number": 219,
   "title": "لا بد أن يجيء من مات عن الأنام",
   "meter": "86.86 – 66.66",
+  "mediaUrl": "https://soundcloud.com/fahmy410/ud2w7syrdc3c",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/fahmy410/ud2w7syrdc3c"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0220",
@@ -13016,13 +12842,13 @@
   "number": 220,
   "title": "بلطفه ناداني مخلصي الحبيب",
   "meter": "76.76.88 – 66.99",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/7pv5fqgzbfcb",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship",
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/7pv5fqgzbfcb"
+  ]
  },
  {
   "id": "tr0221",
@@ -13030,13 +12856,13 @@
   "number": 221,
   "title": "كيف أنسى سيدي الغالي المسيح",
   "meter": "11.11.15.15",
+  "mediaUrl": "https://soundcloud.com/coshlfnruiej/marlyalbert-2",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/coshlfnruiej/marlyalbert-2"
+  ]
  },
  {
   "id": "tr0222",
@@ -13058,12 +12884,12 @@
   "number": 223,
   "title": "أبانا حبك الصريح جمعنا حول المسيح",
   "meter": "88.88.5 – 88.88.5",
+  "mediaUrl": "https://soundcloud.com/user-864207466/gyyssrpsraqc",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/gyyssrpsraqc"
+  ]
  },
  {
   "id": "tr0224",
@@ -13080,12 +12906,12 @@
   "number": 225,
   "title": "ما أعظم الحب السني",
   "meter": "88.88 – 88.88.88",
+  "mediaUrl": "https://soundcloud.com/user-282465658/mbmzehwjbzpa",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-282465658/mbmzehwjbzpa"
+  ]
  },
  {
   "id": "tr0226",
@@ -13106,8 +12932,8 @@
   "number": 227,
   "title": "لا بد يوما تنتهي في ذي الديار غربتي",
   "meter": "88.88 – 88.88",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/seham/in7qklshaey3"
+  "mediaUrl": "https://soundcloud.com/seham/in7qklshaey3",
+  "hasChorus": false
  },
  {
   "id": "tr0228",
@@ -13136,9 +12962,9 @@
   "number": 230,
   "title": "حبيبي فتى مثل أرز لبنان",
   "meter": "11.8.11.8",
+  "mediaUrl": "https://soundcloud.com/ran-saf17645/8d5yqeyuhn80",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/ran-saf17645/8d5yqeyuhn80"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0231",
@@ -13146,8 +12972,8 @@
   "number": 231,
   "title": "ما أبهج اليوم الذي",
   "meter": "88.88 – 88.88",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=r29aJrUG8HE"
+  "mediaUrl": "https://www.youtube.com/watch?v=r29aJrUG8HE",
+  "hasChorus": false
  },
  {
   "id": "tr0232",
@@ -13155,12 +12981,12 @@
   "number": 232,
   "title": "رجاء نفسي وحده دم يسوع واسمه",
   "meter": "88.88 - 88",
+  "mediaUrl": "https://www.youtube.com/watch?v=zxAluqbfIoc",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=zxAluqbfIoc"
+  ]
  },
  {
   "id": "tr0233",
@@ -13168,6 +12994,7 @@
   "number": 233,
   "title": "نفسي اسهري وواظبي دوما على الصلاه",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/odfnhzjr3cd7",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
@@ -13180,12 +13007,12 @@
   "number": 234,
   "title": "عما قريب يدوي بوق ويهتف جند السماء",
   "meter": "98.98 – 98.98",
+  "mediaUrl": "https://www.youtube.com/watch?v=bC6PzqpYweQ",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "eternity"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=bC6PzqpYweQ"
+  ]
  },
  {
   "id": "tr0235",
@@ -13193,12 +13020,12 @@
   "number": 235,
   "title": "اهد نفسي يا يسوع عابرا وادي الدموع",
   "meter": "77.77.77",
+  "mediaUrl": "https://soundcloud.com/andy-fahmy-795345542/ker5dnw3lcm8",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/andy-fahmy-795345542/ker5dnw3lcm8"
+  ]
  },
  {
   "id": "tr0236",
@@ -13218,9 +13045,9 @@
   "number": 237,
   "title": "حين أرى صليب من قضى فحاز الانتصار",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=M9vsiZrNRYc",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=M9vsiZrNRYc"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0238",
@@ -13228,12 +13055,12 @@
   "number": 238,
   "title": "إلهنا وربنا في ابنك قد أحببتنا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/saf422-garas/y5q9tx4iodcu",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf422-garas/y5q9tx4iodcu"
+  ]
  },
  {
   "id": "tr0239",
@@ -13241,12 +13068,12 @@
   "number": 239,
   "title": "بشرى لنا بشرى لنا فالله قد أحبنا",
   "meter": "88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=TzGy4VB9dz4",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=TzGy4VB9dz4"
+  ]
  },
  {
   "id": "tr0240",
@@ -13254,9 +13081,9 @@
   "number": 240,
   "title": "قد ناب عنا ربنا للموت كالحمل",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/phar-374946768/c6befaeb-12e3-425e-91d9-bcfefa8d32f6",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/phar-374946768/c6befaeb-12e3-425e-91d9-bcfefa8d32f6"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0241",
@@ -13264,8 +13091,8 @@
   "number": 241,
   "title": "صوت يسوع الحلو قد سمعت قائلا",
   "meter": "14.14.14.14",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/saf724g/nhvwyna66icg"
+  "mediaUrl": "https://soundcloud.com/saf724g/nhvwyna66icg",
+  "hasChorus": false
  },
  {
   "id": "tr0242",
@@ -13286,12 +13113,12 @@
   "number": 243,
   "title": "إن خصم النفس يشهر صارم القتال",
   "meter": "85.85 – 85.85",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/kugrzeanoaef",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "warfare"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/kugrzeanoaef"
+  ]
  },
  {
   "id": "tr0244",
@@ -13299,12 +13126,12 @@
   "number": 244,
   "title": "يا يسوع من سبيلي للعلى إلى ضياك",
   "meter": "87.87.87.87 – 10.7.7.7.7.7",
+  "mediaUrl": "https://www.youtube.com/watch?v=6VNNTtL5mfk",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=6VNNTtL5mfk"
+  ]
  },
  {
   "id": "tr0245",
@@ -13312,9 +13139,9 @@
   "number": 245,
   "title": "بم يزكي طرقه ويستنير الشاب",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/andy-fahmy-795345542/th1uwnigeawk",
   "hasChorus": false,
-  "primaryTopic": "word",
-  "mediaUrl": "https://soundcloud.com/andy-fahmy-795345542/th1uwnigeawk"
+  "primaryTopic": "word"
  },
  {
   "id": "tr0246",
@@ -13322,9 +13149,9 @@
   "number": 246,
   "title": "إني أحب الرب لا لأربح النعيم",
   "meter": "86.86.86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=BcI6ZD1oF04",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=BcI6ZD1oF04"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0247",
@@ -13332,9 +13159,9 @@
   "number": 247,
   "title": "في وسط أشواك البلا تنزف رجلاي دما",
   "meter": "88.86 – 66.86",
+  "mediaUrl": "https://soundcloud.com/fah17147/uqitl9azwiii",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/fah17147/uqitl9azwiii"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0248",
@@ -13342,9 +13169,9 @@
   "number": 248,
   "title": "ألق على الرب همك فهو يعولك",
   "meter": "87 – 87.87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=2iOtPWgz04k",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=2iOtPWgz04k"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0249",
@@ -13352,13 +13179,13 @@
   "number": 249,
   "title": "رواية الحب حب الفادي العجيب",
   "meter": "66.66.88.86 - 96",
+  "mediaUrl": "https://soundcloud.com/saf560g/pkvnceabm2rs",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf560g/pkvnceabm2rs"
+  ]
  },
  {
   "id": "tr0250",
@@ -13366,12 +13193,12 @@
   "number": 250,
   "title": "أبانا نحن في ابنك نقدم الحمد لك",
   "meter": "88.88 - 88",
+  "mediaUrl": "https://soundcloud.com/rob-safwat/pj6afd6tohjs",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/rob-safwat/pj6afd6tohjs"
+  ]
  },
  {
   "id": "tr0251",
@@ -13379,9 +13206,9 @@
   "number": 251,
   "title": "يا نفسي دوما باركي اسم ربي",
   "meter": "11.10.11.10 – 7.10.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=PZKms6qdyJY",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=PZKms6qdyJY"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0252",
@@ -13389,12 +13216,12 @@
   "number": 252,
   "title": "أحيا لربي حياة الوفاء",
   "meter": "10.10.10.10 – 76.76.76.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=gAEJ2j8ziog",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=gAEJ2j8ziog"
+  ]
  },
  {
   "id": "tr0253",
@@ -13414,9 +13241,9 @@
   "number": 254,
   "title": "إذا بحر هذي الحياة اضطرب",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=prWmbOV3KE0",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=prWmbOV3KE0"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0255",
@@ -13424,14 +13251,14 @@
   "number": 255,
   "title": "يا سيدي حين أرى نجومك",
   "meter": "11.10.11.10 – 10.8.10.8",
+  "mediaUrl": "https://soundcloud.com/user-864207466/y3nxcqat977i",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross",
    "repentance",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/y3nxcqat977i"
+  ]
  },
  {
   "id": "tr0256",
@@ -13439,12 +13266,12 @@
   "number": 256,
   "title": "خذ بيدي وقدني كما تشاء",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=M-JG2k8e2MQ",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=M-JG2k8e2MQ"
+  ]
  },
  {
   "id": "tr0257",
@@ -13452,14 +13279,14 @@
   "number": 257,
   "title": "يا جميع من فديتم رنموا",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=wZS4qhlrp2s",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship",
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=wZS4qhlrp2s"
+  ]
  },
  {
   "id": "tr0258",
@@ -13467,9 +13294,9 @@
   "number": 258,
   "title": "أهدي إلى ربي يسوع شكري وحمدي في خشوع",
   "meter": "88.88.88.88 – 66.86",
+  "mediaUrl": "https://soundcloud.com/user-864207466/wflg3qktltxg",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/user-864207466/wflg3qktltxg"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0259",
@@ -13477,9 +13304,9 @@
   "number": 259,
   "title": "إن اشتياق القلب زاد وكثر الحنين",
   "meter": "86.96 – 6.7.7.4.10.10.9",
+  "mediaUrl": "https://soundcloud.com/seham/track-18",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/seham/track-18"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0260",
@@ -13505,9 +13332,9 @@
   "number": 262,
   "title": "يا حمل الله الكريم نجثو لشخصك العظيم",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safsaf956/188df801-18d1-4b98-ab62-fd4f73b09058",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/safsaf956/188df801-18d1-4b98-ab62-fd4f73b09058"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0263",
@@ -13515,9 +13342,9 @@
   "number": 263,
   "title": "يا عسكر الرحمان من تجندوا",
   "meter": "12.12.12.6 – 12.12.12.6",
+  "mediaUrl": "https://www.youtube.com/watch?v=FBQYY5x-VkY",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://www.youtube.com/watch?v=FBQYY5x-VkY"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0264",
@@ -13525,9 +13352,9 @@
   "number": 264,
   "title": "لسنا من ظلام أو ليل ديجور",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://soundcloud.com/sfgarass/8e451daf-8d6c-467d-b058-247706a61e97",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/sfgarass/8e451daf-8d6c-467d-b058-247706a61e97"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0265",
@@ -13543,14 +13370,14 @@
   "number": 266,
   "title": "ارفع القلب إليه وتأمل حبه",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://soundcloud.com/ghnema/ff10",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "warfare",
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/ghnema/ff10"
+  ]
  },
  {
   "id": "tr0267",
@@ -13558,6 +13385,7 @@
   "number": 267,
   "title": "رتبت لنا مائده ونحن في العبور",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/safsafsaf771/7e368649-e695-40a7-9a63-789b5aaab657",
   "hasChorus": false,
   "primaryTopic": "repentance",
   "topics": [
@@ -13580,12 +13408,12 @@
   "number": 269,
   "title": "قد بدا أمر عجيب لم ضاء الليل نور",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/user-533830726/mdgt8ocdfagl",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-533830726/mdgt8ocdfagl"
+  ]
  },
  {
   "id": "tr0270",
@@ -13602,6 +13430,7 @@
   "number": 271,
   "title": "هيا نغن لرب السما مرنمين مرنمين",
   "meter": "10.8.10.7 – 10.10.10.7",
+  "mediaUrl": "https://soundcloud.com/saf722g/lw879xzsrl40",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
@@ -13627,9 +13456,9 @@
   "number": 273,
   "title": "أبارك الله الغني من أجل إحسانه لي",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/andrewjosh77/bnizpld8bugr",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/andrewjosh77/bnizpld8bugr"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0274",
@@ -13646,9 +13475,9 @@
   "number": 275,
   "title": "في شخص ربنا يسوع من مات عنا بالصليب",
   "meter": "88.86.86 – 88.6.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=W50uIlUJ9jo",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=W50uIlUJ9jo"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0276",
@@ -13656,12 +13485,12 @@
   "number": 276,
   "title": "هلم بالترتيل والحمد والصلاه",
   "meter": "76.76.66.66 – 55.55",
+  "mediaUrl": "https://soundcloud.com/user-864207466/srdvqiivt4zx",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/srdvqiivt4zx"
+  ]
  },
  {
   "id": "tr0277",
@@ -13669,9 +13498,9 @@
   "number": 277,
   "title": "أورشليم في السما الله باريها المجيد",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/safwat809s/8ixomjsofdnc",
   "hasChorus": false,
-  "primaryTopic": "eternity",
-  "mediaUrl": "https://soundcloud.com/safwat809s/8ixomjsofdnc"
+  "primaryTopic": "eternity"
  },
  {
   "id": "tr0278",
@@ -13679,13 +13508,13 @@
   "number": 278,
   "title": "لاسمك نهدي شكرنا يا ربنا المنان",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/sfg-647308499/f71bcf45-be71-4f66-aef0-e856ed44ce0b",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/sfg-647308499/f71bcf45-be71-4f66-aef0-e856ed44ce0b"
+  ]
  },
  {
   "id": "tr0279",
@@ -13693,12 +13522,12 @@
   "number": 279,
   "title": "إكليله مضفور بالشوك من أجلي",
   "meter": "76.76.76.76",
+  "mediaUrl": "https://soundcloud.com/user-864207466/zuukedkzed1e",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/zuukedkzed1e"
+  ]
  },
  {
   "id": "tr0280",
@@ -13706,14 +13535,14 @@
   "number": 280,
   "title": "يا إلهي هبني قلبا يقصد مسرتك",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://soundcloud.com/user-282465658/7dsv5acdw1jx",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "worship",
    "cross",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-282465658/7dsv5acdw1jx"
+  ]
  },
  {
   "id": "tr0281",
@@ -13721,6 +13550,7 @@
   "number": 281,
   "title": "بر سلام وسرور أوصاف ملك الباري",
   "meter": "87.87 – 88.66",
+  "mediaUrl": "https://soundcloud.com/saf722g/xvmnyuepfc5j",
   "hasChorus": false,
   "primaryTopic": "comfort"
  },
@@ -13730,13 +13560,13 @@
   "number": 282,
   "title": "يا نفسي قد وافى يسوع رب الفدى القدير",
   "meter": "87.87 – 88.76",
+  "mediaUrl": "https://soundcloud.com/saf725g/8qkibk8utgpt",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf725g/8qkibk8utgpt"
+  ]
  },
  {
   "id": "tr0283",
@@ -13744,9 +13574,9 @@
   "number": 283,
   "title": "شامخ لا يحني رأسي أي ضيق",
   "meter": "12.12.12.12.12",
+  "mediaUrl": "https://www.youtube.com/watch?v=OEGVZraGEcw",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=OEGVZraGEcw"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0284",
@@ -13754,6 +13584,7 @@
   "number": 284,
   "title": "يا مخلصا كريما أرشدنا عابرين",
   "meter": "87.87.87.87.7.87",
+  "mediaUrl": "https://soundcloud.com/user-282465658/qm9hvmhhrnkz",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
@@ -13766,13 +13597,13 @@
   "number": 285,
   "title": "أنت لي المن الذي يشبع قلبي",
   "meter": "12.8.12.8 – 88",
+  "mediaUrl": "https://www.youtube.com/watch?v=RLFTaFHz6-4",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=RLFTaFHz6-4"
+  ]
  },
  {
   "id": "tr0286",
@@ -13780,12 +13611,12 @@
   "number": 286,
   "title": "فليسر وجهك دائما أمامي",
   "meter": "12.11.12.11 – 12",
+  "mediaUrl": "https://soundcloud.com/user-864207466/e2g9jduky50a",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/e2g9jduky50a"
+  ]
  },
  {
   "id": "tr0287",
@@ -13793,9 +13624,9 @@
   "number": 287,
   "title": "يا سيدي الفادي إليك حنيني",
   "meter": "12.12.12.12.12",
+  "mediaUrl": "https://www.youtube.com/watch?v=Adw6g3bJVew",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=Adw6g3bJVew"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0288",
@@ -13803,9 +13634,9 @@
   "number": 288,
   "title": "في ليل غيابك يا ربنا",
   "meter": "11.8.11.8",
+  "mediaUrl": "https://soundcloud.com/fahmy561g/4vwyq5lzkuss",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/fahmy561g/4vwyq5lzkuss"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0289",
@@ -13813,12 +13644,12 @@
   "number": 289,
   "title": "ربنا آت سريعا فافرحوا يا مؤمنين",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/jesse881961/lfjbaomhwus2",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/jesse881961/lfjbaomhwus2"
+  ]
  },
  {
   "id": "tr0290",
@@ -13826,13 +13657,13 @@
   "number": 290,
   "title": "قبلما بنى الجبال ربنا ذو الاقتدار",
   "meter": "77.77",
+  "mediaUrl": "https://soundcloud.com/saf1041/wpicuhkmqcjc",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf1041/wpicuhkmqcjc"
+  ]
  },
  {
   "id": "tr0291",
@@ -13840,14 +13671,14 @@
   "number": 291,
   "title": "يا سيد الأنام يا ربنا المهوب",
   "meter": "76.76.66.66 – 55.55",
+  "mediaUrl": "https://soundcloud.com/fahmy1049/c990e8eb-0d12-4640-ba01-b3c3dfca5575",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "worship",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/fahmy1049/c990e8eb-0d12-4640-ba01-b3c3dfca5575"
+  ]
  },
  {
   "id": "tr0292",
@@ -13855,13 +13686,13 @@
   "number": 292,
   "title": "يا يسوع قد سباني فيك لطف وخضوع",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=zeb6jlJvMBs",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "cross",
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=zeb6jlJvMBs"
+  ]
  },
  {
   "id": "tr0293",
@@ -13869,12 +13700,12 @@
   "number": 293,
   "title": "في ديار المجد حتما سنكون عن قريب",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://soundcloud.com/seham/c0ybj52azrwz",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/seham/c0ybj52azrwz"
+  ]
  },
  {
   "id": "tr0294",
@@ -13882,13 +13713,13 @@
   "number": 294,
   "title": "كل الخليقة التي في الأرض والسما معا",
   "meter": "88.88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=PpdTL5NOcKI",
   "hasChorus": false,
   "primaryTopic": "eternity",
   "topics": [
    "cross",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=PpdTL5NOcKI"
+  ]
  },
  {
   "id": "tr0295",
@@ -13896,8 +13727,8 @@
   "number": 295,
   "title": "ربي أحسن لي فأحيا حسب أمرك المهيب",
   "meter": "87.87 – 12.7.7",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/saf725g/olixsr65k9os"
+  "mediaUrl": "https://soundcloud.com/saf725g/olixsr65k9os",
+  "hasChorus": false
  },
  {
   "id": "tr0296",
@@ -13905,14 +13736,14 @@
   "number": 296,
   "title": "لماذا أنت حزينه لماذا هذا الأنين",
   "meter": "87.87.87.87",
+  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/bs2eeebx96tv",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship",
    "worship",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/bs2eeebx96tv"
+  ]
  },
  {
   "id": "tr0297",
@@ -13920,14 +13751,14 @@
   "number": 297,
   "title": "اسمك ربي يسوع مانح الخلاص",
   "meter": "58.58 – 66.66.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=SRg9n7ehD6Y",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=SRg9n7ehD6Y"
+  ]
  },
  {
   "id": "tr0298",
@@ -13935,12 +13766,12 @@
   "number": 298,
   "title": "هل تبغي عتقا من نير الآثام",
   "meter": "10.9.10.9 – 96.98",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/c46h2aa4afhx",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "warfare"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/c46h2aa4afhx"
+  ]
  },
  {
   "id": "tr0299",
@@ -13948,8 +13779,8 @@
   "number": 299,
   "title": "أيها السائح في البرية",
   "meter": "11.5.11.5.11.5 – 5.5.11.5",
-  "hasChorus": false,
-  "mediaUrl": "https://www.youtube.com/watch?v=_mwXZOoM074"
+  "mediaUrl": "https://www.youtube.com/watch?v=_mwXZOoM074",
+  "hasChorus": false
  },
  {
   "id": "tr0300",
@@ -13957,9 +13788,9 @@
   "number": 300,
   "title": "ليس شيء باقيا لي لكي أعمل",
   "meter": "75.75 – 55.75",
+  "mediaUrl": "https://www.youtube.com/watch?v=Pp25vvgqBV0",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=Pp25vvgqBV0"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0301",
@@ -13967,13 +13798,13 @@
   "number": 301,
   "title": "هل جلست في هدوء ونظرت للعلاء",
   "meter": "87.87.87.87 – 12.8.12.8",
+  "mediaUrl": "https://www.youtube.com/watch?v=9DQFek51WOc",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=9DQFek51WOc"
+  ]
  },
  {
   "id": "tr0302",
@@ -13981,9 +13812,9 @@
   "number": 302,
   "title": "فادي مات بالصليب مجدا لذلك الحمل",
   "meter": "88.88 – 88.88",
+  "mediaUrl": "https://soundcloud.com/matabots/aud-20210226-wa0005-aac",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/matabots/aud-20210226-wa0005-aac"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0303",
@@ -14004,9 +13835,9 @@
   "number": 304,
   "title": "يا يسوع هناك في الصليب",
   "meter": "10.8.10.8 – 10.10.8.7.11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=X8SJuUJxM9A",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://www.youtube.com/watch?v=X8SJuUJxM9A"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0305",
@@ -14014,12 +13845,12 @@
   "number": 305,
   "title": "إن تبعنا الحبيب حاملين الصليب",
   "meter": "669.669 – 46.76",
+  "mediaUrl": "https://www.youtube.com/watch?v=bLOxm-ahKFo",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=bLOxm-ahKFo"
+  ]
  },
  {
   "id": "tr0306",
@@ -14027,13 +13858,13 @@
   "number": 306,
   "title": "سلمت نفسي في يديك يا سيدي يسوع",
   "meter": "86.86.88.86 – 66.88.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=dEbvybrui-8",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort",
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=dEbvybrui-8"
+  ]
  },
  {
   "id": "tr0307",
@@ -14041,12 +13872,12 @@
   "number": 307,
   "title": "قد فداني بالصليب قد هداني ذا الحبيب",
   "meter": "77.77 – 77.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=eRSwKw266X0",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=eRSwKw266X0"
+  ]
  },
  {
   "id": "tr0308",
@@ -14054,8 +13885,8 @@
   "number": 308,
   "title": "متكئا رأسي على صدره باطمئنان",
   "meter": "14,14,14,14",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/khalas_nfoos/hh5uzjsoxuxs"
+  "mediaUrl": "https://soundcloud.com/khalas_nfoos/hh5uzjsoxuxs",
+  "hasChorus": false
  },
  {
   "id": "tr0309",
@@ -14063,12 +13894,12 @@
   "number": 309,
   "title": "يسوع ربي قد حباني ذا السلام التام",
   "meter": "86.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=kaD-j7E6JXE",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=kaD-j7E6JXE"
+  ]
  },
  {
   "id": "tr0310",
@@ -14076,13 +13907,13 @@
   "number": 310,
   "title": "سأرى وجه يسوع يا له مرأى عجيب",
   "meter": "87.87 – 87.87",
+  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/o9ahgp6btejz",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/youssef-samuel-593061978/o9ahgp6btejz"
+  ]
  },
  {
   "id": "tr0311",
@@ -14090,8 +13921,8 @@
   "number": 311,
   "title": "أيها السياح قولوا أين أنتم ذاهبون",
   "meter": "87.87.87.87",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/seham/e1xztfbb2vy1"
+  "mediaUrl": "https://soundcloud.com/seham/e1xztfbb2vy1",
+  "hasChorus": false
  },
  {
   "id": "tr0312",
@@ -14099,12 +13930,12 @@
   "number": 312,
   "title": "سوف يأتي في سحاب ذلك الفادي الأمين",
   "meter": "87.87.87",
+  "mediaUrl": "https://www.youtube.com/watch?v=b3v1wjwcbJM",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=b3v1wjwcbJM"
+  ]
  },
  {
   "id": "tr0313",
@@ -14112,8 +13943,8 @@
   "number": 313,
   "title": "ليس في هذي الفلاة هنا من راحة بل شقا وعنا",
   "meter": "10.10.10.6 – 5.5.10.6",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/seham/track-12"
+  "mediaUrl": "https://soundcloud.com/seham/track-12",
+  "hasChorus": false
  },
  {
   "id": "tr0314",
@@ -14121,8 +13952,8 @@
   "number": 314,
   "title": "عصفور دور إن سقط ينس من الناس فقط",
   "meter": "88.86 – 66.86",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/mik8plzwkanb"
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/mik8plzwkanb",
+  "hasChorus": false
  },
  {
   "id": "tr0315",
@@ -14130,14 +13961,14 @@
   "number": 315,
   "title": "يا لسر فائق كل مديح سام في الكمال",
   "meter": "11.5.11.5 – 7.7.11.11.7.11",
+  "mediaUrl": "https://soundcloud.com/user-282465658/x7iv7nkpewlf",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "fellowship",
    "cross",
    "church"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-282465658/x7iv7nkpewlf"
+  ]
  },
  {
   "id": "tr0316",
@@ -14145,12 +13976,12 @@
   "number": 316,
   "title": "ضع في قلبي حبا واصنع منه لحنا",
   "meter": "12.9.12.9 – 12.9.12.9",
+  "mediaUrl": "https://soundcloud.com/saf695g/b17",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "church"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf695g/b17"
+  ]
  },
  {
   "id": "tr0317",
@@ -14158,13 +13989,13 @@
   "number": 317,
   "title": "على جبين المفتدي يبدو سنا الجمال",
   "meter": "86.86",
+  "mediaUrl": "https://soundcloud.com/main-main-855563167/vhcqque9ofpd",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/main-main-855563167/vhcqque9ofpd"
+  ]
  },
  {
   "id": "tr0318",
@@ -14172,12 +14003,12 @@
   "number": 318,
   "title": "إله الحب نجاني بموت الصلب أحياني",
   "meter": "88.88 – 88.88",
+  "mediaUrl": "https://soundcloud.com/fibi-sam-975845451/5a60nea4u4eg",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/fibi-sam-975845451/5a60nea4u4eg"
+  ]
  },
  {
   "id": "tr0319",
@@ -14185,13 +14016,13 @@
   "number": 319,
   "title": "يا بسمة الصباح في وجه ذا الوجود",
   "meter": "76.76.76.76",
+  "mediaUrl": "https://www.youtube.com/watch?v=gncfhyGUBoY",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=gncfhyGUBoY"
+  ]
  },
  {
   "id": "tr0320",
@@ -14199,12 +14030,12 @@
   "number": 320,
   "title": "فاق الكل ذا الخليل في حبه",
   "meter": "84.84.88.84",
+  "mediaUrl": "https://soundcloud.com/safwat483-g/qh6yhr9cpffz",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/safwat483-g/qh6yhr9cpffz"
+  ]
  },
  {
   "id": "tr0321",
@@ -14212,9 +14043,9 @@
   "number": 321,
   "title": "حبيبي أيا من لأجلي جرحت",
   "meter": "12.11.12.11.11.11.11.11.11",
+  "mediaUrl": "https://www.youtube.com/watch?v=7sDiGQxtmPA",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=7sDiGQxtmPA"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0322",
@@ -14222,12 +14053,12 @@
   "number": 322,
   "title": "ربي سبيت قلبي بودادك",
   "meter": "12.12.12.12.8.6",
+  "mediaUrl": "https://www.youtube.com/watch?v=p90Hi1XjTsg",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "worship"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=p90Hi1XjTsg"
+  ]
  },
  {
   "id": "tr0323",
@@ -14256,9 +14087,9 @@
   "number": 325,
   "title": "معي أنت يا حبيبي كل حين يا حياتي",
   "meter": "88.88.88.88.4",
+  "mediaUrl": "https://soundcloud.com/mafdymousa/you-are-with-me-my-love",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://soundcloud.com/mafdymousa/you-are-with-me-my-love"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0326",
@@ -14266,14 +14097,14 @@
   "number": 326,
   "title": "ربنا تعال نحن في انتظار",
   "meter": "11.11.10.5 – 11.11.11.5",
+  "mediaUrl": "https://soundcloud.com/joy-fahmy-154543602/gmx7arlreox5",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship",
    "eternity",
    "warfare"
-  ],
-  "mediaUrl": "https://soundcloud.com/joy-fahmy-154543602/gmx7arlreox5"
+  ]
  },
  {
   "id": "tr0327",
@@ -14281,12 +14112,12 @@
   "number": 327,
   "title": "حب عظيم قد سما عن كل حب في الورى",
   "meter": "88.88.88",
+  "mediaUrl": "https://soundcloud.com/jessejesse-jesse/53ow647x2n5p",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/jessejesse-jesse/53ow647x2n5p"
+  ]
  },
  {
   "id": "tr0328",
@@ -14294,8 +14125,8 @@
   "number": 328,
   "title": "ما لي سواك يا سيدي حياتي رضاك يا سيدي",
   "meter": "99.66",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/safwat583/n3xjsrpnkbab"
+  "mediaUrl": "https://soundcloud.com/safwat583/n3xjsrpnkbab",
+  "hasChorus": false
  },
  {
   "id": "tr0329",
@@ -14303,8 +14134,8 @@
   "number": 329,
   "title": "رسالة أعطيتني يا سيدي",
   "meter": "12.12.12.12.12.12 – 8.8.8.6",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/jdg-12/gcqan0ngipui"
+  "mediaUrl": "https://soundcloud.com/jdg-12/gcqan0ngipui",
+  "hasChorus": false
  },
  {
   "id": "tr0330",
@@ -14312,22 +14143,22 @@
   "number": 330,
   "title": "أيها القدوس يا رب الحياه",
   "meter": "11.11.11.11.11.11.11.11",
+  "mediaUrl": "https://soundcloud.com/user-570063999/ayoha-el-kdoos-yarb-better-life",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross",
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-570063999/ayoha-el-kdoos-yarb-better-life"
+  ]
  },
  {
   "id": "tr0331",
   "book": "taranim",
   "number": 331,
   "title": "عندما أذكر كيف سمرت على الصليب",
+  "mediaUrl": "https://soundcloud.com/user-282465658/xwnqjm3vgatg",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/user-282465658/xwnqjm3vgatg"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0332",
@@ -14335,6 +14166,7 @@
   "number": 332,
   "title": "كيف وأنت الحبيب يهوى قلبي سواك",
   "meter": "76.86 – 76.77",
+  "mediaUrl": "https://soundcloud.com/better-life-733580510/kayfa-w-anta-el-habeeb-better-life-oldies",
   "hasChorus": false,
   "primaryTopic": "fellowship"
  },
@@ -14344,12 +14176,12 @@
   "number": 333,
   "title": "هل يستطيع الرب بي أن يصنع العجائب",
   "meter": "88.88 – 488.88",
+  "mediaUrl": "https://soundcloud.com/rob-safwat/s0peptpcrd0w",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/rob-safwat/s0peptpcrd0w"
+  ]
  },
  {
   "id": "tr0334",
@@ -14357,12 +14189,12 @@
   "number": 334,
   "title": "ها إنني أقترب وأطلب منك الرضا",
   "meter": "88.88 – 99.97",
+  "mediaUrl": "https://www.youtube.com/watch?v=gTidYLo4Grc",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=gTidYLo4Grc"
+  ]
  },
  {
   "id": "tr0335",
@@ -14370,6 +14202,7 @@
   "number": 335,
   "title": "ها آتي بطيبي فوق رأسك",
   "meter": "11.11.11.11",
+  "mediaUrl": "https://soundcloud.com/joy-fahmy-154543602/qvzdt7srliep",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
@@ -14382,12 +14215,12 @@
   "number": 336,
   "title": "أتراني قد سمعت صوت ربي يسأل",
   "meter": "87.87.66.66",
+  "mediaUrl": "https://soundcloud.com/saf725g/brnctmvrqq6x",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "word"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf725g/brnctmvrqq6x"
+  ]
  },
  {
   "id": "tr0337",
@@ -14395,6 +14228,7 @@
   "number": 337,
   "title": "انتظري الرب يا نفسي واذكري جوده لا تنسي",
   "meter": "99.99 – 95.95",
+  "mediaUrl": "https://soundcloud.com/saf725g/lnsydotdqk8y",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
@@ -14407,14 +14241,14 @@
   "number": 338,
   "title": "أنت تحطم القيود وأنت تكشف الأسرار",
   "meter": "88.88.77.77 – 88.88.88.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=tb7XmS4OceU",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "fellowship",
    "repentance"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=tb7XmS4OceU"
+  ]
  },
  {
   "id": "tr0339",
@@ -14434,12 +14268,12 @@
   "number": 340,
   "title": "كنت الأثيم الجاني فرق لي يسوع",
   "meter": "76.76.76.76",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/uy06ivwgljwe",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/uy06ivwgljwe"
+  ]
  },
  {
   "id": "tr0341",
@@ -14458,9 +14292,9 @@
   "book": "taranim",
   "number": 342,
   "title": "يا أيها الخاطي انتبه حتى متى تخدع",
+  "mediaUrl": "https://soundcloud.com/moa-me/1985a-9",
   "hasChorus": false,
-  "primaryTopic": "repentance",
-  "mediaUrl": "https://soundcloud.com/moa-me/1985a-9"
+  "primaryTopic": "repentance"
  },
  {
   "id": "tr0343",
@@ -14468,13 +14302,13 @@
   "number": 343,
   "title": "حالا تعالوا إلى المسيح يا من تعبتم بحملكم",
   "meter": "99.96 – 99.96",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/r28i5k0hcb95",
   "hasChorus": false,
   "primaryTopic": "repentance",
   "topics": [
    "fellowship",
    "comfort"
-  ],
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/r28i5k0hcb95"
+  ]
  },
  {
   "id": "tr0344",
@@ -14482,9 +14316,9 @@
   "number": 344,
   "title": "قام المسيح يا شعب أبشر",
   "meter": "10.9.10.9 – 10.9.9.9",
+  "mediaUrl": "https://www.youtube.com/watch?v=ZUI9BVLmAHY",
   "hasChorus": false,
-  "primaryTopic": "fellowship",
-  "mediaUrl": "https://www.youtube.com/watch?v=ZUI9BVLmAHY"
+  "primaryTopic": "fellowship"
  },
  {
   "id": "tr0345",
@@ -14492,9 +14326,9 @@
   "number": 345,
   "title": "فادي الورى يدعوك قل ها أنا",
   "meter": "74.74.74.74",
+  "mediaUrl": "https://soundcloud.com/user-282465658/quh9aejrzdn0",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/user-282465658/quh9aejrzdn0"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0346",
@@ -14502,9 +14336,9 @@
   "number": 346,
   "title": "كما أنا آتي إلى فادي الورى مستعجلا",
   "meter": "88.88",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/4ywlej87cr9v",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/baher-bebawi/4ywlej87cr9v"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0347",
@@ -14512,9 +14346,9 @@
   "number": 347,
   "title": "أنت تدعو للوليمه كل خاطئ أثيم",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/saf724g/oszlnglbzjwq",
   "hasChorus": false,
-  "primaryTopic": "repentance",
-  "mediaUrl": "https://soundcloud.com/saf724g/oszlnglbzjwq"
+  "primaryTopic": "repentance"
  },
  {
   "id": "tr0348",
@@ -14522,6 +14356,7 @@
   "number": 348,
   "title": "أنت مدعو إلى العرس العظيم",
   "meter": "11.7.11.7.8.8.12.7",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/tkwrx5bbmrda",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
@@ -14543,9 +14378,9 @@
   "book": "taranim",
   "number": 350,
   "title": "ضللت في بحر الحياة وكان طريقي شديد الظلام",
+  "mediaUrl": "https://soundcloud.com/reinhard-khella/350a1",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://soundcloud.com/reinhard-khella/350a1"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0351",
@@ -14553,6 +14388,7 @@
   "number": 351,
   "title": "ها يسوع الباب دوما يقرع",
   "meter": "11.11.11.11 – 6.6.11.11",
+  "mediaUrl": "https://soundcloud.com/baher-bebawi/ep2ofnzodxff",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
@@ -14565,12 +14401,12 @@
   "number": 352,
   "title": "يا ثقيل الحمل أقبل نحو فاديك الحبيب",
   "meter": "87.87",
+  "mediaUrl": "https://soundcloud.com/jdg-12/3hgtswfx6n1n",
   "hasChorus": false,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://soundcloud.com/jdg-12/3hgtswfx6n1n"
+  ]
  },
  {
   "id": "tr0353",
@@ -14578,13 +14414,13 @@
   "number": 353,
   "title": "قد غرقت في الشرور في حمأة الأثام",
   "meter": "76.76.76.74 – 8.6.4",
+  "mediaUrl": "https://soundcloud.com/user-864207466/afpbld9bokxl",
   "hasChorus": false,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
    "repentance"
-  ],
-  "mediaUrl": "https://soundcloud.com/user-864207466/afpbld9bokxl"
+  ]
  },
  {
   "id": "tr0354",
@@ -14625,8 +14461,8 @@
   "number": 357,
   "title": "ما أسعد البيت الذي قد حل فيه ابن العلي",
   "meter": "88.88 – 88.88",
-  "hasChorus": false,
-  "mediaUrl": "https://soundcloud.com/adel-safy-149425131/hqdnopypumpi"
+  "mediaUrl": "https://soundcloud.com/adel-safy-149425131/hqdnopypumpi",
+  "hasChorus": false
  },
  {
   "id": "tr0358",
@@ -14646,14 +14482,14 @@
   "number": 359,
   "title": "إلهنا عظيم إلهنا أمين",
   "meter": "10.10.10.10.10.10.10.10 – 999.999",
+  "mediaUrl": "https://soundcloud.com/dryoyoscience/wkabyy3ovg4x",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "repentance",
    "warfare",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/dryoyoscience/wkabyy3ovg4x"
+  ]
  },
  {
   "id": "tr0360",
@@ -14661,13 +14497,13 @@
   "number": 360,
   "title": "جايين يا أبانا اسمع لدعانا",
   "meter": "66.777 – 88.88.88.86",
+  "mediaUrl": "https://www.youtube.com/watch?v=yiYjTcRsDRA",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "repentance",
    "comfort"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=yiYjTcRsDRA"
+  ]
  },
  {
   "id": "tr0361",
@@ -14675,12 +14511,12 @@
   "number": 361,
   "title": "جوعني ليك واشبعني بيك",
   "meter": "10.9.10.6",
+  "mediaUrl": "https://www.youtube.com/watch?v=ffnZEJAFpag",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "cross"
-  ],
-  "mediaUrl": "https://www.youtube.com/watch?v=ffnZEJAFpag"
+  ]
  },
  {
   "id": "tr0362",
@@ -14688,12 +14524,12 @@
   "number": 362,
   "title": "إنت ليك قصد في حياتي",
   "meter": "88.88 – 87.87.87.87",
+  "mediaUrl": "https://soundcloud.com/saf570/xqaoacrnusrs",
   "hasChorus": false,
   "primaryTopic": "repentance",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/saf570/xqaoacrnusrs"
+  ]
  },
  {
   "id": "tr0363",
@@ -14701,12 +14537,12 @@
   "number": 363,
   "title": "صوته الحلو أتاني وبحنان حبه ناداني",
   "meter": "88.77 - 7777",
+  "mediaUrl": "https://soundcloud.com/rob-safwat/4h9kfw9j5hws",
   "hasChorus": false,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/rob-safwat/4h9kfw9j5hws"
+  ]
  },
  {
   "id": "tr0364",
@@ -14714,9 +14550,9 @@
   "number": 364,
   "title": "لولا النعمه ما كنت أشوفك ولا كان لي مكان في سماك",
   "meter": "10.10.10.10 – 8.8.8.8",
+  "mediaUrl": "https://soundcloud.com/faithchurchegypt/7bz9sy3dsagq",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/faithchurchegypt/7bz9sy3dsagq"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0365",
@@ -14724,6 +14560,7 @@
   "number": 365,
   "title": "مستحق كل المجد يا يسوع",
   "meter": "11.11.7.7.11",
+  "mediaUrl": "https://soundcloud.com/brinda-don/wf6vygroq22k",
   "hasChorus": false,
   "primaryTopic": "worship"
  },
@@ -14733,9 +14570,9 @@
   "number": 366,
   "title": "يا اللي حولت المراره اللي في حياتي لترنيمات",
   "meter": "87.87.87.87 - 7",
+  "mediaUrl": "https://soundcloud.com/mohsen-akr/ntpl7okzdvju",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/mohsen-akr/ntpl7okzdvju"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0367",
@@ -14743,13 +14580,13 @@
   "number": 367,
   "title": "بالحكمه إنت وحدك ماسك زمام الأمر",
   "meter": "76.76.76.76",
+  "mediaUrl": "https://soundcloud.com/bassemroshdy/esnedny2-7",
   "hasChorus": false,
   "primaryTopic": "word",
   "topics": [
    "comfort",
    "fellowship"
-  ],
-  "mediaUrl": "https://soundcloud.com/bassemroshdy/esnedny2-7"
+  ]
  },
  {
   "id": "tr0368",
@@ -14757,6 +14594,7 @@
   "number": 368,
   "title": "يا اللي بديت الرحله معاي",
   "meter": "88.88 – 88",
+  "mediaUrl": "https://soundcloud.com/randa-safwat/nagib-36-11",
   "hasChorus": false
  },
  {
@@ -14765,9 +14603,9 @@
   "number": 369,
   "title": "الكلمه منك مش أوهام والوعد قلته ومش أحلام",
   "meter": "88.88.88.88 – 88.88.88",
+  "mediaUrl": "https://soundcloud.com/daniel-daniel-22258898/epigiwppsyoi",
   "hasChorus": false,
-  "primaryTopic": "word",
-  "mediaUrl": "https://soundcloud.com/daniel-daniel-22258898/epigiwppsyoi"
+  "primaryTopic": "word"
  },
  {
   "id": "tr0370",
@@ -14775,9 +14613,9 @@
   "number": 370,
   "title": "ربي راعي وسلامي عمري ما احتاج لسواه",
   "meter": "87.87.87.87 – 87.87.88",
+  "mediaUrl": "https://www.youtube.com/watch?v=KDqlx1Q9rjo",
   "hasChorus": false,
-  "primaryTopic": "comfort",
-  "mediaUrl": "https://www.youtube.com/watch?v=KDqlx1Q9rjo"
+  "primaryTopic": "comfort"
  },
  {
   "id": "tr0371",
@@ -14785,9 +14623,9 @@
   "number": 371,
   "title": "أشواق للبركه جوانا تشبعنا رضى وتفيض فينا",
   "meter": "88.88.88.88 – 88.88",
+  "mediaUrl": "https://soundcloud.com/laura_medhat/5ts1cou0gdlq",
   "hasChorus": false,
-  "primaryTopic": "repentance",
-  "mediaUrl": "https://soundcloud.com/laura_medhat/5ts1cou0gdlq"
+  "primaryTopic": "repentance"
  },
  {
   "id": "tr0372",
@@ -14804,9 +14642,9 @@
   "number": 373,
   "title": "كنت كفاية الآب في صليبك لذة قلبه وشِبعه هناك",
   "meter": "87.87 – 87.87",
+  "mediaUrl": "https://soundcloud.com/bassemroshdy/esnedny2-1",
   "hasChorus": false,
-  "primaryTopic": "cross",
-  "mediaUrl": "https://soundcloud.com/bassemroshdy/esnedny2-1"
+  "primaryTopic": "cross"
  },
  {
   "id": "tr0374",
@@ -14814,9 +14652,9 @@
   "number": 374,
   "title": "إنت مش للذكريات أو لمجد راح وفات",
   "meter": "77.87 – 88.88",
+  "mediaUrl": "https://soundcloud.com/samy-s-salib/n7uj7lrhchi4",
   "hasChorus": false,
-  "primaryTopic": "worship",
-  "mediaUrl": "https://soundcloud.com/samy-s-salib/n7uj7lrhchi4"
+  "primaryTopic": "worship"
  },
  {
   "id": "tr0375",
@@ -14824,11 +14662,11 @@
   "number": 375,
   "title": "سنين طويله مضت والرب معتني بي",
   "meter": "87.87.99",
+  "mediaUrl": "https://soundcloud.com/garas-fahmy/nagib-25-1",
   "hasChorus": false,
   "primaryTopic": "worship",
   "topics": [
    "eternity"
-  ],
-  "mediaUrl": "https://soundcloud.com/garas-fahmy/nagib-25-1"
+  ]
  }
 ]
