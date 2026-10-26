@@ -11,7 +11,7 @@
  * that reads it as a work queue.
  */
 import { useEffect, useMemo, useState } from 'react';
-import { FlatList, Pressable, View } from 'react-native';
+import { FlatList, Pressable, TextInput, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AdminScreenShell } from '../../components/admin/AdminScreenShell';
@@ -42,6 +42,8 @@ export default function AdminReviewScreen() {
 
   const [reviewLang, setReviewLang] = useState<'en' | 'de'>('en');
   const [reviewFilter, setReviewFilter] = useState<'all' | 'AI_DRAFT' | 'VERIFIED'>('AI_DRAFT');
+  const [reviewBook, setReviewBook] = useState<'all' | 'main' | 'taranim'>('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const [chunksVersion, setChunksVersion] = useState(0);
 
   // The queue needs every hymn body, which lives in lazily imported chunks.
@@ -66,9 +68,14 @@ export default function AdminReviewScreen() {
   const review = useMemo(() => {
     const statusOf = (h: Hymn) => h.translationStatus ?? 'AI_DRAFT';
     const bookOf = (h: Hymn) => h.book ?? 'main';
-    const all = getCorpus().filter((h) =>
-      reviewLang === 'en' ? h.verses_en?.length : h.verses_de?.length,
-    );
+    const q = searchQuery.trim().toLowerCase();
+    const all = getCorpus().filter((h) => {
+      if (reviewLang === 'en' ? !h.verses_en?.length : !h.verses_de?.length) return false;
+      if (reviewBook !== 'all' && bookOf(h) !== reviewBook) return false;
+      if (!q) return true;
+      const text = `${h.number} ${h.title}`.toLowerCase();
+      return text.includes(q);
+    });
     const verified = all.filter((h) => statusOf(h) === 'VERIFIED').length;
     const items = (reviewFilter === 'all' ? all : all.filter((h) => statusOf(h) === reviewFilter))
       .slice()
@@ -105,6 +112,47 @@ export default function AdminReviewScreen() {
             <AppText variant="caption" color={colors.textMuted}>
               {t('admin.verified')}: {review.verified} / {review.total}
             </AppText>
+
+            <View style={{ marginTop: spacing.sm }}>
+              <TextInput
+                value={searchQuery}
+                onChangeText={setSearchQuery}
+                placeholder="بحث..."
+                placeholderTextColor={colors.textMuted}
+                style={[{
+                  paddingVertical: spacing.sm,
+                  paddingHorizontal: spacing.md,
+                  borderRadius: radius.md,
+                  borderWidth: 1,
+                  borderColor: colors.border,
+                  backgroundColor: colors.surfaceMuted,
+                  color: colors.text,
+                  fontSize: 14,
+                  minHeight: 44,
+                }]}
+              />
+            </View>
+
+            <View style={{ flexDirection: direction.row, gap: spacing.sm, marginTop: spacing.sm, flexWrap: 'wrap' }}>
+              {(['all', 'main', 'taranim'] as const).map((b) => (
+                <Pressable
+                  key={b}
+                  onPress={() => setReviewBook(b)}
+                  style={({ pressed }) => ({
+                    paddingVertical: spacing.xs,
+                    paddingHorizontal: spacing.md,
+                    borderRadius: radius.pill,
+                    borderWidth: 1,
+                    borderColor: reviewBook === b ? colors.primary : colors.border,
+                    backgroundColor: reviewBook === b ? colors.primary : 'transparent',
+                    opacity: pressed ? 0.75 : 1,
+                  })}>
+                  <AppText variant="caption" color={reviewBook === b ? colors.onPrimary : colors.text} style={{ fontWeight: '700' }}>
+                    {b === 'all' ? t('admin.filterAll') : b === 'main' ? t('book.main') : t('book.taranim')}
+                  </AppText>
+                </Pressable>
+              ))}
+            </View>
 
             <View
               style={{

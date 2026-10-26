@@ -74,6 +74,7 @@ export function AdminSectionTabs({ active }: AdminSectionTabsProps) {
               borderColor: selected ? colors.primary : colors.border,
               backgroundColor: selected ? colors.primary : 'transparent',
               opacity: pressed ? 0.75 : 1,
+              flexShrink: 0,
             })}>
             <AppText
               variant="caption"
