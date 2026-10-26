@@ -43,7 +43,8 @@ export function AdminSectionTabs({ active }: AdminSectionTabsProps) {
   const items = ITEMS.filter((item) => !item.offlineOnly || !isFirebaseConfigured);
 
   return (
-    <ScrollView
+    <View style={{ minHeight: 48 }}>
+      <ScrollView
       horizontal
       showsHorizontalScrollIndicator={false}
       // The row must scroll freely inside a vertical screen; the pills are the
@@ -86,5 +87,6 @@ export function AdminSectionTabs({ active }: AdminSectionTabsProps) {
         );
       })}
     </ScrollView>
+    </View>
   );
 }
