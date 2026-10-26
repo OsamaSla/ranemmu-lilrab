@@ -6,7 +6,8 @@ are not repeated every session.
 
 - **Last verified:** 2026-10-26, commits `b320dab` (lyric search + lazy
   chunks), `63f89a0` (regenerated corpus) and `4d88940` (editing gate), `main`;
-  the gate was checked on a local static export, not yet deployed.
+  live site deployed and checked signed-out (locked editor routes, no reader
+  edit button).
 - **Update rule:** see [§13](#13-general-rule-for-any-project). Touch only the
   sections a change affected and bump "Last verified".
 - Speak Arabic with the owner (Osama). Code comments and commits are English.
