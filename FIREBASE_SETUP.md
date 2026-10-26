@@ -43,6 +43,9 @@ firebase deploy --only firestore:rules
 
 Rules summary (`firestore.rules`): everyone reads `hymns/*`, only a
 signed-in user creates/updates, nobody deletes, everything else denied.
+`feedbacks/*` (app ratings) is the one public write path: anonymous visitors
+may create a well-formed pending rating, while listing, triage and deletion
+require a signed-in admin.
 
 ## 4. Upload the corpus (one time)
 
