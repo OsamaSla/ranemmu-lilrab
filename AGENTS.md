@@ -1,3 +1,8 @@
+> **Start here:** [`PROJECT_NOTES.md`](./PROJECT_NOTES.md) is the verified map of
+> this repo — architecture, data model, commands, gotchas, known issues, and the
+> update rule. Read it before exploring. At the end of any non-trivial task,
+> update the sections your change affected and bump its "Last verified" line.
+
 This is an Expo/React Native mobile application. Prioritize mobile-first patterns, performance, and cross-platform compatibility.
 
 ## Expo has changed — do not trust your training data
