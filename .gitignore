@@ -8,6 +8,9 @@
 .vscode/
 .idea/
 
+# One-off local helper scripts (git add/commit/push wrappers, etc.)
+push_fix*.js
+
 # Dependencies
 node_modules/
 

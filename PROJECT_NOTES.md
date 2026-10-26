@@ -82,6 +82,10 @@ Non-TS files inside `src/app/(tabs)/` (`extract_frames.py`,
 `library_fixed_final.py`) are leftover scratch files, not routes. Safe to
 delete; Expo Router ignores non-JS extensions.
 
+Root-level one-off scripts (`push_fix*.js` — wrappers that ran `git add -A`,
+commit and push) are scratch, not build steps; they are now gitignored. Keep
+new helpers out of the tree or in `scripts/` if they are meant to be shared.
+
 ## 4. Commands (Windows, cmd)
 
 ```cmd
