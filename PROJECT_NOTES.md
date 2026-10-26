@@ -4,14 +4,20 @@ Living knowledge base for agents and humans. **Read this before exploring the
 repo** — it exists so `npm ci`, live Firebase probes and file-by-file reading
 are not repeated every session.
 
-- **Last verified:** 2026-10-26, commits `b320dab` (lyric search + lazy
-  chunks), `63f89a0` (regenerated corpus) and `4d88940` (editing gate), `main`;
-  live site deployed and checked signed-out (locked editor routes, no reader
-  edit button). Same day: the ratings panel was split into its own
-  `(tabs)/admin-feedback` screen, then Admin was restructured into one frame
-  with a section ruler (`admin` · `admin-hymns` · `admin-feedback` ·
-  `admin-publish` · `admin-security`), the hymn-search box was dropped, and the
-  PIN moved to offline builds only.
+- **Last verified:** 2026-10-26, commits `218a868` (interleaved per-line verse
+  editor with language filters and sticky save), `7f1ab7b` (one frame with section
+  ruler), `b24a1e5` (ratings screen), `23e42c8` (drop push helper); live site
+  deployed and checked signed-out (locked editor routes, no reader edit button). Same day: the
+  ratings panel was split into its own `(tabs)/admin-feedback` screen, then Admin
+  was restructured into one frame with a section ruler (`admin` ·
+  `admin-hymns` · `admin-feedback` · `admin-publish` · `admin-security`), the
+  hymn-search box was dropped, and the PIN moved to offline builds only.
+  Then the editor redesign landed: verse lines now render as one row per line
+  (Arabic on top, its EN/DE translations directly under), with language filter
+  chips (عربي/EN/DE) and a sticky save bar + unsaved-changes indicator. Then the editor redesign landed: verse
+  lines became one row per line (Arabic on top, its EN/DE translations
+  directly under), with language filter chips (عربي/EN/DE) and a sticky save
+  bar + unsaved-changes indicator.
 - **Update rule:** see [§13](#13-general-rule-for-any-project). Touch only the
   sections a change affected and bump "Last verified".
 - Speak Arabic with the owner (Osama). Code comments and commits are English.
@@ -213,6 +219,15 @@ public web API key are fine; test writes belong in the emulator.
   in Admin on purpose — the library already searches number/title/lyrics and
   every hymn page has its own edit button; the review queue is the only place
   that lists *which* translations are still unreviewed.
+- **Verse editor redesign** (`src/app/(tabs)/admin-edit.tsx`, 2026-10-26): verse
+  lines render as one row per line — Arabic input on top, its EN/DE translations
+  directly under (same pairing the reader shows), line numbers on the left, line
+  field `minHeight 44`, translations get a 2px accent rail + EN/DE badge instead of
+  a heavy frame. Language filter chips (عربي/EN/DE; only languages the hymn
+  carries are listed, and the last selected is never dropped) pin via `?lang=de`
+  deep link from the review queue. Save bar (verified toggle + save) moved out of
+  the ScrollView into a sticky footer; a `dirty` flag (set by every edit helper,
+  cleared on save/reset) drives the "تغييرات غير محفوظة" caption above the bar.
 
 ## 8. App ratings ("تقييم التطبيق") — current design
 
@@ -293,6 +308,15 @@ public web API key are fine; test writes belong in the emulator.
     only bites locally.
 12. On Windows PowerShell, `npx`/`npm` are blocked by the execution policy
     (`npx.ps1 cannot be loaded`); call `npx.cmd` / `npm.cmd` instead.
+13. The signed-in Admin UI cannot be checked with real credentials locally; the
+    only local visual path is a **no-Firebase export**: temporarily move
+    `.env.local` aside → `npx expo export -p web --output-dir dist-preview` →
+    restore it → serve `dist-preview` with a small static server that strips the
+    `/ranemmu-lilrab` baseUrl prefix → open `/ranemmu-lilrab/admin` → enter the
+    PIN (`store/settings.ts` default `1234`) → navigate to
+    `/ranemmu-lilrab/admin-edit?id=h0001`. Proven on 2026-10-26 to look at the
+    verse editor; React error #418 in that build is expected (pre-rendered hymn
+    HTML renders the loading shell).
 
 ## 11. Known issues / cleanup candidates
 

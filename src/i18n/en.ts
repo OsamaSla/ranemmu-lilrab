@@ -77,6 +77,8 @@ export const en: PartialDictionary = {
   'admin.tabSecurity': 'Security',
   'admin.feedbackTitle': 'Ratings',
   'admin.statusDraft': 'Draft',
+  'admin.langAr': 'Arabic',
+  'admin.unsaved': 'Unsaved changes',
   'admin.filterReviewed': 'Reviewed',
   'admin.securitySignInTitle': 'Controlled by sign-in',
   'admin.securitySignInHint':

@@ -82,6 +82,8 @@ export const de: PartialDictionary = {
   'admin.tabSecurity': 'Sicherheit',
   'admin.feedbackTitle': 'Bewertungen',
   'admin.statusDraft': 'Entwurf',
+  'admin.langAr': 'Arabisch',
+  'admin.unsaved': 'Ungespeicherte Änderungen',
   'admin.filterReviewed': 'Geprüft',
   'admin.securitySignInTitle': 'Zugang über Anmeldung',
   'admin.securitySignInHint':

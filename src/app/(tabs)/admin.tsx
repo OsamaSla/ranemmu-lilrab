@@ -179,7 +179,12 @@ export default function AdminReviewScreen() {
           const reviewed = item.status === 'VERIFIED';
           return (
             <Pressable
-              onPress={() => router.push({ pathname: '/admin-edit', params: { id: item.id } })}
+              onPress={() =>
+                router.push({
+                  pathname: '/admin-edit',
+                  params: { id: item.id, lang: reviewLang },
+                })
+              }
               accessibilityRole="button"
               android_ripple={{ color: colors.border }}
               style={({ pressed }) => ({

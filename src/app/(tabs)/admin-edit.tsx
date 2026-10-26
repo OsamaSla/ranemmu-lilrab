@@ -29,7 +29,7 @@ import { radius, spacing } from '../../theme/tokens';
 
 export default function AdminEditScreen() {
   const router = useRouter();
-  const { id } = useLocalSearchParams<{ id: string }>();
+  const { id, lang } = useLocalSearchParams<{ id: string; lang?: string }>();
   const { t, direction } = useT();
   const { colors, fontFamily } = useTheme();
   // Same gate as the Admin screen and the reader's edit button: this route is
@@ -99,6 +99,15 @@ export default function AdminEditScreen() {
   const [expandedBasic, setExpandedBasic] = useState(true);
   const [expandedTopics, setExpandedTopics] = useState(true);
   const [expandedVerses, setExpandedVerses] = useState(true);
+  // Set by every edit, cleared by save: the sticky bar shows it so a long hymn
+  // does not lose an unsaved change behind a scroll.
+  const [dirty, setDirty] = useState(false);
+  // Which languages the verse editor shows. `null` means "follow the default":
+  // Arabic plus the language you arrived from (`?lang=de` from the review
+  // queue). Any tap pins the user's own choice for the rest of the session.
+  const [langChoice, setLangChoice] = useState<Partial<
+    Record<'ar' | 'en' | 'de', boolean>
+  > | null>(null);
   // The hymn body is imported on demand; bump this once it lands so the form
   // (and the not-found fallback) re-reads getHymn().
   const [, setChunkVersion] = useState(0);
@@ -121,6 +130,7 @@ export default function AdminEditScreen() {
   if (form.key !== id || form.sourceId !== (hymn?.id ?? '')) {
     setForm(toForm(id, hymn));
     setSavedOnce(false);
+    setDirty(false);
   }
 
   if (!canEdit) {
@@ -167,15 +177,36 @@ export default function AdminEditScreen() {
     writingDirection: direction.dir,
   } as const;
 
-  const set = (patch: Partial<typeof form>) => setForm((f) => ({ ...f, ...patch }));
+  // A verse line is a line, not a paragraph: no 64px box. Translations get a
+  // slim accent rail and a language badge instead of a heavy frame, so an
+  // Arabic line and its translation read as one unit.
+  const lineField = { minHeight: 44, textAlignVertical: 'top' } as const;
+  const translationField = {
+    minHeight: 40,
+    fontSize: 14,
+    writingDirection: 'ltr',
+    textAlign: 'left',
+    borderWidth: 0,
+    borderStartWidth: 2,
+    borderStartColor: colors.accent,
+    backgroundColor: colors.surfaceMuted,
+  } as const;
 
-  const toggleSecondary = (id: TopicId) =>
+  const set = (patch: Partial<typeof form>) => {
+    setForm((f) => ({ ...f, ...patch }));
+    setDirty(true);
+  };
+
+  const toggleSecondary = (id: TopicId) => {
     setForm((f) => ({
       ...f,
       topics: f.topics.includes(id) ? f.topics.filter((x) => x !== id) : [...f.topics, id],
     }));
+    setDirty(true);
+  };
 
   const setLine = (verseIndex: number, lineIndex: number, value: string) => {
+    setDirty(true);
     setForm((f) => ({
       ...f,
       lines: f.lines.map((ls, vi) => (vi === verseIndex ? ls.map((l, li) => (li === lineIndex ? value : l)) : ls)),
@@ -183,6 +214,7 @@ export default function AdminEditScreen() {
   };
 
   const setTranslatedLine = (lang: 'en' | 'de', verseIndex: number, lineIndex: number, value: string) => {
+    setDirty(true);
     const mapLines = (all: string[][]) =>
       all.map((ls, vi) => (vi === verseIndex ? ls.map((l, li) => (li === lineIndex ? value : l)) : ls));
     if (lang === 'en') setForm((f) => ({ ...f, linesEn: mapLines(f.linesEn) }));
@@ -191,6 +223,26 @@ export default function AdminEditScreen() {
 
   const hasEn = Boolean(hymn?.verses_en ?? hymn?.title_en);
   const hasDe = Boolean(hymn?.verses_de ?? hymn?.title_de);
+
+  // Language filter for the verse editor. `showLang` follows the default until
+  // the user pins a choice; a language the hymn does not carry stays hidden.
+  const showLang = (key: 'ar' | 'en' | 'de'): boolean => {
+    if (key === 'en' && !hasEn) return false;
+    if (key === 'de' && !hasDe) return false;
+    if (langChoice) return Boolean(langChoice[key]);
+    if (key === 'ar') return true;
+    if (key === 'en') return lang !== 'de';
+    return lang === 'de';
+  };
+
+  const toggleLang = (key: 'ar' | 'en' | 'de') => {
+    const next = { ar: showLang('ar'), en: showLang('en'), de: showLang('de') };
+    next[key] = !next[key];
+    // Never hide all three: a bare line number would not say which language the
+    // row below it belongs to.
+    if (!next.ar && !next.en && !next.de) next.ar = true;
+    setLangChoice(next);
+  };
 
   const save = () => {
     if (!hymn) return;
@@ -280,12 +332,13 @@ export default function AdminEditScreen() {
     void syncHymnToCloud(hymn.id, patch);
     setMsg(t('admin.saved'));
     setSavedOnce(true);
+    setDirty(false);
   };
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={`${t('common.hymnNumber')} ${hymn.number}`} showBack />
-      <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
+      <ScrollView style={{ flex: 1 }} contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
         <Pressable onPress={() => setExpandedBasic(!expandedBasic)} style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
           <AppText variant="label" color={colors.textMuted} style={{ fontWeight: '700' }}>{t('admin.hymnTitle')} · {expandedBasic ? '−' : '+'}</AppText>
           <MaterialCommunityIcons name={expandedBasic ? 'chevron-up' : 'chevron-down'} size={20} color={colors.textMuted} />
@@ -394,111 +447,108 @@ export default function AdminEditScreen() {
         </Pressable>
         {expandedVerses ? (
         <View>
+          <View style={{ flexDirection: direction.row, flexWrap: 'wrap', gap: spacing.xs, marginBottom: spacing.sm }}>
+            {([
+              { key: 'ar' as const, label: t('admin.langAr') },
+              ...(hasEn ? [{ key: 'en' as const, label: t('common.enShort') }] : []),
+              ...(hasDe ? [{ key: 'de' as const, label: t('common.deShort') }] : []),
+            ]).map((option) => {
+              const selected = showLang(option.key);
+              return (
+                <Pressable
+                  key={option.key}
+                  onPress={() => toggleLang(option.key)}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected }}
+                  style={({ pressed }) => ({
+                    paddingVertical: spacing.xs,
+                    paddingHorizontal: spacing.md,
+                    borderRadius: radius.pill,
+                    borderWidth: 1,
+                    borderColor: selected ? colors.primary : colors.border,
+                    backgroundColor: selected ? colors.primary : 'transparent',
+                    opacity: pressed ? 0.75 : 1,
+                  })}>
+                  <AppText
+                    variant="caption"
+                    color={selected ? colors.onPrimary : colors.text}
+                    style={{ fontWeight: '700' }}>
+                    {option.label}
+                  </AppText>
+                </Pressable>
+              );
+            })}
+          </View>
+
         {hymn.verses.map((verse, i) => (
           <Card key={`${i}-${verse.label}`} style={{ marginBottom: spacing.md, padding: spacing.md }}>
             <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
               ({verse.label}){verse.chorus ? ` · ${hymn.chorus ?? ''}` : ''}
             </AppText>
+            {/* One row per verse line: Arabic on top, its translations right
+                under it — the same pairing the reader shows. */}
             {form.lines[i]?.map((line, j) => (
-              <TextInput
+              <View
                 key={j}
-                value={line}
-                onChangeText={(v) => setLine(i, j, v)}
-                multiline
-                style={[fieldStyle, { marginBottom: spacing.sm, minHeight: 64, textAlignVertical: 'top' }]}
-              />
+                style={{ flexDirection: direction.row, alignItems: 'flex-start', marginBottom: spacing.md }}>
+                <AppText
+                  variant="caption"
+                  color={colors.textMuted}
+                  style={{ width: 20, paddingTop: spacing.md, fontWeight: '700' }}>
+                  {j + 1}
+                </AppText>
+                <View style={{ flex: 1 }}>
+                  {showLang('ar') ? (
+                    <TextInput
+                      value={line}
+                      onChangeText={(v) => setLine(i, j, v)}
+                      multiline
+                      accessibilityLabel={`${t('admin.verses')} ${verse.label} · ${j + 1}`}
+                      style={[fieldStyle, lineField]}
+                    />
+                  ) : null}
+                  {showLang('en') && form.linesEn[i] ? (
+                    <View
+                      style={{ flexDirection: direction.row, alignItems: 'flex-start', marginTop: spacing.xs }}>
+                      <AppText
+                        variant="caption"
+                        color={colors.textMuted}
+                        style={{ width: 26, paddingTop: spacing.sm, fontWeight: '700' }}>
+                        {t('common.enShort')}
+                      </AppText>
+                      <TextInput
+                        value={form.linesEn[i][j] ?? ''}
+                        onChangeText={(v) => setTranslatedLine('en', i, j, v)}
+                        multiline
+                        style={[fieldStyle, translationField, { flex: 1 }]}
+                      />
+                    </View>
+                  ) : null}
+                  {showLang('de') && form.linesDe[i] ? (
+                    <View
+                      style={{ flexDirection: direction.row, alignItems: 'flex-start', marginTop: spacing.xs }}>
+                      <AppText
+                        variant="caption"
+                        color={colors.textMuted}
+                        style={{ width: 26, paddingTop: spacing.sm, fontWeight: '700' }}>
+                        {t('common.deShort')}
+                      </AppText>
+                      <TextInput
+                        value={form.linesDe[i][j] ?? ''}
+                        onChangeText={(v) => setTranslatedLine('de', i, j, v)}
+                        multiline
+                        style={[fieldStyle, translationField, { flex: 1 }]}
+                      />
+                    </View>
+                  ) : null}
+                </View>
+              </View>
             ))}
-            {hasEn && hymn.verses_en?.[i] ? (
-              <>
-                <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
-                  {t('admin.translationEn')}
-                </AppText>
-                {form.linesEn[i]?.map((line, j) => (
-                  <TextInput
-                    key={j}
-                    value={line}
-                    onChangeText={(v) => setTranslatedLine('en', i, j, v)}
-                    multiline
-                    style={[
-                      fieldStyle,
-                      { marginBottom: spacing.sm, minHeight: 64, textAlignVertical: 'top', writingDirection: 'ltr', textAlign: 'left' },
-                    ]}
-                  />
-                ))}
-              </>
-            ) : null}
-            {hasDe && hymn.verses_de?.[i] ? (
-              <>
-                <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
-                  {t('admin.translationDe')}
-                </AppText>
-                {form.linesDe[i]?.map((line, j) => (
-                  <TextInput
-                    key={j}
-                    value={line}
-                    onChangeText={(v) => setTranslatedLine('de', i, j, v)}
-                    multiline
-                    style={[
-                      fieldStyle,
-                      { marginBottom: spacing.sm, minHeight: 64, textAlignVertical: 'top', writingDirection: 'ltr', textAlign: 'left' },
-                    ]}
-                  />
-                ))}
-              </>
-            ) : null}
           </Card>
         ))}
 
         </View>
         ) : null}
-
-        <Pressable
-          onPress={() => set({ verified: !form.verified })}
-          accessibilityRole="switch"
-          accessibilityState={{ checked: form.verified }}
-          android_ripple={{ color: colors.border }}
-          style={({ pressed }) => ({
-            flexDirection: direction.row,
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: spacing.sm,
-            paddingVertical: spacing.md,
-            marginBottom: spacing.sm,
-            borderRadius: radius.pill,
-            borderWidth: 1,
-            borderColor: form.verified ? colors.primary : colors.border,
-            backgroundColor: form.verified ? colors.primary : 'transparent',
-            opacity: pressed ? 0.75 : 1,
-          })}>
-          <MaterialCommunityIcons
-            name={form.verified ? 'check-circle' : 'check-circle-outline'}
-            size={20}
-            color={form.verified ? colors.onPrimary : colors.textMuted}
-          />
-          <AppText
-            variant="label"
-            color={form.verified ? colors.onPrimary : colors.text}
-            style={{ fontWeight: '700' }}>
-            {form.verified ? t('admin.verified') : t('admin.markVerified')}
-          </AppText>
-        </Pressable>
-
-        <Pressable
-          onPress={save}
-          accessibilityRole="button"
-          accessibilityLabel={t('admin.save')}
-          android_ripple={{ color: colors.border }}
-          style={({ pressed }) => ({
-            paddingVertical: spacing.md,
-            borderRadius: radius.pill,
-            backgroundColor: colors.primary,
-            alignItems: 'center',
-            opacity: pressed ? 0.75 : 1,
-          })}>
-          <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-            {t('admin.save')}
-          </AppText>
-        </Pressable>
 
         {msg ? (
           <AppText variant="body" center color={colors.primary} style={{ fontWeight: '700', marginTop: spacing.md }}>
@@ -535,6 +585,79 @@ export default function AdminEditScreen() {
           </AppText>
         </Pressable>
       </ScrollView>
+
+      {/* Sticky bar: on a 20-line hymn the save button used to sit at the very
+          bottom, so saving meant scrolling past everything you just typed. */}
+      <View
+        style={{
+          paddingHorizontal: spacing.lg,
+          paddingTop: spacing.sm,
+          // No safe-area inset here: the tab bar below this screen already
+          // covers it, so adding it again would leave a gap on notched phones.
+          paddingBottom: spacing.sm,
+          borderTopWidth: 1,
+          borderTopColor: colors.border,
+          backgroundColor: colors.surface,
+        }}>
+        {dirty ? (
+          <AppText
+            variant="caption"
+            center
+            color={colors.favorite}
+            style={{ marginBottom: spacing.xs, fontWeight: '700' }}>
+            {t('admin.unsaved')}
+          </AppText>
+        ) : null}
+        <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.sm }}>
+          <Pressable
+            onPress={() => set({ verified: !form.verified })}
+            accessibilityRole="switch"
+            accessibilityState={{ checked: form.verified }}
+            android_ripple={{ color: colors.border }}
+            style={({ pressed }) => ({
+              flexDirection: direction.row,
+              alignItems: 'center',
+              gap: spacing.xs,
+              paddingHorizontal: spacing.md,
+              paddingVertical: spacing.sm,
+              borderRadius: radius.pill,
+              borderWidth: 1,
+              borderColor: form.verified ? colors.primary : colors.border,
+              backgroundColor: form.verified ? colors.primary : 'transparent',
+              opacity: pressed ? 0.75 : 1,
+            })}>
+            <MaterialCommunityIcons
+              name={form.verified ? 'check-circle' : 'check-circle-outline'}
+              size={18}
+              color={form.verified ? colors.onPrimary : colors.textMuted}
+            />
+            <AppText
+              variant="caption"
+              color={form.verified ? colors.onPrimary : colors.text}
+              style={{ fontWeight: '700' }}>
+              {form.verified ? t('admin.verified') : t('admin.markVerified')}
+            </AppText>
+          </Pressable>
+
+          <Pressable
+            onPress={save}
+            accessibilityRole="button"
+            accessibilityLabel={t('admin.save')}
+            android_ripple={{ color: colors.border }}
+            style={({ pressed }) => ({
+              flex: 1,
+              paddingVertical: spacing.sm,
+              borderRadius: radius.pill,
+              backgroundColor: colors.primary,
+              alignItems: 'center',
+              opacity: pressed ? 0.75 : 1,
+            })}>
+            <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
+              {t('admin.save')}
+            </AppText>
+          </Pressable>
+        </View>
+      </View>
     </View>
   );
 }

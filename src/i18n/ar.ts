@@ -96,6 +96,8 @@ admin: {
     tabSecurity: 'الأمان',
     feedbackTitle: 'إدارة التقييمات',
     statusDraft: 'مسودة',
+    langAr: 'عربي',
+    unsaved: 'تغييرات غير محفوظة',
     filterReviewed: 'مراجَعة',
     securitySignInTitle: 'التحكم عبر تسجيل الدخول',
     securitySignInHint:
