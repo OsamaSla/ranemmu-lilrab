@@ -5,7 +5,8 @@ repo** — it exists so `npm ci`, live Firebase probes and file-by-file reading
 are not repeated every session.
 
 - **Last verified:** 2026-10-26, commits `b320dab` (lyric search + lazy
-  chunks) and `63f89a0` (regenerated corpus), `main`, live site checked.
+  chunks), `63f89a0` (regenerated corpus) and `4d88940` (editing gate), `main`;
+  the gate was checked on a local static export, not yet deployed.
 - **Update rule:** see [§13](#13-general-rule-for-any-project). Touch only the
   sections a change affected and bump "Last verified".
 - Speak Arabic with the owner (Osama). Code comments and commits are English.
@@ -61,10 +62,12 @@ src/data/           corpus + cloud: loader (sync reads), chunks (lazy import),
                     generated-chunks (from assets/hymns/full), types, normalize,
                     search, topics, meter, media, firebase, liveSync, publish,
                     feedback
-src/store/          zustand: settings (locale/theme/font/pin), overrides
+src/store/          zustand: settings (locale/theme/font/pin, persisted),
+                    adminGate (session unlock for the legacy PIN), overrides
                     (local admin edits), remote (downloaded live docs),
                     session (Firebase auth user), library (sort/filters)
-src/hooks/          useT (translate + direction), useTheme, useGoBack
+src/hooks/          useT (translate + direction), useTheme, useCanEdit (editing
+                    gate), useGoBack
 src/i18n/           ar.ts (nested, source of truth) + en.ts/de.ts (flat)
 src/theme/          tokens.ts (colors light/dark, spacing, radius), fonts.ts
 assets/hymns/       index.json (summaries, bundled statically) + full/NNN.json
@@ -180,6 +183,12 @@ public web API key are fine; test writes belong in the emulator.
   `admin.tsx`, "contact us" in `more.tsx`, clear-recents in `settings.tsx`.
 - React Compiler rules: no setState synchronously in `useEffect`; derive with
   `useMemo`; effects for external reads only, with a `cancelled` flag.
+- **Editing is gated by `useCanEdit()`** (`src/hooks/useCanEdit.ts`): a signed-in
+  admin when Firebase is configured, otherwise the session PIN unlock in
+  `store/adminGate` (set from `admin.tsx`). Every entry point must call it —
+  the reader's edit button in `ReaderSettingsModal`, the `admin-edit` and
+  `admin-add` routes (URL-reachable, so the route itself is gated, not just the
+  button). Adding another editor without this hook re-opens the old hole.
 
 ## 8. App ratings ("تقييم التطبيق") — current design
 
@@ -254,10 +263,11 @@ public web API key are fine; test writes belong in the emulator.
   in two sections with match highlights (`HymnRow highlight`,
   `LyricsMatchRow`). Cap: 2 lines per hymn, 60 lyric rows. The reader's jump
   bar still only jumps by number.
-- **`admin-edit.tsx` has no auth gate**, and `ReaderSettingsModal` shows an
-  "تحرير الترنيمة" button to every reader. The PIN only gates `admin.tsx`;
-  overrides are local-first, so any visitor can edit text on their device and
-  see it persisted (Firestore writes still require auth).
+- Editing UI is gated by `useCanEdit()`, but the **on-device** override store is
+  still writable from devtools/localStorage, and the PIN defaults to `1234`
+  (`store/settings.ts`). Only Firestore writes are actually enforced — by rules,
+  against a signed-in admin. Do not present the PIN or the hidden button as real
+  security.
 - **Web bundle baseline after the lazy-chunk change** (`npx expo export -p web`,
   2026-10-26): entry `entry-*.js` 3.14 MB raw / 0.79 MB gzip, plus 15 chunk
   files (5.85 MB raw together) that load on demand; 16 JS files, 2872 HTML
@@ -283,13 +293,14 @@ public web API key are fine; test writes belong in the emulator.
 1. `npx tsc --noEmit` silent; `npx expo lint` no errors.
 2. i18n keys added for ar + en + de when the UI shows new text.
 3. Web-safe feedback (no bare `Alert` for user-visible outcomes).
-4. Firestore changes: rules updated **and** deployment step stated to the owner.
-5. Live verification: Actions run green + new `entry-*.js` hash on
+4. New editing UI calls `useCanEdit()`; routes as well as buttons.
+5. Firestore changes: rules updated **and** deployment step stated to the owner.
+6. Live verification: Actions run green + new `entry-*.js` hash on
    https://OsamaSla.github.io/ranemmu-lilrab/.
-6. Corpus or content changes: `npm run build:corpus` run, assets +
+7. Corpus or content changes: `npm run build:corpus` run, assets +
    `generated-chunks.ts` committed, and the `mediaUrl` delta checked by id
    against `HEAD` (§10.8) so curated links are not silently dropped.
-7. Update this file (§13).
+8. Update this file (§13).
 
 ---
 
