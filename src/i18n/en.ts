@@ -39,6 +39,9 @@ export const en: PartialDictionary = {
   'search.noResults': 'No results',
   'search.noResultsHint': 'Try another word, or search by hymn number',
   'search.resultCount': 'results',
+  'search.inTitles': 'In titles',
+  'search.inLyrics': 'In hymn lyrics',
+  'search.lyricsLoading': 'Loading hymn lyrics for search...',
 
   'reader.settings': 'Text Settings',
   'reader.info': 'Hymn Info',

@@ -12,7 +12,7 @@ import { useRouter } from 'expo-router';
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
-import { getCorpus, getSummaries } from '../../data/loader';
+import { ensureAllChunks, getCorpus, getSummaries } from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
 import { isFirebaseConfigured } from '../../data/firebase';
 import { deleteHymnFromCloud, publishOverrides } from '../../data/publish';
@@ -289,6 +289,24 @@ export default function AdminScreen() {
   // on-device PIN gate applies and everything stays local-only.
   const canEdit = isFirebaseConfigured ? !!sessionUser : unlocked;
 
+  // The review queue and its global search need every hymn body, which lives
+  // in lazily imported chunks. Load them once the admin unlocks the area.
+  const [chunksVersion, setChunksVersion] = useState(0);
+  useEffect(() => {
+    if (!canEdit) return;
+    let active = true;
+    ensureAllChunks()
+      .then(() => {
+        if (active) setChunksVersion((n) => n + 1);
+      })
+      .catch(() => {
+        /* The queue simply lists the chunks that did load. */
+      });
+    return () => {
+      active = false;
+    };
+  }, [canEdit]);
+
   // Reads happen inside the async body on purpose: setting state before the
   // first await would render synchronously from the effect. The token lets
   // the refresh button and the filter chips re-run this same load.
@@ -361,7 +379,7 @@ export default function AdminScreen() {
       }));
     return { items, total: all.length, verified };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [overrides, remoteVersion, reviewLang, reviewFilter, query]);
+  }, [overrides, remoteVersion, reviewLang, reviewFilter, query, chunksVersion]);
 
   const pendingCount = Object.keys(overrides ?? {}).length;
 

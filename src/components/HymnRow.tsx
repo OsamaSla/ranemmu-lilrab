@@ -5,10 +5,11 @@
  * because it has to match the number printed in the book the reader is holding.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Pressable, View } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
 import { AppText } from './AppText';
 import { Card } from './Card';
+import { highlightQuery } from '../data/search';
 import type { HymnSummary } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -20,14 +21,24 @@ interface HymnRowProps {
   onPress: () => void;
   /** Secondary line under the title, e.g. the metre or "read 2h ago". */
   subtitle?: string;
+  /** Query whose matches are highlighted inside the title. */
+  highlight?: string;
   showStar?: boolean;
   onToggleFavorite?: () => void;
 }
 
-export function HymnRow({ hymn, onPress, subtitle, showStar = true, onToggleFavorite }: HymnRowProps) {
+export function HymnRow({
+  hymn,
+  onPress,
+  subtitle,
+  highlight,
+  showStar = true,
+  onToggleFavorite,
+}: HymnRowProps) {
   const { colors } = useTheme();
   const { direction } = useT();
   const favorite = useLibrary((s) => s.favorites.includes(hymn.id));
+  const titleRuns = highlight ? highlightQuery(hymn.title, highlight) : null;
 
   const toggle = onToggleFavorite ?? (() => useLibrary.getState().toggleFavorite(hymn.id));
 
@@ -65,7 +76,19 @@ export function HymnRow({ hymn, onPress, subtitle, showStar = true, onToggleFavo
 
             <View style={{ flex: 1, paddingHorizontal: spacing.md }}>
               <AppText variant="body" numberOfLines={2}>
-                {hymn.title}
+                {titleRuns
+                  ? titleRuns.map((run, index) =>
+                      run.highlighted ? (
+                        <Text
+                          key={index}
+                          style={{ backgroundColor: colors.primary, color: colors.onPrimary }}>
+                          {run.text}
+                        </Text>
+                      ) : (
+                        run.text
+                      ),
+                    )
+                  : hymn.title}
               </AppText>
               {subtitle ? (
                 <AppText variant="caption" color={colors.textMuted} numberOfLines={1}>

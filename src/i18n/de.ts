@@ -44,6 +44,9 @@ export const de: PartialDictionary = {
   'search.noResults': 'Keine Ergebnisse',
   'search.noResultsHint': 'Versuche ein anderes Wort oder suche nach der Liednummer',
   'search.resultCount': 'Ergebnisse',
+  'search.inTitles': 'In Titeln',
+  'search.inLyrics': 'In Liedtexten',
+  'search.lyricsLoading': 'Liedtexte werden zum Suchen geladen...',
 
   'reader.settings': 'Texteinstellungen',
   'reader.info': 'Liedinfo',

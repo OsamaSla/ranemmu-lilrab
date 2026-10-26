@@ -198,6 +198,26 @@ export function highlight(
 }
 
 /**
+ * Locate `query` inside a single string (a title, say) and slice it for
+ * highlighting. Normalisation maps the match back to the printed characters,
+ * so typing "نرنم" highlights "نَرْنَم" in place. Returns null when absent.
+ */
+export function highlightQuery(
+  text: string,
+  query: string,
+): { text: string; highlighted: boolean }[] | null {
+  const needle = normalize(query).text;
+  if (needle.length === 0) return null;
+
+  const haystack = normalize(text);
+  const at = haystack.text.indexOf(needle);
+  if (at === -1) return null;
+
+  const end = at + needle.length;
+  return highlight(text, haystack.origin[at], (haystack.origin[end - 1] ?? at) + 1);
+}
+
+/**
  * Rank sibling hymns for the "similar hymns" view by shared metre
  * (مقياس الكلام). The chorus fallback exists only for hymns that carry no
  * metre at all: without that guard it would flood every result, since nearly

@@ -13,7 +13,7 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { TopicPicker } from '../../components/TopicPicker';
-import { getSummaries, getHymn } from '../../data/loader';
+import { getSummaries } from '../../data/loader';
 import { syncHymnToCloud } from '../../data/liveSync';
 import { isValidMediaUrl } from '../../data/media';
 import type { TopicId } from '../../data/topics';
@@ -113,10 +113,6 @@ export default function AdminAddScreen() {
       return;
     }
     if (summaries.find((s) => s.number === form.number)) {
-      setMsg(t('admin.errExists'));
-      return;
-    }
-    if (getHymn(String(form.number))) {
       setMsg(t('admin.errExists'));
       return;
     }

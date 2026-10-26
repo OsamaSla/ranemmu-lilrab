@@ -52,6 +52,9 @@ export const ar = {
     noResults: 'لا توجد نتائج',
     noResultsHint: 'جرّب كلمة أخرى أو ابحث برقم الترنيمة',
     resultCount: 'نتيجة',
+    inTitles: 'في العناوين',
+    inLyrics: 'في كلمات الترنيمات',
+    lyricsLoading: 'جارٍ تحميل كلمات الترنيمات للبحث...',
   },
 
   reader: {

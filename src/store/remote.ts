@@ -10,7 +10,7 @@
 import { create } from 'zustand';
 
 import type { Hymn, HymnSummary } from '../data/types';
-import { HYMN_CHUNKS } from '../data/generated-chunks';
+import { bundledHymn, isBundledId } from '../data/chunks';
 
 /** Text-level fields synced from Firestore. Identity fields stay local. */
 const SYNCED_FIELDS = [
@@ -36,13 +36,9 @@ const SYNCED_FIELDS = [
 
 const same = (a: unknown, b: unknown): boolean => JSON.stringify(a) === JSON.stringify(b);
 
-/** Bundled record for diffing, or undefined for remote-only hymns. */
+/** Bundled record for diffing, or undefined for remote-only/unloaded hymns. */
 function bundledById(id: string): Hymn | undefined {
-  for (const chunk of Object.values(HYMN_CHUNKS)) {
-    const found = (chunk as Hymn[]).find((h) => h.id === id);
-    if (found) return found;
-  }
-  return undefined;
+  return bundledHymn(id);
 }
 
 /** A patch/new record complete enough to stand alone (number+title+verses). */
@@ -84,7 +80,11 @@ export const useRemote = create<RemoteState>()((set) => ({
             }
           }
           next = Object.keys(diff).length > 0 ? diff : null;
-        } else if (isFullDoc(data)) {
+        } else if (isBundledId(id) || isFullDoc(data)) {
+          // A bundled hymn whose chunk has not been imported yet cannot be
+          // diffed, so its whole cloud record is kept as the patch; merging
+          // it over the chunk later still yields the cloud text. Remote-only
+          // hymns take the same path.
           const { updatedAt: _drop, ...rest } = data;
           next = { ...(rest as Partial<Hymn>), book: ((data.book as string) ?? 'main') as Hymn['book'] };
         }
@@ -109,7 +109,7 @@ export function getRemoteFullDocs(): Hymn[] {
   const out: Hymn[] = [];
   const patches = useRemote.getState().patches;
   for (const [id, patch] of Object.entries(patches)) {
-    if (bundledById(id) || !isFullDoc(patch as Record<string, unknown>)) continue;
+    if (isBundledId(id) || !isFullDoc(patch as Record<string, unknown>)) continue;
     out.push({
       ...(patch as Hymn),
       id,

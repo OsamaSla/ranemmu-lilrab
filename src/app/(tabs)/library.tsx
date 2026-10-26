@@ -6,12 +6,13 @@
  * A SectionList keeps header pinning and large lists efficient; with the bundled
  * corpus the data is already in memory, so there is no paging to manage.
  *
- * The search field filters this same list (by number or words, diacritic- and
- * tatweel-insensitive) so no separate search screen is needed. It can be
- * prefilled from the reader's jump bar via `?q=`.
+ * The search field filters this same list. Digits match the printed number;
+ * free text matches titles immediately and, once the lazily imported chunks
+ * are in memory, the lyrics too — with the matched span highlighted in place.
+ * It can be prefilled from the reader's jump bar via `?q=`.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { Pressable, SectionList, TextInput, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
@@ -20,10 +21,19 @@ import { AppText } from '../../components/AppText';
 import { EmptyState } from '../../components/EmptyState';
 import { FilterSelect } from '../../components/FilterSelect';
 import { HymnRow } from '../../components/HymnRow';
-import { getBooks, getSummaries, getTopicCounts } from '../../data/loader';
+import { LyricsMatchRow } from '../../components/LyricsMatchRow';
+import {
+  areAllChunksLoaded,
+  ensureAllChunks,
+  getBooks,
+  getCorpus,
+  getSummaries,
+  getTopicCounts,
+} from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
+import { searchHymns } from '../../data/search';
 import { isTopicId, matchesTopic, TOPIC_COLORS, TOPIC_IDS, type TopicId } from '../../data/topics';
-import type { BookId, HymnSummary } from '../../data/types';
+import type { BookId, HymnSummary, SearchMatch } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
@@ -34,6 +44,12 @@ import { radius, spacing } from '../../theme/tokens';
 /** Letter of the alphabet used to bucket the alphabetical sort. */
 function firstLetter(text: string): string {
   return (text.trim().charAt(0) || '•').toUpperCase();
+}
+
+/** One list row: a plain hymn, or a hymn reached through a lyric hit. */
+interface LibraryRow {
+  hymn: HymnSummary;
+  match?: SearchMatch;
 }
 
 export default function LibraryScreen() {
@@ -84,51 +100,106 @@ export default function LibraryScreen() {
     [summaries, topic],
   );
 
-  // In-list search: digits match the hymn number (exact first, then prefix),
-  // anything else matches the normalised title.
+  // In-list search. A number stays a cheap summary lookup (no chunk import).
+  // Free text matches titles straight away from the summaries, then the
+  // lyrics once the chunks are loaded.
   const trimmed = query.trim();
-  const filtered = useMemo(() => {
-    const needle = normalizeText(trimmed);
+  const needle = normalizeText(trimmed);
+  const isNumberQuery = /^\d+$/.test(needle);
+  const wantsLyrics = needle.length >= 2 && !isNumberQuery;
+
+  const titleMatches = useMemo(() => {
     if (!needle) return topicFiltered;
-    if (/^\d+$/.test(needle)) {
+    if (isNumberQuery) {
       const digits = needle.replace(/^0+(?=\d)/, '');
       const exact = topicFiltered.filter((s) => String(s.number) === digits);
       if (exact.length > 0) return exact;
       return topicFiltered.filter((s) => String(s.number).startsWith(digits));
     }
     return topicFiltered.filter((s) => normalizeText(s.title).includes(needle));
-  }, [topicFiltered, trimmed]);
+  }, [topicFiltered, needle, isNumberQuery]);
 
-  const sections = useMemo(() => {
+  // Hymn bodies are lazily imported, so the first text query pulls every
+  // chunk (full-text search needs them all) and re-renders when they land —
+  // `lyricsReady` flipping to true is what recomputes the results below.
+  const [, setChunksVersion] = useState(0);
+  useEffect(() => {
+    if (!wantsLyrics) return;
+    let active = true;
+    ensureAllChunks()
+      .then(() => {
+        if (active) setChunksVersion((n) => n + 1);
+      })
+      .catch(() => {
+        /* Leave the title results in place if a chunk fails to load. */
+      });
+    return () => {
+      active = false;
+    };
+  }, [wantsLyrics]);
+
+  const lyricsReady = areAllChunksLoaded();
+  const lyricsLoading = wantsLyrics && !lyricsReady;
+
+  // Lyrics hits, capped at two lines per hymn so one hymn cannot flood the
+  // list. Hymns already listed as title matches are not repeated here.
+  const lyricMatches = useMemo(() => {
+    if (!wantsLyrics || !lyricsReady) return [];
+    const titleIds = new Set(titleMatches.map((s) => s.id));
+    const perHymn = new Map<string, SearchMatch[]>();
+    for (const hit of searchHymns(getCorpus(book), trimmed, 400)) {
+      if (hit.inTitle || titleIds.has(hit.hymn.id)) continue;
+      if (topic && !matchesTopic(hit.hymn, topic)) continue;
+      const bucket = perHymn.get(hit.hymn.id);
+      if (!bucket) perHymn.set(hit.hymn.id, [hit]);
+      else if (bucket.length < 2) bucket.push(hit);
+    }
+    return [...perHymn.values()].flat().slice(0, 60);
+  }, [wantsLyrics, lyricsReady, trimmed, titleMatches, topic, book]);
+
+  const sections = useMemo<{ key: string; label: string; data: LibraryRow[] }[]>(() => {
     if (trimmed) {
-      return [
-        {
-          key: 'filter',
-          label: `${filtered.length} ${t('search.resultCount')}`,
-          data: filtered,
-        },
-      ];
+      const rows: { key: string; label: string; data: LibraryRow[] }[] = [];
+      if (titleMatches.length > 0) {
+        rows.push({
+          key: 'titles',
+          label: isNumberQuery
+            ? `${titleMatches.length} ${t('search.resultCount')}`
+            : `${t('search.inTitles')} · ${titleMatches.length}`,
+          data: titleMatches.map((hymn) => ({ hymn })),
+        });
+      }
+      if (lyricMatches.length > 0) {
+        rows.push({
+          key: 'lyrics',
+          label: `${t('search.inLyrics')} · ${lyricMatches.length}`,
+          data: lyricMatches.map((match) => ({ hymn: match.hymn, match })),
+        });
+      }
+      return rows;
     }
     if (order === 'number') {
       return [
         {
           key: 'number',
           label: topic ? t(`topic.${topic}`) : t('library.byNumber'),
-          data: [...topicFiltered].sort((a, b) => a.number - b.number),
+          data: [...topicFiltered]
+            .sort((a, b) => a.number - b.number)
+            .map((hymn) => ({ hymn })),
         },
       ];
     }
 
-    const buckets = new Map<string, HymnSummary[]>();
+    const buckets = new Map<string, LibraryRow[]>();
     for (const hymn of [...topicFiltered].sort((a, b) => a.title.localeCompare(b.title, 'ar'))) {
       const key = firstLetter(hymn.title);
       const bucket = buckets.get(key);
-      if (bucket) bucket.push(hymn);
-      else buckets.set(key, [hymn]);
+      if (bucket) bucket.push({ hymn });
+      else buckets.set(key, [{ hymn }]);
     }
 
     return [...buckets.entries()].map(([key, data]) => ({ key, label: key, data }));
-  }, [order, topic, topicFiltered, filtered, trimmed, t]);
+  }, [order, topic, topicFiltered, titleMatches, lyricMatches, isNumberQuery, trimmed, t]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
@@ -264,17 +335,40 @@ export default function LibraryScreen() {
 
       <SectionList
         sections={sections}
-        keyExtractor={(hymn) => hymn.id}
+        keyExtractor={(item) =>
+          item.match
+            ? `${item.hymn.id}:${item.match.verseIndex}:${item.match.lineIndex}:${item.match.line}`
+            : item.hymn.id
+        }
         stickySectionHeadersEnabled={order === 'alpha' && !trimmed}
         keyboardShouldPersistTaps="handled"
         style={{ marginTop: spacing.sm }}
         contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.xxl }}
         ListEmptyComponent={
-          <EmptyState
-            icon={trimmed ? 'text-search' : 'playlist-music-outline'}
-            title={trimmed ? t('search.noResults') : t('library.title')}
-            hint={trimmed ? t('search.noResultsHint') : undefined}
-          />
+          lyricsLoading ? (
+            <View style={{ alignItems: 'center', paddingVertical: spacing.xxl * 2 }}>
+              <AppText variant="body" color={colors.textMuted} center>
+                {t('search.lyricsLoading')}
+              </AppText>
+            </View>
+          ) : (
+            <EmptyState
+              icon={trimmed ? 'text-search' : 'playlist-music-outline'}
+              title={trimmed ? t('search.noResults') : t('library.title')}
+              hint={trimmed ? t('search.noResultsHint') : undefined}
+            />
+          )
+        }
+        ListFooterComponent={
+          lyricsLoading && titleMatches.length > 0 ? (
+            <AppText
+              variant="caption"
+              color={colors.textMuted}
+              center
+              style={{ paddingVertical: spacing.lg }}>
+              {t('search.lyricsLoading')}
+            </AppText>
+          ) : null
         }
         renderSectionHeader={({ section }) => (
           <View
@@ -284,21 +378,39 @@ export default function LibraryScreen() {
               backgroundColor: colors.canvas,
             }}>
             <AppText variant="label" color={colors.textMuted} style={{ fontWeight: '700' }}>
-              {order === 'alpha' ? section.label : section.label}
+              {section.label}
             </AppText>
           </View>
         )}
-        renderItem={({ item }) => (
-          <HymnRow
-            hymn={item}
-            subtitle={item.primaryTopic ? t(`topic.${item.primaryTopic}` as const) : undefined}
-            onPress={() => {
-              // Returning lands on a clean search field, ready for lookup.
-              setQuery('');
-              router.push(`/hymn/${item.id}`);
-            }}
-          />
-        )}
+        renderItem={({ item }) => {
+          const { hymn, match } = item;
+          if (match) {
+            return (
+              <LyricsMatchRow
+                match={match}
+                onPress={() => {
+                  setQuery('');
+                  router.push({
+                    pathname: '/hymn/[id]',
+                    params: { id: hymn.id, verse: String(match.verseIndex) },
+                  });
+                }}
+              />
+            );
+          }
+          return (
+            <HymnRow
+              hymn={hymn}
+              highlight={trimmed || undefined}
+              subtitle={hymn.primaryTopic ? t(`topic.${hymn.primaryTopic}` as const) : undefined}
+              onPress={() => {
+                // Returning lands on a clean search field, ready for lookup.
+                setQuery('');
+                router.push(`/hymn/${hymn.id}`);
+              }}
+            />
+          );
+        }}
         SectionSeparatorComponent={() => <View style={{ height: spacing.xs }} />}
       />
     </View>

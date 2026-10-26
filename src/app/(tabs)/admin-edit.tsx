@@ -7,7 +7,7 @@
  * line counts to the bundled record.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Pressable, ScrollView, TextInput, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
@@ -16,7 +16,7 @@ import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { EmptyState } from '../../components/EmptyState';
 import { TopicPicker } from '../../components/TopicPicker';
-import { getHymn } from '../../data/loader';
+import { getHymn, ensureHymn, isHymnPending } from '../../data/loader';
 import { syncHymnToCloud } from '../../data/liveSync';
 import { isValidMediaUrl } from '../../data/media';
 import type { TopicId } from '../../data/topics';
@@ -61,6 +61,9 @@ export default function AdminEditScreen() {
     h
       ? {
           key,
+          // Which hymn record the form was filled from. Empty until the
+          // lazily imported chunk lands, which is what triggers the reset.
+          sourceId: h.id,
           verified: h.translationStatus === 'VERIFIED',
           title: h.title,
           author: h.author ?? '',
@@ -78,7 +81,7 @@ export default function AdminEditScreen() {
           chorus_de: h.chorus_de ?? '',
           linesDe: h.verses_de ? h.verses_de.map((v) => [...v.lines]) : [],
         }
-      : { key, ...blank };
+      : { key, sourceId: '', ...blank };
   // Lazy init so the first open already shows the hymn's current words
   // (previously the form stayed blank until switching to another hymn).
   const [form, setForm] = useState(() => toForm(id, hymn));
@@ -91,7 +94,26 @@ export default function AdminEditScreen() {
   const [expandedBasic, setExpandedBasic] = useState(true);
   const [expandedTopics, setExpandedTopics] = useState(true);
   const [expandedVerses, setExpandedVerses] = useState(true);
-  if (form.key !== id) {
+  // The hymn body is imported on demand; bump this once it lands so the form
+  // (and the not-found fallback) re-reads getHymn().
+  const [, setChunkVersion] = useState(0);
+  const pendingChunk = typeof id === 'string' && isHymnPending(id);
+  useEffect(() => {
+    if (typeof id !== 'string') return;
+    let active = true;
+    ensureHymn(id)
+      .then(() => {
+        if (active) setChunkVersion((n) => n + 1);
+      })
+      .catch(() => {
+        /* Falls through to the not-found state below. */
+      });
+    return () => {
+      active = false;
+    };
+  }, [id]);
+
+  if (form.key !== id || form.sourceId !== (hymn?.id ?? '')) {
     setForm(toForm(id, hymn));
     setSavedOnce(false);
   }
@@ -100,7 +122,15 @@ export default function AdminEditScreen() {
     return (
       <View style={{ flex: 1, backgroundColor: colors.canvas }}>
         <AppBar title={t('admin.editHymn')} showBack />
-        <EmptyState icon="book-remove-outline" title={t('admin.notFound')} />
+        {pendingChunk ? (
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: spacing.xl }}>
+            <AppText variant="body" color={colors.textMuted} center>
+              {t('common.loading')}
+            </AppText>
+          </View>
+        ) : (
+          <EmptyState icon="book-remove-outline" title={t('admin.notFound')} />
+        )}
       </View>
     );
   }

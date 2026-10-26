@@ -1,16 +1,23 @@
 /**
  * Access to the bundled hymn corpus.
  *
- * Everything is bundled, so lookups are synchronous — there is no I/O to await
- * and the search screen can run a query on its first keystroke. The cost is
- * bundle size, which `npm run build:corpus` keeps in check by chunking.
+ * Summaries are bundled statically (they are small and every list needs
+ * them); the full hymn bodies live in chunks that are imported on demand by
+ * ./chunks. Reads stay synchronous — callers await the chunk first, then the
+ * normal `getHymn()` / `getCorpus()` lookups work exactly as before.
  */
-import { HYMN_CHUNKS, HYMN_CHUNK_COUNT } from './generated-chunks';
+import {
+  bundledHymn,
+  loadedChunksInOrder,
+  setChunkLoadedListener,
+} from './chunks';
 import { BOOKS } from './types';
 import type { BookId, Hymn, HymnSummary } from './types';
 import { matchesTopic, type TopicId } from './topics';
 import { getRemoteFullDocs, getRemoteSummaries, isFullDoc, useRemote } from '../store/remote';
 import { invalidateSearchCache } from './search';
+
+export { areAllChunksLoaded, ensureAllChunks, ensureHymn, isHymnPending } from './chunks';
 
 const SUMMARIES = require('../../assets/hymns/index.json') as HymnSummary[];
 
@@ -42,6 +49,9 @@ export function refreshOverlaidCorpus(): void {
   byId.clear();
   invalidateSearchCache();
 }
+
+/** A freshly imported chunk invalidates the merged views and search index. */
+setChunkLoadedListener(refreshOverlaidCorpus);
 
 /** Books present in the bundled corpus, in display order, with hymn counts. */
 export function getBooks(): { id: BookId; count: number }[] {
@@ -179,18 +189,16 @@ export function getNeighbours(id: string): { previous?: HymnSummary; next?: Hymn
 let corpus: Hymn[] | null = null;
 
 /**
- * The full corpus, flattened from its chunks. Built once and cached, since
- * search needs every line and the reader needs its own record.
+ * The full corpus, flattened from the chunks that are already loaded. Built
+ * once and cached, since search needs every line and the reader needs its own
+ * record. Call `ensureAllChunks()` first for a complete corpus.
  */
 export function getCorpus(book?: BookId): Hymn[] {
   if (corpus && !book) return corpus;
 
   const overlays = overlayReader();
   const all: Hymn[] = [];
-  for (let i = 0; i < HYMN_CHUNK_COUNT; i += 1) {
-    const chunk = HYMN_CHUNKS[i];
-    if (chunk) all.push(...chunk);
-  }
+  for (const chunk of loadedChunksInOrder()) all.push(...chunk);
 
   const merged = all.map((hymn) => {
     const patch = mergedPatch(hymn.id);
@@ -231,14 +239,12 @@ export function getHymn(id: string): Hymn | undefined {
   // Tombstoned hymns stay hidden everywhere (reader shows "not found").
   if (deletedSet().has(id)) return undefined;
 
-  for (const chunk of Object.values(HYMN_CHUNKS)) {
-    const found = chunk.find((hymn) => hymn.id === id);
-    if (found) {
-      const patch = mergedPatch(id);
-      const merged = patch ? { ...found, ...patch } : found;
-      byId.set(id, merged);
-      return merged;
-    }
+  const found = bundledHymn(id);
+  if (found) {
+    const patch = mergedPatch(id);
+    const merged = patch ? { ...found, ...patch } : found;
+    byId.set(id, merged);
+    return merged;
   }
   // Hymns added from another device after this bundle shipped.
   const remote = getRemoteFullDocs().find((hymn) => hymn.id === id);

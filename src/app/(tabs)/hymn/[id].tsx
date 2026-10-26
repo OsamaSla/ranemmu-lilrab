@@ -32,7 +32,7 @@ import { IconButton } from '../../../components/IconButton';
 import { MeterText } from '../../../components/MeterText';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
 import type { SegmentOption } from '../../../components/SegmentedControl';
-import { getCorpus, getHymn, getNeighbours, getSummaries } from '../../../data/loader';
+import { ensureHymn, getHymn, getNeighbours, getSummaries, isHymnPending } from '../../../data/loader';
 import { displayMeter } from '../../../data/meterFamilies';
 import { allTopicsOf } from '../../../data/topics';
 import { findSimilar } from '../../../data/search';
@@ -141,21 +141,33 @@ export default function ReaderScreen() {
       hymn
         ? findSimilar(
             hymn,
-            getCorpus()
-              .filter((h) => (h.book ?? 'main') === (hymn.book ?? 'main'))
-              .map((h) => ({
-                id: h.id,
-                book: h.book ?? 'main',
-                number: h.number,
-                title: h.title,
-                meter: h.meter,
-                hasChorus: h.verses.some((v) => v.chorus),
-              })),
+            getSummaries().filter((h) => (h.book ?? 'main') === (hymn.book ?? 'main')),
             5,
           )
         : [],
     [hymn],
   );
+
+  // The hymn body lives in a lazily imported chunk: show a loading shell
+  // until it lands, then bump state so getHymn() sees the new chunk. During
+  // a static web export this shell is also what the pre-rendered page shows
+  // until the client hydrates.
+  const pendingChunk = id !== undefined && isHymnPending(id);
+  const [, setChunkVersion] = useState(0);
+  useEffect(() => {
+    if (!id) return;
+    let active = true;
+    ensureHymn(id)
+      .then(() => {
+        if (active) setChunkVersion((n) => n + 1);
+      })
+      .catch(() => {
+        /* Falls through to the not-found state below. */
+      });
+    return () => {
+      active = false;
+    };
+  }, [id]);
 
   // Per-hymn translation view. Arabic is always the master text; a
   // translation renders line-by-line beside it and never replaces it.
@@ -256,7 +268,15 @@ export default function ReaderScreen() {
             onPress={goBack}
           />
         </View>
-        <EmptyState icon="book-remove-outline" title={t('common.notFound')} />
+        {pendingChunk ? (
+          <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: spacing.xl }}>
+            <AppText variant="body" color={colors.textMuted} center>
+              {t('common.loading')}
+            </AppText>
+          </View>
+        ) : (
+          <EmptyState icon="book-remove-outline" title={t('common.notFound')} />
+        )}
       </View>
     );
   }
