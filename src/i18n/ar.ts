@@ -89,6 +89,8 @@ export const ar = {
 
 admin: {
     title: 'الإدارة',
+    feedbackTitle: 'إدارة التقييمات',
+    feedbackOpen: 'فتح التقييمات',
     pinTitle: 'أدخل رمز الإدارة',
     pinPlaceholder: 'الرمز',
     unlock: 'فتح',

@@ -16,14 +16,6 @@ import { ensureAllChunks, getCorpus, getSummaries } from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
 import { isFirebaseConfigured } from '../../data/firebase';
 import { deleteHymnFromCloud, publishOverrides } from '../../data/publish';
-import {
-  fetchFeedbacks,
-  updateFeedbackStatus,
-  updateFeedbackNotes,
-  deleteFeedback,
-  type Feedback,
-  type FeedbackStatus,
-} from '../../data/feedback';
 import { useT } from '../../hooks/useT';
 import { useCanEdit } from '../../hooks/useCanEdit';
 import { useTheme } from '../../hooks/useTheme';
@@ -40,38 +32,6 @@ function toNumber(raw: string): number | null {
   if (!/^\d+$/.test(digits)) return null;
   const n = Number(digits);
   return Number.isInteger(n) && n >= 1 ? n : null;
-}
-
-const FEEDBACK_FILTERS: { value: FeedbackStatus | 'all'; label: string }[] = [
-  { value: 'all', label: 'الكل' },
-  { value: 'pending', label: 'جديدة' },
-  { value: 'in_progress', label: 'قيد المعالجة' },
-  { value: 'completed', label: 'مكتملة' },
-];
-
-const FEEDBACK_STATUS_LABEL: Record<FeedbackStatus, string> = {
-  pending: 'جديدة',
-  in_progress: 'قيد المعالجة',
-  completed: 'مكتملة',
-};
-
-const FEEDBACK_CATEGORY_LABEL: Record<string, string> = {
-  missing_hymn: 'اقتراح ترنيمة',
-  translation: 'الترجمة',
-  bug: 'مشكلة تقنية',
-  other: 'أخرى',
-};
-
-/** Firestore Timestamp → localized date/time, or '' when not stamped yet. */
-function formatFeedbackDate(value: unknown): string {
-  const toMillis = (value as { toMillis?: () => number } | null | undefined)?.toMillis;
-  const millis = typeof toMillis === 'function' ? toMillis.call(value) : 0;
-  if (!millis) return '';
-  const date = new Date(millis);
-  return `${date.toLocaleDateString('ar-EG')} ${date.toLocaleTimeString('ar-EG', {
-    hour: '2-digit',
-    minute: '2-digit',
-  })}`;
 }
 
 export default function AdminScreen() {
@@ -101,13 +61,6 @@ export default function AdminScreen() {
   const [reviewFilter, setReviewFilter] = useState<'all' | 'AI_DRAFT' | 'VERIFIED'>('AI_DRAFT');
   const remoteVersion = useRemote((s) => s.updatedAt);
   const [num, setNum] = useState('');
-  const [feedbackReload, setFeedbackReload] = useState(0);
-  const [feedbacks, setFeedbacks] = useState<(Feedback & { id: string })[]>([]);
-  const [feedbackFilter, setFeedbackFilter] = useState<FeedbackStatus | 'all'>('all');
-  const [feedbackNotesEdit, setFeedbackNotesEdit] = useState<Record<string, string>>({});
-  const [feedbackLoading, setFeedbackLoading] = useState(true);
-  const [feedbackMsg, setFeedbackMsg] = useState('');
-  const [confirmDeleteId, setConfirmDeleteId] = useState<string | null>(null);
   const [query, setQuery] = useState('');
   const [newPin, setNewPin] = useState('');
   const [msg, setMsg] = useState('');
@@ -140,35 +93,6 @@ export default function AdminScreen() {
         opacity: pressed ? 0.75 : 1,
       })}>
       <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-        {label}
-      </AppText>
-    </Pressable>
-  );
-
-  const smallButton = (
-    label: string,
-    onPress: () => void,
-    tone: 'primary' | 'danger' | 'muted' = 'muted',
-  ) => (
-    <Pressable
-      onPress={onPress}
-      accessibilityRole="button"
-      accessibilityLabel={label}
-      style={({ pressed }) => ({
-        flex: 1,
-        paddingVertical: spacing.xs,
-        paddingHorizontal: spacing.sm,
-        borderRadius: radius.pill,
-        borderWidth: 1,
-        borderColor: tone === 'primary' ? colors.primary : tone === 'danger' ? colors.danger : colors.border,
-        backgroundColor: tone === 'primary' ? colors.primary : colors.surfaceMuted,
-        alignItems: 'center',
-        opacity: pressed ? 0.75 : 1,
-      })}>
-      <AppText
-        variant="caption"
-        color={tone === 'primary' ? colors.onPrimary : tone === 'danger' ? colors.danger : colors.text}
-        style={{ fontWeight: '700' }}>
         {label}
       </AppText>
     </Pressable>
@@ -243,53 +167,6 @@ export default function AdminScreen() {
     }
   };
 
-  const refreshFeedback = () => {
-    setFeedbackLoading(true);
-    setFeedbackMsg('');
-    setFeedbackReload((n) => n + 1);
-  };
-
-  const changeFeedbackStatus = async (id: string, status: FeedbackStatus) => {
-    const ok = await updateFeedbackStatus(id, status);
-    if (!ok) {
-      setFeedbackMsg('تعذّر تحديث حالة التقييم');
-      return;
-    }
-    setFeedbacks((prev) => prev.map((fb) => (fb.id === id ? { ...fb, status } : fb)));
-    // A status change may move the item out of the active filter.
-    if (feedbackFilter !== 'all' && feedbackFilter !== status) {
-      setFeedbacks((prev) => prev.filter((fb) => fb.id !== id));
-    }
-    setFeedbackMsg('تم تحديث الحالة');
-  };
-
-  const saveFeedbackNotes = async (id: string) => {
-    const notes = feedbackNotesEdit[id] ?? '';
-    const ok = await updateFeedbackNotes(id, notes);
-    if (!ok) {
-      setFeedbackMsg('تعذّر حفظ الملاحظات');
-      return;
-    }
-    setFeedbacks((prev) => prev.map((fb) => (fb.id === id ? { ...fb, adminNotes: notes } : fb)));
-    setFeedbackMsg('تم حفظ الملاحظات');
-  };
-
-  const removeFeedback = async (id: string) => {
-    setConfirmDeleteId(null);
-    const ok = await deleteFeedback(id);
-    if (!ok) {
-      setFeedbackMsg('تعذّر حذف التقييم');
-      return;
-    }
-    setFeedbacks((prev) => prev.filter((fb) => fb.id !== id));
-    setFeedbackNotesEdit((prev) => {
-      const next = { ...prev };
-      delete next[id];
-      return next;
-    });
-    setFeedbackMsg('تم حذف التقييم');
-  };
-
   // Firebase configured: the signed-in admin edits. Otherwise the legacy
   // on-device PIN gate applies and everything stays local-only.
   const canEdit = useCanEdit();
@@ -311,36 +188,6 @@ export default function AdminScreen() {
       active = false;
     };
   }, [canEdit]);
-
-  // Reads happen inside the async body on purpose: setting state before the
-  // first await would render synchronously from the effect. The token lets
-  // the refresh button and the filter chips re-run this same load.
-  useEffect(() => {
-    if (!canEdit) return;
-    let cancelled = false;
-    void (async () => {
-      const result = await fetchFeedbacks(feedbackFilter);
-      if (cancelled) return;
-      if (result.ok) {
-        setFeedbacks(result.items);
-      } else {
-        setFeedbacks([]);
-        setFeedbackMsg(
-          result.error === 'unconfigured'
-            ? t('admin.noCloud')
-            : result.error === 'permission'
-              ? 'تعذّر قراءة التقييمات — سجّل الدخول بحساب الإدارة'
-              : result.error === 'offline'
-                ? 'تعذّر الاتصال بالخادم — تحقق من الإنترنت'
-                : 'تعذّر تحميل التقييمات',
-        );
-      }
-      setFeedbackLoading(false);
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [canEdit, feedbackFilter, feedbackReload, t]);
 
   // Proofreading queue: hymns carrying the selected translation, filtered
   // by review status. A typed query turns the box above into global search
@@ -594,165 +441,13 @@ export default function AdminScreen() {
             </Card>
 
             <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
-              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
-                إدارة التقييمات ({feedbacks.length})
+              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.xs }}>
+                {t('admin.feedbackTitle')}
               </AppText>
-
-              <View style={{ flexDirection: direction.row, flexWrap: 'wrap', gap: spacing.xs, marginBottom: spacing.sm }}>
-                {FEEDBACK_FILTERS.map((option) => (
-                  <Pressable
-                    key={option.value}
-                    onPress={() => {
-                      if (option.value === feedbackFilter) return;
-                      setFeedbackLoading(true);
-                      setFeedbackMsg('');
-                      setFeedbackFilter(option.value);
-                    }}
-                    accessibilityRole="button"
-                    accessibilityState={{ selected: feedbackFilter === option.value }}
-                    style={({ pressed }) => ({
-                      paddingVertical: spacing.xs,
-                      paddingHorizontal: spacing.md,
-                      borderRadius: radius.pill,
-                      borderWidth: 1,
-                      borderColor: feedbackFilter === option.value ? colors.primary : colors.border,
-                      backgroundColor: feedbackFilter === option.value ? colors.primary : 'transparent',
-                      opacity: pressed ? 0.75 : 1,
-                    })}>
-                    <AppText
-                      variant="caption"
-                      color={feedbackFilter === option.value ? colors.onPrimary : colors.text}
-                      style={{ fontWeight: '700' }}>
-                      {option.label}
-                    </AppText>
-                  </Pressable>
-                ))}
-              </View>
-
-              <Pressable
-                onPress={refreshFeedback}
-                disabled={feedbackLoading}
-                accessibilityRole="button"
-                accessibilityLabel="تحديث القائمة"
-                style={({ pressed }) => ({
-                  paddingVertical: spacing.sm,
-                  borderRadius: radius.pill,
-                  backgroundColor: colors.primary,
-                  alignItems: 'center',
-                  opacity: feedbackLoading ? 0.5 : pressed ? 0.75 : 1,
-                })}>
-                <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-                  {feedbackLoading ? 'جارٍ التحميل...' : 'تحديث القائمة'}
-                </AppText>
-              </Pressable>
-
-              {feedbackMsg ? (
-                <AppText
-                  variant="caption"
-                  color={feedbackMsg.startsWith('تم') ? colors.primary : colors.danger}
-                  style={{ marginTop: spacing.sm, fontWeight: '700' }}>
-                  {feedbackMsg}
-                </AppText>
-              ) : null}
-
-              {!feedbackLoading && !feedbackMsg && feedbacks.length === 0 ? (
-                <AppText variant="caption" color={colors.textMuted} style={{ marginTop: spacing.md }}>
-                  لا توجد تقييمات
-                </AppText>
-              ) : null}
-
-              {feedbacks.map((fb) => {
-                const stars = '★'.repeat(Math.max(0, Math.min(5, Math.round(fb.rating))));
-                const createdAt = formatFeedbackDate(fb.createdAt);
-                return (
-                  <View
-                    key={fb.id}
-                    style={{ borderTopWidth: 1, borderTopColor: colors.border, paddingTop: spacing.md, marginTop: spacing.md }}>
-                    <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'space-between', gap: spacing.sm }}>
-                      <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.xs, flexShrink: 1 }}>
-                        <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
-                          {stars}
-                        </AppText>
-                        <AppText variant="label" style={{ fontWeight: '700', flexShrink: 1 }} numberOfLines={2}>
-                          {FEEDBACK_CATEGORY_LABEL[fb.category] ?? fb.category}
-                        </AppText>
-                      </View>
-                      <AppText variant="caption" color={colors.textMuted} style={{ fontWeight: '700' }}>
-                        {FEEDBACK_STATUS_LABEL[fb.status] ?? fb.status}
-                      </AppText>
-                    </View>
-
-                    <AppText variant="body" style={{ marginTop: spacing.xs }}>
-                      {fb.comment?.trim() ? fb.comment : 'بدون تعليق'}
-                    </AppText>
-
-                    {createdAt ? (
-                      <AppText variant="caption" color={colors.textMuted} style={{ marginTop: spacing.xs }}>
-                        {createdAt}
-                      </AppText>
-                    ) : null}
-
-                    <View style={{ flexDirection: direction.row, gap: spacing.xs, marginTop: spacing.sm }}>
-                      {(Object.keys(FEEDBACK_STATUS_LABEL) as FeedbackStatus[]).map((status) => (
-                        <Pressable
-                          key={status}
-                          onPress={() => {
-                            void changeFeedbackStatus(fb.id, status);
-                          }}
-                          accessibilityRole="button"
-                          accessibilityState={{ selected: fb.status === status }}
-                          style={({ pressed }) => ({
-                            flex: 1,
-                            paddingVertical: spacing.xs,
-                            borderRadius: radius.pill,
-                            borderWidth: 1,
-                            borderColor: fb.status === status ? colors.primary : colors.border,
-                            backgroundColor: fb.status === status ? colors.primary : 'transparent',
-                            alignItems: 'center',
-                            opacity: pressed ? 0.75 : 1,
-                          })}>
-                          <AppText
-                            variant="caption"
-                            color={fb.status === status ? colors.onPrimary : colors.text}
-                            style={{ fontWeight: '700' }}>
-                            {FEEDBACK_STATUS_LABEL[status]}
-                          </AppText>
-                        </Pressable>
-                      ))}
-                    </View>
-
-                    <TextInput
-                      value={feedbackNotesEdit[fb.id] ?? fb.adminNotes ?? ''}
-                      onChangeText={(value) =>
-                        setFeedbackNotesEdit((prev) => ({ ...prev, [fb.id]: value }))
-                      }
-                      placeholder="ملاحظات الإدارة"
-                      placeholderTextColor={colors.textMuted}
-                      multiline
-                      maxLength={1000}
-                      style={[fieldStyle, { minHeight: 44, marginTop: spacing.sm, paddingTop: spacing.sm, fontSize: 14 }]}
-                    />
-
-                    <View style={{ flexDirection: direction.row, gap: spacing.sm, marginTop: spacing.sm }}>
-                      {confirmDeleteId === fb.id ? (
-                        <>
-                          {smallButton('تأكيد الحذف', () => {
-                            void removeFeedback(fb.id);
-                          }, 'danger')}
-                          {smallButton('إلغاء', () => setConfirmDeleteId(null))}
-                        </>
-                      ) : (
-                        <>
-                          {smallButton('حفظ الملاحظات', () => {
-                            void saveFeedbackNotes(fb.id);
-                          }, 'primary')}
-                          {smallButton('حذف', () => setConfirmDeleteId(fb.id), 'danger')}
-                        </>
-                      )}
-                    </View>
-                  </View>
-                );
-              })}
+              <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
+                التقييمات التي يرسلها المستخدمون من «تقييم التطبيق»: الحالة، الملاحظات، الحذف.
+              </AppText>
+              {button(t('admin.feedbackOpen'), () => router.push('/(tabs)/admin-feedback'))}
             </Card>
 
             <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>

@@ -75,6 +75,8 @@ export const de: PartialDictionary = {
   'info.topics': 'Themen',
 
 'admin.title': 'Admin',
+  'admin.feedbackTitle': 'Bewertungen',
+  'admin.feedbackOpen': 'Bewertungen öffnen',
   'admin.pinTitle': 'Admin-PIN eingeben',
   'admin.pinPlaceholder': 'PIN',
   'admin.unlock': 'Entsperren',

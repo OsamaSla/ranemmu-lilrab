@@ -102,6 +102,10 @@ export default function TabsLayout() {
       <Tabs.Screen name="admin" options={{ href: null, title: t('admin.title') }} />
       <Tabs.Screen name="admin-edit" options={{ href: null, title: t('admin.editHymn') }} />
       <Tabs.Screen name="admin-add" options={{ href: null, title: t('admin.addHymn') }} />
+      <Tabs.Screen
+        name="admin-feedback"
+        options={{ href: null, title: t('admin.feedbackTitle') }}
+      />
     </Tabs>
   );
 }

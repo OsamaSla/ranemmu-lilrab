@@ -7,7 +7,8 @@ are not repeated every session.
 - **Last verified:** 2026-10-26, commits `b320dab` (lyric search + lazy
   chunks), `63f89a0` (regenerated corpus) and `4d88940` (editing gate), `main`;
   live site deployed and checked signed-out (locked editor routes, no reader
-  edit button).
+  edit button). Same day: the ratings panel was split into its own
+  `(tabs)/admin-feedback` screen.
 - **Update rule:** see [§13](#13-general-rule-for-any-project). Touch only the
   sections a change affected and bump "Last verified".
 - Speak Arabic with the owner (Osama). Code comments and commits are English.
@@ -56,7 +57,8 @@ From `package.json` / `app.json`:
 src/app/            Expo Router routes (screens only; keep helpers outside)
   _layout.tsx, +html.tsx (web <head>, SW registration, umami)
   (tabs)/_layout.tsx, index (home), library, favorites, recents, help, more,
-        settings, structure, admin, admin-add, admin-edit, hymn/[id]
+        settings, structure, admin, admin-add, admin-edit, admin-feedback,
+        hymn/[id]
 src/components/     Shared UI: AppBar, AppText, Card, FeedbackModal, … (all text
                     goes through AppText; never raw <Text>)
 src/data/           corpus + cloud: loader (sync reads), chunks (lazy import),
@@ -191,9 +193,10 @@ public web API key are fine; test writes belong in the emulator.
 - **Editing is gated by `useCanEdit()`** (`src/hooks/useCanEdit.ts`): a signed-in
   admin when Firebase is configured, otherwise the session PIN unlock in
   `store/adminGate` (set from `admin.tsx`). Every entry point must call it —
-  the reader's edit button in `ReaderSettingsModal`, the `admin-edit` and
-  `admin-add` routes (URL-reachable, so the route itself is gated, not just the
-  button). Adding another editor without this hook re-opens the old hole.
+  the reader's edit button in `ReaderSettingsModal`, the `admin-edit`,
+  `admin-add` and `admin-feedback` routes (URL-reachable, so the route itself is
+  gated, not just the button). Adding another editor without this hook re-opens
+  the old hole.
 
 ## 8. App ratings ("تقييم التطبيق") — current design
 
@@ -204,9 +207,16 @@ public web API key are fine; test writes belong in the emulator.
   — never swallow errors again. Sorting/filtering is client-side on purpose:
   `where('status') + orderBy('createdAt')` needs a composite index and fails
   the whole list when missing.
-- Admin: "إدارة التقييمات" card in `admin.tsx` (visible after Firebase sign-in):
-  filter chips (الكل/جديدة/قيد المعالجة/مكتملة), refresh, status triage, admin
-  notes, two-tap delete. Reads require a signed-in admin by rule design.
+- Admin: "إدارة التقييمات" lives on its own screen, `(tabs)/admin-feedback.tsx`
+  (`href: null`), reached from a link card in `admin.tsx`. It was inline before;
+  it moved because one rating row carries three status pills and a notes field,
+  so the list dominated a page that is otherwise a few settings. Two
+  consequences worth knowing: `admin.tsx` no longer reads `feedbacks` at all
+  (opening Admin costs zero feedback reads), and the rows render in a `FlatList`
+  (virtualized, one `Card` per rating) instead of a `ScrollView` + `.map`.
+  Filter chips (الكل/جديدة/قيد المعالجة/مكتملة) stay client-side for the same
+  composite-index reason; the route calls `useCanEdit()` because it is
+  URL-reachable. Reads require a signed-in admin by rule design.
 - History: originally the rules had no `feedbacks` block (catch-all denied
   writes *and* reads) and the modal relied on `Alert` → button appeared dead on
   web. Fixed in `a15e501` (rules + error surfacing + admin panel).
@@ -258,6 +268,14 @@ public web API key are fine; test writes belong in the emulator.
     the client hydrates and imports the chunk. The title is still server-rendered;
     the body is client-rendered now. Any future `<head>` SEO/metadata for hymn
     bodies must be fed from `index.json`, not from `getHymn()`.
+11. **Adding a route file breaks `tsc` until typed routes regenerate.**
+    `.expo/types/router.d.ts` (gitignored) holds the literal route union, so
+    `router.push('/(tabs)/new-route')` fails with TS2345 until it is rewritten.
+    `expo export` does *not* rewrite it; `expo start` does (start the dev server,
+    wait for the file's mtime to change, kill it). CI never typechecks, so this
+    only bites locally.
+12. On Windows PowerShell, `npx`/`npm` are blocked by the execution policy
+    (`npx.ps1 cannot be loaded`); call `npx.cmd` / `npm.cmd` instead.
 
 ## 11. Known issues / cleanup candidates
 
@@ -280,8 +298,9 @@ public web API key are fine; test writes belong in the emulator.
   after anything that touches fonts, icons or the i18n dictionaries.
 - Alphabetical sort buckets by raw first character, so `أ`/`إ`/`ا` are three
   separate headers (169/77/80 hymns at `3f6c26b`). Fold before bucketing.
-- `admin.tsx` is the only screen with hardcoded Arabic strings; it also shows a
-  default PIN of `1234` (`store/settings.ts`), which is not real security.
+- `admin.tsx` and `admin-feedback.tsx` are the only screens with hardcoded Arabic
+  strings (page titles still go through i18n); `admin.tsx` also shows a default
+  PIN of `1234` (`store/settings.ts`), which is not real security.
 - Installed but not imported anywhere in `src/`: `@expo/ui`, `expo-device`,
   `expo-glass-effect`, `expo-image`, `expo-symbols`, `expo-system-ui`,
   `expo-localization`. Verify with `expo-doctor` before removing.

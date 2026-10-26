@@ -70,6 +70,8 @@ export const en: PartialDictionary = {
   'info.topics': 'Topics',
 
   'admin.title': 'Admin',
+  'admin.feedbackTitle': 'Ratings',
+  'admin.feedbackOpen': 'Open ratings',
   'admin.pinTitle': 'Enter admin PIN',
   'admin.pinPlaceholder': 'PIN',
   'admin.unlock': 'Unlock',
