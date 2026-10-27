@@ -28,6 +28,12 @@ interface OverridesState {
   /** When each override was written on this device (ISO), for last-write-wins. */
   savedAt: Record<string, string>;
   /**
+   * When the override was last confirmed in the cloud. `savedAt > uploadedAt`
+   * means the change is still only on this device, so it must not be replaced
+   * by whatever the cloud currently holds.
+   */
+  uploadedAt: Record<string, string>;
+  /**
    * Tombstoned hymn ids (admin deletions). Monotonic — never shrunk by
    * sync, only by explicit local clear — so a deleted hymn stays hidden
    * on every device. Persisted like overrides.
@@ -39,6 +45,8 @@ interface OverridesState {
   setOverride: (id: string, patch: Partial<Hymn>) => void;
   removeOverride: (id: string) => void;
   clearAll: () => void;
+  /** Records that the current override content is confirmed in the cloud. */
+  markUploaded: (id: string) => void;
   /**
    * Drops local overrides that the cloud has superseded. `cloudStamps` maps a
    * hymn id to the `updatedAt` of the document just received; anything newer
@@ -56,6 +64,7 @@ export const useOverrides = create<OverridesState>()(
     (set, get) => ({
       overrides: {},
       savedAt: {},
+      uploadedAt: {},
       deletedIds: [],
       updatedAt: 0,
 
@@ -72,37 +81,69 @@ export const useOverrides = create<OverridesState>()(
         set((state) => {
           const next = { ...state.overrides };
           const stamps = { ...(state.savedAt ?? {}) };
+          const uploaded = { ...(state.uploadedAt ?? {}) };
           delete next[id];
           delete stamps[id];
-          return { overrides: next, savedAt: stamps, updatedAt: state.updatedAt + 1 };
+          delete uploaded[id];
+          return {
+            overrides: next,
+            savedAt: stamps,
+            uploadedAt: uploaded,
+            updatedAt: state.updatedAt + 1,
+          };
         });
         refreshOverlaidCorpus();
       },
 
       clearAll: () => {
         // Tombstones survive: clearing them would resurrect deleted hymns.
-        set((state) => ({ overrides: {}, savedAt: {}, updatedAt: state.updatedAt + 1 }));
+        set((state) => ({
+          overrides: {},
+          savedAt: {},
+          uploadedAt: {},
+          updatedAt: state.updatedAt + 1,
+        }));
         refreshOverlaidCorpus();
+      },
+
+      markUploaded: (id) => {
+        set((state) => {
+          const saved = state.savedAt?.[id];
+          if (!saved) return state;
+          return { uploadedAt: { ...(state.uploadedAt ?? {}), [id]: saved } };
+        });
       },
 
       dropIfNewerInCloud: (cloudStamps) => {
         const state = get();
         const overrides = { ...state.overrides };
         const stamps = { ...(state.savedAt ?? {}) };
+        const uploaded = { ...(state.uploadedAt ?? {}) };
         let changed = false;
         for (const [id, cloudStamp] of Object.entries(cloudStamps)) {
           if (overrides[id] === undefined || !cloudStamp) continue;
-          // Missing savedAt means the entry predates this field (legacy build):
-          // it was written by the old publish path, so the cloud wins.
-          const localStamp = stamps[id] ?? '';
+          const localStamp = stamps[id];
+          if (localStamp === undefined) {
+            // Legacy entry from a build that did not stamp saves: it was
+            // written by the old publish path, so the cloud copy wins.
+            delete overrides[id];
+            delete uploaded[id];
+            changed = true;
+            continue;
+          }
+          // Still waiting to reach the cloud (write failed, offline, or signed
+          // out): keep it — this is the admin's own work, not a stale copy.
+          const confirmed = uploaded[id];
+          if (!confirmed || confirmed < localStamp) continue;
           if (cloudStamp > localStamp) {
             delete overrides[id];
             delete stamps[id];
+            delete uploaded[id];
             changed = true;
           }
         }
         if (!changed) return;
-        set({ overrides, savedAt: stamps, updatedAt: state.updatedAt + 1 });
+        set({ overrides, savedAt: stamps, uploadedAt: uploaded, updatedAt: state.updatedAt + 1 });
         refreshOverlaidCorpus();
       },
 
@@ -111,11 +152,14 @@ export const useOverrides = create<OverridesState>()(
           if (state.deletedIds.includes(id)) return state;
           const next = { ...state.overrides };
           const stamps = { ...(state.savedAt ?? {}) };
+          const uploaded = { ...(state.uploadedAt ?? {}) };
           delete next[id];
           delete stamps[id];
+          delete uploaded[id];
           return {
             overrides: next,
             savedAt: stamps,
+            uploadedAt: uploaded,
             deletedIds: [...state.deletedIds, id],
             updatedAt: state.updatedAt + 1,
           };

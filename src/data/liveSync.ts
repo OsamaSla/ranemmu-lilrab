@@ -179,3 +179,23 @@ export async function syncHymnToCloud(id: string, patch: Partial<Hymn>): Promise
     return false;
   }
 }
+
+/**
+ * Retries every override that never reached the cloud.
+ *
+ * `savedAt` vs `uploadedAt` in the overrides store is the record of what is
+ * still local-only: a save that happened while offline or signed out stays in
+ * that state forever otherwise. Called at startup, and again whenever the
+ * admin signs in.
+ */
+export async function flushPendingUploads(): Promise<void> {
+  if (!isFirebaseConfigured) return;
+  const { overrides, savedAt, uploadedAt, markUploaded } = useOverrides.getState();
+  for (const [id, patch] of Object.entries(overrides ?? {})) {
+    const saved = savedAt?.[id];
+    if (!saved) continue;
+    const confirmed = uploadedAt?.[id];
+    if (confirmed && confirmed >= saved) continue;
+    if (await publishHymn(id, patch)) markUploaded(id);
+  }
+}
