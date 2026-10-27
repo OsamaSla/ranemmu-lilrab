@@ -329,7 +329,23 @@ public web API key are fine; test writes belong in the emulator.
     a blank local field (`mediaUrl: ''` from any earlier save) outrank real
     cloud data, and `liveSync` stamped the watermark with the device clock
     (`new Date()`) instead of the newest `updatedAt` received, so a fast clock
-    skipped edits. All three are fixed in `aa...`/current `main`.
+    skipped edits. All three are fixed in current `main` (`1bd5c7d`, `cc7475d`).
+15. **The cloud collection is small and per-hymn — check it before theorising.**
+    `hymns` held **14 documents** on 2026-10-27, not the whole 1400-hymn corpus:
+    only hymns an admin actually touched exist there (bundled data stays local).
+    A full listing is one unauthenticated call —
+    `POST .../documents:runQuery?key=<apiKey>` with
+    `{structuredQuery:{from:[{collectionId:'hymns'}],limit:30}}` — and tells you
+    immediately whether a "saved but not showing" edit ever reached Firestore,
+    which hymn id it landed on, and whether the device wrote at all.
+16. **The Publish button flushes only *this device's* override set.** It never
+    uploads another device's edits, so "I published on the PC" cannot push a
+    change made on the phone — the phone's own save must reach the cloud (the
+    write-through in `admin-edit` `save()`, which needs a signed-in admin).
+    That is why a silent write-through failure looked like "publishing is
+    broken": the PC's 14 local overrides uploaded fine while the phone's edit
+    never left the handset. Both surfaces now say so out loud
+    (`admin.syncFailed` / `admin.syncNoAuth`, plus a `noCloud` banner).
 
 ## 11. Known issues / cleanup candidates
 
