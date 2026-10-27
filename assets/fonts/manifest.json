@@ -1,0 +1,52 @@
+[
+  {
+    "file": "Cairo-Regular.ttf",
+    "family": "Cairo",
+    "slug": "Cairo"
+  },
+  {
+    "file": "Cairo-Bold.ttf",
+    "family": "Cairo",
+    "slug": "Cairo"
+  },
+  {
+    "file": "Amiri-Regular.ttf",
+    "family": "Amiri",
+    "slug": "Amiri"
+  },
+  {
+    "file": "Amiri-Bold.ttf",
+    "family": "Amiri",
+    "slug": "Amiri"
+  },
+  {
+    "file": "ScheherazadeNew-Regular.ttf",
+    "family": "Scheherazade",
+    "slug": "ScheherazadeNew"
+  },
+  {
+    "file": "ScheherazadeNew-Bold.ttf",
+    "family": "Scheherazade",
+    "slug": "ScheherazadeNew"
+  },
+  {
+    "file": "Marhey-Regular.ttf",
+    "family": "Marhey",
+    "slug": "Marhey"
+  },
+  {
+    "file": "Marhey-Bold.ttf",
+    "family": "Marhey",
+    "slug": "Marhey"
+  },
+  {
+    "file": "Katibeh-Regular.ttf",
+    "family": "Katibeh",
+    "slug": "Katibeh"
+  },
+  {
+    "file": "Rakkas-Regular.ttf",
+    "family": "Rakkas",
+    "slug": "Rakkas"
+  }
+]
