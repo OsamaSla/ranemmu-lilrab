@@ -62,7 +62,35 @@ export default function AdminEditScreen() {
     title_de: '',
     chorus_de: '',
     linesDe: [] as string[][],
+    sourceStamp: '',
   };
+  /**
+   * Signature of the record the form was seeded from. A form that is no longer
+   * in sync with the record (cloud edit landed, another device changed a
+   * field) must be re-seeded before it can be saved, otherwise a stale field
+   * silently writes an older value back — observed on 2026-10-27, when an
+   * editor left open across a cloud edit re-published the previous YouTube
+   * link over the newer one.
+   */
+  const signatureOf = (h: NonNullable<typeof hymn>): string =>
+    JSON.stringify([
+      h.translationStatus,
+      h.title,
+      h.author,
+      h.authorOriginal,
+      h.meter,
+      h.chorus,
+      h.mediaUrl,
+      h.primaryTopic,
+      h.topics,
+      h.verses.map((v) => v.lines),
+      h.title_en,
+      h.chorus_en,
+      h.verses_en?.map((v) => v.lines),
+      h.title_de,
+      h.chorus_de,
+      h.verses_de?.map((v) => v.lines),
+    ]);
   const toForm = (key: typeof id, h: typeof hymn) =>
     h
       ? {
@@ -70,6 +98,7 @@ export default function AdminEditScreen() {
           // Which hymn record the form was filled from. Empty until the
           // lazily imported chunk lands, which is what triggers the reset.
           sourceId: h.id,
+          sourceStamp: signatureOf(h),
           verified: h.translationStatus === 'VERIFIED',
           title: h.title,
           author: h.author ?? '',
@@ -128,7 +157,15 @@ export default function AdminEditScreen() {
     };
   }, [canEdit, id]);
 
-  if (form.key !== id || form.sourceId !== (hymn?.id ?? '')) {
+  // Re-seed when the hymn changes under a *clean* form: an edit in progress
+  // (dirty) is never thrown away, but a form the user has not touched must
+  // reflect the newest record instead of writing stale values back.
+  const recordStamp = hymn ? signatureOf(hymn) : '';
+  if (
+    form.key !== id ||
+    form.sourceId !== (hymn?.id ?? '') ||
+    (!dirty && form.sourceStamp !== recordStamp)
+  ) {
     setForm(toForm(id, hymn));
     setSavedOnce(false);
     setDirty(false);
@@ -196,6 +233,14 @@ export default function AdminEditScreen() {
   const set = (patch: Partial<typeof form>) => {
     setForm((f) => ({ ...f, ...patch }));
     setDirty(true);
+  };
+
+  /** Short preview of a saved field, used to prove what was written. */
+  const describe = (value: unknown): string => {
+    if (value === '' || value === null || value === undefined) return '(—)';
+    if (Array.isArray(value)) return `[${value.length}]`;
+    const text = String(value);
+    return text.length > 48 ? `${text.slice(0, 48)}…` : text;
   };
 
   const toggleSecondary = (id: TopicId) => {
@@ -355,21 +400,32 @@ export default function AdminEditScreen() {
     if (Object.keys(patch).length === 0) {
       // Nothing changed: writing an empty override would upload a no-op
       // document and keep masking fresher cloud values on this device.
-      setMsg(t('admin.saved'));
+      setMsg(t('admin.savedNoFields'));
       setSavedOnce(true);
       setDirty(false);
       return;
     }
+    // Spell out what was actually written. "تم الحفظ" alone cannot be
+    // distinguished from a paste that never landed, and that ambiguity cost
+    // real time: a link field that looked filled was saved with the previous
+    // value and then "published" unchanged.
+    const summary = Object.entries(patch)
+      .map(([field, value]) => `${field}=${describe(value)}`)
+      .join(' · ');
     setOverride(hymn.id, patch);
-    setMsg(t('admin.saved'));
+    setMsg(`${t('admin.savedFields')} ${summary}`);
     setSavedOnce(true);
     setDirty(false);
     // Best-effort live upload: the local save above is the source of truth, so
     // a failure must not block the editor — but it must be *visible*. Silence
     // here is what made "I saved it" and "the cloud has nothing" look the same.
     void syncHymnToCloud(hymn.id, patch).then((synced) => {
-      if (synced || !isFirebaseConfigured) return;
-      setMsg(t(getFirebaseAuth()?.currentUser ? 'admin.syncFailed' : 'admin.syncNoAuth'));
+      if (!isFirebaseConfigured) return;
+      setMsg(
+        synced
+          ? `${t('admin.savedFields')} ${summary} — ${t('admin.uploaded')}`
+          : t(getFirebaseAuth()?.currentUser ? 'admin.syncFailed' : 'admin.syncNoAuth'),
+      );
     });
   };
 

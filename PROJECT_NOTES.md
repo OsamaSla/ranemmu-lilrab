@@ -367,6 +367,17 @@ public web API key are fine; test writes belong in the emulator.
     not part of the Pages workflow** — apply with
     `firebase deploy --only firestore:rules`; until then the server still
     accepts any signed-in account.
+19. **A stale editor form can re-publish an older value.** Proven on 2026-10-27:
+    the phone queued `mediaUrl=https://youtu.be/myiPlvg1YIE…` (the *previous*
+    link) while the cloud held `''` — the form had been seeded before the cloud
+    changed and only an `id` change ever re-seeded it, so saving wrote the old
+    text back and "publish" faithfully restored it. `admin-edit` now keeps a
+    `sourceStamp` (`signatureOf`) and re-seeds whenever the record's signature
+    changes *and* the form is clean (`dirty === false`); an in-progress edit is
+    never discarded. The save message also lists the exact fields and values it
+    wrote (`admin.savedFields`, e.g. `mediaUrl=https://youtu.be/…`) plus whether
+    the cloud upload succeeded, so a paste that never landed is visible
+    immediately instead of surfacing days later as "the PC didn't update".
 
 ## 11. Known issues / cleanup candidates
 
