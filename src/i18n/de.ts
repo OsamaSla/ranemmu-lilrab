@@ -100,6 +100,8 @@ export const de: PartialDictionary = {
   'admin.saved': 'Nur auf diesem Gerät gespeichert',
   'admin.syncFailed': 'Auf dem Gerät gespeichert — Cloud-Upload fehlgeschlagen, Anmeldung und Verbindung prüfen',
   'admin.syncNoAuth': 'Nur auf diesem Gerät gespeichert — zum Hochladen anmelden',
+  'admin.publishPending': 'Was dieses Gerät hochlädt',
+  'admin.blankValue': '(leer — wird nicht hochgeladen)',
   'admin.newPin': 'Neue PIN (4 Ziffern)',
   'admin.pinSaved': 'PIN geändert',
   'admin.publishTitle': 'Cloud veröffentlichen',

@@ -23,22 +23,35 @@ service cloud.firestore {
         && data.status == 'pending';
     }
 
+    // Only the listed admin account may write hymns/meta. `request.auth != null`
+    // alone was too loose: any signed-in account (a test account, or a stranger
+    // if sign-up is ever re-opened) could rewrite the corpus. Keep this list in
+    // sync with src/data/adminAccess.ts (EXPO_PUBLIC_ADMIN_EMAILS).
+    // NOTE: this file is NOT deployed by the GitHub Pages workflow - run
+    //   firebase deploy --only firestore:rules
+    // after changing it.
+    function isAdmin() {
+      return request.auth != null
+        && request.auth.token.email is string
+        && request.auth.token.email in ['osama.sla@gmail.com'];
+    }
+
     match /hymns/{hymnId} {
       allow read: if true;
-      allow create, update, delete: if request.auth != null;
+      allow create, update, delete: if isAdmin();
     }
     // Shared tombstone set for admin deletions. Readers must see it so
     // deleted hymns stay hidden on every device; only admins may write it.
     match /meta/deleted {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow write: if isAdmin();
     }
     // App ratings submitted from "تقييم التطبيق". Visitors are anonymous on
     // the web build, so anyone may create a well-formed pending rating, but
     // only the signed-in admin can list, triage or delete them.
     match /feedbacks/{feedbackId} {
       allow create: if isValidFeedback();
-      allow read, update, delete: if request.auth != null;
+      allow read, update, delete: if isAdmin();
     }
     match /{document=**} {
       allow read, write: if false;

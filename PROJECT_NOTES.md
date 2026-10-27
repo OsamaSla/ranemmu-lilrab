@@ -347,10 +347,32 @@ public web API key are fine; test writes belong in the emulator.
     That is why a silent write-through failure looked like "publishing is
     broken": the PC's 14 local overrides uploaded fine while the phone's edit
     never left the handset. Both surfaces now say so out loud
-    (`admin.syncFailed` / `admin.syncNoAuth`, plus a `noCloud` banner).
+    (`admin.syncFailed` / `admin.syncNoAuth`, plus a `noCloud` banner), and the
+    publish tab lists every pending field with blanks spelled out.
+17. **`{ merge: true }` + an empty string = data loss.** Proven on 2026-10-27:
+    the phone's override set held one stale `{ mediaUrl: '' }` for `h0002`;
+    pressing publish wrote `mediaUrl: ""` over a good YouTube link
+    (`updatedAt 04:39:45`, read back over REST). The UI showed
+    "تم الحفظ في السحابة (1)" — a truthful success message about a destructive
+    write. Publish/publishHymn now strip blank values (`withoutBlanks` in
+    `data/publish.ts`) and skip blank-only patches entirely, so a stale blank
+    can never overwrite cloud content. Consequence: clearing a link on purpose
+    is no longer expressible from the editor — tracked in §11.
+18. **Being signed in is not being an admin.** Until 2026-10-27 every existing
+    Firebase account unlocked الإدارة and passed `request.auth != null` in the
+    rules. Gating is now an e-mail allowlist on both sides:
+    `src/data/adminAccess.ts` (`EXPO_PUBLIC_ADMIN_EMAILS`, default the owner)
+    drives `useCanEdit()` and hides the `more.admin` row, and
+    `firestore.rules` `isAdmin()` makes the same check server-side. **Rules are
+    not part of the Pages workflow** — apply with
+    `firebase deploy --only firestore:rules`; until then the server still
+    accepts any signed-in account.
 
 ## 11. Known issues / cleanup candidates
 
+- Clearing a hymn field on purpose (removing a wrong YouTube link) cannot reach
+  the cloud: blank values are never uploaded (§7 #17). Needs an explicit
+  "clear field" action that writes a documented sentinel instead of `''`.
 - Admin hymn delete, "contact us", clear-recents use `Alert` → no-ops on web
   (see §7). `recents.tsx` clears without any confirmation, unlike settings.
 - Search lives only in `library.tsx` (no separate route): digits are a summary

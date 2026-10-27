@@ -95,6 +95,8 @@ export const en: PartialDictionary = {
   'admin.saved': 'Saved on this device only',
   'admin.syncFailed': 'Saved on this device — cloud upload failed, check sign-in and connection',
   'admin.syncNoAuth': 'Saved on this device only — sign in to push it to the cloud',
+  'admin.publishPending': 'What this device will upload',
+  'admin.blankValue': '(blank — will not be uploaded)',
   'admin.newPin': 'New PIN (4 digits)',
   'admin.pinSaved': 'PIN changed',
   'admin.publishTitle': 'Cloud publish',

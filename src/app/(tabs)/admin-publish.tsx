@@ -50,6 +50,18 @@ export default function AdminPublishScreen() {
     );
   };
 
+  /**
+   * One-line preview of a pending field. Blank values are the interesting
+   * case: they are never uploaded, and seeing "(blank)" next to `mediaUrl`
+   * is what explains "I published but nothing changed".
+   */
+  const describeValue = (value: unknown): string => {
+    if (value === '' || value === null || value === undefined) return t('admin.blankValue');
+    if (Array.isArray(value)) return `[${value.length}]`;
+    const text = String(value);
+    return text.length > 60 ? `${text.slice(0, 60)}…` : text;
+  };
+
   return (
     <AdminScreenShell active="publish">
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
@@ -102,6 +114,26 @@ export default function AdminPublishScreen() {
             />
           ) : null}
         </Card>
+
+        {pendingCount > 0 ? (
+          <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
+            <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+              {t('admin.publishPending')}
+            </AppText>
+            {Object.entries(overrides ?? {}).map(([id, patch]) => (
+              <View key={id} style={{ marginBottom: spacing.sm }}>
+                <AppText variant="caption" style={{ fontWeight: '700' }}>
+                  {id}
+                </AppText>
+                {Object.entries(patch).map(([field, value]) => (
+                  <AppText key={field} variant="caption" color={colors.textMuted}>
+                    {field}: {describeValue(value)}
+                  </AppText>
+                ))}
+              </View>
+            ))}
+          </Card>
+        ) : null}
 
         {msg ? (
           <AppText variant="body" center color={colors.primary} style={{ fontWeight: '700' }}>

@@ -41,6 +41,25 @@ function sanitize(value: unknown): unknown {
   return value;
 }
 
+/**
+ * Drops empty top-level values before a write.
+ *
+ * Writes use `{ merge: true }`, so an empty string does not mean "nothing to
+ * say" — it overwrites whatever the cloud holds. A stale `mediaUrl: ''` left
+ * over from an older save wiped a real YouTube link out of an already-published
+ * hymn on 2026-10-27 (publishing that device's single override wrote
+ * `mediaUrl: ""`). Blank values are therefore never sent: the settle path is
+ * the cloud copy, and clearing a field is a separate, explicit action.
+ */
+function withoutBlanks(patch: Partial<Hymn>): Record<string, unknown> {
+  const out: Record<string, unknown> = {};
+  for (const [key, value] of Object.entries(patch)) {
+    if (value === '' || value === null || value === undefined) continue;
+    out[key] = value;
+  }
+  return out;
+}
+
 function requireDb() {
   const db = getFirebaseDb();
   const auth = getFirebaseAuth();
@@ -58,10 +77,14 @@ const messageFor = (code: string): TranslationKey => {
 /** Single-hymn write-through used right after an editor save. */
 export async function publishHymn(id: string, patch: Partial<Hymn>): Promise<boolean> {
   try {
+    const clean = withoutBlanks(patch);
+    // Nothing but blanks: skip the write entirely rather than stamping a
+    // document with an empty update.
+    if (Object.keys(clean).length === 0) return true;
     const db = requireDb();
     await setDoc(
       doc(db, HYMNS_COLLECTION, id),
-      { ...(sanitize(patch) as Record<string, unknown>), updatedAt: new Date().toISOString() },
+      { ...(sanitize(clean) as Record<string, unknown>), updatedAt: new Date().toISOString() },
       { merge: true },
     );
     return true;
@@ -70,11 +93,16 @@ export async function publishHymn(id: string, patch: Partial<Hymn>): Promise<boo
   }
 }
 
-/** Bulk upload of the whole local override set (the Publish button). */export async function publishOverrides(
+/** Bulk upload of the whole local override set (the Publish button). */
+export async function publishOverrides(
   overrides: Record<string, Partial<Hymn>>,
 ): Promise<PublishResult> {
-  const ids = Object.keys(overrides);
-  if (ids.length === 0) return { ok: false, messageKey: 'admin.noChanges', saved: 0 };
+  // Blank-only patches are not documents: they would only stamp `updatedAt`
+  // (and, before the guard, overwrite real fields with empty strings).
+  const entries = Object.entries(overrides)
+    .map(([id, patch]) => [id, withoutBlanks(patch)] as const)
+    .filter(([, clean]) => Object.keys(clean).length > 0);
+  if (entries.length === 0) return { ok: true, messageKey: 'admin.noChanges', saved: 0 };
   let db;
   try {
     db = requireDb();
@@ -84,18 +112,18 @@ export async function publishHymn(id: string, patch: Partial<Hymn>): Promise<boo
   try {
     const stamp = new Date().toISOString();
     // Firestore caps batches at 500 writes — stay well under it.
-    for (let i = 0; i < ids.length; i += 400) {
+    for (let i = 0; i < entries.length; i += 400) {
       const batch = writeBatch(db);
-      for (const id of ids.slice(i, i + 400)) {
+      for (const [id, clean] of entries.slice(i, i + 400)) {
         batch.set(
           doc(db, HYMNS_COLLECTION, id),
-          { ...(sanitize(overrides[id]) as Record<string, unknown>), updatedAt: stamp },
+          { ...(sanitize(clean) as Record<string, unknown>), updatedAt: stamp },
           { merge: true },
         );
       }
       await batch.commit();
     }
-    return { ok: true, messageKey: 'admin.published', saved: ids.length };
+    return { ok: true, messageKey: 'admin.published', saved: entries.length };
   } catch {
     return { ok: false, messageKey: 'admin.publishFailed', saved: 0 };
   }

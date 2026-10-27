@@ -15,6 +15,7 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { getSummaries } from '../../data/loader';
+import { useCanEdit } from '../../hooks/useCanEdit';
 import { useT } from '../../hooks/useT';
 import { FeedbackModal } from '../../components/FeedbackModal';
 import { useTheme } from '../../hooks/useTheme';
@@ -36,6 +37,9 @@ export default function MoreScreen() {
   const router = useRouter();
   const { t } = useT();
   const { colors } = useTheme();
+  // Admin is only for listed admin accounts (or the offline PIN gate): a
+  // signed-in visitor with any other account must not see the entry at all.
+  const canEdit = useCanEdit();
 
   const [feedbackVisible, setFeedbackVisible] = useState(false);
 
@@ -86,7 +90,11 @@ export default function MoreScreen() {
     { icon: 'email-outline', label: 'more.contactUs', onPress: notConfigured },
   ];
 
-  const visibleItems = items.filter((item) => item.label !== 'more.structure' || hasMeter);
+  const visibleItems = items.filter(
+    (item) =>
+      (item.label !== 'more.structure' || hasMeter) &&
+      (item.label !== 'more.admin' || canEdit),
+  );
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
