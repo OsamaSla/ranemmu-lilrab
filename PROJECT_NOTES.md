@@ -317,6 +317,19 @@ public web API key are fine; test writes belong in the emulator.
     `/ranemmu-lilrab/admin-edit?id=h0001`. Proven on 2026-10-26 to look at the
     verse editor; React error #418 in that build is expected (pre-rendered hymn
     HTML renders the loading shell).
+14. **Editor saves DO reach Firestore — verify before debugging the UI.**
+    `hymns/{id}` is `allow read: if true` (`firestore.rules:27`), so a plain
+    REST read with the public web key is enough to confirm a write landed:
+    `GET https://firestore.googleapis.com/v1/projects/ranemmu-lilrab/databases/(default)/documents/hymns/h0002?key=<apiKey>`
+    (checked 2026-10-27: the hymn carried the admin's YouTube `mediaUrl` and a
+    fresh `updatedAt`). Ratings are a second, independent connectivity probe —
+    `feedbacks` allows anonymous create, which is why "تقييم التطبيق" works even
+    when hymn sync looks broken. When the cloud has the value but a device does
+    not, it is the local overlay, not Firebase: `loader.mergedPatch` used to let
+    a blank local field (`mediaUrl: ''` from any earlier save) outrank real
+    cloud data, and `liveSync` stamped the watermark with the device clock
+    (`new Date()`) instead of the newest `updatedAt` received, so a fast clock
+    skipped edits. All three are fixed in `aa...`/current `main`.
 
 ## 11. Known issues / cleanup candidates
 

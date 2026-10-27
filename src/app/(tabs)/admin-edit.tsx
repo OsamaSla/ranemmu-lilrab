@@ -283,49 +283,77 @@ export default function AdminEditScreen() {
         return;
       }
     }
-    const patch = {
-      translationStatus: form.verified ? ('VERIFIED' as const) : ('AI_DRAFT' as const),
+    // Send only the fields that actually changed. A full patch carries the
+    // current value of untouched fields too — including blank ones such as an
+    // empty mediaUrl — and a local override outranks cloud data on this device,
+    // so it would mask a link another device adds later (observed: a YouTube
+    // URL landed in Firestore but stayed empty on the second device).
+    const patch: Partial<NonNullable<typeof hymn>> = {};
+    const changed = (before: unknown, after: unknown) =>
+      JSON.stringify(before) !== JSON.stringify(after);
+    const nextText = {
       title: form.title.trim(),
       author: form.author.trim(),
       authorOriginal: form.authorOriginal.trim(),
       meter: form.meter.trim(),
       chorus: form.chorus.trim(),
       mediaUrl: mediaTrimmed,
-      // Clearing the primary is not expressible through the overlay merge
-      // (`??` falls back to the bundled value), so "no topic" keeps the
-      // existing one — setting and retagging always work.
-      ...(form.primaryTopic ? { primaryTopic: form.primaryTopic as TopicId } : {}),
-      topics: form.topics.filter((x) => x !== form.primaryTopic),
-      verses: hymn.verses.map((verse, i) => ({ ...verse, lines: form.lines[i].map((l) => l.trim()) })),
-      ...(hasEn
-        ? {
-            title_en: form.title_en.trim(),
-            chorus_en: form.chorus_en.trim(),
-            ...(hymn.verses_en
-              ? {
-                  verses_en: hymn.verses_en.map((verse, i) => ({
-                    ...verse,
-                    lines: form.linesEn[i].map((l) => l.trim()),
-                  })),
-                }
-              : {}),
-          }
-        : {}),
-      ...(hasDe
-        ? {
-            title_de: form.title_de.trim(),
-            chorus_de: form.chorus_de.trim(),
-            ...(hymn.verses_de
-              ? {
-                  verses_de: hymn.verses_de.map((verse, i) => ({
-                    ...verse,
-                    lines: form.linesDe[i].map((l) => l.trim()),
-                  })),
-                }
-              : {}),
-          }
-        : {}),
     };
+    for (const key of Object.keys(nextText) as (keyof typeof nextText)[]) {
+      if (changed(hymn[key], nextText[key])) patch[key] = nextText[key];
+    }
+    const status = form.verified ? ('VERIFIED' as const) : ('AI_DRAFT' as const);
+    if (changed(hymn.translationStatus ?? 'AI_DRAFT', status)) patch.translationStatus = status;
+    // Clearing the primary is not expressible through the overlay merge
+    // (`??` falls back to the bundled value), so "no topic" keeps the
+    // existing one — setting and retagging always work.
+    if (form.primaryTopic && changed(hymn.primaryTopic, form.primaryTopic)) {
+      patch.primaryTopic = form.primaryTopic as TopicId;
+    }
+    const topics = form.topics.filter((x) => x !== form.primaryTopic);
+    if (changed(hymn.topics ?? [], topics)) patch.topics = topics;
+    const verses = hymn.verses.map((verse, i) => ({
+      ...verse,
+      lines: form.lines[i].map((l) => l.trim()),
+    }));
+    if (changed(hymn.verses.map((v) => v.lines), verses.map((v) => v.lines))) {
+      patch.verses = verses;
+    }
+    if (hasEn) {
+      if (changed(hymn.title_en, form.title_en.trim())) patch.title_en = form.title_en.trim();
+      if (changed(hymn.chorus_en, form.chorus_en.trim())) patch.chorus_en = form.chorus_en.trim();
+      if (hymn.verses_en) {
+        const versesEn = hymn.verses_en.map((verse, i) => ({
+          ...verse,
+          lines: form.linesEn[i].map((l) => l.trim()),
+        }));
+        if (changed(hymn.verses_en.map((v) => v.lines), versesEn.map((v) => v.lines))) {
+          patch.verses_en = versesEn;
+        }
+      }
+    }
+    if (hasDe) {
+      if (changed(hymn.title_de, form.title_de.trim())) patch.title_de = form.title_de.trim();
+      if (changed(hymn.chorus_de, form.chorus_de.trim())) patch.chorus_de = form.chorus_de.trim();
+      if (hymn.verses_de) {
+        const versesDe = hymn.verses_de.map((verse, i) => ({
+          ...verse,
+          lines: form.linesDe[i].map((l) => l.trim()),
+        }));
+        if (changed(hymn.verses_de.map((v) => v.lines), versesDe.map((v) => v.lines))) {
+          patch.verses_de = versesDe;
+        }
+      }
+    }
+
+    if (Object.keys(patch).length === 0) {
+      // Nothing changed: writing an empty override would upload a no-op
+      // document and keep masking fresher cloud values on this device.
+      setMsg(t('admin.saved'));
+      setSavedOnce(true);
+      setDirty(false);
+      return;
+    }
     setOverride(hymn.id, patch);
     // Best-effort live upload: silent when offline, unconfigured or signed
     // out — the local save above is the source of truth either way.

@@ -77,7 +77,19 @@ function mergedPatch(id: string): Partial<Hymn> | undefined {
   const remote = useRemote.getState().patches[id];
   const local = overlayReader()[id];
   if (!remote && !local) return undefined;
-  return { ...remote, ...local };
+  if (!remote || !local) return { ...remote, ...local };
+  const merged: Partial<Hymn> = { ...remote, ...local };
+  // A blank local value means "nothing set", not a deliberate clear, so it
+  // must not hide real cloud data. Without this, any device that once saved a
+  // hymn with an empty field (a blank mediaUrl) kept masking a link added from
+  // another device — the cloud had the URL, the reader stayed empty.
+  for (const [key, value] of Object.entries(local)) {
+    const cloud = (remote as Record<string, unknown>)[key];
+    if (value === '' && typeof cloud === 'string' && cloud !== '') {
+      (merged as Record<string, unknown>)[key] = cloud;
+    }
+  }
+  return merged;
 }
 
 /** Applies an admin overlay patch to a summary (topic fields included). */

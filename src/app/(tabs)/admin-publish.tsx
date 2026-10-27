@@ -24,6 +24,7 @@ export default function AdminPublishScreen() {
   const { colors } = useTheme();
 
   const overrides = useOverrides((s) => s.overrides);
+  const clearAll = useOverrides((s) => s.clearAll);
   const sessionUser = useSession((s) => s.user);
   const signOut = useSession((s) => s.signOut);
 
@@ -38,6 +39,10 @@ export default function AdminPublishScreen() {
     setMsg(t('admin.publishing'));
     const result = await publishOverrides(overrides);
     setPublishing(false);
+    // Everything local is in Firestore now, so the local copies only risk
+    // masking fresher cloud data (an old empty mediaUrl, for example). The
+    // live listener re-applies them from the cloud a moment later.
+    if (result.ok) clearAll();
     setMsg(
       result.messageKey === 'admin.published'
         ? `${t(result.messageKey)} (${result.saved})`

@@ -67,10 +67,16 @@ export function startLiveSync(): () => void {
       const baseline = await readLastSync();
       const q = query(collection(db, HYMNS_COLLECTION), where('updatedAt', '>', baseline));
       const snap = await getDocs(q);
+      let newest = '';
       if (!snap.empty) {
-        useRemote.getState().applyDocs(
-          snap.docs.map((d) => ({ id: d.id, data: d.data() as Record<string, unknown> })),
-        );
+        const docs = snap.docs.map((d) => {
+          const data = d.data() as Record<string, unknown>;
+          if (typeof data.updatedAt === 'string' && data.updatedAt > newest) {
+            newest = data.updatedAt;
+          }
+          return { id: d.id, data };
+        });
+        useRemote.getState().applyDocs(docs);
         refreshOverlaidCorpus();
       }
       // Shared tombstones (admin deletions): one tiny document, fetched
@@ -87,7 +93,11 @@ export function startLiveSync(): () => void {
       } catch {
         // Missing doc or offline — nothing deleted yet, carry on.
       }
-      writeLastSync(new Date().toISOString());
+      // Advance the watermark to the newest timestamp actually received — never
+      // to the device clock. A clock running ahead would move the marker past
+      // edits written just before this sync, and those never arrive (observed:
+      // a saved YouTube URL stayed empty on the second device).
+      if (newest) writeLastSync(newest);
       const stops: (() => void)[] = [];
       stops.push(
         onSnapshot(

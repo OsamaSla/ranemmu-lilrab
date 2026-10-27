@@ -55,6 +55,9 @@ export default function AdminReviewScreen() {
       .slice().sort((a, b) => a.number - b.number)
       .map((h) => ({ id: h.id, number: h.number, title: h.title, book: bookOf(h), status: statusOf(h) as keyof typeof STATUS_LABELS }));
     return { items, total: all.length, verified };
+    // `overrides`, `remoteVersion` and `chunksVersion` are deliberate re-run
+    // triggers: getCorpus() is a mutable read, not a value React can track.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [overrides, remoteVersion, reviewLang, reviewFilter, reviewBook, searchQuery, chunksVersion]);
 
   const filters = [
