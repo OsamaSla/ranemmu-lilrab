@@ -4,7 +4,9 @@ Living knowledge base for agents and humans. **Read this before exploring the
 repo** — it exists so `npm ci`, live Firebase probes and file-by-file reading
 are not repeated every session.
 
-- **Last verified:** 2026-10-26, commits `218a868` (interleaved per-line verse
+- **Last verified:** 2026-10-27, commit `6203977` (cloud-sync honesty: sync
+  watermark grace window, upload failures surfaced in the editor, cloud status
+  banner on the publish tab — see §7 #14-16). Before that 2026-10-26, commits `218a868` (interleaved per-line verse
   editor with language filters and sticky save), `7f1ab7b` (one frame with section
   ruler), `b24a1e5` (ratings screen), `23e42c8` (drop push helper); live site
   deployed and checked signed-out (locked editor routes, no reader edit button). Same day: the
