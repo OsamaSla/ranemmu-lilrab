@@ -1,0 +1,212 @@
+/**
+ * Corpus validation shared by the build and the standalone check.
+ *
+ * Run directly with: npm run check:hymns
+ */
+import { TOPIC_IDS } from './topic-keywords.mjs';
+
+/**
+ * Arabic letters that must never appear in hymn content. These are the result
+ * of a mangled copy/paste through a non-Unicode-aware editor and are very easy
+ * to miss by eye, so they are checked mechanically.
+ */
+const NON_ARABIC_LETTERS = /[A-Za-z\p{Script=Latin}가-힯぀-ヿ一-鿿]/u;
+
+/**
+ * LTR text that *is* legitimate: metre cadences like "87.87.87", the human
+ * translation fields (checked structurally, not by alphabet), the foreign
+ * original author, and transliterated Arabic author names hymnary only
+ * lists in Latin (a correct transliteration beats a guessed Arabic spelling).
+ */
+const ALLOWED_LATIN_FIELDS = new Set([
+  'meter',
+  'book',
+  'mediaUrl',
+  'primaryTopic',
+  'title_en', 'chorus_en',
+  'title_de', 'chorus_de',
+  'author', 'authorOriginal',
+]);
+
+/** Harakat range, kept for the vocalisation-coverage report in check-hymns. */
+export const DIACRITICS = /[ؐ-ًؚ-ٰٟۖ-ۭ]/;
+
+function isBlank(value) {
+  return value === undefined || value === null || String(value).trim() === '';
+}
+
+const PLACEHOLDER_RE = /\u2026/;
+
+function placeholderIn(field, value, where) {
+  if (typeof value === 'string' && PLACEHOLDER_RE.test(value)) {
+    return `${where}: '${field}' contains … — unfilled template placeholder?`;
+  }
+  return null;
+}
+
+/**
+ * Validates a raw hymn array, returning a list of human-readable problems.
+ * An empty array means the corpus is good.
+ */
+export function validateCorpus(hymns) {
+  const issues = [];
+  const seenNumbers = new Map();
+  const seenIds = new Map();
+
+  if (!Array.isArray(hymns)) {
+    return ['corpus: expected an array of hymns'];
+  }
+  if (hymns.length === 0) {
+    return ['corpus: no hymns found'];
+  }
+
+  hymns.forEach((hymn, i) => {
+    const at = `hymn[${i}]`;
+    const book = hymn.book ?? 'main';
+
+    if (typeof hymn.number !== 'number' || !Number.isInteger(hymn.number) || hymn.number < 1) {
+      issues.push(`${at}: 'number' must be a positive integer (got ${JSON.stringify(hymn.number)})`);
+    }
+
+    if (isBlank(hymn.title)) {
+      issues.push(`${at} (${hymn.number ?? '?'}): missing 'title'`);
+    } else {
+      const ph = placeholderIn('title', hymn.title, `${at} (${hymn.number})`);
+      if (ph) issues.push(ph);
+    }
+
+    if (hymn.id !== undefined) {
+      if (seenIds.has(hymn.id)) {
+        issues.push(`${at}: duplicate id '${hymn.id}' (also at ${seenIds.get(hymn.id)})`);
+      } else {
+        seenIds.set(hymn.id, at);
+      }
+    }
+
+    if (typeof hymn.number === 'number') {
+      const key = `${book}:${hymn.number}`;
+      if (seenNumbers.has(key)) {
+        issues.push(`${at}: duplicate number ${hymn.number} in book '${book}' (also at ${seenNumbers.get(key)})`);
+      } else {
+        seenNumbers.set(key, at);
+      }
+    }
+
+    // Latin text is only legitimate in a handful of metadata fields. Finding it
+    // in a title or verse means mojibake or an untranslated placeholder.
+    for (const [field, value] of Object.entries(hymn)) {
+      if (typeof value !== 'string' || value === '') continue;
+      if (ALLOWED_LATIN_FIELDS.has(field)) continue;
+      if (NON_ARABIC_LETTERS.test(value)) {
+        const hit = NON_ARABIC_LETTERS.exec(value);
+        issues.push(`${at} (${hymn.number}): stray non-Arabic character '${hit[0]}' in '${field}': ${JSON.stringify(value.slice(0, 60))}`);
+      }
+    }
+
+    if (!Array.isArray(hymn.verses) || hymn.verses.length === 0) {
+      issues.push(`${at} (${hymn.number ?? '?'}): missing or empty 'verses'`);
+      return;
+    }
+
+    hymn.verses.forEach((verse, v) => {
+      const vat = `${at}.verses[${v}]`;
+
+      if (isBlank(verse.label)) {
+        issues.push(`${vat}: missing stanza 'label'`);
+      }
+      if (!Array.isArray(verse.lines) || verse.lines.length === 0) {
+        issues.push(`${vat}: missing or empty 'lines'`);
+        return;
+      }
+      verse.lines.forEach((line, l) => {
+        if (isBlank(line)) {
+          issues.push(`${vat}.lines[${l}]: empty line`);
+          return;
+        }
+        if (NON_ARABIC_LETTERS.test(line)) {
+          const hit = NON_ARABIC_LETTERS.exec(line);
+          issues.push(`${vat}.lines[${l}]: stray non-Arabic character '${hit[0]}': ${JSON.stringify(line.slice(0, 60))}`);
+        }
+        const ph = placeholderIn('line', line, `${vat}.lines[${l}]`);
+        if (ph) issues.push(ph);
+      });
+    });
+
+    // Translations mirror the Arabic stanza-for-stanza so indices, refs and
+    // the reader's fallback stay aligned. Only structure is checked here —
+    // the Arabic-only letter rules above must not run on foreign text.
+    for (const lang of ['en', 'de']) {
+      const key = `verses_${lang}`;
+      const tv = hymn[key];
+      if (tv === undefined) continue;
+      if (!Array.isArray(tv) || tv.length !== hymn.verses.length) {
+        issues.push(
+          `${at} (${hymn.number}): '${key}' has ${Array.isArray(tv) ? tv.length : 'no'} stanzas vs ${hymn.verses.length} in Arabic — must match one-to-one`,
+        );
+        continue;
+      }
+      tv.forEach((verse, v) => {
+        const vat = `${at}.${key}[${v}]`;
+        if (!Array.isArray(verse.lines) || verse.lines.length === 0) {
+          issues.push(`${vat}: missing or empty 'lines'`);
+          return;
+        }
+        if (verse.lines.length !== hymn.verses[v].lines.length) {
+          issues.push(
+            `${vat}: ${verse.lines.length} lines vs ${hymn.verses[v].lines.length} in Arabic stanza ${v + 1} — must match`,
+          );
+        }
+        verse.lines.forEach((line, l) => {
+          if (isBlank(line)) issues.push(`${vat}.lines[${l}]: empty line`);
+          const ph = placeholderIn('line', line, `${vat}.lines[${l}]`);
+          if (ph) issues.push(ph);
+        });
+      });
+    }
+
+    if (hymn.chorus !== undefined && isBlank(hymn.chorus)) {
+      issues.push(`${at}: 'chorus' present but blank — omit the key instead`);
+    }
+
+    // Curated melody link: optional, but when present it must be a real URL
+    // (the reader opens it directly; blanks fall back to YouTube search).
+    if (hymn.mediaUrl !== undefined) {
+      if (typeof hymn.mediaUrl !== 'string' || isBlank(hymn.mediaUrl)) {
+        issues.push(`${at}: 'mediaUrl' present but blank — omit the key instead`);
+      } else if (!/^https?:\/\/\S+\.\S+/.test(hymn.mediaUrl.trim())) {
+        issues.push(
+          `${at} (${hymn.number}): 'mediaUrl' must be an http(s) URL (got ${JSON.stringify(hymn.mediaUrl.slice(0, 60))})`,
+        );
+      }
+    }
+
+    // Topic classification: one primary + secondary tags, all from the
+    // taxonomy, never duplicated across the two fields.
+    if (hymn.primaryTopic !== undefined && !TOPIC_IDS.includes(hymn.primaryTopic)) {
+      issues.push(`${at} (${hymn.number}): unknown 'primaryTopic' '${hymn.primaryTopic}'`);
+    }
+    if (hymn.topics !== undefined) {
+      if (!Array.isArray(hymn.topics)) {
+        issues.push(`${at} (${hymn.number}): 'topics' must be an array`);
+      } else {
+        for (const tag of hymn.topics) {
+          if (!TOPIC_IDS.includes(tag)) {
+            issues.push(`${at} (${hymn.number}): unknown secondary topic '${tag}'`);
+          } else if (tag === hymn.primaryTopic) {
+            issues.push(`${at} (${hymn.number}): '${tag}' is both primary and secondary — keep it primary only`);
+          }
+        }
+        if (new Set(hymn.topics).size !== hymn.topics.length) {
+          issues.push(`${at} (${hymn.number}): duplicate entries in 'topics'`);
+        }
+      }
+    }
+  });
+
+  return issues;
+}
+
+/** Formats issues as an indented, numbered list for terminal output. */
+export function formatIssues(issues) {
+  return issues.map((issue, i) => `  ${i + 1}. ${issue}`).join('\n');
+}
