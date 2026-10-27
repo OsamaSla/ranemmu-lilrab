@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الماء: يطفو أم يغرق؟ | مستكشفون صغار</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+<nav class="topnav"><a href="index.html">🏠 الرئيسية</a><span>الدرس 1: الماء 💧</span></nav>
+
+<main class="container">
+  <header class="lesson-head">
+    <div class="lesson-emoji">💧</div>
+    <h1>الماء: يطفو أم يغرق؟</h1>
+    <p class="subtitle">السؤال الكبير: <strong>لماذا تطفو التفاحة وتغرق الحجارة؟</strong></p>
+  </header>
+
+  <!-- 1. WATCH -->
+  <section class="card">
+    <h2><span class="pill">1</span> شاهِد 👀 (2 دقائق)</h2>
+    <div class="video-box" id="videoBox">
+      <video id="teacherVideo" controls preload="metadata" playsinline>
+        <source src="videos/teacher-01-maa.mp4" type="video/mp4">
+      </video>
+      <div class="video-fallback" id="videoFallback">
+        <div class="big-play">▶️</div>
+        <p><strong>هنا سيظهر فيديو المعلمة</strong></p>
+        <p class="small">ضعي الملف باسم:<br><code>videos/teacher-01-maa.mp4</code><br>ثم حدّثي الصفحة. حالياً هذا مثال تجريبي.</p>
+        <button class="btn btn-ghost" id="demoPlayBtn">شغّلي مثال تجريبي 🎬</button>
+      </div>
+    </div>
+    <p class="hint">💡 للأهل: شاهدوا الفيديو مع الطفل مرة واحدة واسألوه: «شو بتتوقع؟» قبل التجربة.</p>
+  </section>
+
+  <!-- 2. DO -->
+  <section class="card">
+    <h2><span class="pill">2</span> جرّب بالبيت 🧪 (10 دقائق)</h2>
+    <p>تحتاجون: طشت ماء + تفاحة + حجر صغير + ملعقة خشب + غطاء بلاستيك</p>
+    <div class="exp-steps">
+      <div class="exp"><div class="exp-e">🍎</div><h3>خطوة 1</h3><p>ضع التفاحة بالماء. شو صار؟</p><p class="say">قول: «التفاحة تطفو!»</p></div>
+      <div class="exp"><div class="exp-e">🪨</div><h3>خطوة 2</h3><p>ضع الحجر بحذر. شو صار؟</p><p class="say">قول: «الحجر يغرق!»</p></div>
+      <div class="exp"><div class="exp-e">🥄</div><h3>خطوة 3</h3><p>جرّب الملعقة والغطاء. توقّع أولاً!</p><p class="say">قول: «أنا توقعت ... واكتشفت ...»</p></div>
+    </div>
+    <div class="safety">⚠️ قاعدة الأمان: بدون ركض بالماء، والكبار فقط يحملون الطشت.</div>
+  </section>
+
+  <!-- QUIZ -->
+  <section class="card quiz" id="quiz">
+    <h2><span class="pill">★</span> لعبة سريعة: صح أم خطأ؟</h2>
+    <p class="q" id="quizQ">هل يطفو الخشب على الماء؟</p>
+    <div class="quiz-btns">
+      <button class="btn btn-yes" data-answer="yes">✅ صح — يطفو</button>
+      <button class="btn btn-no" data-answer="no">❌ خطأ — يغرق</button>
+    </div>
+    <p class="quiz-feedback" id="quizFeedback">اختار إجابتك يا بطل! 🦸</p>
+    <div class="quiz-row">
+      <button class="btn btn-ghost" id="nextQBtn">سؤال جديد 🔄</button>
+      <button class="btn btn-ghost" onclick="window.print()">🖨️ اطبع البطاقة</button>
+    </div>
+  </section>
+
+  <!-- 3. SEND -->
+  <section class="card send-card">
+    <h2><span class="pill">3</span> صوّر وأرسل 📱 (دقيقة واحدة)</h2>
+    <p>صوّروا الطفل <strong>بالعرض</strong> وهو يقول:</p>
+    <div class="script">«أنا <u>ليان</u> واكتشفت أن <u>التفاحة تطفو والحجر يغرق</u>!»</div>
+    <a href="#" class="btn btn-whatsapp" id="waBtn">📩 أرسل الفيديو واتساب للمعلمة</a>
+    <p class="small">سمّوا الفيديو: <code>اسم الطفل-الصف-الماء.mp4</code><br>مثال: <code>ليان-1ب-الماء.mp4</code></p>
+  </section>
+
+  <!-- STARS -->
+  <section class="card stars">
+    <h2>⭐ نجوم الأسبوع — بدون صور (خصوصية)</h2>
+    <div class="stars-grid">
+      <div class="star">🌟<br><strong>ليان 1ب</strong><br><span>«التفاحة تطفو!»</span></div>
+      <div class="star">🌟<br><strong>أحمد 1أ</strong><br><span>«الخشب يطفو!»</span></div>
+      <div class="star">🌟<br><strong>نور 1ب</strong><br><span>«الغطاء يطفو!»</span></div>
+    </div>
+    <p class="small">فيديوهات الأطفال الكاملة تُعرض في الصف فقط. هنا نكتب الأسماء الأولى للتشجيع.</p>
+  </section>
+
+  <div class="nav-row">
+    <a href="index.html" class="btn btn-ghost">⬅️ كل المواضيع</a>
+    <a href="#" class="btn btn-ghost" onclick="alert('الدرس القادم: حواسي الخمسة 👀 — قريباً!');return false;">الدرس القادم ➡️</a>
+  </div>
+</main>
+
+<footer><p>مستكشفون صغار 🌱 — درس الماء | نسخة تجريبية</p></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
