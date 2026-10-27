@@ -98,6 +98,8 @@ export const de: PartialDictionary = {
   'admin.notFound': 'Lied nicht gefunden',
   'admin.save': 'Änderungen speichern',
   'admin.saved': 'Nur auf diesem Gerät gespeichert',
+  'admin.syncFailed': 'Auf dem Gerät gespeichert — Cloud-Upload fehlgeschlagen, Anmeldung und Verbindung prüfen',
+  'admin.syncNoAuth': 'Nur auf diesem Gerät gespeichert — zum Hochladen anmelden',
   'admin.newPin': 'Neue PIN (4 Ziffern)',
   'admin.pinSaved': 'PIN geändert',
   'admin.publishTitle': 'Cloud veröffentlichen',

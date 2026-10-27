@@ -39,9 +39,23 @@ function readDeletedIds(data: unknown): string[] | null {
 
 let started = false;
 
+/**
+ * How far back the query reaches before the stored marker. The marker used to
+ * be stamped from the device clock, so a device whose clock ran ahead holds a
+ * marker *after* edits that are still pending — those were never fetched. A
+ * day of overlap costs a handful of reads per launch and lets such devices
+ * recover on their own.
+ */
+const SYNC_GRACE_MS = 24 * 60 * 60 * 1000;
+
 async function readLastSync(): Promise<string> {
   try {
-    return (await AsyncStorage.getItem(LAST_SYNC_KEY)) ?? BUNDLED_AT;
+    const stored = await AsyncStorage.getItem(LAST_SYNC_KEY);
+    if (!stored) return BUNDLED_AT;
+    const at = Date.parse(stored);
+    if (Number.isNaN(at)) return BUNDLED_AT;
+    const from = new Date(at - SYNC_GRACE_MS).toISOString();
+    return from > BUNDLED_AT ? from : BUNDLED_AT;
   } catch {
     return BUNDLED_AT;
   }

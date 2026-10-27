@@ -18,6 +18,7 @@ import { EmptyState } from '../../components/EmptyState';
 import { TextButton } from '../../components/TextButton';
 import { TopicPicker } from '../../components/TopicPicker';
 import { getHymn, ensureHymn, isHymnPending } from '../../data/loader';
+import { isFirebaseConfigured, getFirebaseAuth } from '../../data/firebase';
 import { syncHymnToCloud } from '../../data/liveSync';
 import { isValidMediaUrl } from '../../data/media';
 import type { TopicId } from '../../data/topics';
@@ -312,9 +313,14 @@ export default function AdminEditScreen() {
     }
     const topics = form.topics.filter((x) => x !== form.primaryTopic);
     if (changed(hymn.topics ?? [], topics)) patch.topics = topics;
+    // Missing form rows (a verse added by another device mid-edit) fall back
+    // to the current text instead of throwing — a throw here would abort the
+    // save after the user saw "saved".
+    const linesAt = (source: string[][] | undefined, i: number, fallback: string[]) =>
+      (source?.[i] ?? fallback).map((l) => l.trim());
     const verses = hymn.verses.map((verse, i) => ({
       ...verse,
-      lines: form.lines[i].map((l) => l.trim()),
+      lines: linesAt(form.lines, i, verse.lines),
     }));
     if (changed(hymn.verses.map((v) => v.lines), verses.map((v) => v.lines))) {
       patch.verses = verses;
@@ -325,7 +331,7 @@ export default function AdminEditScreen() {
       if (hymn.verses_en) {
         const versesEn = hymn.verses_en.map((verse, i) => ({
           ...verse,
-          lines: form.linesEn[i].map((l) => l.trim()),
+          lines: linesAt(form.linesEn, i, verse.lines),
         }));
         if (changed(hymn.verses_en.map((v) => v.lines), versesEn.map((v) => v.lines))) {
           patch.verses_en = versesEn;
@@ -338,7 +344,7 @@ export default function AdminEditScreen() {
       if (hymn.verses_de) {
         const versesDe = hymn.verses_de.map((verse, i) => ({
           ...verse,
-          lines: form.linesDe[i].map((l) => l.trim()),
+          lines: linesAt(form.linesDe, i, verse.lines),
         }));
         if (changed(hymn.verses_de.map((v) => v.lines), versesDe.map((v) => v.lines))) {
           patch.verses_de = versesDe;
@@ -355,12 +361,16 @@ export default function AdminEditScreen() {
       return;
     }
     setOverride(hymn.id, patch);
-    // Best-effort live upload: silent when offline, unconfigured or signed
-    // out — the local save above is the source of truth either way.
-    void syncHymnToCloud(hymn.id, patch);
     setMsg(t('admin.saved'));
     setSavedOnce(true);
     setDirty(false);
+    // Best-effort live upload: the local save above is the source of truth, so
+    // a failure must not block the editor — but it must be *visible*. Silence
+    // here is what made "I saved it" and "the cloud has nothing" look the same.
+    void syncHymnToCloud(hymn.id, patch).then((synced) => {
+      if (synced || !isFirebaseConfigured) return;
+      setMsg(t(getFirebaseAuth()?.currentUser ? 'admin.syncFailed' : 'admin.syncNoAuth'));
+    });
   };
 
   return (

@@ -62,6 +62,15 @@ export default function AdminPublishScreen() {
               {t('admin.signedInAs')} {sessionUser.email}
             </AppText>
           ) : null}
+          {isFirebaseConfigured && !sessionUser ? (
+            <AppText
+              variant="caption"
+              color={colors.primary}
+              style={{ marginBottom: spacing.sm, fontWeight: '700' }}
+            >
+              {t('admin.notSignedIn')} — {t('admin.syncNoAuth')}
+            </AppText>
+          ) : null}
           {pendingCount > 0 ? (
             <AdminButton
               label={publishing ? t('admin.publishing') : t('admin.publishNow')}
