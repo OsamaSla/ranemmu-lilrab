@@ -1,0 +1,17 @@
+{
+  "expo": {
+    "name": "رنموا للرب",
+    "slug": "ranemmu-lilrab",
+    "scheme": "ranemmu-lilrab",
+    "web": {
+      "bundler": "metro",
+      "output": "static"
+    },
+    "router": {
+      "origin": "https://OsamaSla.github.io/ranemmu-lilrab"
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
