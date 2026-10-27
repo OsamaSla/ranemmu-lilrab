@@ -354,10 +354,20 @@ public web API key are fine; test writes belong in the emulator.
     pressing publish wrote `mediaUrl: ""` over a good YouTube link
     (`updatedAt 04:39:45`, read back over REST). The UI showed
     "تم الحفظ في السحابة (1)" — a truthful success message about a destructive
-    write. Publish/publishHymn now strip blank values (`withoutBlanks` in
-    `data/publish.ts`) and skip blank-only patches entirely, so a stale blank
-    can never overwrite cloud content. Consequence: clearing a link on purpose
-    is no longer expressible from the editor — tracked in §11.
+    write. Current rule in `data/publish.ts`: `''` in a patch means *the admin
+    cleared this field* and is written as `deleteField()` (`toWrite`), so a
+    clear reaches the cloud while no blank string is ever stored for another
+    device to re-publish. `publishHymn`/`publishOverrides` then read the
+    document back with `getDocFromServer` and compare it field by field
+    (`matchesWrite`); "تم الرفع للسحابة والتحقق" is only shown when the cloud
+    really holds the change (`admin.publishMismatch` otherwise).
+20. **A local override used to outrank the cloud forever.** That is why "the PC
+    didn't update": the PC had published its own 14-entry override set, so its
+    local copy (old `mediaUrl`) beat every newer cloud document. Overrides now
+    carry `savedAt` (`store/overrides.ts`) and `dropIfNewerInCloud` deletes a
+    local copy as soon as a document with a newer `updatedAt` arrives — last
+    write wins per hymn. Legacy entries without `savedAt` are treated as oldest,
+    so they are cleaned on the first sync.
 18. **Being signed in is not being an admin.** Until 2026-10-27 every existing
     Firebase account unlocked الإدارة and passed `request.auth != null` in the
     rules. Gating is now an e-mail allowlist on both sides:
@@ -380,10 +390,6 @@ public web API key are fine; test writes belong in the emulator.
     immediately instead of surfacing days later as "the PC didn't update".
 
 ## 11. Known issues / cleanup candidates
-
-- Clearing a hymn field on purpose (removing a wrong YouTube link) cannot reach
-  the cloud: blank values are never uploaded (§7 #17). Needs an explicit
-  "clear field" action that writes a documented sentinel instead of `''`.
 - Admin hymn delete, "contact us", clear-recents use `Alert` → no-ops on web
   (see §7). `recents.tsx` clears without any confirmation, unlike settings.
 - Search lives only in `library.tsx` (no separate route): digits are a summary

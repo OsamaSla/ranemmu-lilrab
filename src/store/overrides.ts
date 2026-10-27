@@ -5,9 +5,15 @@
  * every confirmed edit lands here (persisted to AsyncStorage) and
  * src/data/loader merges the patches over the bundled records — the change
  * is visible in the reader, lists and search immediately. Edits additionally
- * sync to Firestore (best-effort write-through plus the Publish button),
- * and Firestore patches stream back in as remote overlays, so one admin's
- * save appears on every device within seconds.
+ * sync to Firestore (write-through plus the Publish button), and Firestore
+ * patches stream back in as remote overlays, so one admin's save appears on
+ * every device within seconds.
+ *
+ * An override is only a *temporary* local copy: every entry carries the time
+ * it was written (`savedAt`), and `dropIfNewerInCloud` removes it as soon as a
+ * newer cloud version of the same hymn arrives. Without that, a device kept
+ * re-applying its own old copy forever — published from the PC, edited on the
+ * phone, and the PC still showed the pre-edit text.
  */
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
@@ -19,6 +25,8 @@ import type { Hymn } from '../data/types';
 interface OverridesState {
   /** Patches by stable hymn id. Only text-level fields are ever written. */
   overrides: Record<string, Partial<Hymn>>;
+  /** When each override was written on this device (ISO), for last-write-wins. */
+  savedAt: Record<string, string>;
   /**
    * Tombstoned hymn ids (admin deletions). Monotonic — never shrunk by
    * sync, only by explicit local clear — so a deleted hymn stays hidden
@@ -31,6 +39,13 @@ interface OverridesState {
   setOverride: (id: string, patch: Partial<Hymn>) => void;
   removeOverride: (id: string) => void;
   clearAll: () => void;
+  /**
+   * Drops local overrides that the cloud has superseded. `cloudStamps` maps a
+   * hymn id to the `updatedAt` of the document just received; anything newer
+   * than the local write wins (including the removal of a field), so a stale
+   * local copy can never mask fresher cloud data.
+   */
+  dropIfNewerInCloud: (cloudStamps: Record<string, string>) => void;
   markDeleted: (id: string) => void;
   /** Union-merge ids synced from Firestore (remote deletions win by union). */
   mergeDeletedIds: (ids: string[]) => void;
@@ -38,14 +53,16 @@ interface OverridesState {
 
 export const useOverrides = create<OverridesState>()(
   persist(
-    (set) => ({
+    (set, get) => ({
       overrides: {},
+      savedAt: {},
       deletedIds: [],
       updatedAt: 0,
 
       setOverride: (id, patch) => {
         set((state) => ({
           overrides: { ...state.overrides, [id]: { ...state.overrides[id], ...patch } },
+          savedAt: { ...(state.savedAt ?? {}), [id]: new Date().toISOString() },
           updatedAt: state.updatedAt + 1,
         }));
         refreshOverlaidCorpus();
@@ -54,15 +71,38 @@ export const useOverrides = create<OverridesState>()(
       removeOverride: (id) => {
         set((state) => {
           const next = { ...state.overrides };
+          const stamps = { ...(state.savedAt ?? {}) };
           delete next[id];
-          return { overrides: next, updatedAt: state.updatedAt + 1 };
+          delete stamps[id];
+          return { overrides: next, savedAt: stamps, updatedAt: state.updatedAt + 1 };
         });
         refreshOverlaidCorpus();
       },
 
       clearAll: () => {
         // Tombstones survive: clearing them would resurrect deleted hymns.
-        set((state) => ({ overrides: {}, updatedAt: state.updatedAt + 1 }));
+        set((state) => ({ overrides: {}, savedAt: {}, updatedAt: state.updatedAt + 1 }));
+        refreshOverlaidCorpus();
+      },
+
+      dropIfNewerInCloud: (cloudStamps) => {
+        const state = get();
+        const overrides = { ...state.overrides };
+        const stamps = { ...(state.savedAt ?? {}) };
+        let changed = false;
+        for (const [id, cloudStamp] of Object.entries(cloudStamps)) {
+          if (overrides[id] === undefined || !cloudStamp) continue;
+          // Missing savedAt means the entry predates this field (legacy build):
+          // it was written by the old publish path, so the cloud wins.
+          const localStamp = stamps[id] ?? '';
+          if (cloudStamp > localStamp) {
+            delete overrides[id];
+            delete stamps[id];
+            changed = true;
+          }
+        }
+        if (!changed) return;
+        set({ overrides, savedAt: stamps, updatedAt: state.updatedAt + 1 });
         refreshOverlaidCorpus();
       },
 
@@ -70,8 +110,15 @@ export const useOverrides = create<OverridesState>()(
         set((state) => {
           if (state.deletedIds.includes(id)) return state;
           const next = { ...state.overrides };
+          const stamps = { ...(state.savedAt ?? {}) };
           delete next[id];
-          return { overrides: next, deletedIds: [...state.deletedIds, id], updatedAt: state.updatedAt + 1 };
+          delete stamps[id];
+          return {
+            overrides: next,
+            savedAt: stamps,
+            deletedIds: [...state.deletedIds, id],
+            updatedAt: state.updatedAt + 1,
+          };
         });
         refreshOverlaidCorpus();
       },

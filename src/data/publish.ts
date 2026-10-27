@@ -6,8 +6,23 @@
  * stamped so devices fetch just what changed since their last sync.
  * Requires Firebase config + a signed-in admin — otherwise a clear
  * messageKey explains what is missing. No git, no CI involved.
+ *
+ * Two rules learned the hard way (see PROJECT_NOTES §7):
+ * - an *empty string* in a patch means "the admin cleared this field", and it
+ *   is written as `deleteField()` — never as `''`. A stale empty field in a
+ *   plain merge write wiped a real YouTube link on 2026-10-27;
+ * - every write is read back and compared before it is reported as published.
+ *   "Saved to the cloud" must mean the cloud document really matches.
  */
-import { arrayUnion, doc, deleteDoc, setDoc, writeBatch } from 'firebase/firestore';
+import {
+  arrayUnion,
+  deleteDoc,
+  deleteField,
+  doc,
+  getDocFromServer,
+  setDoc,
+  writeBatch,
+} from 'firebase/firestore';
 
 import type { TranslationKey } from '../i18n';
 import {
@@ -42,22 +57,39 @@ function sanitize(value: unknown): unknown {
 }
 
 /**
- * Drops empty top-level values before a write.
+ * Turns a hymn patch into a Firestore write payload.
  *
- * Writes use `{ merge: true }`, so an empty string does not mean "nothing to
- * say" — it overwrites whatever the cloud holds. A stale `mediaUrl: ''` left
- * over from an older save wiped a real YouTube link out of an already-published
- * hymn on 2026-10-27 (publishing that device's single override wrote
- * `mediaUrl: ""`). Blank values are therefore never sent: the settle path is
- * the cloud copy, and clearing a field is a separate, explicit action.
+ * `''` becomes `deleteField()` — an explicit clear reaches the cloud (without
+ * it, clearing a wrong link could never be published) while no blank string is
+ * ever stored, so no device can re-publish it over a real value by accident.
+ * `undefined` keys are dropped; everything else is sanitized.
  */
-function withoutBlanks(patch: Partial<Hymn>): Record<string, unknown> {
+function toWrite(patch: Partial<Hymn>): Record<string, unknown> {
   const out: Record<string, unknown> = {};
   for (const [key, value] of Object.entries(patch)) {
-    if (value === '' || value === null || value === undefined) continue;
-    out[key] = value;
+    if (value === undefined) continue;
+    out[key] = value === '' ? deleteField() : sanitize(value);
   }
   return out;
+}
+
+/**
+ * True when a read-back of the document shows exactly what the patch asked
+ * for. Cleared fields must be gone (absent or blank); every other field must
+ * hold the value we sent.
+ */
+function matchesWrite(data: Record<string, unknown> | undefined, patch: Partial<Hymn>): boolean {
+  if (!data) return false;
+  for (const [key, value] of Object.entries(patch)) {
+    if (value === undefined) continue;
+    const stored = data[key];
+    if (value === '') {
+      if (stored !== undefined && stored !== null && stored !== '') return false;
+      continue;
+    }
+    if (JSON.stringify(stored) !== JSON.stringify(value)) return false;
+  }
+  return true;
 }
 
 function requireDb() {
@@ -77,17 +109,18 @@ const messageFor = (code: string): TranslationKey => {
 /** Single-hymn write-through used right after an editor save. */
 export async function publishHymn(id: string, patch: Partial<Hymn>): Promise<boolean> {
   try {
-    const clean = withoutBlanks(patch);
-    // Nothing but blanks: skip the write entirely rather than stamping a
-    // document with an empty update.
-    if (Object.keys(clean).length === 0) return true;
+    const write = toWrite(patch);
+    if (Object.keys(write).length === 0) return true;
     const db = requireDb();
-    await setDoc(
-      doc(db, HYMNS_COLLECTION, id),
-      { ...(sanitize(clean) as Record<string, unknown>), updatedAt: new Date().toISOString() },
-      { merge: true },
-    );
-    return true;
+    const ref = doc(db, HYMNS_COLLECTION, id);
+    await setDoc(ref, { ...write, updatedAt: new Date().toISOString() }, { merge: true });
+    // Verify instead of trusting the promise: the caller shows this result to
+    // the admin as "uploaded", and a silent mismatch is exactly the failure
+    // mode that made edits look saved while the reader stayed stale.
+    // `getDocFromServer` forces a network read — a cached echo of our own
+    // local write would "verify" a change the server never accepted.
+    const back = await getDocFromServer(ref);
+    return matchesWrite(back.data() as Record<string, unknown> | undefined, patch);
   } catch {
     return false;
   }
@@ -97,11 +130,7 @@ export async function publishHymn(id: string, patch: Partial<Hymn>): Promise<boo
 export async function publishOverrides(
   overrides: Record<string, Partial<Hymn>>,
 ): Promise<PublishResult> {
-  // Blank-only patches are not documents: they would only stamp `updatedAt`
-  // (and, before the guard, overwrite real fields with empty strings).
-  const entries = Object.entries(overrides)
-    .map(([id, patch]) => [id, withoutBlanks(patch)] as const)
-    .filter(([, clean]) => Object.keys(clean).length > 0);
+  const entries = Object.entries(overrides).filter(([, patch]) => Object.keys(patch).length > 0);
   if (entries.length === 0) return { ok: true, messageKey: 'admin.noChanges', saved: 0 };
   let db;
   try {
@@ -114,14 +143,24 @@ export async function publishOverrides(
     // Firestore caps batches at 500 writes — stay well under it.
     for (let i = 0; i < entries.length; i += 400) {
       const batch = writeBatch(db);
-      for (const [id, clean] of entries.slice(i, i + 400)) {
+      const chunk = entries.slice(i, i + 400);
+      for (const [id, patch] of chunk) {
         batch.set(
           doc(db, HYMNS_COLLECTION, id),
-          { ...(sanitize(clean) as Record<string, unknown>), updatedAt: stamp },
+          { ...toWrite(patch), updatedAt: stamp },
           { merge: true },
         );
       }
       await batch.commit();
+      // Read the chunk back from the server: published means "the cloud holds
+      // this", not merely "the promise resolved" (and not a cached echo of our
+      // own local mutation).
+      for (const [id, patch] of chunk) {
+        const back = await getDocFromServer(doc(db, HYMNS_COLLECTION, id));
+        if (!matchesWrite(back.data() as Record<string, unknown> | undefined, patch)) {
+          return { ok: false, messageKey: 'admin.publishMismatch', saved: 0 };
+        }
+      }
     }
     return { ok: true, messageKey: 'admin.published', saved: entries.length };
   } catch {

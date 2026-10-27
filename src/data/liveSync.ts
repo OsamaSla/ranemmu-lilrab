@@ -83,14 +83,20 @@ export function startLiveSync(): () => void {
       const snap = await getDocs(q);
       let newest = '';
       if (!snap.empty) {
+        const stamps: Record<string, string> = {};
         const docs = snap.docs.map((d) => {
           const data = d.data() as Record<string, unknown>;
-          if (typeof data.updatedAt === 'string' && data.updatedAt > newest) {
-            newest = data.updatedAt;
+          if (typeof data.updatedAt === 'string') {
+            stamps[d.id] = data.updatedAt;
+            if (data.updatedAt > newest) newest = data.updatedAt;
           }
           return { id: d.id, data };
         });
         useRemote.getState().applyDocs(docs);
+        // Last-write-wins: a local copy older than the document we just
+        // received must not keep masking it (a device that published an old
+        // value stayed stuck on it forever).
+        useOverrides.getState().dropIfNewerInCloud(stamps);
         refreshOverlaidCorpus();
       }
       // Shared tombstones (admin deletions): one tiny document, fetched
@@ -119,13 +125,17 @@ export function startLiveSync(): () => void {
           (live) => {
             if (live.empty) return;
             let newest = '';
+            const stamps: Record<string, string> = {};
             const docs = live.docs.map((d) => {
               const data = d.data() as Record<string, unknown>;
-              if (typeof data.updatedAt === 'string' && data.updatedAt > newest)
-                newest = data.updatedAt;
+              if (typeof data.updatedAt === 'string') {
+                stamps[d.id] = data.updatedAt;
+                if (data.updatedAt > newest) newest = data.updatedAt;
+              }
               return { id: d.id, data };
             });
             useRemote.getState().applyDocs(docs);
+            useOverrides.getState().dropIfNewerInCloud(stamps);
             refreshOverlaidCorpus();
             if (newest) writeLastSync(newest);
           },
