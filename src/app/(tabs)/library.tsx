@@ -12,7 +12,7 @@
  * It can be prefilled from the reader's jump bar via `?q=`.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import { Pressable, SectionList, TextInput, View } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
@@ -102,7 +102,7 @@ export default function LibraryScreen() {
 
   // In-list search. A number stays a cheap summary lookup (no chunk import).
   // Free text matches titles straight away from the summaries, then the
-  // lyrics once the chunks are loaded.
+  // lyrics once the lazily imported chunks are in memory.
   const trimmed = query.trim();
   const needle = normalizeText(trimmed);
   const isNumberQuery = /^\d+$/.test(needle);
@@ -201,6 +201,33 @@ export default function LibraryScreen() {
     return [...buckets.entries()].map(([key, data]) => ({ key, label: key, data }));
   }, [order, topic, topicFiltered, titleMatches, lyricMatches, isNumberQuery, trimmed, t]);
 
+  const listRef = useRef<SectionList<LibraryRow>>(null);
+  const [scrollIndex, setScrollIndex] = useState(0);
+
+  const flatRows = useMemo(
+    () =>
+      sections.flatMap((section, sectionIndex) =>
+        section.data.map((item, itemIndex) => ({
+          sectionIndex,
+          itemIndex,
+          item,
+        })),
+      ),
+    [sections],
+  );
+
+  const jumpBy = (delta: number) => {
+    if (flatRows.length === 0) return;
+    const nextIndex = Math.max(0, Math.min(flatRows.length - 1, scrollIndex + delta));
+    setScrollIndex(nextIndex);
+    const target = flatRows[nextIndex];
+    listRef.current?.scrollToLocation({
+      sectionIndex: target.sectionIndex,
+      itemIndex: target.itemIndex,
+      animated: true,
+    });
+  };
+
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={t('library.title')} subtitle={`${summaries.length}`} showBack />
@@ -228,22 +255,11 @@ export default function LibraryScreen() {
               return String.fromCharCode(ch.charCodeAt(0) - 0x0660 + 48);
             });
             setQuery(converted);
+            setScrollIndex(0);
           }}
           placeholder={t('search.placeholder')}
           placeholderTextColor={colors.textMuted}
-          keyboardType={(() => {
-            const raw = query.trim();
-            const hasArabicDigits = /[\u0660-\u0669\u06F0-\u06F9]/.test(raw);
-            const norm = normalizeText(raw);
-            const isNumericQuery = /^\d+$/.test(norm) && norm.length <= 4;
-            const digits = isNumericQuery ? norm.replace(/^0+(?=\d)/, '') : '';
-            const hasMatch = isNumericQuery && (digits.length > 0) && (
-              topicFiltered.some((s) => String(s.number) === digits) ||
-              topicFiltered.some((s) => String(s.number).startsWith(digits))
-            );
-            // Only show numeric keypad for Western digits; keep Arabic keyboard for Arabic-Indic digits
-            return (hasMatch && !hasArabicDigits) ? 'numeric' : 'default';
-          })()}
+          keyboardType="default"
           returnKeyType="search"
           style={{
             flex: 1,
@@ -333,7 +349,56 @@ export default function LibraryScreen() {
         />
       </View>
 
+      <View
+        style={{
+          flexDirection: direction.row,
+          justifyContent: 'space-between',
+          paddingHorizontal: spacing.lg,
+          marginTop: spacing.md,
+          gap: spacing.sm,
+        }}>
+        <Pressable
+          onPress={() => jumpBy(-50)}
+          accessibilityRole="button"
+          accessibilityLabel="Scroll up by 50"
+          android_ripple={{ color: colors.border }}
+          style={({ pressed }) => ({
+            flex: 1,
+            paddingVertical: spacing.sm,
+            alignItems: 'center',
+            borderRadius: radius.md,
+            borderWidth: 1,
+            borderColor: colors.border,
+            backgroundColor: colors.surface,
+            opacity: pressed ? 0.75 : 1,
+          })}>
+          <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
+            −50
+          </AppText>
+        </Pressable>
+        <Pressable
+          onPress={() => jumpBy(50)}
+          accessibilityRole="button"
+          accessibilityLabel="Scroll down by 50"
+          android_ripple={{ color: colors.border }}
+          style={({ pressed }) => ({
+            flex: 1,
+            paddingVertical: spacing.sm,
+            alignItems: 'center',
+            borderRadius: radius.md,
+            borderWidth: 1,
+            borderColor: colors.border,
+            backgroundColor: colors.surface,
+            opacity: pressed ? 0.75 : 1,
+          })}>
+          <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
+            +50
+          </AppText>
+        </Pressable>
+      </View>
+
       <SectionList
+        ref={listRef}
         sections={sections}
         keyExtractor={(item) =>
           item.match
@@ -342,6 +407,7 @@ export default function LibraryScreen() {
         }
         stickySectionHeadersEnabled={order === 'alpha' && !trimmed}
         keyboardShouldPersistTaps="handled"
+        onScroll={() => setScrollIndex((current) => current)}
         style={{ marginTop: spacing.sm }}
         contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.xxl }}
         ListEmptyComponent={
