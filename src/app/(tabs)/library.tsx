@@ -13,7 +13,8 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Pressable, SectionList, TextInput, View } from 'react-native';
+import { Keyboard, Pressable, SectionList, TextInput, View } from 'react-native';
+import type { ViewToken } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
@@ -202,8 +203,10 @@ export default function LibraryScreen() {
   }, [order, topic, topicFiltered, titleMatches, lyricMatches, isNumberQuery, trimmed, t]);
 
   const listRef = useRef<SectionList<LibraryRow>>(null);
+  /** Flat index of the row at the top edge; the ±50 buttons anchor to it. */
   const scrollIndexRef = useRef(0);
-  const [scrollIndex, setScrollIndex] = useState(0);
+  /** Timestamp until which viewability reports are ignored (a jump is animating). */
+  const jumpSettledAtRef = useRef(0);
 
   const flatRows = useMemo(
     () =>
@@ -217,19 +220,89 @@ export default function LibraryScreen() {
     [sections],
   );
 
-  const setScrollIndexSafe = (nextIndex: number) => {
-    scrollIndexRef.current = nextIndex;
-    setScrollIndex(nextIndex);
+  /** Where each section starts in the flat list (view tokens carry per-section indices). */
+  const sectionOffsets = useMemo(() => {
+    const offsets = new Map<string, number>();
+    let acc = 0;
+    for (const section of sections) {
+      offsets.set(section.key, acc);
+      acc += section.data.length;
+    }
+    return offsets;
+  }, [sections]);
+
+  // The callbacks below are captured once by the list, so they read the latest
+  // data through refs instead of closing over it.
+  const flatRowsRef = useRef(flatRows);
+  flatRowsRef.current = flatRows;
+  const sectionOffsetsRef = useRef(sectionOffsets);
+  sectionOffsetsRef.current = sectionOffsets;
+  const sectionsRef = useRef(sections);
+  sectionsRef.current = sections;
+
+  /**
+   * Cell heights for `getItemLayout`.
+   *
+   * Without a layout the list refuses to scroll past the rows it has already
+   * measured (it throws "scrollToIndex should be used in conjunction with
+   * getItemLayout or onScrollToIndexFailed"), which is why the ±50 buttons did
+   * nothing on a phone: 50 rows are always outside the rendered window. Titles
+   * wrap to one or two lines, so these are averages rather than exact heights —
+   * a jump can land a few rows off, and the viewability tracking below keeps the
+   * next tap anchored to whatever is actually on screen.
+   */
+  const ROW_HEIGHT = 90; // hymn card + its 8px bottom margin
+  const HEADER_HEIGHT = 41; // section label + the 4px section separator
+
+  const getItemLayout = (_data: unknown, cellIndex: number) => {
+    let offset = 0;
+    let cell = 0;
+    for (const section of sectionsRef.current) {
+      const count = section.data.length;
+      if (cellIndex < cell + count + 2) {
+        const inSection = cellIndex - cell;
+        if (inSection === 0) {
+          return { index: cellIndex, offset, length: HEADER_HEIGHT };
+        }
+        if (inSection <= count) {
+          return {
+            index: cellIndex,
+            offset: offset + HEADER_HEIGHT + (inSection - 1) * ROW_HEIGHT,
+            length: ROW_HEIGHT,
+          };
+        }
+        return { index: cellIndex, offset: offset + HEADER_HEIGHT + count * ROW_HEIGHT, length: 0 };
+      }
+      offset += HEADER_HEIGHT + count * ROW_HEIGHT;
+      cell += count + 2;
+    }
+    return { index: cellIndex, offset, length: ROW_HEIGHT };
   };
 
-  const jumpBy = (delta: number) => {
-    if (flatRows.length === 0) return;
-    const currentIndex = scrollIndexRef.current;
-    const nextIndex = Math.max(0, Math.min(flatRows.length - 1, currentIndex + delta));
-    const target = flatRows[nextIndex];
-    if (!target) return;
+  /**
+   * Tracks the row at the top edge, so a tap always pages from what the reader
+   * is looking at rather than from the last jump.
+   */
+  const viewabilityConfig = useRef({ itemVisiblePercentThreshold: 0 }).current;
+  const onViewableItemsChanged = useRef(
+    ({ viewableItems }: { viewableItems: ViewToken[] }) => {
+      // Mid-jump the list reports every row it flies past; those are not where
+      // the reader is heading, so only trust reports once the jump has settled.
+      if (Date.now() < jumpSettledAtRef.current) return;
+      let top = Number.POSITIVE_INFINITY;
+      for (const token of viewableItems) {
+        if (!token.isViewable || token.index == null) continue;
+        const base = sectionOffsetsRef.current.get(token.section?.key);
+        if (base === undefined) continue;
+        top = Math.min(top, base + token.index);
+      }
+      if (Number.isFinite(top)) scrollIndexRef.current = top;
+    },
+  ).current;
 
-    setScrollIndexSafe(nextIndex);
+  const scrollToRow = (rowIndex: number) => {
+    const target = flatRowsRef.current[rowIndex];
+    if (!target) return;
     listRef.current?.scrollToLocation({
       sectionIndex: target.sectionIndex,
       itemIndex: target.itemIndex,
@@ -237,60 +310,123 @@ export default function LibraryScreen() {
     });
   };
 
+  const jumpBy = (delta: number) => {
+    if (flatRows.length === 0) return;
+    // Paging while the search field is focused must not just dismiss the
+    // keyboard on Android — the tap has to move the list too.
+    Keyboard.dismiss();
+    const nextIndex = Math.max(0, Math.min(flatRows.length - 1, scrollIndexRef.current + delta));
+    // Assume the jump lands so repeated taps stack; viewability corrects this
+    // to the row that actually ends up on screen once the scroll settles.
+    scrollIndexRef.current = nextIndex;
+    jumpSettledAtRef.current = Date.now() + 600;
+    scrollToRow(nextIndex);
+  };
+
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={t('library.title')} subtitle={`${summaries.length}`} showBack />
 
-      {/* In-list search: filters the hymns below, no separate screen. */}
+      {/* In-list search: filters the hymns below, no separate screen. The ±50
+          paging buttons are stacked at the field's trailing edge (the left side
+          in Arabic) so they sit beside the list they move instead of taking a
+          row of their own. */}
       <View
         style={{
           flexDirection: direction.row,
           alignItems: 'center',
+          gap: spacing.sm,
           marginHorizontal: spacing.lg,
           marginTop: spacing.md,
-          backgroundColor: colors.surfaceMuted,
-          borderRadius: radius.pill,
-          borderWidth: 1,
-          borderColor: colors.border,
-          paddingHorizontal: spacing.md,
-          height: 48,
         }}>
-        <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
-        <TextInput
-          value={query}
-          onChangeText={(text) => {
-            // Auto-convert Arabic-Indic digits (٠-٩) to Western (0-9) so number search works seamlessly
-            const converted = text.replace(/[\u0660-\u0669\u06F0-\u06F9]/g, (ch) => {
-              return String.fromCharCode(ch.charCodeAt(0) - 0x0660 + 48);
-            });
-            setQuery(converted);
-            setScrollIndexSafe(0);
-          }}
-          placeholder={t('search.placeholder')}
-          placeholderTextColor={colors.textMuted}
-          keyboardType="default"
-          returnKeyType="search"
+        <View
           style={{
             flex: 1,
-            marginHorizontal: spacing.sm,
-            color: colors.text,
-            fontFamily,
-            fontSize: 16,
-            writingDirection: direction.dir,
-            textAlign: direction.textAlign,
-          }}
-        />
-        {query.length > 0 ? (
+            flexDirection: direction.row,
+            alignItems: 'center',
+            backgroundColor: colors.surfaceMuted,
+            borderRadius: radius.pill,
+            borderWidth: 1,
+            borderColor: colors.border,
+            paddingHorizontal: spacing.md,
+            height: 48,
+          }}>
+          <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
+          <TextInput
+            value={query}
+            onChangeText={(text) => {
+              // Auto-convert Arabic-Indic digits (٠-٩) to Western (0-9) so number search works seamlessly
+              const converted = text.replace(/[\u0660-\u0669\u06F0-\u06F9]/g, (ch) => {
+                return String.fromCharCode(ch.charCodeAt(0) - 0x0660 + 48);
+              });
+              setQuery(converted);
+              scrollIndexRef.current = 0;
+            }}
+            placeholder={t('search.placeholder')}
+            placeholderTextColor={colors.textMuted}
+            keyboardType="default"
+            returnKeyType="search"
+            style={{
+              flex: 1,
+              marginHorizontal: spacing.sm,
+              color: colors.text,
+              fontFamily,
+              fontSize: 16,
+              writingDirection: direction.dir,
+              textAlign: direction.textAlign,
+            }}
+          />
+          {query.length > 0 ? (
+            <Pressable
+              onPress={() => setQuery('')}
+              accessibilityRole="button"
+              accessibilityLabel={t('search.clear')}
+              hitSlop={8}
+              android_ripple={{ color: colors.border }}
+              style={{ padding: spacing.xs }}>
+              <MaterialCommunityIcons name="close-circle" size={24} color={colors.textMuted} />
+            </Pressable>
+          ) : null}
+        </View>
+
+        <View style={{ gap: 4 }}>
           <Pressable
-            onPress={() => setQuery('')}
+            onPress={() => jumpBy(-50)}
             accessibilityRole="button"
-            accessibilityLabel={t('search.clear')}
-            hitSlop={8}
+            accessibilityLabel="Scroll up by 50"
             android_ripple={{ color: colors.border }}
-            style={{ padding: spacing.xs }}>
-            <MaterialCommunityIcons name="close-circle" size={24} color={colors.textMuted} />
+            style={({ pressed }) => ({
+              width: 40,
+              height: 22,
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: radius.sm,
+              borderWidth: 1,
+              borderColor: colors.border,
+              backgroundColor: colors.surface,
+              opacity: pressed ? 0.75 : 1,
+            })}>
+            <MaterialCommunityIcons name="chevron-up" size={16} color={colors.primary} />
           </Pressable>
-        ) : null}
+          <Pressable
+            onPress={() => jumpBy(50)}
+            accessibilityRole="button"
+            accessibilityLabel="Scroll down by 50"
+            android_ripple={{ color: colors.border }}
+            style={({ pressed }) => ({
+              width: 40,
+              height: 22,
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: radius.sm,
+              borderWidth: 1,
+              borderColor: colors.border,
+              backgroundColor: colors.surface,
+              opacity: pressed ? 0.75 : 1,
+            })}>
+            <MaterialCommunityIcons name="chevron-down" size={16} color={colors.primary} />
+          </Pressable>
+        </View>
       </View>
 
       {/* Two slim filter rows: book + sort toggle, then topic full-width
@@ -358,68 +494,24 @@ export default function LibraryScreen() {
         />
       </View>
 
-      <View
-        style={{
-          flexDirection: direction.row,
-          justifyContent: 'space-between',
-          paddingHorizontal: spacing.lg,
-          marginTop: spacing.md,
-          gap: spacing.sm,
-        }}>
-        <Pressable
-          onPress={() => jumpBy(-50)}
-          accessibilityRole="button"
-          accessibilityLabel="Scroll up by 50"
-          android_ripple={{ color: colors.border }}
-          style={({ pressed }) => ({
-            flex: 1,
-            paddingVertical: spacing.sm,
-            alignItems: 'center',
-            borderRadius: radius.md,
-            borderWidth: 1,
-            borderColor: colors.border,
-            backgroundColor: colors.surface,
-            opacity: pressed ? 0.75 : 1,
-          })}>
-          <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
-            −50
-          </AppText>
-        </Pressable>
-        <Pressable
-          onPress={() => jumpBy(50)}
-          accessibilityRole="button"
-          accessibilityLabel="Scroll down by 50"
-          android_ripple={{ color: colors.border }}
-          style={({ pressed }) => ({
-            flex: 1,
-            paddingVertical: spacing.sm,
-            alignItems: 'center',
-            borderRadius: radius.md,
-            borderWidth: 1,
-            borderColor: colors.border,
-            backgroundColor: colors.surface,
-            opacity: pressed ? 0.75 : 1,
-          })}>
-          <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
-            +50
-          </AppText>
-        </Pressable>
-      </View>
-
       <SectionList
         ref={listRef}
         sections={sections}
-        keyExtractor={(item) =>
-          item.match
+        keyExtractor={(item) => {
+          // Viewability reports section header/footer cells as well, and for
+          // those the list hands us the section object instead of a row.
+          if (!item?.hymn) {
+            return `section:${(item as unknown as { key?: string })?.key ?? 'unknown'}`;
+          }
+          return item.match
             ? `${item.hymn.id}:${item.match.verseIndex}:${item.match.lineIndex}:${item.match.line}`
-            : item.hymn.id
-        }
+            : item.hymn.id;
+        }}
         stickySectionHeadersEnabled={order === 'alpha' && !trimmed}
         keyboardShouldPersistTaps="handled"
-        onScroll={({ nativeEvent }) => {
-          const currentOffsetY = nativeEvent.contentOffset.y;
-          if (currentOffsetY <= 0) setScrollIndexSafe(0);
-        }}
+        viewabilityConfig={viewabilityConfig}
+        onViewableItemsChanged={onViewableItemsChanged}
+        getItemLayout={getItemLayout}
         style={{ marginTop: spacing.sm }}
         contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.xxl }}
         ListEmptyComponent={

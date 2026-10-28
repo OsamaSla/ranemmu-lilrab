@@ -1,0 +1,63 @@
+# Excel & Binary files (Prevents OpenCode freeze/crash)
+*.xlsx
+*.xls
+*.csv
+
+# OpenCode & IDE temporary files
+.opencode/
+.vscode/
+.idea/
+
+# One-off local helper scripts (git add/commit/push wrappers, etc.)
+push_fix*.js
+
+# Dependencies
+node_modules/
+
+# Expo & Web builds
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+
+# Native builds & mobile secrets
+/ios
+/android
+.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro bundler
+.metro-health-check*
+
+# Logs & debugging
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+*.log
+
+# System & OS files
+.DS_Store
+Thumbs.db
+*.pem
+
+# Local environment variables
+.env*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Tutorial video pipeline — keep sources (slides.json, scripts), ignore outputs
+tutorial/frames/
+tutorial/slides_png/
+tutorial/audio/
+tutorial/clips/
+tutorial/scene_kit/
+tutorial/final.mp4
+tutorial/1-edited.pptx
+tutorial/client_secret.json
+tutorial/.youtube-token.json
