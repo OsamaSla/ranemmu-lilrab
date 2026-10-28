@@ -202,6 +202,7 @@ export default function LibraryScreen() {
   }, [order, topic, topicFiltered, titleMatches, lyricMatches, isNumberQuery, trimmed, t]);
 
   const listRef = useRef<SectionList<LibraryRow>>(null);
+  const scrollIndexRef = useRef(0);
   const [scrollIndex, setScrollIndex] = useState(0);
 
   const flatRows = useMemo(
@@ -216,11 +217,19 @@ export default function LibraryScreen() {
     [sections],
   );
 
+  const setScrollIndexSafe = (nextIndex: number) => {
+    scrollIndexRef.current = nextIndex;
+    setScrollIndex(nextIndex);
+  };
+
   const jumpBy = (delta: number) => {
     if (flatRows.length === 0) return;
-    const nextIndex = Math.max(0, Math.min(flatRows.length - 1, scrollIndex + delta));
-    setScrollIndex(nextIndex);
+    const currentIndex = scrollIndexRef.current;
+    const nextIndex = Math.max(0, Math.min(flatRows.length - 1, currentIndex + delta));
     const target = flatRows[nextIndex];
+    if (!target) return;
+
+    setScrollIndexSafe(nextIndex);
     listRef.current?.scrollToLocation({
       sectionIndex: target.sectionIndex,
       itemIndex: target.itemIndex,
@@ -255,7 +264,7 @@ export default function LibraryScreen() {
               return String.fromCharCode(ch.charCodeAt(0) - 0x0660 + 48);
             });
             setQuery(converted);
-            setScrollIndex(0);
+            setScrollIndexSafe(0);
           }}
           placeholder={t('search.placeholder')}
           placeholderTextColor={colors.textMuted}
@@ -407,7 +416,10 @@ export default function LibraryScreen() {
         }
         stickySectionHeadersEnabled={order === 'alpha' && !trimmed}
         keyboardShouldPersistTaps="handled"
-        onScroll={() => setScrollIndex((current) => current)}
+        onScroll={({ nativeEvent }) => {
+          const currentOffsetY = nativeEvent.contentOffset.y;
+          if (currentOffsetY <= 0) setScrollIndexSafe(0);
+        }}
         style={{ marginTop: spacing.sm }}
         contentContainerStyle={{ paddingHorizontal: spacing.lg, paddingBottom: spacing.xxl }}
         ListEmptyComponent={
