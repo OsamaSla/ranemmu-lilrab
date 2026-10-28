@@ -132,6 +132,8 @@ export default function AdminEditScreen() {
   // Set by every edit, cleared by save: the sticky bar shows it so a long hymn
   // does not lose an unsaved change behind a scroll.
   const [dirty, setDirty] = useState(false);
+  const formRef = useRef(form);
+  const touchedRef = useRef(false);
   // Which languages the verse editor shows. `null` means "follow the default":
   // Arabic plus the language you arrived from (`?lang=de` from the review
   // queue). Any tap pins the user's own choice for the rest of the session.
