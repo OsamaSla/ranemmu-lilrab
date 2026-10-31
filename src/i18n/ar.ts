@@ -174,6 +174,12 @@ admin: {
     errExists: 'الترنيمة موجودة بالفعل',
     findNextNumber: 'إيجاد الرقم التالي المتاح',
     verses: 'البيوت',
+    moveStanzaUp: 'نقل لأعلى',
+    moveStanzaDown: 'نقل لأسفل',
+    convertToRefrain: 'تحويل إلى قرار',
+    convertToStanza: 'تحويل إلى مقطع',
+    refrain: 'قرار',
+    stanza: 'مقطع',
   },
 
   structure: {

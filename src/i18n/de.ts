@@ -160,7 +160,12 @@ export const de: PartialDictionary = {
   'admin.errExists': 'Lied existiert bereits',
   'admin.findNextNumber': 'Nächste freie Nummer finden',
   'admin.verses': 'Strophen',
-
+  'admin.moveStanzaUp': 'Nach oben',
+  'admin.moveStanzaDown': 'Nach unten',
+  'admin.convertToRefrain': 'Zum Kehrvers',
+  'admin.convertToStanza': 'Zur Strophe',
+  'admin.refrain': 'Kehrvers',
+  'admin.stanza': 'Strophe',
   'structure.title': 'Metrum',
   'structure.subtitle': 'Lieder mit demselben Metrum',
   'structure.empty': 'Keine eingeordneten Lieder',

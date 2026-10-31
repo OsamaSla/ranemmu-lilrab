@@ -56,6 +56,8 @@ export default function AdminEditScreen() {
     primaryTopic: '' as TopicId | '',
     topics: [] as TopicId[],
     lines: [] as string[][],
+    labels: [] as string[],
+    chorusFlags: [] as boolean[],
     title_en: '',
     chorus_en: '',
     linesEn: [] as string[][],
@@ -83,7 +85,7 @@ export default function AdminEditScreen() {
       h.mediaUrl,
       h.primaryTopic,
       h.topics,
-      h.verses.map((v) => v.lines),
+      h.verses.map((v) => [v.label, v.chorus, v.lines]),
       h.title_en,
       h.chorus_en,
       h.verses_en?.map((v) => v.lines),
@@ -109,6 +111,8 @@ export default function AdminEditScreen() {
           primaryTopic: h.primaryTopic ?? ('' as TopicId | ''),
           topics: [...(h.topics ?? [])],
           lines: h.verses.map((v) => [...v.lines]),
+           labels: h.verses.map((v) => v.label),
+           chorusFlags: h.verses.map((v) => Boolean(v.chorus)),
           title_en: h.title_en ?? '',
           chorus_en: h.chorus_en ?? '',
           linesEn: h.verses_en ? h.verses_en.map((v) => [...v.lines]) : [],
@@ -132,8 +136,6 @@ export default function AdminEditScreen() {
   // Set by every edit, cleared by save: the sticky bar shows it so a long hymn
   // does not lose an unsaved change behind a scroll.
   const [dirty, setDirty] = useState(false);
-  const formRef = useRef(form);
-  const touchedRef = useRef(false);
   // Which languages the verse editor shows. `null` means "follow the default":
   // Arabic plus the language you arrived from (`?lang=de` from the review
   // queue). Any tap pins the user's own choice for the rest of the session.
@@ -269,6 +271,35 @@ export default function AdminEditScreen() {
     else setForm((f) => ({ ...f, linesDe: mapLines(f.linesDe) }));
   };
 
+  const moveStanza = (from: number, to: number) => {
+    if (to < 0 || to >= form.lines.length) return;
+    setDirty(true);
+    setForm((f) => {
+      const reorder = <T,>(arr: T[]): T[] => {
+        const next = [...arr];
+        const [item] = next.splice(from, 1);
+        next.splice(to, 0, item);
+        return next;
+      };
+      return {
+        ...f,
+        lines: reorder(f.lines),
+        labels: reorder(f.labels),
+        chorusFlags: reorder(f.chorusFlags),
+        linesEn: f.linesEn.length ? reorder(f.linesEn) : f.linesEn,
+        linesDe: f.linesDe.length ? reorder(f.linesDe) : f.linesDe,
+      };
+    });
+  };
+
+  const toggleRefrain = (index: number) => {
+    setDirty(true);
+    setForm((f) => ({
+      ...f,
+      chorusFlags: f.chorusFlags.map((flag, i) => (i === index ? !flag : flag)),
+    }));
+  };
+
   const hasEn = Boolean(hymn?.verses_en ?? hymn?.title_en);
   const hasDe = Boolean(hymn?.verses_de ?? hymn?.title_de);
 
@@ -303,7 +334,13 @@ export default function AdminEditScreen() {
       setMsg(t('admin.errUrl'));
       return;
     }
-    if (form.lines.length !== hymn.verses.length || form.lines.some((ls, i) => ls.length !== hymn.verses[i].lines.length)) {
+    if (form.lines.length !== hymn.verses.length) {
+      setMsg(t('admin.errCount'));
+      return;
+    }
+    const originalCounts = hymn.verses.map((v) => v.lines.length).slice().sort((a, b) => a - b);
+    const currentCounts = form.lines.map((ls) => ls.length).slice().sort((a, b) => a - b);
+    if (originalCounts.some((c, i) => c !== currentCounts[i])) {
       setMsg(t('admin.errCount'));
       return;
     }
@@ -360,27 +397,24 @@ export default function AdminEditScreen() {
     }
     const topics = form.topics.filter((x) => x !== form.primaryTopic);
     if (changed(hymn.topics ?? [], topics)) patch.topics = topics;
-    // Missing form rows (a verse added by another device mid-edit) fall back
-    // to the current text instead of throwing — a throw here would abort the
-    // save after the user saw "saved".
-    const linesAt = (source: string[][] | undefined, i: number, fallback: string[]) =>
-      (source?.[i] ?? fallback).map((l) => l.trim());
-    const verses = hymn.verses.map((verse, i) => ({
-      ...verse,
-      lines: linesAt(form.lines, i, verse.lines),
+    const verses = form.lines.map((ls, i) => ({
+      label: form.labels[i] ?? hymn.verses[i]?.label ?? String(i + 1),
+      lines: ls.map((l) => l.trim()),
+      chorus: form.chorusFlags[i] ? true : undefined,
     }));
-    if (changed(hymn.verses.map((v) => v.lines), verses.map((v) => v.lines))) {
+    if (changed(hymn.verses, verses)) {
       patch.verses = verses;
     }
     if (hasEn) {
       if (changed(hymn.title_en, form.title_en.trim())) patch.title_en = form.title_en.trim();
       if (changed(hymn.chorus_en, form.chorus_en.trim())) patch.chorus_en = form.chorus_en.trim();
       if (hymn.verses_en) {
-        const versesEn = hymn.verses_en.map((verse, i) => ({
-          ...verse,
-          lines: linesAt(form.linesEn, i, verse.lines),
+        const versesEn = form.linesEn.map((ls, i) => ({
+          label: form.labels[i] ?? hymn.verses_en?.[i]?.label ?? String(i + 1),
+          lines: ls.map((l) => l.trim()),
+          chorus: form.chorusFlags[i] ? true : undefined,
         }));
-        if (changed(hymn.verses_en.map((v) => v.lines), versesEn.map((v) => v.lines))) {
+        if (changed(hymn.verses_en, versesEn)) {
           patch.verses_en = versesEn;
         }
       }
@@ -389,11 +423,12 @@ export default function AdminEditScreen() {
       if (changed(hymn.title_de, form.title_de.trim())) patch.title_de = form.title_de.trim();
       if (changed(hymn.chorus_de, form.chorus_de.trim())) patch.chorus_de = form.chorus_de.trim();
       if (hymn.verses_de) {
-        const versesDe = hymn.verses_de.map((verse, i) => ({
-          ...verse,
-          lines: linesAt(form.linesDe, i, verse.lines),
+        const versesDe = form.linesDe.map((ls, i) => ({
+          label: form.labels[i] ?? hymn.verses_de?.[i]?.label ?? String(i + 1),
+          lines: ls.map((l) => l.trim()),
+          chorus: form.chorusFlags[i] ? true : undefined,
         }));
-        if (changed(hymn.verses_de.map((v) => v.lines), versesDe.map((v) => v.lines))) {
+        if (changed(hymn.verses_de, versesDe)) {
           patch.verses_de = versesDe;
         }
       }
@@ -576,11 +611,58 @@ export default function AdminEditScreen() {
             })}
           </View>
 
-        {hymn.verses.map((verse, i) => (
-          <Card key={`${i}-${verse.label}`} style={{ marginBottom: spacing.md, padding: spacing.md }}>
-            <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
-              ({verse.label}){verse.chorus ? ` · ${hymn.chorus ?? ''}` : ''}
-            </AppText>
+        {form.lines.map((_, i) => (
+          <Card key={`${i}-${form.labels[i]}`} style={{ marginBottom: spacing.md, padding: spacing.md }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm }}>
+              <AppText variant="body" style={{ fontWeight: '700' }}>
+                ({form.labels[i]}){form.chorusFlags[i] ? ` · ${form.chorus.trim() || hymn.chorus || ''}` : ''}
+              </AppText>
+              <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.xs }}>
+                <Pressable
+                  onPress={() => moveStanza(i, i - 1)}
+                  disabled={i === 0}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('admin.moveStanzaUp')}
+                  style={({ pressed }) => ({
+                    padding: spacing.xs,
+                    opacity: i === 0 ? 0.35 : pressed ? 0.6 : 1,
+                  })}>
+                  <MaterialCommunityIcons name={direction.isRTL ? 'chevron-down' : 'chevron-up'} size={20} color={colors.text} />
+                </Pressable>
+                <Pressable
+                  onPress={() => moveStanza(i, i + 1)}
+                  disabled={i === form.lines.length - 1}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('admin.moveStanzaDown')}
+                  style={({ pressed }) => ({
+                    padding: spacing.xs,
+                    opacity: i === form.lines.length - 1 ? 0.35 : pressed ? 0.6 : 1,
+                  })}>
+                  <MaterialCommunityIcons name={direction.isRTL ? 'chevron-up' : 'chevron-down'} size={20} color={colors.text} />
+                </Pressable>
+                <Pressable
+                  onPress={() => toggleRefrain(i)}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: form.chorusFlags[i] }}
+                  accessibilityLabel={form.chorusFlags[i] ? t('admin.convertToStanza') : t('admin.convertToRefrain')}
+                  style={({ pressed }) => ({
+                    paddingHorizontal: spacing.sm,
+                    paddingVertical: spacing.xs,
+                    borderRadius: radius.pill,
+                    borderWidth: 1,
+                    borderColor: form.chorusFlags[i] ? colors.primary : colors.border,
+                    backgroundColor: form.chorusFlags[i] ? colors.primary : 'transparent',
+                    opacity: pressed ? 0.75 : 1,
+                  })}>
+                  <AppText
+                    variant="caption"
+                    color={form.chorusFlags[i] ? colors.onPrimary : colors.text}
+                    style={{ fontWeight: '700' }}>
+                    {form.chorusFlags[i] ? t('admin.refrain') : t('admin.stanza')}
+                  </AppText>
+                </Pressable>
+              </View>
+            </View>
             {/* One row per verse line: Arabic on top, its translations right
                 under it — the same pairing the reader shows. */}
             {form.lines[i]?.map((line, j) => (
@@ -599,7 +681,7 @@ export default function AdminEditScreen() {
                       value={line}
                       onChangeText={(v) => setLine(i, j, v)}
                       multiline
-                      accessibilityLabel={`${t('admin.verses')} ${verse.label} · ${j + 1}`}
+                      accessibilityLabel={`${t('admin.verses')} ${form.labels[i]} · ${j + 1}`}
                       style={[fieldStyle, lineField]}
                     />
                   ) : null}

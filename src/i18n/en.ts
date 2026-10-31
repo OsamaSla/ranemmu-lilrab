@@ -155,7 +155,12 @@ export const en: PartialDictionary = {
   'admin.errExists': 'Hymn already exists',
   'admin.findNextNumber': 'Find next available number',
   'admin.verses': 'Verses',
-
+  'admin.moveStanzaUp': 'Move up',
+  'admin.moveStanzaDown': 'Move down',
+  'admin.convertToRefrain': 'Make refrain',
+  'admin.convertToStanza': 'Make stanza',
+  'admin.refrain': 'Refrain',
+  'admin.stanza': 'Stanza',
   'structure.title': 'Metre',
   'structure.subtitle': 'Hymns sharing the same metre',
   'structure.empty': 'No categorised hymns',
