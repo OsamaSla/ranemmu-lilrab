@@ -271,6 +271,16 @@ export default function AdminEditScreen() {
     else setForm((f) => ({ ...f, linesDe: mapLines(f.linesDe) }));
   };
 
+  const renumberLabels = (flags: boolean[]): string[] => {
+    const out: string[] = [];
+    let counter = 0;
+    for (const isChorus of flags) {
+      if (!isChorus) counter += 1;
+      out.push(String(Math.max(counter, 1)));
+    }
+    return out;
+  };
+
   const moveStanza = (from: number, to: number) => {
     if (to < 0 || to >= form.lines.length) return;
     setDirty(true);
@@ -281,11 +291,12 @@ export default function AdminEditScreen() {
         next.splice(to, 0, item);
         return next;
       };
+      const nextChorus = reorder(f.chorusFlags);
       return {
         ...f,
         lines: reorder(f.lines),
-        labels: reorder(f.labels),
-        chorusFlags: reorder(f.chorusFlags),
+        labels: renumberLabels(nextChorus),
+        chorusFlags: nextChorus,
         linesEn: f.linesEn.length ? reorder(f.linesEn) : f.linesEn,
         linesDe: f.linesDe.length ? reorder(f.linesDe) : f.linesDe,
       };
@@ -294,10 +305,14 @@ export default function AdminEditScreen() {
 
   const toggleRefrain = (index: number) => {
     setDirty(true);
-    setForm((f) => ({
-      ...f,
-      chorusFlags: f.chorusFlags.map((flag, i) => (i === index ? !flag : flag)),
-    }));
+    setForm((f) => {
+      const nextChorus = f.chorusFlags.map((flag, i) => (i === index ? !flag : flag));
+      return {
+        ...f,
+        chorusFlags: nextChorus,
+        labels: renumberLabels(nextChorus),
+      };
+    });
   };
 
   const hasEn = Boolean(hymn?.verses_en ?? hymn?.title_en);
