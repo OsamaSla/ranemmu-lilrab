@@ -381,7 +381,7 @@ export default function ReaderScreen() {
                 borderRadius: radius.pill,
                 borderWidth: 1,
                 borderColor: selected ? 'transparent' : dark ? 'rgba(255,255,255,0.45)' : 'rgba(255,255,255,0.55)',
-                backgroundColor: selected ? ink : 'transparent',
+                backgroundColor: selected ? (option.value === 'ar' ? '#C5A03D' : option.value === 'en' ? '#1565C0' : '#2E7D32') : (option.value === 'ar' ? '#FFF8E1' : option.value === 'en' ? '#E3F2FD' : '#E8F5E9'),
                 alignItems: 'center',
                 justifyContent: 'center',
                 opacity: pressed ? 0.7 : 1,
@@ -389,8 +389,15 @@ export default function ReaderScreen() {
               <AppText
                 variant="label"
                 numberOfLines={1}
-                color={selected ? selectedInk : ink}
-                style={{ fontWeight: selected ? '700' : '500', fontSize: 11, lineHeight: 16 }}>
+                style={{
+                  fontWeight: selected ? '700' : '500',
+                  fontSize: 18,
+                  lineHeight: 21,
+                  fontFamily: 'Amiri',
+                  color: selected ? '#FFFFFF' : '#1A1A1A',
+                  textAlign: 'right',
+                  direction: 'rtl',
+                }}>
                 {short}
               </AppText>
             </Pressable>
