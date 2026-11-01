@@ -359,7 +359,8 @@ export default function ReaderScreen() {
           flexDirection: direction.row,
           alignItems: 'center',
           gap: 4,
-          paddingHorizontal: spacing.sm,
+          paddingRight: 85,
+          paddingLeft: 8,
         }}>
         {translationOptions.map((option) => {
           const selected = option.value === parallel;
