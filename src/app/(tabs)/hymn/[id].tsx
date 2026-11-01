@@ -359,7 +359,7 @@ export default function ReaderScreen() {
           flexDirection: direction.row,
           alignItems: 'center',
           gap: 4,
-          paddingRight: 85,
+          paddingRight: 9,
           paddingLeft: 8,
         }}>
         {translationOptions.map((option) => {
@@ -730,7 +730,7 @@ export default function ReaderScreen() {
             dark: true,
           })}
           <View style={{ flex: 1, paddingHorizontal: spacing.sm }}>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start' }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center' }}>
               <AppText
                 variant="heading"
                 numberOfLines={1}
@@ -821,7 +821,7 @@ export default function ReaderScreen() {
             onPress={goBack}
           />
           <View style={{ flex: 1, paddingHorizontal: spacing.sm }}>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start' }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center' }}>
               <AppText
                 variant="heading"
                 numberOfLines={1}
