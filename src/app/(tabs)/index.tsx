@@ -21,6 +21,7 @@ import { radius, shadow, spacing } from '../../theme/tokens';
 const BOOK_COVERS: Record<BookId, number> = {
   main: require('../../../assets/images/book-cover.jpg'),
   taranim: require('../../../assets/images/book-cover-taranim.jpg'),
+  book3: require('../../../assets/images/book-cover-halum.jpg'),
 };
 
 export default function HomeScreen() {
@@ -102,6 +103,7 @@ export default function HomeScreen() {
             flexDirection: direction.row,
             justifyContent: 'center',
             alignItems: 'flex-start',
+            flexWrap: 'wrap',
             gap: spacing.lg,
             marginBottom: spacing.sm,
           }}>

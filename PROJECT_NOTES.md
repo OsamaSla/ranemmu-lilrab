@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (هymn library / ترانيم)
 
-Last verified: 2026-10-28, commit 4c9494e
+Last verified: 2026-11-02, dynamic baseUrl & port 8081
 
 ## 1. What this is
 
@@ -15,7 +15,8 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 
 - Expo SDK 57, React 19.2, React Native 0.86.3, react-native-web 0.21, TS 6.0,
   expo-router 57, zustand 5, Firebase 13.
-- Dev server port is pinned to **8082** in `package.json` scripts.
+- Dev server port is pinned to **8081** in `package.json` scripts (8082 hits Windows EACCES port exclusions). Preview is on **8083**.
+- `app.config.js` sets `baseUrl: '/ranemmu-lilrab'` dynamically for deploy (`DEPLOY=1`, CI, `predeploy`), leaving it empty for local dev to avoid 404s.
 - `src/app/` is the router root (Expo Router reads `app/` normally — check
   `app.json`/`expo-router` config before moving files).
 - **Repo hygiene gap:** `tsconfig.json`, `eslint.config.js` and `.gitignore` are
@@ -46,8 +47,8 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 
 ## 4. Commands that work here
 
-- `npm run start` / `npm run web` — Expo dev server on :8082 (`--web` opens web).
-- `npm run preview:build` — check hymns + build corpus + static web export + serve.
+- `npm run start` / `npm run web` — Expo dev server on :8081 (`--web` opens web).
+- `npm run preview:build` — check hymns + build corpus + static web export + serve on :8083.
 - `npm run typecheck` (`npx tsc --noEmit`) — works on this machine; exit 0 with
   no output (needs the restored untracked `tsconfig.json`, see §2).
 - Syntax/transpile check for a single file:
@@ -126,3 +127,12 @@ alphabet buckets, or search results) with two ±50 buttons above it.
   (see §2/§4).
 - No new `onScroll`-per-frame work in list screens (mobile scroll perf).
 - Manual check on both web and a phone-sized viewport for list paging/search.
+
+
+## 10. Book 3 ("ترانيم للرب الجزء الثالث") Transcription Progress
+
+- Source booklet scans: `assets/book3/split/` (`spread_XXX_left.png`, `spread_XXX_right.png`)
+- Target output parts: `content/book3/parts/b3000XX.json`
+- Target corpus output: `content/book3/book3.json`
+- Builder script: `scripts/book3/build-book3.mjs`
+- Current status: **100 hymns transcribed and compiled** (Hymns 1 to 100, Batches 1 to 5 complete, verified with `node scripts/book3/build-book3.mjs`).

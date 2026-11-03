@@ -1,0 +1,12 @@
+{
+  "description": "Book 3 index (1-402-index.pdf, 13 spread pages = 26 index pages). Decoded manually from visible entries plus confirmed from images: _idx_1 (numbers ~365-380), _idx_5 (~245-270), _idx_9 (~60-100), _idx_13 (390-402). Numbers are bare hymn numbers; first line is truncated in index. Full decode requires full OCR + manual verification.",
+  "pages": 13,
+  "verified_entries": {
+    "401": { "title_first": "كنت فى طين الحماة باقاسى", "visible_in": "_idx_13" },
+    "400": { "title_first": "ما أعظم أعمالك", "visible_in": "_idx_13" },
+    "393": { "title_first": "يسوع قد اناتى", "visible_in": "_idx_13" },
+    "4": { "title_first": "أحبك ربى يسوع", "visible_in": "_idx_8" },
+    "2": { "title_first": "قد فدانى بالصليب", "visible_in": "_ocr_probe (image)" }
+  },
+  "note": "Complete decode pending full tesseract OCR of all 26 index half-pages. For Phase 0 pilot, titles derived from index + first sadr fallback. After full decode, content/book3/index.json will replace this placeholder."
+}

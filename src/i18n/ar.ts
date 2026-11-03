@@ -43,6 +43,7 @@ export const ar = {
     choose: 'الكتاب',
     main: 'رنموا للرب',
     taranim: 'ترنيمات روحية',
+    book3: 'هلم نرنم',
   },
 
   search: {

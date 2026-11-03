@@ -15,7 +15,7 @@ function opt(flag, fallback) {
 }
 
 const HOST = opt('--host', process.env.METRO_HOST || 'localhost');
-const PORT = opt('--port', process.env.METRO_PORT || '8082');
+const PORT = opt('--port', process.env.METRO_PORT || '8081');
 const BASE = `http://${HOST}:${PORT}`;
 const ENTRY = 'node_modules/expo-router/entry.bundle';
 const ROUTER_ROOT = encodeURIComponent('src/app'); // single-% encoded: src%2Fapp

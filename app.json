@@ -11,8 +11,7 @@
       "origin": "https://OsamaSla.github.io/ranemmu-lilrab"
     },
     "experiments": {
-      "typedRoutes": true,
-      "baseUrl": "/ranemmu-lilrab"
+      "typedRoutes": true
     }
   }
 }

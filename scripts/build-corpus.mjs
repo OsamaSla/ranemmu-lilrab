@@ -31,7 +31,7 @@ const CHUNK_SIZE = 100;
 /** Stable id from book + hymn number. The original corpus keeps its `hNNNN`
  *  ids so existing routes, favorites and recents keep working; other books
  *  use their own prefix (`trNNNN`, …). */
-const ID_PREFIX = { main: 'h', taranim: 'tr' };
+const ID_PREFIX = { main: 'h', taranim: 'tr', book3: 'b3' };
 const idFor = (book, number) =>
   `${ID_PREFIX[book] ?? book.slice(0, 2)}${String(number).padStart(4, '0')}`;
 

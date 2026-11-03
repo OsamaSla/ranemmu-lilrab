@@ -12,7 +12,7 @@
  * It can be prefilled from the reader's jump bar via `?q=`.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
 import { Keyboard, Pressable, SectionList, TextInput, View } from 'react-native';
 import type { ViewToken } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -233,12 +233,22 @@ export default function LibraryScreen() {
 
   // The callbacks below are captured once by the list, so they read the latest
   // data through refs instead of closing over it.
-  const flatRowsRef = useRef(flatRows);
-  flatRowsRef.current = flatRows;
-  const sectionOffsetsRef = useRef(sectionOffsets);
-  sectionOffsetsRef.current = sectionOffsets;
-  const sectionsRef = useRef(sections);
-  sectionsRef.current = sections;
+  const flatRowsRef = useRef<typeof flatRows>([]);
+  const sectionOffsetsRef = useRef<Map<string, number>>(new Map());
+  const sectionsRef = useRef<{ key: string; label: string; data: LibraryRow[] }[]>([]);
+
+  // Sync refs after render
+  useEffect(() => {
+    flatRowsRef.current = flatRows;
+  }, [flatRows]);
+
+  useEffect(() => {
+    sectionOffsetsRef.current = sectionOffsets;
+  }, [sectionOffsets]);
+
+  useEffect(() => {
+    sectionsRef.current = sections;
+  }, [sections]);
 
   /**
    * Cell heights for `getItemLayout`.
@@ -283,8 +293,8 @@ export default function LibraryScreen() {
    * Tracks the row at the top edge, so a tap always pages from what the reader
    * is looking at rather than from the last jump.
    */
-  const viewabilityConfig = useRef({ itemVisiblePercentThreshold: 0 }).current;
-  const onViewableItemsChanged = useRef(
+  const viewabilityConfig = { itemVisiblePercentThreshold: 0 };
+  const onViewableItemsChanged = useCallback(
     ({ viewableItems }: { viewableItems: ViewToken[] }) => {
       // Mid-jump the list reports every row it flies past; those are not where
       // the reader is heading, so only trust reports once the jump has settled.
@@ -298,7 +308,8 @@ export default function LibraryScreen() {
       }
       if (Number.isFinite(top)) scrollIndexRef.current = top;
     },
-  ).current;
+    []
+  );
 
   const scrollToRow = (rowIndex: number) => {
     const target = flatRowsRef.current[rowIndex];

@@ -51,7 +51,7 @@ Thumbs.db
 # TypeScript cache
 *.tsbuildinfo
 
-# Tutorial video pipeline — keep sources (slides.json, scripts), ignore outputs
+# Tutorial video pipeline - keep sources (slides.json, scripts), ignore outputs
 tutorial/frames/
 tutorial/slides_png/
 tutorial/audio/
@@ -61,3 +61,38 @@ tutorial/final.mp4
 tutorial/1-edited.pptx
 tutorial/client_secret.json
 tutorial/.youtube-token.json
+
+# OCR scratch files & raw scan assets
+all_index_ocr.txt
+ocr_inspect.txt
+ocr_sample.txt
+flatten-ocr.ps1
+inspect-ocr.mjs
+process-batch.ps1
+renumber-parts.ps1
+strip-bom.ps1
+scripts/halum-from-ocr.mjs
+scratch_crops/
+scratch_index/
+scratch_index_p1.png
+spread_inspect_135.png
+spread_inspect_136.png
+spread_inspect_137.png
+spread_inspect_138.png
+spread_inspect_139.png
+temp_bot.png
+temp_oval.png
+temp_slice.png
+temp_top.png
+{
+
+# Raw PDF scans (large binary assets)
+assets/1-401.pdf
+assets/1-402-index.pdf
+assets/book3/
+
+# Agent workspace
+.agents/
+
+# Static web export
+public/

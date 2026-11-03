@@ -32,6 +32,7 @@ export const en: PartialDictionary = {
   'book.choose': 'Book',
   'book.main': 'Sing to the Lord',
   'book.taranim': 'Spiritual Songs',
+  'book.book3': 'Halum Narnem',
 
   'search.placeholder': 'Search the hymns...',
   'search.inBook': 'Search in',

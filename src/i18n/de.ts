@@ -37,6 +37,7 @@ export const de: PartialDictionary = {
   'book.choose': 'Buch',
   'book.main': 'Singet dem Herrn',
   'book.taranim': 'Geistliche Lieder',
+  'book.book3': 'Halum Narnem',
 
   'search.placeholder': 'Lieder durchsuchen...',
   'search.inBook': 'Suchen in',

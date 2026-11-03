@@ -26,6 +26,7 @@ const ALLOWED_LATIN_FIELDS = new Set([
   'title_en', 'chorus_en',
   'title_de', 'chorus_de',
   'author', 'authorOriginal',
+  'id',
 ]);
 
 /** Harakat range, kept for the vocalisation-coverage report in check-hymns. */

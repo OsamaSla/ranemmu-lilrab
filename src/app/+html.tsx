@@ -5,6 +5,8 @@ import { type PropsWithChildren } from 'react';
 // not in the browser. Keep PWA tags here (single source of truth);
 // scripts/pwa-head.mjs only backfills pages missing them.
 export default function Root({ children }: PropsWithChildren) {
+  const base = (process.env.EXPO_BASE_URL || '').replace(/\/$/, '');
+
   return (
     <html lang="ar" dir="rtl">
       <head>
@@ -16,10 +18,10 @@ export default function Root({ children }: PropsWithChildren) {
         <title>رنموا للرب</title>
 
         {/* PWA */}
-        <link rel="manifest" href="/ranemmu-lilrab/manifest.json" />
-        <link rel="apple-touch-icon" href="/ranemmu-lilrab/icons/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="192x192" href="/ranemmu-lilrab/icons/icon-192.png" />
-        <link rel="icon" type="image/png" sizes="512x512" href="/ranemmu-lilrab/icons/icon-512.png" />
+        <link rel="manifest" href={`${base}/manifest.json`} />
+        <link rel="apple-touch-icon" href={`${base}/icons/apple-touch-icon.png`} />
+        <link rel="icon" type="image/png" sizes="192x192" href={`${base}/icons/icon-192.png`} />
+        <link rel="icon" type="image/png" sizes="512x512" href={`${base}/icons/icon-512.png`} />
         <meta name="theme-color" content="#184D55" />
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -30,7 +32,11 @@ export default function Root({ children }: PropsWithChildren) {
         <script defer src="https://cloud.umami.is/script.js" data-website-id="4bf9e517-428f-466b-a83e-5873974e1e8f" />
 
         {/* Service worker */}
-        <script dangerouslySetInnerHTML={{ __html: sw }} />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('${base}/sw.js',{scope:'${base || '/'}'});});}`,
+          }}
+        />
 
         <ScrollViewStyleReset />
       </head>
@@ -38,5 +44,3 @@ export default function Root({ children }: PropsWithChildren) {
     </html>
   );
 }
-
-const sw = `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('/ranemmu-lilrab/sw.js',{scope:'/ranemmu-lilrab/'});});}`;

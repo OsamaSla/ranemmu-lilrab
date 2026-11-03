@@ -17,7 +17,7 @@ export interface HymnVerse {
 }
 
 /** Hymn book identifier. `main` is the original corpus (numbers 1-1000). */
-export type BookId = 'main' | 'taranim';
+export type BookId = 'main' | 'taranim' | 'book3';
 
 /** Static metadata for each book bundled in the app. */
 export interface BookMeta {
@@ -30,6 +30,7 @@ export interface BookMeta {
 export const BOOKS: BookMeta[] = [
   { id: 'main', idPrefix: 'h' },
   { id: 'taranim', idPrefix: 'tr' },
+  { id: 'book3', idPrefix: 'b3' },
 ];
 
 /** Lightweight record used by the library list, recents, favorites and structure screens. */

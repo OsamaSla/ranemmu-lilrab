@@ -65,7 +65,6 @@ export function MeterText({ meter, fontSize, color, bold, align, numberOfLines, 
       style={[{ writingDirection: 'rtl', textAlign: align ?? 'right' }, style]}>
       {tokenize(meter).map((token, index) => (
         <RNText
-          // eslint-disable-next-line react/no-array-index-key
           key={index}
           style={
             token.small

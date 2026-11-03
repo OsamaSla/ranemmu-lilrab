@@ -351,8 +351,6 @@ export default function ReaderScreen() {
    */
   const languageChips = (dark: boolean) => {
     if (translationOptions.length <= 1) return null;
-    const ink = dark ? palette.readerText : colors.onPrimary;
-    const selectedInk = dark ? '#000000' : colors.primaryDeep;
     return (
       <View
         style={{
