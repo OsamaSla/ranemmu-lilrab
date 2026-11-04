@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (هymn library / ترانيم)
 
-Last verified: 2026-11-02, dynamic baseUrl & port 8081
+Last verified: 2026-11-04, commit 7eff84df (book3 topics)
 
 ## 1. What this is
 
