@@ -10,6 +10,7 @@
  */
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
+import { tagHymn } from '../lib/topic-tagger.mjs';
 
 const PARTS_DIR = 'content/book3/parts';
 const OUT = 'content/book3/book3.json';
@@ -113,6 +114,19 @@ if (existsSync(TRANSLATIONS)) {
   }
   console.log(`translations merged: ${enCount} EN, ${deCount} DE`);
 }
+
+// Topic tags are computed from the final Arabic text on every build (the
+// parts stay clean), so `tag-topics` heuristics stay identical to the other
+// books and a rebuild never drops them.
+let tagged = 0;
+for (const hymn of hymns) {
+  const { primaryTopic, topics } = tagHymn(hymn);
+  if (!primaryTopic) continue;
+  hymn.primaryTopic = primaryTopic;
+  if (topics.length > 0) hymn.topics = topics;
+  tagged += 1;
+}
+console.log(`topics tagged: ${tagged}/${hymns.length}`);
 
 writeFileSync(OUT, JSON.stringify({ hymns }, null, 2), 'utf8');
 writeFileSync(CORPUS_OUT, JSON.stringify({ hymns }, null, 2), 'utf8');

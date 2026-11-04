@@ -18,13 +18,12 @@ import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { TOPIC_IDS, TOPIC_KEYWORDS } from './lib/topic-keywords.mjs';
+import { normalizeAr, lyricBlob, scoreHymn, tagHymn } from './lib/topic-tagger.mjs';
+
+export { normalizeAr, scoreHymn, tagHymn };
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT_DIR = join(ROOT, 'content');
-
-const TITLE_WEIGHT = 3;
-const LYRIC_WEIGHT = 1;
-const MAX_SECONDARY = 3;
 
 const args = new Set(process.argv.slice(2));
 const APPLY = args.has('--apply');
@@ -37,52 +36,6 @@ const flagValue = (name, fallback) => {
 };
 const MIN_PRIMARY = flagValue('--min-primary', 4);
 const MIN_SECONDARY = flagValue('--min-secondary', 3);
-
-/** Normalise Arabic for keyword matching (mirrors the keyword table rules). */
-export function normalizeAr(text) {
-  return String(text)
-    .replace(/[ً-ٰٟۖ-ۭؐ-ؚ]/g, '')
-    .replace(/ـ/g, '')
-    .replace(/[أإآٱ]/g, 'ا')
-    .replace(/ؤ/g, 'و')
-    .replace(/ئ/g, 'ي')
-    .replace(/ة/g, 'ه')
-    .replace(/ى/g, 'ي');
-}
-
-function lyricBlob(hymn) {
-  const lines = [];
-  for (const verse of hymn.verses ?? []) lines.push(...(verse.lines ?? []));
-  if (hymn.chorus) lines.push(hymn.chorus);
-  return normalizeAr(lines.join('\n'));
-}
-
-/** Weighted score per topic for one hymn. */
-export function scoreHymn(hymn) {
-  const title = normalizeAr(hymn.title ?? '');
-  const lyrics = lyricBlob(hymn);
-  const scores = {};
-  for (const topic of TOPIC_IDS) {
-    let total = 0;
-    for (const [stem, weight] of TOPIC_KEYWORDS[topic] ?? []) {
-      if (title.includes(stem)) total += weight * TITLE_WEIGHT;
-      if (lyrics.includes(stem)) total += weight * LYRIC_WEIGHT;
-    }
-    scores[topic] = total;
-  }
-  return scores;
-}
-
-export function tagHymn(hymn, { minPrimary = MIN_PRIMARY, minSecondary = MIN_SECONDARY } = {}) {
-  const scores = scoreHymn(hymn);
-  const ranked = [...TOPIC_IDS].sort((a, b) => scores[b] - scores[a]);
-  const [best] = ranked;
-  if (scores[best] < minPrimary) return { primaryTopic: undefined, topics: [], scores };
-  const topics = ranked
-    .filter((t) => t !== best && scores[t] >= minSecondary && scores[t] >= scores[best] / 2)
-    .slice(0, MAX_SECONDARY);
-  return { primaryTopic: best, topics, scores };
-}
 
 async function readContentFiles() {
   const entries = (await readdir(CONTENT_DIR))
@@ -140,7 +93,10 @@ async function main() {
         for (const t of hymn.topics ?? []) secondaryCounts[t] = (secondaryCounts[t] ?? 0) + 1;
         continue;
       }
-      const { primaryTopic, topics } = tagHymn(hymn);
+      const { primaryTopic, topics } = tagHymn(hymn, {
+        minPrimary: MIN_PRIMARY,
+        minSecondary: MIN_SECONDARY,
+      });
       if (!primaryTopic) {
         untagged.push(`${hymn.book ?? 'main'}:${hymn.number} ${hymn.title}`);
         continue;

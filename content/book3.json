@@ -121,7 +121,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30002",
@@ -244,7 +248,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30003",
@@ -370,7 +378,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30004",
@@ -409,7 +418,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30005",
@@ -535,7 +545,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30006",
@@ -583,7 +597,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30007",
@@ -685,7 +700,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30008",
@@ -787,7 +803,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30009",
@@ -892,7 +912,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30010",
@@ -940,7 +961,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30011",
@@ -1060,7 +1085,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30012",
@@ -1102,7 +1128,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30013",
@@ -1144,7 +1171,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30014",
@@ -1267,7 +1295,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30015",
@@ -1540,7 +1569,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship",
+        "cross"
+      ]
     },
     {
       "id": "b30018",
@@ -1663,7 +1697,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30019",
@@ -1828,7 +1863,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "worship"
+      ]
     },
     {
       "id": "b30021",
@@ -1915,7 +1955,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30022",
@@ -1966,7 +2010,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30023",
@@ -2065,7 +2110,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30024",
@@ -2164,7 +2213,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30025",
@@ -2266,7 +2316,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship",
+        "worship"
+      ]
     },
     {
       "id": "b30026",
@@ -2368,7 +2423,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30027",
@@ -2527,7 +2583,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30028",
@@ -2575,7 +2632,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30029",
@@ -2674,7 +2735,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30030",
@@ -2797,7 +2859,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30031",
@@ -2884,7 +2947,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30032",
@@ -3010,7 +3074,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30033",
@@ -3055,7 +3123,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30034",
@@ -3163,7 +3235,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30035",
@@ -3286,7 +3362,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30036",
@@ -3337,7 +3414,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30037",
@@ -3535,7 +3616,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30039",
@@ -3637,7 +3722,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "repentance",
+        "cross"
+      ]
     },
     {
       "id": "b30040",
@@ -3730,7 +3820,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30041",
@@ -3832,7 +3926,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30042",
@@ -3910,7 +4005,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30043",
@@ -4015,7 +4111,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30044",
@@ -4111,7 +4211,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30045",
@@ -4192,7 +4296,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30046",
@@ -4294,7 +4399,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30047",
@@ -4417,7 +4526,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30048",
@@ -4537,7 +4650,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30049",
@@ -4594,7 +4712,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30050",
@@ -4720,7 +4839,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross",
+        "fellowship",
+        "worship"
+      ]
     },
     {
       "id": "b30051",
@@ -4864,7 +4989,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30052",
@@ -4900,7 +5026,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30053",
@@ -5005,7 +5135,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30054",
@@ -5101,7 +5232,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30055",
@@ -5137,7 +5272,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30056",
@@ -5248,7 +5384,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30057",
@@ -5353,7 +5490,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30058",
@@ -5455,7 +5596,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30059",
@@ -5554,7 +5696,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30060",
@@ -5656,7 +5802,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30061",
@@ -5863,7 +6010,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30062",
@@ -6022,7 +6173,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship",
+        "comfort"
+      ]
     },
     {
       "id": "b30063",
@@ -6145,7 +6301,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship",
+        "cross"
+      ]
     },
     {
       "id": "b30064",
@@ -6286,7 +6447,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship",
+        "worship"
+      ]
     },
     {
       "id": "b30065",
@@ -6484,7 +6650,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30067",
@@ -6574,7 +6744,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship",
+        "fellowship"
+      ]
     },
     {
       "id": "b30069",
@@ -6697,7 +6872,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30070",
@@ -6859,7 +7035,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "word",
+      "topics": [
+        "comfort",
+        "cross"
+      ]
     },
     {
       "id": "b30072",
@@ -6937,7 +7118,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "worship"
+      ]
     },
     {
       "id": "b30073",
@@ -6979,7 +7165,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30074",
@@ -7114,7 +7301,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30075",
@@ -7237,7 +7425,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30076",
@@ -7306,7 +7495,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30077",
@@ -7441,7 +7631,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "warfare",
+      "topics": [
+        "cross",
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30078",
@@ -7522,7 +7718,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30079",
@@ -7624,7 +7821,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30080",
@@ -7720,7 +7918,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30081",
@@ -7792,7 +7991,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30082",
@@ -7888,7 +8088,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30083",
@@ -7990,7 +8191,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30084",
@@ -8092,7 +8294,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30085",
@@ -8203,7 +8409,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30086",
@@ -8305,7 +8515,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30087",
@@ -8407,7 +8621,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30088",
@@ -8530,7 +8745,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "comfort"
+      ]
     },
     {
       "id": "b30089",
@@ -8653,7 +8873,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross",
+        "fellowship",
+        "worship"
+      ]
     },
     {
       "id": "b30090",
@@ -8692,7 +8918,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30091",
@@ -8770,7 +8997,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30092",
@@ -8893,7 +9121,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30093",
@@ -8995,7 +9227,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30094",
@@ -9115,7 +9348,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "word",
+        "cross",
+        "repentance"
+      ]
     },
     {
       "id": "b30095",
@@ -9184,7 +9423,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30096",
@@ -9280,7 +9520,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30097",
@@ -9358,7 +9602,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30098",
@@ -9460,7 +9708,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30099",
@@ -9601,7 +9853,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30101",
@@ -9721,7 +9974,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30102",
@@ -9784,7 +10038,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30103",
@@ -10000,7 +10258,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "repentance"
+      ]
     },
     {
       "id": "b30105",
@@ -10081,7 +10344,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30106",
@@ -10228,7 +10495,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30107",
@@ -10324,7 +10592,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship",
+        "worship"
+      ]
     },
     {
       "id": "b30108",
@@ -10447,7 +10720,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30109",
@@ -10564,7 +10838,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30110",
@@ -10693,7 +10968,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30112",
@@ -10789,7 +11065,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30113",
@@ -10885,7 +11165,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity",
+      "topics": [
+        "worship",
+        "fellowship"
+      ]
     },
     {
       "id": "b30114",
@@ -11005,7 +11290,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30115",
@@ -11092,7 +11378,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30116",
@@ -11161,7 +11448,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30117",
@@ -11257,7 +11545,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30118",
@@ -11401,7 +11690,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort",
+        "eternity"
+      ]
     },
     {
       "id": "b30119",
@@ -11587,7 +11881,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30121",
@@ -11776,7 +12071,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30123",
@@ -11953,7 +12249,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship",
+        "cross"
+      ]
     },
     {
       "id": "b30124",
@@ -12004,7 +12305,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity"
     },
     {
       "id": "b30125",
@@ -12052,7 +12354,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30126",
@@ -12217,7 +12520,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30127",
@@ -12259,7 +12563,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30128",
@@ -12337,7 +12642,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30129",
@@ -12469,7 +12778,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30130",
@@ -12547,7 +12860,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30131",
@@ -12670,7 +12984,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30132",
@@ -12793,7 +13111,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship",
+        "cross"
+      ]
     },
     {
       "id": "b30133",
@@ -12835,7 +13158,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30134",
@@ -12970,7 +13294,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30135",
@@ -13093,7 +13418,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30136",
@@ -13192,7 +13518,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30137",
@@ -13321,7 +13648,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30138",
@@ -13423,7 +13751,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30139",
@@ -13513,7 +13842,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30140",
@@ -13681,7 +14011,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship",
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30141",
@@ -13906,7 +14242,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30143",
@@ -14026,7 +14366,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30144",
@@ -14128,7 +14469,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "warfare",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30145",
@@ -14239,7 +14584,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30146",
@@ -14359,7 +14705,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30147",
@@ -14482,7 +14829,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30148",
@@ -14620,7 +14971,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "warfare"
+      ]
     },
     {
       "id": "b30149",
@@ -14725,7 +15080,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30150",
@@ -14926,7 +15282,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity"
     },
     {
       "id": "b30152",
@@ -15022,7 +15379,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30153",
@@ -15064,7 +15422,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30154",
@@ -15172,7 +15531,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30155",
@@ -15337,7 +15697,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30157",
@@ -15457,7 +15821,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "fellowship",
+        "warfare"
+      ]
     },
     {
       "id": "b30158",
@@ -15628,7 +15998,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30160",
@@ -15772,7 +16143,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30161",
@@ -15874,7 +16249,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30162",
@@ -15976,7 +16355,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30163",
@@ -16120,7 +16503,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30164",
@@ -16219,7 +16603,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30165",
@@ -16318,7 +16703,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30166",
@@ -16429,7 +16818,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship",
+        "cross"
+      ]
     },
     {
       "id": "b30167",
@@ -16534,7 +16928,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "warfare"
+      ]
     },
     {
       "id": "b30168",
@@ -16624,7 +17022,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30169",
@@ -16720,7 +17119,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30170",
@@ -16819,7 +17222,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30171",
@@ -16906,7 +17313,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "eternity",
+        "comfort"
+      ]
     },
     {
       "id": "b30172",
@@ -17008,7 +17420,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30173",
@@ -17104,7 +17521,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30174",
@@ -17371,7 +17789,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "repentance"
+      ]
     },
     {
       "id": "b30177",
@@ -17521,7 +17944,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30178",
@@ -17602,7 +18026,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "repentance"
+      ]
     },
     {
       "id": "b30179",
@@ -17722,7 +18150,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30180",
@@ -17818,7 +18250,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30181",
@@ -18025,7 +18461,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30183",
@@ -18208,7 +18648,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "warfare"
     },
     {
       "id": "b30185",
@@ -18331,7 +18772,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30186",
@@ -18433,7 +18878,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30187",
@@ -18532,7 +18978,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30188",
@@ -18628,7 +19075,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship",
+        "cross",
+        "eternity"
+      ]
     },
     {
       "id": "b30189",
@@ -18763,7 +19216,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30191",
@@ -18880,7 +19337,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30192",
@@ -19045,7 +19503,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort",
+        "cross"
+      ]
     },
     {
       "id": "b30194",
@@ -19156,7 +19619,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30195",
@@ -19237,7 +19704,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30196",
@@ -19348,7 +19819,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity"
     },
     {
       "id": "b30197",
@@ -19471,7 +19943,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30198",
@@ -19540,7 +20016,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30199",
@@ -19663,7 +20143,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30200",
@@ -19771,7 +20252,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30201",
@@ -19870,7 +20356,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross",
+        "word"
+      ]
     },
     {
       "id": "b30202",
@@ -20152,7 +20643,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "warfare",
+        "word"
+      ]
     },
     {
       "id": "b30205",
@@ -20314,7 +20810,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance"
     },
     {
       "id": "b30206",
@@ -20437,7 +20934,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "eternity"
+      ]
     },
     {
       "id": "b30207",
@@ -20560,7 +21061,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30208",
@@ -20683,7 +21188,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "worship",
+        "warfare"
+      ]
     },
     {
       "id": "b30209",
@@ -20884,7 +21395,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30211",
@@ -20980,7 +21492,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30212",
@@ -21061,7 +21574,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30213",
@@ -21163,7 +21677,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30214",
@@ -21361,7 +21876,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30216",
@@ -21484,7 +22003,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30217",
@@ -21607,7 +22127,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30218",
@@ -21676,7 +22200,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30219",
@@ -21808,7 +22333,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30220",
@@ -21907,7 +22436,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "warfare"
     },
     {
       "id": "b30221",
@@ -21958,7 +22488,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30222",
@@ -22057,7 +22588,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30223",
@@ -22159,7 +22694,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30224",
@@ -22264,7 +22800,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30225",
@@ -22351,7 +22888,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30226",
@@ -22387,7 +22928,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30227",
@@ -22489,7 +23031,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30228",
@@ -22594,7 +23140,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship",
+        "fellowship",
+        "cross"
+      ]
     },
     {
       "id": "b30229",
@@ -22642,7 +23194,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30230",
@@ -22870,7 +23423,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "repentance",
+        "worship"
+      ]
     },
     {
       "id": "b30232",
@@ -23065,7 +23623,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30234",
@@ -23239,7 +23801,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "cross",
+        "comfort"
+      ]
     },
     {
       "id": "b30236",
@@ -23359,7 +23926,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship",
+        "comfort",
+        "word"
+      ]
     },
     {
       "id": "b30237",
@@ -23482,7 +24055,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30238",
@@ -23524,7 +24098,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "warfare",
+      "topics": [
+        "word"
+      ]
     },
     {
       "id": "b30239",
@@ -23719,7 +24297,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30241",
@@ -23821,7 +24400,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30242",
@@ -23911,7 +24491,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30243",
@@ -24067,7 +24648,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30244",
@@ -24205,7 +24787,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30245",
@@ -24325,7 +24911,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30246",
@@ -24451,7 +25041,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "warfare",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30247",
@@ -24532,7 +25126,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "church",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30248",
@@ -24628,7 +25226,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30249",
@@ -24709,7 +25311,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance"
     },
     {
       "id": "b30250",
@@ -24832,7 +25435,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "word"
+      ]
     },
     {
       "id": "b30251",
@@ -25147,7 +25754,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30254",
@@ -25255,7 +25866,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30256",
@@ -25378,7 +25993,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30257",
@@ -25501,7 +26117,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30258",
@@ -25579,7 +26199,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "repentance",
+        "worship"
+      ]
     },
     {
       "id": "b30259",
@@ -25705,7 +26330,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "warfare",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30260",
@@ -25900,7 +26529,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30262",
@@ -25996,7 +26626,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30263",
@@ -26182,7 +26816,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "church"
+      ]
     },
     {
       "id": "b30266",
@@ -26293,7 +26931,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "repentance"
+      ]
     },
     {
       "id": "b30267",
@@ -26416,7 +27058,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30268",
@@ -26539,7 +27185,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "comfort",
+        "worship",
+        "cross"
+      ]
     },
     {
       "id": "b30269",
@@ -26629,7 +27281,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30270",
@@ -26776,7 +27429,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30271",
@@ -26872,7 +27529,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30273",
@@ -26995,7 +27653,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30274",
@@ -27088,7 +27747,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30275",
@@ -27178,7 +27838,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30276",
@@ -27277,7 +27938,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30277",
@@ -27376,7 +28038,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30278",
@@ -27478,7 +28141,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30279",
@@ -27523,7 +28190,8 @@
             "كنت النهاردة ها بقى ايه من غـير يسوع"
           ]
         }
-      ]
+      ],
+      "primaryTopic": "worship"
     },
     {
       "id": "b30280",
@@ -27631,7 +28299,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30281",
@@ -27727,7 +28396,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "eternity"
+      ]
     },
     {
       "id": "b30282",
@@ -27766,7 +28439,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30283",
@@ -27820,7 +28494,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30284",
@@ -27931,7 +28609,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30285",
@@ -27991,7 +28670,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30286",
@@ -28093,7 +28773,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30287",
@@ -28228,7 +28909,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "repentance"
+      ]
     },
     {
       "id": "b30288",
@@ -28318,7 +29003,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30289",
@@ -28453,7 +29139,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30290",
@@ -28591,7 +29281,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30291",
@@ -28714,7 +29405,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "repentance"
+      ]
     },
     {
       "id": "b30292",
@@ -28837,7 +29532,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "cross",
+        "comfort"
+      ]
     },
     {
       "id": "b30293",
@@ -28963,7 +29663,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity",
+      "topics": [
+        "worship",
+        "repentance"
+      ]
     },
     {
       "id": "b30294",
@@ -29089,7 +29794,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "eternity",
+        "worship"
+      ]
     },
     {
       "id": "b30295",
@@ -29254,7 +29964,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "eternity",
+        "fellowship"
+      ]
     },
     {
       "id": "b30296",
@@ -29377,7 +30092,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30297",
@@ -29512,7 +30231,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30298",
@@ -29656,7 +30376,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship",
+        "fellowship",
+        "comfort"
+      ]
     },
     {
       "id": "b30299",
@@ -29800,7 +30526,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "warfare"
+      ]
     },
     {
       "id": "b30300",
@@ -29941,7 +30672,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "cross",
+        "comfort"
+      ]
     },
     {
       "id": "b30302",
@@ -30055,7 +30791,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30303",
@@ -30175,7 +30912,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship",
+        "worship"
+      ]
     },
     {
       "id": "b30304",
@@ -30271,7 +31013,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30305",
@@ -30373,7 +31116,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30306",
@@ -30496,7 +31243,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30307",
@@ -30619,7 +31367,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "repentance"
+      ]
     },
     {
       "id": "b30308",
@@ -30706,7 +31459,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30309",
@@ -30799,7 +31556,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30310",
@@ -30901,7 +31659,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30311",
@@ -31024,7 +31786,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30312",
@@ -31114,7 +31877,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "repentance"
+      ]
     },
     {
       "id": "b30313",
@@ -31210,7 +31977,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "fellowship",
+        "cross"
+      ]
     },
     {
       "id": "b30314",
@@ -31330,7 +32102,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30315",
@@ -31372,7 +32149,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30316",
@@ -31453,7 +32231,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "repentance"
+      ]
     },
     {
       "id": "b30317",
@@ -31576,7 +32358,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30318",
@@ -31672,7 +32458,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship",
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30319",
@@ -31783,7 +32575,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30320",
@@ -31864,7 +32657,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30321",
@@ -31960,7 +32757,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship",
+        "cross",
+        "eternity"
+      ]
     },
     {
       "id": "b30322",
@@ -32083,7 +32886,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30323",
@@ -32308,7 +33115,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30325",
@@ -32434,7 +33242,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "cross",
+        "fellowship",
+        "comfort"
+      ]
     },
     {
       "id": "b30326",
@@ -32554,7 +33368,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30327",
@@ -32683,7 +33498,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30328",
@@ -32971,7 +33790,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort"
+      ]
     },
     {
       "id": "b30331",
@@ -33178,7 +34001,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity",
+      "topics": [
+        "fellowship",
+        "worship",
+        "cross"
+      ]
     },
     {
       "id": "b30332",
@@ -33232,7 +34061,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "eternity"
+      ]
     },
     {
       "id": "b30333",
@@ -33376,7 +34209,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30334",
@@ -33478,7 +34312,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "comfort",
+        "repentance"
+      ]
     },
     {
       "id": "b30335",
@@ -33646,7 +34486,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "warfare"
     },
     {
       "id": "b30337",
@@ -33748,7 +34589,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30338",
@@ -33847,7 +34692,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30339",
@@ -33945,7 +34794,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross",
+        "worship"
+      ]
     },
     {
       "id": "b30340",
@@ -34125,7 +34979,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "worship"
+      ]
     },
     {
       "id": "b30342",
@@ -34233,7 +35092,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30343",
@@ -34341,7 +35201,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30344",
@@ -34422,7 +35286,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity"
     },
     {
       "id": "b30345",
@@ -34548,7 +35413,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30346",
@@ -34716,7 +35582,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30348",
@@ -34839,7 +35709,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "eternity",
+        "cross",
+        "warfare"
+      ]
     },
     {
       "id": "b30349",
@@ -35001,7 +35877,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "eternity",
+        "worship",
+        "comfort"
+      ]
     },
     {
       "id": "b30351",
@@ -35124,7 +36006,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "worship"
+      ]
     },
     {
       "id": "b30352",
@@ -35169,7 +36056,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30353",
@@ -35265,7 +36156,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "warfare",
+        "fellowship",
+        "worship"
+      ]
     },
     {
       "id": "b30354",
@@ -35361,7 +36258,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship",
+        "worship",
+        "eternity"
+      ]
     },
     {
       "id": "b30355",
@@ -35439,7 +36342,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30356",
@@ -35547,7 +36451,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "warfare"
+      ]
     },
     {
       "id": "b30357",
@@ -35688,7 +36597,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "repentance"
+      ]
     },
     {
       "id": "b30358",
@@ -35736,7 +36649,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30359",
@@ -35859,7 +36776,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross"
     },
     {
       "id": "b30360",
@@ -36042,7 +36960,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30362",
@@ -36165,7 +37084,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30363",
@@ -36453,7 +37373,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30366",
@@ -36540,7 +37464,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30367",
@@ -36807,7 +37735,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30369",
@@ -36903,7 +37832,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30370",
@@ -36999,7 +37929,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "fellowship",
+        "worship",
+        "cross"
+      ]
     },
     {
       "id": "b30371",
@@ -37101,7 +38037,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "worship",
+        "fellowship"
+      ]
     },
     {
       "id": "b30372",
@@ -37182,7 +38123,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30373",
@@ -37293,7 +38235,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30374",
@@ -37365,7 +38311,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30375",
@@ -37458,7 +38409,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "comfort"
+      ]
     },
     {
       "id": "b30376",
@@ -37566,7 +38522,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30377",
@@ -37656,7 +38616,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30378",
@@ -37809,7 +38773,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "cross"
+      ]
     },
     {
       "id": "b30380",
@@ -37848,7 +38816,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30381",
@@ -37908,7 +38877,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30382",
@@ -37944,7 +38914,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30383",
@@ -38124,7 +39095,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "eternity",
+      "topics": [
+        "fellowship"
+      ]
     },
     {
       "id": "b30385",
@@ -38247,7 +39222,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort",
+      "topics": [
+        "warfare"
+      ]
     },
     {
       "id": "b30387",
@@ -38373,7 +39352,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30388",
@@ -38451,7 +39431,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30389",
@@ -38574,7 +39555,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "fellowship",
+        "worship",
+        "comfort"
+      ]
     },
     {
       "id": "b30390",
@@ -38697,7 +39684,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30391",
@@ -38793,7 +39781,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "eternity",
+        "cross",
+        "warfare"
+      ]
     },
     {
       "id": "b30392",
@@ -38847,7 +39841,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30393",
@@ -38952,7 +39947,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "comfort"
     },
     {
       "id": "b30394",
@@ -39114,7 +40110,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship",
+      "topics": [
+        "cross",
+        "comfort"
+      ]
     },
     {
       "id": "b30395",
@@ -39171,7 +40172,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30396",
@@ -39291,7 +40293,12 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "cross",
+      "topics": [
+        "comfort",
+        "fellowship"
+      ]
     },
     {
       "id": "b30397",
@@ -39438,7 +40445,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "fellowship"
     },
     {
       "id": "b30399",
@@ -39567,7 +40575,11 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "repentance",
+      "topics": [
+        "worship"
+      ]
     },
     {
       "id": "b30401",
@@ -39612,7 +40624,8 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship"
     },
     {
       "id": "b30402",
@@ -39720,7 +40733,13 @@
           ]
         }
       ],
-      "translationStatus": "AI_DRAFT"
+      "translationStatus": "AI_DRAFT",
+      "primaryTopic": "worship",
+      "topics": [
+        "repentance",
+        "fellowship",
+        "warfare"
+      ]
     }
   ]
 }

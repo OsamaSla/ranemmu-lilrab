@@ -4,98 +4,127 @@
   "book": "book3",
   "number": 1,
   "title": "يا سيدى أحببتنى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30002",
   "book": "book3",
   "number": 2,
   "title": "قد فدانى بالصليب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30003",
   "book": "book3",
   "number": 3,
   "title": "حبك يارب نورى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30004",
   "book": "book3",
   "number": 4,
   "title": "أحبك ربى يسوع",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30005",
   "book": "book3",
   "number": 5,
   "title": "قصة الحب العجيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30006",
   "book": "book3",
   "number": 6,
   "title": "أخذتك المحبة يا حبيب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30007",
   "book": "book3",
   "number": 7,
   "title": "إله الحب نجانى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30008",
   "book": "book3",
   "number": 8,
   "title": "يا عجيباً فى محبته العظيمة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30009",
   "book": "book3",
   "number": 9,
   "title": "حبيبى أيا من لأجلى جُرحت",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30010",
   "book": "book3",
   "number": 10,
   "title": "أحلى مافى حياتى انت",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30011",
   "book": "book3",
   "number": 11,
   "title": "فى الصليب يا إلهى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30012",
   "book": "book3",
   "number": 12,
   "title": "من أنا يارب حتى تحملن عنى الصليب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30013",
   "book": "book3",
   "number": 13,
   "title": "يامنْ وهبت حباً",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30014",
   "book": "book3",
   "number": 14,
   "title": "لولا موت الصلب يا فادى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30015",
@@ -116,14 +145,20 @@
   "book": "book3",
   "number": 17,
   "title": "حبك لى حياتى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship",
+   "cross"
+  ]
  },
  {
   "id": "b30018",
   "book": "book3",
   "number": 18,
   "title": "قد مات بالصليب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30019",
@@ -137,119 +172,165 @@
   "book": "book3",
   "number": 20,
   "title": "إننى أسبى بحب جارف",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "worship"
+  ]
  },
  {
   "id": "b30021",
   "book": "book3",
   "number": 21,
   "title": "ربي سبيت قلبي بودادك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30022",
   "book": "book3",
   "number": 22,
   "title": "سيدي أيا حبيب أشبعن قلبي بك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30023",
   "book": "book3",
   "number": 23,
   "title": "هل قد ذبحت من أجلي",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30024",
   "book": "book3",
   "number": 24,
   "title": "لا أنسى يوماً سيدي عند الصليب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30025",
   "book": "book3",
   "number": 25,
   "title": "بحبه يسوع قد أنقذني",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship",
+   "worship"
+  ]
  },
  {
   "id": "b30026",
   "book": "book3",
   "number": 26,
   "title": "لولاك سيدي لكنت في شقاء",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30027",
   "book": "book3",
   "number": 27,
   "title": "عندما أذكر كيف سُمِّرتَ على الصليب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30028",
   "book": "book3",
   "number": 28,
   "title": "سيدي يا مبهج النفوس",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30029",
   "book": "book3",
   "number": 29,
   "title": "يالعمق حب ربي ذاق عني موت الصليب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30030",
   "book": "book3",
   "number": 30,
   "title": "لأجلكم شربت كأس مر رهيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30031",
   "book": "book3",
   "number": 31,
   "title": "اختبرت حبك ذلك الحب الفريد",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30032",
   "book": "book3",
   "number": 32,
   "title": "يايسوع هناك في الصليب رفعت عني ياحبيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30033",
   "book": "book3",
   "number": 33,
   "title": "كل فرحة للنفس كل بسمة في القلب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30034",
   "book": "book3",
   "number": 34,
   "title": "بحر محبة الفادي لا يحد",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30035",
   "book": "book3",
   "number": 35,
   "title": "ياسيدي كم كان قاسياً موت صليب العار",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30036",
   "book": "book3",
   "number": 36,
   "title": "أشدو لك أيها الفادي الحبيب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30037",
@@ -263,189 +344,274 @@
   "book": "book3",
   "number": 38,
   "title": "أحبك إذ قد سمعت صلاتي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30039",
   "book": "book3",
   "number": 39,
   "title": "ياسيدي ربي العظيم",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "repentance",
+   "cross"
+  ]
  },
  {
   "id": "b30040",
   "book": "book3",
   "number": 40,
   "title": "ربي تسبيح قلبي وترنيم ارتحالي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30041",
   "book": "book3",
   "number": 41,
   "title": "لولا الصليب من أنا ياسيدي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30042",
   "book": "book3",
   "number": 42,
   "title": "هللويا أنا غالي في عينيك محفوظ مكاني",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30043",
   "book": "book3",
   "number": 43,
   "title": "بين يديك الحانية وضعت رأسي في سلام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30044",
   "book": "book3",
   "number": 44,
   "title": "يا سيدي املأ قلبي بالحب لشخصك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30045",
   "book": "book3",
   "number": 45,
   "title": "مذ رأتك النفس طابت قد سباها حبك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30046",
   "book": "book3",
   "number": 46,
   "title": "هيا ننسى ما ورا نمتد إلى قدام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30047",
   "book": "book3",
   "number": 47,
   "title": "قلبه حنين حبه يبين إن صليبه ده كان تكفير",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30048",
   "book": "book3",
   "number": 48,
   "title": "فرحاً أفرح بالرب بهجة فرحي إلهي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30049",
   "book": "book3",
   "number": 49,
   "title": "حبي لربي يزيد",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30050",
   "book": "book3",
   "number": 50,
   "title": "بحبك ربي يعزف قلبي ألحان فرح وسلام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross",
+   "fellowship",
+   "worship"
+  ]
  },
  {
   "id": "b30051",
   "book": "book3",
   "number": 51,
   "title": "يسوع ما أجوده يسوع ما أجمله",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30052",
   "book": "book3",
   "number": 52,
   "title": "يا قوتي لك أرنم لأن الله ملجأي",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30053",
   "book": "book3",
   "number": 53,
   "title": "يا رب ما أحلى الحياة قربك فعشرتي بشخصك تلذ لي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30054",
   "book": "book3",
   "number": 54,
   "title": "نفسي تتوق في كل يوم أن تلتقى بحبك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30055",
   "book": "book3",
   "number": 55,
   "title": "يا ليت نفسي تدرك أبعاد حبك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30056",
   "book": "book3",
   "number": 56,
   "title": "أحبك إذ أحببتني أحبك إذ فديتني",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30057",
   "book": "book3",
   "number": 57,
   "title": "يا حياة القلب يا حبيب روحي ضامني",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30058",
   "book": "book3",
   "number": 58,
   "title": "ربي اداني فرحه في قلبي لما جاني بنفسه وقال",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30059",
   "book": "book3",
   "number": 59,
   "title": "فرحاً تفرح نفسي بالحبيب أبدا",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30060",
   "book": "book3",
   "number": 60,
   "title": "عايز أقضى حياتى فى قربك وقت هنايا ووقت آلامى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30061",
   "book": "book3",
   "number": 61,
   "title": "جئتك أبي لأبتغي طعاماً بعدما ضيعته مالاً حراماً",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30062",
   "book": "book3",
   "number": 62,
   "title": "أنت ربى السامرى ذو الصلاح",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship",
+   "comfort"
+  ]
  },
  {
   "id": "b30063",
   "book": "book3",
   "number": 63,
   "title": "يسوع بحبه وحنانه إلى ترنو أشواقه",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship",
+   "cross"
+  ]
  },
  {
   "id": "b30064",
   "book": "book3",
   "number": 64,
   "title": "أنت لى المن الذى يشبع قلبى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship",
+   "worship"
+  ]
  },
  {
   "id": "b30065",
@@ -459,7 +625,11 @@
   "book": "book3",
   "number": 66,
   "title": "يا هناء النفس فى دنيا العذاب والآلام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30067",
@@ -473,14 +643,20 @@
   "book": "book3",
   "number": 68,
   "title": "يا راوينى يا يسوع بحنانك حياتى هى رضاك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship",
+   "fellowship"
+  ]
  },
  {
   "id": "b30069",
   "book": "book3",
   "number": 69,
   "title": "ربى فى حضنك روحى تستريح تهدأ",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30070",
@@ -494,196 +670,272 @@
   "book": "book3",
   "number": 71,
   "title": "إن قوتى كلما قلبى يجوع",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "word",
+  "topics": [
+   "comfort",
+   "cross"
+  ]
  },
  {
   "id": "b30072",
   "book": "book3",
   "number": 72,
   "title": "يابسمة الصباح فى وجه ذا الوجود",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "worship"
+  ]
  },
  {
   "id": "b30073",
   "book": "book3",
   "number": 73,
   "title": "يا رب صخرتى إليك صرختى فأنت مخلصى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30074",
   "book": "book3",
   "number": 74,
   "title": "ربى منقذى حبيبى طيب القلب يسوع",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30075",
   "book": "book3",
   "number": 75,
   "title": "أنا لست أشبع من حبيبى أنا لست أشبع من شذاه",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30076",
   "book": "book3",
   "number": 76,
   "title": "تحت ظلك حبيبى أشتهى أن أجلس",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30077",
   "book": "book3",
   "number": 77,
   "title": "قد فتحت الباب فادخل سيدى هاك قلبى هاك عقلى ويدى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "warfare",
+  "topics": [
+   "cross",
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30078",
   "book": "book3",
   "number": 78,
   "title": "ما لم تباركنى ربى لن أطلقك لن أتركك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30079",
   "book": "book3",
   "number": 79,
   "title": "راحتى يارب حقاً أن لى فيك مكان",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30080",
   "book": "book3",
   "number": 80,
   "title": "بقربك يا حبيبى يسوع قلبي اشتهى يبقى طول الحياة",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30081",
   "book": "book3",
   "number": 81,
   "title": "هللويا الرب صالح إلى الأبد رحمته",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30082",
   "book": "book3",
   "number": 82,
   "title": "يسوع أنت كنزى العظيم يا منبع الرحمة والحنان",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30083",
   "book": "book3",
   "number": 83,
   "title": "يا مالكاً حياتى بصنعك العجيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30084",
   "book": "book3",
   "number": 84,
   "title": "فرحة قلبى فيك إلهى غدى ويومى تبقى أمين",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30085",
   "book": "book3",
   "number": 85,
   "title": "إلهى ادن منى لك لهفتى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30086",
   "book": "book3",
   "number": 86,
   "title": "هل ليسوع من مثيل فى الطهر والجمال",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "repentance",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30087",
   "book": "book3",
   "number": 87,
   "title": "عمرى مادقت سعادة فى قلبى ولا حسيت بسلام فى حياتى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30088",
   "book": "book3",
   "number": 88,
   "title": "آتيك يا أبتاه باسم ذا الفادى المحبوب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "comfort"
+  ]
  },
  {
   "id": "b30089",
   "book": "book3",
   "number": 89,
   "title": "يارب يا منتهى آمالى يا ساكناً فى ذرى الأعالى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross",
+   "fellowship",
+   "worship"
+  ]
  },
  {
   "id": "b30090",
   "book": "book3",
   "number": 90,
   "title": "تكلم يا ربى تكلم لقلبى فعبدك أنا بدمك اشتريتى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30091",
   "book": "book3",
   "number": 91,
   "title": "سألوذ بحضنك من جهلى من شهواتى لن أخشى الموت فقد صرت أنت حياتى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30092",
   "book": "book3",
   "number": 92,
   "title": "حاجتى دوماً إليك راحتى فى راحتيك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30093",
   "book": "book3",
   "number": 93,
   "title": "ربى زدنى منك قرباً لأحضان قلبك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30094",
   "book": "book3",
   "number": 94,
   "title": "كلامك أيارب نورى هو هداى فى المسير",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "word",
+   "cross",
+   "repentance"
+  ]
  },
  {
   "id": "b30095",
   "book": "book3",
   "number": 95,
   "title": "وراءك يحلو المسير إلى حيث خضر المراعى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30096",
   "book": "book3",
   "number": 96,
   "title": "يا إلهى ذا دعائى أن تعرفنى المزيد",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30097",
   "book": "book3",
   "number": 97,
   "title": "فى انتظار نورك يجلو غيومى فى انتظار حبك يمحو همومى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30098",
   "book": "book3",
   "number": 98,
   "title": "يا إلهى يا حبيبى راحتى العظمى الوثيقة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30099",
@@ -697,21 +949,27 @@
   "book": "book3",
   "number": 100,
   "title": "ها تقدم وأنا مش خايف من ضعفى ومن المجهول",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30101",
   "book": "book3",
   "number": 101,
   "title": "إلهى زدنى نعمة كى أحيا دوماً فى رضاك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30102",
   "book": "book3",
   "number": 102,
   "title": "يا سيدى ها ثقتى فى أنك ستعمل",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30103",
@@ -725,42 +983,59 @@
   "book": "book3",
   "number": 104,
   "title": "أثق يا سيدى أن يداك تشفى فى الأعماق الداء",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "repentance"
+  ]
  },
  {
   "id": "b30105",
   "book": "book3",
   "number": 105,
   "title": "أيها الفخارى الأعظم أنا كالخزف بين يديك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30106",
   "book": "book3",
   "number": 106,
   "title": "علمنى يا رب أصلى دربنى لأسكب قلبى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30107",
   "book": "book3",
   "number": 107,
   "title": "سلمت أمرى فى يديك وإننى راض وصابر",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship",
+   "worship"
+  ]
  },
  {
   "id": "b30108",
   "book": "book3",
   "number": 108,
   "title": "إذا إستجبت طلبتى يا سيدى فالمجد لك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30109",
   "book": "book3",
   "number": 109,
   "title": "علمنى كيف أصلى علمنى يا يسوع",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30110",
@@ -774,56 +1049,75 @@
   "book": "book3",
   "number": 111,
   "title": "إنى ضعيف وحدى يا راعى الأمين",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30112",
   "book": "book3",
   "number": 112,
   "title": "أحببت أن سيدى يسمع صوتى ودعاى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30113",
   "book": "book3",
   "number": 113,
   "title": "وجهت قلبى نحوك يا ساكناً فوق السما",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "eternity",
+  "topics": [
+   "worship",
+   "fellowship"
+  ]
  },
  {
   "id": "b30114",
   "book": "book3",
   "number": 114,
   "title": "نفسى اقربى بالشوق من كرسى رحمته",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30115",
   "book": "book3",
   "number": 115,
   "title": "علمنى أنتظرك يا رب عرفنى رؤيتك للدرب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30116",
   "book": "book3",
   "number": 116,
   "title": "أيها الرب الحبيب طلبتى إليك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30117",
   "book": "book3",
   "number": 117,
   "title": "إن قلبى يا إلهى عالم علم اليقين",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30118",
   "book": "book3",
   "number": 118,
   "title": "انتظرى الرب يا نفسى واذكرى جوده لا تنسى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort",
+   "eternity"
+  ]
  },
  {
   "id": "b30119",
@@ -837,7 +1131,8 @@
   "book": "book3",
   "number": 120,
   "title": "يا سيدى إن لم يسر أمامى وجهك الطريق",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30121",
@@ -851,133 +1146,174 @@
   "book": "book3",
   "number": 122,
   "title": "يا أبانا لست أدرى كيف كان عمرى يجرى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30123",
   "book": "book3",
   "number": 123,
   "title": "فدانى الرب راعى ومن يرعى إذن يفدى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship",
+   "cross"
+  ]
  },
  {
   "id": "b30124",
   "book": "book3",
   "number": 124,
   "title": "من لى هنا أو فى السما يا سيدى سواك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "eternity"
  },
  {
   "id": "b30125",
   "book": "book3",
   "number": 125,
   "title": "٣٦٥ يوم ٣٦٥ ليل",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30126",
   "book": "book3",
   "number": 126,
   "title": "شامخ لايحنى رأسى أى ضيق",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30127",
   "book": "book3",
   "number": 127,
   "title": "يا ليت عقلى يدرك أبعاد حبك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30128",
   "book": "book3",
   "number": 128,
   "title": "أسكن تحت ظل جناحيك أعرف معنى السلام فى حبك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30129",
   "book": "book3",
   "number": 129,
   "title": "إلى هنا أعاننا الرب يسوع صخرنا",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30130",
   "book": "book3",
   "number": 130,
   "title": "مين رايح يفصلنى عنك وانت اللى فديت نفسى بدمك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30131",
   "book": "book3",
   "number": 131,
   "title": "الساكن فى ستر ربى القدير يبيت فى ظل الرحوم",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30132",
   "book": "book3",
   "number": 132,
   "title": "فى مسيرى مع يسوع وسط آلام الحياة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship",
+   "cross"
+  ]
  },
  {
   "id": "b30133",
   "book": "book3",
   "number": 133,
   "title": "ربى لست أعلم ما تحمله الأيام لى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30134",
   "book": "book3",
   "number": 134,
   "title": "فى وسط عالم الظلام القلب يحيا فى سلام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30135",
   "book": "book3",
   "number": 135,
   "title": "ربى خيرك ورحمه يتبعانى فى الطريق",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30136",
   "book": "book3",
   "number": 136,
   "title": "يهتم بى عونى منقذى إلهى لا يبطىء",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30137",
   "book": "book3",
   "number": 137,
   "title": "أنت معى كل الأيام فى ضعفى أنت قوتى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30138",
   "book": "book3",
   "number": 138,
   "title": "إن الأشبال احتاجت وإن جاعت الأسود",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30139",
   "book": "book3",
   "number": 139,
   "title": "ربى أنت تستطيع كل شئ ليس شئ غير مستطاع لديك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30140",
   "book": "book3",
   "number": 140,
   "title": "اسمك ربى يسوع مانح الخلاص",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship",
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30141",
@@ -991,56 +1327,76 @@
   "book": "book3",
   "number": 142,
   "title": "سأعيش العمر كارزاً",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30143",
   "book": "book3",
   "number": 143,
   "title": "لِمَ أخافُ حزناً أو ظلمةً تدنو",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30144",
   "book": "book3",
   "number": 144,
   "title": "أنت قائدنا يسوع البار",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "warfare",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30145",
   "book": "book3",
   "number": 145,
   "title": "أركضُ إليكَ أيهـا الحـبـيب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30146",
   "book": "book3",
   "number": 146,
   "title": "فى ظلمةِ الليلِ فى وحشةٍ حولى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30147",
   "book": "book3",
   "number": 147,
   "title": "يا سيدى الغالى يا كلَّ آمالى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30148",
   "book": "book3",
   "number": 148,
   "title": "تستطيع أن تشق البحر أوتطوى الجبال",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "warfare"
+  ]
  },
  {
   "id": "b30149",
   "book": "book3",
   "number": 149,
   "title": "فى ضيقى دعوتُكَ يا ربى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30150",
@@ -1054,28 +1410,32 @@
   "book": "book3",
   "number": 151,
   "title": "فى السما والأرض والبحار",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "eternity"
  },
  {
   "id": "b30152",
   "book": "book3",
   "number": 152,
   "title": "لستُ أعلمُ ما قد يكون فى غدى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30153",
   "book": "book3",
   "number": 153,
   "title": "أنا صابر ليك .. ومستنيك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30154",
   "book": "book3",
   "number": 154,
   "title": "إنى لا أعلمُ ما فى الغد",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30155",
@@ -1089,14 +1449,24 @@
   "book": "book3",
   "number": 156,
   "title": "ربى وعودك سور لحياتى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30157",
   "book": "book3",
   "number": 157,
   "title": "أنا ماشى ونورك قدامى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "fellowship",
+   "warfare"
+  ]
  },
  {
   "id": "b30158",
@@ -1110,105 +1480,153 @@
   "book": "book3",
   "number": 159,
   "title": "كنتَ رفيقى دائماً",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30160",
   "book": "book3",
   "number": 160,
   "title": "مثلُ طفلٍ أرتمى بين يديك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30161",
   "book": "book3",
   "number": 161,
   "title": "جاى وباسلم قلبى يا ربى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30162",
   "book": "book3",
   "number": 162,
   "title": "ربى أنت وحدك فيك عزا قلبى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30163",
   "book": "book3",
   "number": 163,
   "title": "ربى يسوع لى لا أخشى من ظلام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30164",
   "book": "book3",
   "number": 164,
   "title": "ماشى معايا اللى فدانى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30165",
   "book": "book3",
   "number": 165,
   "title": "مَنْ لى سواك يحمينى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30166",
   "book": "book3",
   "number": 166,
   "title": "مالَ النهارُ سيدى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship",
+   "cross"
+  ]
  },
  {
   "id": "b30167",
   "book": "book3",
   "number": 167,
   "title": "الله أنت خلاصى فأطمئن",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "warfare"
+  ]
  },
  {
   "id": "b30168",
   "book": "book3",
   "number": 168,
   "title": "وقت الشدة ووقت الضيق",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30169",
   "book": "book3",
   "number": 169,
   "title": "ربى أنت لى الصديق",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30170",
   "book": "book3",
   "number": 170,
   "title": "رجاءُ نفسى وحده",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30171",
   "book": "book3",
   "number": 171,
   "title": "سنين طويلة مضت",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "eternity",
+   "comfort"
+  ]
  },
  {
   "id": "b30172",
   "book": "book3",
   "number": 172,
   "title": "كل الماضى بيشهد ليك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30173",
   "book": "book3",
   "number": 173,
   "title": "ذا يقينُ القلبِ ربى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30174",
@@ -1229,35 +1647,53 @@
   "book": "book3",
   "number": 176,
   "title": "عندما أحتاجُ عوناً",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "repentance"
+  ]
  },
  {
   "id": "b30177",
   "book": "book3",
   "number": 177,
   "title": "كنتُ فى خوفى وضيقى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30178",
   "book": "book3",
   "number": 178,
   "title": "عندما تُدْمىَ رجلىَّ",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "repentance"
+  ]
  },
  {
   "id": "b30179",
   "book": "book3",
   "number": 179,
   "title": "كيف أنسى سيدى الغالىَ المسيح",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30180",
   "book": "book3",
   "number": 180,
   "title": "إن ربَّ المجدِ راعىَّ الكريم",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30181",
@@ -1271,7 +1707,11 @@
   "book": "book3",
   "number": 182,
   "title": "صخرتى العظمى حبيبى الرب لى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30183",
@@ -1285,35 +1725,48 @@
   "book": "book3",
   "number": 184,
   "title": "شكراً لله الذى يقودنا فى موكب النصرة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "warfare"
  },
  {
   "id": "b30185",
   "book": "book3",
   "number": 185,
   "title": "قد قلت أنت سيدى ووعدك أمين",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30186",
   "book": "book3",
   "number": 186,
   "title": "مين أحن منك ألتجئ إليه",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30187",
   "book": "book3",
   "number": 187,
   "title": "إذا بحر هذى الحياة اضطرب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30188",
   "book": "book3",
   "number": 188,
   "title": "لست أدرى كيف أحمى نفسى من شر الطريق",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship",
+   "cross",
+   "eternity"
+  ]
  },
  {
   "id": "b30189",
@@ -1327,14 +1780,19 @@
   "book": "book3",
   "number": 190,
   "title": "إن ظننت يا صديقى أنك منه نسيت",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30191",
   "book": "book3",
   "number": 191,
   "title": "إلق على الرب همك فهو يعولك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30192",
@@ -1348,63 +1806,96 @@
   "book": "book3",
   "number": 193,
   "title": "حين لا أدرى بنفسى يا إلهى أنت تدرى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort",
+   "cross"
+  ]
  },
  {
   "id": "b30194",
   "book": "book3",
   "number": 194,
   "title": "دايماً بتخبينى لما تهب الريح",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30195",
   "book": "book3",
   "number": 195,
   "title": "أسبح الرب مدى الحياة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30196",
   "book": "book3",
   "number": 196,
   "title": "أنظر الى طير السما لا يعرف الأحزان",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "eternity"
  },
  {
   "id": "b30197",
   "book": "book3",
   "number": 197,
   "title": "لما بكيت من جرح فى قلبى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30198",
   "book": "book3",
   "number": 198,
   "title": "الرب لى راع فلا يعوزنى شئ",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30199",
   "book": "book3",
   "number": 199,
   "title": "الله الذى لنا لا يتركنا أبداً",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30200",
   "book": "book3",
   "number": 200,
   "title": "مادمت ربى فى الطريق لن أضيق لن أخور",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30201",
   "book": "book3",
   "number": 201,
   "title": "تزول الجبال وتفنى التلال",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross",
+   "word"
+  ]
  },
  {
   "id": "b30202",
@@ -1425,35 +1916,55 @@
   "book": "book3",
   "number": 204,
   "title": "من سيفصلنا عن محبة المسيح",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "warfare",
+   "word"
+  ]
  },
  {
   "id": "b30205",
   "book": "book3",
   "number": 205,
   "title": "المؤمن الأمين يفرح فرح ثمين",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "repentance"
  },
  {
   "id": "b30206",
   "book": "book3",
   "number": 206,
   "title": "أنت فى عرش السماء يا حبيب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "eternity"
+  ]
  },
  {
   "id": "b30207",
   "book": "book3",
   "number": 207,
   "title": "مرنى أن آتى إليك رغم ذا الليل الرهيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30208",
   "book": "book3",
   "number": 208,
   "title": "يسوع ربى مؤتى الأغانى وسط الليالى طول الزمان",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "worship",
+   "warfare"
+  ]
  },
  {
   "id": "b30209",
@@ -1467,28 +1978,32 @@
   "book": "book3",
   "number": 210,
   "title": "نأتى لك ياسيد الكون يامن أحببتنا",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30211",
   "book": "book3",
   "number": 211,
   "title": "ربى أنت الغوث أنت نصرتى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30212",
   "book": "book3",
   "number": 212,
   "title": "ليس لنا يا رب ليس لنا",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30213",
   "book": "book3",
   "number": 213,
   "title": "انت مش للذكريات أو لمجد راح وفات",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30214",
@@ -1502,105 +2017,143 @@
   "book": "book3",
   "number": 215,
   "title": "شكراً لك على الحرية",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30216",
   "book": "book3",
   "number": 216,
   "title": "الرب نورى وهداى فى غربتى يهدى خطاى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30217",
   "book": "book3",
   "number": 217,
   "title": "لما أجيلك بدموعى والهم يملالى ضلوعى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30218",
   "book": "book3",
   "number": 218,
   "title": "أيها القدوس يارب الحياة مستحق أن تحنى لك الجباه",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30219",
   "book": "book3",
   "number": 219,
   "title": "يسوع قالى أنا حارسك مالك خايف من إيه",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30220",
   "book": "book3",
   "number": 220,
   "title": "بقوة لاسم يسوع اشدوا وانشدوا",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "warfare"
  },
  {
   "id": "b30221",
   "book": "book3",
   "number": 221,
   "title": "ينبغى أن تزيد أنت يا سيدى وأنا أنقص",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30222",
   "book": "book3",
   "number": 222,
   "title": "ها آتى بطيب فوق رأسك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30223",
   "book": "book3",
   "number": 223,
   "title": "أسجد فى خشوع لك ربى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30224",
   "book": "book3",
   "number": 224,
   "title": "وحدك لأنك من جزت عنى ذا الصليب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30225",
   "book": "book3",
   "number": 225,
   "title": "يا رب علمنى كيف أحبك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30226",
   "book": "book3",
   "number": 226,
   "title": "فرح ربنا الذى ينبع من قلبى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30227",
   "book": "book3",
   "number": 227,
   "title": "ها إننى أقترب وأطلب منك الرضا",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30228",
   "book": "book3",
   "number": 228,
   "title": "لا أنا لا أنا بل سيدى الوحيد",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship",
+   "fellowship",
+   "cross"
+  ]
  },
  {
   "id": "b30229",
   "book": "book3",
   "number": 229,
   "title": "قلبى إشتهى يا ربى حبا لك أمين",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30230",
@@ -1614,7 +2167,12 @@
   "book": "book3",
   "number": 231,
   "title": "أنا لمن فدانى ومات عن ذنبى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "repentance",
+   "worship"
+  ]
  },
  {
   "id": "b30232",
@@ -1628,7 +2186,11 @@
   "book": "book3",
   "number": 233,
   "title": "اتبعنى أنت إنى قد أحببتك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30234",
@@ -1642,28 +2204,44 @@
   "book": "book3",
   "number": 235,
   "title": "بنحط حياتنا قدامك ونسلم كل الأيام",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "cross",
+   "comfort"
+  ]
  },
  {
   "id": "b30236",
   "book": "book3",
   "number": 236,
   "title": "ربى اجعلنى أشبه ابنك يسوع",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship",
+   "comfort",
+   "word"
+  ]
  },
  {
   "id": "b30237",
   "book": "book3",
   "number": 237,
   "title": "ربى حياتى تحلو بحبك ليس سواك ربى حبيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30238",
   "book": "book3",
   "number": 238,
   "title": "كم تمتلئ حياتنا كلاما كم تفتقر للقوة تماما",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "warfare",
+  "topics": [
+   "word"
+  ]
  },
  {
   "id": "b30239",
@@ -1677,77 +2255,106 @@
   "book": "book3",
   "number": 240,
   "title": "ربى أنا ليك نفسى بين إيديك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30241",
   "book": "book3",
   "number": 241,
   "title": "كيف .. وأنت الحبيب يهوى قلبى سواك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30242",
   "book": "book3",
   "number": 242,
   "title": "فديت ربى حياتى جددت كل كيانى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30243",
   "book": "book3",
   "number": 243,
   "title": "إذ دخلت قدسك ورأيت عرشك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30244",
   "book": "book3",
   "number": 244,
   "title": "سألت نفسى أنا الشقى هل من منجى هل من رحيم",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30245",
   "book": "book3",
   "number": 245,
   "title": "يطيب لى فى ذى الحياة أن أخدم الجموع",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30246",
   "book": "book3",
   "number": 246,
   "title": "أيا رب إن شئت ترسلنى لأهدى دواماً قلوب الخطاة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "warfare",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30247",
   "book": "book3",
   "number": 247,
   "title": "جهز أيا فادى البشر نفسى لذا الحصاد",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "church",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30248",
   "book": "book3",
   "number": 248,
   "title": "لو تركت الأرض حالا ودعانى الإله",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30249",
   "book": "book3",
   "number": 249,
   "title": "نادهم من ناءوا تحت الذنب والخطية",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "repentance"
  },
  {
   "id": "b30250",
   "book": "book3",
   "number": 250,
   "title": "أترانى قد سمعت صوت ربى يسأل",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "word"
+  ]
  },
  {
   "id": "b30251",
@@ -1768,7 +2375,11 @@
   "book": "book3",
   "number": 253,
   "title": "رسالة أعطيتنى يا سيدى كى أخبر الملا عن الحب العجيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30254",
@@ -1782,35 +2393,53 @@
   "book": "book3",
   "number": 255,
   "title": "أنا باشهد عن إلهى قدام كل الوجود",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30256",
   "book": "book3",
   "number": 256,
   "title": "إنى أشدو لك ربى إذ خلاصك عجيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30257",
   "book": "book3",
   "number": 257,
   "title": "هل يستطيع الرب بى أن يصنع العجائب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30258",
   "book": "book3",
   "number": 258,
   "title": "بعدما كنت عبد أسير وكانت خطاياى كتير",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "repentance",
+   "worship"
+  ]
  },
  {
   "id": "b30259",
   "book": "book3",
   "number": 259,
   "title": "نشيدى يعلو بالهتاف وكذا التمجيد",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "warfare",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30260",
@@ -1824,14 +2453,19 @@
   "book": "book3",
   "number": 261,
   "title": "هيا يا شعب المسيح هيا للجنب الجريح",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30262",
   "book": "book3",
   "number": 262,
   "title": "فى المسيح يعظم انتصارى بالذى فدانى باذلا دماه",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30263",
@@ -1852,42 +2486,65 @@
   "book": "book3",
   "number": 265,
   "title": "دربنى يا إلهى كى أعيش فى إنتصار",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "church"
+  ]
  },
  {
   "id": "b30266",
   "book": "book3",
   "number": 266,
   "title": "فى برية الفتور وسط وحشة الظلام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "repentance"
+  ]
  },
  {
   "id": "b30267",
   "book": "book3",
   "number": 267,
   "title": "فى ذى الحياة أحيا لمن أحبنى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30268",
   "book": "book3",
   "number": 268,
   "title": "علمنى يارب كيف أعيش لك وفيا طول الحياة",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "comfort",
+   "worship",
+   "cross"
+  ]
  },
  {
   "id": "b30269",
   "book": "book3",
   "number": 269,
   "title": "يسوع لى أنت المثال الأمثل",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30270",
   "book": "book3",
   "number": 270,
   "title": "يحلو لى أن أقتفى آثار راعى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30271",
@@ -1901,196 +2558,270 @@
   "book": "book3",
   "number": 272,
   "title": "سيدى الفادى يسوع مبدع الأكوان",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30273",
   "book": "book3",
   "number": 273,
   "title": "لمجدك احفظ ربى حياتى مع إخوتى ننمو للأمام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30274",
   "book": "book3",
   "number": 274,
   "title": "لن أعيش سيدى وسط حيرة الزمان",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30275",
   "book": "book3",
   "number": 275,
   "title": "سيرتى فى السموات لا هنا إنى هنا غريب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30276",
   "book": "book3",
   "number": 276,
   "title": "فى اسم ربنا يسوع أتينا كلنا لنعبد يسوع",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30277",
   "book": "book3",
   "number": 277,
   "title": "أشدو لاسمك فأنت انتصارى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30278",
   "book": "book3",
   "number": 278,
   "title": "فى خضوع للإله أبتغى دوما هداه",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30279",
   "book": "book3",
   "number": 279,
   "title": "أنا قلبى يسجد لجلالك كل يوم",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30280",
   "book": "book3",
   "number": 280,
   "title": "هيا نرنم لربنا المسيح هيا نغنى ونرفع التسبيح",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30281",
   "book": "book3",
   "number": 281,
   "title": "هيا نغن لرب السما مرنمين",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "eternity"
+  ]
  },
  {
   "id": "b30282",
   "book": "book3",
   "number": 282,
   "title": "ليتك تباركنى وتوسع تخومى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30283",
   "book": "book3",
   "number": 283,
   "title": "جيت لك غيرت حياتى أحييتنى بعد الموت",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30284",
   "book": "book3",
   "number": 284,
   "title": "باركى يا نفسى الرب ولا تنسى كل حسناته",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30285",
   "book": "book3",
   "number": 285,
   "title": "باركى يا نفسى الرب وكل ما فى باطنى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30286",
   "book": "book3",
   "number": 286,
   "title": "أنا ملك الفادى اللى فدانى وبصلبه وموته أحيانى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30287",
   "book": "book3",
   "number": 287,
   "title": "من يوم ماقابلت حبيبى يسوع",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "repentance"
+  ]
  },
  {
   "id": "b30288",
   "book": "book3",
   "number": 288,
   "title": "علوت جدا أيها الرب الإله",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30289",
   "book": "book3",
   "number": 289,
   "title": "ربى فى ستر دماك ياحبيبى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30290",
   "book": "book3",
   "number": 290,
   "title": "تعالوا تعالوا ياتعابى من العالم الحزين",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30291",
   "book": "book3",
   "number": 291,
   "title": "مش ممكن يرتاح قلبك وانت بعيد عن ربك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "repentance"
+  ]
  },
  {
   "id": "b30292",
   "book": "book3",
   "number": 292,
   "title": "أنا عايش فى الفلك أنا عايش فى سفينة المسيح",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "cross",
+   "comfort"
+  ]
  },
  {
   "id": "b30293",
   "book": "book3",
   "number": 293,
   "title": "كم سطرت ديون فى كتب السماء",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "eternity",
+  "topics": [
+   "worship",
+   "repentance"
+  ]
  },
  {
   "id": "b30294",
   "book": "book3",
   "number": 294,
   "title": "كنت فى الماضى أثيم أعيش مع الأشرار",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "repentance",
+  "topics": [
+   "eternity",
+   "worship"
+  ]
  },
  {
   "id": "b30295",
   "book": "book3",
   "number": 295,
   "title": "أنشد نشيد الحرية والعتق من العبودية",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "eternity",
+   "fellowship"
+  ]
  },
  {
   "id": "b30296",
   "book": "book3",
   "number": 296,
   "title": "كنت فى طريقى تائهاً مسكين",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30297",
   "book": "book3",
   "number": 297,
   "title": "ربى قد بحثتَ عنى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30298",
   "book": "book3",
   "number": 298,
   "title": "فرحت قلبى يوم ماقابلتك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship",
+   "fellowship",
+   "comfort"
+  ]
  },
  {
   "id": "b30299",
   "book": "book3",
   "number": 299,
   "title": "القلب كان قاسى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "warfare"
+  ]
  },
  {
   "id": "b30300",
@@ -2104,154 +2835,230 @@
   "book": "book3",
   "number": 301,
   "title": "إننى ربى عارفٌ ذنبى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "repentance",
+  "topics": [
+   "cross",
+   "comfort"
+  ]
  },
  {
   "id": "b30302",
   "book": "book3",
   "number": 302,
   "title": "سلامٌ يسود حياتى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30303",
   "book": "book3",
   "number": 303,
   "title": "كنت شقى أسير ياويلتى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship",
+   "worship"
+  ]
  },
  {
   "id": "b30304",
   "book": "book3",
   "number": 304,
   "title": "فيك ياكلَّ الأمانى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30305",
   "book": "book3",
   "number": 305,
   "title": "لم يزل بالبابِ واقفْ",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30306",
   "book": "book3",
   "number": 306,
   "title": "مديون القلب يحمدك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30307",
   "book": "book3",
   "number": 307,
   "title": "ها يسوعُ البابَ دوماً يقرعُ",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "repentance"
+  ]
  },
  {
   "id": "b30308",
   "book": "book3",
   "number": 308,
   "title": "حبٌّ عظيمٌ قد سما",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30309",
   "book": "book3",
   "number": 309,
   "title": "لماذا جئتَ ياربى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30310",
   "book": "book3",
   "number": 310,
   "title": "صوته الحلو أتانى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30311",
   "book": "book3",
   "number": 311,
   "title": "ياأيها الإنسان",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30312",
   "book": "book3",
   "number": 312,
   "title": "بالأحضان الأبوية",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "repentance"
+  ]
  },
  {
   "id": "b30313",
   "book": "book3",
   "number": 313,
   "title": "تعبتُ فقلتُ أُجيبُ نداه",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "repentance",
+  "topics": [
+   "fellowship",
+   "cross"
+  ]
  },
  {
   "id": "b30314",
   "book": "book3",
   "number": 314,
   "title": "هل جلستَ فى هدوءٍ",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30315",
   "book": "book3",
   "number": 315,
   "title": "مباركٌ الربُّ إلهنا لأنه افتقد شعبه",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30316",
   "book": "book3",
   "number": 316,
   "title": "تعالَ ياخاطى تعالَ قوام",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "repentance"
+  ]
  },
  {
   "id": "b30317",
   "book": "book3",
   "number": 317,
   "title": "جيت لك وأنا مديون",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "repentance",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30318",
   "book": "book3",
   "number": 318,
   "title": "قلبى هذا الأثيم",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship",
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30319",
   "book": "book3",
   "number": 319,
   "title": "فى شخصِ ربنا يسوع",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30320",
   "book": "book3",
   "number": 320,
   "title": "أشواق فى القلب بتنادى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30321",
   "book": "book3",
   "number": 321,
   "title": "أتممت وعد الآب يوم قمت قمت بنصر من بين الأموات",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship",
+   "cross",
+   "eternity"
+  ]
  },
  {
   "id": "b30322",
   "book": "book3",
   "number": 322,
   "title": "خذنا على جبل عالى هنينا بجلسة معاك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30323",
@@ -2265,28 +3072,40 @@
   "book": "book3",
   "number": 324,
   "title": "يمكن، يمكن يجي حبيبنا اليوم",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30325",
   "book": "book3",
   "number": 325,
   "title": "هناك وياه هناك وياه",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "cross",
+   "fellowship",
+   "comfort"
+  ]
  },
  {
   "id": "b30326",
   "book": "book3",
   "number": 326,
   "title": "يا من احتويتنى فى جراحك هناك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30327",
   "book": "book3",
   "number": 327,
   "title": "يا رب إننى غريب فى طريقى للديار",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30328",
@@ -2307,35 +3126,56 @@
   "book": "book3",
   "number": 330,
   "title": "يا سيدى الفادى إليك حنينى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort"
+  ]
  },
  {
   "id": "b30331",
   "book": "book3",
   "number": 331,
   "title": "إن السعادة حظ سياح السما",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "eternity",
+  "topics": [
+   "fellowship",
+   "worship",
+   "cross"
+  ]
  },
  {
   "id": "b30332",
   "book": "book3",
   "number": 332,
   "title": "طول ما أنا عايش هنا هاستنى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "eternity"
+  ]
  },
  {
   "id": "b30333",
   "book": "book3",
   "number": 333,
   "title": "ليس لى مقر",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30334",
   "book": "book3",
   "number": 334,
   "title": "سوف ينتهى العذاب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "comfort",
+   "repentance"
+  ]
  },
  {
   "id": "b30335",
@@ -2349,28 +3189,42 @@
   "book": "book3",
   "number": 336,
   "title": "مهما تعبت فى حياتى وقاسيت من حرب ذاتى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "warfare"
  },
  {
   "id": "b30337",
   "book": "book3",
   "number": 337,
   "title": "قلبي فى اشتياق إلى لحظة اللقاء",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "eternity",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30338",
   "book": "book3",
   "number": 338,
   "title": "هناك فى بيت الآب دايماً هنبقى معاك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30339",
   "book": "book3",
   "number": 339,
   "title": "بعد قليل جداً ييجى ييجى يوم الاختطاف",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross",
+   "worship"
+  ]
  },
  {
   "id": "b30340",
@@ -2384,35 +3238,47 @@
   "book": "book3",
   "number": 341,
   "title": "بشوق وحنين وصبر سنين",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "worship"
+  ]
  },
  {
   "id": "b30342",
   "book": "book3",
   "number": 342,
   "title": "أمين تعال يا ربى المبارك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30343",
   "book": "book3",
   "number": 343,
   "title": "مهما طال الزمان فى هذه الحياة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30344",
   "book": "book3",
   "number": 344,
   "title": "لا بيت لى هنا لا موطن مختار",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "eternity"
  },
  {
   "id": "b30345",
   "book": "book3",
   "number": 345,
   "title": "إن اشتياق القلب زاد وكثر الحنين",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30346",
@@ -2426,14 +3292,24 @@
   "book": "book3",
   "number": 347,
   "title": "ليتك تأتى سريعاً يا حبيبي يا يسوع",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30348",
   "book": "book3",
   "number": 348,
   "title": "ربنا تعال نحن في انتظار قلبنا يتوق لتلك الديار",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "eternity",
+   "cross",
+   "warfare"
+  ]
  },
  {
   "id": "b30349",
@@ -2447,70 +3323,112 @@
   "book": "book3",
   "number": 350,
   "title": "يهيم فؤادى ليوم الرحيل كفى يا غريب غياباً طويل",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "eternity",
+   "worship",
+   "comfort"
+  ]
  },
  {
   "id": "b30351",
   "book": "book3",
   "number": 351,
   "title": "هيا كلنا بالفرح ولماذا الاكتئاب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "worship"
+  ]
  },
  {
   "id": "b30352",
   "book": "book3",
   "number": 352,
   "title": "نرنم لربنا ونرفع اسمه العظيم",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30353",
   "book": "book3",
   "number": 353,
   "title": "فى موكب جيش الغالبين سوف أسير مع يسوع",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "cross",
+  "topics": [
+   "warfare",
+   "fellowship",
+   "worship"
+  ]
  },
  {
   "id": "b30354",
   "book": "book3",
   "number": 354,
   "title": "الكل يمضى ويزول لا شئ يبقى لا يحول",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship",
+   "worship",
+   "eternity"
+  ]
  },
  {
   "id": "b30355",
   "book": "book3",
   "number": 355,
   "title": "أبتغى طول الحياه مجد سيدي الوحيد",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30356",
   "book": "book3",
   "number": 356,
   "title": "قد كنت فى لج الآثام أعيش والقلب سقيم",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "warfare"
+  ]
  },
  {
   "id": "b30357",
   "book": "book3",
   "number": 357,
   "title": "هل دمك الزكى أريق عن ذنبى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "repentance"
+  ]
  },
  {
   "id": "b30358",
   "book": "book3",
   "number": 358,
   "title": "أحبك ... بك ... نفسى تهتف أحبك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30359",
   "book": "book3",
   "number": 359,
   "title": "كفايتي في من فدى نفسى من الهلاك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross"
  },
  {
   "id": "b30360",
@@ -2524,14 +3442,16 @@
   "book": "book3",
   "number": 361,
   "title": "ليس شئ يفصلنى عن محبة المسيح",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30362",
   "book": "book3",
   "number": 362,
   "title": "أروح لمين غيرك يا يسوع وأنت ربى وحبيبي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30363",
@@ -2552,14 +3472,22 @@
   "book": "book3",
   "number": 365,
   "title": "يا صاحب الحنان يا ملجأ نفسي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30366",
   "book": "book3",
   "number": 366,
   "title": "يا إلهي .. بهجة الأرض سراب سراب",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30367",
@@ -2573,70 +3501,106 @@
   "book": "book3",
   "number": 368,
   "title": "ربي يسوع الغالي مفيش زيه حبيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30369",
   "book": "book3",
   "number": 369,
   "title": "يسوع ربى أحمد ولاسمه أسبح",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30370",
   "book": "book3",
   "number": 370,
   "title": "سلمت نفسي فى يديك يا سيدي يسوع",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "fellowship",
+   "worship",
+   "cross"
+  ]
  },
  {
   "id": "b30371",
   "book": "book3",
   "number": 371,
   "title": "مشتاق إليك وبقاله زمان واقف يخبطك ع الباب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "worship",
+   "fellowship"
+  ]
  },
  {
   "id": "b30372",
   "book": "book3",
   "number": 372,
   "title": "عابرين دايسين كل الصعوبات",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30373",
   "book": "book3",
   "number": 373,
   "title": "آتى إليك يا يسوعى أنت المريح",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30374",
   "book": "book3",
   "number": 374,
   "title": "يارب أنت نور قلبى وخلاصى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30375",
   "book": "book3",
   "number": 375,
   "title": "مادمت راعى ياربى الحبيب",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "comfort"
+  ]
  },
  {
   "id": "b30376",
   "book": "book3",
   "number": 376,
   "title": "أنا جايلك أنا راجع ليك باعترف إنى احتجت إليك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "repentance",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30377",
   "book": "book3",
   "number": 377,
   "title": "أعود إلى موطنى مدينة رب الحياة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "eternity",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30378",
@@ -2650,28 +3614,35 @@
   "book": "book3",
   "number": 379,
   "title": "يامؤتى الأغانى فى ليلى وأحزانى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort",
+  "topics": [
+   "cross"
+  ]
  },
  {
   "id": "b30380",
   "book": "book3",
   "number": 380,
   "title": "ربى حبيبى وعدنى أبداً ما أنساك",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30381",
   "book": "book3",
   "number": 381,
   "title": "انت مريحى انت دوائى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30382",
   "book": "book3",
   "number": 382,
   "title": "انت راعى وانا باتعلم",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30383",
@@ -2685,7 +3656,11 @@
   "book": "book3",
   "number": 384,
   "title": "ماذا تروم النفس فى أقصى السما العليا",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "eternity",
+  "topics": [
+   "fellowship"
+  ]
  },
  {
   "id": "b30385",
@@ -2699,77 +3674,109 @@
   "book": "book3",
   "number": 386,
   "title": "الرب عزى وترسى عليه اتكل قلبى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort",
+  "topics": [
+   "warfare"
+  ]
  },
  {
   "id": "b30387",
   "book": "book3",
   "number": 387,
   "title": "معى فى الطريق يا أعز صديق",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30388",
   "book": "book3",
   "number": 388,
   "title": "أنا هأفرح بيك علشان انت بتكفينى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30389",
   "book": "book3",
   "number": 389,
   "title": "كم أود أن أشيد بيسوع منذ أن عرفته أحلى رفيق",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "repentance",
+  "topics": [
+   "fellowship",
+   "worship",
+   "comfort"
+  ]
  },
  {
   "id": "b30390",
   "book": "book3",
   "number": 390,
   "title": "أنا ماشى ولى معاك بهجة وعشرة وفرح سماك",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30391",
   "book": "book3",
   "number": 391,
   "title": "إوعى تأجل وتقول بكره وبكره يعدى زي امبارح",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "repentance",
+  "topics": [
+   "eternity",
+   "cross",
+   "warfare"
+  ]
  },
  {
   "id": "b30392",
   "book": "book3",
   "number": 392,
   "title": "محتاجلك تدارينى من خوفى وتحمينى",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30393",
   "book": "book3",
   "number": 393,
   "title": "سلامك فاق العقول فينا ومش ممكن يزول",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "comfort"
  },
  {
   "id": "b30394",
   "book": "book3",
   "number": 394,
   "title": "هذا هو المسيح جال في وسطنا عمل لخيرنا",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship",
+  "topics": [
+   "cross",
+   "comfort"
+  ]
  },
  {
   "id": "b30395",
   "book": "book3",
   "number": 395,
   "title": "يا رب ليك كل السجود والحمد يا ربنا المعبود",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30396",
   "book": "book3",
   "number": 396,
   "title": "آتى اليك يا فادى حياتى يا مَنْ تزيل كل خوفى",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "cross",
+  "topics": [
+   "comfort",
+   "fellowship"
+  ]
  },
  {
   "id": "b30397",
@@ -2783,7 +3790,8 @@
   "book": "book3",
   "number": 398,
   "title": "راع أمين ربي لي فيه كل الحب يسد حاجتي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "fellowship"
  },
  {
   "id": "b30399",
@@ -2797,21 +3805,32 @@
   "book": "book3",
   "number": 400,
   "title": "أنا بيك خطايايا مغفورة أنا بيك عيوبى مستورة",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "repentance",
+  "topics": [
+   "worship"
+  ]
  },
  {
   "id": "b30401",
   "book": "book3",
   "number": 401,
   "title": "ما أعظم أعمالك يارب ما أعظمها",
-  "hasChorus": false
+  "hasChorus": false,
+  "primaryTopic": "worship"
  },
  {
   "id": "b30402",
   "book": "book3",
   "number": 402,
   "title": "كنت فى طين الحمأة باقاسى كنت باعاند كنت انا قاسي",
-  "hasChorus": true
+  "hasChorus": true,
+  "primaryTopic": "worship",
+  "topics": [
+   "repentance",
+   "fellowship",
+   "warfare"
+  ]
  },
  {
   "id": "h0001",

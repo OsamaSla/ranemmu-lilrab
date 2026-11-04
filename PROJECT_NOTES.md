@@ -135,4 +135,20 @@ alphabet buckets, or search results) with two ±50 buttons above it.
 - Target output parts: `content/book3/parts/b3000XX.json`
 - Target corpus output: `content/book3/book3.json`
 - Builder script: `scripts/book3/build-book3.mjs`
-- Current status: **100 hymns transcribed and compiled** (Hymns 1 to 100, Batches 1 to 5 complete, verified with `node scripts/book3/build-book3.mjs`).
+- Last verified: 2026-11-04 (post-book3-build, translation pipeline, deploy)
+- Source parts: `content/book3/parts/*.json` (b30001..b30402, 402 hymns)
+- Corpus rebuilt (`content/book3/book3.json` + `content/book3.json`): 402 hymns, EN: 401, DE: 400 (verified `node scripts/book3/check_real.mjs`). Translation source: `content/book3/book3-translated.json`.
+- Chunk bundle rebuilt (`assets/hymns/full/*.json` + index): 1824 hymns / 19 chunks; `build-corpus.mjs` passes (`ALLOWED_LATIN_FIELDS` includes `translationStatus`).
+- Translation pipeline: `scripts/book3/translate-ollama.mjs` (Ollama, `qwen2.5:7b` default; plain-text `TITLE:` + numbered lines format; resumable; writes `translation-run.log`, failures to `translation-debug-<lang>.txt`).
+- `HymnRow` book3 color (`#65AAC5`) restored (`src/components/HymnRow.tsx` line 45); rebuilt chunks verified (`check_chunk_new.mjs`).
+- Topics: book3 is tagged with the same heuristic as main/taranim. Shared tagger
+  `scripts/lib/topic-tagger.mjs` (`normalizeAr`/`scoreHymn`/`tagHymn`, weights 3/1,
+  minPrimary 4, minSecondary 3, max 3 secondaries); `scripts/tag-topics.mjs` imports it,
+  and `scripts/book3/build-book3.mjs` re-tags every hymn on each build (parts stay clean,
+  rebuilds never drop tags). Result: 348/402 book3 hymns tagged (54 score below the
+  threshold — same behaviour as the 160 untagged hymns in main/taranim).
+  Verified `node scripts/book3/check-topics.mjs` (book3: worship 55, cross 83,
+  comfort 70, repentance 11, fellowship 109, warfare 8, word 1, eternity 10, church 1
+  primaries) and `node scripts/tag-topics.mjs` → 0 newly tagged, idempotent.
+- `main` pushed (`493decf` → `9d2b2343`); deploy rebuilt `dist/` but `gh-pages` push blocked (`ENAMETOOLONG`). Manual workaround: `checkout` temp → `cp -r dist/*` → `force push gh-pages`. Site stays at previous version.
+- Translation: background `qwen2.5:7b` finished; 2 hymns still missing (from user's report). Run `node scripts/book3/translate-ollama.mjs` to finish; local app at `localhost:8081` works.
