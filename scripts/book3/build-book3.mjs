@@ -13,6 +13,28 @@ import { join } from 'node:path';
 
 const PARTS_DIR = 'content/book3/parts';
 const OUT = 'content/book3/book3.json';
+const CORPUS_OUT = 'content/book3.json';
+const TRANSLATIONS = 'content/book3/book3-translated.json';
+
+const LATIN = /[A-Za-z\u00C0-\u024F]/;
+const hasText = (value) => typeof value === 'string' && LATIN.test(value);
+
+function mergeTranslation(hymn, store, lang) {
+  const title = store[`title_${lang}`];
+  const translated = store[`verses_${lang}`];
+  if (!hasText(title) || !Array.isArray(translated) || translated.length !== hymn.verses.length) return false;
+  const verses = [];
+  hymn.verses.forEach((verse, index) => {
+    const match = translated[index];
+    const lines = Array.isArray(match?.lines) ? match.lines.filter(hasText) : [];
+    if (lines.length !== verse.lines.length) return;
+    verses.push({ label: verse.label, ...(verse.chorus ? { chorus: true } : {}), lines });
+  });
+  if (verses.length !== hymn.verses.length) return false;
+  hymn[`title_${lang}`] = title.trim();
+  hymn[`verses_${lang}`] = verses;
+  return true;
+}
 
 /** `{sadr, ajuz}` -> one readable line; a lone sadr stays as-is. */
 function flatten(lineObj) {
@@ -72,7 +94,28 @@ if (broken.length > 0) {
   throw new Error(`hymns with no lines: ${broken.map((h) => h.number).join(', ')}`);
 }
 
+if (existsSync(TRANSLATIONS)) {
+  const storeRaw = JSON.parse(readFileSync(TRANSLATIONS, 'utf8'));
+  const storeList = Array.isArray(storeRaw) ? storeRaw : (storeRaw.hymns ?? []);
+  const byNumber = new Map(storeList.map((h) => [Number(h.number), h]));
+  let enCount = 0;
+  let deCount = 0;
+  for (const hymn of hymns) {
+    const stored = byNumber.get(hymn.number);
+    if (!stored) continue;
+    if (mergeTranslation(hymn, stored, 'en')) enCount += 1;
+    if (mergeTranslation(hymn, stored, 'de')) deCount += 1;
+  }
+  if (enCount > 0 || deCount > 0) {
+    for (const hymn of hymns) {
+      if (hymn.title_en || hymn.title_de) hymn.translationStatus = 'AI_DRAFT';
+    }
+  }
+  console.log(`translations merged: ${enCount} EN, ${deCount} DE`);
+}
+
 writeFileSync(OUT, JSON.stringify({ hymns }, null, 2), 'utf8');
+writeFileSync(CORPUS_OUT, JSON.stringify({ hymns }, null, 2), 'utf8');
 console.log(`parts: ${files.length} (${order} records)`);
-console.log(`hymns written: ${hymns.length} -> ${OUT}`);
+console.log(`hymns written: ${hymns.length} -> ${OUT} + ${CORPUS_OUT}`);
 console.log(`range: ${hymns[0].number}..${hymns[hymns.length - 1].number}`);

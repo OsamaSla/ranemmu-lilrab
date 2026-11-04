@@ -23,6 +23,7 @@ const ALLOWED_LATIN_FIELDS = new Set([
   'book',
   'mediaUrl',
   'primaryTopic',
+  'translationStatus',
   'title_en', 'chorus_en',
   'title_de', 'chorus_de',
   'author', 'authorOriginal',
