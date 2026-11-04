@@ -28,6 +28,15 @@ import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
 import { radius, spacing } from '../../theme/tokens';
 
+/**
+ * Printed word for a refrain stanza. The hymn-level `chorus` field carries the
+ * label a book actually prints (اللازمة / القرار …); Arabic hymns without one
+ * fall back to the standard القرار. Stored as Arabic regardless of UI language
+ * so the data stays consistent when an admin edits in English or German.
+ */
+const REFRAIN_LABEL = 'القرار';
+const refrainWord = (chorus: string) => chorus.trim() || REFRAIN_LABEL;
+
 export default function AdminEditScreen() {
   const router = useRouter();
   const { id, lang } = useLocalSearchParams<{ id: string; lang?: string }>();
@@ -111,8 +120,8 @@ export default function AdminEditScreen() {
           primaryTopic: h.primaryTopic ?? ('' as TopicId | ''),
           topics: [...(h.topics ?? [])],
           lines: h.verses.map((v) => [...v.lines]),
-           labels: h.verses.map((v) => v.label),
-           chorusFlags: h.verses.map((v) => Boolean(v.chorus)),
+          labels: h.verses.map((v) => (v.chorus ? refrainWord(h.chorus ?? '') : v.label)),
+          chorusFlags: h.verses.map((v) => Boolean(v.chorus)),
           title_en: h.title_en ?? '',
           chorus_en: h.chorus_en ?? '',
           linesEn: h.verses_en ? h.verses_en.map((v) => [...v.lines]) : [],
@@ -271,12 +280,21 @@ export default function AdminEditScreen() {
     else setForm((f) => ({ ...f, linesDe: mapLines(f.linesDe) }));
   };
 
-  const renumberLabels = (flags: boolean[]): string[] => {
+  /**
+   * Stanzas are numbered 1, 2, 3…; a refrain is not a stanza number but the
+   * printed word, so it consumes no number and keeps the following stanza's
+   * count intact.
+   */
+  const renumberLabels = (flags: boolean[], refrain: string): string[] => {
     const out: string[] = [];
     let counter = 0;
     for (const isChorus of flags) {
-      if (!isChorus) counter += 1;
-      out.push(String(Math.max(counter, 1)));
+      if (isChorus) {
+        out.push(refrain);
+      } else {
+        counter += 1;
+        out.push(String(counter));
+      }
     }
     return out;
   };
@@ -295,7 +313,7 @@ export default function AdminEditScreen() {
       return {
         ...f,
         lines: reorder(f.lines),
-        labels: renumberLabels(nextChorus),
+        labels: renumberLabels(nextChorus, refrainWord(f.chorus)),
         chorusFlags: nextChorus,
         linesEn: f.linesEn.length ? reorder(f.linesEn) : f.linesEn,
         linesDe: f.linesDe.length ? reorder(f.linesDe) : f.linesDe,
@@ -310,9 +328,24 @@ export default function AdminEditScreen() {
       return {
         ...f,
         chorusFlags: nextChorus,
-        labels: renumberLabels(nextChorus),
+        labels: renumberLabels(nextChorus, refrainWord(f.chorus)),
       };
     });
+  };
+
+  /**
+   * The chorus field is the word printed for every refrain stanza, so editing
+   * it relabels already-flagged rows without touching stanza numbering.
+   */
+  const setChorus = (value: string) => {
+    setDirty(true);
+    setForm((f) => ({
+      ...f,
+      chorus: value,
+      labels: f.chorusFlags.some(Boolean)
+        ? renumberLabels(f.chorusFlags, refrainWord(value))
+        : f.labels,
+    }));
   };
 
   const hasEn = Boolean(hymn?.verses_en ?? hymn?.title_en);
@@ -510,7 +543,7 @@ export default function AdminEditScreen() {
           <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
             {t('admin.chorus')}
           </AppText>
-          <TextInput value={form.chorus} onChangeText={(v) => set({ chorus: v })} style={fieldStyle} />
+          <TextInput value={form.chorus} onChangeText={setChorus} style={fieldStyle} />
           <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
             {t('admin.mediaUrl')}
           </AppText>
@@ -630,7 +663,7 @@ export default function AdminEditScreen() {
           <Card key={`${i}-${form.labels[i]}`} style={{ marginBottom: spacing.md, padding: spacing.md }}>
             <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm }}>
               <AppText variant="body" style={{ fontWeight: '700' }}>
-                ({form.labels[i]}){form.chorusFlags[i] ? ` · ${form.chorus.trim() || hymn.chorus || ''}` : ''}
+                ({form.labels[i]})
               </AppText>
               <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.xs }}>
                 <Pressable
