@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (هymn library / ترانيم)
 
-Last verified: 2026-11-04, commit 7eff84df (book3 topics)
+Last verified: 2026-11-04, commit 3d20ace7 (cleanup + perf pass)
 
 ## 1. What this is
 
