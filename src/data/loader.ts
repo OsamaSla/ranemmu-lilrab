@@ -13,7 +13,7 @@ import {
 } from './chunks';
 import { BOOKS } from './types';
 import type { BookId, Hymn, HymnSummary } from './types';
-import { matchesTopic, type TopicId } from './topics';
+import { type TopicId } from './topics';
 import { getRemoteFullDocs, getRemoteSummaries, isFullDoc, useRemote } from '../store/remote';
 import { invalidateSearchCache } from './search';
 
@@ -47,6 +47,7 @@ function deletedSet(): Set<string> {
 export function refreshOverlaidCorpus(): void {
   corpus = null;
   byId.clear();
+  summaryCache = null;
   invalidateSearchCache();
 }
 
@@ -71,11 +72,16 @@ export function getBooks(): { id: BookId; count: number }[] {
 /**
  * Combined patch for one hymn: cloud diff under local overrides, so an
  * admin's own unsynced edits always win on their own device. Either side
- * may be absent.
+ * may be absent. Both maps are passed in because the callers iterate the
+ * whole corpus and reading the stores per hymn was thousands of lookups.
  */
-function mergedPatch(id: string): Partial<Hymn> | undefined {
-  const remote = useRemote.getState().patches[id];
-  const local = overlayReader()[id];
+function mergedPatch(
+  id: string,
+  patches: Record<string, Partial<Hymn>>,
+  overlays: Record<string, Partial<Hymn>>,
+): Partial<Hymn> | undefined {
+  const remote = patches[id];
+  const local = overlays[id];
   if (!remote && !local) return undefined;
   if (!remote || !local) return { ...remote, ...local };
   const merged: Partial<Hymn> = { ...remote, ...local };
@@ -107,13 +113,26 @@ function applySummaryPatch(s: HymnSummary, patch: Partial<Hymn>): HymnSummary {
   };
 }
 
-/** All hymn summaries: numbers, titles and metres, overrides applied. */
-export function getSummaries(book?: BookId): HymnSummary[] {
-  const overlays = overlayReader();
-  const deleted = deletedSet();
-  const base = SUMMARIES.filter((s) => !deleted.has(s.id))
-    .filter((s) => !book || (s.book ?? 'main') === book).map((s) => {
-    const patch = mergedPatch(s.id);
+/**
+ * Merged-summary cache. Every list screen asks for summaries on mount (home,
+ * library, counts, neighbours, reader), and re-merging 1.8k records each time
+ * is wasted work when nothing changed. The stores replace their maps on
+ * write, so object identity is a cheap and reliable version key.
+ */
+let summaryCache: {
+  overlays: Record<string, Partial<Hymn>>;
+  patches: Record<string, Partial<Hymn>>;
+  deleted: readonly string[];
+  byBook: Map<BookId | 'all', HymnSummary[]>;
+} | null = null;
+
+function buildSummaries(
+  overlays: Record<string, Partial<Hymn>>,
+  patches: Record<string, Partial<Hymn>>,
+  deleted: Set<string>,
+): HymnSummary[] {
+  const base = SUMMARIES.filter((s) => !deleted.has(s.id)).map((s) => {
+    const patch = mergedPatch(s.id, patches, overlays);
     if (!patch) return s;
     return applySummaryPatch(s, patch);
   });
@@ -122,7 +141,6 @@ export function getSummaries(book?: BookId): HymnSummary[] {
   const known = new Set(base.map((s) => s.id));
   for (const s of getRemoteSummaries()) {
     if (known.has(s.id) || deleted.has(s.id)) continue;
-    if (book && (s.book ?? 'main') !== book) continue;
     const patch = overlays[s.id];
     base.push(patch ? applySummaryPatch(s, patch) : s);
     known.add(s.id);
@@ -133,7 +151,6 @@ export function getSummaries(book?: BookId): HymnSummary[] {
   for (const [id, patch] of Object.entries(overlays)) {
     if (known.has(id) || deleted.has(id)) continue;
     if (!isFullDoc(patch as Record<string, unknown>)) continue;
-    if (book && (patch.book ?? 'main') !== book) continue;
     const verses = patch.verses as Hymn['verses'];
     base.push({
       id,
@@ -151,12 +168,35 @@ export function getSummaries(book?: BookId): HymnSummary[] {
   return base.sort((a, b) => a.number - b.number);
 }
 
-/**
- * Hymns belonging to `topic` (primary or secondary tag), optionally
- * narrowed to one book. Omit `book` to search both books combined.
- */
-export function getSummariesByTopic(topic: TopicId, book?: BookId): HymnSummary[] {
-  return getSummaries(book).filter((s) => matchesTopic(s, topic));
+/** All hymn summaries: numbers, titles and metres, overrides applied. */
+export function getSummaries(book?: BookId): HymnSummary[] {
+  const overlays = overlayReader();
+  const patches = useRemote.getState().patches;
+  const deleted = deletedReader();
+  if (
+    !summaryCache ||
+    summaryCache.overlays !== overlays ||
+    summaryCache.patches !== patches ||
+    summaryCache.deleted !== deleted
+  ) {
+    summaryCache = { overlays, patches, deleted, byBook: new Map() };
+  }
+
+  let all = summaryCache.byBook.get('all');
+  if (!all) {
+    all = buildSummaries(overlays, patches, new Set(deleted));
+    summaryCache.byBook.set('all', all);
+  }
+  if (!book) return all.slice();
+
+  let filtered = summaryCache.byBook.get(book);
+  if (!filtered) {
+    filtered = all.filter((s) => (s.book ?? 'main') === book);
+    summaryCache.byBook.set(book, filtered);
+  }
+  // Callers filter/sort the returned array; hand out a copy so the cache
+  // cannot be mutated from the outside.
+  return filtered.slice();
 }
 
 /** Hymn count per topic (primary or secondary), optionally within one book. */
@@ -179,23 +219,27 @@ export function getTopicCounts(book?: BookId): Record<TopicId, number> {
   return counts;
 }
 
-export function getHymnCount(): number {
-  return SUMMARIES.length;
-}
-
 /** Adjacent hymns within the same book for the reader's previous/next controls. */
 export function getNeighbours(id: string): { previous?: HymnSummary; next?: HymnSummary } {
   const summaries = getSummaries();
-  const current = summaries.find((s) => s.id === id);
-  if (!current) return {};
-  const book = current.book ?? 'main';
-  const same = summaries.filter((s) => (s.book ?? 'main') === book);
-  const index = same.findIndex((s) => s.id === id);
+  const index = summaries.findIndex((s) => s.id === id);
   if (index === -1) return {};
-  return {
-    previous: index > 0 ? same[index - 1] : undefined,
-    next: index < same.length - 1 ? same[index + 1] : undefined,
-  };
+  const book = summaries[index].book ?? 'main';
+  let previous: HymnSummary | undefined;
+  for (let i = index - 1; i >= 0; i -= 1) {
+    if ((summaries[i].book ?? 'main') === book) {
+      previous = summaries[i];
+      break;
+    }
+  }
+  let next: HymnSummary | undefined;
+  for (let i = index + 1; i < summaries.length; i += 1) {
+    if ((summaries[i].book ?? 'main') === book) {
+      next = summaries[i];
+      break;
+    }
+  }
+  return { previous, next };
 }
 
 let corpus: Hymn[] | null = null;
@@ -209,11 +253,12 @@ export function getCorpus(book?: BookId): Hymn[] {
   if (corpus && !book) return corpus;
 
   const overlays = overlayReader();
+  const patches = useRemote.getState().patches;
   const all: Hymn[] = [];
   for (const chunk of loadedChunksInOrder()) all.push(...chunk);
 
   const merged = all.map((hymn) => {
-    const patch = mergedPatch(hymn.id);
+    const patch = mergedPatch(hymn.id, patches, overlays);
     return patch ? { ...hymn, ...patch } : hymn;
   });
   const present = new Set(merged.map((h) => h.id));
@@ -253,7 +298,7 @@ export function getHymn(id: string): Hymn | undefined {
 
   const found = bundledHymn(id);
   if (found) {
-    const patch = mergedPatch(id);
+    const patch = mergedPatch(id, useRemote.getState().patches, overlayReader());
     const merged = patch ? { ...found, ...patch } : found;
     byId.set(id, merged);
     return merged;

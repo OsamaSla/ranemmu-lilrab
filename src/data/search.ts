@@ -224,11 +224,13 @@ export function highlightQuery(
  * every hymn has one.
  */
 export function findSimilar(hymn: HymnSummary, all: HymnSummary[], limit = 20): HymnSummary[] {
+  // Normalise the reference metre once, not once per candidate (the list can
+  // hold every hymn in the book).
+  const hymnMeter = hymn.meter ? normalizeMeter(hymn.meter) : '';
   const scored = all
     .filter((candidate) => candidate.id !== hymn.id)
     .map((candidate) => {
       let score = 0;
-      const hymnMeter = hymn.meter ? normalizeMeter(hymn.meter) : '';
       const candidateMeter = candidate.meter ? normalizeMeter(candidate.meter) : '';
       if (hymnMeter && candidateMeter === hymnMeter) score += 25;
       if (!score && !hymnMeter && hymn.hasChorus && candidate.hasChorus) score += 5;

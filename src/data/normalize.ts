@@ -73,8 +73,11 @@ export interface Normalized {
  * Normalise `input`, returning the folded text plus a per-character map back
  * to the source. Callers use `origin[matchStart]` and `origin[matchEnd - 1]`
  * to highlight the untouched original.
+ *
+ * `withOrigin: false` skips that map, which is a measurable saving when a
+ * list filters 1.8k titles on every keystroke and only needs the text.
  */
-export function normalize(input: string): Normalized {
+function normalizeCore(input: string, withOrigin: boolean): Normalized {
   const chars: string[] = [];
   const origin: number[] = [];
 
@@ -85,6 +88,10 @@ export function normalize(input: string): Normalized {
     if (STRIPPED_PUNCT.test(char)) continue;
 
     const folded = FOLDS[char] ?? char;
+    if (!withOrigin) {
+      chars.push(folded);
+      continue;
+    }
     for (let k = 0; k < folded.length; k += 1) {
       chars.push(folded[k]);
       origin.push(i);
@@ -94,7 +101,11 @@ export function normalize(input: string): Normalized {
   return { text: chars.join(''), origin };
 }
 
+export function normalize(input: string): Normalized {
+  return normalizeCore(input, true);
+}
+
 /** Convenience wrapper when highlight positions are not needed. */
 export function normalizeText(input: string): string {
-  return normalize(input).text;
+  return normalizeCore(input, false).text;
 }

@@ -13,7 +13,7 @@
 const RAW = process.env.EXPO_PUBLIC_ADMIN_EMAILS ?? 'osama.sla@gmail.com';
 
 /** Lower-cased admin addresses; Firebase stores e-mail addresses lower-cased. */
-export const ADMIN_EMAILS: string[] = RAW.split(',')
+const ADMIN_EMAILS: string[] = RAW.split(',')
   .map((value) => value.trim().toLowerCase())
   .filter(Boolean);
 

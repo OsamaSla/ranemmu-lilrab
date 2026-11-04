@@ -27,7 +27,7 @@ const LAST_SYNC_KEY = 'helemenarnam.lastSync';
  * bundle ships in a release (keep scripts/migrate-to-firestore.mjs STAMP
  * default in sync with it).
  */
-export const BUNDLED_AT = '2026-10-15T00:00:00.000Z';
+const BUNDLED_AT = '2026-10-15T00:00:00.000Z';
 
 /** ids array from a meta/deleted snapshot, or null when absent/invalid. */
 function readDeletedIds(data: unknown): string[] | null {

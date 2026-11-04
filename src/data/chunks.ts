@@ -61,7 +61,7 @@ export function areAllChunksLoaded(): boolean {
  * Imports one chunk exactly once. Concurrent callers share the same promise,
  * and failures are retryable (the rejected promise is not kept).
  */
-export async function ensureChunk(index: number): Promise<void> {
+async function ensureChunk(index: number): Promise<void> {
   if (loaded.has(index)) return;
 
   let promise = pending.get(index);

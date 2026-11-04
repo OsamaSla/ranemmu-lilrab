@@ -1,26 +1,32 @@
-# Book 3 — Phase 0 build plan
+# Book 3 — ترانيم للرب الجزء الثالث (402 hymns)
 
-State file: `content/book3/manifest.json`
-Golden sample: `content/book3/parts/000-golden.json`
-Index decode: `content/book3/index.json` (from `assets/1-402-index.pdf`)
-Page renders: `assets/book3/pages/` (rendered 400 DPI, split halves)
-Batch output: `content/book3/parts/NNN.json`
+Status: **complete** — 402 hymns transcribed (EN 401 / DE 400 translated,
+348 topic-tagged). This folder is the authoring source; the app reads the
+built corpus, never these files.
 
-## Batch flow
-1. `npm run book3:next` → picks first pending spread from manifest
-2. Read pages; split right/left (RTL) → right page first, left page second
-3. Read right-column sadr, left-column ajuz per row
-4. Pair into `{ sadr, ajuz }` lines; detect `القرار` chorus
-5. Write `NNN.json`; update manifest; build passes
+## Layout
 
-## Gate rules (any agent)
-- Each hymn must have ≥1 stanza with lines array ≥1
-- Title = index entry (or first sadr); no empty title field
-- Chorus stanza must have label="القرار" and chorus=true
-- Every hymns' number in range 1..402 sequential check
-- `manifest.json` must stay valid JSON; no uncommitted files at session end
+- `parts/b30001.json` … `parts/b30402.json` — one file per hymn, source format:
+  `{ number, title, verses: [{ label, chorus?, lines: [{ sadr, ajuz }] }] }`
+- `parts/b30301.json` … `parts/b30320.json` — superseded early duplicates of
+  301–320; the builder keeps the last file for a number, so they never
+  duplicate output.
+- `book3.json` — built app format (written by the builder; never edit by hand)
+- `book3-translated.json` — EN/DE translation store (Ollama drafts)
+- `manifest.json` — batch bookkeeping, stays valid but no longer drives a queue
 
-## Model usage
-- Default model: all transcription + index decode + correction
-- Weak models (Tier 1): `book3:*` scripts, manifest updates, commit only — never edit `lines[]`
-- Max: optional, only if batch failure rate > 15% across 3 batches
+## Build
+
+1. `npm run book3:build` — assemble parts, merge translations, tag topics;
+   writes `content/book3/book3.json` and `content/book3.json`.
+2. `npm run book3:publish` — gate: verifies hymns 1..402 are all present,
+   then copies the built file to `content/book3.json`.
+3. `npm run build:corpus` — rebuild `assets/hymns/` chunks + `generated-chunks.ts`.
+
+## Rules
+
+- One entry per printed row, flattened as `sadr · ajuz`.
+- Refrain stanzas keep `chorus: true` and label `القرار` / `قرار`.
+- Never edit `book3.json` by hand — rebuild it from `parts/`.
+- Topics are recomputed on every build; change tagging in
+  `scripts/lib/topic-tagger.mjs`, not in the built JSON.

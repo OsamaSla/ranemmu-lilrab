@@ -19,17 +19,18 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 - `app.config.js` sets `baseUrl: '/ranemmu-lilrab'` dynamically for deploy (`DEPLOY=1`, CI, `predeploy`), leaving it empty for local dev to avoid 404s.
 - `src/app/` is the router root (Expo Router reads `app/` normally — check
   `app.json`/`expo-router` config before moving files).
-- **Repo hygiene gap:** `tsconfig.json`, `eslint.config.js` and `.gitignore` are
-  *not* tracked in the tree (they were deleted in commit `33c8011`).
-  `tsconfig.json` has since been restored from `33c8011~1` on disk (untracked);
-  `eslint.config.js` is still missing. Consequences:
-  - `npm run typecheck` (`tsc --noEmit`) now works, because the restored
-    `tsconfig.json` exists (`strict` + `@/*` paths). It is untracked, so a
-    fresh clone still prints the compiler help instead of type-checking.
-  - `npm run lint` (`expo lint`) has no ESLint config.
-  - `expo start` regenerates `tsconfig.json`/`.gitignore` if absent and creates
-    `.expo/`; the generated tsconfig lacks `strict` and the `@/*` paths.
-  - Because `.gitignore` is gone, `node_modules/` shows up as untracked.
+- Deploy: GitHub Actions (`.github/workflows/pages.yml`) builds `npx expo export -p web`
+  and publishes `dist/` on every push to `main` — the `gh-pages` branch route is
+  obsolete; `npm run deploy` only matters for a manual branch upload and hits
+  Windows `ENAMETOOLONG`.
+- `tsconfig.json`, `eslint.config.js`, `.gitignore` and `expo-env.d.ts` are tracked;
+  `npm run typecheck` (`tsc --noEmit`, strict + `@/*` paths) and `npm run lint`
+  both pass clean on a fresh clone.
+- Corpus loader (`src/data/loader.ts`) memoises merged summaries keyed on store
+  object identity (overlays / remote patches / tombstones), so list screens no
+  longer re-merge 1.8k records per mount; callers get a copy they can sort.
+- Search normalisation (`src/data/normalize.ts`) has a text-only path that skips
+  building the highlight origin map, used by title filtering on every keystroke.
 
 ## 3. Repo map (where the logic lives)
 
@@ -115,11 +116,14 @@ alphabet buckets, or search results) with two ±50 buttons above it.
 
 ## 8. Known issues / cleanup candidates
 
-- Commit the restored `tsconfig.json` (and recreate `eslint.config.js` /
-  `.gitignore`) so `npm run typecheck` / `npm run lint` work on a fresh clone.
-- `src/app/(tabs)/` still contains stray helper scripts from earlier work
-  (`extract_frames.py`, `library_fixed_final.py`).
+- Two Book 3 hymns still lack a translation (run
+  `set TRANSLATE_MODEL=qwen2.5:14b && node scripts/book3/translate-ollama.mjs`).
+- 54 Book 3 hymns score below the topic threshold and stay untagged (same
+  behaviour as 160 untagged main/taranim hymns) — add keywords to
+  `scripts/lib/topic-keywords.mjs` if they need a topic.
 - ±50 button accessibility labels are hardcoded English strings.
+- Stale scratch dirs on disk (`scratch_crops/`, `scratch_index/`) are gitignored;
+  delete them freely once the Book 3 scans are no longer needed.
 
 ## 9. Definition of done
 
@@ -137,10 +141,10 @@ alphabet buckets, or search results) with two ±50 buttons above it.
 - Builder script: `scripts/book3/build-book3.mjs`
 - Last verified: 2026-11-04 (post-book3-build, translation pipeline, deploy)
 - Source parts: `content/book3/parts/*.json` (b30001..b30402, 402 hymns)
-- Corpus rebuilt (`content/book3/book3.json` + `content/book3.json`): 402 hymns, EN: 401, DE: 400 (verified `node scripts/book3/check_real.mjs`). Translation source: `content/book3/book3-translated.json`.
+- Corpus rebuilt (`content/book3/book3.json` + `content/book3.json`): 402 hymns, EN: 401, DE: 400 (verified with `npm run check:hymns`). Translation source: `content/book3/book3-translated.json`.
 - Chunk bundle rebuilt (`assets/hymns/full/*.json` + index): 1824 hymns / 19 chunks; `build-corpus.mjs` passes (`ALLOWED_LATIN_FIELDS` includes `translationStatus`).
 - Translation pipeline: `scripts/book3/translate-ollama.mjs` (Ollama, `qwen2.5:7b` default; plain-text `TITLE:` + numbered lines format; resumable; writes `translation-run.log`, failures to `translation-debug-<lang>.txt`).
-- `HymnRow` book3 color (`#65AAC5`) restored (`src/components/HymnRow.tsx` line 45); rebuilt chunks verified (`check_chunk_new.mjs`).
+- `HymnRow` book3 color (`#65AAC5`) restored (`src/components/HymnRow.tsx` line 45); rebuilt chunks verified in the browser (`/hymn/b30001`).
 - Topics: book3 is tagged with the same heuristic as main/taranim. Shared tagger
   `scripts/lib/topic-tagger.mjs` (`normalizeAr`/`scoreHymn`/`tagHymn`, weights 3/1,
   minPrimary 4, minSecondary 3, max 3 secondaries); `scripts/tag-topics.mjs` imports it,

@@ -17,7 +17,7 @@ export function isValidMediaUrl(url: string): boolean {
 }
 
 /** Curated recording URL, or undefined when the hymn has none (blank counts as none). */
-export function curatedMediaUrl(hymn: Pick<Hymn, 'mediaUrl'>): string | undefined {
+function curatedMediaUrl(hymn: Pick<Hymn, 'mediaUrl'>): string | undefined {
   const url = hymn.mediaUrl?.trim();
   return url ? url : undefined;
 }

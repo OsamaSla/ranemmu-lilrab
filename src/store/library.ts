@@ -9,7 +9,7 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
 /** How many entries the recents list keeps before dropping the oldest. */
-export const RECENTS_LIMIT = 60;
+const RECENTS_LIMIT = 60;
 
 export interface RecentEntry {
   id: string;

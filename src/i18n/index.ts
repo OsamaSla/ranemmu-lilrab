@@ -31,7 +31,7 @@ function flatten(node: Record<string, unknown>, prefix = ''): FlatDictionary {
   return out as FlatDictionary;
 }
 
-export const DICTIONARIES: Record<LocaleCode, FlatDictionary> = {
+const DICTIONARIES: Record<LocaleCode, FlatDictionary> = {
   ar: flatten(ar),
   en,
   de,

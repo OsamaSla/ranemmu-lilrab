@@ -85,7 +85,7 @@ export const METER_FAMILIES: MeterFamily[] = [
 ];
 
 /** Family label for a hymn id, or null when it has none. */
-export function familyOf(hymnId: string): string | null {
+function familyOf(hymnId: string): string | null {
   for (const family of METER_FAMILIES) {
     if (family.hymnIds.includes(hymnId)) return family.label;
   }

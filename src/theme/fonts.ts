@@ -35,7 +35,7 @@ export const FONT_FAMILIES: FontFamily[] = [
 
 export const DEFAULT_FONT_ID = 'cairo';
 
-export function getFontFamily(id: string): FontFamily {
+function getFontFamily(id: string): FontFamily {
   return FONT_FAMILIES.find((f) => f.id === id) ?? FONT_FAMILIES[0];
 }
 

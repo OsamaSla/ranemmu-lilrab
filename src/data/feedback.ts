@@ -17,7 +17,7 @@ import {
 } from 'firebase/firestore';
 import { getFirebaseDb } from './firebase';
 
-export const FEEDBACK_COLLECTION = 'feedbacks';
+const FEEDBACK_COLLECTION = 'feedbacks';
 
 export type FeedbackStatus = 'pending' | 'in_progress' | 'completed';
 
