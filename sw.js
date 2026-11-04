@@ -1,0 +1,1 @@
+/* empty service worker for expo static export */
