@@ -100,6 +100,10 @@ alphabet buckets, or search results) with two ±50 buttons above it.
   direction). Hymn numbers render in Arabic-Indic digits via `useAppFont={false}`.
 - Spacing/radius come from `src/theme/tokens.ts`; never hardcode paddings.
 - i18n: add keys to `ar.ts`, `en.ts`, `de.ts` together.
+- Refrain stanzas carry `chorus: true` and the printed word as label
+  (`القرار`, or the hymn's `chorus` field); stanza numbering skips refrains.
+  The admin editor enforces this on toggle/move (`renumberLabels` in
+  `src/app/(tabs)/admin-edit.tsx`).
 - Comments in the codebase are English prose explaining *why*.
 
 ## 7. Verified gotchas
