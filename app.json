@@ -5,7 +5,8 @@
     "scheme": "ranemmu-lilrab",
     "web": {
       "bundler": "metro",
-      "output": "static"
+      "output": "static",
+      "publicPath": "/ranemmu-lilrab/"
     },
     "router": {
       "origin": "https://OsamaSla.github.io/ranemmu-lilrab"
