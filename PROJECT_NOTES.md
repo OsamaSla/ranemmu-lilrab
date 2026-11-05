@@ -1,6 +1,6 @@
-# PROJECT NOTES — ranemmu-lilrab (هymn library / ترانيم)
+# PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-05, commit 513d65ba (reader refrain heading)
+Last verified: 2026-11-05, commit 385cf8a1 (home book grid)
 
 ## 1. What this is
 
@@ -94,7 +94,34 @@ alphabet buckets, or search results) with two ±50 buttons above it.
   rather than "−50"/"+50"; the `accessibilityLabel`s still say "Scroll up/down
   by 50".
 
-## 6. Conventions
+## 6. Home screen book grid (verified 2026-11-05, commit 385cf8a1)
+
+`src/app/(tabs)/index.tsx` is a hero bar plus a responsive card grid; routing is
+unchanged (`setBook(id)` then `router.push('/library')`).
+
+- Grid: `columns = width >= 880 ? 3 : width >= 360 ? 2 : 1`; card width is
+  `min(262, (min(width - 48, 960) - 16 * (columns - 1)) / columns)`; the cover
+  keeps `aspectRatio: 0.7` (printed covers are 132 × 190). At 2 columns the odd
+  third card is centered by `flexWrap` — intentional, do not "fill" it.
+- Card body is exactly two rows (count pill, then the EN/DE pills), so cards
+  keep equal heights at every breakpoint. The name uses the `heading` size with
+  `fontFamilyBold` passed from `useTheme()`: `AppText`'s `heading` variant has
+  weight 400, so `fontWeight: '700'` alone would only synthesise bold.
+- Language pills are data-driven: `HymnSummary.hasEn` / `hasDe` are emitted by
+  `scripts/build-corpus.mjs`, so `npm run build:corpus` must be rerun after any
+  content change that adds/removes translations (`index.json` grew
+  268 KB → 314 KB with the flags). `getBooks()` returns
+  `{ id, count, hasEn, hasDe }`; `library.tsx` ignores the extra fields.
+- Motion: `Animated.spring` scale 1.035 on hover / 0.97 on press plus a web-only
+  `HOVER_SHADOW`; `useNativeDriver: Platform.OS !== 'web'`.
+- Gotcha: `useRef(new Animated.Value(1)).current` fails `react-hooks/refs`
+  ("Cannot access refs during render"). Use
+  `useState(() => new Animated.Value(1))`, as in `hymn/[id].tsx`.
+- Gotcha: putting `tintColor` in the style of an `RNImage` logs
+  `Image: style.tintColor is deprecated. Please use props.tintColor` on web —
+  pass it as a prop (the hero watermark).
+
+## 7. Conventions
 
 - All text goes through `AppText` (applies font family/size/theme + RTL writing
   direction). Hymn numbers render in Arabic-Indic digits via `useAppFont={false}`.
@@ -108,7 +135,7 @@ alphabet buckets, or search results) with two ±50 buttons above it.
   `القرار` — a bare number in an old saved label is never displayed.
 - Comments in the codebase are English prose explaining *why*.
 
-## 7. Verified gotchas
+## 8. Verified gotchas
 
 - `npx tsc --noEmit` is clean with the restored `tsconfig.json`. An earlier run
   with an ad-hoc `tsconfig.tmpcheck.json` reported an implicit `any` at
@@ -120,7 +147,7 @@ alphabet buckets, or search results) with two ±50 buttons above it.
   average and a jump can land a few rows off; that is why the next tap is
   re-anchored from `onViewableItemsChanged` rather than trusting the estimate.
 
-## 8. Known issues / cleanup candidates
+## 9. Known issues / cleanup candidates
 
 - Two Book 3 hymns still lack a translation (run
   `set TRANSLATE_MODEL=qwen2.5:14b && node scripts/book3/translate-ollama.mjs`).
@@ -131,7 +158,7 @@ alphabet buckets, or search results) with two ±50 buttons above it.
 - Stale scratch dirs on disk (`scratch_crops/`, `scratch_index/`) are gitignored;
   delete them freely once the Book 3 scans are no longer needed.
 
-## 9. Definition of done
+## 10. Definition of done
 
 - Touched file transpiles (`babel-preset-expo`) and `npx tsc --noEmit` is clean
   (see §2/§4).
@@ -139,7 +166,7 @@ alphabet buckets, or search results) with two ±50 buttons above it.
 - Manual check on both web and a phone-sized viewport for list paging/search.
 
 
-## 10. Book 3 ("ترانيم للرب الجزء الثالث") Transcription Progress
+## 11. Book 3 ("ترانيم للرب الجزء الثالث") Transcription Progress
 
 - Source booklet scans: `assets/book3/split/` (`spread_XXX_left.png`, `spread_XXX_right.png`)
 - Target output parts: `content/book3/parts/b3000XX.json`
