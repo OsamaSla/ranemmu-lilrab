@@ -44,6 +44,10 @@ export interface HymnSummary {
   meter?: string;
   /** True when the summary should be flagged as a chorus-bearing hymn. */
   hasChorus?: boolean;
+  /** True when the bundled record carries an English translation. */
+  hasEn?: boolean;
+  /** True when the bundled record carries a German translation. */
+  hasDe?: boolean;
   /**
    * Optional curated recording link (YouTube video, SoundCloud track, direct
    * MP3, …) where this hymn's melody can be heard. Absent when unknown — the

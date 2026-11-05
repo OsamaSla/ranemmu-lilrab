@@ -15,6 +15,9 @@ export const ar = {
 
   home: {
     pickHint: 'اضغط على الكتاب لفتحه',
+    chooseTitle: 'اختر كتابًا',
+    tagline: 'مكتبة الترانيم',
+    hymnUnit: 'ترنيمة',
   },
 
   library: {

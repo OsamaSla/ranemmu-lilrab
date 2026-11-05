@@ -15,6 +15,9 @@ export const de: PartialDictionary = {
   'tabs.more': 'Mehr',
 
   'home.pickHint': 'Tippe auf ein Buch, um es zu öffnen',
+  'home.chooseTitle': 'Buch auswählen',
+  'home.tagline': 'Liederbibliothek',
+  'home.hymnUnit': 'Lieder',
 
   'library.title': 'Lieder',
   'library.count': 'Anzahl der Lieder',

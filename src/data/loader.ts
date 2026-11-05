@@ -54,19 +54,29 @@ export function refreshOverlaidCorpus(): void {
 /** A freshly imported chunk invalidates the merged views and search index. */
 setChunkLoadedListener(refreshOverlaidCorpus);
 
-/** Books present in the bundled corpus, in display order, with hymn counts. */
-export function getBooks(): { id: BookId; count: number }[] {
+/** Books present in the bundled corpus, in display order, with hymn counts and translation coverage. */
+export function getBooks(): { id: BookId; count: number; hasEn: boolean; hasDe: boolean }[] {
   // Counts run over the merged view so admin-added hymns show up and
-  // tombstoned ones stop being counted.
-  const counts = new Map<BookId, number>();
+  // tombstoned ones stop being counted. Translation flags ride along in the
+  // summaries so the home cards can advertise EN/DE without loading chunks.
+  const counts = new Map<BookId, { count: number; en: number; de: number }>();
   for (const s of getSummaries()) {
     const b = s.book ?? 'main';
-    counts.set(b, (counts.get(b) ?? 0) + 1);
+    const entry = counts.get(b) ?? { count: 0, en: 0, de: 0 };
+    entry.count += 1;
+    if (s.hasEn) entry.en += 1;
+    if (s.hasDe) entry.de += 1;
+    counts.set(b, entry);
   }
-  return BOOKS.filter((b) => (counts.get(b.id) ?? 0) > 0).map((b) => ({
-    id: b.id,
-    count: counts.get(b.id) ?? 0,
-  }));
+  return BOOKS.filter((b) => (counts.get(b.id)?.count ?? 0) > 0).map((b) => {
+    const entry = counts.get(b.id);
+    return {
+      id: b.id,
+      count: entry?.count ?? 0,
+      hasEn: (entry?.en ?? 0) > 0,
+      hasDe: (entry?.de ?? 0) > 0,
+    };
+  });
 }
 
 /**
@@ -110,6 +120,14 @@ function applySummaryPatch(s: HymnSummary, patch: Partial<Hymn>): HymnSummary {
     topics: patch.topics ?? s.topics,
     hasChorus:
       patch.verses !== undefined ? patch.verses.some((v) => v.chorus) : (s.hasChorus ?? false),
+    hasEn:
+      patch.title_en !== undefined || patch.verses_en !== undefined
+        ? Boolean(patch.title_en?.trim() || patch.verses_en?.length)
+        : s.hasEn,
+    hasDe:
+      patch.title_de !== undefined || patch.verses_de !== undefined
+        ? Boolean(patch.title_de?.trim() || patch.verses_de?.length)
+        : s.hasDe,
   };
 }
 
@@ -160,6 +178,8 @@ function buildSummaries(
       meter: patch.meter,
       mediaUrl: patch.mediaUrl,
       hasChorus: verses.some((v) => v.chorus),
+      hasEn: Boolean(patch.title_en?.trim() || patch.verses_en?.length),
+      hasDe: Boolean(patch.title_de?.trim() || patch.verses_de?.length),
       primaryTopic: patch.primaryTopic,
       topics: patch.topics,
     });

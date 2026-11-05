@@ -132,6 +132,8 @@ export function getRemoteSummaries(): HymnSummary[] {
     meter: h.meter,
     mediaUrl: h.mediaUrl,
     hasChorus: h.verses.some((v) => v.chorus),
+    hasEn: Boolean(h.title_en || h.verses_en?.length),
+    hasDe: Boolean(h.title_de || h.verses_de?.length),
     primaryTopic: h.primaryTopic,
     topics: h.topics,
   }));

@@ -10,6 +10,9 @@ export const en: PartialDictionary = {
   'tabs.more': 'More',
 
   'home.pickHint': 'Tap a book to open it',
+  'home.chooseTitle': 'Choose a book',
+  'home.tagline': 'Hymn library',
+  'home.hymnUnit': 'hymns',
 
   'library.title': 'Hymns',
   'library.count': 'Hymn count',
