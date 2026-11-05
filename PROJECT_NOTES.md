@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (هymn library / ترانيم)
 
-Last verified: 2026-11-04, commit 3d20ace7 (cleanup + perf pass)
+Last verified: 2026-11-05, commit 513d65ba (reader refrain heading)
 
 ## 1. What this is
 
@@ -103,7 +103,9 @@ alphabet buckets, or search results) with two ±50 buttons above it.
 - Refrain stanzas carry `chorus: true` and the printed word as label
   (`القرار`, or the hymn's `chorus` field); stanza numbering skips refrains.
   The admin editor enforces this on toggle/move (`renumberLabels` in
-  `src/app/(tabs)/admin-edit.tsx`).
+  `src/app/(tabs)/admin-edit.tsx`). The reader (`src/app/(tabs)/hymn/[id].tsx`,
+  `refrainHeading`) shows the hymn's chorus word, else the verse label, else
+  `القرار` — a bare number in an old saved label is never displayed.
 - Comments in the codebase are English prose explaining *why*.
 
 ## 7. Verified gotchas
