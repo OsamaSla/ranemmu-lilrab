@@ -80,6 +80,34 @@ const TRANSLATION_STATUS_LABEL = {
   VERIFIED: { en: 'Verified', de: 'Geprüft' },
 } as const;
 
+/** Printed word for a refrain when neither the hymn nor its label carries one. */
+const REFRAIN_FALLBACK = 'القرار';
+
+/** A label that is nothing but a stanza number ("1", "١", "12"). */
+const NUMBER_LABEL = /^[0-9\u0660-\u0669]+$/;
+
+/**
+ * Heading printed above a refrain stanza. The hymn's `chorus` field is the
+ * canonical word and its translation may be shown beside it. Hymns saved by
+ * older versions of the admin editor still carry the stanza number in
+ * `label` (a refrain flagged "1" rendered as "(1)", looking like stanza 1),
+ * so a bare number is never shown for a refrain.
+ */
+function refrainHeading(
+  chorus: string | undefined,
+  translated: string | undefined,
+  label: string | undefined,
+): string {
+  if (chorus?.trim() && translated?.trim() && translated !== chorus) {
+    return `${chorus} · ${translated}`;
+  }
+  if (chorus?.trim()) return chorus;
+  if (translated?.trim()) return translated;
+  const printed = label?.trim();
+  if (printed && !NUMBER_LABEL.test(printed)) return printed;
+  return REFRAIN_FALLBACK;
+}
+
 /**
  * Lets `expo export` and web deep links resolve every hymn statically.
  * Native dev and production builds resolve the param at runtime and ignore this.
@@ -593,10 +621,8 @@ export default function ReaderScreen() {
               marginBottom: spacing.xs,
               opacity: fullscreen ? 0.85 : 1,
             }}>
-            {verseBlock.chorus && (hymn.chorus ?? transChorus)
-              ? (transChorus && transChorus !== hymn.chorus
-                ? `${hymn.chorus} · ${transChorus}`
-                : (hymn.chorus ?? transChorus))
+            {verseBlock.chorus
+              ? refrainHeading(hymn.chorus, transChorus, verseBlock.label)
               : `(${verseBlock.label})`}
           </AppText>
           {verseBlock.lines.map((line, lineIndex) => {
@@ -652,7 +678,7 @@ export default function ReaderScreen() {
           {hymn.verses.map((verseBlock, verseIndex) => {
             const isChorus = verseBlock.chorus;
             const label = isChorus
-              ? (hymn.chorus ?? t('reader.refrain'))
+              ? refrainHeading(hymn.chorus, transChorus, verseBlock.label)
               : `${t('reader.verseOf')} ${verseBlock.label}`;
             return (
               <Pressable
