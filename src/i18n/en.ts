@@ -122,6 +122,8 @@ export const en: PartialDictionary = {
   'admin.noCloud': 'Cloud save is not set up yet',
   'admin.noChanges': 'No changes yet',
   'admin.errBlank': 'Title and lines cannot be blank',
+  'admin.errShape':
+    'Not saved: the translation structure changed while you were editing. Reopen the hymn and try again',
   'admin.markVerified': 'Mark as verified',
   'admin.verified': 'Verified',
   'admin.deleteHymn': 'Delete hymn',

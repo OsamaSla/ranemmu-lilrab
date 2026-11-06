@@ -371,10 +371,45 @@ export default function AdminEditScreen() {
     setLangChoice(next);
   };
 
+  /**
+   * First blank line the form would write. A line that is blank in the stored
+   * record too is pre-existing data (an untranslated stanza, an old import) and
+   * must not block the save: requiring the editor to retype someone else's gap
+   * made whole runs of hymns unsaveable. Only a line the user emptied, or a
+   * blank the source did not have, is an error.
+   */
+  const firstBlank = (lines: string[][], source: string[][] | undefined) => {
+    for (let i = 0; i < lines.length; i += 1) {
+      for (let j = 0; j < lines[i].length; j += 1) {
+        if (lines[i][j]?.trim()) continue;
+        if (!source || (source[i]?.[j] ?? '').trim()) return { verse: i + 1, line: j + 1 };
+      }
+    }
+    return null;
+  };
+  /** Where a blank sits, so the error names the exact field instead of all of them. */
+  const blankWhere = (lang: string, hit: { verse: number; line: number }) =>
+    `${lang} · ${t('admin.verses')} ${hit.verse} · ${t('admin.stanzaLine')} ${hit.line}`;
+  /** True while the form still mirrors the record's stanza/line shape. */
+  const sameShape = (lines: string[][], source: { lines: string[] }[]) =>
+    lines.length === source.length && lines.every((ls, i) => ls.length === source[i].lines.length);
+
+  /** Equality that ignores the empty-string-vs-missing difference. */
+  const sameText = (before: string | undefined, after: string) => (before ?? '').trim() === after;
+  /** Equality that treats a missing chorus flag like `false`. */
+  const sameVerses = (before: NonNullable<typeof hymn>['verses'] | undefined, after: { label?: string; lines: string[]; chorus?: boolean }[]) =>
+    JSON.stringify((before ?? []).map((v) => [v.label, v.lines, Boolean(v.chorus)])) ===
+    JSON.stringify(after.map((v) => [v.label, v.lines, Boolean(v.chorus)]));
+
   const save = () => {
     if (!hymn) return;
-    if (!form.title.trim() || form.lines.some((ls) => ls.some((l) => !l.trim()))) {
-      setMsg(t('admin.errBlank'));
+    if (!form.title.trim() && hymn.title.trim()) {
+      setMsg(`${t('admin.errBlank')} — ${t('admin.hymnTitle')}`);
+      return;
+    }
+    const arBlank = firstBlank(form.lines, hymn.verses.map((v) => v.lines));
+    if (arBlank) {
+      setMsg(`${t('admin.errBlank')} — ${blankWhere(t('admin.langAr'), arBlank)}`);
       return;
     }
     const mediaTrimmed = form.mediaUrl.trim();
@@ -392,27 +427,28 @@ export default function AdminEditScreen() {
       setMsg(t('admin.errCount'));
       return;
     }
-    // Translations keep their own stanza/line shape; blanks are rejected
-    // with the same message as the Arabic lines.
+    // Translations mirror the Arabic shape in the source; a mismatch here means
+    // the record changed under a dirty form, so the only safe move is to reload
+    // rather than write the translations back in the wrong shape.
     if (hasEn && hymn.verses_en) {
-      const sourceEn = hymn.verses_en;
-      if (
-        form.linesEn.length !== sourceEn.length ||
-        form.linesEn.some((ls, i) => ls.length !== sourceEn[i].lines.length) ||
-        form.linesEn.some((ls) => ls.some((l) => !l.trim()))
-      ) {
-        setMsg(t('admin.errBlank'));
+      if (!sameShape(form.linesEn, hymn.verses_en)) {
+        setMsg(t('admin.errShape'));
+        return;
+      }
+      const enBlank = firstBlank(form.linesEn, hymn.verses_en.map((v) => v.lines));
+      if (enBlank) {
+        setMsg(`${t('admin.errBlank')} — ${blankWhere('EN', enBlank)}`);
         return;
       }
     }
     if (hasDe && hymn.verses_de) {
-      const sourceDe = hymn.verses_de;
-      if (
-        form.linesDe.length !== sourceDe.length ||
-        form.linesDe.some((ls, i) => ls.length !== sourceDe[i].lines.length) ||
-        form.linesDe.some((ls) => ls.some((l) => !l.trim()))
-      ) {
-        setMsg(t('admin.errBlank'));
+      if (!sameShape(form.linesDe, hymn.verses_de)) {
+        setMsg(t('admin.errShape'));
+        return;
+      }
+      const deBlank = firstBlank(form.linesDe, hymn.verses_de.map((v) => v.lines));
+      if (deBlank) {
+        setMsg(`${t('admin.errBlank')} — ${blankWhere('DE', deBlank)}`);
         return;
       }
     }
@@ -433,7 +469,7 @@ export default function AdminEditScreen() {
       mediaUrl: mediaTrimmed,
     };
     for (const key of Object.keys(nextText) as (keyof typeof nextText)[]) {
-      if (changed(hymn[key], nextText[key])) patch[key] = nextText[key];
+      if (!sameText(hymn[key], nextText[key])) patch[key] = nextText[key];
     }
     const status = form.verified ? ('VERIFIED' as const) : ('AI_DRAFT' as const);
     if (changed(hymn.translationStatus ?? 'AI_DRAFT', status)) patch.translationStatus = status;
@@ -450,7 +486,7 @@ export default function AdminEditScreen() {
       lines: ls.map((l) => l.trim()),
       chorus: form.chorusFlags[i] ? true : undefined,
     }));
-    if (changed(hymn.verses, verses)) {
+    if (!sameVerses(hymn.verses, verses)) {
       patch.verses = verses;
     }
     if (hasEn) {
@@ -462,7 +498,7 @@ export default function AdminEditScreen() {
           lines: ls.map((l) => l.trim()),
           chorus: form.chorusFlags[i] ? true : undefined,
         }));
-        if (changed(hymn.verses_en, versesEn)) {
+        if (!sameVerses(hymn.verses_en, versesEn)) {
           patch.verses_en = versesEn;
         }
       }
@@ -476,7 +512,7 @@ export default function AdminEditScreen() {
           lines: ls.map((l) => l.trim()),
           chorus: form.chorusFlags[i] ? true : undefined,
         }));
-        if (changed(hymn.verses_de, versesDe)) {
+        if (!sameVerses(hymn.verses_de, versesDe)) {
           patch.verses_de = versesDe;
         }
       }

@@ -127,6 +127,8 @@ export const de: PartialDictionary = {
   'admin.noCloud': 'Cloud-Speichern ist noch nicht eingerichtet',
   'admin.noChanges': 'Noch keine Änderungen',
   'admin.errBlank': 'Titel und Zeilen dürfen nicht leer sein',
+  'admin.errShape':
+    'Nicht gespeichert: Die Struktur der Übersetzung hat sich während der Bearbeitung geändert. Öffne das Lied erneut und versuche es noch einmal',
   'admin.markVerified': 'Als geprüft markieren',
   'admin.verified': 'Geprüft',
   'admin.deleteHymn': 'Lied löschen',
