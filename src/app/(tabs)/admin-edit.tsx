@@ -372,17 +372,18 @@ export default function AdminEditScreen() {
   };
 
   /**
-   * First blank line the form would write. A line that is blank in the stored
-   * record too is pre-existing data (an untranslated stanza, an old import) and
-   * must not block the save: requiring the editor to retype someone else's gap
-   * made whole runs of hymns unsaveable. Only a line the user emptied, or a
-   * blank the source did not have, is an error.
+   * First blank line the form would write. Stanzas may be reordered, so a source
+   * blank is matched by stanza shape (line count), not by position: the stanza
+   * that moved still carries its own gap and must not be mistaken for a line the
+   * editor emptied. Only a blank no same-shaped source stanza had is an error.
    */
   const firstBlank = (lines: string[][], source: string[][] | undefined) => {
     for (let i = 0; i < lines.length; i += 1) {
-      for (let j = 0; j < lines[i].length; j += 1) {
+      const width = lines[i].length;
+      for (let j = 0; j < width; j += 1) {
         if (lines[i][j]?.trim()) continue;
-        if (!source || (source[i]?.[j] ?? '').trim()) return { verse: i + 1, line: j + 1 };
+        const known = source?.some((ls) => ls.length === width && !(ls[j] ?? '').trim());
+        if (!known) return { verse: i + 1, line: j + 1 };
       }
     }
     return null;
@@ -390,9 +391,18 @@ export default function AdminEditScreen() {
   /** Where a blank sits, so the error names the exact field instead of all of them. */
   const blankWhere = (lang: string, hit: { verse: number; line: number }) =>
     `${lang} · ${t('admin.verses')} ${hit.verse} · ${t('admin.stanzaLine')} ${hit.line}`;
-  /** True while the form still mirrors the record's stanza/line shape. */
-  const sameShape = (lines: string[][], source: { lines: string[] }[]) =>
-    lines.length === source.length && lines.every((ls, i) => ls.length === source[i].lines.length);
+  /**
+   * True while the form still holds the source's stanza/line shape. Moving a
+   * stanza up/down is a supported edit, so this compares the sorted line counts
+   * instead of index by index — a per-index check read every move as "the record
+   * changed" and blocked the save.
+   */
+  const sameShape = (lines: string[][], source: { lines: string[] }[]) => {
+    if (lines.length !== source.length) return false;
+    const formCounts = lines.map((ls) => ls.length).sort((a, b) => a - b);
+    const sourceCounts = source.map((v) => v.lines.length).sort((a, b) => a - b);
+    return formCounts.every((n, i) => n === sourceCounts[i]);
+  };
 
   /** Equality that ignores the empty-string-vs-missing difference. */
   const sameText = (before: string | undefined, after: string) => (before ?? '').trim() === after;
@@ -490,8 +500,12 @@ export default function AdminEditScreen() {
       patch.verses = verses;
     }
     if (hasEn) {
-      if (changed(hymn.title_en, form.title_en.trim())) patch.title_en = form.title_en.trim();
-      if (changed(hymn.chorus_en, form.chorus_en.trim())) patch.chorus_en = form.chorus_en.trim();
+      if (!sameText(hymn.title_en, form.title_en.trim())) patch.title_en = form.title_en.trim();
+      // sameText, not JSON equality: a field that is absent in the record
+      // (`undefined`) and an empty input (`''`) are the same "nothing here",
+      // and JSON.stringify made them different — every save then wrote an empty
+      // chorus back over the record.
+      if (!sameText(hymn.chorus_en, form.chorus_en.trim())) patch.chorus_en = form.chorus_en.trim();
       if (hymn.verses_en) {
         const versesEn = form.linesEn.map((ls, i) => ({
           label: form.labels[i] ?? hymn.verses_en?.[i]?.label ?? String(i + 1),
@@ -504,8 +518,8 @@ export default function AdminEditScreen() {
       }
     }
     if (hasDe) {
-      if (changed(hymn.title_de, form.title_de.trim())) patch.title_de = form.title_de.trim();
-      if (changed(hymn.chorus_de, form.chorus_de.trim())) patch.chorus_de = form.chorus_de.trim();
+      if (!sameText(hymn.title_de, form.title_de.trim())) patch.title_de = form.title_de.trim();
+      if (!sameText(hymn.chorus_de, form.chorus_de.trim())) patch.chorus_de = form.chorus_de.trim();
       if (hymn.verses_de) {
         const versesDe = form.linesDe.map((ls, i) => ({
           label: form.labels[i] ?? hymn.verses_de?.[i]?.label ?? String(i + 1),

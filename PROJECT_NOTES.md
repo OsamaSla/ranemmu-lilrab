@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-06, commit 817845ce (admin save with pre-existing blanks)
+Last verified: 2026-11-06, commit 817845ce (admin save: reorder + no-op fields)
 
 ## 1. What this is
 
@@ -156,9 +156,20 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   that actually changed. A missing field (`chorus`, `authorOriginal`, absent
   `chorus: false`) is no longer treated as an edit, so untouched saves report
   "لا يوجد تغيير ليُحفظ" instead of writing a no-op patch.
-- The editor's shape guard now reports `admin.errShape` (reopen the hymn) when a
+- The editor's shape guard reports `admin.errShape` (reopen the hymn) when a
   translation array no longer mirrors the record; that state can only come from
   a record change under a dirty form, so do not "fix" it by relaxing the check.
+  It compares **sorted** stanza line counts, because moving a stanza up/down is
+  a supported edit — a per-index comparison blocked the user's refrain-move on
+  tr0258 ("تعذّر الحفظ: تغيّرت بنية ترجمة الترنيمة…") on 2026-11-06, and the
+  same reasoning makes `firstBlank` match a source blank by stanza width, not by
+  index, so a moved stanza keeps its own gap.
+- No-op patches came from `changed()` (JSON equality) on text fields: a field
+  absent in the record (`undefined`) and a blank input (`''`) serialise
+  differently, so every save rewrote `chorus_en=''`/`chorus_de=''` (and
+  `chorus`/`authorOriginal`). Text fields now compare through `sameText`. Verified
+  in the browser: refrain-move + save writes `verses · verses_en · verses_de`
+  only, and saving again says "لا يوجد تغيير ليُحفظ".
 
 ## 9. Known issues / cleanup candidates
 
