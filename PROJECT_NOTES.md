@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-05, commit 385cf8a1 (home book grid)
+Last verified: 2026-11-06, commit 817845ce (admin save with pre-existing blanks)
 
 ## 1. What this is
 
@@ -146,6 +146,19 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 - `HymnRow` height varies (1 or 2 title lines), so `getItemLayout` is an
   average and a jump can land a few rows off; that is why the next tap is
   re-anchored from `onViewableItemsChanged` rather than trusting the estimate.
+- Admin editor save validation (`src/app/(tabs)/admin-edit.tsx`,
+  `firstBlank`/`sameVerses`): a blank line that is **already blank in the
+  stored record** must not block the save — before 2026-11-06 any such hymn was
+  impossible to save ("العنوان والسطور لا يمكن أن تكون فارغة"). Only a line the
+  editor emptied is rejected, and the message now names the language, stanza and
+  line. Reproduced by injecting `verses_en[1].lines[4] = ''` into a tr0258
+  override; the old code refused, the new one saves and writes only the fields
+  that actually changed. A missing field (`chorus`, `authorOriginal`, absent
+  `chorus: false`) is no longer treated as an edit, so untouched saves report
+  "لا يوجد تغيير ليُحفظ" instead of writing a no-op patch.
+- The editor's shape guard now reports `admin.errShape` (reopen the hymn) when a
+  translation array no longer mirrors the record; that state can only come from
+  a record change under a dirty form, so do not "fix" it by relaxing the check.
 
 ## 9. Known issues / cleanup candidates
 
