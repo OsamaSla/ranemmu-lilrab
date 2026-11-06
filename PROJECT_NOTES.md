@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-06, commit 532d6eea (book 2 refrains for 315–374)
+Last verified: 2026-11-06, commit 521f6d72 (refrain heading styling)
 
 ## 1. What this is
 
@@ -187,6 +187,14 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   order until the server was restarted (`npm run web -- --clear`). The static
   export always reads the new files, so this is a dev-only trap, but do not
   "fix" a data change that looks absent before restarting Metro.
+- Reader refrain heading (`src/app/(tabs)/hymn/[id].tsx`): it is deliberately
+  louder than the stanza numbers — `palette.refrain` on light, `palette.refrainReader`
+  on dark/fullscreen, plus the matching `*Glow` as a 0/0/12 `textShadow`,
+  `fontWeight: '700'`, `letterSpacing: 0.5` and `0.9 × readerSize` (numbers stay
+  gold at `0.7 ×` and weight 400). The weight is required: `fontFamily:
+  readerFontBold` alone leaves weight 400, which web renders as regular. Verified
+  computed styles in the browser: 18px/700 vs 14px/400 at the default 20px reader
+  size, both themes and fullscreen.
 
 ## 9. Known issues / cleanup candidates
 
