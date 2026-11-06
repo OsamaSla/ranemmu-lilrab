@@ -50,6 +50,11 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 
 - `npm run start` / `npm run web` — Expo dev server on :8081 (`--web` opens web).
 - `npm run preview:build` — check hymns + build corpus + static web export + serve on :8083.
+- `node scripts/refrain-batch.mjs 315:move 318:keep …` — mark stanza 1 of the
+  listed hymns as the refrain and renumber the rest; `move` swaps it below the
+  old stanza 2 (`1, قرار, 2…`), `keep` leaves it first. EN/DE are reordered and
+  relabelled identically; re-running is refused once a hymn has a refrain. Run
+  `npm run check:hymns` + `npm run build:corpus` afterwards.
 - `npm run typecheck` (`npx tsc --noEmit`) — works on this machine; exit 0 with
   no output (needs the restored untracked `tsconfig.json`, see §2).
 - Syntax/transpile check for a single file:
