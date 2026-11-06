@@ -121,7 +121,7 @@ export default function ReaderScreen() {
   const navigation = useNavigation();
   const { id, verse } = useLocalSearchParams<{ id: string; verse?: string }>();
   const { t, direction } = useT();
-  const { colors } = useTheme();
+  const { colors, isDark } = useTheme();
   const insets = useSafeAreaInsets();
   const goBack = useGoBack();
 
@@ -594,50 +594,79 @@ export default function ReaderScreen() {
           ) : null}
         </View>
       ) : null}
-      {hymn.verses.map((verseBlock, verseIndex) => (
-        <View
-          key={`${verseIndex}-${verseBlock.label}`}
-          onLayout={onVerseLayout(verseIndex)}
-          style={{
-            backgroundColor: fullscreen ? 'transparent' : colors.surface,
-            borderRadius: radius.lg,
-            borderWidth: fullscreen ? 0 : 1,
-            borderColor: fullscreen ? 'transparent' : colors.border,
-            paddingHorizontal: spacing.lg,
-            paddingVertical: spacing.md,
-            marginBottom: spacing.md,
-            marginStart: verseBlock.chorus ? spacing.xl : 0,
-            borderStartWidth: verseBlock.chorus ? 3 : 0,
-            borderStartColor: verseBlock.chorus ? colors.accent : 'transparent',
-          }}>
-          <AppText
-            variant="label"
-            center
-            useAppFont={false}
-            color={fullscreen ? palette.readerText : colors.primary}
+      {hymn.verses.map((verseBlock, verseIndex) => {
+        const onDark = fullscreen || isDark;
+        const headingSize = Math.round(readerSize * (verseBlock.chorus ? 0.9 : 0.7));
+        return (
+          <View
+            key={`${verseIndex}-${verseBlock.label}`}
+            onLayout={onVerseLayout(verseIndex)}
             style={{
-              fontFamily: readerFontBold,
-              fontSize: Math.round(readerSize * 0.7),
-              marginBottom: spacing.xs,
-              opacity: fullscreen ? 0.85 : 1,
+              backgroundColor: fullscreen ? 'transparent' : colors.surface,
+              borderRadius: radius.lg,
+              borderWidth: fullscreen ? 0 : 1,
+              borderColor: fullscreen ? 'transparent' : colors.border,
+              paddingHorizontal: spacing.lg,
+              paddingVertical: spacing.md,
+              marginBottom: spacing.md,
+              marginStart: verseBlock.chorus ? spacing.xl : 0,
+              borderStartWidth: verseBlock.chorus ? 3 : 0,
+              borderStartColor: verseBlock.chorus ? colors.accent : 'transparent',
             }}>
-            {verseBlock.chorus
-              ? refrainHeading(hymn.chorus, transChorus, verseBlock.label)
-              : `(${verseBlock.label})`}
-          </AppText>
-          {verseBlock.lines.map((line, lineIndex) => {
-            const translated = transVerses?.[verseIndex]?.lines[lineIndex];
-            return (
-              <View
-                key={lineIndex}
-                style={{ marginBottom: lineIndex < verseBlock.lines.length - 1 ? spacing.sm : 0 }}>
-                {stanzaText(line)}
-                {translated ? <View style={{ marginTop: 2 }}>{translationText(translated)}</View> : null}
-              </View>
-            );
-          })}
-        </View>
-      ))}
+            <AppText
+              variant="label"
+              center
+              useAppFont={false}
+              color={
+                verseBlock.chorus
+                  ? onDark
+                    ? palette.refrainReader
+                    : palette.refrain
+                  : fullscreen
+                    ? palette.readerText
+                    : colors.primary
+              }
+              style={{
+                fontFamily: readerFontBold,
+                // The family alone selects the bold face but leaves the weight at
+                // 400, which web renders as regular; theme/fonts.ts requires both,
+                // so the refrain is set heavier than the stanza numbers.
+                fontWeight: verseBlock.chorus ? '700' : undefined,
+                fontSize: headingSize,
+                // Only the refrain needs its own leading: it is larger than the
+                // numbers, and the label's line box would clip it on Android.
+                lineHeight: verseBlock.chorus ? Math.round(headingSize * 1.4) : undefined,
+                marginBottom: spacing.xs,
+                opacity: fullscreen ? 0.85 : 1,
+                ...(verseBlock.chorus
+                  ? {
+                      letterSpacing: 0.5,
+                      // A flat red reads as an error colour; the same hue at low
+                      // alpha around the glyphs is what makes it look glossy.
+                      textShadowColor: onDark ? palette.refrainReaderGlow : palette.refrainGlow,
+                      textShadowOffset: { width: 0, height: 0 },
+                      textShadowRadius: 12,
+                    }
+                  : null),
+              }}>
+              {verseBlock.chorus
+                ? refrainHeading(hymn.chorus, transChorus, verseBlock.label)
+                : `(${verseBlock.label})`}
+            </AppText>
+            {verseBlock.lines.map((line, lineIndex) => {
+              const translated = transVerses?.[verseIndex]?.lines[lineIndex];
+              return (
+                <View
+                  key={lineIndex}
+                  style={{ marginBottom: lineIndex < verseBlock.lines.length - 1 ? spacing.sm : 0 }}>
+                  {stanzaText(line)}
+                  {translated ? <View style={{ marginTop: 2 }}>{translationText(translated)}</View> : null}
+                </View>
+              );
+            })}
+          </View>
+        );
+      })}
     </>
   );
 

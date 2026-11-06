@@ -30,6 +30,17 @@ export const palette = {
   favorite: '#C8A84D',
   danger: '#F2B8B5',
   overlay: 'rgba(0,0,0,0.65)',
+
+  /**
+   * Refrain heading in the reader. A deep crimson on the light card, a brighter
+   * one on the dark/black surfaces where the deep tone all but disappears; the
+   * `*Glow` pair is the same hue at low alpha, used as a text shadow so the word
+   * reads as glossy rather than as an error message.
+   */
+  refrain: '#C81E3C',
+  refrainGlow: 'rgba(200, 30, 60, 0.42)',
+  refrainReader: '#FF5C7A',
+  refrainReaderGlow: 'rgba(255, 92, 122, 0.55)',
 } as const;
 
 export const radius = {
