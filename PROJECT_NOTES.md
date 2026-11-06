@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-06, commit 817845ce (admin save: reorder + no-op fields)
+Last verified: 2026-11-06, commit 532d6eea (book 2 refrains for 315–374)
 
 ## 1. What this is
 
@@ -175,6 +175,18 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `chorus`/`authorOriginal`). Text fields now compare through `sameText`. Verified
   in the browser: refrain-move + save writes `verses · verses_en · verses_de`
   only, and saving again says "لا يوجد تغيير ليُحفظ".
+- Book 2 refrains (2026-11-06, `scripts/refrain-batch.mjs`): 30 taranim hymns
+  (315, 318, 323, 326, 332–334, 337, 338, 342–344, 350, 351, 353, 357–360, 362–364,
+  366, 368–374) had their first stanza flagged as the refrain. Mode `move`
+  (all except 318, 362, 364) swaps it below the old stanza 2, so the printed
+  order is `1, القرار, 2, 3…`; mode `keep` leaves it first. Stanzas are relabelled
+  `القرار` + 1…n in ar/en/de, and `index.json`'s `hasChorus` flips for exactly
+  these 30 — that is the check to run if the count looks wrong.
+- Gotcha: after `npm run build:corpus`, a **running Metro dev server keeps
+  serving the old JSON chunk** — the reader still showed the pre-change stanza
+  order until the server was restarted (`npm run web -- --clear`). The static
+  export always reads the new files, so this is a dev-only trap, but do not
+  "fix" a data change that looks absent before restarting Metro.
 
 ## 9. Known issues / cleanup candidates
 
