@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy Web App
 
 on:
   push:
@@ -12,38 +12,34 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Copy PWA assets
-        run: |
-          mkdir -p dist
-          cp -r public/* dist/
-          mkdir -p dist/public/icons
-          cp assets/images/icon-192.png dist/public/icons/ 2>/dev/null || echo "Icon not found"
-          cp assets/images/icon-512.png dist/public/icons/ 2>/dev/null || echo "Icon not found"
-      
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          path: './dist'
+          node-version: '20'
+          cache: 'npm'
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build web export
+        run: node scripts/build-full-web.mjs
       
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
+      
+      - name: Upload to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RANEMMU_LILRAB }}'
+          projectId: ranemmu-lilrab
+          channelId: live
