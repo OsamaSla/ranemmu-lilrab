@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-07, commit cb4ca333 (real Expo app + reader web fix)
+Last verified: 2026-11-07, commit 2898ec9e (real app on Firebase + Pages, SW scope fix)
 
 ## 1. What this is
 
@@ -279,7 +279,16 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `GITHUB_ACTIONS`: Netlify runs in CI too but is served from the domain root.
 - `src/app/+html.tsx` registers the service worker with scope `${base}/`
   (`/ranemmu-lilrab/` on Pages). The old `${base}` produced a `SecurityError`
-  ("scope is not under the max scope allowed") on every Pages page.
+  ("scope is not under the max scope allowed") on every Pages page. Fixed and
+  deployed at `2898ec9e`; live check: `getRegistrations()` on Pages returns
+  scope `https://osamasla.github.io/ranemmu-lilrab/` and the console has no
+  `SecurityError`; served `index.html` registers
+  `'/ranemmu-lilrab/sw.js'` with `scope:'/ranemmu-lilrab/'`.
+- GitHub Pages live verification (`2898ec9e`): `/` renders the book grid,
+  `/library` renders 1,047 cards for the first book at `/library`, clicking a
+  book on the home grid client-navigates to `/library`, and
+  `/hymn/tr0001` renders the full hymn text. All checks done in the in-app
+  browser, not just curl.
 - GitHub Pages: `.github/workflows/pages.yml` builds the app with `DEPLOY=1`
   (prefixed `/ranemmu-lilrab/`), removes the duplicate `dist/(tabs)` tree, and
   writes `dist/404.html = dist/index.html` so deep links (`/hymn/tr0001`) boot
