@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-07, commit 826f285f (web hosting fix)
+Last verified: 2026-11-07, commit cb4ca333 (real Expo app + reader web fix)
 
 ## 1. What this is
 
