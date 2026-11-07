@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-07, commit 2898ec9e (real app on Firebase + Pages, SW scope fix)
+Last verified: 2026-11-07, commit a54a94c0 (real app on Firebase + Pages, cloud config aligned)
 
 ## 1. What this is
 
