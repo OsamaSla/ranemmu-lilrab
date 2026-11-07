@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-07, commit a54a94c0 (real app on Firebase + Pages, cloud config aligned)
+Last verified: 2026-11-07, commit c45bb0c8 (canonical origin = Firebase, Pages labeled as mirror)
 
 ## 1. What this is
 
@@ -224,6 +224,14 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `/_expo/**` and `/assets/**`; `public/sw.js` is an inert worker that deletes
   legacy `ranemmu-*` caches once. Verified headers: `/`/`/library`/`/sw.js`
   `no-cache`, font `.ttf` `max-age=31536000, immutable`.
+- **#418 update (2026-11-07, c45bb0c8)**: `/hymn/<id>` pages now log one
+  `Error #418 args[]=HTML` on some loads on *both* hosts while still rendering
+  the verses correctly (~250 ms). It is not caused by the canonical tags: the
+  same error reproduces on the pre-change build (`ccc6d1a1`) served from a
+  worktree on localhost. `/`, `/library` and `/admin` were clean in the same
+  run; `/more` flaked once on Pages. Treat it as the known intermittent
+  hydration warning, not a reader failure — check for missing content before
+  chasing it.
 - `CNAME` contains `osamsla.github.io/ranemmu-lilrab` (a URL, not a domain). It is
   ignored by Actions publishing but would break branch-based Pages publishing.
 - Stale scratch dirs on disk (`scratch_crops/`, `scratch_index/`) are gitignored;
