@@ -25,6 +25,9 @@ node_modules/
 # Expo & Web builds
 .expo/
 
+# Firebase CLI deploy cache
+.firebase/
+
 # Static export (keep for deployment)
 !dist/
 !firebase.json

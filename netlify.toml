@@ -1,8 +1,13 @@
 [build]
-  command = "echo 'No build needed'"
-  publish = "public"
+  command = "echo 'No build needed - dist/ is committed'"
+  publish = "dist"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+  from = "/"
+  to = "/library.html"
+  status = 301
+
+[[redirects]]
+  from = "/library"
+  to = "/library.html"
+  status = 301

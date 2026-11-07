@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-06, commit 521f6d72 (refrain heading styling)
+Last verified: 2026-11-07, commit 826f285f (web hosting fix)
 
 ## 1. What this is
 
@@ -57,6 +57,8 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
   `npm run check:hymns` + `npm run build:corpus` afterwards.
 - `npm run typecheck` (`npx tsc --noEmit`) — works on this machine; exit 0 with
   no output (needs the restored untracked `tsconfig.json`, see §2).
+- Static web build: `node scripts/create-web.mjs && node scripts/fix-hymn-paths.mjs`
+  regenerates the committed `dist/` (1,824 hymn pages + library). See §12.
 - Syntax/transpile check for a single file:
   `babel.transformSync(src, {presets: [require.resolve('babel-preset-expo')]})`.
 
@@ -204,6 +206,14 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   behaviour as 160 untagged main/taranim hymns) — add keywords to
   `scripts/lib/topic-keywords.mjs` if they need a topic.
 - ±50 button accessibility labels are hardcoded English strings.
+- `npm run typecheck` currently fails on three pre-existing errors in
+  `src/app/(tabs)/hymn/[id].tsx` (273 `nativeEvent` unknown, 294/295
+  `ScrollView.addListener/removeListener`) at `d1bcf137`; unrelated to hosting.
+- `.gitignore` still ends with `dist/` (line 109) although `dist/` is tracked, so
+  newly generated files under `dist/` are not picked up by `git add` — use
+  `git add -f dist/<path>` or remove that rule if new hymns are added.
+- `CNAME` contains `osamsla.github.io/ranemmu-lilrab` (a URL, not a domain). It is
+  ignored by Actions publishing but would break branch-based Pages publishing.
 - Stale scratch dirs on disk (`scratch_crops/`, `scratch_index/`) are gitignored;
   delete them freely once the Book 3 scans are no longer needed.
 
@@ -238,3 +248,34 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   primaries) and `node scripts/tag-topics.mjs` → 0 newly tagged, idempotent.
 - `main` pushed (`493decf` → `9d2b2343`); deploy rebuilt `dist/` but `gh-pages` push blocked (`ENAMETOOLONG`). Manual workaround: `checkout` temp → `cp -r dist/*` → `force push gh-pages`. Site stays at previous version.
 - Translation: background `qwen2.5:7b` finished; 2 hymns still missing (from user's report). Run `node scripts/book3/translate-ollama.mjs` to finish; local app at `localhost:8081` works.
+
+## 12. Web hosting — Firebase + Pages (verified 2026-11-07)
+
+- Static site is generated from `assets/hymns/full/*.json` with
+  `node scripts/create-web.mjs && node scripts/fix-hymn-paths.mjs`: 1,824
+  `dist/hymn/<id>/index.html`, `library.html`, `index.html`, manifest, icons.
+  `dist/` stays committed because Pages/Netlify publish it as-is.
+- **Firebase root cause**: `firebase.json` had `"public": "."`, so the deploy
+  succeeded but published the repo root. `https://ranemmu-lilrab.web.app/library.html`
+  returned 404 while `/dist/library.html` returned 200 (proven with curl).
+  Fixed to `"public": "dist"` plus `/` and `/library` → `/library.html` redirects,
+  and `Cache-Control: no-cache` for `*.html` / `sw.js`. `.firebaserc` now defaults
+  to project `ranemmu-lilrab`, so `firebase deploy --only hosting` needs no flag.
+- Live verification after deploy: `/`, `/library`, `/library.html` → library 200;
+  `/hymn/tr0001` → 200 (Firebase 301s to `/hymn/tr0001/`); `index.html`,
+  `/manifest.json`, `/icons/*.png` → 200. Library renders 1,824 cards.
+- **Second bug**: `scripts/fix-hymn-paths.mjs` injected a meta-refresh back to
+  `/library.html` into every hymn page and computed the insert offset without
+  `headMatch.index`, producing `<!DOCTYPE h<meta …>\ntml>` and bouncing readers
+  to the library. It is now read-only (validates doctypes, writes only
+  `dist/index.html`). Do not regenerate with the old version.
+- Paths in `dist/` are **relative** (`hymn/trXXXX/`, `../../library.html`;
+  manifest `start_url: library.html`, `scope: "./"`, relative icon paths) so the
+  same output works at a domain root (Firebase) and under `/ranemmu-lilrab/`
+  (Pages/Netlify).
+- GitHub Pages: `GET /repos/OsamaSla/ranemmu-lilrab/pages` returned 404 — **Pages
+  was never enabled**, even though both workflows reported success. `deploy.yml`
+  was removed; `pages.yml` now uploads committed `dist/` (no Expo build). To go
+  live: repo Settings → Pages → Source = "GitHub Actions", then re-run the
+  workflow. Netlify fallback in `netlify.toml` publishes `dist`.
+

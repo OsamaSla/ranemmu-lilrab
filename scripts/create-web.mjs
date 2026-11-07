@@ -116,7 +116,7 @@ function generateLibraryPage(hymns) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>المكتبة | الترنيمة للرب</title>
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="manifest.json">
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(135deg, #0A1A14 0%, #1A2E24 100%); direction: rtl; min-height: 100vh; }
@@ -133,7 +133,7 @@ function generateLibraryPage(hymns) {
 </head>
 <body>
   <div class="header">
-    <a href="/" class="back-btn">← الرئيسية</a>
+    <a href="index.html" class="back-btn">← الرئيسية</a>
     <h1 style="margin: 0;">📚 مكتبة الترنيمة</h1>
     <p style="opacity: 0.9;">${hymns.length.toLocaleString('ar-EG')} ترنيمة روحية</p>
     <div class="search-box">
@@ -144,7 +144,7 @@ function generateLibraryPage(hymns) {
   <div class="library-grid" id="library">
 ${hymns.map(h => {
   const hymnId = String(h.id).replace(/^tr/, '').padStart(4, '0');
-  return `    <div class="hymn-card" onclick="location.href='/hymn/tr${hymnId}'">
+  return `    <div class="hymn-card" onclick="location.href='hymn/tr${hymnId}/'">
       <div class="hymn-number">#${h.number}</div>
       <div class="hymn-title">${h.title}</div>
     </div>`;
@@ -197,7 +197,7 @@ ${verse.lines.map(line => `<p style="margin-bottom: 8px;">${escapeHtml(line)}</p
   <meta name="theme-color" content="#D4B85F">
   <meta name="mobile-web-app-capable" content="yes">
   <title>${hymn.title} | الترنيمة للرب</title>
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="../../manifest.json">
   <style>
     * { box-sizing: border-box; }
     body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(135deg, #0A1A14 0%, #1A2E24 100%); direction: rtl; overflow-x: hidden; }
@@ -219,7 +219,7 @@ ${verse.lines.map(line => `<p style="margin-bottom: 8px;">${escapeHtml(line)}</p
 </head>
 <body>
   <div class="header">
-    <a href="/" class="back-home">🏠 الرئيسية</a>
+    <a href="../../library.html" class="back-home">🏠 الرئيسية</a>
     <div class="title">${hymn.title}</div>
     <button class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆</button>
   </div>
