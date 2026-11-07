@@ -19,8 +19,8 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
-import { useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
-import { Animated, Pressable, ScrollView, Share, Text as RNText, View, type LayoutChangeEvent } from 'react-native';
+import { useCallback, useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
+import { Animated, Pressable, ScrollView, Share, Text as RNText, View, type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../../components/AppText';
@@ -263,37 +263,36 @@ export default function ReaderScreen() {
 
   const [activeVerseIndex, setActiveVerseIndex] = useState<number | null>(null);
 
-  useEffect(() => {
-    if (!scrollRef.current || !hymn) return;
-    
-    const scrollView = scrollRef.current;
-    const handleScroll = Animated.event(
-      [{ nativeEvent: { contentOffset: { y: new Animated.Value(0) } } }],
-      { useNativeDriver: false, listener: ({ nativeEvent }) => {
-        const yOffset = nativeEvent.contentOffset.y;
-        let closestIndex = 0;
-        let minDiff = Infinity;
-        
-        hymn.verses.forEach((_, index) => {
-          const offset = verseOffsets.current.offsets.get(index);
-          if (offset !== undefined) {
-            const diff = Math.abs(offset - yOffset);
-            if (diff < minDiff) {
-              minDiff = diff;
-              closestIndex = index;
-            }
+  // Stanza-rail tracking. This used to call `scrollRef.current.addListener`,
+  // a native-only API: on react-native-web the ref has no addListener, so the
+  // reader threw "e.addListener is not a function" and unmounted to a blank
+  // page. A plain onScroll prop works on native and web alike.
+  const onReaderScroll = useCallback(
+    (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      if (!hymn) return;
+      const store = verseOffsets.current;
+      if (store.hymnId !== id) return;
+      const yOffset = event.nativeEvent.contentOffset.y;
+      let closestIndex = 0;
+      let minDiff = Infinity;
+
+      hymn.verses.forEach((_, index) => {
+        const offset = store.offsets.get(index);
+        if (offset !== undefined) {
+          const diff = Math.abs(offset - yOffset);
+          if (diff < minDiff) {
+            minDiff = diff;
+            closestIndex = index;
           }
-        });
-        
-        if (minDiff < 100) {
-          setActiveVerseIndex(closestIndex);
         }
-      }}
-    );
-    
-    scrollView.addListener(handleScroll as any);
-    return () => scrollView.removeListener(handleScroll as any);
-  }, [hymn?.verses.length, id]);
+      });
+
+      if (minDiff < 100) {
+        setActiveVerseIndex((current) => (current === closestIndex ? current : closestIndex));
+      }
+    },
+    [hymn, id],
+  );
 
   const scrollToVerse = (verseIndex: number) => {
     const store = verseOffsets.current;
@@ -857,6 +856,8 @@ export default function ReaderScreen() {
           <ScrollView
             key={`fs-${hymn.id}`}
             ref={scrollRef}
+            onScroll={onReaderScroll}
+            scrollEventThrottle={16}
             style={{ flex: 1 }}
             contentContainerStyle={{
               paddingHorizontal: spacing.xl,
@@ -980,6 +981,8 @@ export default function ReaderScreen() {
         <ScrollView
           key={hymn.id}
           ref={scrollRef}
+          onScroll={onReaderScroll}
+          scrollEventThrottle={16}
           style={{ flex: 1 }}
           contentContainerStyle={{
             flexGrow: 1,

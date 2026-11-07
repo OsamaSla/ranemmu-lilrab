@@ -207,12 +207,9 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   behaviour as 160 untagged main/taranim hymns) — add keywords to
   `scripts/lib/topic-keywords.mjs` if they need a topic.
 - ±50 button accessibility labels are hardcoded English strings.
-- `npm run typecheck` currently fails on three pre-existing errors in
-  `src/app/(tabs)/hymn/[id].tsx` (273 `nativeEvent` unknown, 294/295
-  `ScrollView.addListener/removeListener`) at `d1bcf137`; unrelated to hosting.
-- `.gitignore` still ends with `dist/` (line 109) although `dist/` is tracked, so
-  newly generated files under `dist/` are not picked up by `git add` — use
-  `git add -f dist/<path>` or remove that rule if new hymns are added.
+- All static pages log React error #418 (hydration mismatch) once and then
+  client-render correctly. Cosmetically it can flash the server HTML; not yet
+  investigated.
 - `CNAME` contains `osamsla.github.io/ranemmu-lilrab` (a URL, not a domain). It is
   ignored by Actions publishing but would break branch-based Pages publishing.
 - Stale scratch dirs on disk (`scratch_crops/`, `scratch_index/`) are gitignored;
@@ -266,9 +263,17 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `no-cache`, `_expo/**` immutable. `.firebaserc` defaults to project
   `ranemmu-lilrab`, so `firebase deploy --only hosting` needs no `--project`.
 - Live verification: `/` → 200 and renders the book grid; `/library` → 200;
-  `/library.html` → 301 → `/library`; `/hymn/tr0001` → 200;
-  `/manifest.json`, `/sw.js`, `/icons/icon-192.png`, `/_expo/.../entry-*.js`
-  → 200 (entry bundle ~3.4 MB).
+  `/library.html` → 301 → `/library`; `/hymn/tr0001` → 200 and renders the full
+  hymn text; `/manifest.json`, `/sw.js`, `/icons/icon-192.png`,
+  `/_expo/.../entry-*.js` → 200.
+- **Reader web crash fixed 2026-11-07**: `src/app/(tabs)/hymn/[id].tsx` called
+  `scrollRef.current.addListener(...)` (native-only). On web this threw
+  `TypeError: e.addListener is not a function` and unmounted the reader to a
+  blank page, which is why hymns only "loaded" forever. Replaced with
+  `onScroll={onReaderScroll}` + `scrollEventThrottle={16}` on both reader
+  ScrollViews (normal + fullscreen). `npm run typecheck` is clean again — the
+  three old errors at lines 273/294/295 are gone. Verified in the browser:
+  `https://ranemmu-lilrab.web.app/hymn/tr0001` shows the verses.
 - `app.config.js` sets `experiments.baseUrl = '/ranemmu-lilrab'` **only when
   `DEPLOY=1`**. It deliberately no longer infers deploy from `CI` /
   `GITHUB_ACTIONS`: Netlify runs in CI too but is served from the domain root.
