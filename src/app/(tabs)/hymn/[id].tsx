@@ -261,11 +261,48 @@ export default function ReaderScreen() {
     offsets: new Map(),
   });
 
+  const [activeVerseIndex, setActiveVerseIndex] = useState<number | null>(null);
+
+  useEffect(() => {
+    if (!scrollRef.current || !hymn) return;
+    
+    const scrollView = scrollRef.current;
+    const handleScroll = Animated.event(
+      [{ nativeEvent: { contentOffset: { y: new Animated.Value(0) } } }],
+      { useNativeDriver: false, listener: ({ nativeEvent }) => {
+        const yOffset = nativeEvent.contentOffset.y;
+        let closestIndex = 0;
+        let minDiff = Infinity;
+        
+        hymn.verses.forEach((_, index) => {
+          const offset = verseOffsets.current.offsets.get(index);
+          if (offset !== undefined) {
+            const diff = Math.abs(offset - yOffset);
+            if (diff < minDiff) {
+              minDiff = diff;
+              closestIndex = index;
+            }
+          }
+        });
+        
+        if (minDiff < 100) {
+          setActiveVerseIndex(closestIndex);
+        }
+      }}
+    );
+    
+    scrollView.addListener(handleScroll as any);
+    return () => scrollView.removeListener(handleScroll as any);
+  }, [hymn?.verses.length, id]);
+
   const scrollToVerse = (verseIndex: number) => {
     const store = verseOffsets.current;
     if (store.hymnId !== id) return;
     const y = store.offsets.get(verseIndex);
-    if (y !== undefined) scrollRef.current?.scrollTo({ y: Math.max(0, y - spacing.lg), animated: true });
+    if (y !== undefined) {
+      setActiveVerseIndex(verseIndex);
+      scrollRef.current?.scrollTo({ y: Math.max(0, y - spacing.lg), animated: true });
+    }
   };
 
   const onVerseLayout = (verseIndex: number) => (event: LayoutChangeEvent) => {
@@ -706,6 +743,7 @@ export default function ReaderScreen() {
           }}>
           {hymn.verses.map((verseBlock, verseIndex) => {
             const isChorus = verseBlock.chorus;
+            const isActive = !isChorus && activeVerseIndex === verseIndex;
             const label = isChorus
               ? refrainHeading(hymn.chorus, transChorus, verseBlock.label)
               : `${t('reader.verseOf')} ${verseBlock.label}`;
@@ -725,15 +763,26 @@ export default function ReaderScreen() {
                   justifyContent: 'center',
                   backgroundColor: isChorus
                     ? colors.accent
-                    : dark
-                      ? 'rgba(255,255,255,0.14)'
-                      : colors.surfaceMuted,
-                  borderWidth: 1,
+                    : isActive
+                      ? colors.accent
+                      : dark
+                        ? 'rgba(255,255,255,0.14)'
+                        : colors.surfaceMuted,
+                  borderWidth: isActive || isChorus
+                    ? 2
+                    : 1,
                   borderColor: isChorus
                     ? colors.accent
-                    : dark
-                      ? 'rgba(255,255,255,0.3)'
-                      : colors.border,
+                    : isActive
+                      ? colors.accent
+                      : dark
+                        ? 'rgba(255,255,255,0.3)'
+                        : colors.border,
+                  shadowColor: isActive || isChorus ? colors.accent : undefined,
+                  shadowOffset: isActive || isChorus ? { width: 0, height: 0 } : undefined,
+                  shadowOpacity: isActive || isChorus ? 0.4 : 0,
+                  shadowRadius: isActive || isChorus ? 8 : 0,
+                  elevation: isActive || isChorus ? 4 : 0,
                   opacity: pressed ? 0.6 : 1,
                 })}>
                 {isChorus ? (
@@ -750,7 +799,9 @@ export default function ReaderScreen() {
                       fontFamily: readerFontBold,
                       fontSize: 12,
                       fontWeight: '700',
-                      color: dark ? palette.readerText : colors.text,
+                      color: isActive || isChorus
+                        ? colors.onPrimary
+                        : dark ? palette.readerText : colors.text,
                       lineHeight: 16,
                     }}>
                     {verseBlock.label}
