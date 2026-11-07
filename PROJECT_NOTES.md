@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-07, commit 5dd6c556 (Firebase CI deploy live; canonical origin = Firebase)
+Last verified: 2026-11-07, commit ec854aa8 (stanza-rail highlight reset on next/prev; Firebase CI deploy live)
 
 ## 1. What this is
 
