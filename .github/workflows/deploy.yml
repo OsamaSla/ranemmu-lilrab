@@ -22,33 +22,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm ci
-      
-      - name: Create dist folder with PWA assets
+      - name: Copy PWA assets
         run: |
-          mkdir -p dist/public/icons
+          mkdir -p dist
           cp -r public/* dist/
-          cp assets/images/icon-192.png dist/public/icons/
-          cp assets/images/icon-512.png dist/public/icons/
+          mkdir -p dist/public/icons
+          cp assets/images/icon-192.png dist/public/icons/ 2>/dev/null || echo "Icon not found"
+          cp assets/images/icon-512.png dist/public/icons/ 2>/dev/null || echo "Icon not found"
       
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
-
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './dist'
+      
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
