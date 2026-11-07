@@ -263,6 +263,14 @@ export default function ReaderScreen() {
 
   const [activeVerseIndex, setActiveVerseIndex] = useState<number | null>(null);
 
+  // A new hymn starts with no active verse. The screen component survives a
+  // next/prev navigation (only the inner ScrollView is keyed by hymn id), so
+  // without this the rail would keep the previous hymn's dot highlighted
+  // until the first scroll event recomputed it.
+  useEffect(() => {
+    setActiveVerseIndex(null);
+  }, [id]);
+
   // Stanza-rail tracking. This used to call `scrollRef.current.addListener`,
   // a native-only API: on react-native-web the ref has no addListener, so the
   // reader threw "e.addListener is not a function" and unmounted to a blank

@@ -145,6 +145,11 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `refrainHeading`) shows the hymn's chorus word, else the verse label, else
   `القرار` — a bare number in an old saved label is never displayed.
 - Comments in the codebase are English prose explaining *why*.
+- The reader screen survives next/prev navigation (`router.replace`); only its
+  inner ScrollView is keyed by hymn id, so the component instance is reused.
+  Any per-hymn UI state must be reset in a `useEffect` keyed on `id` — the
+  stanza-rail highlight (`activeVerseIndex` in `hymn/[id].tsx`) used to carry
+  the previous hymn's dot until the first scroll event recomputed it.
 
 ## 8. Verified gotchas
 
