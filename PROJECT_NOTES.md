@@ -207,9 +207,20 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   behaviour as 160 untagged main/taranim hymns) — add keywords to
   `scripts/lib/topic-keywords.mjs` if they need a topic.
 - ±50 button accessibility labels are hardcoded English strings.
-- All static pages log React error #418 (hydration mismatch) once and then
-  client-render correctly. Cosmetically it can flash the server HTML; not yet
-  investigated.
+- React error #418 (hydration mismatch) was investigated on 2026-11-07 and is
+  **not reproducible on the current build**: a fresh load of `/`, `/library`
+  and `/hymn/tr0001` hydrates with no console error on Firebase and Pages. A
+  canary test (inject an extra `<div>` into the exported `#root`, serve it
+  locally) *does* raise #418, so the detection path works — the error only
+  appeared when a cached app shell met a newer bundle during a deploy. Two
+  cache hazards made that possible and are fixed: Firebase served clean-URL
+  HTML (`/`, `/library`, `/hymn/*`) with the default `max-age=3600` because
+  `**/*.html` never matches those paths, and `public/sw.js` used to be a
+  cache-first worker (`ranemmu-static-v3`/`ranemmu-pages-v3`). `firebase.json`
+  now sends `no-cache` for `**` then re-enables immutable caching for
+  `/_expo/**` and `/assets/**`; `public/sw.js` is an inert worker that deletes
+  legacy `ranemmu-*` caches once. Verified headers: `/`/`/library`/`/sw.js`
+  `no-cache`, font `.ttf` `max-age=31536000, immutable`.
 - `CNAME` contains `osamsla.github.io/ranemmu-lilrab` (a URL, not a domain). It is
   ignored by Actions publishing but would break branch-based Pages publishing.
 - Stale scratch dirs on disk (`scratch_crops/`, `scratch_index/`) are gitignored;
@@ -259,8 +270,10 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   published the repo root. `/library.html` returned 404 while `/dist/library.html`
   returned 200 (proven with curl). Now `"public": "dist"`, `cleanUrls: true`
   (so `/hymn/tr0001` serves `dist/hymn/tr0001.html`, `/library.html` 301s to
-  `/library`), no root→library redirect (the app home lives at `/`), HTML
-  `no-cache`, `_expo/**` immutable. `.firebaserc` defaults to project
+  `/library`), no root→library redirect (the app home lives at `/`), and
+  `Cache-Control` rules in `firebase.json`: `**` → `no-cache`, then
+  `/_expo/**` and `/assets/**` → `public, max-age=31536000, immutable`
+  (rule order matters: later rules win). `.firebaserc` defaults to project
   `ranemmu-lilrab`, so `firebase deploy --only hosting` needs no `--project`.
 - Live verification: `/` → 200 and renders the book grid; `/library` → 200;
   `/library.html` → 301 → `/library`; `/hymn/tr0001` → 200 and renders the full
