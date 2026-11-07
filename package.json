@@ -75,7 +75,7 @@
     "tutorial:timeline": "python scripts/tutorial/timeline.py",
     "tutorial:publish": "node --env-file=.env.local scripts/tutorial/publish_video.mjs",
     "tutorial:youtube": "python scripts/tutorial/upload_youtube.py",
-    "predeploy": "expo export -p web && node scripts/pages-fallback.mjs && node scripts/pwa-head.mjs && node scripts/copy-pwa-assets.mjs",
+    "predeploy": "expo export -p web && node scripts/pages-fallback.mjs && node scripts/pwa-head.mjs && node scripts/canonical.mjs && node scripts/copy-pwa-assets.mjs",
     "deploy": "gh-pages --nojekyll -d dist"
   },
   "private": true

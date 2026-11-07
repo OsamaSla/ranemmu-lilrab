@@ -1,11 +1,22 @@
 import { ScrollViewStyleReset } from 'expo-router/html';
 import { type PropsWithChildren } from 'react';
 
+// Firebase Hosting is the canonical origin; GitHub Pages mirrors it.
+// Keep in sync with scripts/canonical.mjs, which writes the per-route URL
+// into every exported page.
+const CANONICAL_ORIGIN = 'https://ranemmu-lilrab.web.app';
+
 // Web-only root HTML for static export. Runs in Node.js at build time,
 // not in the browser. Keep PWA tags here (single source of truth);
 // scripts/pwa-head.mjs only backfills pages missing them.
 export default function Root({ children }: PropsWithChildren) {
   const base = (process.env.EXPO_BASE_URL || '').replace(/\/$/, '');
+
+  // The static export can only learn the route after parsing the file path
+  // (scripts/canonical.mjs does that). This corrects the two cases it cannot:
+  // the Pages SPA fallback (404.html boots as the shell) and direct *.html
+  // visits. Runs before hydration and only touches the canonical href.
+  const canonicalFix = `(function(){var o=${JSON.stringify(CANONICAL_ORIGIN)};var b=${JSON.stringify(base)};var p=window.location.pathname;if(b&&p.indexOf(b)===0)p=p.slice(b.length);if(p.slice(-11)==='/index.html')p=p.slice(0,-10);else if(p.slice(-5)==='.html')p=p.slice(0,-5);if(!p||p.charAt(0)!=='/')p='/'+p;var l=document.querySelector('link[rel="canonical"]');if(l)l.setAttribute('href',o+p);})();`;
 
   return (
     <html lang="ar" dir="rtl">
@@ -16,6 +27,10 @@ export default function Root({ children }: PropsWithChildren) {
 
         {/* App Title */}
         <title>رنموا للرب</title>
+
+        {/* Canonical URL: Firebase is the original, GitHub Pages is the mirror */}
+        <link rel="canonical" href={`${CANONICAL_ORIGIN}/`} />
+        <script dangerouslySetInnerHTML={{ __html: canonicalFix }} />
 
         {/* PWA */}
         <link rel="manifest" href={`${base}/manifest.json`} />

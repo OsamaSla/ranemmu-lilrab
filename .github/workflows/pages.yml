@@ -46,6 +46,12 @@ jobs:
       - name: Drop duplicate route folder
         run: rm -rf 'dist/(tabs)'
 
+      # Firebase is the canonical origin; the Pages copy is a mirror. Writes
+      # one <link rel="canonical"> per exported page so search engines index a
+      # single URL per hymn. Must run before the 404 shell copy below.
+      - name: Add canonical URLs
+        run: node scripts/canonical.mjs
+
       # GitHub Pages has no clean URLs: a deep link such as
       # /ranemmu-lilrab/hymn/tr0001 lands on 404.html. Serving the app shell
       # there lets expo-router resolve the route client-side.

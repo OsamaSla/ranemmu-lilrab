@@ -319,9 +319,27 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   build from a fresh clone needs that `.env.local` or the Pages-style env vars;
   there is still no automatic Firebase deploy on push.
 - GitHub Pages: `.github/workflows/pages.yml` builds the app with `DEPLOY=1`
-  (prefixed `/ranemmu-lilrab/`), removes the duplicate `dist/(tabs)` tree, and
-  writes `dist/404.html = dist/index.html` so deep links (`/hymn/tr0001`) boot
-  the router client-side. Netlify builds the root variant (`netlify.toml`).
+  (prefixed `/ranemmu-lilrab/`), removes the duplicate `dist/(tabs)` tree, adds
+  canonical URLs, and writes `dist/404.html = dist/index.html` so deep links
+  (`/hymn/tr0001`) boot the router client-side. Netlify builds the root variant
+  (`netlify.toml`).
+- **Canonical origin = Firebase (2026-11-07)**: `https://ranemmu-lilrab.web.app`
+  is the original; GitHub Pages is a mirror. `scripts/canonical.mjs` writes one
+  `<link rel="canonical" href="https://ranemmu-lilrab.web.app<route>">` per
+  exported page, deriving the route from the file path (`index.html` → `/`,
+  `more.html` → `/more`, `hymn/tr0001.html` → `/hymn/tr0001`). It only touches
+  pages that load `/_expo/static/js/` (so static docs from `public/` and the
+  Pages `404.html` shell are skipped) and is idempotent. Wired into
+  `pages.yml`, `firebase.yml` and `npm run predeploy`; **a manual Firebase
+  deploy must run it after `expo export`** or that build ships without tags.
+  `+html.tsx` additionally emits a static root canonical plus a 200-byte inline
+  script that rewrites the href to `origin + location.pathname` (stripping
+  `EXPO_BASE_URL`), which is the only way the Pages SPA fallback can point a
+  deep link at its own URL. `more.tsx` now shares the Firebase URL
+  (`APP_SITE_URL`) and shows `more.officialSite` in the footer so a visitor on
+  the mirror can find the original. Sessions/localStorage are still per-origin:
+  signing in on one host does not sign you in on the other (Firestore data is
+  shared).
 - Gotcha: GitHub Pages was not enabled at first (`GET /repos/.../pages` → 404)
   even though both old workflows reported success; it is now enabled and
   deploying from Actions. Only `pages.yml` exists (`deploy.yml` removed).

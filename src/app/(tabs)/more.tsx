@@ -8,7 +8,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps } from 'react';
 import { useMemo, useState } from 'react';
-import { Alert, Platform, Pressable, ScrollView, Share, View } from 'react-native';
+import { Alert, Linking, Platform, Pressable, ScrollView, Share, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
@@ -28,10 +28,11 @@ type IconName = ComponentProps<typeof MaterialCommunityIcons>['name'];
 
 const ABOUT_VERSION = '1.0.0';
 
-// Canonical public link (README "Live demo"). The static export is served
-// under /ranemmu-lilrab, so share the full URL — a bare title is useless
-// to the recipient.
-const APP_SITE_URL = 'https://OsamaSla.github.io/ranemmu-lilrab/';
+// Canonical public link. Firebase Hosting is the original; the GitHub Pages
+// copy is a mirror (search engines and the share sheet both point here). The
+// static export under Pages lives at /ranemmu-lilrab, so share the full URL —
+// a bare title is useless to the recipient.
+const APP_SITE_URL = 'https://ranemmu-lilrab.web.app/';
 
 export default function MoreScreen() {
   const router = useRouter();
@@ -122,6 +123,17 @@ export default function MoreScreen() {
           style={{ marginTop: spacing.xl }}>
           {t('settings.version')} {ABOUT_VERSION}
         </AppText>
+
+        {/* One line so a visitor on the mirror knows where the original lives. */}
+        <Pressable
+          onPress={() => Linking.openURL(APP_SITE_URL).catch(() => {})}
+          accessibilityRole="link"
+          accessibilityLabel={t('more.officialSite')}
+          style={{ marginTop: spacing.xs }}>
+          <AppText variant="caption" color={colors.primary} center>
+            {t('more.officialSite')}
+          </AppText>
+        </Pressable>
 
         <FeedbackModal visible={feedbackVisible} onClose={() => setFeedbackVisible(false)} />
       </ScrollView>

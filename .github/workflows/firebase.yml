@@ -46,6 +46,12 @@ jobs:
       - name: Drop duplicate route folder
         run: rm -rf 'dist/(tabs)'
 
+      # Per-page <link rel="canonical"> pointing at this same origin, so the
+      # Pages mirror defers to Firebase and the two hosts cannot disagree
+      # about which URL is the original.
+      - name: Add canonical URLs
+        run: node scripts/canonical.mjs
+
       # The deploy needs a service account with Firebase Hosting Admin.
       # Skip cleanly (with a warning) until it is configured, instead of
       # failing every push to main.
