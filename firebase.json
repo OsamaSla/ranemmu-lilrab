@@ -7,10 +7,11 @@
       "**/node_modules/**",
       ".git/**"
     ],
-    "rewrites": [
+    "redirects": [
       {
-        "source": "**",
-        "destination": "/library.html"
+        "source": "/",
+        "destination": "/library.html",
+        "type": 301
       }
     ]
   }
