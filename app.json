@@ -1,7 +1,11 @@
 {
   "expo": {
-    "name": "رنموا للرب",
+    "name": "Arabic Assembly Hymns",
     "slug": "ranemmu-lilrab",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon-512.png",
+    "userInterfaceStyle": "automatic",
     "scheme": "ranemmu-lilrab",
     "web": {
       "bundler": "metro",
@@ -11,8 +15,36 @@
     "router": {
       "origin": "https://OsamaSla.github.io/ranemmu-lilrab"
     },
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A1A14"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.osama.sla.ranemmu"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/icon-512.png",
+        "backgroundImage": "./assets/images/icon-512.png",
+        "monochromeImage": "./assets/images/icon-512.png"
+      },
+      "icon": "./assets/images/icon-512.png",
+      "package": "com.osama.sla.ranemmu",
+      "versionCode": 8,
+      "splitPerAbi": false
+    },
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e1d60080-de1c-41e4-890b-bffa6a39cac3"
+      }
     }
   }
 }
