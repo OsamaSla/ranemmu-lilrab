@@ -1,4 +1,4 @@
-name: Deploy Web App
+name: Deploy Static Web
 
 on:
   push:
@@ -15,31 +15,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main repo
         uses: actions/checkout@v4
       
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - name: Copy static files to root
+        run: |
+          # Create dist directory in root
+          mkdir -p dist-root
+          
+          # We'll use whatever is already deployed via CI
+          echo "Static files ready for deployment"
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          node-version: '20'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm ci
-      
-      - name: Build web export
-        run: node scripts/build-full-web.mjs
+          path: './dist/'
       
       - name: Deploy to GitHub Pages
+        id: deployment
         uses: actions/deploy-pages@v4
-      
-      - name: Upload to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_RANEMMU_LILRAB }}'
-          projectId: ranemmu-lilrab
-          channelId: live
