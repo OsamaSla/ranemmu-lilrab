@@ -17,15 +17,14 @@ const BASE = '/ranemmu-lilrab';
 const TAGS = [
   '<!--pwa-head-->',
   `<link rel="manifest" href="${BASE}/manifest.json">`,
-  `<link rel="apple-touch-icon" href="${BASE}/icons/apple-touch-icon.png">`,
-  `<link rel="icon" type="image/png" sizes="192x192" href="${BASE}/icons/icon-192.png">`,
-  `<link rel="icon" type="image/png" sizes="512x512" href="${BASE}/icons/icon-512.png">`,
-  '<meta name="theme-color" content="#184D55">',
+  `<link rel="icon" type="image/png" sizes="192x192" href="${BASE}/assets/images/icon-192.png">`,
+  `<link rel="icon" type="image/png" sizes="512x512" href="${BASE}/assets/images/icon-512.png">`,
+  '<meta name="theme-color" content="#D4B85F">',
   '<meta name="mobile-web-app-capable" content="yes">',
   '<meta name="apple-mobile-web-app-capable" content="yes">',
-  '<meta name="apple-mobile-web-app-status-bar-style" content="default">',
-  '<meta name="apple-mobile-web-app-title" content="رنموا للرب">',
-  `<script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('${BASE}/sw.js',{scope:'${BASE}/'});});}</script>`,
+  '<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">',
+  '<meta name="apple-mobile-web-app-title" content="الترانيم">',
+  '<script>if("serviceWorker" in navigator){window.addEventListener("load",function(){navigator.serviceWorker.register("/ranemmu-lilrab/sw.js",{scope:"/ranemmu-lilrab/"});});}<\/script>',
 ].join('\n    ');
 
 function walk(dir, out = []) {
