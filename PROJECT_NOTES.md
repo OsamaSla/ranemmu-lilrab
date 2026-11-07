@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-07, commit c45bb0c8 (canonical origin = Firebase, Pages labeled as mirror)
+Last verified: 2026-11-07, commit 5dd6c556 (Firebase CI deploy live; canonical origin = Firebase)
 
 ## 1. What this is
 
@@ -324,8 +324,22 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   inlined env; without it the new keys never reach the bundle — proven by
   grepping the entry for `apiKey:"…"`). After the fix the deployed Firebase
   `/admin` shows the sign-in screen and both hosts run identically. Any future
-  build from a fresh clone needs that `.env.local` or the Pages-style env vars;
-  there is still no automatic Firebase deploy on push.
+  build from a fresh clone needs that `.env.local` or the Pages-style env vars.
+- **Automatic Firebase deploy (2026-11-07)**: `.github/workflows/firebase.yml`
+  now runs on every push to `main` and deploys for real —
+  `FIREBASE_SERVICE_ACCOUNT_RANEMMU_LILRAB` was added to the repo secrets, and
+  run `5dd6c55` at 16:40 finished with **Deploy to Firebase Hosting: success**
+  (the 16:29 attempt failed, see below). The live entry hash changed
+  (`entry-07b28b…` local → `entry-dcf444…` CI), which proves the CI-built
+  bundle is the one being served. Manual `firebase deploy` is now only a
+  fallback.
+- **Service-account gotcha**: with the admin SDK key, firebase-tools first calls
+  `GET serviceusage.googleapis.com/v1/projects/<id>/services/firebasehosting.googleapis.com`.
+  Hosting-only roles pass the IAM check but fail there with
+  `403 … permission: serviceusage.services.get`. Fix: grant the service account
+  **Service Usage Viewer** (`roles/serviceusage.serviceUsageViewer`) in Cloud
+  IAM — read-only, enough for the check. Evidence: run at 16:29 failed with that
+  exact 403, the 16:40 retry after the grant succeeded.
 - GitHub Pages: `.github/workflows/pages.yml` builds the app with `DEPLOY=1`
   (prefixed `/ranemmu-lilrab/`), removes the duplicate `dist/(tabs)` tree, adds
   canonical URLs, and writes `dist/404.html = dist/index.html` so deep links
