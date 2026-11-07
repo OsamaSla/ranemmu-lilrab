@@ -24,8 +24,10 @@ node_modules/
 
 # Expo & Web builds
 .expo/
-dist/
-web-build/
+
+# Static export (keep for deployment)
+!dist/
+!firebase.json
 
 # Native builds & mobile secrets
 /ios
