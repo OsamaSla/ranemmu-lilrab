@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تثبيت تطبيق الترنيمة - Install App</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0A1A14 0%, #1A2E24 100%);
+      color: #F7F4E9;
+      min-height: 100vh;
+      padding: 20px;
+      direction: rtl;
+    }
+    .container { max-width: 600px; margin: 0 auto; }
+    h1 { text-align: center; color: #D4B85F; margin-bottom: 30px; }
+    .step {
+      background: rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-left: 4px solid #D4B85F;
+    }
+    .step-number {
+      background: #D4B85F;
+      color: #0A1A14;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+    .icon-demo {
+      text-align: center;
+      margin: 30px 0;
+      padding: 30px;
+      background: white;
+      border-radius: 16px;
+      color: #0A1A14;
+    }
+    .app-icon {
+      width: 128px;
+      height: 128px;
+      margin: 0 auto 20px;
+      border-radius: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+    .btn-install {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      margin: 30px auto;
+      padding: 15px 30px;
+      background: #D4B85F;
+      color: #0A1A14;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      text-align: center;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .pulse { animation: pulse 2s infinite; }
+    .features { margin-top: 40px; }
+    .feature-list li {
+      margin: 10px 0;
+      padding-right: 25px;
+      position: relative;
+    }
+    .feature-list li::before {
+      content: "✓";
+      color: #D4B85F;
+      position: absolute;
+      right: 0;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 تثبيت تطبيق الترانيـم</h1>
+    
+    <div class="icon-demo">
+      <img src="assets/images/icon-192.png" alt="App Icon" class="app-icon pulse">
+      <h3>الترانيـم للرب</h3>
+      <p>تطبيق أندرويد رسمي - عمل بدون إنترنت</p>
+    </div>
+
+    <div class="step">
+      <span class="step-number">١</span>
+      <strong>افتح Chrome على هاتفك الأندرويد</strong>
+      <p style="margin-top: 10px;">امضِ إلى رابط التطبيق:</p>
+      <a href="/ranemmu-lilrab" style="color: #D4B85F; word-break: break-all;">osamsla.github.io/ranemmu-lilrab</a>
+    </div>
+
+    <div class="step">
+      <span class="step-number">٢</span>
+      <strong>اضغط على القائمة (⋮) في الزاوية العلوية</strong>
+      <p style="margin-top: 10px;">اختر "<strong>أضف إلى الشاشة الرئيسية</strong>" أو "Install app"</p>
+    </div>
+
+    <div class="step">
+      <span class="step-number">٣</span>
+      <strong>أدخل الاسم واضغط "إضافة"</strong>
+      <p style="margin-top: 10px;">يُضاف تلقائياً أيقونة التطبيق مع تصميمك الجميل!</p>
+    </div>
+
+    <a href="/ranemmu-lilrab/library" class="btn-install pulse">افتح التطبيق الآن</a>
+
+    <div class="features">
+      <h3 style="text-align: center; margin-bottom: 20px; color: #D4B85F;">ميزات التطبيق:</h3>
+      <ul class="feature-list">
+        <li>١٨٢٤ ترنيمة روحية كاملة</li>
+        <li>عمل دون اتصال بالإنترنت</li>
+        <li>بحث سريع وسهل</li>
+        <li>واجهة داكنة ومريحة للعين</li>
+        <li>اختيار الخطوط والأحجام</li>
+        <li>تحديثات فورية لا تتطلب إعادة تثبيت</li>
+      </ul>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px; opacity: 0.7; font-size: 0.9rem;">
+      <p>صُمم بكل ❤️ للمجتمع القبطي الأرثوذكسي</p>
+      <p>نسخة الويب تدعم جميع المتصفحات الحديثة</p>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE h<meta http-equiv="refresh" content="0;url=/library.html">
+tml>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#D4B85F">
+  <meta name="mobile-web-app-capable" content="yes">
+  <title>سوف يمسح ربي الدموع | الترنيمة للرب</title>
+  <link rel="manifest" href="/manifest.json">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: linear-gradient(135deg, #0A1A14 0%, #1A2E24 100%); direction: rtl; overflow-x: hidden; }
+    .header { background: linear-gradient(135deg, #C5A03D 0%, #D4B85F 100%); padding: 15px 20px; display: flex; align-items: center; justify-content: space-between; color: #0A1A14; position: sticky; top: 0; z-index: 100; }
+    .nav-btn { background: transparent; border: none; font-size: 24px; cursor: pointer; padding: 8px; }
+    .title { font-size: 17px; font-weight: bold; white-space: nowrap; }
+    .content { max-width: 750px; margin: 0 auto; padding: 30px 20px; padding-top: 60px; }
+    .verse { background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; margin-bottom: 20px; border-right: 4px solid #D4B85F; }
+    .chorus { border-right-color: #ff6b6b !important; background: rgba(255,107,107,0.1) !important; }
+    .label { color: #D4B85F; font-weight: bold; margin-bottom: 12px; font-size: 19px; text-align: center; }
+    .chorus-label { color: #ff6b6b; }
+    .lines { font-size: 21px; line-height: 1.9; text-align: center; color: #f7f4e9; }
+    .controls { text-align: center; margin-top: 30px; display: flex; justify-content: space-around; gap: 20px; padding-bottom: 20px; }
+    .control-btn { background: #D4B85F; color: #0A1A14; border: none; padding: 13px 28px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 16px; transition: opacity 0.2s; }
+    .control-btn:hover { opacity: 0.9; }
+    h1 { text-align: center; margin: 0 0 30px; color: #D4B85F; font-size: 26px; }
+    .back-home { color: #0A1A14; text-decoration: none; font-size: 18px; display: inline-block; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <a href="/" class="back-home">🏠 الرئيسية</a>
+    <div class="title">سوف يمسح ربي الدموع</div>
+    <button class="nav-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">⬆</button>
+  </div>
+  
+  <div class="content">
+    <h1>#1574 - سوف يمسح ربي الدموع</h1>
+    
+    <div class="verse " id="verse-0">
+      <div class="label ">1</div>
+      <div class="lines">
+<p style="margin-bottom: 8px;">مَجْدًا لَهُ سَوْفَ نَرَاه</p>
+<p style="margin-bottom: 8px;">مَجْدًا لَهُ سَوْفَ نَرَاه</p>
+<p style="margin-bottom: 8px;">عَنْ قَرِيب عَنْ قَرِيب عَنْ قَرِيب</p>
+      </div>
+    </div>
+
+    <div class="verse " id="verse-1">
+      <div class="label ">2</div>
+      <div class="lines">
+<p style="margin-bottom: 8px;">سَوْفَ يَمْسَحُ رَبِّي الدُّمُوع</p>
+<p style="margin-bottom: 8px;">لَا بُكَاءَ فِي تِلْكَ الرُّبُوع</p>
+<p style="margin-bottom: 8px;">فِي السَّمَاءِ مَع يَسُوع</p>
+<p style="margin-bottom: 8px;">نَفْرَحُ نَهْتِفُ يَا جُمُوع</p>
+      </div>
+    </div>
+
+    <div class="verse " id="verse-2">
+      <div class="label ">3</div>
+      <div class="lines">
+<p style="margin-bottom: 8px;">سَوْفَ نَحْظَى بِذَاكَ الْحَبِيب</p>
+<p style="margin-bottom: 8px;">إِذْ نَرَى وَجْهَهُ عَنْ قَرِيب</p>
+<p style="margin-bottom: 8px;">فِي السَّمَاءِ لِي نَصِيب</p>
+<p style="margin-bottom: 8px;">مَعَ الْفَادِي يَسُوعَ الْحَبِيب</p>
+      </div>
+    </div>
+
+    <div class="verse " id="verse-3">
+      <div class="label ">4</div>
+      <div class="lines">
+<p style="margin-bottom: 8px;">سَوْفَ نُخْطَفُ عَلَى السَّحَاب</p>
+<p style="margin-bottom: 8px;">وَسَنَسْمَعُ صَوْتَ التَّرْحَاب</p>
+<p style="margin-bottom: 8px;">فِي السَّمَا فِي بَيْتِ الْآب</p>
+<p style="margin-bottom: 8px;">سَوْفَ نُلْبَسُ بِيضَ الثِّيَاب</p>
+      </div>
+    </div>
+
+    
+    <div class="controls">
+      <button class="control-btn" onclick="scrollToVerse(-1)">السابق ↗</button>
+      <button class="control-btn" onclick="scrollToVerse(1)">↖ التالي #1575</button>
+    </div>
+  </div>
+  
+  <script>
+    let currentVerse = 0;
+    
+    function scrollToVerse(direction) {
+      const verses = document.querySelectorAll('.verse');
+      if (verses.length === 0) return;
+      
+      currentVerse += direction;
+      if (currentVerse < 0) currentVerse = 0;
+      if (currentVerse >= verses.length) currentVerse = verses.length - 1;
+      
+      verses[currentVerse].scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    
+    document.querySelectorAll('.verse').forEach((v, i) => {
+      v.addEventListener('click', () => {
+        if (i !== currentVerse) {
+          currentVerse = i;
+          v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
