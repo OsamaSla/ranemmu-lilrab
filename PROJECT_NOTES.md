@@ -57,8 +57,9 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
   `npm run check:hymns` + `npm run build:corpus` afterwards.
 - `npm run typecheck` (`npx tsc --noEmit`) — works on this machine; exit 0 with
   no output (needs the restored untracked `tsconfig.json`, see §2).
-- Static web build: `node scripts/create-web.mjs && node scripts/fix-hymn-paths.mjs`
-  regenerates the committed `dist/` (1,824 hymn pages + library). See §12.
+- Web build: `npx expo export --platform web` produces the real app in `dist/`
+  (domain-root base; used by Firebase and Netlify). GitHub Pages uses
+  `DEPLOY=1 npx expo export --platform web` (base `/ranemmu-lilrab`). See §12.
 - Syntax/transpile check for a single file:
   `babel.transformSync(src, {presets: [require.resolve('babel-preset-expo')]})`.
 
@@ -249,33 +250,36 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 - `main` pushed (`493decf` → `9d2b2343`); deploy rebuilt `dist/` but `gh-pages` push blocked (`ENAMETOOLONG`). Manual workaround: `checkout` temp → `cp -r dist/*` → `force push gh-pages`. Site stays at previous version.
 - Translation: background `qwen2.5:7b` finished; 2 hymns still missing (from user's report). Run `node scripts/book3/translate-ollama.mjs` to finish; local app at `localhost:8081` works.
 
-## 12. Web hosting — Firebase + Pages (verified 2026-11-07)
+## 12. Web hosting — the real Expo app (verified 2026-11-07)
 
-- Static site is generated from `assets/hymns/full/*.json` with
-  `node scripts/create-web.mjs && node scripts/fix-hymn-paths.mjs`: 1,824
-  `dist/hymn/<id>/index.html`, `library.html`, `index.html`, manifest, icons.
-  `dist/` stays committed because Pages/Netlify publish it as-is.
-- **Firebase root cause**: `firebase.json` had `"public": "."`, so the deploy
-  succeeded but published the repo root. `https://ranemmu-lilrab.web.app/library.html`
-  returned 404 while `/dist/library.html` returned 200 (proven with curl).
-  Fixed to `"public": "dist"` plus `/` and `/library` → `/library.html` redirects,
-  and `Cache-Control: no-cache` for `*.html` / `sw.js`. `.firebaserc` now defaults
-  to project `ranemmu-lilrab`, so `firebase deploy --only hosting` needs no flag.
-- Live verification after deploy: `/`, `/library`, `/library.html` → library 200;
-  `/hymn/tr0001` → 200 (Firebase 301s to `/hymn/tr0001/`); `index.html`,
-  `/manifest.json`, `/icons/*.png` → 200. Library renders 1,824 cards.
-- **Second bug**: `scripts/fix-hymn-paths.mjs` injected a meta-refresh back to
-  `/library.html` into every hymn page and computed the insert offset without
-  `headMatch.index`, producing `<!DOCTYPE h<meta …>\ntml>` and bouncing readers
-  to the library. It is now read-only (validates doctypes, writes only
-  `dist/index.html`). Do not regenerate with the old version.
-- Paths in `dist/` are **relative** (`hymn/trXXXX/`, `../../library.html`;
-  manifest `start_url: library.html`, `scope: "./"`, relative icon paths) so the
-  same output works at a domain root (Firebase) and under `/ranemmu-lilrab/`
-  (Pages/Netlify).
-- GitHub Pages: `GET /repos/OsamaSla/ranemmu-lilrab/pages` returned 404 — **Pages
-  was never enabled**, even though both workflows reported success. `deploy.yml`
-  was removed; `pages.yml` now uploads committed `dist/` (no Expo build). To go
-  live: repo Settings → Pages → Source = "GitHub Actions", then re-run the
-  workflow. Netlify fallback in `netlify.toml` publishes `dist`.
+- The web site is the **Expo static export**, not the old hand-generated reader:
+  `npx expo export --platform web` (output `dist/`). It contains the app home
+  (book grid: رنموا للرب 1047 / ترانيم روحية 375 / هلم نرنم 402),
+  `library.html`, and 1,825 `hymn/<id>.html` pages plus `_expo/` JS bundles.
+  The hand-generated `scripts/create-web.mjs` / `dist/hymn/<id>/index.html`
+  reader is **legacy** and is not what gets deployed any more.
+- **Firebase root cause**: `firebase.json` had `"public": "."`, so deploys
+  published the repo root. `/library.html` returned 404 while `/dist/library.html`
+  returned 200 (proven with curl). Now `"public": "dist"`, `cleanUrls: true`
+  (so `/hymn/tr0001` serves `dist/hymn/tr0001.html`, `/library.html` 301s to
+  `/library`), no root→library redirect (the app home lives at `/`), HTML
+  `no-cache`, `_expo/**` immutable. `.firebaserc` defaults to project
+  `ranemmu-lilrab`, so `firebase deploy --only hosting` needs no `--project`.
+- Live verification: `/` → 200 and renders the book grid; `/library` → 200;
+  `/library.html` → 301 → `/library`; `/hymn/tr0001` → 200;
+  `/manifest.json`, `/sw.js`, `/icons/icon-192.png`, `/_expo/.../entry-*.js`
+  → 200 (entry bundle ~3.4 MB).
+- `app.config.js` sets `experiments.baseUrl = '/ranemmu-lilrab'` **only when
+  `DEPLOY=1`**. It deliberately no longer infers deploy from `CI` /
+  `GITHUB_ACTIONS`: Netlify runs in CI too but is served from the domain root.
+- GitHub Pages: `.github/workflows/pages.yml` builds the app with `DEPLOY=1`
+  (prefixed `/ranemmu-lilrab/`), removes the duplicate `dist/(tabs)` tree, and
+  writes `dist/404.html = dist/index.html` so deep links (`/hymn/tr0001`) boot
+  the router client-side. Netlify builds the root variant (`netlify.toml`).
+- Gotcha: GitHub Pages was not enabled at first (`GET /repos/.../pages` → 404)
+  even though both old workflows reported success; it is now enabled and
+  deploying from Actions. Only `pages.yml` exists (`deploy.yml` removed).
+- Gotcha: `dist/` is committed, and `.gitignore` previously ignored it, so new
+  export files needed `git add -f`. The ignore rule was removed on 2026-11-07.
+
 

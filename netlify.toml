@@ -1,13 +1,8 @@
 [build]
-  command = "echo 'No build needed - dist/ is committed'"
+  command = "npx expo export --platform web"
   publish = "dist"
 
 [[redirects]]
-  from = "/"
-  to = "/library.html"
-  status = 301
-
-[[redirects]]
-  from = "/library"
-  to = "/library.html"
-  status = 301
+  from = "/*"
+  to = "/index.html"
+  status = 200
