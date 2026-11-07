@@ -60,6 +60,9 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 - Web build: `npx expo export --platform web` produces the real app in `dist/`
   (domain-root base; used by Firebase and Netlify). GitHub Pages uses
   `DEPLOY=1 npx expo export --platform web` (base `/ranemmu-lilrab`). See §12.
+  Add `--clear` the first time `.env.local` is created or changed: Metro caches
+  the Babel env inlining, so a cached build silently ships an app with
+  `isFirebaseConfigured() === false` (no admin, no live sync).
 - Syntax/transpile check for a single file:
   `babel.transformSync(src, {presets: [require.resolve('babel-preset-expo')]})`.
 
@@ -302,6 +305,19 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   book on the home grid client-navigates to `/library`, and
   `/hymn/tr0001` renders the full hymn text. All checks done in the in-app
   browser, not just curl.
+- **Firebase build needs the cloud config (fixed 2026-11-07)**: the app reads
+  `EXPO_PUBLIC_FIREBASE_*` at build time (`src/data/firebase.ts`). The Pages
+  workflow injects them from GitHub secrets, but the repo has no committed
+  `.env`, so a plain local export produced an offline-only bundle — Firebase
+  `/admin` said "الحفظ السحابي غير مهيأ بعد" while Pages showed the real
+  "تسجيل الدخول". Fix: `.env.local` (gitignored via `.env*.local`) now holds
+  the same public web config, copied out of the live Pages bundle with
+  `node <temp>/write-env-local.cjs`. Rebuild with `--clear` (Metro caches the
+  inlined env; without it the new keys never reach the bundle — proven by
+  grepping the entry for `apiKey:"…"`). After the fix the deployed Firebase
+  `/admin` shows the sign-in screen and both hosts run identically. Any future
+  build from a fresh clone needs that `.env.local` or the Pages-style env vars;
+  there is still no automatic Firebase deploy on push.
 - GitHub Pages: `.github/workflows/pages.yml` builds the app with `DEPLOY=1`
   (prefixed `/ranemmu-lilrab/`), removes the duplicate `dist/(tabs)` tree, and
   writes `dist/404.html = dist/index.html` so deep links (`/hymn/tr0001`) boot
