@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "siteRoot": "dist",
+  "routes": {
+    "/": "/library.html",
+    "/hymn/*": "/hymn/*/index.html"
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#D4B85F">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="الترانيـم">
+  <link rel="manifest" href="/manifest.json">
+  <title>الترنيمة للرب | Arabic Assembly Hymns</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0A1A14 0%, #1A2E24 100%);
+      color: #F7F4E9;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      direction: rtl;
+      text-align: center;
+      padding: 20px;
+    }
+    .container { max-width: 600px; }
+    h1 { 
+      color: #D4B85F; 
+      margin-bottom: 20px; 
+      font-size: 2.5rem; 
+    }
+    .subtitle {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 30px;
+    }
+    .app-icon {
+      width: 150px;
+      height: 150px;
+      margin: 30px auto;
+      border-radius: 35px;
+      box-shadow: 0 8px 30px rgba(212, 184, 95, 0.4);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+    }
+    .btn {
+      display: inline-block;
+      margin: 15px 0;
+      padding: 18px 50px;
+      background: #D4B85F;
+      color: #0A1A14;
+      text-decoration: none;
+      border-radius: 12px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(212, 184, 95, 0.4);
+    }
+    .note {
+      margin-top: 40px;
+      opacity: 0.7;
+      font-size: 0.95rem;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin: 30px 0;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 16px;
+    }
+    .stat-item {
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #D4B85F;
+    }
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  </style>
+  
+  <script>
+    function showPWAInstall() {
+      document.getElementById('pwaInstructions').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎨 الترنيمة للرب</h1>
+    <p class="subtitle">١,٨٢٤ ترنيمة روحية • دون إنترنت • مجاني</p>
+    
+    <img src="/icons/icon-512.png" alt="App Icon" class="app-icon">
+    
+    <!-- Button opens PWA installation modal/instructions -->
+    <div id="installSection" style="margin: 30px 0;">
+      <h3 style="color: #D4B85F; margin-bottom: 15px;">تثبيت التطبيق على هاتفك الأندرويد</h3>
+      
+      <!-- Method 1: Web PWA Installation -->
+      <button onclick="showPWAInstall()" 
+              style="display: block; width: 100%; max-width: 300px; margin: 0 auto 15px; padding: 15px; background: #D4B85F; color: #0A1A14; border: none; border-radius: 12px; font-size: 1.1rem; font-weight: bold; cursor: pointer;">
+        ⋮ أضف إلى الشاشة الرئيسية (PWA)
+      </button>
+      
+      <!-- Method 2: Direct APK Download -->
+      <a href="https://expo.dev/accounts/osa.sla/projects/ranemmu-lilrab/builds/de7316c4-4f52-4772-8eba-0156d3f78ed2/download" 
+         class="apk-button"
+         style="display: block; width: 100%; max-width: 300px; margin: 0 auto; padding: 15px; background: #4CAF50; color: white; text-align: center; text-decoration: none; border-radius: 12px; font-size: 1.1rem; font-weight: bold;">
+         📥 تحميل وتثبيت APK
+      </a>
+    </div>
+    
+    <div class="stats">
+      <div class="stat-item">
+        <div class="stat-number">١٨٢٤</div>
+        <div class="stat-label">ترنيمة</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">دائماً</div>
+        <div class="stat-label">بدون إنترنت</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">مجاناً</div>
+        <div class="stat-label">للجميع</div>
+      </div>
+    </div>
+    
+    <!-- Hidden PWA Instructions Modal -->
+    <div id="pwaInstructions" 
+         style="display: none; 
+                background: rgba(0,0,0,0.9);
+                position: fixed; 
+                top: 0; left: 0; right: 0; bottom: 0;
+                z-index: 9999;
+                padding: 30px;
+                overflow-y: auto;">
+      <div style="max-width: 600px; margin: 0 auto; background: #1A2E24; padding: 30px; border-radius: 20px;">
+        <h2 style="color: #D4B85F; margin-bottom: 20px;">⚙️ تثبيت التطبيق - خطوات سهلة</h2>
+        
+        <div style="text-align: right; direction: rtl;">
+          <ol style="padding-right: 25px; line-height: 2;">
+            <li><strong>خطوة ١:</strong> افتح متصفح Chrome على هاتفك الأندرويد</li>
+            <li><strong>خطوة ٢:</strong> انتقل إلى رابط التطبيق في نفس المتصفح</li>
+            <li><strong>خطوة ٣:</strong> اضغط على ⋮ (ثلاث نقاط) في الزاوية العلوية</li>
+            <li><strong>خطوة ٤:</strong> اختر "أضف إلى الشاشة الرئيسية" أو "Install app"</li>
+            <li><strong>خطوة ٥:</strong> اضغط "إضافة" - يضاف التطبيق مع أيقونتك الجميلة!</li>
+          </ol>
+          
+          <p style="margin-top: 30px; color: #aaa; font-size: 0.9rem;">
+            💡 نصيحة: طريقة APK أسهل! اضغط زر التحميل الأخضر أعلاه.
+          </p>
+        </div>
+        
+        <button onclick="document.getElementById('pwaInstructions').style.display='none'"
+                style="margin-top: 30px; width: 100%; padding: 15px; background: #D4B85F; color: #0A1A14; border: none; border-radius: 10px; font-size: 1.1rem; font-weight: bold; cursor: pointer;">
+          إغلاق
+        </button>
+      </div>
+    </div>
+    
+    <div class="note" style="margin-top: 20px;">
+      <p style="font-size: 0.85rem;">✅ يُوصى بتحميل APK للحصول على أفضل تجربة عمل بدون إنترنت 🎉</p>
+    </div>
+  </div>
+</body>
+</html>

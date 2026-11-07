@@ -142,10 +142,13 @@ function generateLibraryPage(hymns) {
   </div>
   
   <div class="library-grid" id="library">
-${hymns.map(h => `    <div class="hymn-card" onclick="location.href='/hymn/tr${String(h.id.replace('tr', '')).padStart(4, '0')}}'">
+${hymns.map(h => {
+  const hymnId = String(h.id).replace(/^tr/, '').padStart(4, '0');
+  return `    <div class="hymn-card" onclick="location.href='/hymn/tr${hymnId}'">
       <div class="hymn-number">#${h.number}</div>
       <div class="hymn-title">${h.title}</div>
-    </div>`).join('\n')}
+    </div>`;
+}).join('\n')}
   </div>
   
   <script>
