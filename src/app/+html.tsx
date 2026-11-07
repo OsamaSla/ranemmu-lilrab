@@ -34,7 +34,7 @@ export default function Root({ children }: PropsWithChildren) {
         {/* Service worker */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('${base}/sw.js',{scope:'${base || '/'}'});});}`,
+            __html: `if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('${base}/sw.js',{scope:'${base ? base + '/' : '/'}'});});}`,
           }}
         />
 

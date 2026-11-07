@@ -277,6 +277,9 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 - `app.config.js` sets `experiments.baseUrl = '/ranemmu-lilrab'` **only when
   `DEPLOY=1`**. It deliberately no longer infers deploy from `CI` /
   `GITHUB_ACTIONS`: Netlify runs in CI too but is served from the domain root.
+- `src/app/+html.tsx` registers the service worker with scope `${base}/`
+  (`/ranemmu-lilrab/` on Pages). The old `${base}` produced a `SecurityError`
+  ("scope is not under the max scope allowed") on every Pages page.
 - GitHub Pages: `.github/workflows/pages.yml` builds the app with `DEPLOY=1`
   (prefixed `/ranemmu-lilrab/`), removes the duplicate `dist/(tabs)` tree, and
   writes `dist/404.html = dist/index.html` so deep links (`/hymn/tr0001`) boot
