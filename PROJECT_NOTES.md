@@ -396,4 +396,47 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   the same app. Do not "clean up" that value; changing it orphans the existing
   install. Phones that still open the library can remove/re-add the icon once.
 
+## 13. Reader search, all-books scope, SoundCloud cleanup (uncommitted review, 2026-11-08)
+
+Verified locally with `npm run typecheck`, `npm run check:hymns` (1824 hymns,
+all checks passed), `build:corpus`, a web export served on :8083, and
+`node node_modules/eslint/bin/eslint.js` on the touched files. Not pushed.
+
+- SoundCloud melody links: `content/taranim.json` was the only source with them
+  (204 `mediaUrl` values); they were deleted and `npm run build:corpus` rewrote
+  `assets/hymns/full/014–018.json` + `index.json` (0 occurrences left under
+  `content/`/`assets/`). 140 **YouTube** `mediaUrl` values in taranim remain.
+  `src/data/media.ts` also rejects a SoundCloud URL in `curatedMediaUrl`, so a
+  cloud/admin override saved before the cleanup cannot resurrect one; those
+  hymns fall back to the YouTube search. `isValidMediaUrl` still accepts any
+  http(s) URL (admin-side validation is unchanged).
+- Reader (`src/app/(tabs)/hymn/[id].tsx`): the fullscreen body title + metre
+  block and the normal-header metre line are removed. The cog/settings toolbar
+  icon was removed (the red X in the user's screenshot); `ReaderSettingsModal`
+  is therefore no longer reachable from the reader — reader size/font/theme
+  remain available in the Settings tab, but its "listen to melody" button is
+  currently unreachable. This is intentional per the screenshot but is the
+  first thing to restore if the user meant otherwise.
+- Reader toolbar magnifier now opens `src/components/ReaderSearchOverlay.tsx`
+  instead of navigating to `/library`: a floating modal panel with a wide
+  number/text field, a narrow book picker (defaults to the current hymn's book,
+  includes "all books"), and an inline result list. Number/title matches are
+  instant; lyrics come from `ensureAllChunks()` + `searchHymns()` like the
+  library. Picking a result closes the panel and `router.push`es the hymn; the
+  component is mounted only while open, so each opening starts clean.
+- Library (`src/app/(tabs)/library.tsx`) order is now book/sort row → topic
+  filter → search bar; the field is 56 px tall with 18 px text and the ±50
+  buttons grew to 44×26. The book picker gained "كل الكتب" (all books); it is a
+  **local** scope (`bookScope`) so the global `setBook` / home grid is
+  untouched, and it resets whenever the global book changes. With all books the
+  list sorts by book rank then printed number (duplicate numbers across books
+  would otherwise interleave) and each row's subtitle shows its book name.
+- i18n: `book.all` added to ar/en/de together.
+- Browser checks on :8083: reader overlay filtered a number ("249" → 1 result)
+  and cross-book title/lyrics text ("نرنم"/"بانت" with all books → 5/18+
+  results); picking a result landed on `/hymn/tr0074`; library all-books showed
+  1824 in the app bar, and "249" returned one row per book with book labels.
+  The known React #418 still appears once on `/hymn/*` and does not break
+  rendering.
+
 

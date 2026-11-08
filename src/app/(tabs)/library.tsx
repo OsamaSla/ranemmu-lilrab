@@ -60,6 +60,16 @@ export default function LibraryScreen() {
   const [order, setOrder] = useState<'number' | 'alpha'>('number');
   const book = useSettings((s) => s.book);
   const setBook = useSettings((s) => s.setBook);
+  // The picker can widen the list to every book without touching the global
+  // selection (the home grid still opens one book). A changed global book —
+  // arriving from a home card — snaps the scope back to that book.
+  const [bookScope, setBookScope] = useState<{ source: BookId; all: boolean }>({
+    source: book,
+    all: false,
+  });
+  if (bookScope.source !== book) setBookScope({ source: book, all: false });
+  const allBooks = bookScope.all;
+  const activeBook: BookId | undefined = allBooks ? undefined : book;
   // Re-reads the merged corpus whenever an admin override lands.
   const corpusVersion = useOverrides((s) => s.updatedAt);
   // Re-runs the queries below when cloud edits stream in.
@@ -90,9 +100,9 @@ export default function LibraryScreen() {
 
   // corpusVersion only retriggers this after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const summaries = useMemo(() => getSummaries(book), [corpusVersion, remoteVersion, book]);
+  const summaries = useMemo(() => getSummaries(activeBook), [corpusVersion, remoteVersion, activeBook]);
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const topicCounts = useMemo(() => getTopicCounts(book), [corpusVersion, remoteVersion, book]);
+  const topicCounts = useMemo(() => getTopicCounts(activeBook), [corpusVersion, remoteVersion, activeBook]);
 
   // Topic filter first (primary or secondary tag), so book + topic combine
   // into one hybrid query and text search runs within the topic.
@@ -148,7 +158,7 @@ export default function LibraryScreen() {
     if (!wantsLyrics || !lyricsReady) return [];
     const titleIds = new Set(titleMatches.map((s) => s.id));
     const perHymn = new Map<string, SearchMatch[]>();
-    for (const hit of searchHymns(getCorpus(book), trimmed, 400)) {
+    for (const hit of searchHymns(getCorpus(activeBook), trimmed, 400)) {
       if (hit.inTitle || titleIds.has(hit.hymn.id)) continue;
       if (topic && !matchesTopic(hit.hymn, topic)) continue;
       const bucket = perHymn.get(hit.hymn.id);
@@ -156,7 +166,7 @@ export default function LibraryScreen() {
       else if (bucket.length < 2) bucket.push(hit);
     }
     return [...perHymn.values()].flat().slice(0, 60);
-  }, [wantsLyrics, lyricsReady, trimmed, titleMatches, topic, book]);
+  }, [wantsLyrics, lyricsReady, trimmed, titleMatches, topic, activeBook]);
 
   const sections = useMemo<{ key: string; label: string; data: LibraryRow[] }[]>(() => {
     if (trimmed) {
@@ -180,12 +190,20 @@ export default function LibraryScreen() {
       return rows;
     }
     if (order === 'number') {
+      // With every book in view, keep each book's printed sequence together:
+      // hymn numbers repeat across the three books, so a plain number sort
+      // would interleave unrelated hymns.
+      const bookRank: Record<BookId, number> = { main: 0, taranim: 1, book3: 2 };
       return [
         {
           key: 'number',
           label: topic ? t(`topic.${topic}`) : t('library.byNumber'),
           data: [...topicFiltered]
-            .sort((a, b) => a.number - b.number)
+            .sort((a, b) =>
+              allBooks
+                ? bookRank[a.book ?? 'main'] - bookRank[b.book ?? 'main'] || a.number - b.number
+                : a.number - b.number,
+            )
             .map((hymn) => ({ hymn })),
         },
       ];
@@ -200,7 +218,7 @@ export default function LibraryScreen() {
     }
 
     return [...buckets.entries()].map(([key, data]) => ({ key, label: key, data }));
-  }, [order, topic, topicFiltered, titleMatches, lyricMatches, isNumberQuery, trimmed, t]);
+  }, [order, topic, topicFiltered, titleMatches, lyricMatches, isNumberQuery, trimmed, t, allBooks]);
 
   const listRef = useRef<SectionList<LibraryRow>>(null);
   /** Flat index of the row at the top edge; the ±50 buttons anchor to it. */
@@ -338,111 +356,9 @@ export default function LibraryScreen() {
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       <AppBar title={t('library.title')} subtitle={`${summaries.length}`} showBack />
 
-      {/* In-list search: filters the hymns below, no separate screen. The ±50
-          paging buttons are stacked at the field's trailing edge (the left side
-          in Arabic) so they sit beside the list they move instead of taking a
-          row of their own. */}
-      <View
-        style={{
-          flexDirection: direction.row,
-          alignItems: 'center',
-          gap: spacing.sm,
-          marginHorizontal: spacing.lg,
-          marginTop: spacing.md,
-        }}>
-        <View
-          style={{
-            flex: 1,
-            flexDirection: direction.row,
-            alignItems: 'center',
-            backgroundColor: colors.surfaceMuted,
-            borderRadius: radius.pill,
-            borderWidth: 1,
-            borderColor: colors.border,
-            paddingHorizontal: spacing.md,
-            height: 48,
-          }}>
-          <MaterialCommunityIcons name="magnify" size={20} color={colors.textMuted} />
-          <TextInput
-            value={query}
-            onChangeText={(text) => {
-              // Auto-convert Arabic-Indic digits (٠-٩) to Western (0-9) so number search works seamlessly
-              const converted = text.replace(/[\u0660-\u0669\u06F0-\u06F9]/g, (ch) => {
-                return String.fromCharCode(ch.charCodeAt(0) - 0x0660 + 48);
-              });
-              setQuery(converted);
-              scrollIndexRef.current = 0;
-            }}
-            placeholder={t('search.placeholder')}
-            placeholderTextColor={colors.textMuted}
-            keyboardType="default"
-            returnKeyType="search"
-            style={{
-              flex: 1,
-              marginHorizontal: spacing.sm,
-              color: colors.text,
-              fontFamily,
-              fontSize: 16,
-              writingDirection: direction.dir,
-              textAlign: direction.textAlign,
-            }}
-          />
-          {query.length > 0 ? (
-            <Pressable
-              onPress={() => setQuery('')}
-              accessibilityRole="button"
-              accessibilityLabel={t('search.clear')}
-              hitSlop={8}
-              android_ripple={{ color: colors.border }}
-              style={{ padding: spacing.xs }}>
-              <MaterialCommunityIcons name="close-circle" size={24} color={colors.textMuted} />
-            </Pressable>
-          ) : null}
-        </View>
-
-        <View style={{ gap: 4 }}>
-          <Pressable
-            onPress={() => jumpBy(-50)}
-            accessibilityRole="button"
-            accessibilityLabel="Scroll up by 50"
-            android_ripple={{ color: colors.border }}
-            style={({ pressed }) => ({
-              width: 40,
-              height: 22,
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: radius.sm,
-              borderWidth: 1,
-              borderColor: colors.border,
-              backgroundColor: colors.surface,
-              opacity: pressed ? 0.75 : 1,
-            })}>
-            <MaterialCommunityIcons name="chevron-up" size={16} color={colors.primary} />
-          </Pressable>
-          <Pressable
-            onPress={() => jumpBy(50)}
-            accessibilityRole="button"
-            accessibilityLabel="Scroll down by 50"
-            android_ripple={{ color: colors.border }}
-            style={({ pressed }) => ({
-              width: 40,
-              height: 22,
-              alignItems: 'center',
-              justifyContent: 'center',
-              borderRadius: radius.sm,
-              borderWidth: 1,
-              borderColor: colors.border,
-              backgroundColor: colors.surface,
-              opacity: pressed ? 0.75 : 1,
-            })}>
-            <MaterialCommunityIcons name="chevron-down" size={16} color={colors.primary} />
-          </Pressable>
-        </View>
-      </View>
-
-      {/* Two slim filter rows: book + sort toggle, then topic full-width
-          so long topic names are never truncated. They combine into a
-          single hybrid query (topic counts follow the chosen book). */}
+      {/* Two slim filter rows first: book + sort toggle, then topic
+          full-width so long topic names are never truncated. The search field
+          sits under them and filters the list they scope. */}
       <View
         style={{
           flexDirection: direction.row,
@@ -454,13 +370,27 @@ export default function LibraryScreen() {
           <FilterSelect
             title={t('book.choose')}
             icon="book-open-page-variant"
-            options={books.map((b) => ({
-              value: b.id,
-              label: t(`book.${b.id}` as const),
-              count: b.count,
-            }))}
-            value={book}
-            onChange={(value) => setBook(value as BookId)}
+            options={[
+              {
+                value: '',
+                label: t('book.all'),
+                count: books.reduce((sum, b) => sum + b.count, 0),
+              },
+              ...books.map((b) => ({
+                value: b.id,
+                label: t(`book.${b.id}` as const),
+                count: b.count,
+              })),
+            ]}
+            value={allBooks ? '' : book}
+            onChange={(value) => {
+              if (!value) {
+                setBookScope({ source: book, all: true });
+                return;
+              }
+              setBookScope({ source: value as BookId, all: false });
+              setBook(value as BookId);
+            }}
             style={{ flex: 1 }}
           />
         ) : null}
@@ -503,6 +433,108 @@ export default function LibraryScreen() {
           value={topic ?? ''}
           onChange={(value) => setTopic(isTopicId(value) ? value : null)}
         />
+      </View>
+
+      {/* In-list search: filters the hymns below, no separate screen. The ±50
+          paging buttons are stacked at the field's trailing edge (the left side
+          in Arabic) so they sit beside the list they move instead of taking a
+          row of their own. */}
+      <View
+        style={{
+          flexDirection: direction.row,
+          alignItems: 'center',
+          gap: spacing.sm,
+          marginHorizontal: spacing.lg,
+          marginTop: spacing.md,
+        }}>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: direction.row,
+            alignItems: 'center',
+            backgroundColor: colors.surfaceMuted,
+            borderRadius: radius.pill,
+            borderWidth: 1,
+            borderColor: colors.border,
+            paddingHorizontal: spacing.md,
+            height: 56,
+          }}>
+          <MaterialCommunityIcons name="magnify" size={22} color={colors.textMuted} />
+          <TextInput
+            value={query}
+            onChangeText={(text) => {
+              // Auto-convert Arabic-Indic digits (٠-٩) to Western (0-9) so number search works seamlessly
+              const converted = text.replace(/[\u0660-\u0669\u06F0-\u06F9]/g, (ch) => {
+                return String.fromCharCode(ch.charCodeAt(0) - 0x0660 + 48);
+              });
+              setQuery(converted);
+              scrollIndexRef.current = 0;
+            }}
+            placeholder={t('search.placeholder')}
+            placeholderTextColor={colors.textMuted}
+            keyboardType="default"
+            returnKeyType="search"
+            style={{
+              flex: 1,
+              marginHorizontal: spacing.sm,
+              color: colors.text,
+              fontFamily,
+              fontSize: 18,
+              writingDirection: direction.dir,
+              textAlign: direction.textAlign,
+            }}
+          />
+          {query.length > 0 ? (
+            <Pressable
+              onPress={() => setQuery('')}
+              accessibilityRole="button"
+              accessibilityLabel={t('search.clear')}
+              hitSlop={8}
+              android_ripple={{ color: colors.border }}
+              style={{ padding: spacing.xs }}>
+              <MaterialCommunityIcons name="close-circle" size={24} color={colors.textMuted} />
+            </Pressable>
+          ) : null}
+        </View>
+
+        <View style={{ gap: 4 }}>
+          <Pressable
+            onPress={() => jumpBy(-50)}
+            accessibilityRole="button"
+            accessibilityLabel="Scroll up by 50"
+            android_ripple={{ color: colors.border }}
+            style={({ pressed }) => ({
+              width: 44,
+              height: 26,
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: radius.sm,
+              borderWidth: 1,
+              borderColor: colors.border,
+              backgroundColor: colors.surface,
+              opacity: pressed ? 0.75 : 1,
+            })}>
+            <MaterialCommunityIcons name="chevron-up" size={16} color={colors.primary} />
+          </Pressable>
+          <Pressable
+            onPress={() => jumpBy(50)}
+            accessibilityRole="button"
+            accessibilityLabel="Scroll down by 50"
+            android_ripple={{ color: colors.border }}
+            style={({ pressed }) => ({
+              width: 44,
+              height: 26,
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: radius.sm,
+              borderWidth: 1,
+              borderColor: colors.border,
+              backgroundColor: colors.surface,
+              opacity: pressed ? 0.75 : 1,
+            })}>
+            <MaterialCommunityIcons name="chevron-down" size={16} color={colors.primary} />
+          </Pressable>
+        </View>
       </View>
 
       <SectionList
@@ -583,7 +615,13 @@ export default function LibraryScreen() {
             <HymnRow
               hymn={hymn}
               highlight={trimmed || undefined}
-              subtitle={hymn.primaryTopic ? t(`topic.${hymn.primaryTopic}` as const) : undefined}
+              subtitle={
+                allBooks
+                  ? t(`book.${hymn.book ?? 'main'}` as const)
+                  : hymn.primaryTopic
+                    ? t(`topic.${hymn.primaryTopic}` as const)
+                    : undefined
+              }
               onPress={() => {
                 // Returning lands on a clean search field, ready for lookup.
                 setQuery('');

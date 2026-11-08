@@ -29,11 +29,9 @@ import { EmptyState } from '../../../components/EmptyState';
 import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
 import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
-import { MeterText } from '../../../components/MeterText';
-import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
+import { ReaderSearchOverlay } from '../../../components/ReaderSearchOverlay';
 import type { SegmentOption } from '../../../components/SegmentedControl';
 import { ensureHymn, getHymn, getNeighbours, getSummaries, isHymnPending } from '../../../data/loader';
-import { displayMeter } from '../../../data/meterFamilies';
 import { allTopicsOf } from '../../../data/topics';
 import { findSimilar } from '../../../data/search';
 import { useT } from '../../../hooks/useT';
@@ -43,7 +41,7 @@ import { useOverrides } from '../../../store/overrides';
 import { useRemote } from '../../../store/remote';
 import { useSettings } from '../../../store/settings';
 import { useGoBack } from '../../../hooks/useGoBack';
-import { fontFamilyFor, READER_MAX_WIDTH, type as typeScale } from '../../../theme/fonts';
+import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
 import { palette, radius, spacing, HIT_SLOP } from '../../../theme/tokens';
 
 /** Height of the slim compact toolbar row inside the header. */
@@ -125,7 +123,7 @@ export default function ReaderScreen() {
   const insets = useSafeAreaInsets();
   const goBack = useGoBack();
 
-  const [settingsOpen, setSettingsOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
 
@@ -377,10 +375,6 @@ export default function ReaderScreen() {
   const readerFont = fontFamilyFor(fontId, false);
   const readerFontBold = fontFamilyFor(fontId, true);
 
-  // Hymn page shows the short family form (٥, not 55.55.55.55) whenever the
-  // hymn's cell is transcribed; otherwise the exact metre.
-  const shownMeter = displayMeter(hymn.id, hymn.meter);
-
   /**
    * Compact icon button for the header toolbar. Transparent background,
    * 40px touch target by default, coloured icon. The prev/next pair uses a
@@ -479,7 +473,7 @@ export default function ReaderScreen() {
   };
 
   /**
-   * Icon toolbar: previous · next · settings · fullscreen · search · share · favorite.
+   * Icon toolbar: previous · next · fullscreen · search · share · favorite.
    * Right-aligned, horizontally scrollable if needed.
    */
   const iconToolbar = (dark: boolean) => {
@@ -519,12 +513,6 @@ export default function ReaderScreen() {
           })}
         </View>
         {headerIcon({
-          name: 'cog-outline',
-          label: t('reader.settings'),
-          onPress: () => setSettingsOpen(true),
-          dark,
-        })}
-        {headerIcon({
           name: fullscreen ? 'fullscreen-exit' : 'fullscreen',
           label: fullscreen ? t('reader.exitFullscreen') : t('reader.fullscreen'),
           onPress: () => {
@@ -536,7 +524,7 @@ export default function ReaderScreen() {
         {headerIcon({
           name: 'magnify',
           label: t('search.placeholder'),
-          onPress: () => router.push('/library'),
+          onPress: () => setSearchOpen(true),
           dark,
         })}
         {headerIcon({ name: 'share-variant', label: t('reader.share'), onPress: shareHymn, dark })}
@@ -874,31 +862,20 @@ export default function ReaderScreen() {
               width: '100%',
               alignSelf: 'center',
             }}>
-            <AppText
-              variant="title"
-              center
-              useAppFont={false}
-              style={{
-                fontFamily: readerFontBold,
-                fontSize: Math.round(readerSize * 1.1),
-                color: palette.readerText,
-                marginVertical: spacing.lg,
-              }}>
-              {hymn.number}. {transTitle ? `${hymn.title} / ${transTitle}` : hymn.title}
-            </AppText>
-            {shownMeter ? (
-              <AppText
-                variant="caption"
-                center
-                style={{ color: palette.readerText, opacity: 0.7, marginBottom: spacing.lg }}>
-                {t('info.meter')}: <MeterText meter={shownMeter} fontSize={typeScale.caption} color={palette.readerText} align="center" />
-              </AppText>
-            ) : null}
             {versesView}
           </ScrollView>
           {stanzaRail(true)}
         </View>
-        <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} hymn={hymn} />
+        {searchOpen ? (
+          <ReaderSearchOverlay
+            onClose={() => setSearchOpen(false)}
+            onSelect={(nextId) => {
+              setSearchOpen(false);
+              router.push(`/hymn/${nextId}`);
+            }}
+            currentBook={hymn.book ?? 'main'}
+          />
+        ) : null}
         <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
       </Animated.View>
     );
@@ -947,12 +924,6 @@ export default function ReaderScreen() {
             <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start', marginTop: 2 }}>
               {iconToolbar(false)}
             </View>
-            {/* Metre under the title when the book provides one. */}
-            {shownMeter ? (
-              <AppText variant="caption" numberOfLines={1} color={colors.onPrimary} style={{ opacity: 0.7, textAlign: 'right', direction: 'rtl' }}>
-                {t('info.meter')}: <MeterText meter={shownMeter} fontSize={typeScale.caption} color={colors.onPrimary} />
-              </AppText>
-            ) : null}
             {/* Topics under the title when classified. Tapping opens the
                 library filtered to the primary topic. */}
             {allTopicsOf(hymn).length > 0 ? (
@@ -1016,7 +987,16 @@ export default function ReaderScreen() {
         {stanzaRail(false)}
       </View>
 
-      <ReaderSettingsModal visible={settingsOpen} onClose={() => setSettingsOpen(false)} hymn={hymn} />
+      {searchOpen ? (
+        <ReaderSearchOverlay
+          onClose={() => setSearchOpen(false)}
+          onSelect={(nextId) => {
+            setSearchOpen(false);
+            router.push(`/hymn/${nextId}`);
+          }}
+          currentBook={hymn.book ?? 'main'}
+        />
+      ) : null}
       <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
     </View>
   );

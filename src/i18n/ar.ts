@@ -26,7 +26,7 @@ export const ar = {
     byNumber: 'بترقيمها',
     alphabetical: 'أبجديًا',
     topics: 'الموضوع',
-    allTopics: 'الكل',
+    allTopics: 'كل المواضيع',
     sortOrder: 'الترتيب',
   },
 
@@ -44,6 +44,7 @@ export const ar = {
 
   book: {
     choose: 'الكتاب',
+    all: 'كل الكتب',
     main: 'رنموا للرب',
     taranim: 'ترنيمات روحية',
     book3: 'هلم نرنم',

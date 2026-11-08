@@ -33,6 +33,7 @@ export const en: PartialDictionary = {
   'topic.church': 'The Church & Service',
 
   'book.choose': 'Book',
+  'book.all': 'All books',
   'book.main': 'Sing to the Lord',
   'book.taranim': 'Spiritual Songs',
   'book.book3': 'Halum Narnem',

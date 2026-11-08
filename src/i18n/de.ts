@@ -38,6 +38,7 @@ export const de: PartialDictionary = {
   'topic.church': 'Gemeinde und Dienst',
 
   'book.choose': 'Buch',
+  'book.all': 'Alle Bücher',
   'book.main': 'Singet dem Herrn',
   'book.taranim': 'Geistliche Lieder',
   'book.book3': 'Halum Narnem',
