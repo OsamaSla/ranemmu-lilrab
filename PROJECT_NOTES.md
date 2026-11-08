@@ -377,15 +377,18 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `src/hooks/useAppUpdateCheck.ts` (called from `src/app/_layout.tsx`) fetches
   the deployed `index.html` with `cache: 'no-store'`, reads the entry bundle it
   names, and reloads when that differs from the running `entry-*.js` — on
-  mount, on `visibilitychange` → visible, and on a persisted `pageshow`. The
-  app root is derived by slicing the running script `src` at `/_expo/`, so the
-  same code works at the domain root (Firebase/Netlify) and under
-  `/ranemmu-lilrab` (Pages). It never reloads on `/admin-edit`/`/admin-add` or
-  while an input/textarea is focused (unsaved edits), and a 60 s sessionStorage
-  guard (`app.update.reloadedAt`) prevents loops if a host briefly serves two
-  bundles. Native no-ops. This only works because pages are served `no-cache`
-  and `public/sw.js` is inert — if either changes, switch the check to a
-  generated `version.json` instead of parsing `index.html`.
+  mount, on `visibilitychange` → visible, and on a persisted `pageshow`. Compare
+  only the **hashed file name**: the same file is `/_expo/...` on Firebase and
+  `/ranemmu-lilrab/_expo/...` on Pages, and resolving the matched path against
+  the origin dropped the base and made Pages reload every 60 s (caught on the
+  first live test). The app root (origin + base) is derived by slicing the
+  running script `src` at `/_expo/`. It never reloads on
+  `/admin-edit`/`/admin-add` or while an input/textarea is focused (unsaved
+  edits), and a 60 s sessionStorage guard (`app.update.reloadedAt`) prevents
+  loops if a host briefly serves two bundles. Native no-ops. This only works
+  because pages are served `no-cache` and `public/sw.js` is inert — if either
+  changes, switch the check to a generated `version.json` instead of parsing
+  `index.html`.
 - `public/manifest.json`: `start_url` changed from `library.html` to `./` so a
   freshly installed icon opens the app home. `id` is pinned to `library.html`
   **on purpose**: that path was Chrome's implicit id (it defaulted to the old

@@ -9,13 +9,18 @@
  * loaded. Native builds have no static `index.html` and are updated through
  * the store, so this is web-only.
  *
+ * Only the hashed file name is compared: the same bundle is referenced as
+ * `/_expo/...` at the domain root and `/ranemmu-lilrab/_expo/...` on Pages, and
+ * resolving the path against the origin loses the deploy sub-path.
+ *
  * Best-effort by design: an offline check or host error leaves the app alone,
  * and an admin with an unsaved edit is never reloaded.
  */
 import { useEffect } from 'react';
 import { Platform } from 'react-native';
 
-const ENTRY_PATTERN = /\/_expo\/static\/js\/web\/entry-[A-Za-z0-9_-]+\.js/;
+const ENTRY_MARKER = '/_expo/static/js/web/';
+const ENTRY_FILE = /entry-[A-Za-z0-9_-]+\.js/;
 // A host that briefly serves two different bundles must not reload in a loop.
 const RELOAD_GUARD_KEY = 'app.update.reloadedAt';
 const RELOAD_GUARD_MS = 60_000;
@@ -23,23 +28,25 @@ const RELOAD_GUARD_MS = 60_000;
 let checking = false;
 
 /** The bundle this page is running, plus the app root that serves it. */
-function runningBundle(): { src: string; root: string } | null {
-  const script = Array.from(document.scripts).find((candidate) => ENTRY_PATTERN.test(candidate.src));
-  const match = script ? ENTRY_PATTERN.exec(script.src) : null;
-  if (!script || !match) return null;
+function runningBundle(): { root: string; file: string } | null {
+  const script = Array.from(document.scripts).find((candidate) =>
+    candidate.src.includes(ENTRY_MARKER),
+  );
+  if (!script) return null;
   // `src` is absolute, so this is the origin plus any deploy sub-path.
-  return { src: script.src, root: script.src.slice(0, match.index) };
+  const markerIndex = script.src.indexOf(ENTRY_MARKER);
+  const file = ENTRY_FILE.exec(script.src.slice(markerIndex))?.[0];
+  return file ? { root: script.src.slice(0, markerIndex), file } : null;
 }
 
 /** The bundle the currently deployed `index.html` names. */
-async function deployedBundle(root: string): Promise<string | null> {
+async function deployedFile(root: string): Promise<string | null> {
   const response = await fetch(`${root}/index.html`, { cache: 'no-store' });
   if (!response.ok) return null;
   const html = await response.text();
-  const match = ENTRY_PATTERN.exec(html);
-  // Firebase cleanUrls redirects `/index.html` to `/`, so resolve the relative
-  // entry against the final URL rather than the requested one.
-  return match ? new URL(match[0], response.url).href : null;
+  const markerIndex = html.indexOf(ENTRY_MARKER);
+  if (markerIndex === -1) return null;
+  return ENTRY_FILE.exec(html.slice(markerIndex))?.[0] ?? null;
 }
 
 function mayReload(): boolean {
@@ -71,8 +78,8 @@ export function useAppUpdateCheck(): void {
       if (!running) return;
       checking = true;
       try {
-        const deployed = await deployedBundle(running.root);
-        if (!disposed && deployed && deployed !== running.src && mayReload()) {
+        const deployed = await deployedFile(running.root);
+        if (!disposed && deployed && deployed !== running.file && mayReload()) {
           window.location.reload();
         }
       } catch {
