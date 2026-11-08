@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-07, commit ec854aa8 (stanza-rail highlight reset on next/prev; Firebase CI deploy live)
+Last verified: 2026-11-08, commit 990bd2e6 (installed PWA auto-reload on new deploy; manifest start_url fixed)
 
 ## 1. What this is
 
