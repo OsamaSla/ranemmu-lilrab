@@ -108,7 +108,10 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
     return rows.slice(0, 40);
   }, [trimmed, titleMatches, wantsLyrics, lyricsReady, summaries, activeBook]);
 
-  const pickerWidth = width >= 480 ? 170 : 116;
+  const pickerWidth = width >= 480 ? 170 : 112;
+  // A compact floating bar, not a full-width sheet: 520 px on desktop, and a
+  // 24 px gutter on phones. Centered so wide screens keep it near the reader.
+  const panelWidth = Math.min(width - spacing.xl * 2, 520);
 
   return (
     <Modal visible transparent animationType="fade" onRequestClose={onClose} statusBarTranslucent>
@@ -123,12 +126,10 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
           style={{
             position: 'absolute',
             top: insets.top + spacing.md,
-            left: spacing.md,
-            right: spacing.md,
+            left: (width - panelWidth) / 2,
+            width: panelWidth,
             backgroundColor: colors.surface,
             borderRadius: radius.lg,
-            borderWidth: 1,
-            borderColor: colors.border,
             padding: spacing.md,
             maxHeight: '76%',
             shadowColor: '#000',
@@ -146,8 +147,6 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
                 alignItems: 'center',
                 backgroundColor: colors.surfaceMuted,
                 borderRadius: radius.pill,
-                borderWidth: 1,
-                borderColor: colors.border,
                 paddingHorizontal: spacing.md,
                 height: 50,
               }}>
@@ -167,6 +166,8 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
                   fontSize: 17,
                   writingDirection: direction.dir,
                   textAlign: direction.textAlign,
+                  // No browser focus ring: the field itself is the whole frame.
+                  outlineWidth: 0,
                 }}
               />
               {query.length > 0 ? (
@@ -193,6 +194,7 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
               ]}
               value={scope}
               onChange={(value) => setScope(value === 'all' ? 'all' : (value as BookId))}
+              flat
               style={{ width: pickerWidth }}
             />
             <Pressable

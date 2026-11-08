@@ -421,10 +421,13 @@ all checks passed), `build:corpus`, a web export served on :8083, and
 - Reader toolbar magnifier now opens `src/components/ReaderSearchOverlay.tsx`
   instead of navigating to `/library`: a floating modal panel with a wide
   number/text field, a narrow book picker (defaults to the current hymn's book,
-  includes "all books"), and an inline result list. Number/title matches are
-  instant; lyrics come from `ensureAllChunks()` + `searchHymns()` like the
-  library. Picking a result closes the panel and `router.push`es the hymn; the
-  component is mounted only while open, so each opening starts clean.
+  includes "all books"), and an inline result list. The panel is capped at
+  520 px on desktop and keeps a 24 px gutter on phones, is centered, and draws
+  no outline/border (input `outlineWidth: 0`, flat picker) so no white frame
+  appears in either theme. Number/title matches are instant; lyrics come from
+  `ensureAllChunks()` + `searchHymns()` like the library. Picking a result
+  closes the panel and `router.push`es the hymn; the component is mounted only
+  while open, so each opening starts clean.
 - Library (`src/app/(tabs)/library.tsx`) order is now book/sort row → topic
   filter → search bar; the field is 56 px tall with 18 px text and the ±50
   buttons grew to 44×26. The book picker gained "كل الكتب" (all books); it is a

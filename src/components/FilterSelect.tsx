@@ -29,10 +29,12 @@ interface FilterSelectProps {
   options: FilterOption[];
   value: string;
   onChange: (value: string) => void;
+  /** Drop the outline so the picker can sit inside a bar without a second frame. */
+  flat?: boolean;
   style?: StyleProp<ViewStyle>;
 }
 
-export function FilterSelect({ title, icon, options, value, onChange, style }: FilterSelectProps) {
+export function FilterSelect({ title, icon, options, value, onChange, flat = false, style }: FilterSelectProps) {
   const { direction } = useT();
   const { colors } = useTheme();
   const [open, setOpen] = useState(false);
@@ -54,9 +56,9 @@ export function FilterSelect({ title, icon, options, value, onChange, style }: F
           minHeight: 48,
           paddingHorizontal: spacing.md,
           borderRadius: radius.md,
-          borderWidth: 1,
+          borderWidth: flat ? 0 : 1,
           borderColor: colors.border,
-          backgroundColor: colors.surface,
+          backgroundColor: flat ? 'transparent' : colors.surface,
           opacity: pressed ? 0.75 : 1,
         })}>
         <MaterialCommunityIcons name={icon} size={18} color={colors.primary} />
