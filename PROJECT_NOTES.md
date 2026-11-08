@@ -422,10 +422,11 @@ all checks passed), `build:corpus`, a web export served on :8083, and
   instead of navigating to `/library`: a floating modal panel with a wide
   number/text field, a narrow book picker (defaults to the current hymn's book,
   includes "all books"), and an inline result list. The panel is capped at
-  520 px on desktop and keeps a 24 px gutter on phones, is centered, and is
-  fully transparent — no outline, no surface card, no shadow (input
-  `outlineWidth: 0`, flat picker); only the field/picker pills and the results
-  card carry a surface, so no frame appears in either theme. Number/title
+  520 px on desktop and keeps a 24 px gutter on phones, is centered, and has
+  no border, outline or shadow at all — only a plain surface fill (input
+  `outlineWidth: 0` + `underlineColorAndroid`, flat picker) so no frame line
+  appears in either theme or on Android. The field/picker pills and the
+  results card also carry their own surfaces. Number/title
   matches are instant; lyrics come from
   `ensureAllChunks()` + `searchHymns()` like the library. Picking a result
   closes the panel and `router.push`es the hymn; the component is mounted only

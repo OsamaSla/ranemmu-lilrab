@@ -128,6 +128,8 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
             top: insets.top + spacing.md,
             left: (width - panelWidth) / 2,
             width: panelWidth,
+            backgroundColor: colors.surface,
+            borderRadius: radius.lg,
             padding: spacing.md,
             maxHeight: '76%',
           }}>
@@ -151,6 +153,7 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
                 placeholder={t('search.placeholder')}
                 placeholderTextColor={colors.textMuted}
                 returnKeyType="search"
+                underlineColorAndroid="transparent"
                 style={{
                   flex: 1,
                   marginHorizontal: spacing.sm,
@@ -159,8 +162,10 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
                   fontSize: 17,
                   writingDirection: direction.dir,
                   textAlign: direction.textAlign,
-                  // No browser focus ring: the field itself is the whole frame.
+                  // No browser focus ring or Android underline: the field is
+                  // the whole frame and the panel edge is only a surface.
                   outlineWidth: 0,
+                  outlineColor: 'transparent',
                 }}
               />
               {query.length > 0 ? (
