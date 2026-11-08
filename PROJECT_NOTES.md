@@ -372,5 +372,25 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   deploying from Actions. Only `pages.yml` exists (`deploy.yml` removed).
 - Gotcha: `dist/` is committed, and `.gitignore` previously ignored it, so new
   export files needed `git add -f`. The ignore rule was removed on 2026-11-07.
+- **Installed web app (PWA) auto-refresh (2026-11-08)**: the home-screen web
+  app used to keep the bundle it booted with while the window stayed alive.
+  `src/hooks/useAppUpdateCheck.ts` (called from `src/app/_layout.tsx`) fetches
+  the deployed `index.html` with `cache: 'no-store'`, reads the entry bundle it
+  names, and reloads when that differs from the running `entry-*.js` — on
+  mount, on `visibilitychange` → visible, and on a persisted `pageshow`. The
+  app root is derived by slicing the running script `src` at `/_expo/`, so the
+  same code works at the domain root (Firebase/Netlify) and under
+  `/ranemmu-lilrab` (Pages). It never reloads on `/admin-edit`/`/admin-add` or
+  while an input/textarea is focused (unsaved edits), and a 60 s sessionStorage
+  guard (`app.update.reloadedAt`) prevents loops if a host briefly serves two
+  bundles. Native no-ops. This only works because pages are served `no-cache`
+  and `public/sw.js` is inert — if either changes, switch the check to a
+  generated `version.json` instead of parsing `index.html`.
+- `public/manifest.json`: `start_url` changed from `library.html` to `./` so a
+  freshly installed icon opens the app home. `id` is pinned to `library.html`
+  **on purpose**: that path was Chrome's implicit id (it defaulted to the old
+  `start_url`), so keeping it lets the already-installed icon be recognised as
+  the same app. Do not "clean up" that value; changing it orphans the existing
+  install. Phones that still open the library can remove/re-add the icon once.
 
 

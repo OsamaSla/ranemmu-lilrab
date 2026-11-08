@@ -10,6 +10,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { I18nManager } from 'react-native';
 
+import { useAppUpdateCheck } from '../hooks/useAppUpdateCheck';
 import { useTheme } from '../hooks/useTheme';
 import { DEFAULT_LOCALE, isRTL } from '../i18n';
 import { useAppFonts } from '../theme/fonts';
@@ -25,6 +26,9 @@ export default function RootLayout() {
   const fontsReady = useAppFonts();
   const { colors, isDark } = useTheme();
   const sessionUser = useSession((s) => s.user);
+
+  // Web only: reload the installed PWA when a newer build is deployed.
+  useAppUpdateCheck();
 
   useEffect(() => {
     // Permit RTL at the native layer so the keyboard and system chrome follow
