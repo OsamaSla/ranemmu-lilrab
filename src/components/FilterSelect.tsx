@@ -58,7 +58,7 @@ export function FilterSelect({ title, icon, options, value, onChange, flat = fal
           borderRadius: radius.md,
           borderWidth: flat ? 0 : 1,
           borderColor: colors.border,
-          backgroundColor: flat ? 'transparent' : colors.surface,
+          backgroundColor: colors.surface,
           opacity: pressed ? 0.75 : 1,
         })}>
         <MaterialCommunityIcons name={icon} size={18} color={colors.primary} />

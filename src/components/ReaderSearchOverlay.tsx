@@ -128,15 +128,8 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
             top: insets.top + spacing.md,
             left: (width - panelWidth) / 2,
             width: panelWidth,
-            backgroundColor: colors.surface,
-            borderRadius: radius.lg,
             padding: spacing.md,
             maxHeight: '76%',
-            shadowColor: '#000',
-            shadowOpacity: 0.28,
-            shadowRadius: 18,
-            shadowOffset: { width: 0, height: 8 },
-            elevation: 12,
           }}>
           {/* Wider search field + narrower book picker, as one floating bar. */}
           <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.sm }}>
@@ -210,8 +203,14 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
           {trimmed ? (
             <ScrollView
               keyboardShouldPersistTaps="handled"
-              contentContainerStyle={{ paddingTop: spacing.sm, paddingBottom: spacing.xs }}
-              style={{ flexGrow: 0, flexShrink: 1 }}>
+              contentContainerStyle={{ padding: spacing.sm }}
+              style={{
+                flexGrow: 0,
+                flexShrink: 1,
+                marginTop: spacing.sm,
+                backgroundColor: colors.surface,
+                borderRadius: radius.lg,
+              }}>
               {results.length > 0 ? (
                 <>
                   <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
