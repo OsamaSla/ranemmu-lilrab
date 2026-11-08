@@ -435,6 +435,12 @@ all checks passed), `build:corpus`, a web export served on :8083, and
   `ensureAllChunks()` + `searchHymns()` like the library. Picking a result
   closes the panel and `router.push`es the hymn; the component is mounted only
   while open, so each opening starts clean.
+- The ring suppression is shared as `noFocusRing` in `src/theme/tokens.ts`
+  (`outlineStyle: 'solid'`, `outlineWidth: 0`, `outlineColor: 'transparent'`).
+  It is applied to the main library search input (plus its clear and ±50
+  buttons) and to every `FilterSelect` pressable, because focusing any of them
+  otherwise drew the same white frame line. Use the token for new web-visible
+  fields.
 - Library (`src/app/(tabs)/library.tsx`) order is now book/sort row → topic
   filter → search bar; the field is 56 px tall with 18 px text and the ±50
   buttons grew to 44×26. The book picker gained "كل الكتب" (all books); it is a

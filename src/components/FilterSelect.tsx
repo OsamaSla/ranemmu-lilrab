@@ -11,7 +11,7 @@ import { Modal, Pressable, ScrollView, TouchableOpacity, View, type StyleProp, t
 import { AppText } from './AppText';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
-import { radius, spacing } from '../theme/tokens';
+import { noFocusRing, radius, spacing } from '../theme/tokens';
 
 export interface FilterOption {
   value: string;
@@ -59,8 +59,8 @@ export function FilterSelect({ title, icon, options, value, onChange, flat = fal
           borderWidth: flat ? 0 : 1,
           borderColor: colors.border,
           backgroundColor: colors.surface,
-          // The overlay's picker is flat; a browser ring would redraw a frame.
-          ...(flat ? { outlineStyle: 'solid' as const, outlineWidth: 0 } : null),
+          // A browser focus ring would redraw the frame we just removed.
+          ...noFocusRing,
           opacity: pressed ? 0.75 : 1,
         })}>
         <MaterialCommunityIcons name={icon} size={18} color={colors.primary} />
@@ -122,6 +122,7 @@ export function FilterSelect({ title, icon, options, value, onChange, flat = fal
                       paddingVertical: spacing.md,
                       borderTopWidth: 1,
                       borderTopColor: colors.border,
+                      ...noFocusRing,
                     }}>
                     <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.sm, flex: 1 }}>
                       {option.color ? (

@@ -64,6 +64,20 @@ export const HIT_SLOP = { top: 8, bottom: 8, left: 8, right: 8 };
 export const MIN_TOUCH = 48;
 
 /**
+ * Removes the web platform focus ring from app chrome (search fields, pill
+ * buttons, flat pickers) where it reads as an unwanted frame line.
+ *
+ * `outline-style` must be reset to `solid` first: Chromium keeps painting its
+ * platform ring while the style stays `auto`, even with `outline-width: 0`.
+ * Native platforms ignore these properties.
+ */
+export const noFocusRing = {
+  outlineStyle: 'solid',
+  outlineWidth: 0,
+  outlineColor: 'transparent',
+} as const;
+
+/**
  * Card elevation, matching the soft shadow in the reference design.
  * Expressed as `boxShadow`, which React Native 0.76+ honours on native and
  * react-native-web maps straight to CSS — the legacy `shadow*` props warn on

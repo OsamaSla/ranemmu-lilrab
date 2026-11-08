@@ -40,7 +40,7 @@ import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
 import { useRemote } from '../../store/remote';
 import { useSettings } from '../../store/settings';
-import { radius, spacing } from '../../theme/tokens';
+import { noFocusRing, radius, spacing } from '../../theme/tokens';
 
 /** Letter of the alphabet used to bucket the alphabetical sort. */
 function firstLetter(text: string): string {
@@ -474,6 +474,7 @@ export default function LibraryScreen() {
             placeholderTextColor={colors.textMuted}
             keyboardType="default"
             returnKeyType="search"
+            underlineColorAndroid="transparent"
             style={{
               flex: 1,
               marginHorizontal: spacing.sm,
@@ -482,6 +483,7 @@ export default function LibraryScreen() {
               fontSize: 18,
               writingDirection: direction.dir,
               textAlign: direction.textAlign,
+              ...noFocusRing,
             }}
           />
           {query.length > 0 ? (
@@ -491,7 +493,7 @@ export default function LibraryScreen() {
               accessibilityLabel={t('search.clear')}
               hitSlop={8}
               android_ripple={{ color: colors.border }}
-              style={{ padding: spacing.xs }}>
+              style={{ padding: spacing.xs, ...noFocusRing }}>
               <MaterialCommunityIcons name="close-circle" size={24} color={colors.textMuted} />
             </Pressable>
           ) : null}
@@ -512,6 +514,7 @@ export default function LibraryScreen() {
               borderWidth: 1,
               borderColor: colors.border,
               backgroundColor: colors.surface,
+              ...noFocusRing,
               opacity: pressed ? 0.75 : 1,
             })}>
             <MaterialCommunityIcons name="chevron-up" size={16} color={colors.primary} />
@@ -530,6 +533,7 @@ export default function LibraryScreen() {
               borderWidth: 1,
               borderColor: colors.border,
               backgroundColor: colors.surface,
+              ...noFocusRing,
               opacity: pressed ? 0.75 : 1,
             })}>
             <MaterialCommunityIcons name="chevron-down" size={16} color={colors.primary} />
