@@ -164,6 +164,9 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
                   textAlign: direction.textAlign,
                   // No browser focus ring or Android underline: the field is
                   // the whole frame and the panel edge is only a surface.
+                  // `solid` + 0 width is required: Chromium still paints its
+                  // platform ring when the style is left as `auto`.
+                  outlineStyle: 'solid',
                   outlineWidth: 0,
                   outlineColor: 'transparent',
                 }}
@@ -200,7 +203,7 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
               accessibilityRole="button"
               accessibilityLabel={t('common.close')}
               hitSlop={8}
-              style={{ padding: spacing.xs }}>
+              style={{ padding: spacing.xs, outlineStyle: 'solid', outlineWidth: 0 }}>
               <MaterialCommunityIcons name="close" size={22} color={colors.textMuted} />
             </Pressable>
           </View>

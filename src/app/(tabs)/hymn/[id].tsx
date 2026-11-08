@@ -405,6 +405,9 @@ export default function ReaderScreen() {
           borderRadius: box / 2,
           backgroundColor: 'transparent',
           borderWidth: 0,
+          // A tapped icon must not keep a browser focus ring behind a sheet.
+          outlineStyle: 'solid',
+          outlineWidth: 0,
           opacity: props.disabled ? 0.35 : 1,
         }}
       />

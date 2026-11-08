@@ -59,6 +59,8 @@ export function FilterSelect({ title, icon, options, value, onChange, flat = fal
           borderWidth: flat ? 0 : 1,
           borderColor: colors.border,
           backgroundColor: colors.surface,
+          // The overlay's picker is flat; a browser ring would redraw a frame.
+          ...(flat ? { outlineStyle: 'solid' as const, outlineWidth: 0 } : null),
           opacity: pressed ? 0.75 : 1,
         })}>
         <MaterialCommunityIcons name={icon} size={18} color={colors.primary} />

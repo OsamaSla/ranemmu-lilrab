@@ -424,9 +424,13 @@ all checks passed), `build:corpus`, a web export served on :8083, and
   includes "all books"), and an inline result list. The panel is capped at
   520 px on desktop and keeps a 24 px gutter on phones, is centered, and has
   no border, outline or shadow at all — only a plain surface fill (input
-  `outlineWidth: 0` + `underlineColorAndroid`, flat picker) so no frame line
-  appears in either theme or on Android. The field/picker pills and the
-  results card also carry their own surfaces. Number/title
+  `outlineStyle: 'solid'` + `outlineWidth: 0` + `underlineColorAndroid`,
+  flat picker) so no frame line appears in either theme or on Android.
+  Chromium still paints its platform ring when `outline-style` is `auto` even
+  with width 0, which is why `solid` is required. The field/picker pills and the
+  results card also carry their own surfaces. Reader toolbar `IconButton`s use
+  the same `solid`/0 outline so the tapped magnifier cannot leave a ring behind
+  the sheet. Number/title
   matches are instant; lyrics come from
   `ensureAllChunks()` + `searchHymns()` like the library. Picking a result
   closes the panel and `router.push`es the hymn; the component is mounted only
