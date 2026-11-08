@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-08, commit 990bd2e6 (installed PWA auto-reload on new deploy; manifest start_url fixed)
+Last verified: 2026-11-08, commit 872ad9d4 (PWA auto-reload; filename comparison works on the Pages base path)
 
 ## 1. What this is
 
