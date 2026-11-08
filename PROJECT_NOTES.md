@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-08, commit 872ad9d4 (PWA auto-reload; filename comparison works on the Pages base path)
+Last verified: 2026-11-08, commit 9c961324 (reader floating search, all-books scope, SoundCloud cleanup)
 
 ## 1. What this is
 
@@ -396,11 +396,12 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   the same app. Do not "clean up" that value; changing it orphans the existing
   install. Phones that still open the library can remove/re-add the icon once.
 
-## 13. Reader search, all-books scope, SoundCloud cleanup (uncommitted review, 2026-11-08)
+## 13. Reader search, all-books scope, SoundCloud cleanup (verified, commit 9c961324)
 
 Verified locally with `npm run typecheck`, `npm run check:hymns` (1824 hymns,
 all checks passed), `build:corpus`, a web export served on :8083, and
-`node node_modules/eslint/bin/eslint.js` on the touched files. Not pushed.
+`node node_modules/eslint/bin/eslint.js` on the touched files. Shipped in
+`9c961324`; library topic label changed to "كل المواضيع".
 
 - SoundCloud melody links: `content/taranim.json` was the only source with them
   (204 `mediaUrl` values); they were deleted and `npm run build:corpus` rewrote
