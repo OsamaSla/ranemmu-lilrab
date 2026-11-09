@@ -27,6 +27,7 @@ import { AppText } from '../../../components/AppText';
 import { Card } from '../../../components/Card';
 import { EmptyState } from '../../../components/EmptyState';
 import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
+import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
 import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
 import { ReaderSearchOverlay } from '../../../components/ReaderSearchOverlay';
@@ -124,6 +125,7 @@ export default function ReaderScreen() {
   const goBack = useGoBack();
 
   const [searchOpen, setSearchOpen] = useState(false);
+  const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
 
@@ -530,6 +532,12 @@ export default function ReaderScreen() {
           onPress: () => setSearchOpen(true),
           dark,
         })}
+        {headerIcon({
+          name: 'cog-outline',
+          label: t('reader.settings'),
+          onPress: () => setSettingsOpen(true),
+          dark,
+        })}
         {headerIcon({ name: 'share-variant', label: t('reader.share'), onPress: shareHymn, dark })}
         {headerIcon({
           name: isFavorite ? 'star' : 'star-outline',
@@ -880,6 +888,11 @@ export default function ReaderScreen() {
           />
         ) : null}
         <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
+        <ReaderSettingsModal
+          visible={settingsOpen}
+          onClose={() => setSettingsOpen(false)}
+          hymn={hymn}
+        />
       </Animated.View>
     );
   }
@@ -1001,6 +1014,11 @@ export default function ReaderScreen() {
         />
       ) : null}
       <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
+      <ReaderSettingsModal
+        visible={settingsOpen}
+        onClose={() => setSettingsOpen(false)}
+        hymn={hymn}
+      />
     </View>
   );
 }

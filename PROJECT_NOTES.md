@@ -413,11 +413,12 @@ all checks passed), `build:corpus`, a web export served on :8083, and
   http(s) URL (admin-side validation is unchanged).
 - Reader (`src/app/(tabs)/hymn/[id].tsx`): the fullscreen body title + metre
   block and the normal-header metre line are removed. The cog/settings toolbar
-  icon was removed (the red X in the user's screenshot); `ReaderSettingsModal`
-  is therefore no longer reachable from the reader — reader size/font/theme
-  remain available in the Settings tab, but its "listen to melody" button is
-  currently unreachable. This is intentional per the screenshot but is the
-  first thing to restore if the user meant otherwise.
+  icon was removed in `9c961324` (the red X in the user's screenshot) but the
+  user asked for it back on 2026-11-09: a `cog-outline` button now sits between
+  the magnifier and share, and `ReaderSettingsModal` is mounted in both the
+  normal and fullscreen returns. The sheet carries the A−/A+ reader size,
+  font-family chips, theme, the melody links and (for admins) Edit hymn.
+  Reader size/font/theme also remain in the Settings tab.
 - Reader toolbar magnifier now opens `src/components/ReaderSearchOverlay.tsx`
   instead of navigating to `/library`: a floating modal panel with a wide
   number/text field, a narrow book picker (defaults to the current hymn's book,
@@ -455,5 +456,38 @@ all checks passed), `build:corpus`, a web export served on :8083, and
   1824 in the app bar, and "249" returned one row per book with book labels.
   The known React #418 still appears once on `/hymn/*` and does not break
   rendering.
+
+## 14. Melody playback idea — POC outcome (2026-11-09, no code committed)
+
+Goal the user set: every hymn should be able to play a simple synthesised
+melody so people can hear how it is sung. Only source available: recordings
+(YouTube). Accuracy bar is low — "a rough idea of the tune and its rhythm".
+
+- Nothing in the app was changed; all work lives in
+  `%TEMP%\opencode\melody-refs` (scripts) and `%USERPROFILE%\Desktop\melody-test`
+  (the four MP3s given to the user). Re-running requires the same temp scripts,
+  which are disposable.
+- Test hymn: `tr0001` "لنا في كلام الإله الصمد", clip 0:00–0:19 of
+  `%USERPROFILE%\Desktop\ترنيمة لنا في كلام الإله الصمد.mp3`
+  (mp3, 48 kHz stereo, 110 kbps, 5:33 total).
+- Finding: that recording is **polyphonic** — Demucs (htdemucs) separation
+  yields a vocals stem that still carries chord stacks (C3/F3/A3/C4/F4 at t≈6 s),
+  so it is a part-sung choir, not a solo line. Monophonic trackers therefore
+  jump between voices: hand-rolled YIN, harmonic-salience tracking and pYIN all
+  produced octave jumps (e.g. F4→F3) and chord-tone walks. pYIN on the separated
+  vocals was the most stable but still unreliable.
+- Tempo/rhythm detection is reliable: spectral-flux autocorrelation gives a
+  ~0.28 s beat unit (~105 BPM), and the 1–3 kHz envelope shows a 3.4 Hz
+  syllable rate — i.e. there is definitely singing.
+- Toolchain that works on this machine: Python 3.11 + ffmpeg 9; for separation,
+  an isolated venv at `%TEMP%\opencode\demucs-env` with `demucs` (torch 2.15
+  CPU), `librosa` 0.11, `soundfile`, `numpy`. CPU separation of 35 s takes ~16 s.
+  The system Python has only numpy + onnxruntime, so nothing heavy was added
+  globally.
+- Conclusion: the synth side is cheap and fine; the bottleneck is **source
+  material**. A solo/unison (single cantor) recording transcribes well; a
+  choir-with-accompaniment mix does not, without a real melody model.
+  Next step if resumed: ask for a solo-cantor video or an a-cappella verse, then
+  reuse `multipitch.py`/`pyin_melody.py` from the temp folder.
 
 
