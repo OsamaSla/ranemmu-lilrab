@@ -310,6 +310,29 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `/library.html` → 301 → `/library`; `/hymn/tr0001` → 200 and renders the full
   hymn text; `/manifest.json`, `/sw.js`, `/icons/icon-192.png`,
   `/_expo/.../entry-*.js` → 200.
+- **Hydration disabled on purpose (2026-11-14)**: the static export ships
+  pre-rendered HTML and told the client to hydrate it, but the two trees can
+  never agree — the build machine has no viewport (`useWindowDimensions()` → 0,
+  so the home grid pre-renders 1 column at 120px), no icon font
+  (`@expo/vector-icons` emits an empty text node), and no lazy hymn chunk
+  (reader pages pre-render as "جارٍ التحميل"). Every route except `/` threw
+  React error #418 in the console. `src/app/+html.tsx` now injects, before
+  Expo's own script, a non-writable `globalThis.__EXPO_ROUTER_HYDRATE__` getter
+  that always returns `false`, so Expo Router does a plain client render into
+  `#root`. The pre-rendered markup is still what crawlers get. Verified with a
+  local export served over HTTP: `/`, `/settings`, `/library`, `/hymn/tr0001`,
+  `/hymn/tr0375`, `/recents`, `/help`, `/more` all render with **zero console
+  errors** (the earlier icon wrapper, viewport gate and colour-scheme gate were
+  tried and removed — none of them was sufficient on its own).
+- **`public/index.html` renamed to `public/landing.html`**: as `index.html` it
+  answered `GET /` on the dev server and hid the app behind the APK-download
+  page, while in the export the route's own HTML always won, so the landing was
+  unreachable in production. Now dev and production agree (app at `/`, landing
+  at `/landing.html`).
+- `dist/` is **tracked in git** even though CI rebuilds it. Never commit a local
+  `expo export`: without `DEPLOY=1` the bundle uses `publicPath "/"` instead of
+  `/ranemmu-lilrab/` and would break the Pages deploy. `git checkout -- dist`
+  after local experiments.
 - **Reader web crash fixed 2026-11-07**: `src/app/(tabs)/hymn/[id].tsx` called
   `scrollRef.current.addListener(...)` (native-only). On web this threw
   `TypeError: e.addListener is not a function` and unmounted the reader to a

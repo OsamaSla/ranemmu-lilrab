@@ -25,6 +25,26 @@ export default function Root({ children }: PropsWithChildren) {
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+        {/*
+          Render the app on the client instead of hydrating the pre-rendered
+          HTML.
+
+          The static export boots with `__EXPO_ROUTER_HYDRATE__ = true`, and
+          React then has to reproduce, byte for byte, a server tree built with
+          no viewport, no icon font and no chunk data. Anything that differs
+          (window width, icon glyphs, lazily imported hymn bodies) aborts
+          hydration with React error #418 and rebuilds the tree anyway. The
+          getter below keeps the flag false, so Expo Router does a normal
+          client render into #root: same result, no hydration pass, no errors.
+          Crawlers still receive the pre-rendered markup.
+        */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{Object.defineProperty(globalThis,'__EXPO_ROUTER_HYDRATE__',{configurable:true,get:function(){return false},set:function(){}});}catch(e){}",
+          }}
+        />
+
         {/* App Title */}
         <title>رنموا للرب</title>
 

@@ -197,9 +197,9 @@ export default function ReaderScreen() {
   );
 
   // The hymn body lives in a lazily imported chunk: show a loading shell
-  // until it lands, then bump state so getHymn() sees the new chunk. During
-  // a static web export this shell is also what the pre-rendered page shows
-  // until the client hydrates.
+  // until it lands, then bump state so getHymn() sees the new chunk. This
+  // shell is also what the pre-rendered page contains, and the client renders
+  // the app from scratch (no hydration), so the two never have to agree.
   const pendingChunk = id !== undefined && isHymnPending(id);
   const [, setChunkVersion] = useState(0);
   useEffect(() => {
