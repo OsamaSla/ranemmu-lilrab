@@ -61,9 +61,17 @@ const RAIL_WIDTH = 52;
 const RAIL_DOT = 36;
 
 /**
+ * Languages the reader can show beside the Arabic text. `he` is
+ * hand-authored liturgical Hebrew: it is right-to-left and carries niqqud,
+ * so it is rendered differently from the Latin translations.
+ */
+type ReaderLang = 'ar' | 'en' | 'de' | 'he';
+
+/**
  * AI-translation disclaimer, always in the language being viewed (not the
  * UI language): English readers get the English note, German readers the
- * German one. Arabic needs none — it is the original text.
+ * German one. Arabic needs none — it is the original text — and Hebrew needs
+ * none either, because it is a human translation, not an AI draft.
  */
 const TRANSLATION_NOTES = {
   en: 'This English translation was made by AI and is not 100% reliable — it only gives the main idea of the hymn.',
@@ -78,6 +86,18 @@ const TRANSLATION_STATUS_LABEL = {
   AI_DRAFT: { en: 'AI draft', de: 'KI-Entwurf' },
   VERIFIED: { en: 'Verified', de: 'Geprüft' },
 } as const;
+
+/**
+ * Language-chip colours: one saturated fill and one pale tint per language,
+ * so the chips stay distinguishable in both themes. Hebrew gets indigo — it
+ * must not reuse Arabic gold or the EN blue.
+ */
+const CHIP_COLORS: Record<ReaderLang, { fill: string; tint: string }> = {
+  ar: { fill: '#C5A03D', tint: '#FFF8E1' },
+  en: { fill: '#1565C0', tint: '#E3F2FD' },
+  de: { fill: '#2E7D32', tint: '#E8F5E9' },
+  he: { fill: '#5E35B1', tint: '#EDE7F6' },
+};
 
 /** Printed word for a refrain when neither the hymn nor its label carries one. */
 const REFRAIN_FALLBACK = 'القرار';
@@ -201,27 +221,36 @@ export default function ReaderScreen() {
   // translation renders line-by-line beside it and never replaces it.
   // The toggle only exists when this hymn actually carries a translation.
   // The view resets to Arabic when navigating (render-time reset, no effect).
-  const [view, setView] = useState<{ id: string | string[] | undefined; lang: 'ar' | 'en' | 'de' }>({
+  const [view, setView] = useState<{ id: string | string[] | undefined; lang: ReaderLang }>({
     id,
     lang: 'ar',
   });
   if (view.id !== id) setView({ id, lang: 'ar' });
   const parallel = view.id === id ? view.lang : 'ar';
-  const chooseParallel = (lang: 'ar' | 'en' | 'de') => setView({ id, lang });
+  const chooseParallel = (lang: ReaderLang) => setView({ id, lang });
 
   const hasEn = Boolean(hymn?.title_en ?? hymn?.verses_en);
   const hasDe = Boolean(hymn?.title_de ?? hymn?.verses_de);
-  const transVerses =
-    parallel === 'en' ? hymn?.verses_en : parallel === 'de' ? hymn?.verses_de : undefined;
-  const transTitle =
-    parallel === 'en' ? hymn?.title_en : parallel === 'de' ? hymn?.title_de : undefined;
-  const transChorus =
-    parallel === 'en' ? hymn?.chorus_en : parallel === 'de' ? hymn?.chorus_de : undefined;
+  const hasHe = Boolean(hymn?.title_he ?? hymn?.verses_he);
+  // One lookup object per language keeps the three parallel fields in step;
+  // Arabic has no translation record and yields undefined.
+  const translation =
+    parallel === 'en'
+      ? { verses: hymn?.verses_en, title: hymn?.title_en, chorus: hymn?.chorus_en }
+      : parallel === 'de'
+        ? { verses: hymn?.verses_de, title: hymn?.title_de, chorus: hymn?.chorus_de }
+        : parallel === 'he'
+          ? { verses: hymn?.verses_he, title: hymn?.title_he, chorus: hymn?.chorus_he }
+          : undefined;
+  const transVerses = translation?.verses;
+  const transTitle = translation?.title;
+  const transChorus = translation?.chorus;
 
-  const translationOptions: SegmentOption<'ar' | 'en' | 'de'>[] = [
+  const translationOptions: SegmentOption<ReaderLang>[] = [
     { value: 'ar', label: 'العربية' },
     ...(hasEn ? [{ value: 'en', label: 'English' } as const] : []),
     ...(hasDe ? [{ value: 'de', label: 'Deutsch' } as const] : []),
+    ...(hasHe ? [{ value: 'he', label: 'עברית' } as const] : []),
   ];
 
   useEffect(() => {
@@ -433,7 +462,15 @@ export default function ReaderScreen() {
         }}>
         {translationOptions.map((option) => {
           const selected = option.value === parallel;
-          const short = option.value === 'ar' ? t('common.arShort') : option.value === 'en' ? t('common.enShort') : t('common.deShort');
+          const short =
+            option.value === 'ar'
+              ? t('common.arShort')
+              : option.value === 'en'
+                ? t('common.enShort')
+                : option.value === 'de'
+                  ? t('common.deShort')
+                  : t('common.heShort');
+          const chip = CHIP_COLORS[option.value];
           return (
             <Pressable
               key={option.value}
@@ -451,7 +488,7 @@ export default function ReaderScreen() {
                 borderRadius: radius.pill,
                 borderWidth: 1,
                 borderColor: selected ? 'transparent' : dark ? 'rgba(255,255,255,0.45)' : 'rgba(255,255,255,0.55)',
-                backgroundColor: selected ? (option.value === 'ar' ? '#C5A03D' : option.value === 'en' ? '#1565C0' : '#2E7D32') : (option.value === 'ar' ? '#FFF8E1' : option.value === 'en' ? '#E3F2FD' : '#E8F5E9'),
+                backgroundColor: selected ? chip.fill : chip.tint,
                 alignItems: 'center',
                 justifyContent: 'center',
                 opacity: pressed ? 0.7 : 1,
@@ -565,24 +602,47 @@ export default function ReaderScreen() {
     </AppText>
   );
 
-  const translationText = (body: string) => (
-    <RNText
-      style={{
-        fontFamily: readerFont,
-        fontSize: Math.round(readerSize * 0.85),
-        lineHeight: Math.round(readerSize * 1.6),
-        color: fullscreen ? palette.readerText : colors.textMuted,
-        writingDirection: 'ltr',
-        textAlign: 'left',
-        opacity: fullscreen ? 0.8 : 1,
-      }}>
-      {body}
-    </RNText>
-  );
+  /**
+   * One translated line under its Arabic original. en/de use the reader's
+   * Arabic font — they are Latin text inside an Arabic-typeset app. Hebrew
+   * must not: none of the six bundled families carry Hebrew glyphs, so the
+   * platform font is the only one with both the letters and the niqqud mark
+   * positioning. Hebrew also reads right-to-left and needs extra leading so
+   * the points above and below the letters are not clipped.
+   */
+  const translationText = (body: string) =>
+    parallel === 'he' ? (
+      <RNText
+        style={{
+          fontSize: Math.round(readerSize * 0.9),
+          lineHeight: Math.round(readerSize * 1.9),
+          color: fullscreen ? palette.readerText : colors.textMuted,
+          writingDirection: 'rtl',
+          textAlign: 'right',
+          opacity: fullscreen ? 0.8 : 1,
+        }}>
+        {body}
+      </RNText>
+    ) : (
+      <RNText
+        style={{
+          fontFamily: readerFont,
+          fontSize: Math.round(readerSize * 0.85),
+          lineHeight: Math.round(readerSize * 1.6),
+          color: fullscreen ? palette.readerText : colors.textMuted,
+          writingDirection: 'ltr',
+          textAlign: 'left',
+          opacity: fullscreen ? 0.8 : 1,
+        }}>
+        {body}
+      </RNText>
+    );
 
   const versesView = (
     <>
-      {parallel !== 'ar' ? (
+      {/* The AI badge only applies to the machine-made en/de drafts. Hebrew is
+          human-authored, so it renders with no badge and no disclaimer. */}
+      {parallel === 'en' || parallel === 'de' ? (
         <View style={{ alignItems: 'center', marginBottom: spacing.md }}>
           <View
             style={{
@@ -845,7 +905,7 @@ export default function ReaderScreen() {
                 variant="heading"
                 numberOfLines={1}
                 color={palette.readerText}
-                style={{ fontWeight: '700', marginEnd: spacing.md }}>
+                style={{ fontWeight: '700', marginEnd: spacing.md, flexShrink: 1 }}>
                 {t('common.hymnNumber')} {hymn.number}
               </AppText>
               {languageChips(true)}
@@ -932,7 +992,7 @@ export default function ReaderScreen() {
                 variant="heading"
                 numberOfLines={1}
                 color={colors.onPrimary}
-                style={{ fontWeight: '700', marginEnd: spacing.md }}>
+                style={{ fontWeight: '700', marginEnd: spacing.md, flexShrink: 1 }}>
                 {t('common.hymnNumber')} {hymn.number}
               </AppText>
               {languageChips(false)}

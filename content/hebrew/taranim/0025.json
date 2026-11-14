@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 25,
+  "title_he": "חֵלֶק אַנְשֵׁי הָעוֹלָם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "חֵלֶק אַנְשֵׁי הָעוֹלָם",
+        "בַּחַיִּים הָאֵלֶּה",
+        "יְשַׁלְּחוּ יָדָם בֶּעָמָל",
+        "אֶל־עֹשֶׁר וְכָבוֹד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וַאֲנִי תְּהִלָּתִי",
+        "בַּאֲדֹנָי לְבָד",
+        "וּבְיִרְאָה וּבְצֶדֶק",
+        "אֶחֱזֶה פְּנֵי אֵל"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וּבְקוּמִי אֶחֱזֶה",
+        "אֶת־הָאֱלֹהִים",
+        "וְעִמּוֹ אֶשְׁכֹּן לָעַד",
+        "אֶשְׂבַּע מִמַּרְאֵהוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְתוֹדָה לַדּוֹד לָעַד",
+        "עַד־דּוֹר וָדוֹר",
+        "כְּבוֹדִי אוֹצָרִי חֶלְקִי",
+        "וְתַכְלִית הַשִּׂמְחָה"
+      ]
+    }
+  ],
+  "review": [
+    "2:1–2:2 וַאֲנִי תְּהִלָּתִי / בַּאֲדֹנָי — the Arabic is 'my boast is in the Lord' (أَمَّا أَنَا فَفَخْرِي بِالرَّبِّ); Hebrew uses תְּהִלָּה, the word of Jer 9:23 ('in this let him glory'), which is the verse behind the line.",
+    "2:4 פְּנֵי אֵל — 'the face of God'; the Arabic has وَجْهَ الله, and the beatific vision is the point, so the anthropomorphic phrase is kept rather than softened to 'near God'.",
+    "3:4 אֶשְׂבַּע מִמַּרְאֵהוּ — 'I shall be satisfied with His appearance'; the psalm echo is Ps 17:15 (אֶשְׂבְּעָה בְהָקִיץ תְּמוּנָתֶךָ).",
+    "4:2 עַד־דּוֹר וָדוֹר — 'to generation and generation', for إِلَى مَدَى الدُّهُور; the fuller לְדֹרֹת עוֹלָם overshot the tune's fifth line."
+  ]
+}

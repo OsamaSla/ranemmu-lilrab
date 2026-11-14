@@ -137,7 +137,7 @@ export function validateCorpus(hymns) {
     // Translations mirror the Arabic stanza-for-stanza so indices, refs and
     // the reader's fallback stay aligned. Only structure is checked here —
     // the Arabic-only letter rules above must not run on foreign text.
-    for (const lang of ['en', 'de']) {
+    for (const lang of ['en', 'de', 'he']) {
       const key = `verses_${lang}`;
       const tv = hymn[key];
       if (tv === undefined) continue;

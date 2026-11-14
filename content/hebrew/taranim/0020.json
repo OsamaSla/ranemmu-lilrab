@@ -1,0 +1,69 @@
+{
+  "book": "taranim",
+  "number": 20,
+  "title_he": "מַה־נִּפְלָא הַפּוֹדֶה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַה־נִּפְלָא הַפּוֹדֶה",
+        "וְאַהֲבָתוֹ רַבָּה",
+        "אֲשֶׁר בִּרְצוֹן־לֵב שָׁלֵם",
+        "בִּקֵּשׁ לִפְדּוֹת עֲבָדִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כַּשֶּׂה הוּבַל לַטֶּבַח",
+        "אֲשֶׁר הָיָה בַכָּבוֹד",
+        "אֲדוֹן הַכֹּל וּבֶן־עֶלְיוֹן",
+        "לַצְּלָב וְאֶל־הַקָּבֶר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְהַצּוֹרֵר חָשַׁב",
+        "כִּי־נִצָּחוֹן הִשִּׂיג",
+        "כַּאֲשֶׁר נִקְבַּר יֵשׁוּעַ",
+        "וְהָאֶבֶן נֶחְתָּמָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וַתֹּאבַד תִּקְוָתֵנוּ",
+        "בְּמַרְאֵה־עֵינַיִם",
+        "אַךְ שַׂר הַחַיִּים קָם",
+        "מִתּוֹךְ הַקֶּבֶר"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אָז בַּמָּוֶת הֵמִית מָוֶת",
+        "וַיָּאֶר לָנוּ אוֹר",
+        "חַיִּים וּנְצִיחוּת",
+        "יוֹצֵר כָּל־הָאוֹרוֹת"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "לָכֵן תּוֹדָה וּשְׁחִיָּה",
+        "הַלֵּל וְכָבוֹד רַב",
+        "לְשִׁמְךָ אֲשֶׁר בִּשְׁמוֹ",
+        "יִשָּׁפֵךְ הַחֶסֶד"
+      ]
+    }
+  ],
+  "review": [
+    "1:3 בִּרְצוֹן־לֵב שָׁלֵם — 'with the full will of the heart', for بِالرِّضَا التَّامّ (complete consent); the phrase keeps the voluntariness of the cross.",
+    "2:1 כַּשֶּׂה הוּבַל לַטֶּבַח — Isaiah 53:7 (כַּשֶּׂה לַטֶּבַח יוּבָל); the verse is quoted rather than translated.",
+    "2:3 בֶּן־עֶלְיוֹן — 'Son of the Most High' (Luke 1:32); the Arabic ابْنُ الْعَلِيّ means the same, and the Hebrew title is fixed.",
+    "3:1 הַצּוֹרֵר — 'the adversary'; the biblical noun is צַר/צוֹרֵר (Esth 3:10), chosen over שָׂטָן because the verse is about the enemy's apparent victory, not about naming him.",
+    "5:1 בַּמָּוֶת הֵמִית מָוֶת — 'by death He put death to death'; the paronomasia of the Arabic (أَبْطَلَ الْمَوْتَ بِالْمَوْتِ) is kept with the same root repeated.",
+    "6:2 הַלֵּל וְכָבוֹד רַב — 'praise and great honour'; the Arabic has three nouns (thanks, praise, honour), Hebrew folds two of them into this line to keep the 66.86 shape."
+  ]
+}

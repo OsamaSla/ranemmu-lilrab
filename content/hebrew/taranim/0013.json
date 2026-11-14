@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 13,
+  "title_he": "שֵׁם יֵשׁוּעַ מָתֹק מְאֹד",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "שֵׁם יֵשׁוּעַ מָתֹק מְאֹד",
+        "לְאֹזֶן הַמַּאֲמִין",
+        "יְרַפֵּא פִּצְעֵי עָנִי",
+        "וּמִפַּחַד יִנְצֹר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "נֶחָמַת לֵב יָרֵא",
+        "תַּנְחוּם יָגוֹן",
+        "לֶחֶם נֶפֶשׁ רְעֵבָה",
+        "וּמַעְיָן לַצָּמֵא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא מַשְׁקִיט פַּחְדִּי",
+        "וּמַדְמִים יְגוֹנַי",
+        "וְזִכְרוֹ יִנְעַם לִי",
+        "לְאָזְנַי יֶעֱרָב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בּוֹ נִשְׁמַעַת תְּפִלָּתִי",
+        "וְנִסְלָח לִי עֲוֺנִי",
+        "יֵבוֹשׁ הָאוֹיֵב בִּרְאוֹתוֹ",
+        "כִּי־מָצָאתִי חֵן שָׁלֵם"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "רַךְ לְבָבִי עוֹזְרִי",
+        "וּבִתְהִלָּה חָסֵר",
+        "בְּעֵמֶק אֲנָחָה עוֹד",
+        "נִרְאָה הַחֻלְשָׁה"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "אֶחֱזֶה בְּךָ כְּמוֹתְךָ",
+        "בְּבֵית הָאָב בַּמָּרוֹם",
+        "אַקְרִיב שָׁם תּוֹדָה",
+        "כַּאֲשֶׁר נָאוָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 שֵׁם יֵשׁוּעַ מָתֹק מְאֹד — the Arabic is a verb ('the name has grown sweet'); Hebrew uses a verbless clause because a finite verb here would push the line past 8.",
+    "3:4 לְאָזְנַי יֶעֱרָב — עָרַב, 'be sweet/pleasant' (Jer 31:26, Prov 13:19); the Arabic repeats the sweetness image of 1:1, and Hebrew keeps the repetition.",
+    "4:3–4:4 יֵבוֹשׁ ... כִּי־מָצָאתִי חֵן שָׁלֵם — the Arabic has 'when I find from Him full acceptance'; the Hebrew recasts it as the enemy seeing that I have found full favour, which is the sense of the clause.",
+    "5:1 רַךְ לְבָבִי עוֹזְרִי — 'my heart is weak, my Helper'; the Arabic يَا مُعِين is vocative, Hebrew drops the particle to keep the line short.",
+    "6:4 כַּאֲשֶׁר נָאוָה — 'as is fitting'; the phrase echoes Ps 33:1 לַיְשָׁרִים נָאוָה תְהִלָּה, for سُبْحًا كَمَا وَجَب."
+  ]
+}

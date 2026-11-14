@@ -1,0 +1,38 @@
+{
+  "book": "taranim",
+  "number": 14,
+  "title_he": "עָלִיתָ מְאֹד אֲדֹנָי אֱלֹהִים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הַכָּבוֹד לְךָ וְהָעֹז לְךָ",
+        "נִשָּׂא שִׁמְךָ עַל־שָׁמָיִם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עָלִיתָ מְאֹד אֲדֹנָי אֱלֹהִים",
+        "עָלִיתָ מְאֹד בָּאָרֶץ וּבַשָּׁמָיִם",
+        "עָלִיתָ מְאֹד וְאֵין כָּמוֹךָ אֵל",
+        "עָלִיתָ מְאֹד אֲדֹנָי אֱלֹהִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוֹדְךָ מְכַסֶּה כָּל־אֲשֶׁר נִמְצָא",
+        "כִּי אַתָּה גָּדוֹל וְאֵין לְךָ קֵץ",
+        "לֹא יַעֲמֹד לְפָנֶיךָ כָּל־מָרוֹם",
+        "עֶלְיוֹן אַתָּה לְבַדְּךָ וְלְךָ יִכְרַע כֹּל"
+      ]
+    }
+  ],
+  "review": [
+    "Stanza 1 is a two-line acclamation in the Arabic and is kept at two lines; the reader prints however many lines the stanza has, so the shape must match the corpus exactly. `hebrew-meter.mjs` will report 'irregular stanza shape 2/4/4' for this hymn — that is the printed shape, not a defect, and the per-position medians in stanzas 2–3 are what matter.",
+    "2:1 עָלִיתָ מְאֹד — Psalm 97:9 (עַל־כָּל־אֱלֹהִים מְאֹד נַעֲלֵיתָ); the whole hymn is built on that verse, so the phrase is quoted rather than paraphrased.",
+    "3:3 כָּל־מָרוֹם — 'every height', for أَعْلَى السُّدُود (the highest barriers); a literal 'dam/barrier' (סֶכֶר) would obscure the point, which is that no height stands before Him.",
+    "3:4 וְלְךָ יִכְרַע כֹּל — 'and to You all shall kneel', for لَكَ كُلُّ السُّجُود; כָּרַע (Ps 95:6) replaces the post-biblical noun for prostration and keeps the line pointed and biblical."
+  ]
+}

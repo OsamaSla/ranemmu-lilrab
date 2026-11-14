@@ -13,6 +13,9 @@ push_fix*.js
 
 # Local scratch artifacts (never commit)
 msg.txt
+content/hebrew-draft/
+scripts/poc-hebrew*.mjs
+HANDOFF-TO-NEXT-AI.md
 {const
 {
 translation-debug-*.txt

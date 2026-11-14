@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 21,
+  "title_he": "אֶרְאֶךָ בֶּאֱמוּנָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֶרְאֶךָ בֶּאֱמוּנָה חֲזָקָה",
+        "שֵׂה הָרַחֲמִים",
+        "שְׁמַע תְּחִנָּתִי וְהַרְבֵּה אַהֲבָתִי",
+        "יְהִי כָל־הֱיוֹתִי עֶבֶד נִשְׁמָע"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנָי רַבֶּה נַפְשִׁי מֵחֶסֶד רוּחֲךָ",
+        "אַתָּה הָרַחוּם",
+        "הַרְבֵּה קִנְאָתִי לְמַעַן הַצְּלָב",
+        "וְהַצֵּת בְּלִבִּי אַהֲבָה נִצְחִית"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּחֶשְׁכַּת עֵינַיִם וּבְעֹצֶם יָגוֹן",
+        "אַתָּה תַּנְחֵנִי",
+        "יֵאוֹרוּ חֶשְׁכִּי וְתִנָּגֵב דִּמְעָתִי",
+        "וְאַל־יִסָּבֵב פָּנַי מִגְּבִירִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כַּאֲשֶׁר יִתַּמּוּ הַיָּמִים כַּחֲלוֹם",
+        "וְאֶעֱלֶה",
+        "אֶחֱזֶה הַמָּשִׁיחַ הַפָּצוּעַ",
+        "שָׁם אָנוּחַ וְאֶשְׂמַח לָעַד"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 שֵׂה הָרַחֲמִים — 'Lamb of the Mercies', for يَا حَمَلَ الرَّحْمٰن; the plural רַחֲמִים is the biblical form of the divine compassion (Ps 25:6).",
+    "1:4 עֶבֶד נִשְׁמָע — 'an obedient servant'; נִשְׁמָע is the niphal participle of שָׁמַע used for obedience in 1 Sam 15:22, and it keeps the passive sense of يَطُوع.",
+    "3:2 אַתָּה תַּנְחֵנִי — the Arabic is an imperative (كُنْ مُرْشِدِي); Hebrew uses the imperfect because a pointed imperative of נחה would be תְּנַחֵנִי, which reads as a statement.",
+    "4:3 אֶחֱזֶה הַמָּשִׁיחַ הַפָּצוּעַ — 'I shall behold the wounded Christ'; the Arabic names the side (بِجَنْبِهِ الْجَرِيح), Hebrew compresses it into the adjective because the line has 11 syllables."
+  ]
+}

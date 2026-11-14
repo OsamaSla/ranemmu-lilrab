@@ -29,6 +29,9 @@ const SYNCED_FIELDS = [
   'title_de',
   'verses_de',
   'chorus_de',
+  'title_he',
+  'verses_he',
+  'chorus_he',
   'translationStatus',
   'primaryTopic',
   'topics',
@@ -134,6 +137,7 @@ export function getRemoteSummaries(): HymnSummary[] {
     hasChorus: h.verses.some((v) => v.chorus),
     hasEn: Boolean(h.title_en || h.verses_en?.length),
     hasDe: Boolean(h.title_de || h.verses_de?.length),
+    hasHe: Boolean(h.title_he || h.verses_he?.length),
     primaryTopic: h.primaryTopic,
     topics: h.topics,
   }));

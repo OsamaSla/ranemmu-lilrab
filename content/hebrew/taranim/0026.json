@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 26,
+  "title_he": "הִנֵּה בָא הֶחָבִיב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הִנֵּה־זֶה בָא הֶחָבִיב",
+        "נִרְאָה בֵּין בְּנֵי אָדָם",
+        "מוֹשֵׁךְ לֵב בְּחִבָּה",
+        "בְּחֶסֶד וּבְשָׁלוֹם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הִנֵּה לֶחֶם הַשָּׁמַיִם",
+        "בָּא לָנוּ מִמְּרוֹמָיו",
+        "הוּא מֵיטַב הַמָּזוֹן",
+        "בּוֹ נִמְצָא חַיִּים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִנֵּה פְּנֵי הֶחָבִיב",
+        "עַל־הַדֶּלֶת הוּא דוֹפֵק",
+        "הוּא עֶזִּי וְחֶלְקִי",
+        "וְאֶת־קוֹלוֹ אֶשְׁמָע"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כֵּן יָבֹא אֶל־לִבִּי",
+        "וְיֹאכַל עִמִּי",
+        "הוּא יֵשׁוּעַ אֲדֹנִי",
+        "עַצְמוֹ לִי יַרְאֶה"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 הִנֵּה־זֶה — the deictic הִנֵּה with זֶה, for هُوَذَا; the compound keeps 'behold' emphatic without an extra syllable.",
+    "2:1 לֶחֶם הַשָּׁמַיִם — 'the bread of heaven' (Ex 16:4, John 6:32); the Arabic الْخُبْزُ السَّمَاوِيّ is the same title.",
+    "3:2 עַל־הַדֶּלֶת הוּא דוֹפֵק — Revelation 3:20 (הִנְנִי עֹמֵד עַל־הַדֶּלֶת וְדֹפֵק), quoted because the Arabic عَلَى الْبَابِ يَقْرَعُ is that verse.",
+    "3:3 עֶזִּי — the pausal form of עֹז with the 1cs suffix, 'my strength'; the fuller עֻזִּי would add a syllable the tune does not have."
+  ]
+}

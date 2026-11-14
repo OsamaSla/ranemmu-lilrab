@@ -296,6 +296,7 @@ admin: {
     arShort: 'عر',
     enShort: 'EN',
     deShort: 'DE',
+    heShort: 'HE',
   },
 } as const;
 

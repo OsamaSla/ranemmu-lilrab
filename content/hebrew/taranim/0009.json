@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 9,
+  "title_he": "בִּכְלֵא חֲטָאַי הָיִיתִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בִּכְלֵא חֲטָאַי הָיִיתִי",
+        "עֶבֶד הַשָּׂטָן הָרָשָׁע",
+        "אֵין־תִּקְוָה לִישׁוּעָתִי",
+        "וְהָרַחוּם הוֹשִׁיעָנִי",
+        "קָנָנִי קָנָנִי",
+        "בַּדָּם הַיָּקָר הַהוּא"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לֹא־פָּדָה כֶסֶף חוֹבִי",
+        "הַפּוֹדֶה הַגָּדוֹל הוּא",
+        "אַךְ בְּדָמוֹ פָּדָנִי",
+        "מֵעִנּוּיֵי שְׁאוֹל",
+        "קָנָנִי קָנָנִי",
+        "בַּדָּם הַיָּקָר הַהוּא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֵינֶנִּי עוֹד לְעַצְמִי",
+        "כִּי אֵין־לִי דָּבָר פֹּה",
+        "כָּל־אֲשֶׁר־לִי לַפּוֹדֶה",
+        "נַפְשִׁי נוֹתֵן שְׁאֵלוֹת",
+        "פְּדָאַנִי פְּדָאַנִי",
+        "בַּדָּם הַיָּקָר הַהוּא"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לוּ אֲכַלֶּה כָּל־יָמַי",
+        "עֶבֶד לַפּוֹדֶה נֶאֱמָן",
+        "אֶתֵּן גּוּפִי וְרוּחִי",
+        "וְכֹחוֹת שִׂכְלִי הַיָּקָר",
+        "פְּדָאַנִי פְּדָאַנִי",
+        "בַּדָּם הַיָּקָר הַהוּא"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 עֶבֶד הַשָּׂטָן הָרָשָׁע — 'slave of the wicked devil'; the Arabic إبليس has no Hebrew equivalent, so שָׂטָן stands in.",
+    "3:4 נַפְשִׁי נוֹתֵן שְׁאֵלוֹת — the Arabic جَمَعَ the two ideas in one construct, 'the Redeemer of the soul, the giver of wishes'; Hebrew splits them across 3:3–3:4 with נַפְשִׁי carried over from the construct.",
+    "4:1 לוּ אֲכַלֶּה כָּל־יָמַי — לוּ + imperfect for the wish of لَيْتَنِي; the more common idiom מִי יִתֵּן was rejected as too long for the line.",
+    "4:2 עֶבֶד לַפּוֹדֶה נֶאֱמָן — 'a servant to the faithful Redeemer'; ל rather than the construct because the Arabic has an adjective, not a second noun."
+  ]
+}

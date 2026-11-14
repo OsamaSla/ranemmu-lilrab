@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 3,
+  "title_he": "דּוֹד אֶחָד לִבְנֵי אָדָם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לִבְנֵי אָדָם דּוֹד אֶחָד",
+        "וְאֵין־לוֹ דֹמֶה בַּכֹּל",
+        "חַסְדּוֹ חֶסֶד אֵיתָן",
+        "לֹא יִמָּדֵד בְּרֹב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֵי־דוֹד אֲשֶׁר מֵת לָנוּ",
+        "לִפְדּוֹת אֶת־רֵעֵהוּ",
+        "אַךְ יֵשׁוּעַ מֵת בַּעֲדֵנוּ",
+        "בְּעוֹד הָיִינוּ צָרָיו"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "חַי בָּאָרֶץ בַּדַּלּוּת",
+        "פּוֹדֵה חַטָּאִים הוּא",
+        "וַיַּעַל מִמֶּנָּה בְּכָבוֹד",
+        "וְעֹנֶה לְכָל־קֹרְאָיו"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עוֹד מְעַט מִזְעָר וְיָבוֹא",
+        "וְנִרְאֵהוּ בְּעֵינֵינוּ",
+        "אָז נָבִין וְנֵדָעָה",
+        "כִּי אַהֲבָתוֹ רָבָה מִכָּל־תְּאוּרָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 לִבְנֵי אָדָם דּוֹד אֶחָד — the Arabic is 'لِلْوَرَى خِلٌّ وَحِيد' (to mankind, one friend); the fronted dative is deliberate for the 8-syllable line.",
+    "2:4 בְּעוֹד הָיִינוּ צָרָיו — 'while we were still His enemies', echoing Rom 5:10 (בְּעוֹדֵנוּ אֹיְבִים).",
+    "3:2 פּוֹדֵה חַטָּאִים הוּא — construct participle, 'He is the Ransomer of sinners'; the Arabic also has 'رَبُّنَا' (our Lord), dropped to keep the line at 6.",
+    "4:1 עוֹד מְעַט מִזְעָר — Isaiah 26:20 idiom for 'soon'; the fuller form is used so the line does not fall short of the tune.",
+    "4:4 כִּי אַהֲבָתוֹ רָבָה מִכָּל־תְּאוּרָה — 'for His love is greater than all telling', the user's own replacement for the earlier מִכָּל־סִפּוּר; it is longer than the tune's other 4:4 lines, so it will read as a deliberate broadening at the close."
+  ]
+}

@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-08, commit 9c961324 (reader floating search, all-books scope, SoundCloud cleanup)
+Last verified: 2026-11-14, commit 55812aa5 (Hebrew reader language; see §15)
 
 ## 1. What this is
 
@@ -43,13 +43,28 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 - `src/store/` — zustand stores (settings, favourites, overrides, remote, session).
 - `src/components/` — shared UI (AppText, Card, HymnRow, LyricsMatchRow, filters).
 - `src/theme/` — design tokens + bundled font registry.
-- `src/i18n/` — ar / en / de dictionaries (`useT()` returns `t` + direction).
+- `src/i18n/` — ui dictionaries ar / en / de (`useT()` returns `t` + direction);
+  hymn content languages are separate (ar + en/de/he fields on the record).
+- `content/hebrew/` — hand-authored Hebrew payloads (`taranim/NNNN.json`) +
+  `glossary.md`; merged into the corpus by `scripts/hebrew-apply.mjs` (§15).
+- `content/hebrew-draft/` — scratch: `1.json` (Aya draft), `1-liturgical.txt`
+  (approved hand-authored vocalised Hebrew for `tr0001`).
 - `scripts/` — corpus build/import (xlsx ↔ JSON), fonts, tutorial video pipeline.
 
 ## 4. Commands that work here
 
-- `npm run start` / `npm run web` — Expo dev server on :8081 (`--web` opens web).
+- `npm run start` / `npm run web` — **broken on this checkout**: both `expo`
+  (SDK 57) and the legacy `expo-cli` 6.x are installed, and `node_modules/.bin/expo`
+  resolves to the legacy one (`ExpoMetroConfig.loadAsync is not a function`).
+  Use `node node_modules/expo/bin/cli start --port 8081` instead (verified
+  2026-11-14: Metro on :8081, web bundle serves).
 - `npm run preview:build` — check hymns + build corpus + static web export + serve on :8083.
+- `npm run hebrew:apply` / `hebrew:check` / `hebrew:meter` — merge the
+  hand-authored Hebrew payloads from `content/hebrew/<book>/*.json` into the
+  corpus (shape + pointing checks, `--check` = drift gate), and the relative
+  line-balance report. Details in §15. After any corpus rebuild the dev server
+  must be restarted with `--clear`: Metro caches the JSON chunks (verified
+  2026-11-14, `hasHe` stayed stale until restart).
 - `node scripts/refrain-batch.mjs 315:move 318:keep …` — mark stanza 1 of the
   listed hymns as the refrain and renumber the rest; `move` swaps it below the
   old stanza 2 (`1, قرار, 2…`), `keep` leaves it first. EN/DE are reordered and
@@ -489,5 +504,83 @@ melody so people can hear how it is sung. Only source available: recordings
   choir-with-accompaniment mix does not, without a real melody model.
   Next step if resumed: ask for a solo-cantor video or an a-cappella verse, then
   reuse `multipitch.py`/`pyin_melody.py` from the temp folder.
+
+## 15. Hebrew translation (verified 2026-11-14)
+
+Only `tr0001`–`tr0026` carry Hebrew so far (26 hymns, 531 verse lines, all
+pointed; `verify-hebrew.mjs` prints 557 because it counts the 26 `title_he`
+strings as lines too).
+Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**,
+and the app displays the vocalised text (user's explicit choice — do not strip
+niqqud at render time). Chosen cadence: Book 2 in printed order, 20 per batch,
+flags-only review. Batches land as `content/hebrew/taranim/NNNN.json`; the
+corpus is never hand-edited.
+
+- Fields: `title_he` / `verses_he` / `chorus_he` on the hymn record,
+  `hasHe` on `HymnSummary` (emitted by `scripts/build-corpus.mjs`). Any content
+  change needs `npm run build:corpus`; `validate.mjs` checks that `verses_he`
+  mirrors the Arabic stanza/line grid one-to-one.
+- Authoring lives in `content/hebrew/taranim/NNNN.json`
+  (`{book, number, title_he, verses_he, chorus_he?, review[]}`), **not** in the
+  corpus. `scripts/hebrew-apply.mjs` validates (book, stanza count, labels,
+  line counts, every line Hebrew + pointed + free of Latin/Arabic) and merges;
+  a mismatch aborts the whole run, so a batch cannot half-land. It re-serialises
+  as the corpus is authored (indent 1, LF, no trailing newline) and inserts the
+  `*_he` keys after the `*_de` block, keeping diffs small. `--check` is the
+  drift gate for CI/pre-commit.
+- `scripts/hebrew-meter.mjs` is a *relative* singability check, not metre
+  proof: syllables ≈ vowel points (shva excluded) + shuruq, median per line
+  position across stanzas, flag > ±2. All 6 hymns pass; spread ≤ 1.5. A flag
+  is a prompt to re-read, not an automatic error (`--strict` to gate).
+- `content/hebrew/glossary.md` holds the fixed renderings (`יֵשׁוּעַ` never
+  `בישו`, `שָׁלוֹם לְךָ`, `אֶצְרֹף … כַּזָּהָב`, `גְּדוּדֵי שְׁאוֹל`,
+  `מִגְדַּל־עֹז`, `שֶׁמֶן תּוּרַק`, `כֹּהֵן גָּדוֹל`, `מַפְגִּיעַ`,
+  `פָּדָה`/`פּוֹדֶה`/`גֹּאֵל`), pointing conventions and the batch workflow.
+  Add new settled words there in the same commit as the hymn.
+- Reader (`src/app/(tabs)/hymn/[id].tsx`): fourth chip `HE`, indigo
+  `#5E35B1`/`#EDE7F6` (`CHIP_COLORS`), Hebrew under each Arabic line,
+  RTL/right-aligned, **no bundled `fontFamily`** (none of the six families has
+  Hebrew glyphs, so the platform font is the only one with niqqud positioning)
+  and `lineHeight` 1.9× so points are not clipped. The AI badge/disclaimer block
+  is gated to `en`/`de`: the Hebrew is human-authored, not an Aya draft.
+- Search: `verses_he` and `title_he` join the index; `src/data/normalize.ts`
+  now drops Hebrew niqqud/cantillation (`\u0591-\u05BD`, `\u05BF`,
+  `\u05C1-\u05C2`, `\u05C4-\u05C5`, `\u05C7`) and folds maqaf to a space, so a
+  plain "יש לנו" matches "יֶשׁ־לָנוּ" (checked against the three stanza-1 lines).
+- Aya (Ollama `aya-expanse:8b`, `scripts/poc-hebrew2.mjs`) is **dropped from the
+  loop**: correcting its drafts cost as much as translating from the Arabic, and
+  the Arabic is the authority. Kept as a second opinion for a stubborn line.
+- Batch 2–26 review flags (112, all in the payload `review[]`): deliberate
+  borrowings from Song 1:3 / 8:7, Prov 18:10, Isa 26:20, Ps 23:4 / 97:9 / 119:105,
+  Isa 53:7, Rev 3:20 and Rom 5:10; post-biblical but fixed terms (`צְלָב`,
+  `בְּנִיּוּת`, `מוֹלַדְתִּי`); one dropped `رَبُّنَا` for metre (`tr0003` 3:2).
+  Read the flag list, not the whole batch.
+- `tr0003` 4:4 was **replaced by the user** with
+  `כִּי אַהֲבָתוֹ רָבָה מִכָּל־תְּאוּרָה` — it runs 11 syllables against the
+  hymn's 6-syllable line-4 median, so `hebrew-meter.mjs` flags it deliberately;
+  do not "fix" it back.
+- `tr0014` prints 2/4/4 stanzas (an acclamation, then two long stanzas); the
+  meter script reports `irregular stanza shape` for it by construction. Its
+  per-position medians in stanzas 2–3 are what to read.
+- Validated: `npm run check:hymns` (1824, all pass), `npm run build:corpus`
+  (index 302 KB, 19 chunks), `npm run typecheck`, apply `--check` clean,
+  payload↔corpus parity for all 26 (`title_he`, `verses_he`, labels, shape).
+- Browser (web, dev server, 2026-11-14): samples `tr0007`/`0013`/`0018`/`0021`/`0026`
+  after clicking `HE` — chip fills `#5E35B1`, every stanza line rendered
+  (`16/24/32/16/16`), all pointed, `direction: rtl`, `text-align: right`,
+  platform font (`-apple-system`), zero console errors. `tr0027` (no Hebrew)
+  still shows only `عر/EN/DE` and no Hebrew characters.
+- Not done: no admin editor for `verses_he` (admin-edit is ar/en/de only), home
+  book cards still show EN/DE pills only, 26 of 375 taranim hymns translated.
+- Gotcha: hand-editing a payload's `review[]` is easy to leave a trailing comma
+  in — `JSON.parse` aborts the whole apply run (seen once on `0006.json`).
+- Gotcha: Metro caches the imported corpus chunks, so after `build:corpus` the
+  new `hasHe`/verses do not appear until the dev server is restarted with
+  `--clear` (verified 2026-11-14 on `tr0005`: chips stayed `عر/EN/DE`).
+- Gotcha: `react-hooks/set-state-in-effect` is reported at
+  `src/app/(tabs)/hymn/[id].tsx` (the `setActiveVerseIndex(null)` reset) — it
+  predates this work. `npm run lint` is broken here (`expo lint` is not a
+  command in this CLI); lint files directly with
+  `node node_modules/eslint/bin/eslint.js <files>`.
 
 

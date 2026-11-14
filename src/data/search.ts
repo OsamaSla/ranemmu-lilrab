@@ -42,6 +42,7 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
     // language (each reports its own title as the hit line).
     if (hymn.title_en) titles.push({ normalized: normalize(hymn.title_en), original: hymn.title_en });
     if (hymn.title_de) titles.push({ normalized: normalize(hymn.title_de), original: hymn.title_de });
+    if (hymn.title_he) titles.push({ normalized: normalize(hymn.title_he), original: hymn.title_he });
 
     const lines = hymn.verses.flatMap((verse, verseIndex) =>
       verse.lines.map((line, lineIndex) => ({
@@ -54,7 +55,7 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
     );
     // Translated verses join the same index with their own originals, so
     // highlighting maps back into the translated line, not the Arabic one.
-    for (const key of ['verses_en', 'verses_de'] as const) {
+    for (const key of ['verses_en', 'verses_de', 'verses_he'] as const) {
       const translated = hymn[key];
       if (!translated) continue;
       translated.forEach((verse, verseIndex) => {

@@ -63,6 +63,7 @@ function toSummary(hymn) {
     hasChorus: (hymn.verses ?? []).some((v) => v.chorus),
     ...(hymn.title_en || hymn.verses_en ? { hasEn: true } : {}),
     ...(hymn.title_de || hymn.verses_de ? { hasDe: true } : {}),
+    ...(hymn.title_he || hymn.verses_he ? { hasHe: true } : {}),
     ...(hymn.primaryTopic ? { primaryTopic: hymn.primaryTopic } : {}),
     ...(Array.isArray(hymn.topics) && hymn.topics.length > 0 ? { topics: hymn.topics } : {}),
   };

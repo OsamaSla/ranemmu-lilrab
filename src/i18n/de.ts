@@ -256,4 +256,5 @@ export const de: PartialDictionary = {
   'common.arShort': 'AR',
   'common.enShort': 'EN',
   'common.deShort': 'DE',
+  'common.heShort': 'HE',
 };

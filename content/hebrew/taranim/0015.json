@@ -1,0 +1,44 @@
+{
+  "book": "taranim",
+  "number": 15,
+  "title_he": "לַמְּדֵנִי לְקַוּוֹת לְךָ אֲדֹנָי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לַמְּדֵנִי לְקַוּוֹת לְךָ",
+        "הוֹדִיעֵנִי נָא דַּרְכֶּךָ",
+        "כִּי אֵין־לִי זוּלָתְךָ מִשְׁעָן",
+        "וְרוּחֲךָ תַּנְחֵנִי",
+        "דְבָרְךָ נֵר לְרַגְלִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הַעֲרֵב לִי אַהֲבָתְךָ",
+        "וּנְחֵנִי אֶל־אוֹרְךָ",
+        "אַהֲבָתְךָ חֶבֶל הַיְשׁוּעָה",
+        "מְקוֹר תִּקְוָתִי בַּתְּפִלָּה",
+        "כָּל־תִּקְווֹתַי בַּחַיִּים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֲדֹנָי פְּקַח עֵינָי",
+        "אֲדֹנָי הָאֵר לִבִּי",
+        "לְמַעַן אֶרְאֶה זְרוֹעֲךָ",
+        "וְחֵיקְךָ יַחְבְּקֵנִי",
+        "וְאַתָּה תַּחְשֹׁב עָלַי"
+      ]
+    }
+  ],
+  "review": [
+    "The Arabic uses parentheses to mark a leader/congregation split (عَلِّمْنِي ... / فَلَيْسَ لِي). The reader prints bare lines, so the parentheses are dropped and the speaker shift is kept only by the syntax — each stanza still turns from petition to confession at line 3.",
+    "1:2 הוֹדִיעֵנִי נָא דַּרְכֶּךָ — Exodus 33:13, kept as a quotation; the Arabic has رُؤْيَتَكَ لِلدَّرْب ('Your sight for the way'), which Hebrew renders as knowing the way rather than seeing it.",
+    "1:3 מִשְׁעָן — 'support', biblical (Isa 3:1 מִשְׁעָן וּמַשְׁעֵנָה), for سَنَد.",
+    "1:5 דְבָרְךָ נֵר לְרַגְלִי — Psalm 119:105, verbatim except for the word order needed by the tune (the psalm has נֵר־לְרַגְלִי דְבָרֶךָ).",
+    "2:3 חֶבֶל הַיְשׁוּעָה — 'the cord of salvation'; חֶבֶל is the biblical cord (Ps 16:6), and the Arabic طَوْق (collar/band) has no closer Hebrew equivalent."
+  ]
+}

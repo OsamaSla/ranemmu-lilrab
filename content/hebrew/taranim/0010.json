@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 10,
+  "title_he": "בְּנֵי הָאָב אֲשֶׁר בַּשָּׁמָיִם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּנֵי הָאָב בַּשָּׁמָיִם",
+        "זַמְּרוּ בְּעֵת הַדֶּרֶךְ",
+        "הַלְלוּ הַפּוֹדֶה הַמְּנַחֵם",
+        "וְאֶת־הַדּוֹד הַנִּקְוֶה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּרֶגַע תֵּחָטְפוּ מָרוֹם",
+        "עִם כָּל־הַמַּאֲמִינִים",
+        "הִנּוֹ בַּעֲנָנֵי כָבוֹד",
+        "הוּא יִפְגָּשְׁכֶם בֶּאֱמֶת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עֵדֶר אֲדֹנָי שִׂמְחוּ",
+        "כִּי חֶלְקְכֶם הוּא יֵשׁוּעַ",
+        "וְכָבוֹד לָכֶם מוּכָן",
+        "בְּמֶרְחֲבֵי מָרוֹם"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תֵּן לָנוּ אֲדֹנָי לִשְׁקֹד",
+        "מְלֵאִים בְּתִקְוָה חֲזָקָה",
+        "אַתָּה הַמּוֹלִיךְ וְהַמַּדְרִיךְ",
+        "נֵלֵךְ אַחֲרֶיךָ בְּשִׂמְחָה"
+      ]
+    }
+  ],
+  "review": [
+    "2:1 בְּרֶגַע תֵּחָטְפוּ — niphal of חטף, 'in a moment you shall be snatched away', for بِاخْتِطَافٍ تَرْتَقُونَ; the verb is biblical (Judg 21:21) and keeps the rapture image without a post-biblical noun.",
+    "2:3 הִנּוֹ בַּעֲנָנֵי כָבוֹד — 'behold Him in clouds of glory'; the Arabic is a plain 'He is', the הִנּוֹ is added for the line and for the second-coming force.",
+    "3:4 בְּמֶרְחֲבֵי מָרוֹם — 'in the broad places of the height', for فِي ذُرَى تِلْكَ الرُّبُوع; מֶרְחָב is the biblical word for wide open space (Ps 18:20).",
+    "4:2 מְלֵאִים בְּתִקְוָה חֲזָקָה — the Arabic is simply مَمْلُوئِين ('filled'); חֲזָקָה fills the line and matches the tune's caesura."
+  ]
+}

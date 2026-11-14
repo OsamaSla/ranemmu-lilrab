@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 8,
+  "title_he": "יֵשׁוּעַ אֲדֹנִי אָהַב חַטָּאִים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יֵשׁוּעַ אֲדֹנִי אָהַב חוֹטְאִים",
+        "מִי יִדְמֶה לָאָהוּב הַזֶּה",
+        "וּבַעֲדָם יָרַד מִמְּרוֹמָיו",
+        "מִי יִדְמֶה לָאָהוּב הַזֶּה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וּבַעֲדָם טָעַם מוֹת הַצְּלָב",
+        "מִי זוּלָתוֹ עָנָו כָּמֹהוּ",
+        "הָלַךְ לָשֵׂאת מִשְׁפָּט נוֹרָא",
+        "מִי יִדְמֶה לָאָהוּב הַזֶּה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא אֲשֶׁר־חַסְדּוֹ גָּבַר עָלֵינוּ",
+        "מִי יִדְמֶה לָאָהוּב הַזֶּה",
+        "וַיִּבְחַר לִגְאֹל אֶת־אָדָם",
+        "מִי יִדְמֶה לָאָהוּב הַזֶּה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נָשָׂא עֲוֺנֵנוּ וְסָלַח לָנוּ",
+        "פּוֹדֵה הָאָדָם זוֹכֵר מְקוֹרֵנוּ",
+        "וַיַּעְלֵם עֵינוֹ מִשְּׁגִיאוֹתֵינוּ",
+        "מִי יִדְמֶה לָאָהוּב הַזֶּה"
+      ]
+    }
+  ],
+  "review": [
+    "The Arabic repeats 'مَنْ يَا تُرَى مِثْلُ هٰذَا الْحَبِيب؟' as lines 2 and 4 of every stanza, so the Hebrew repeats the same line there; stanza 2 line 2 is a deliberate variant, as in the Arabic.",
+    "2:1 מוֹת הַצְּלָב — צְלָב is a post-biblical loan; the biblical alternatives (מוֹת הָעֵץ, תְּלִיָּה) either obscure the cross or mean 'hanging'. Recorded in the glossary.",
+    "4:2 זוֹכֵר מְקוֹרֵנוּ — 'remembering our origin', for ذَاكِرًا أَصْلَنَا; מָקוֹר is the biblical word for source/origin.",
+    "4:3 וַיַּעְלֵם עֵינוֹ — literally 'hid His eye', i.e. overlooked, for وَحَجَبَ الطَّرْفَ. The idiom הֶעֱלִים עַיִן is rabbinic rather than biblical, but it is the only Hebrew phrase that keeps the image."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 4,
+  "title_he": "מַה־נֶּהְדַּר הֶחָבִיב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַה־נֶּהְדַּר הֶחָבִיב",
+        "אֲשֶׁר כִּלָּה הַפְּדוּת",
+        "אֵין כָּמֹהוּ נִפְלָא",
+        "בְּאַהֲבָה וּמַתָּן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוּא מֵת בְּהִכָּנְעוֹ",
+        "נָתַן לָנוּ חַיִּים",
+        "וְקָם וְשָׁב אֶל־הַמָּרוֹם",
+        "אֶל־שְׁמֵי מְעוֹנוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֶרְאֶה וְאֶתְמָהָה",
+        "עַל־חֶסֶד אֵל עוֹלָם",
+        "כִּי בְמוֹתוֹ הֶחֱיָנִי",
+        "לִחְיוֹת עַד־עוֹלָם"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בְּצִלּוֹ אֶתְהַלֵּךְ",
+        "עַד קֵץ הַיָּמִים",
+        "אֲסַפְּרָה אַהֲבַת־אֵל",
+        "וְסוֹלֵחַ עָוֺן"
+      ]
+    }
+  ],
+  "review": [
+    "2:1 בְּהִכָּנְעוֹ — 'in His submission' for 'طَائِعًا' (obedient). The noun הִכָּנְעוּת is post-biblical, so the infinitive is used instead.",
+    "3:3 כִּי בְמוֹתוֹ הֶחֱיָנִי — the ע״ו verb הֶחֱיָה is pointed with a reduced first syllable to keep the line at 8.",
+    "4:4 וְסוֹלֵחַ עָוֺן — participle, 'and the Forgiver of iniquity'; could equally be וּמוֹחֵל עָוֺן.",
+    "1:2 הַפְּדוּת — 'the redemption', post-biblical but liturgical-standard; the biblical alternative is הַפְּדֻת."
+  ]
+}

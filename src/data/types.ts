@@ -48,6 +48,8 @@ export interface HymnSummary {
   hasEn?: boolean;
   /** True when the bundled record carries a German translation. */
   hasDe?: boolean;
+  /** True when the bundled record carries a Hebrew translation. */
+  hasHe?: boolean;
   /**
    * Optional curated recording link (YouTube video, SoundCloud track, direct
    * MP3, …) where this hymn's melody can be heard. Absent when unknown — the
@@ -86,6 +88,14 @@ export interface Hymn extends HymnSummary {
   title_de?: string;
   verses_de?: HymnVerse[];
   chorus_de?: string;
+  /**
+   * Hebrew is a hand-authored liturgical translation (vocalised with niqqud),
+   * not an AI draft, so it never carries the AI-translation disclaimer that
+   * en/de get. Its lines mirror the Arabic stanza/line grid one-to-one.
+   */
+  title_he?: string;
+  verses_he?: HymnVerse[];
+  chorus_he?: string;
   /**
    * Who wrote the Arabic words (poet, or translator for translated hymns).
    * Absent when unknown — the app hides the author line for those hymns.

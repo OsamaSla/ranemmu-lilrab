@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 11,
+  "title_he": "לוּלֵא אֲהָבַנִי הַמָּשִׁיחַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לוּלֵא אֲהָבַנִי הַמָּשִׁיחַ",
+        "מַה־הָיָה שִׁבְרִי",
+        "טִהֵר אוֹתִי הַנִּזְבָּח",
+        "וְנָתַן לִי סְלִיחָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לוּלֵא אֲהָבַנִי הַסּוֹלֵחַ",
+        "אָז אָבַדְתִּי",
+        "עִם־הָרְשָׁעִים עַד־עַד",
+        "מְעֻנֶּה בָּאֵשׁ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "לוּלֵא אֲהָבַנִי הַגִּבּוֹר",
+        "וְסָלַח חֶטְאִי",
+        "לֹא־הָיָה לִי שֶׁבֶת",
+        "עִם־אֲדֹנָי לָעַד"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לוּלֵא אֲהָבַנִי הַמְּעֻטָּר",
+        "בַּעֲטֶרֶת סְנֶה",
+        "אָז הָיִיתִי אָסוּר",
+        "בִּשְׁאוֹל הַתַּחְתִּית"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "עַל־כֵּן תּוֹדָה מִמֶּנִּי",
+        "כָּל־יְמֵי חַיַּי",
+        "לַפּוֹדֶה אֶת־נַפְשִׁי",
+        "וּבְחֶסֶד נָתַן יֶשַׁע"
+      ]
+    }
+  ],
+  "review": [
+    "The Arabic opens all five stanzas with the same لو (لو لم يحبني), so the Hebrew repeats לוּלֵא with a different title for Christ each time: הַמָּשִׁיחַ, הַסּוֹלֵחַ, הַגִּבּוֹר, הַמְּעֻטָּר.",
+    "1:3 הַנִּזְבָּח — 'the Slain One', for الذَّبِيح; זָבַח is the cultic verb and matches the Passover/Lamb charge of the Arabic.",
+    "4:2 בַּעֲטֶרֶת סְנֶה — 'with a crown of thornbush'; the Arabic كُلِّلَ بِالْأَشْوَاك is split across the couplet as in the original (الَّذِي / كُلِّلَ).",
+    "4:4 בִּשְׁאוֹל הַתַּחְתִּית — 'in lowest Sheol', for فِي وَهْدَةِ الْهَلَاك (in the pit of destruction); the phrase follows Ps 88:7 בְּבוֹר תַּחְתִּיּוֹת.",
+    "5:3 לַפּוֹדֶה אֶת־נַפְשִׁי — active participle with a definite object, 'to Him who redeems my soul'; the Hebrew splits the Arabic's relative clause over 5:3–5:4."
+  ]
+}

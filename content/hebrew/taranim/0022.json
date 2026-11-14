@@ -1,0 +1,66 @@
+{
+  "book": "taranim",
+  "number": 22,
+  "title_he": "הָשֵׁב לִי אֶת־הַסִּפּוּר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הָשֵׁב לִי אֶת־הַסִּפּוּר",
+        "אֲשֶׁר יֶעֱרַב לְאָזְנַי קוֹלוֹ",
+        "עַל־אֲדֹנִי וְדוֹדִי",
+        "וְרוֹחֵץ אוֹתִי בְּדָמוֹ",
+        "כַּאֲשֶׁר בָּא אֵלֵינוּ",
+        "יֶלֶד רַךְ בָּאֵבוּס",
+        "אֵין־לוֹ עֶרֶשׂ בַּבַּיִת",
+        "וְאֵין מָקוֹם לְהִוָּלֵד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הָשֵׁב לִי אֶת־סִפּוּר",
+        "הַפּוֹדֶה הַנֶּהְדָּר הָאָהוּב",
+        "וּסְפֹר וְשַׁנֵּן דִּבְרֵי",
+        "סֵפֶר מָתוֹק נִפְלָא",
+        "עַל־בּוֹרֵא כָּל־הָעוֹלָם",
+        "כַּאֲשֶׁר בָּא אֶל־עָמָל",
+        "וַיִּתְהַלֵּךְ בָּהּ נִבְזֶה",
+        "מַטָּרָה לְעִנּוּיִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הָשֵׁב לִי אֶת־סִפּוּר",
+        "הַפּוֹדֶה הֶחָבִיב הַנֶּאְמָן",
+        "אַהֲבָתוֹ וּפִדְיוֹנוֹ",
+        "וְסָלְחוֹ לַחוֹטֵא",
+        "וְעַל־חֶסֶד וְרַכּוּת",
+        "לְכָל־עָנִי וְכָל־חוֹלֶה",
+        "עַל־כָּל־אֹמֶר וּמַעַשׂ",
+        "וְכָל־טוֹב לַכֹּל"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הָשֵׁב לִי אֶת־סִפּוּר",
+        "הַפּוֹדֶה אֲשֶׁר־מֵת בַּעֲדִי",
+        "וַיָּקָם בְּכָבוֹד לְמַעַן",
+        "אַשִּׂיג בּוֹ הַבְּנִיּוּת",
+        "כִּי הוּא הַסִּפּוּר הַטּוֹב",
+        "אֲשֶׁר יֶעֱרַב לְאָזְנַי קוֹלוֹ",
+        "עַל־אֲדֹנִי וְדוֹדִי",
+        "וְרוֹחֵץ אוֹתִי בְּדָמוֹ"
+      ]
+    }
+  ],
+  "review": [
+    "The Arabic splits the opener over two lines (حَدِيثَ الْـ / ـفَادِي) as a typesetting artefact of a long word. Hebrew does not split words across lines, so each stanza opens with a short line and puts the epithet on the next.",
+    "Stanza 4 lines 6–8 repeat 1:2–1:4 verbatim, as in the Arabic; only the opening line differs (فَذَاكَ خَيْرُ حَدِيثٍ / 'for that is the best tale').",
+    "1:8 וְאֵין מָקוֹם לְהִוָּלֵד — 'and no place to be born', for وَلَا مَكَانٌ لِيُولَد; the infinitive is passive in sense, matching the Arabic.",
+    "3:6 לְכָל־עָנִי וְחוֹלֶה — 'to every poor and sick one', for بِكُلِّ عَانٍ سَقِيم; the Arabic's two adjectives are turned into two nouns, which is how Hebrew pairs them.",
+    "4:4 הַבְּנִיּוּת — 'adoption/sonship', for التَّبَنِّي; the noun is post-biblical but is the fixed theological term and appears in the Hebrew NT for υἱοθεσία."
+  ]
+}

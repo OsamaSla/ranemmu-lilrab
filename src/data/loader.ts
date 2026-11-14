@@ -128,6 +128,10 @@ function applySummaryPatch(s: HymnSummary, patch: Partial<Hymn>): HymnSummary {
       patch.title_de !== undefined || patch.verses_de !== undefined
         ? Boolean(patch.title_de?.trim() || patch.verses_de?.length)
         : s.hasDe,
+    hasHe:
+      patch.title_he !== undefined || patch.verses_he !== undefined
+        ? Boolean(patch.title_he?.trim() || patch.verses_he?.length)
+        : s.hasHe,
   };
 }
 
@@ -180,6 +184,7 @@ function buildSummaries(
       hasChorus: verses.some((v) => v.chorus),
       hasEn: Boolean(patch.title_en?.trim() || patch.verses_en?.length),
       hasDe: Boolean(patch.title_de?.trim() || patch.verses_de?.length),
+      hasHe: Boolean(patch.title_he?.trim() || patch.verses_he?.length),
       primaryTopic: patch.primaryTopic,
       topics: patch.topics,
     });

@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 7,
+  "title_he": "מַעְיַן חֶסֶד מִדַּם הַפּוֹדֶה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַעְיַן חֶסֶד מִדַּם־הַפּוֹדֶה נִגָּר",
+        "מִגְּוִיַּת יֵשׁוּעַ אֲשֶׁר יְחַיֶּה כֹּל",
+        "וְכֹל אֲשֶׁר־רָחַץ בּוֹ",
+        "טָהַר בְּדַם הַשֶּׂה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "שֵׂה הָאֱלֹהִים אֲשֶׁר־מֵת בְּעַד־אָדָם",
+        "הַדָּם הַיָּקָר הַזֶּה פָּעֳלוֹ לָעַד",
+        "וְתוֹשִׁיעַ בְּשָׁלוֹם",
+        "כַּלָּתְךָ לַשְּׁלֵמוּת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כִּרְאֹתִי דַּם־הַשֶּׂה הַנִּשְׁחָט בַּעֲדִי",
+        "הַנִּבְחָר מֵאָז מִקֶּדֶם לִפְנֵי־עוֹלָם",
+        "וַיְהִי חֶסֶד גֹּאֲלִי",
+        "שִׁיר תְּהִלָּתִי לָעַד"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְאִם־יֵאָלֵם הַלָּשׁוֹן בְּקֶרֶב הַקָּבֶר",
+        "עוֹד בְּתוֹךְ קִבְרוֹ יִשְׁכַּב אִלֵּם וְלֹא יְדַבֵּר",
+        "נַפְשִׁי תְּהַלֵּל עֹז",
+        "לַאֲדֹנָי הַמֵּטִיב"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 יְחַיֶּה כֹּל — piel participle of חיה, 'gives life to all'; the alternative מְחַיֶּה is the same form with a full prefix vowel and upsets the syllable count.",
+    "2:1 שֵׂה הָאֱלֹהִים — the Johannine title (John 1:29); the Arabic has only 'O Lamb', the fuller title is kept because the hymn's whole argument is the blood of the Lamb.",
+    "3:2 לִפְנֵי־עוֹלָם — 'before the world', for تَعَيَّنَ مُنْذُ الْأَزَل (appointed from eternity).",
+    "4:2 בְּתוֹךְ קִבְרוֹ אִלֵּם וְלֹא יְדַבֵּר — 'dumb in its grave and it will not speak', for أَخْرَسَ لَنْ يُكَلِّمَ; the subject is still the tongue of 4:1."
+  ]
+}
