@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-14, commit 511d6ece (Hebrew reader language; see §15)
+Last verified: 2026-11-14, commit 3d0c2c09 (Hebrew reader language; see §15)
 
 ## 1. What this is
 
