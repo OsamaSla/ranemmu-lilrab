@@ -196,18 +196,21 @@ function BookCard({ id, name, count, unit, languages, selected, width, onPress }
           ) : null}
         </View>
 
-        <View style={{ padding: spacing.md, borderTopWidth: 2, borderTopColor: accent }}>
+        <View style={{ paddingHorizontal: spacing.md, paddingVertical: 10, borderTopWidth: 2, borderTopColor: accent }}>
           <AppText
             variant="heading"
             center
             numberOfLines={2}
             style={{
               fontFamily: fontFamilyBold,
-              minHeight: Math.round(type.heading * 1.5) * 2,
+              // Phone cards are only ~160px wide and the book names fit one
+              // line there, so reserving a second line just lengthened every
+              // card. Wide cards keep the two-line reserve for i18n titles.
+              minHeight: Math.round(type.heading * 1.5) * (width < 200 ? 1 : 2),
             }}>
             {name}
           </AppText>
-          <View style={{ alignItems: 'center', gap: 6, marginTop: spacing.sm }}>
+          <View style={{ alignItems: 'center', gap: 4, marginTop: 3 }}>
             <MetaBadge icon="music-note" label={`${count} ${unit}`} />
             <View style={{ flexDirection: direction.row, flexWrap: 'wrap', justifyContent: 'center', gap: 4 }}>
               {languages.map((code) => (
