@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 240,
+  "title_he": "אֲדֹנֵינוּ עָמַד בַּעֲדֵנוּ, לָמוּת כַּשֶּׂה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנֵינוּ עָמַד לָנוּ",
+        "לָמוּת כַּשֶּׂה הַתָּם",
+        "עֲוֺנֵנוּ עָלָיו הוּשָׂם",
+        "וְהוּא נְשָׂאוֹ בְּעֹל"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הָיִינוּ בְנֵי הָעֶבְרָה",
+        "בְּטִבְעֵנוּ כַּיֶּתֶר",
+        "וּבוֹ מָצָאנוּ רָצוֹן",
+        "וְגַם־בְּנֵי בְרִיתוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כֻּלָּנוּ נוֹשָׁעִים עַתָּה",
+        "בַּחֶסֶד הַיּוֹם",
+        "אֵין־לָנוּ תְּהִלָּה זוּלָתִי",
+        "בְּרַחֲמָיו הָרַבִּים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֲנַחְנוּ אֲשֶׁר לְפָנִים",
+        "הָיִינוּ בְּלִי אֵל",
+        "זָרִים וְנָכְרִים לַבְּרִית",
+        "וְעַמִּים תּוֹעִים בַּחֹשֶׁךְ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "מַה־גָּדוֹל הָאַהֲבָה",
+        "וּמַה־גְּבוֹהָה וְעָמֹקָה",
+        "אֵין בָּהּ זֵכֶר לַחֵטְא כְּלָל",
+        "וְלֹא לְרָעָה כָּל־עִקָּר"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "וּבִדְרוֹת הֶעָתִיד",
+        "יַרְאֶה אֶת־עָשְׁרוֹ",
+        "בַּאֲדֹנֵינוּ אֲשֶׁר־לוֹ",
+        "בְּמוֹתוֹ חַיִּים לָנוּ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–4 is Isaiah 53:4–6 and 7 (כַּשֶּׂה לַטֶּבַח יוּבָל … יְהוָה הִפְגִּיעַ בּוֹ אֵת עֲוֺן כֻּלָּנוּ); the Arabic قَدْ نَابَ عَنَّا رَبُّنَا … عَلَيْهِ ذَنْبُنَا وُضِع keeps the substitution, so the Hebrew keeps הוּשָׂם ('was laid') and the Lamb that is תָּם, which is the Isaiah adjective.",
+    "2:1–2 בְנֵי הָעֶבְרָה … בְּטִבְעֵנוּ — the Arabic أَبْنَاءَ الْغَضَب … بِالطَّبْعِ is Eph 2:3 almost verbatim (בְּנֵי־אַף כַּגַּם־הַנּוֹתָרִים); the Hebrew uses עֶבְרָה for wrath, since אַף is ambiguous in a stanza about the Lamb, and keeps 'by nature' as בְּטִבְעֵנוּ.",
+    "3:1–2 כֻּלָּנוּ נוֹשָׁעִים … בַּחֶסֶד — the Arabic فَكُلُّنَا مُخَلَّصُونَ … بِالنِّعْمَةِ is Eph 2:5,8; the Hebrew keeps the plural participle and adds הַיּוֹם ('today'), which is the epistle's 'now' and gives the line its second half.",
+    "4:1–4 הָיִינוּ בְּלִי אֵל … זָרִים וְנָכְרִים לַבְּרִית — the Arabic كُنَّا بِلَا إِلٰه … عَنِ الْعُهُودِ غُرَبَا is Eph 2:12 nearly word for word (בְּלִי אֱלֹהִים … נָכְרִים לִבְרִיתוֹת הַהַבְטָחָה); the Hebrew keeps both of the epistle's words, זָר and נָכְרִי, because the Arabic's غُرَبَا and the verse's נָכְרִים are the same claim and the pair fills the line's eight syllables.",
+    "6:3–4 בַּאֲדֹנֵינוּ … בְּמוֹתוֹ חַיִּים לָנוּ — the Arabic فِي رَبِّنَا الَّذِي لَنَا بِمَوْتِهِ الْحَيَاه is the epistle's 'in Christ Jesus' with the life-through-death exchange of Rom 5:10; the Hebrew keeps the relative clause and the בְ of means, so the last line states a purchase and not merely a benefit."
+  ]
+}

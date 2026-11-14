@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 229,
+  "title_he": "מִי־הַיֹּשֵׁב בְּסֵתֶר שַׁדַּי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אַתָּה לִי, אַתָּה תִקְוָתִי",
+        "אַתָּה מָעֻזִּי, בְּךָ מַחְסִי",
+        "אַתָּה לִי, אַתָּה תִקְוָתִי",
+        "אַתָּה מָעֻזִּי, בְּךָ מַחְסִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יֹשֵׁב בְּסֵתֶר עֶלְיוֹן",
+        "בְּצֵל שַׁדַּי יִתְלוֹנָן",
+        "אָמַרְתִּי לַאדֹנָי מַחְסִי",
+        "אֱלֹהַי, מִשְׂגַּבִּי וּמָעֻזִּי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "לֹא תָבוֹא אֵלָיו רָעָה",
+        "מִפֶּגַע וָדֶבֶר וּמַדְוֶה",
+        "לֹא יִקְרַב אֵלָיו נֶגַע",
+        "כִּי־אֲדֹנָי מַחְסֵהוּ תָּמִיד"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אָמַרְתָּ: אֲדֹנָי תִּקְוָתִי",
+        "וְעֶלְיוֹן שַׂמְתָּ מְעוֹנֶךָ",
+        "לֹא תִגַּע בְּךָ רָעָה",
+        "וְלֹא נֶגַע בְּאָהֳלֶךָ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "כִּי מַלְאָכָיו יְצַוֶּה לָךְ",
+        "לִשְׁמָרְךָ בְּכָל־דְּרָכֶיךָ",
+        "עַל־כַּפַּיִם יִשָּׂאוּנְךָ",
+        "פֶּן־תִּגֹּף בָּאֶבֶן רַגְלֶךָ"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "כִּי בִי חָשַׁק, אֲפַלְּטֵהוּ",
+        "אֲשַׂגְּבֵהוּ כִּי־יָדַע שְׁמִי",
+        "יִקְרָאֵנִי וְאֶעֱנֵהוּ",
+        "וְאַרְאֵהוּ בִּישׁוּעָתִי"
+      ]
+    }
+  ],
+  "review": [
+    "The whole hymn is Psalm 91, and the Hebrew follows the psalm's own wording wherever the Arabic paraphrases it: 2:1–2 = v.1 verbatim (יֹשֵׁב בְּסֵתֶר עֶלְיוֹן / בְּצֵל שַׁדַּי יִתְלוֹנָן), 2:3 = v.2, 4:1–4 = vv.9–10, 5:1–4 = vv.11–12, 6:1–4 = vv.14–16. Where the Arabic is a loose rendering the psalm is the authority, since the hymn is quoting it.",
+    "1:1–4 is the printed four-line acclamation with the couplet doubled; the repetition is kept line for line because it is the tune's whole first stanza, and the stanza's short length (against the psalm stanzas) is why the metre script calls the shape 4/4/4/4/4/4 rather than flagging it.",
+    "1:2 בְּךָ מַחְסִי — the Arabic وَفِيكَ احْتِمَاي is 'in You my shelter'; מַחְסֶה is the psalm's own refuge-word (Ps 91:2, מַחְסִי), so the acclamation and the psalm stanza use the same noun.",
+    "3:4 כִּי־אֲדֹנָי מַחְסֵהוּ תָּמִיד — the Arabic حِصْنُهُ الرَّبُّ لَيْلَ نَهَار is 'the Lord is his fortress night and day'; the Hebrew keeps the psalm's מַחְסֶה (v.9) and renders 'night and day' as תָּמִיד, since a literal לַיְלָה וָיוֹם would overrun the line.",
+    "6:1–2 אֲפַלְּטֵהוּ … אֲשַׂגְּבֵהוּ — the psalm's two verbs are kept distinct, as the Arabic يُنْجِيه … يَرْفَعُهُ does; the Piel of פלט and the Piel of שׂגב are both psalm vocabulary (Ps 18:3, אֶשָּׂגֵב), so rescue and exaltation are not collapsed into one act."
+  ]
+}

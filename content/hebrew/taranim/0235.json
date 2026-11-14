@@ -1,0 +1,47 @@
+{
+  "book": "taranim",
+  "number": 235,
+  "title_he": "נַהֲלֵנִי, יֵשׁוּעַ, בְּעָבְרִי עֵמֶק הַבָּכָא",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נַהֲלֵנִי, יֵשׁוּעַ",
+        "בְּעָבְרִי עֵמֶק בְּכִי",
+        "בְּסַעֲרוֹת הַחַיִּים",
+        "אַתָּה צוּר יְשׁוּעָתִי",
+        "אַתָּה מוֹלִיךְ הֲמוֹנִים",
+        "נַהֲלֵנִי, יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לְךָ עֹז וּגְבוּרָה",
+        "מַשְׁבִּית גַּלֵּי הַיָּם",
+        "סְעָרוֹת תִּשְׁתַּחֲוֶינָה",
+        "וְאֶרֶץ וְשָׁמַיִם",
+        "הוֹי מוֹשִׁיעַ הֲמוֹנִים",
+        "נַהֲלֵנִי, יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כַּאֲשֶׁר יִקְרַב הַקֵּץ",
+        "וְאֶרְאֶה חוֹף הַשָּׁלוֹם",
+        "עַל־חֵיקְךָ הָרָחָב",
+        "אַפִּיל נַפְשִׁי, הוֹי דּוֹדִי",
+        "וּבְאוֹתָם הַמְּחוֹזוֹת",
+        "אֶשְׁכֹּן אִתְּךָ, יֵשׁוּעַ"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 עֵמֶק בְּכִי — the Arabic وَادِي الدُّمُوع is Ps 84:7 (עֵמֶק הַבָּכָא); the psalm's noun בָּכָא is kept, so the line is the pilgrim psalm and not a general 'valley of tears', which matters because the same psalm supplies the 'going from strength to strength' the stanza implies.",
+    "1:4 צוּר יְשׁוּעָתִי — the Arabic أَنْتَ صَخْرٌ لِلنَّجَاه is 'You are a rock of rescue'; the Hebrew uses the construct with יְשׁוּעָה, the psalm's pairing (Ps 89:27, צוּר יְשׁוּעָתִי), so rock and salvation are one title rather than two nouns.",
+    "2:2–3 מַשְׁבִּית גַּלֵּי הַיָּם … תִּשְׁתַּחֲוֶינָה — the Arabic مُسْكِتٌ مَوْجَ الْبِحَار … تَخْضَعُ الْأَنْوَاءُ لَك is Ps 107:29 with Mark 4:39; the Hiphil of שָׁבַת keeps 'causing to cease', and the storms are said to bow rather than merely obey, since the Arabic's تَخْضَعُ is submission.",
+    "3:3–4 עַל־חֵיקְךָ … אַפִּיל נַפְשִׁי — the Arabic عَلَى صَدْرِكَ الرَّحِيب … أُلْقِي نَفْسِي is John 13:23 (בְּחֵיקוֹ) with Ps 62:9; the Hebrew keeps חֵיק for the bosom and the Hiphil of נפל for casting oneself down, so the line is both the beloved disciple's posture and the psalm's command to pour out the soul.",
+    "The refrain נַהֲלֵנִי, יֵשׁוּעַ closes all three stanzas and opens the first, exactly as اِهْدِ نَفْسِي يَا يَسُوع does; it is unvaried because the repetition is the tune, and the Hebrew keeps the imperative נָהַל (Ps 23:2, יְנַהֲלֵנִי) rather than a weaker 'lead'."
+  ]
+}

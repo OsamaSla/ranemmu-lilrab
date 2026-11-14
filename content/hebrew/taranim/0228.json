@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 228,
+  "title_he": "אֲדֹנֵינוּ יֵשׁוּעַ, חֲבִיבֵנוּ הַנֶּאֱמָן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בִּטְחוּ, הוּא יַעֲנֶה, בִּטְחוּ, הוּא יַעֲנֶה",
+        "בִּטְחוּ, הוּא יַעֲנֶה תְּפִלַּת קְדוֹשָׁיו"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנֵינוּ יֵשׁוּעַ, חֲבִיבֵנוּ",
+        "נַפְשֵׁנוּ שְׂבֵעָה בְּאַהֲבָתְךָ",
+        "כִּי תָמִיד אַתָּה לָנוּ עֵזֶר טוֹב",
+        "וְשׁוֹמֵעַ תְּפִלָּה, אַתָּה נֶאֱמָן"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוֹי עַם אֲדֹנָי, זְכֹר יְשׁוּעָתוֹ",
+        "כִּי־פָדָה אוֹתְךָ בִּמְלֶאכֶת הַצְּלָב",
+        "הֲיִפָּלֵא מִמֶּנּוּ עֲמַל חַיֶּיךָ",
+        "וְהוּא הַמַּשְׁקִיט מַיִם בְּצִוּיוֹ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֵין דּוֹמֶה לוֹ, מוֹשִׁיעַ רַךְ וְקָרוֹב",
+        "מוֹשִׁיעַ וּמַדְרִיךְ אוֹתָנוּ תָּמִיד",
+        "וְהוּא בָּא מַהֵר, נִפְגְּשֵׁהוּ בֶעָנָן",
+        "אֶל־מְנוּחָה נָבוֹא, יִכְלוּ עֲמָלֵינוּ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 is the refrain printed alone as the first stanza, the same shape as tr0218/0219; the Arabic doubles ثِقُوا هُوَ يُجِيبُ inside one line and the Hebrew keeps the doubling, then adds the object of the answer (תְּפִלַּת קְדוֹשָׁיו) as the Arabic's دُعَاءَ الْقِدِّيسِين does.",
+    "2:4 וְשׁוֹמֵעַ תְּפִלָּה — the Arabic وَسَامِعُ الصَّلَاةِ is the psalm title (Ps 65:3, שֹׁמֵעַ תְּפִלָּה); the participle is kept as a title of God rather than turned into a clause, so the line names what He is, not what He does.",
+    "3:2 בִּמְלֶאכֶת הַצְּלָב — the Arabic بِعَمَلِ الصَّلِيب is 'by the work of the cross'; מְלָאכָה is kept for עֲבֹדָה/עמל-work, so the cross is a deed done and not merely an event, which is what makes the rhetorical question of 3:3 work.",
+    "3:3–4 הֲיִפָּלֵא … מַשְׁקִיט מַיִם — the Arabic's two clauses are Job 42:2 (לֹא־יִבָּצֵר מִמְּךָ מְזִמָּה) and Ps 107:29 (יָקֵם סְעָרָה לִדְמָמָה); the sea is stilled בְּצִוּיוֹ, which keeps the word of command rather than a general 'by His order'.",
+    "4:3 נִפְגְּשֵׁהוּ בֶעָנָן — the Arabic نَلْقَاهُ فِي السَّحَاب is 1 Thess 4:17 (נִפָּגֵשׁ … בֶּעָנָנִים); the Hebrew keeps the meeting verb and the cloud, so the stanza ends on the same event the epistle names."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "book": "taranim",
+  "number": 230,
+  "title_he": "דּוֹדִי צָעִיר כְּאֶרֶז הַלְּבָנוֹן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "דּוֹדִי צָעִיר כְּאֶרֶז הַלְּבָנוֹן",
+        "עַמּוּדֵי שֵׁשׁ רַגְלָיו הֵמָּה",
+        "יָפֶה מְאֹד וּמָתוֹק בִּלְשׁוֹנוֹ",
+        "וְהוּא נִקְרָא שַׂר־שָׁלוֹם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּצֵל דּוֹדִי חִכִּיתִי לָשֶׁבֶת",
+        "וְאֵלָיו כָּלְתָה נַפְשִׁי",
+        "מֵנִיחַ יְגֵעִים, מְנַחֵם נְפָשׁוֹת",
+        "וּמְרַחֵם עַל־חֻלְשָׁתָם"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מָתַי יִתְקַיֵּם הַתִּקְוָה הַזֹּאת",
+        "וְאֶשְׁמַע קוֹל הַתְּרוּעָה",
+        "וְעֵינַי תִּרְאֶינָה אֶת־גֹּאֲלִי",
+        "וְיָבוֹא עֵת הַחֲתֻנָּה"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Song 5:10–16 applied to Christ: 1:1 keeps the cedar of Lebanon (Song 5:15, כְּאַרְזֵי לְבָנוֹן), 1:2 the marble pillars (שֹׁהַם — the Hebrew of 5:15 is עַמּוּדֵי שֵׁשׁ), 1:3 the sweet speech (5:16, מְתַקִּים), and 1:4 'Prince of Peace' is Isa 9:5 (שַׂר־שָׁלוֹם), which the Arabic وَيُدْعَى رَئِيسَ السَّلَام also quotes.",
+    "1:2 עַמּוּדֵי שֵׁשׁ רַגְלָיו הֵמָּה — the Arabic سَاقَاهُ عَمُودَا رُخَام has the dual ('his two legs'); Hebrew has no dual here and the Song itself says עַמּוּדֵי שֵׁשׁ, so the construct is kept whole and the legs are supplied as the subject rather than forcing a dual.",
+    "2:1 חִכִּיתִי לָשֶׁבֶת — the Arabic اشْتَهَيْتُ الْجُلُوس is 'I longed to sit'; חִכָּה is the waiting verb (Ps 130:5) and לָשֶׁבֶת keeps the sitting, so longing and resting are both present, as in Song 2:3 (בְּצִלּוֹ חִמַּדְתִּי וְיָשַׁבְתִּי).",
+    "2:3 מֵנִיחַ יְגֵעִים — the Arabic مُرِيحُ التَّعَابَى is Matt 11:28 (כָּל־הַיְגֵעִים); the participle is kept so the line describes an attribute, and the second clause's מְנַחֵם keeps the Arabic's مُعَزِّي as a separate act.",
+    "3:4 הַחֲתֻנָּה — the Arabic الزِّفَاف is the wedding-procession; חֲתֻנָּה is the biblical wedding noun (Song 3:11, בְּיוֹם חֲתֻנָּתוֹ) and is the glossary's fixed word, so the stanza ends at the marriage of the Lamb rather than at a generic feast."
+  ]
+}

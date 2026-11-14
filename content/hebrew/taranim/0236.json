@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 236,
+  "title_he": "אַשְׁרֵי הָאָדָם אֲשֶׁר־נִסְלַח עֲוֺנוֹ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אַשְׁרֵי אֲשֶׁר־נִשָּׂא פִּשְׁעוֹ",
+        "וּפְשָׁעָיו כֻּסּוּ",
+        "וְאַשְׁרֵי אָדָם לֹא־יַחְשֹׁב",
+        "לוֹ אֲדֹנָי עָוֺן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לֹא נִצְדַּקְתִּי בַתּוֹרָה",
+        "וְלֹא בְּמַעֲשֵׂי יָדַי",
+        "כִּי אִם־בְּךָ לְבַדֶּךָ",
+        "טָהַרְתִּי וְנִקֵּיתִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוֹפִיעַ הַצֶּדֶק",
+        "וְכָל־זוּלָתוֹ הֶבֶל",
+        "וְכָל־עֲמַל צְדָקָה",
+        "אֲשֶׁר־לֹא־בְךָ הָבֶל"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַתָּה הָיִיתָ צִדְקִי",
+        "עַל־כֵּן אֶזְכֹּר פָּעֳלֶךָ",
+        "אַתָּה הִצַּלְתַּנִי",
+        "וָאֶחְיֶה לְמַעַנְךָ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "וּבְעֵת אֶסַּע מִזֶּה",
+        "מִן־הָעוֹלָם הַזֶּה",
+        "יִשָּׁאֵר גִּילִי אִתְּךָ",
+        "בַּמְּנוּחָה הָעֶלְיוֹנָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–4 is Psalm 32:1–2 almost word for word (אַשְׁרֵי נְשׂוּי־פֶּשַׁע … אַשְׁרֵי אָדָם לֹא־יַחְשֹׁב יְהוָה לוֹ עָוֺן), because the Arabic طُوبَى لِمَنْ قَدْ غُفِرَتْ لَهُمْ ذُنُوبُهُم is itself quoting that psalm; the Hebrew restores the psalm's own verbs (נָשָׂא, כָּסָה, חָשַׁב) instead of reproducing the Arabic's 'forgiven' twice.",
+    "2:1–2 לֹא נִצְדַּקְתִּי בַתּוֹרָה — the Arabic فَلَسْتُ بِالنَّامُوسِ قَدْ صِرْتُ مُبَرَّرًا is Rom 3:20 / Gal 2:16; the Hebrew keeps נָמוֹס as the Greek loan and the Niphal of צָדַק, so justification stays the forensic verb and not a metaphor of 'being made good'.",
+    "3:1–4 הוֹפִיעַ הַצֶּדֶק … הָבֶל — the Arabic قَدْ ظَهَرَ الْبِرُّ … وَكُلُّ سَعْيٍ … بَاطِل is Rom 3:21 with Isa 64:5 (וַנְּהִי כַטָּמֵא … כֻּלָּנוּ); הֶבֶל is the Ecclesiastes word for vanity and is kept, since the stanza's claim is that self-righteous striving is not merely insufficient but vapour.",
+    "4:1–2 צִדְקִי … פָּעֳלֶךָ — the Arabic أَنْتَ بِرِّي … أَذْكُرُ عَمَلَك is Jer 23:6 (יְהוָה צִדְקֵנוּ) with Ps 103:2; the Hebrew keeps the possessive suffix on both, so the exchange is personal: His deed, my righteousness.",
+    "5:4 בַּמְּנוּחָה הָעֶלְיוֹנָה — the Arabic فِي الرَّاحَةِ الْعُلْيَا is the rest of Heb 4:9 (מְנוּחָה) rather than the Sabbath noun שַׁבָּת, so the last stanza names the eschatological rest the epistle names."
+  ]
+}

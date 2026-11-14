@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 227,
+  "title_he": "יוֹם יָבוֹא וְיִתַּם גָּלוּתִי בְּאֵלֶּה הָאֲרָצוֹת",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "פָּנִים אֶל־פָּנִים אֶרְאֵהוּ",
+        "פָּנִים אֶל־פָּנִים בְּשָׁמָיו",
+        "וְאָשִׁירָה בִּמְלֹא שָׂשׂוֹן",
+        "בַּחֶסֶד נוֹשַׁעְתִּי אָנִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יוֹם יָבוֹא קֵץ גָּלוּתִי",
+        "בָּאֲרָצוֹת נָדַדְתִּי",
+        "וְשָׁם עִם־אֲדֹנִי אֶהְיֶה",
+        "הוֹי גִילִי, הוֹי שִׂמְחָתִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אָהֳלִי יִפֹּל יוֹם אֶחָד",
+        "וְלֹא אֵדַע מָתַי יָבוֹא",
+        "אַךְ מִמַּעַל בַּשָּׁמַיִם",
+        "הֵכִין לִי בַּיִת אֲדֹנִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "שִׁירָתִי תִּכְלֶה בְּעֵת",
+        "יִשָּׁבֵר כּוֹס הַזָּהָב",
+        "אַךְ שִׁירָתִי בַּשָּׁמַיִם",
+        "תִּשָּׁאֵר, הוֹי רִנָּתִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "נַפְשִׁי תָּעוּף אֶל־מוֹשִׁיעִי",
+        "עֵת יִפָּתַח לָהּ הַשַּׁעַר",
+        "עַל־כֵּן אַקְדִּישׁ כָּל־לֵילַי",
+        "לִי נֵרִי דּוֹלֵק וּמֵאִיר"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 פָּנִים אֶל־פָּנִים is the theophany idiom of Exod 33:11 and 1 Cor 13:12; the Arabic وَجْهًا لِوَجْهٍ is kept as a doubled line because the print repeats it in both halves of the stanza, and the second line's בְּשָׁמָיו keeps the Arabic's فِي سَمَاه rather than turning it into 'in His presence'.",
+    "1:4 בַּחֶסֶד נוֹשַׁעְתִּי — the Arabic مُخَلَّصٌ بِالنِّعْمَةِ is a bare participle ('saved by grace'), so the Hebrew supplies the verb and the first person, since Hebrew has no way to print a participial acclamation of oneself without a pronoun.",
+    "3:1–2 אָהֳלִי יִפֹּל … וְלֹא אֵדַע מָתַי — the Arabic فَخَيْمَتِي قَدْ تُنْقَضُ يَوْمًا وَلَا أَدْرِي مَتَى is 2 Cor 5:1's earthly tent; אֹהֶל is kept (Isa 38:12, הֻסַּע אָהֳלִי) rather than a Modern 'בית', because the whole stanza turns on the contrast with the building not made with hands.",
+    "4:2 יִשָּׁבֵר כּוֹס הַזָּהָב — the Arabic يُسْحَقُ كُوزُ الذَّهَبِ is Eccl 12:6 (וְתָרֹץ גֻּלַּת הַזָּהָב); the Hebrew keeps the golden vessel and the breaking, though כּוֹס replaces the rare גֻּלָּה so the line scans.",
+    "5:3–4 אַקְדִּישׁ כָּל־לֵילַי … נֵרִי דּוֹלֵק — the Arabic أَقْضِي سَاهِرًا عُمْرِي وَمِصْبَاحِي مُنِير is the watching-servant of Luke 12:35–37; the lamp is kept lit rather than merely 'bright', since the Arabic's مُنِير is about burning, not shining."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 232,
+  "title_he": "תִּקְוַת נַפְשִׁי אַךְ דַּם־יֵשׁוּעַ וּשְׁמוֹ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מְשִׁיחִי צוּרִי לֹא יָמוּט",
+        "וְכָל־זוּלָתוֹ הוּא חוֹל"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "תִּקְוַת נַפְשִׁי אַךְ הִיא",
+        "דַּם יֵשׁוּעַ וּשְׁמוֹ",
+        "אֵין יְשׁוּעָה בִּלְעָדָיו",
+        "הוּא בְּעַצְמוֹ נוֹתֵן חַיִּים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עֵת הָעֲנָנִים יְכַסּוּ",
+        "חַסְדּוֹ יַאֲרִיךְ לִי",
+        "וּבַעֲלוֹת הַסְּעָרָה",
+        "עֹגֶן נַפְשִׁי נָכוֹן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וּבְשׁוּבוֹ בְּעַצְמוֹ",
+        "יִתְמַלְּאוּ כָּל־הַהַבְטָחוֹת",
+        "וְאַהֲבַת אֲדֹנִי",
+        "תִּשָּׁאֵר רִנָּתִי בִּשְׁמֵי"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 is the two-line opening stanza of the printed 88.88 – 88 shape, kept as two lines rather than padded to four, the same class as tr0218/0228. The rock-and-sand contrast is Matt 7:24–27 with Ps 62:3, and the Arabic صَخْرِي … رِمَال keeps both nouns, so the Hebrew keeps צוּר and חוֹל.",
+    "2:1–2 תִּקְוַת נַפְשִׁי … דַּם יֵשׁוּעַ וּשְׁמוֹ — the Arabic رَجَاءُ نَفْسِي وَحْدَهُ دَمُ يَسُوعَ وَاسْمُهُ is a verbless equation; the Hebrew keeps it verbless with אַךְ הִיא, because the stanza's point is that the hope *is* the blood and the name, not that it comes from them.",
+    "2:3 אֵין יְשׁוּעָה בִּלְעָדָיו — the Arabic لَيْسَ خَلَاصٌ بِسِوَاه is Acts 4:12 (וְאֵין בְּאַחֵר הַיְשׁוּעָה); the Hebrew keeps the noun יְשׁוּעָה and the negative, so the line is the apostolic claim and not a general statement about safety.",
+    "3:4 עֹגֶן נַפְשִׁי נָכוֹן — the Arabic مِرْسَاةُ نَفْسِي ثَابِتَه is 'my soul's anchor is firm'; עֹגֶן is post-biblical for anchor (the biblical verb is חָבַשׁ/עָגַן only in the sense of resting), accepted here because the Arabic's metaphor is nautical and Heb 6:19 supplies exactly that image in the Greek.",
+    "4:4 תִּשָּׁאֵר רִנָּתִי בִּשְׁמֵי — the Arabic يَبْقَى نَشِيدِي فِي سَمَاه is 'my song abides in His heaven'; רִנָּה is the jubilant cry (Ps 30:5, רִנָּה), kept rather than the flatter שִׁיר, because the stanza is about the song outlasting the singer."
+  ]
+}

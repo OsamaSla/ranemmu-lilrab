@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 237,
+  "title_he": "עֵת אֶרְאֶה אֶת־צְלָבוֹ שֶׁל־הַמֵּת וְהַמְּנַצֵּחַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עֵת אֶרְאֶה אֶת־צְלָבוֹ",
+        "אֲשֶׁר־מֵת וְנִצָּחָה",
+        "כָּל־רֶוַח יִהְיֶה הֶפְסֵד",
+        "וְכָל־כְּבוֹד הָעוֹלָם קָלוֹן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנִי, אַל־תִּתֵּן לִי",
+        "לְהִתְהַלֵּל זוּלָתִי",
+        "כִּי אִם־בַּצְּלָב אֶתְהַלָּל",
+        "וּבְכָל־אֲשֶׁר־לִי לְךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֵי־זֶה דָּם זַךְ נִשְׁפַּךְ כָּאן",
+        "כְּדָמוֹ הַטָּהוֹר וְיָקָר",
+        "וְאֵי־זֶה כֶּתֶר כְּכֶתֶר",
+        "קוֹץ שֶׁעִטֵּר הַמֵּצַח"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בַּמָּה אֲשַׁלֵּם לְגֹאֲלִי",
+        "מִשִּׁלְטוֹן הַחֵטְא",
+        "כִּי אִם־בְּהַקְדִּישִׁי לוֹ",
+        "נַפְשִׁי וְכָל־כֹּחִי"
+      ]
+    }
+  ],
+  "review": [
+    "1:3–4 כָּל־רֶוַח … הֶפְסֵד / וְכָל־כְּבוֹד הָעוֹלָם קָלוֹן — the Arabic رِبْحِي أَرَى خَسَارَةً … عَار is Phil 3:7–8 (כָּל־דָּבָר … חֵסְרוֹן / זֶבֶל); the Hebrew keeps the profit-and-loss pair (רֶוַח / הֶפְסֵד) and the glory-and-shame pair, since the couplet is the epistle's accounting.",
+    "2:2–3 לְהִתְהַלֵּל … אֶתְהַלָּל — the Arabic أَفْخَرَ … بِالصَّلِيب is Gal 6:14 (לְהִתְהַלֵּל … בִּצְלַב); the Hebrew uses the Hithpael of הלל both times, so the prohibition and the permitted boast are the same verb, which is the verse's whole point.",
+    "3:1–2 דָּם זַךְ … כְּדָמוֹ הַטָּהוֹר — the Arabic أَيُّ دَمٍ زَاكٍ جَرَى كَدَمِهِ الزَّكِيّ الثَّمِين is 1 Pet 1:19 (כְּדַם שֶׂה תָּמִים); זַךְ is kept for the purity and יָקָר for the preciousness, as the Arabic has two adjectives, so the line does not collapse the price and the purity into one word.",
+    "3:3–4 כֶּתֶר … קוֹץ שֶׁעִטֵּר הַמֵּצַח — the Arabic تَاجٍ … الشَّوْكِ كَلَّلَ الْجَبِينْ is Matt 27:29 (עֲטֶרֶת קוֹצִים); the Hebrew keeps עָטַר as the verb of crowning and הַמֵּצַח for the brow, so the mock-coronation is described in its own terms.",
+    "4:1 בַּמָּה אֲשַׁלֵּם לְגֹאֲלִי — the Arabic بِمَ أُكَافِي مُنْقِذِي is Ps 116:12 (מָה־אָשִׁיב לַיהוָה); the Hebrew uses שִׁלֵּם ('repay') rather than the psalm's שׁוּב, because the stanza answers with a payment — the consecration of the next two lines."
+  ]
+}

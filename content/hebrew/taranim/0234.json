@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 234,
+  "title_he": "עוֹד מְעַט יִתָּקַע הַשּׁוֹפָר וִירִיעַ צְבָא שָׁמַיִם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי מַרְאֶה נִפְלָא וָנָאֶה",
+        "בּוֹ תִשְׂמַחְנָה הַנְּפָשׁוֹת",
+        "יֵשׁוּעַ בָּא בִּתְרוּעָה",
+        "לָקַחַת לוֹ אֶת־הַכַּלָּה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עוֹד מְעַט יִתָּקַע שׁוֹפָר",
+        "וְיָרִיעַ צְבָא שָׁמַיִם",
+        "יֵשׁוּעַ בָּא בִּכְבוֹדוֹ",
+        "עֲלוּ לִקְרָאתוֹ בָּאֲוִיר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נִשָּׂא בְּכָבוֹד נַעֲלֶה",
+        "אֲרוּחַת חֲתֻנַּת הַשֶּׂה",
+        "וּרְבָבוֹת יִתְּנוּ תוֹדָה",
+        "וַאֲלָפִים לוֹ יִשְׁתַּחֲווּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וּסְבִיבוֹ נִשָּׁאֵר תָּמִיד",
+        "מְזַמְּרִים וּמְרִיעִים",
+        "יְשַׂבְּעֵנוּ יַחְדָּו יָפְיוֹ",
+        "וְעַד לְעוֹלְמֵי עוֹלָמִים"
+      ]
+    }
+  ],
+  "review": [
+    "2:1–2 יִתָּקַע שׁוֹפָר … וְיָרִיעַ צְבָא שָׁמַיִם — the Arabic يَدْوِي بُوقٌ وَيَهْتِفُ جُنْدُ السَّمَاء is 1 Thess 4:16 (יְהוָה … בְּקוֹל שׁוֹפָר) with 1 Cor 15:52; תָּקַע is the blowing verb of the shofar and רִיעַ the shout, so the two sounds of the verse stay two verbs.",
+    "2:4 עֲלוּ לִקְרָאתוֹ בָּאֲוִיר — the Arabic اصْعَدُوا إِلَى الْهَوَاء is 'ascend into the air' (1 Thess 4:17, בָּאֲוִיר); the Hebrew keeps the ascent imperative addressed to the saints, since the print puts it in quotation marks as the archangel's cry and not as a description.",
+    "3:2 אֲרוּחַת חֲתֻנַּת הַשֶּׂה — the Arabic عَشَاءُ عُرْسٍ لِلْخَرُوف is Rev 19:9 (אֲרוּחַת חֲתֻנַּת הַשֶּׂה) quoted almost verbatim; חֲתֻנָּה is the glossary's fixed wedding noun, and שֶׂה is kept for the Lamb rather than כֶּבֶשׂ, since the Apocalypse's phrase is the one being cited.",
+    "3:3–4 רְבָבוֹת … וַאֲלָפִים — the Arabic رَبَوَاتٌ … وَالْأُلُوف is the myriads-and-thousands of Dan 7:10 (רִבְּוָן … וְאַלְפִין) and Rev 5:11; the two numbers are kept as two, since the Arabic distinguishes them and the verse's force is innumerability.",
+    "4:4 וְעַד לְעוֹלְמֵי עוֹלָמִים — the Arabic إِلَى آبَادِ الْآبِدِين is the Hebrew idiom's own shape (Ps 145:13, מַלְכוּתְךָ … בְּכָל־דֹּר וָדֹר); the doubled עוֹלָם is used because 'to the ages of ages' is a Hebrew construction before it is a Greek one."
+  ]
+}

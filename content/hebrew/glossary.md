@@ -68,6 +68,13 @@ Arabic wins.
 | معين / ينبوع (spring, fountain) | מַעְיָן | Ps 114:8, Prov 5:18; keep apart from `בְּאֵר` (well). |
 | ملك / نصيب (portion, possession) | נַחֲלָה | Num 18:20; what is owned is also what is given. |
 | صدى (echo) | הֵד | Job 37:4; used for "echo back to the Father" (tr0225 1:5). |
+| مرساة (anchor) | עֹגֶן | Post-biblical noun, kept for the nautical metaphor (Heb 6:19 in Greek); the verb `עָגַן` exists only in the "rest" sense. |
+| نعيم / قناعة (contentment) | נַחַת | Isa 30:15 (`בְּנַחַת וָשָׁלוֹם`), Eccl 6:5; quiet satisfaction, not the Modern `שביעות רצון`. |
+| بخور (incense) | קְטֹרֶת | Ps 141:2, Rev 8:3–4; the cultic noun for prayer, never `קטורת` spelled loose. |
+| بيان / تعبير (expression, utterance) | בִּטּוּי | Post-biblical, unavoidable for the abstract `بَيَان`; the verb is `ביטא`. |
+| ربح / خسارة (profit / loss) | רֶוַח / הֶפְסֵד | Phil 3:7–8's accounting; `רֶוַח` is the biblical profit-noun, `הֶפְסֵד` post-biblical for loss. |
+| رئيس السلام (Prince of Peace) | שַׂר־שָׁלוֹם | Isa 9:5; kept as a fixed title in the construct, not "a peaceful prince". |
+| ناموس (law, Rom/Gal) | נָמוֹס | The Greek loan, as in the Rabbinic and Pauline Hebrew tradition; distinguishes the Torah-as-system from `תּוֹרָה`. |
 
 ## Pointing conventions
 

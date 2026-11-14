@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 233,
+  "title_he": "נַפְשִׁי, עוּרִי וְשִׁקְדִי עַל־הַתְּפִלָּה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נַפְשִׁי, שְׁקֹד וְהִתְמַצֵּא",
+        "תָּמִיד עַל־הַתְּפִלָּה",
+        "כִּי הִיא כְּלֵי מִלְחַמְתֵּנוּ",
+        "וְעֹז כָּל־חַיֵּינוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הִיא פּוֹתַחַת שָׁמַיִם",
+        "וּבָהּ גַּם־נַעֲלֶה",
+        "לְכִסֵּא חֶסֶד אַדִּיר",
+        "בְּסוֹד פְּעֻלָּתָהּ רַבָּה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִיא קְטֹרֶת עוֹלָה",
+        "בְּהֵיכַל קָדְשֶׁךָ",
+        "וְאַף הַזֶּבַח אֲשֶׁר",
+        "תַּקְרִיב נַפְשִׁי לְפָנֶיךָ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "יָרִיחַ אֱלֹהֵינוּ",
+        "וְרֵיחָהּ כַּצָּרִי",
+        "וְעִמּוֹ תִּמְצָא רָצוֹן",
+        "וּפְעֻלָּתָהּ נִפְלֵאת"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "מְשַׁבֶּרֶת עֹז הָאוֹיֵב",
+        "וּמְבַטֶּלֶת רִיב",
+        "גּוֹבֶרֶת בְּמִלְחַמְתָּהּ",
+        "וּמְבִיאָה שָׁלוֹם"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "הוֹי לֵב, בְּכָל־דְּבָרֶיךָ",
+        "הַתְמֵד בַּתְּפִלָּה",
+        "בַּבֹּקֶר פְּתַח בָּהּ יוֹמְךָ",
+        "וּבָהּ חֲתֹם עַרְבֶּךָ"
+      ]
+    }
+  ],
+  "review": [
+    "2:3 לְכִסֵּא חֶסֶד אַדִּיר — the Arabic لِعَرْشِ نِعْمَةِ الْقَوِيّ is Heb 4:16 (כִּסֵּא הֶחָסֶד); the Hebrew keeps the construct and the adjective, so the throne is named by the attribute the epistle names, rather than by 'the mighty One's throne'.",
+    "3:1–2 הִיא קְטֹרֶת עוֹלָה בְּהֵיכַל קָדְשֶׁךָ — the Arabic هِيَ بَخُورٌ صَاعِدٌ فِي هَيْكَلِ الْقُدْسِ is Ps 141:2 (תִּכּוֹן תְּפִלָּתִי קְטֹרֶת) with Rev 8:3–4; קְטֹרֶת is kept as the cultic noun and the temple is the sanctuary, so prayer is described in the vocabulary of the incense service and not as a metaphor of smell alone.",
+    "3:3–4 הַזֶּבַח אֲשֶׁר תַּקְרִיב נַפְשִׁי — the Arabic الذَّبِيحَةُ الَّتِي تَرْفَعُهَا نَفْسِي is 'the sacrifice which my soul lifts'; זֶבַח and the Hiphil of קָרַב are kept together, since the Arabic has both the victim and the offering-up, and Hebrew needs both nouns to say it.",
+    "4:1–2 יָרִיחַ … וְרֵיחָהּ כַּצָּרִי — the Arabic يَشْتَمُّهَا … وَعَرْفُهَا كَالطِّيب is the sacrifice-of-pleasant-odour language (Gen 8:21, רֵיחַ הַנִּיחֹחַ); the Hebrew keeps the verb of smelling, which is the bold part of the stanza, rather than softening it to 'accepts it'.",
+    "5:3–4 גּוֹבֶרֶת … וּמְבִיאָה שָׁלוֹם — the Arabic تَغْلِبُ فِي جِهَادِهَا … وَتُوجِدُ السَّلَام is 'triumphs in its struggle … and brings peace into being'; the Hebrew uses גָּבַר (Exod 17:11, וְגָבַר יִשְׂרָאֵל) so the victory is the same verb as Israel's victory while Moses prays — which is the stanza's argument."
+  ]
+}

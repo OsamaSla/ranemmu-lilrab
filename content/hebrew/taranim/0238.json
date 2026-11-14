@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 238,
+  "title_he": "אֱלֹהֵינוּ וַאֲדֹנֵינוּ, בְּבִנְךָ אָהַבְתָּנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֱלֹהֵינוּ אֲדֹנֵינוּ",
+        "בְּבִנְךָ אָהַבְתָּנוּ",
+        "בָּרוּךְ אַתָּה בּוֹ",
+        "כִּי בוֹ גַּם־בֵּרַכְתָּנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הָיָה זֶה בַּעֲצָתְךָ",
+        "אָבִינוּ, לְהָבִיא אוֹתָנוּ",
+        "אֶל־מַעֲמַד כְּבוֹדֶךָ",
+        "בַּחֶסֶד תְּבִיאֵנוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוֹי מֶה־גָּדוֹל הַחֶסֶד",
+        "אֲשֶׁר עָלָה עַל־כָּל־בִּטּוּי",
+        "שָׁלֵם וּמֻחְלָט הוּא",
+        "וְלֹא־תָּלוּי בַּזְּמָן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כִּי בוֹ בְּחַרְתָּנוּ",
+        "לִהְיוֹת קְדוֹשִׁים לָךְ",
+        "וּבוֹ קָרָאתָ לָנוּ",
+        "וּבוֹ נִהְיֵינוּ בָנִים"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "כְּבוֹדְךָ וְשִׂמְחוֹתֶיךָ",
+        "וְכָל־עֹשֶׁר בֵּיתֶךָ",
+        "כֻּלָּם הָיוּ לָנוּ",
+        "אָבִינוּ, בִּידִידֶךָ"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "וְהַכָּבוֹד לְשִׁמְךָ",
+        "בַּאֲדֹנֵינוּ יֵשׁוּעַ",
+        "וְהַתּוֹדָה וְהַתְּהִלָּה",
+        "עִם־הִשְׁתַּחֲוָיָה וָשֶׁבַח"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Ephesians 1 in order: 1:1–4 = vv.3–4 (בְּבִנְךָ … בֵּרַכְתָּנוּ), 2:1–4 = vv.5,9 (the good pleasure of His will), 3:1–4 = vv.7–8 (the riches of grace), 4:1–4 = vv.4,5,11 (chosen, called, made sons), 5:1–4 = vv.11,18 (the inheritance), 6:1–4 = vv.6,12,14 (glory in Christ). The Hebrew follows the epistle's own nouns wherever the Arabic paraphrases.",
+    "1:2–4 בְּבִנְךָ אָהַבְתָּנוּ … בּוֹ גַּם־בֵּרַכְתָּנוּ — the Arabic فِي ابْنِكَ قَدْ أَحْبَبْتَنَا … فِيهِ قَدْ بَارَكْتَنَا keeps 'in Your Son' in both lines; the Hebrew keeps the בְ twice, since the epistle's argument is that the love and the blessing have the same location, and that location is a person.",
+    "3:2 עָלָה עַל־כָּל־בִּטּוּי — the Arabic فَاقَتْ عَلَى كُلِّ بَيَان is 'surpassed all expression'; בִּטּוּי is post-biblical for utterance, unavoidable because the Arabic's بَيَان is abstract speech and biblical Hebrew has no noun for 'expression'. The verb עָלָה is kept from the psalm's 'high above' idiom (Ps 97:9).",
+    "5:4 בִּידִידֶךָ — the Arabic فِي مَحْبُوبِكَ is Eph 1:6 (בַּאֲהוּבוֹ, 'in the Beloved'); the Hebrew uses יָדִיד, the Song's and Isaiah's word for the beloved (Isa 5:1, יְדִידִי), so the title is relational rather than a possessive 'Your beloved one'.",
+    "6:3–4 וְהַתּוֹדָה וְהַתְּהִלָּה … הִשְׁתַּחֲוָיָה וָשֶׁבַח — the Arabic وَالْحَمْدُ وَالثَّنَا الْعَظِيم … مَعَ السُّجُودِ وَالْمَدِيح keeps four distinct acts (thanks, praise, worship, extolling); the Hebrew keeps four, with הִשְׁתַּחֲוָיָה as the bowing of Ps 95:6, so doxology is bodily and not only vocal."
+  ]
+}
