@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 96,
+  "title_he": "הַלְלוּיָהּ, פָּדָה אוֹתָנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הַלְלוּיָהּ, אֲדֹנֵינוּ",
+        "פָּדָה אוֹתָנוּ לָנֶצַח",
+        "כָּלָה זִקַּתְנוּ",
+        "לֶעָפָר וְלַבָּשָׂר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הַלְלוּיָהּ, קָם אֲדֹנָי",
+        "נִצְדַּקְנוּ בְּדָמוֹ",
+        "וּבוֹ לָנוּ שָׁלוֹם",
+        "מַתְּנוֹת אַהֲבָתוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הַלְלוּיָהּ, קָם אֲדֹנָי",
+        "קַמְנוּ אִתּוֹ בְּיֶדַע",
+        "כָּלָה הַמִּשְׁפָּט",
+        "שִׂמְחוּ בְכָל־עֵת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הַלְלוּיָהּ, גַּדְּלוּ",
+        "חֶסֶד הַגֹּאֵל הֶעָשִׁיר",
+        "וְקַוּוּ לְבוֹאוֹ",
+        "לִישׁוּעַת עוֹלָם"
+      ]
+    }
+  ],
+  "review": [
+    "הַלְלוּיָהּ opens every stanza, as هَلِّلُويَا does in the Arabic; it is left untranslated, as in the Psalter and in hymn 74.",
+    "1:3–1:4 כָּלָה זִקַּתְנוּ / לֶעָפָר וְלַבָּשָׂר — 'our kinship with dust and flesh has ended'; the Arabic نِسْبَتُنَا لِلتُّرَابِ وَالْجَسَد is a single construct, and זִקָּה is the post-biblical noun for a legal bond, chosen because the clause needs a subject.",
+    "2:2 נִצְדַּקְנוּ בוֹ — Romans 5:1 (נִצְדַּקְנוּ מִן־הָאֱמוּנָה); the Arabic فَتَبَرَّرْنَا بِهِ is 'we were justified', and the niphal of צדק is the fixed term.",
+    "3:2 קַמְנוּ אִתּוֹ בְּיֶדַע — 'we rose with Him in certainty', for قُمْنَا مَعَهُ بِالْيَقِين; בְּיֶדַע ('with knowledge') is used for the Arabic's بِالْيَقِين because יֶדַע also carries 'certain knowledge' in liturgical usage.",
+    "3:3 כָּלָה הַמִּשְׁפָּט — 'judgment has ended'; the Arabic دَيْنُونَةٌ is the condemnation of Rom 8:1, and מִשְׁפָּט is the biblical noun for it."
+  ]
+}

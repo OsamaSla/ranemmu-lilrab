@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 91,
+  "title_he": "יְהֹוָה יֵשׁוּעַ אֲדֹנֵינוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יְהֹוָה יֵשׁוּעַ אֲדֹנֵינוּ",
+        "הָיִיתָ לִפְנֵי הָרִים",
+        "חֶמְדַּת הָאָב, וְלִפְנֵי",
+        "הִוָּסֵד גְּבָעוֹת"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הָיִיתָ תָּמִיד שַׁעֲשׁוּעַ",
+        "לְלֵב הָאָב בִּמְרוֹמָיו",
+        "בְּאֵין תְּהֹמוֹת הָיוּ",
+        "וּבְאֵין מַעְיְנוֹת מָיִם"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּרֵאשִׁית כַּאֲשֶׁר עָשָׂה",
+        "אֶרֶץ וַיָּכֶן שָׁמַיִם",
+        "הָיִיתָ שְׂשׂוֹנוֹ, וְלֹא",
+        "חָדַלְתָּ עַד־קֵץ עַד"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַךְ רוֹאִים אָנוּ פֶּלֶא גָדוֹל",
+        "כִּי בִּבְנֵי אָדָם",
+        "שַׁעֲשׁוּעִים בָּנוּ",
+        "מֵעֵבֶר לַשֵּׂכֶל"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הִנֵּה פֶּלֶא חֶסֶד רַב",
+        "מֵעַל פְּשָׁעִים נִשָּׂא",
+        "וְשָׂשׂוֹן בָּנוּ",
+        "נִרְשַׁם לִפְנֵי הָרִים"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 יְהֹוָה יֵשׁוּעַ — the Arabic itself prints يَهْوَه يَسُوعُ رَبَّنَا, applying the divine name to Jesus; the Hebrew keeps the tetragrammaton exactly as the Arabic has it rather than substituting אֲדֹנָי, because the hymn's whole argument is that this is who was before the mountains.",
+    "1:2–1:4 — the stanza is Psalm 90:2 (בְּטֶרֶם הָרִים יֻלָּדוּ … וַתְּהִי אֶרֶץ וְתֵבֵל) crossed with Proverbs 8:25–30 (בְּטֶרֶם הָרִים הָטְבָּעוּ … וָאֶהְיֶה שַׁעֲשׁוּעִים); the Arabic قَبْلَ الْجِبَال … قَبْلَ تَكَوُّنِ التِّلَال is those verses.",
+    "2:1 שַׁעֲשׁוּעַ — Proverbs 8:30 (וָאֶהְיֶה שַׁעֲשׁוּעִים יוֹם יוֹם); the Arabic لَذَّةً is 'delight', and שַׁעֲשׁוּעַ is the word the Wisdom text uses of the Son's eternal delight.",
+    "2:3 בְּאֵין תְּהֹמוֹת — Proverbs 8:24 (בְּאֵין תְּהֹמוֹת חוֹלָלְתִּי); the Arabic إِذْ لَمْ يَكُنْ غَمْرٌ quotes that line, and Hebrew keeps תְּהוֹמוֹת.",
+    "3:4 חָדַלְתָּ עַד־קֵץ עַד — 'You did not cease to the very end of the age'; the Arabic وَلَمْ تَزَلْ إِلَى طُولِ الْمَدَى is 'You have not ceased through all duration', and the doubled עַד reproduces the Arabic's emphasis."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 84,
+  "title_he": "בָּרוּךְ אֱלֹהֵינוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בָּרוּךְ אֱלֹהֵינוּ",
+        "בִּבְנְךָ בֵּרַכְתָּנוּ",
+        "לִפְנֵי בְּרִיאַת עוֹלָם",
+        "בּוֹ בָחַרְתָּ בָּנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוֹי פֶּלֶא הַחֶסֶד",
+        "שֶׁשָּׁפַכְתָּ מֵעוֹלָם",
+        "וּבוֹ הוֹבַלְתָּנוּ",
+        "בְּחֵן אֶל־הַשֶּׂה הַהוּא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִיא הַשֹּׁמֶרֶת אוֹתָנוּ",
+        "בּוֹ בָּטוּחַ לָנֶצַח",
+        "דַּי לָנוּ בְּחֻלְשָׁתֵנוּ",
+        "כִּי אַתָּה עֵזֶר וּמִשְׁעָן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תּוֹדָה לְשִׁמְךָ עַל",
+        "שְׁלֹחַ בִּנְךָ הֶחָבִיב",
+        "מֵת מֵאַהֲבָה לָנוּ",
+        "נֹשֵׂא חֶרְפַּת הַצְּלָב"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 — the stanza is Ephesians 1:3–4 (בָּרוּךְ אֵל … אֲשֶׁר בֵּרְכָנוּ בְּכָל־בִּרְכָה … בַּמָּשִׁיחַ … בְּטֶרֶם הִוָּסֵד תֵּבֵל); the Arabic مُبَارَكٌ إِلٰهَنَا … فِيهِ لَقَدِ اخْتَرْتَنَا is that passage, so the Hebrew follows its verbs.",
+    "2:4 אֶל־הַשֶּׂה הַהוּא — 'to that Lamb'; the Arabic إِلَى ذَاكَ الْحَمَل points back to the Lamb of 1:4's thought, and Hebrew keeps the demonstrative rather than naming Christ again.",
+    "3:1 הִיא הַשֹּׁמֶרֶת אוֹתָנוּ — 'it is what guards us'; the Arabic feminine pronoun refers to grace, and Hebrew keeps the feminine with הִיא.",
+    "3:3 בְּחֻלְשָׁתֵנוּ — 'in our weakness', for فِي ضَعْفِنَا; חֻלְשָׁה is the glossary term for weakness and is used again in hymn 76.",
+    "4:4 נֹשֵׂא חֶרְפַּת הַצְּלָב — 'bearing the reproach of the cross' (Heb 13:13, חֶרְפָּתוֹ); the Arabic عَارَ الصَّلِيب is that phrase, and חֶרְפָּה is its biblical noun."
+  ]
+}

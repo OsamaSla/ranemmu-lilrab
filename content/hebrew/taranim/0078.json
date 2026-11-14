@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 78,
+  "title_he": "אֲדֹנָי מַשְׁקֶה צָמָא",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנָי מַשְׁקֶה צָמָא",
+        "נַפְשֵׁנוּ בָּעֲרָבָה",
+        "כָּל־מַעְיָן יָבֵשׁוּ",
+        "וְאַתָּה מָקוֹר חַיִּים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אָמַרְתָּ: בֹּאוּ צְמֵאִים",
+        "שִׂמְחוּ בְּלֹא מְחִיר",
+        "לֹא תִּיגְעוּ לָרִיק",
+        "בִּי הַחַיִּים וָחֶסֶד"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "תּוֹדָה, הֱבֵאתָנוּ",
+        "בְּחַסְדְּךָ הַנִּשְׂגָּב",
+        "אֶל־מֵי הַמְּנוּחָה",
+        "מַתָּ עָלֵינוּ בַּצְּלָב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תּוֹדָה לְאֹהֲבֵנוּ",
+        "וַיִּתֵּן אֶת־בְּנוֹ",
+        "וַיָּמָת בְּצַיְתָנוּת",
+        "לָנוּ תִּפְאֶרֶת הַצְּלָב"
+      ]
+    }
+  ],
+  "review": [
+    "1:4 מָקוֹר חַיִּים — 'fountain of life' (Ps 36:10, מְקוֹר חַיִּים); the Arabic يَنْبُوعُ الْحَيَاة is the same image, and מָקוֹר is the psalm's own word.",
+    "2:1–2:3 — the stanza quotes Isaiah 55:1 (הוֹי כָּל־צָמֵא לְכוּ לַמַּיִם … בְּלוֹא כֶסֶף), which is what the Arabic هَلُمُّوا يَا عِطَاش / بِلَا ثَمَن is citing; the Hebrew keeps the invitation's shape rather than the Arabic's word order.",
+    "2:3 לֹא תִּיגְעוּ לָרִיק — 'you shall not toil for nothing' (Isa 65:23, לֹא יִיגְעוּ לָרִיק); the Arabic لَا تَتْعَبُوا بِلَا انْتِعَاش is close to that promise.",
+    "3:2 בְּחַסְדְּךָ הַנִּשְׂגָּב — the Arabic بِاللُّطْفِ السَّامِي is 'sublime kindness'; נִשְׂגָּב is the glossary word for the exalted, used here of grace.",
+    "4:2 וַיִּתֵּן אֶת־בְּנוֹ — John 3:16 (אֶת־בְּנוֹ יְחִידוֹ נָתַן); the Arabic وَبَذَلَ ابْنَهُ الْحَبِيب is that verse, and 'beloved' is carried in the next line's sense rather than repeated."
+  ]
+}

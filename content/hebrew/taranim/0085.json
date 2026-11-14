@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 85,
+  "title_he": "לְךָ הַתְּהִלָּה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לְךָ הַתְּהִלָּה",
+        "נָשָׂאתָ חֶטְאֵנוּ",
+        "וּבְךָ הַפְּדוּת לָנוּ",
+        "תִּקְוָתֵנוּ צִדְקֵנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּךָ נִשְׁלַם הַמַּעֲשֶׂה",
+        "וּרְצוֹן אֵל הוּשְׁלַם",
+        "לָנוּ כָּל־הַמִּשְׁאָלוֹת",
+        "וְהַבְטָחוֹת עוֹלָם"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "לָנוּ בְךָ הַמְּלֹא",
+        "וְגַם הַמָּצָב הַטּוֹב",
+        "פֶּלֶא שֶׁל חֶסֶד",
+        "הֱבִיאָנוּ לִשְׁלֵמוּת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַתָּה אוֹצַר הָעֹשֶׁר",
+        "מְקוֹר שִׂמְחַת לֵב",
+        "מַתָּנוֹת וְנֶחָמָה",
+        "אַתָּה חֶלְקֵנוּ הַטּוֹב"
+      ]
+    }
+  ],
+  "review": [
+    "1:2–1:3 כִּי נָשָׂאתָ עֲוֺנֵנוּ / וּבְךָ הַפְּדוּת — Isaiah 53:6 (יְהוָה הִפְגִּיעַ בּוֹ אֵת עֲוֺן כֻּלָּנוּ); the Arabic إِذْ حَمَلْتَ إِثْمَنَا is that verse, and נָשָׂאתָ is its verb.",
+    "2:2 וּרְצוֹן אֵל הוּשְׁלַם — 'God's pleasure was completed'; the Arabic رِضَا اللهِ اكْتَمَل is the same, and the passive הוּשְׁלַם keeps the divine subject implicit.",
+    "2:4 וְהַבְטָחוֹת עוֹלָם — 'and promises of old/eternity'; the Arabic مَوَاعِيدُ الْأَزَل is 'promises of eternity', and עוֹלָם in construct covers both 'ancient' and 'everlasting'.",
+    "3:2 הַמָּצָב הַטּוֹב — 'the good standing', for أَحْسَنُ حَال; מָצָב is post-biblical for 'state', but the line needs a noun where a clause would not fit.",
+    "4:2 מְקוֹר שִׂמְחַת לֵב — Psalm 4:8 (שִׂמְחָה בְלִבִּי); the Arabic نَبْعُ أَفْرَاحِ الْقُلُوب is a construct chain, and Hebrew keeps the singular heart as the psalm does."
+  ]
+}

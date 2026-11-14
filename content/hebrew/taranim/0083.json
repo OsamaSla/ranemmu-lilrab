@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 83,
+  "title_he": "כִּי נָשִׁיר בְּזֹהַר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "כִּי נָשִׁיר בְּזֹהַר",
+        "כְּבוֹד זֶה שֶׁמֵּת וְקָם",
+        "וְעָלָה הַשָּׁמָיְמָה",
+        "לָקַח מָקוֹם עֶלְיוֹן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "צֶלֶם אֱלֹהִים, בּוֹ",
+        "וּבוֹ כֹּל נִבְרָא",
+        "הוּא בְּכוֹר, וּבוֹ",
+        "הַכֹּל גַּם־נִפְדָּה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא בְּנוֹ הֶחָבִיב",
+        "וְהוּא רֹאשׁ הַגּוּף",
+        "וּבוֹ הִשְׁלִים אוֹתָנוּ",
+        "כְּעֵצָה נִצְחִית"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מַה־פֶּלֶא, כִּי בוֹ",
+        "אָנוּ נִמְלֵאנוּ",
+        "אֵין בָּנוּ חֶסֶר",
+        "בּוֹ הָיִינוּ שְׁלֵמִים"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "לוֹ שַׁיָּכוּתֵנוּ",
+        "וְהוּא רֹאשֵׁנוּ הַנֶּהְדָּר",
+        "מַה־גָּדוֹל אָשְׁרֵנוּ",
+        "בְּמַעֲמָדֵנוּ הֶחָדָשׁ"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "לִבֵּנוּ נִכְסָף",
+        "אֵלָיו הָעֶלְיוֹן מִכֹּל",
+        "הוּא גֹּאֲלֵנוּ",
+        "אֲשֶׁר נְיַחֵל מִשָּׁמַיִם"
+      ]
+    }
+  ],
+  "review": [
+    "2:1–2:2 צֶלֶם אֱלֹהִים … וּבוֹ כֹל נִבְרָא — Colossians 1:15–16 (צֶלֶם הָאֱלֹהִים … כָּל־דָּבָר נִבְרָא בוֹ); the Arabic صُورَةُ اللهِ بِهِ / وَلَهُ الْكُلُّ خُلِق is that passage.",
+    "2:3–2:4 הוּא בְּכוֹר … הַכֹּל גַּם־נִפְדָּה — the Arabic splits الْـ / ـكُلُّ across the line break; Hebrew cannot split a word, so 'all' is repeated at the head of the second clause instead.",
+    "3:3 הִשְׁלִים אוֹתָנוּ — 'He reconciled us' (Col 1:20, הַשְׁלִים); the Arabic صَالَحَنَا is the same verb, and the hiph'il of שלם is its fixed Hebrew rendering.",
+    "4:3 אֵין בָּנוּ חֶסֶר — 'there is no lack in us'; the Arabic مَا بِنَا نَقْصٌ is the same negation, and חֶסֶר is the biblical noun for what is lacking (Eccl 1:15).",
+    "5:1 שַׁיָּכוּתֵנוּ — 'our belonging', for انْتِسَابُنَا; the noun is post-biblical, but the abstract is required and the biblical alternative (לְךָ אֲנַחְנוּ) would need a whole clause."
+  ]
+}

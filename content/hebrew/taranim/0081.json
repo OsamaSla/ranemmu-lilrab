@@ -1,0 +1,60 @@
+{
+  "book": "taranim",
+  "number": 81,
+  "title_he": "הוֹד הַכָּבוֹד, צֶלֶם עַצְמוּתוֹ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹד הַכָּבוֹד, צֶלֶם עַצְמוּתוֹ",
+        "אַתָּה בֶן־אֱלֹהִים, אֲדוֹן הַחֶסֶד",
+        "בְּפָנֶיךָ נִרְאֶה אַהֲבַת עֶלְיוֹן",
+        "בְּפָנֶיךָ הַיָּפִים, מְלֵאֵי הוֹד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יָחִיד הָאָב, בֶּן־חֵיקוֹ",
+        "מִי זוּלָתְךָ יַגִּיד אַהֲבָתוֹ",
+        "אַתָּה גִּלִּיתָ אַהֲבָה בַּפְּדוּת",
+        "לְאָשֵׁם מֵת בַּעֲוֺנוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אַתָּה הַנּוֹשֵׂא בִּגְבוּרָה",
+        "אֶת־הַכֹּל, אָכֵן יָצַרְתָּ עוֹלָמִים",
+        "אָכֵן כִּלַּלְתָּם בְּחָכְמָה רַבָּה",
+        "הֵם מַגִּידִים כְּבוֹדְךָ בְּכָל־עֵת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הָיִיתָ תָּמִיד עֶדֶן אֵל עֶלְיוֹן",
+        "אֶחָד בְּעַצְמוּת, אַתָּה הַמָּשִׁיחַ",
+        "הֲלָקַחְתָּ אָז צוּרַת הָעֶבֶד",
+        "לִהְיוֹת שֵׂה אֱלֹהִים הַשָּׁחוּט"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הֲנָשָׂאתָ אֶת־אַשְׁמֵנוּ עַל־הַצְּלָב",
+        "חֲמַת מִשְׁפַּט אֵל הַנּוֹרָאָה",
+        "מַה־נְּסַפֵּר, אֲדֹנֵינוּ הַגֹּאֵל",
+        "לְךָ נִכְרַע בְּיִרְאָה, הוֹי דּוֹדִי"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 צֶלֶם עַצְמוּתוֹ — Hebrews 1:3 (אֲשֶׁר הוּא זֹהַר כְּבוֹדוֹ וְצֶלֶם עַצְמוּתוֹ); the Arabic رَسْمَ الْجَوْهَرِ is that verse, and Hebrew keeps both nouns rather than paraphrasing.",
+    "2:1 בֶּן־חֵיקוֹ — 'Son of His bosom' (John 1:18, ὁ ὢν εἰς τὸν κόλπον); the Arabic ابْنَ حِضْنِهِ is the same idiom, and חֵיק is the biblical word for the bosom.",
+    "2:2 מִי זוּלָתְךָ יַגִּיד — the Arabic مَنْ سِوَاكَ يُخْبِرُ is a rhetorical question; זוּלָתְךָ is the glossary word for 'besides You' and keeps the question sharp.",
+    "4:2 אֶחָד בְּעַצְמוּת — 'one in essence', for وَاحِدًا فِي الْجَوْهَرِ; the term is credal rather than biblical, but it is the fixed liturgical rendering and no scriptural phrase carries the doctrine in four syllables.",
+    "4:4 שֵׂה אֱלֹהִים הַשָּׁחוּט — 'the slain Lamb of God' (John 1:29, שֵׂה הָאֱלֹהִים); the Arabic حَمَلَ اللهِ الذَّبِيح is that title, and שָׁחוּט is the participle of the sacrificial verb.",
+    "5:2 חֲמַת מִשְׁפַּט אֵל — 'the wrath of God's judgment'; the Arabic غَضْبَةَ الْعَدْلِ الْإِلٰهِيّ is a genitive chain, and Hebrew keeps two constructs so the line ends on the adjective."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 79,
+  "title_he": "אָבִינוּ, אַתָּה הַמָּקוֹר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אָבִינוּ, אַתָּה הַמָּקוֹר",
+        "לְכָל־טוֹב וָחֶסֶד רַב",
+        "בִּבְנְךָ בֵּרַכְתָּנוּ",
+        "בְּכָל־שֶׁפַע, הוֹי נָדִיב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כִּי אָהַבְתָּ אוֹתָנוּ",
+        "נָתַתָּ לָנוּ חַיִּים",
+        "מֵת בַּעֲדֵנוּ פִּדְיוֹן",
+        "אֲדֹן הַחַיִּים וְהַיֶּשַׁע"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בּוֹ בָחַרְתָּ בָּנוּ",
+        "לִפְנֵי זְמָן עוֹלָמִים",
+        "בְּחֶסֶד נִפְלָא מְאֹד",
+        "תּוֹדָה לְשֵׁם עֶלְיוֹן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אָנוּ בוֹ נִתְפָּאֵר",
+        "כִּי־בוֹ הִשְׁלַמְתָּנוּ",
+        "וְעִמּוֹ אָנוּ נְיַחֵל",
+        "בְּבִטָּחוֹן נַחֲלָתֵנוּ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "כָּל־זֹאת הָיְתָה לָּנוּ",
+        "כִּרְצוֹן חַסְדְּךָ הַטּוֹב",
+        "תּוֹדָה נָשִׁיבָה לְּךָ",
+        "עַל־עֹשֶׁר רַחֲמֶיךָ"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 לְכָל־טוֹב וָחֶסֶד רַב — 'for all good and abundant grace'; the Arabic لِلْخَيْرِ وَاللُّطْفِ الْعَظِيم is a pair of nouns, and Hebrew keeps the pair while רַב fills the line.",
+    "2:2–2:3 נָתַתָּ לָנוּ חַיִּים / מֵת בַּעֲדֵנוּ פִּדְיוֹן — the Arabic إِذْ مَاتَ عَنَّا فِدْيَةً is one clause; Hebrew splits it so that 'ransom' lands on the cadence.",
+    "3:2 לִפְנֵי זְמָן עוֹלָמִים — 'before the time of ages', for قَبْلَ الزَّمَانِ الْأَزَلِيّ; the construct is the biblical way of saying 'before everlasting time' (Ps 55:20, מִקֶּדֶם).",
+    "4:2 הִשְׁלַמְתָּנוּ — 'You made us whole/reconciled'; the Arabic صَالَحْتَنَا is 'reconciled', and the hiph'il of שלם carries both 'complete' and 'at peace'.",
+    "5:2 כִּרְצוֹן חַסְדְּךָ הַטּוֹב — 'according to the good will of Your grace', for بِحَسْبِ قَصْدِ نِعْمَتِك; רָצוֹן is the glossary word for God's purpose."
+  ]
+}

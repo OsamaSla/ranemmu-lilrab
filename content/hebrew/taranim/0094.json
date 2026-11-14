@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 94,
+  "title_he": "הַגִּישׁוּ לַאדֹנָי שֶׁבַח",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הַגִּישׁוּ לַאדֹנָי שֶׁבַח",
+        "וְהִשְׁתַּחֲוָיָה חַיֶּבֶת",
+        "כִּי בְדָמוֹ פְּדָנוּ",
+        "נֹשֵׂא בַעֲדֵנוּ חֵמָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הַגִּישׁוּ הוֹדָיָה וָשֶׁבַח",
+        "לַאֲשֶׁר עָלָה",
+        "מִמַּעֲמַקֵּי קֶבֶר קָם",
+        "עוֹלֶה אֶל־הַשָּׁמָיְמָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מֵת בַּעֲדֵנוּ בְּעוֹד",
+        "כֻּלָּנוּ מֵתִים בַּחֵטְא",
+        "וּבְמוֹתוֹ הֶחֱיָה",
+        "אֶת־אֲשֶׁר הָיָה מֵת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נוֹתֵן לָנוּ מַעֲמָד",
+        "אִתּוֹ מִבֵּית לַפָּרֹכֶת",
+        "וְיָבוֹא אֵלֵינוּ מְהֵרָה",
+        "לִישׁוּעָה נֶחְמָדָה"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "גַּדְּלוּהוּ וְכַבְּדוּהוּ",
+        "וְהַעֲרִיכוּ פָעֳלוֹ",
+        "זִכְרוּהוּ וְשַׂמְּחוּהוּ",
+        "וְגַדְּלוּ אֶת־אִישְׁכֶם"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 הַגִּישׁוּ … שֶׁבַח / וְהִשְׁתַּחֲוָיָה חַיֶּבֶת — the Arabic قَدِّمُوا … سُبْحًا وَسُجُودًا قَدْ وَجَب uses two imperatives of obligation; Hebrew keeps the imperative and renders the obligation as a predicate ('worship is due').",
+    "1:4 נֹשֵׂא בַעֲדֵנוּ חֵמָה — 'bearing wrath on our behalf'; the Arabic حَامِلًا عَنَّا الْغَضَب is the same phrase as hymn 56's cup, kept without the noun 'cup' because the line is already full.",
+    "3:1–3:2 מֵת בַּעֲדֵנוּ בְּעוֹד / כֻּלָּנוּ מֵתִים בַּחֵטְא — Romans 5:8 (בְּעוֹד שֶׁהָיִינוּ חַטָּאִים); the Arabic حِينَ كُنَّا … أَمْوَاتًا خُطَاه is that verse, and Hebrew keeps בְּעוֹד as its temporal marker.",
+    "4:2 מִבֵּית לַפָּרֹכֶת — 'within the veil' (Heb 6:19, מִבֵּית לַפָּרֹכֶת); the Arabic دَاخِلَ الْحِجَاب is that phrase, and the doubled preposition is the biblical idiom.",
+    "5:4 וְגַדְּלוּ אֶת־אִישְׁכֶם — 'and magnify His person'; the Arabic وَلْنُعَظِّمْ شَخْصَهُ is 'let us magnify His person', and אִישׁ is used in the biblical sense of 'person' rather than 'man'."
+  ]
+}

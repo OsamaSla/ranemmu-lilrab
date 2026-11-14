@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 92,
+  "title_he": "אֲדֹנִי, אָהַבְתָּ אוֹתִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנִי, אָהַבְתָּ אוֹתִי, נָתַתָּ דָּם",
+        "בְּדָמְךָ טִהַרְתָּ אוֹתִי, נָשָׂאתָ כְאֵב",
+        "שִׁלַּמְתָּ חוֹבִי הַנּוֹרָא, פָּדִיתָ בַּצְּלָב",
+        "וְנָשָׂאתָ חֲטָאַי, אֲדֹנִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֵין מַחְסֶה מָתוֹק זוּלָתְךָ לְנֶפֶשׁ דַּלָּה",
+        "הָאֵר עָלַי בְּזָהֳרְךָ, בְּאַהֲבָתְךָ הָרַכָּה",
+        "וְחַבְּקֵנִי אֶל־לִבְּךָ, בְּצֵל אַהֲבָתְךָ",
+        "וְשׁוֹמֵר אֶת־עַבְדְּךָ, אֲדֹנִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּלִבְּךָ הַמֵּנִיחַ תָּנוּחַ נַפְשִׁי",
+        "הוֹי בַּעַל הַצַּד הַפָּצוּעַ, אֲדֹן הַחֶסֶד",
+        "הָבֵא לִי מְנוּחַת עוֹלָם בְּאַהֲבָתְךָ",
+        "וּבְאוֹרְךָ הַמַּדְרִיךְ, אֲדֹנִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תָּבוֹא, אֲדֹנִי נֶהְדָּר, בֶּאֱמֶת",
+        "לָקַחַת אוֹתָנוּ שָׁמָּה, הוֹי דּוֹדִי",
+        "אֶלְבַּשׁ אֶת־הַגּוּף הַנֶּהְדָּר, אֵדַע בְּלִי גְּבוּל",
+        "אַשִּׂיג אֶת־הָאַהֲבָה הַנִּפְלֵאת שֶׁל־יֵשׁוּעַ"
+      ]
+    }
+  ],
+  "review": [
+    "Every stanza ends on the vocative يَا سَيِّدِي يَسُوع ('O Master Jesus'); the Hebrew keeps it word for word as אֲדֹנִי יֵשׁוּעַ, except the last stanza, where the Arabic itself turns it into 'the love of my Master Jesus', so 4:4 follows the Arabic.",
+    "1:1 נָתַתָּ דָּם — 'You gave blood'; the Arabic بَذَلْتَ لِي الدَّمَ is 'You poured out blood for me', and Hebrew keeps the short form because the line already runs long.",
+    "2:1 לְנֶפֶשׁ דַּלָּה — 'for the weak soul', for لِمُهْجَةِ الضَّعِيف; the Arabic مُهْجَة is 'life-blood/heart', which Hebrew renders with נֶפֶשׁ because it is the psalm word for the inner life.",
+    "3:1–3:2 הַמֵּנִיחַ … הַצַּד הַפָּצוּעַ — the Arabic الْمُرِيح … الْجَنْبِ الْجَرِيح is 'restful … the wounded side'; the spear-wound of John 19:34 is kept as צַד פָּצוּעַ, and הַמֵּנִיחַ is the hiph'il of נוח used for giving rest.",
+    "4:3 אֵדַע בְּלִי גְּבוּל — 'I shall know without limit', for سَأَعْرِفُ بِلَا حُدُود; the phrase is kept because the Arabic deliberately contrasts the bounded body with boundless knowing."
+  ]
+}

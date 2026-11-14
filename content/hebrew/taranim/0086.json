@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 86,
+  "title_he": "הֲיֵשׁ לְיֵשׁוּעַ מָשָׁל",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵין כָּמוֹהוּ, מְאֹד נִשְׂגָּב",
+        "לִבִּי אֹהֲבוֹ וְנִכְסָף"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֲיֵשׁ לְיֵשׁוּעַ מָשָׁל",
+        "בְּטָהֳרָה וּבְיֹפִי",
+        "בְּאִישׁ הַגֹּאֵל הַיָּחִיד",
+        "הִתְגַּלְּמָה הַשְּׁלֵמוּת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הֲיֵשׁ לְיֵשׁוּעַ מָשָׁל",
+        "מִי וִתֵּר כְּבוֹדוֹ",
+        "אַף כִּי הוּא הָאָדוֹן",
+        "חַי כְּעֶבֶד נִבְזֶה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הֲיֵשׁ לְיֵשׁוּעַ מָשָׁל",
+        "אֲשֶׁר נָתַן דָּמוֹ",
+        "כָּל־חַיַּי וְכֹחוֹתַי",
+        "לוֹ כָּל־יְמֵי חַיָּי"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives stanza 1 as a two-line acclamation and stanzas 2–4 as four lines; the payload follows the print, so `hebrew-meter.mjs` reports the shape 2/4/4/4 as irregular by construction.",
+    "1:1 מְאֹד נִשְׂגָּב — 'greatly exalted'; the Arabic قَدْ فَاقَ مَجْدُهُ is 'His glory surpassed', and Hebrew states the exaltation rather than the comparison so the line ends on a strong word.",
+    "2:4 הִתְגַּלְּמָה הַשְּׁלֵמוּת — 'perfection took shape', for تَجَسَّمَ الْكَمَال; the hithpa'el of גלם is post-biblical, but it is the standard verb for incarnation and avoids the ambiguous בשר.",
+    "3:2 מִי וִתֵּר כְּבוֹדוֹ — Philippians 2:7 (הִפְשִׁיט אֶת־עַצְמוֹ); the Arabic مَنْ ضَحَّى بِالْمَجْدِ is the same self-emptying, and וִתֵּר is the liturgical verb for yielding a right.",
+    "3:4 חַי כְּעֶבֶד נִבְזֶה — 'He lived as a despised slave' (Phil 2:7, צוּרַת עֶבֶד); the Arabic قَدْ عَاشَ كَالْعَبْدِ is that verse."
+  ]
+}

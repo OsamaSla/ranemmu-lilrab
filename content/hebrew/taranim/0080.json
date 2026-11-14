@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 80,
+  "title_he": "אֵין שֵׁם מָתוֹק כְּשֵׁם יֵשׁוּעַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵין שֵׁם מָתוֹק כְּשֵׁם",
+        "כִּשְׁמוֹ שֶׁל יֵשׁוּעַ",
+        "חַזְּרוּהוּ, כִּי הוּא",
+        "כְּרֵיחַ הַבֹּשֶׂם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "שִׂמְחַת הַלֵּב בּוֹ",
+        "וְנֶחָמָה וְשָׁלוֹם",
+        "הַלְלוּהוּ, כִּי־הוּא",
+        "בּוֹ סָר הַחֹשֶׁךְ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא הִצְלִיחַ דַּרְכֵּנוּ",
+        "בּוֹ סָרוּ הַסְּפֵקוֹת",
+        "גַּדְּלוּהוּ, כִּי־הוּא",
+        "שִׁלֵּם כָּל־חוֹבֵנוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֵין לִי זוּלָתוֹ",
+        "הוּא חֶלְקִי הַטּוֹב",
+        "הַלְלוּהוּ, כִּי־הוּא",
+        "אֲדֹנֵינוּ הַדּוֹד"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הָלַךְ בְּאֶרֶץ עָמָל",
+        "הֶרְאָה כָּל־שְׁלֵמוּת",
+        "גַּדְּלוּהוּ וְהָלְכוּ",
+        "אַחֲרֵי הַמּוֹפֵת"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "הַנִּבְזֶה הוּא יָבוֹא",
+        "עַד־מְהֵרָה לַגְּמוּל",
+        "הַחֲכוּ, תַּשִּׂיגוּ",
+        "כָּבוֹד עִמּוֹ וָעֹנֶג"
+      ]
+    }
+  ],
+  "review": [
+    "1:4 כְּרֵיחַ הַבֹּשֶׂם — 'like the scent of perfume'; the Arabic كَشَذَا طِيبٍ is a construct of scent and sweetness, and Hebrew keeps a single construct to fit four words.",
+    "3:4 שִׁלֵּם כָּל־חוֹבֵנוּ — 'He paid all our debt'; the Arabic كُلَّ دَيْنِنَا وَفَى is the same commercial image, and שִׁלֵּם is the biblical verb for making good a debt (Ps 76:12).",
+    "4:2 הוּא חֶלְקִי הַטּוֹב — the Arabic نِعْمَ النَّصِيب is the nعْمَ superlative ('the best portion'); Hebrew has no such construction at four syllables, so the adjective carries it.",
+    "5:4 אַחֲרֵי הַמּוֹפֵת — 'after the wonder/sign'; the Arabic الْمِثَال is 'example', and מוֹפֵת is chosen for the assonance with the previous line's שְׁלֵמוּת.",
+    "6:1–6:2 הַנִּבְזֶה … לַגְּמוּל — the Arabic مَنْ أُهِينَ ('the One despised') is Isa 53:3 (נִבְזֶה), and גְּמוּל is the biblical word for recompense (Isa 59:18)."
+  ]
+}

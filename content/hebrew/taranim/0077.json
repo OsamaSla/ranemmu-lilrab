@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 77,
+  "title_he": "הֹלֵךְ בָּאוֹר כָּל־חַיַּי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אוֹר שָׁמַיִם, אוֹר שָׁמַיִם",
+        "בָּא אֶל־לִבִּי מִמָּרוֹם",
+        "הַלְלוּיָהּ עַד־עַד אָשִׁיר",
+        "הוֹי שִׂמְחָתִי, יֵשׁוּעַ לִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֹלֵךְ אָנִי בָּאוֹר כָּל־יָמַי",
+        "אַחֲרֵי דוֹדִי בְּכָל־דָּרֶךְ",
+        "כָּל־מִבְטָחִי עַל־דּוֹדִי",
+        "הַמַּצִּיל אוֹתִי מִצָּרָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כָּל־דְּאָגוֹת, כָּל־מַכְאוֹב",
+        "לֹא יַסְתִּירוּ פְּנֵי דוֹדִי",
+        "יֵשׁוּעַ אוֹרִי מֵסִיר חָשְׁכִּי",
+        "גֹּאֵל חַיַּי עַל־הַצְּלָב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הֹלֵךְ תָּמִיד עִם־דּוֹדִי",
+        "שׁוֹקֵד לְהַשִּׂיג הַפְּרָס",
+        "הִנֵּה יֵשׁוּעַ בָּא מְהֵרָה",
+        "שָׁם עַל־הֶעָנָן אֶרְאֵהוּ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 אוֹר שָׁמַיִם — the Arabic repeats نُورٌ سَمَاوِيّ twice; Hebrew repeats the same two words so the acclamation stays an acclamation and does not become a sentence.",
+    "1:4 הוֹי שִׂמְחָתִי — 'O my joy', for يَا لَسُرُورِي; the Arabic لَام of exclamation has no Hebrew equivalent, and הוֹי carries the exclamation without turning into a lament.",
+    "2:1 הֹלֵךְ אָנִי — the participle plus pronoun keeps the Arabic's 'walking' as a durative, which a finite verb would lose.",
+    "3:2 לֹא יַסְתִּירוּ פְּנֵי דוֹדִי — 'they shall not hide my Beloved's face'; the Arabic لَا تَحْجُبَنَّ takes the cares and pains as subject, and Hebrew keeps the plural verb for the same reason.",
+    "4:2 הַפְּרָס — 'the prize' (1 Cor 9:24, βραβεῖον); the Arabic الْمُجَازَاة is 'recompense', and פְּרָס is the fixed Hebrew term for the runner's prize."
+  ]
+}
