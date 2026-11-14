@@ -55,17 +55,18 @@ export function refreshOverlaidCorpus(): void {
 setChunkLoadedListener(refreshOverlaidCorpus);
 
 /** Books present in the bundled corpus, in display order, with hymn counts and translation coverage. */
-export function getBooks(): { id: BookId; count: number; hasEn: boolean; hasDe: boolean }[] {
+export function getBooks(): { id: BookId; count: number; hasEn: boolean; hasDe: boolean; hasHe: boolean }[] {
   // Counts run over the merged view so admin-added hymns show up and
   // tombstoned ones stop being counted. Translation flags ride along in the
-  // summaries so the home cards can advertise EN/DE without loading chunks.
-  const counts = new Map<BookId, { count: number; en: number; de: number }>();
+  // summaries so the home cards can advertise EN/DE/HE without loading chunks.
+  const counts = new Map<BookId, { count: number; en: number; de: number; he: number }>();
   for (const s of getSummaries()) {
     const b = s.book ?? 'main';
-    const entry = counts.get(b) ?? { count: 0, en: 0, de: 0 };
+    const entry = counts.get(b) ?? { count: 0, en: 0, de: 0, he: 0 };
     entry.count += 1;
     if (s.hasEn) entry.en += 1;
     if (s.hasDe) entry.de += 1;
+    if (s.hasHe) entry.he += 1;
     counts.set(b, entry);
   }
   return BOOKS.filter((b) => (counts.get(b.id)?.count ?? 0) > 0).map((b) => {
@@ -75,6 +76,7 @@ export function getBooks(): { id: BookId; count: number; hasEn: boolean; hasDe: 
       count: entry?.count ?? 0,
       hasEn: (entry?.en ?? 0) > 0,
       hasDe: (entry?.de ?? 0) > 0,
+      hasHe: (entry?.he ?? 0) > 0,
     };
   });
 }

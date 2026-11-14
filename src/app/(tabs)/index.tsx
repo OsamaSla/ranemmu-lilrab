@@ -195,7 +195,7 @@ function BookCard({ id, name, count, unit, languages, selected, width, onPress }
           </AppText>
           <View style={{ alignItems: 'center', gap: 6, marginTop: spacing.sm }}>
             <MetaBadge icon="music-note" label={`${count} ${unit}`} />
-            <View style={{ flexDirection: direction.row, gap: 6 }}>
+            <View style={{ flexDirection: direction.row, flexWrap: 'wrap', justifyContent: 'center', gap: 6 }}>
               {languages.map((code) => (
                 <MetaBadge key={code} icon="check-circle" label={code} />
               ))}
@@ -349,6 +349,7 @@ export default function HomeScreen() {
                 languages={[
                   ...(b.hasEn ? ['EN'] : []),
                   ...(b.hasDe ? ['DE'] : []),
+                  ...(b.hasHe ? ['HE'] : []),
                 ]}
                 selected={b.id === book}
                 width={cardWidth}

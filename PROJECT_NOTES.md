@@ -704,9 +704,10 @@ and keep committing per step.
   pointed, `direction: rtl`, `text-align: right`, platform font
   (`-apple-system`), zero console errors. `tr0027` (no Hebrew) still shows only
   `عر/EN/DE` and no Hebrew characters.
-- Not done: no admin editor for `verses_he` (admin-edit is ar/en/de only), home
-  book cards still show EN/DE pills only. Taranim is **complete** (375/375);
-  books 3–4 are untouched.
+- Not done: no admin editor for `verses_he` (admin-edit is ar/en/de only). Taranim
+  is **complete** (375/375); books 3–4 are untouched. Home book cards now show a
+  third `HE` pill when the book carries Hebrew (`getBooks()` returns `hasHe`;
+  the language row wraps so three badges never overflow a narrow card).
 - Gotcha: hand-editing a payload's `review[]` is easy to leave a trailing comma
   in — `JSON.parse` aborts the whole apply run (seen once on `0006.json`).
 - Gotcha: Metro caches the imported corpus chunks, so after `build:corpus` the
