@@ -57,7 +57,16 @@ const COVER_RATIO = 0.7;
 const HOVER_SHADOW = { boxShadow: '0 14px 34px rgba(11, 42, 48, 0.22)' };
 
 /** One metadata pill under a book title. */
-function MetaBadge({ label, icon }: { label: string; icon?: 'music-note' | 'check-circle' }) {
+function MetaBadge({
+  label,
+  icon,
+  compact = false,
+}: {
+  label: string;
+  icon?: 'music-note' | 'check-circle';
+  /** Language tags sit three-in-a-row on narrow cards, so they run tighter. */
+  compact?: boolean;
+}) {
   const { colors } = useTheme();
   const { direction } = useT();
   // The count label is Arabic prose; only the two-letter language codes are
@@ -68,9 +77,9 @@ function MetaBadge({ label, icon }: { label: string; icon?: 'music-note' | 'chec
       style={{
         flexDirection: direction.row,
         alignItems: 'center',
-        gap: 4,
-        paddingHorizontal: spacing.sm,
-        paddingVertical: 3,
+        gap: compact ? 2 : 4,
+        paddingHorizontal: compact ? 5 : spacing.sm,
+        paddingVertical: compact ? 2 : 3,
         borderRadius: radius.pill,
         backgroundColor: colors.surfaceMuted,
         borderWidth: 1,
@@ -79,14 +88,19 @@ function MetaBadge({ label, icon }: { label: string; icon?: 'music-note' | 'chec
       {icon ? (
         <MaterialCommunityIcons
           name={icon}
-          size={11}
+          size={compact ? 9 : 11}
           color={icon === 'check-circle' ? colors.accent : colors.textMuted}
         />
       ) : null}
       <AppText
         variant="caption"
         color={colors.textMuted}
-        style={{ fontSize: 11, lineHeight: 15, fontWeight: '700', letterSpacing: isCode ? 0.5 : 0 }}>
+        style={{
+          fontSize: compact ? 9.5 : 11,
+          lineHeight: compact ? 12 : 15,
+          fontWeight: '700',
+          letterSpacing: isCode && !compact ? 0.5 : 0,
+        }}>
         {label}
       </AppText>
     </View>
@@ -195,9 +209,9 @@ function BookCard({ id, name, count, unit, languages, selected, width, onPress }
           </AppText>
           <View style={{ alignItems: 'center', gap: 6, marginTop: spacing.sm }}>
             <MetaBadge icon="music-note" label={`${count} ${unit}`} />
-            <View style={{ flexDirection: direction.row, flexWrap: 'wrap', justifyContent: 'center', gap: 6 }}>
+            <View style={{ flexDirection: direction.row, flexWrap: 'wrap', justifyContent: 'center', gap: 4 }}>
               {languages.map((code) => (
-                <MetaBadge key={code} icon="check-circle" label={code} />
+                <MetaBadge key={code} icon="check-circle" label={code} compact />
               ))}
             </View>
           </View>
