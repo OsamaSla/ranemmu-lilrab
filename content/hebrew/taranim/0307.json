@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 307,
+  "title_he": "כִּי פְּדָאַנִי בַּצְּלָב, הוּא הִדְרִיכַנִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "שְׁאָלוּנִי עַל־יֵשׁוּעַ",
+        "אַהֲבָתוֹ בֵּין צְלָעַי",
+        "זֶה חֶלְקִי, זֶה פִּדְיוֹנִי",
+        "זֶה דּוֹדִי, הוֹי הֲמוֹנִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כִּי פְּדָאַנִי בַּצְּלָב",
+        "הוּא הִדְרִיכַנִי, הַדּוֹד",
+        "נוֹשֵׂא מַשָּׂאִי הַכָּבֵד",
+        "זֶה דּוֹדִי, הוֹי הֲמוֹנִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כַּמָּה רִפֵּא מַחֲלָתִי",
+        "כַּמָּה גֵרֵשׁ אֶת־חָשְׁכִּי",
+        "כַּמָּה סְבָבוּנִי יָדָיו",
+        "זֶה דּוֹדִי, הוֹי הֲמוֹנִים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "זֹאת נֶחָמָה לִי לָעַד",
+        "בְּתוֹךְ מְצוּלוֹת דְּאָגוֹת",
+        "כִּי יָדַעְתִּי אֶת־אַהֲבָתוֹ",
+        "זֶה דּוֹדִי, הוֹי הֲמוֹנִים"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "בַּדֶּרֶךְ הוּא רֵעִי",
+        "בַּמַּסָּע הוּא יְדִידִי",
+        "נִשְׁאָר רֵעִי כָּל־חַיַּי",
+        "זֶה דּוֹדִי, הוֹי הֲמוֹנִים"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is personal testimony in the first person: 1:1–4 is 1 Pet 3:15 with Song 5:16, 2:1–4 is Gal 2:20 with Ps 38:5, 3:1–4 is Ps 103:3 with Ps 139:5, 4:1–4 is Ps 94:19 with Eph 3:19, and 5:1–4 is Ps 23:4 with Prov 18:24.",
+    "The refrain זֶה דּוֹדִי, הוֹי הֲמוֹנִים closes every stanza exactly as the print repeats ذَا حَبِيبِي يَا جُمُوع; the payload does not vary it, because the hymn's form is the public repetition of a private claim.",
+    "1:2 צְלָעַי — the Arabic بَيْنَ الضُّلُوع is 'between the ribs'; the Hebrew uses צְלָעוֹת, the word of Gen 2:21 and Exod 26:20, so the love is lodged in the body's frame and not merely in feeling."
+  ]
+}

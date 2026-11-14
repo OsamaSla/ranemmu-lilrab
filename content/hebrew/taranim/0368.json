@@ -1,0 +1,55 @@
+{
+  "book": "taranim",
+  "number": 368,
+  "title_he": "הוֹי אֲשֶׁר הִתְחַלְתָּ אֶת־הַמַּסָּע עִמִּי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲשֶׁר הִתְחַלְתָּ הַמַּסָּע עִמִּי",
+        "בּוֹטֵחַ בְּךָ כִּי אַתָּה תַשְׁלִימֶנּוּ",
+        "אַתָּה הַשִּׂמְחָה בְּעֵת בִּכְיִי וְדִמְעִי",
+        "וְאַתָּה הַלֵּב אֲשֶׁר יִשָּׂא"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "תּוֹדָה לְךָ, הוֹי רֹעִי הַנֶּאֱמָן",
+        "הוֹי אֲשֶׁר יָדֶיךָ תָּמִיד יְרוֹמְמוּנִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַף כִּי אֲנִי מִשְׁתַּנֶּה תָּמִיד",
+        "אַתָּה נֶאֱמָן, לֹא תִשְׁתַּנֶּה",
+        "הַבְטָחָתְךָ נֶאֱמָנָה בְּדַבֶּרְךָ",
+        "מֵהַבְטָחָתְךָ לֹא תָשׁוּב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "תָּכְנִית גְּדוֹלָה מְתֻכְנֶנֶת לִי",
+        "מַסַּע חַיַּי אַתָּה מְסַרְטֵט לִי",
+        "עֲזֹר לִי, אֲדֹנָי, לִחְיוֹת לְךָ לְמַעְלָה",
+        "מֵעַל הָעוֹלָם, מֵעַל מַצָּבַי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כִּסּוּפִי, אֲדֹנִי, לֶאֱהֹב יוֹתֵר",
+        "אֵין אִישׁ אוֹהֵב אוֹתִי כָּמוֹךָ",
+        "יַחֵד לִבִּי וְהַשְׁאֵרֵנִי שׁוֹקֵד",
+        "כָּל־יָמַי אָעִיד עַל־אַהֲבָתְךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the journey with the Beginner and Finisher: 1:1–4 is Phil 1:6 with Ps 30:6, the chorus is Ps 23:1 with Ps 121:4, 2:1–4 is Mal 3:6 with Num 23:19, 3:1–4 is Jer 29:11 with Prov 16:9, and 4:1–4 is John 21:15 with Ps 86:11.",
+    "The chorus is only two lines (the print's [القرار] of two), and the payload keeps it short between stanza 1 and the rest, since the hymn's shape is testimony interrupted by a single act of thanks.",
+    "2:2–4 keep the threefold contrast between the changing speaker and the unchanging God, with the same verb שָׁנָה used of both and negated only of God; the print's بَاتْغَيَّرْ / مَا بتِتْغَيَّرْشِي is the same pun and the Hebrew must not lose it."
+  ]
+}

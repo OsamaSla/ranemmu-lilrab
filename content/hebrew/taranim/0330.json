@@ -1,0 +1,39 @@
+{
+  "book": "taranim",
+  "number": 330,
+  "title_he": "הוֹי הַקָּדוֹשׁ, אֲדֹן הַחַיִּים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי הַקָּדוֹשׁ, אֲדֹן הַחַיִּים",
+        "רָאוּי לִכְרֹעַ לְפָנֶיךָ בֶּרֶךְ",
+        "וְכָל־שָׂפָה תְּהַלֵּל שִׁמְךָ",
+        "הוֹי אֲדֹנָי הָאֵל",
+        "כָּל־אֲשֶׁר בַּיְקוּם מַגִּיד גְּבוּרָתְךָ",
+        "כָּל־צִפּוֹר בַּשָּׁמַיִם תָּשִׁיר לְךָ",
+        "אַתָּה רֹעֶה אוֹתָהּ וְלֹא שְׁאָלְתְּךָ",
+        "כָּכָה יָרוּץ עָשְׁרְךָ בְּדָמָהּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַתָּה בְּאַהֲבָה עֲשִׁירָה יְצַרְתַּנִי",
+        "וּבְעֶצֶם הָאַהֲבָה הֶחֱיִיתַנִי",
+        "כַּאֲשֶׁר נִמְסַרְתָּ קָנִיתָ אוֹתִי",
+        "וַאֲנִי הָאָסוּר נִפְתְּחוּ יָדָיו",
+        "בְּךָ נָהָר, אֲדֹנִי, נִשָּׂא מְרוּצָתוֹ",
+        "טַהֲרֵנִי וְנַהֲגֵנִי אֶל־הַמָּיִם",
+        "הַרְאֵנִי אֶת־הָעֹמֶק אֲשֶׁר בְּךָ וְהַשְׁקֵנִי",
+        "הוֹי הַקָּדוֹשׁ, אֲדֹן הַחַיִּים"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the holiness that gives life: 1:1–8 is Isa 6:3 with Rom 14:11 (every knee) and Ps 147:9 (He feeds the birds), 2:1–8 is Eph 2:4–5 with 1 Cor 6:20 and John 4:14.",
+    "Both stanzas are eight lines and the eighth of the second repeats the first line of the first, forming the hymn's inclusio; the payload reproduces the repetition verbatim.",
+    "1:8 כָּכָה יָרוּץ עָשְׁרְךָ בְּדָמָהּ — the Arabic هٰكَذَا يَسْرِي غِنَاكَ فِي دِمَاه is 'thus Your riches flow in its blood'; the Hebrew keeps דָּם in the singular and the verb רוּץ, so the line is the Creator's wealth running through a creature's life and not a metaphor of influence.",
+    "2:1–2 repeat 'love' twice at the head of the couplet (בְּאַהֲבָה … וּבְעֶצֶם הָאַהֲבָה), following the print's double الْحُبِّ, because the stanza's argument is that love is both the motive and the substance of creation."
+  ]
+}

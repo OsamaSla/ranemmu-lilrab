@@ -1,0 +1,66 @@
+{
+  "book": "taranim",
+  "number": 349,
+  "title_he": "הוֹי בְּנֵי הָעָוֺן, בּוֹאוּ בְּעָנְיְכֶם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי בְּנֵי הָעָוֺן, בּוֹאוּ",
+        "בְּעָנְיְכֶם עִם־הָאֶבְיוֹנִים",
+        "חַלָּשִׁים, חוֹלִים וּפְצוּעִים",
+        "אֲשֶׁר מַרְפְּאָם נֶעְלַם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "שׁוּבוּ אֶל־אֲדֹנָי מִיָּד",
+        "וּבַקְשׁוּ מִמֶּנּוּ הַיְשׁוּעָה",
+        "וְשֵׁם אֲדֹנָי רוֹמְמוּ",
+        "תְּהִלָּה מִקָּרוֹב וּמֵרָחוֹק"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוֹי יְגֵעֵי עָוֺן",
+        "הַבִּיטוּ אֶל־אַהֲבָתוֹ",
+        "אָמַר: הַבָּא אֵלַי",
+        "יָגֵעַ יִמְצָא מְנוּחָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "רְאוּהוּ נָכוֹן וּמוּכָן",
+        "לְהוֹשִׁיעַ אֶת־הָעוֹלָם",
+        "בְּחֶמְלָה גְּדוֹלָה מִכָּל",
+        "כֹּחַ אֲשֶׁר לֹא יִסָּפֵר"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אִם תְּאַחֲרוּ עַד אֲשֶׁר",
+        "תִּהְיוּ רְאוּיִים לָגֶשֶׁת",
+        "דְּעוּ אֵפוֹא כִּי לֹא",
+        "תִּמְצְאוּ פֶּתַח לַקְּרִיבָה"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "הוֹי כָּל־הַיְגֵעִים, בּוֹאוּ",
+        "אֵלָיו בְּחִפָּזוֹן",
+        "בַּקְשׁוּ מִמֶּנּוּ מְנוּחָה",
+        "אַל־תִּירְאוּ מִכִּשָּׁלוֹן"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the invitation to the weary: 1:1–4 is Isa 1:4 with Matt 9:12, 2:1–4 is Isa 55:7 with Ps 34:4, 3:1–4 is Matt 11:28 (quoted) with Isa 53:4, 4:1–4 is Isa 63:1 with Eph 2:4, 5:1–4 is Luke 13:24–25 with Rom 10:3, and 6:1–4 is Matt 11:28 with Heb 4:16.",
+    "2:3 keeps the print's split word across the line-break (الْـ / ـسُّبْحَ), and the corpus records stanza 2 as three lines with the praise-phrase on the third; the payload mirrors the break by ending on וְהָבִיאוּ and completing with the praise.",
+    "3:3–4 are the quoted word of Christ; the Hebrew uses the colon after אָמַר on 3:3 and lets the last line be the promise, following the glossary convention instead of quotation marks."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 346,
+  "title_he": "כְּמוֹ שֶׁאֲנִי בָּא אֶל־גֹּאֵל הָאָדָם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "כְּמוֹ שֶׁאֲנִי, בָּא אֲנִי אֶל־",
+        "גֹּאֵל הָאָדָם, מַמְהִיר",
+        "כַּאֲשֶׁר אָמַרְתָּ: אֵלַי גְּשׁוּ",
+        "הוֹי שֵׂה הָאֱלֹהִים הֶעָנָו"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנִי, כִּי חוֹטֵא אָנִי",
+        "יְכַבֵּס עֲוֺנִי הַדָּם",
+        "הִנְנִי בָא אֵלֶיךָ, אֲדֹנִי",
+        "הוֹי שֵׂה הָאֱלֹהִים הֶעָנָו"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כְּמוֹ שֶׁאֲנִי, מִפְּנֵי שֶׁאֲנִי",
+        "חֲסַר כֹּל, אַל־תִּשְׁכָּחֵנִי",
+        "בָּא אֲנִי אֵלֶיךָ, הוֹי הֶעָשִׁיר",
+        "הוֹי שֵׂה הָאֱלֹהִים הֶעָנָו"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַתָּה הוּא הַמְרַפֵּא הַחוֹלֶה",
+        "אַתָּה הוּא הַמַּשְׁקֶה הַצָּמֵא",
+        "הָסֵר מִמֶּנִּי מַשָּׂאִי הַכָּבֵד",
+        "הוֹי שֵׂה הָאֱלֹהִים הֶעָנָו"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the 'just as I am' confession: 1:1–4 is Rev 22:17 with Matt 11:28, 2:1–4 is 1 John 1:7 with Ps 51:4, 3:1–4 is Ps 34:7 with 2 Cor 8:9, and 4:1–4 is Ps 103:3 with John 4:14 and Matt 11:30.",
+    "The last line of every stanza is the same address (הוֹי שֵׂה הָאֱלֹהִים הֶעָנָו), as the print closes all four with يَا حَمَلَ اللهِ الْوَدِيع; the payload keeps the glossary's שֵׂה הָאֱלֹהִים unchanged in all four.",
+    "3:1–2 keep the print's broken syntax (كَمَا أَنَا، لِأَنَّنِي / ذُو فَاقَةٍ) as a subordinate clause split across the line-break, because the stanza's humility depends on the sentence stumbling over itself."
+  ]
+}

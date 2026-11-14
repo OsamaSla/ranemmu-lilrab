@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 342,
+  "title_he": "הוֹי הַחוֹטֵא, הִשָּׁמֵר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי הַחוֹטֵא, הִשָּׁמֵר",
+        "עַד־מָתַי תִּתָּע",
+        "הַבֵּט אֶל־יֵשׁוּעַ עוֹמֵד",
+        "וּשְׁמָעֵהוּ כִּי דוֹפֵק"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "אֲדֹנָי קוֹרֵא לְךָ, הִשָּׁמֵר",
+        "וְאֵיךְ לֹא תִשְׁמָע",
+        "וְהַמָּוֶת בָּא מַהֵר",
+        "וְהַמָּוֶת לֹא יִדָּחֶה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אִם תִּמְאַס בְּקוֹלוֹ",
+        "תִּקְרָא וְלֹא יִשְׁמָע",
+        "לֹא הַמָּמוֹן, לֹא הַמִּשְׁפָּחָה, וְלֹא",
+        "הַבְּכִי מָחָר יוֹעִיל"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "תֻּשְׁלַךְ אֶל־אֵשׁ אֲשֶׁר לֹא",
+        "תִּכְבֶּה וְלֹא תָנוּחַ",
+        "וְהַתּוֹלַעַת לֹא תָמוּת, וְהַ־",
+        "חֹשֶׁךְ לֹא יוּסָר"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "קַבְּלֵהוּ וְתִתְקַבֵּל",
+        "בִּכְבוֹדוֹ הָרָם",
+        "תִּשָּׁאֵר שָׂמֵחַ תָּמִיד",
+        "עִם־עַמּוֹ כֻּלּוֹ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a warning to the impenitent: 1:1–4 is Prov 1:24 with Rev 3:20 (דּוֹפֵק), the chorus is Isa 55:6 with Ps 90:12, 2:1–4 is Prov 1:28 with Luke 16:25, 3:1–4 is Isa 66:24 (תּוֹלַעְתָּם לֹא תָמוּת) quoted almost exactly, and 4:1–4 is John 1:12 with Rev 7:15.",
+    "The print breaks words across the line-break in stanzas 2 and 3 (وَلَا الْـ / ـبُكَا and وَالـ / ـظَّلَام), and the corpus records those stanzas as four lines with the final phrase on its own; the payload mirrors the break by ending the line on וְלֹא and וְהַ־ rather than moving the word.",
+    "3:3–4 keep the Isaiah 66:24 vocabulary (תּוֹלַעַת, חֹשֶׁךְ) rather than softening it into 'punishment', because the stanza's force is the quoted prophecy."
+  ]
+}

@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-14, commit e4644cd0 (Hebrew reader language; see §15)
+Last verified: 2026-11-14, commit db8a92cf (Hebrew reader language; see §15)
 
 ## 1. What this is
 
@@ -507,14 +507,16 @@ melody so people can hear how it is sung. Only source available: recordings
 
 ## 15. Hebrew translation (verified 2026-11-14)
 
-Only `tr0001`–`tr0296` carry Hebrew so far (296 hymns, 5818 verse lines, all
-pointed; `verify-hebrew.mjs` prints 6114 because it counts each `title_he` as
-one extra line).
+Only `tr0001`–`tr0375` carry Hebrew so far (375 hymns, 7386 verse lines, all
+pointed; `verify-hebrew.mjs` prints 7761 because it counts each `title_he` as
+one extra line). **Book 2 (taranim) is now complete.**
 Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**,
 and the app displays the vocalised text (user's explicit choice — do not strip
 niqqud at render time). Chosen cadence: Book 2 in printed order, 20 per batch,
 flags-only review. Batches land as `content/hebrew/taranim/NNNN.json`; the
-corpus is never hand-edited. **Resume at `tr0297`** — batch size is free (the
+corpus is never hand-edited. **Resume with the next book** (`book3` / `hymns`):
+start a new payload directory and extend `hebrew-apply.mjs` + the meter prefix
+map, which already knows `book3` → `b3` and any other book → `h`. Batch size is free (the
 apply script merges whatever payloads exist), so continue in 10–20 hymn steps
 and keep committing per step.
 
@@ -532,9 +534,11 @@ and keep committing per step.
   drift gate for CI/pre-commit.
 - `scripts/hebrew-meter.mjs` is a *relative* singability check, not metre
   proof: syllables ≈ vowel points (shva excluded) + shuruq, median per line
-  position across stanzas, flag > ±2. Hymns 1–296 pass except the deliberate
+  position across stanzas, flag > ±2. Hymns 1–375 pass except the deliberate
   cases listed below. A flag is a prompt to re-read, not an automatic error
-  (`--strict` to gate).
+  (`--strict` to gate). Note the meter numbers stanzas by **array index**, not by
+  the corpus label, so in hymns that print a chorus stanza the reported `2:x` /
+  `3:x` refers to the block *after* it — check the label before editing.
 - `content/hebrew/glossary.md` holds the fixed renderings (`יֵשׁוּעַ` never
   `בישו`, `שָׁלוֹם לְךָ`, `אֶצְרֹף … כַּזָּהָב`, `גְּדוּדֵי שְׁאוֹל`,
   `מִגְדַּל־עֹז`, `שֶׁמֶן תּוּרַק`, `כֹּהֵן גָּדוֹל`, `מַפְגִּיעַ`,
@@ -553,7 +557,7 @@ and keep committing per step.
 - Aya (Ollama `aya-expanse:8b`, `scripts/poc-hebrew2.mjs`) is **dropped from the
   loop**: correcting its drafts cost as much as translating from the Arabic, and
   the Arabic is the authority. Kept as a second opinion for a stubborn line.
-- Batch 2–296 review flags (1428, all in the payload `review[]`): deliberate
+- Batch 2–375 review flags (1678, all in the payload `review[]`): deliberate
   borrowings from Song 1:3,8 / 2:3 / 5:5-6,10-16 / 8:7, Prov 1:9 / 8:24-30 / 11:30 / 18:10,
   Isa 9:18 / 13:13 / 17:7 / 26:20 / 30:15 / 38:12 / 40:7-31 / 42:7 / 43:25 / 49:15 / 51:17 / 52:7,14 / 53 (fully, hymns 130, 240) /
   55:1-2 / 57:15 / 64:3,5 / 65:17, Zeph 2:3, Jer 9:17 / 23:6 / 32:27, Joel 2:2,
@@ -602,7 +606,8 @@ and keep committing per step.
   `סִפּוּר`, `חֲטִיפָה`, `כְּמִיהָה`, `רֹשֶׁם`, `מָדוֹר`, `נִצָּחוֹן`,
   `פִּדְיוֹן`, `שֵׂה הָאֱלֹהִים`, `עֲטֶרֶת`, `עָטָה`, `שָׁקַד`, `אֹפֶן`,
   `חֶבְרָה`, `הֲוָיָה`, `כִּסּוּפִים`, `מִצְפֶּה`, `פְּנִינָה`, `נֵרְדְּ`,
-  `נֶסֶךְ`, `חָגַג`); one dropped `رَبُّنَا`
+  `נֶסֶךְ`, `חָגַג`, `מֶתֶג`, `פִּקָּדוֹן`, `מִפְרָץ`, `כִּבְשַׁן`,
+  `אֶהְיֶה`); one dropped `رَبُّنَا`
   for metre (`tr0003` 3:2). Read
   the flag list, not the whole batch.
 - `tr0003` 4:4 was **replaced by the user** with
@@ -654,7 +659,16 @@ and keep committing per step.
   1/4/4/4/4 (the theme line alone as stanza 1), `tr0291` 2/8/8 (a long two-line
   couplet first, then eight short lines per stanza), `tr0295` 3/4/4/4/4 (the
   print's `12.7.7` theme stanza first, so 1:1 is a long line against short
-  stanza openings). Do not pad
+  stanza openings), `tr0297` 3/2/2/2/2/2/2, `tr0299` 3/6/6/6 (the acclamation
+  stanza is three lines), `tr0311` 2/8/8, `tr0313` 3/4/4/4, `tr0315` 4/6/4/4
+  (the six-line chorus as its labelled stanza), `tr0318` with the chorus first,
+  `tr0323` 4/6/4/4, `tr0326` with the chorus second, `tr0337` 4/4/4/4/5,
+  `tr0338` 8/4/8 (four very long chorus lines between short-lined stanzas),
+  `tr0343`/`tr0344` with chorus second, `tr0350`/`tr0351`/`tr0353` chorus
+  second/third (`tr0353` 8/2/8/8: a two-line chorus), `tr0357`–`tr0360` chorus
+  second, `tr0362` and `tr0364` chorus **first**, `tr0368` 4/2/4/4/4 (two-line
+  chorus), `tr0369` 8/6/8, `tr0370` 8/6/8/8, `tr0371` 8/4/8/8, `tr0373` chorus
+  second, `tr0374` 4/4/4/4/4, `tr0375` 6/6/6. Do not pad
   them to a rectangle. `tr0014` 2:2 (12 vs 8) comes from the
   same mixed shape. `tr0139`, `tr0151`, `tr0181` and `tr0202` are stanzas of one
   printed line each, with the
@@ -669,7 +683,7 @@ and keep committing per step.
   church (143).
 - Validated: `npm run check:hymns` (1824, all pass), `npm run build:corpus`
   (index 305 KB, 19 chunks), `npm run typecheck`, apply `--check` clean,
-  payload↔corpus parity for all 296 (`title_he`, `verses_he`, labels, shape).
+  payload↔corpus parity for all 375 (`title_he`, `verses_he`, labels, shape).
 - Browser (web, dev server, 2026-11-14): samples `tr0007`/`0013`/`0018`/`0021`/`0026`,
   `tr0077`/`0086`/`0093`/`0096`, `tr0098`/`0099`/`0113`/`0116`,
   `tr0120`/`0125`/`0128`/`0130`, `tr0131`/`0133`/`0135`/`0139`,
@@ -680,17 +694,19 @@ and keep committing per step.
   `tr0215`/`0218`/`0220`/`0222`/`0225` and
   `tr0255`/`0257`/`0259`/`0262`/`0264`/`0268` and
   `tr0269`/`0271`/`0275`/`0276`/`0278`/`0280`/`0282` and
-  `tr0283`/`0284`/`0286`/`0289`/`0291`/`0294`/`0296` after clicking
+  `tr0283`/`0284`/`0286`/`0289`/`0291`/`0294`/`0296` and
+  `tr0297`/`0306`/`0321`/`0340`/`0359`/`0370`/`0375` after clicking
   `HE` — chip fills `#5E35B1`, every stanza line rendered
   (`20/28/35/30/5/16/14`, `24/24/18/16/10/16/15`, `24/4/17/16/20/27/16`,
   `20/5/24/40/16`, then `20/14/15/19/18`, `24/14/18/24/24`,
-  `20/17/15/17/16`, `20/20/21/24/24/12`, `24/24/15/10/24/32/23` and
-  `25/18/17/24/18/24/32`), all
+  `20/17/15/17/16`, `20/20/21/24/24/12`, `24/24/15/10/24/32/23`,
+  `25/18/17/24/18/24/32` and `15/30/33/32/30/30/18`), all
   pointed, `direction: rtl`, `text-align: right`, platform font
   (`-apple-system`), zero console errors. `tr0027` (no Hebrew) still shows only
   `عر/EN/DE` and no Hebrew characters.
 - Not done: no admin editor for `verses_he` (admin-edit is ar/en/de only), home
-  book cards still show EN/DE pills only, 296 of 375 taranim hymns translated.
+  book cards still show EN/DE pills only. Taranim is **complete** (375/375);
+  books 3–4 are untouched.
 - Gotcha: hand-editing a payload's `review[]` is easy to leave a trailing comma
   in — `JSON.parse` aborts the whole apply run (seen once on `0006.json`).
 - Gotcha: Metro caches the imported corpus chunks, so after `build:corpus` the

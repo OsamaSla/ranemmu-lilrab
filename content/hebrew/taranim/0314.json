@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 314,
+  "title_he": "אֵיךְ יִשְׁכָּחֵנִי?",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵיךְ יִשְׁכָּחֵנִי?!",
+        "אֵיךְ יִשְׁכָּחֵנִי?!",
+        "מַלְבִּישׁ שׁוֹשַׁנִּים, מְחַיֶּה צִפֳּרִים",
+        "אֵיךְ יִשְׁכָּחֵנִי?!"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "דְּרוֹר בַּיִת כִּי יִפֹּל",
+        "נִשְׁכָּח מִבְּנֵי אָדָם רַק",
+        "הָאָב לֹא יִשְׁכָּחֵהוּ לְעוֹלָם",
+        "אֵיךְ יִשְׁכָּחֵנִי?!"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אִם אֶשָּׁכַח מֵאִמִּי",
+        "זְרוֹעוֹת אֲדֹנִי יִשְׁמְרוּנִי",
+        "יַקִּירֵי בְרִיאָתוֹ הֵם הַבָּנִים",
+        "אֵיךְ יִשְׁכָּחֵנִי?"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אִם יִשָּׁכַח מֵאִמּוֹ",
+        "יִוָּתֵר לוֹ אֲדֹנָי לְמִשְׁעָן",
+        "סוֹפֵר אֶת־שַׂעֲרוֹתַי בְּמִסְפָּר",
+        "אֵיךְ יִשְׁכָּחֵנִי?!"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the argument from the lesser to the greater: 1:1–4 is Matt 6:28–30 with Ps 147:9, 2:1–4 is Matt 10:29–31 with Ps 104:12, 3:1–4 is Isa 49:15 (הֲתִשְׁכַּח אִשָּׁה עוּלָהּ) nearly verbatim, and 4:1–4 is Matt 10:30 (וְשַׂעֲרוֹת רֹאשְׁכֶם כֻּלָּן נִמְנוּ).",
+    "The refrain is a question in every stanza and the payload keeps the interrogative and the exclamation mark, because the hymn is an argument and its force depends on the repeated unanswered question.",
+    "2:1 דְּרוֹר בַּיִת — the Arabic عُصْفُورُ دُورٍ is the house sparrow; the Hebrew uses דְּרוֹר, the bird of Ps 84:4 and Prov 26:2, with בַּיִת to hold the Arabic's species, since biblical Hebrew has no separate sparrow-word.",
+    "3:3 keeps the print's slightly awkward claim (the sons are the dearest of His creation) as a verbless clause, rather than smoothing it into a comparison the Arabic does not make."
+  ]
+}

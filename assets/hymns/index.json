@@ -21216,6 +21216,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship",
@@ -21232,6 +21233,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "warfare"
@@ -21246,7 +21248,8 @@
   "mediaUrl": "https://www.youtube.com/watch?v=_mwXZOoM074",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0300",
@@ -21258,6 +21261,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -21270,6 +21274,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
@@ -21285,6 +21290,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -21296,6 +21302,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "worship",
@@ -21312,6 +21319,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -21324,6 +21332,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
@@ -21339,6 +21348,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort",
@@ -21355,6 +21365,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
@@ -21368,7 +21379,8 @@
   "meter": "14,14,14,14",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0309",
@@ -21380,6 +21392,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
@@ -21394,6 +21407,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship",
@@ -21408,7 +21422,8 @@
   "meter": "87.87.87.87",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0312",
@@ -21420,6 +21435,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
@@ -21433,7 +21449,8 @@
   "meter": "10.10.10.6 – 5.5.10.6",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0314",
@@ -21443,7 +21460,8 @@
   "meter": "88.86 – 66.86",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0315",
@@ -21454,6 +21472,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "fellowship",
@@ -21470,6 +21489,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "church"
@@ -21484,6 +21504,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship",
@@ -21499,6 +21520,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
@@ -21514,6 +21536,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
@@ -21529,6 +21552,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
@@ -21544,6 +21568,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -21556,6 +21581,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
@@ -21570,6 +21596,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
@@ -21584,6 +21611,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -21595,6 +21623,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -21606,6 +21635,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "fellowship",
@@ -21622,6 +21652,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
@@ -21635,7 +21666,8 @@
   "meter": "99.66",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0329",
@@ -21645,7 +21677,8 @@
   "meter": "12.12.12.12.12.12 – 8.8.8.6",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0330",
@@ -21656,6 +21689,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "cross",
@@ -21670,6 +21704,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -21681,6 +21716,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -21692,6 +21728,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "cross"
@@ -21707,6 +21744,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
@@ -21721,6 +21759,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
@@ -21735,6 +21774,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "word"
@@ -21749,6 +21789,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "eternity"
@@ -21764,6 +21805,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
@@ -21780,6 +21822,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
@@ -21794,6 +21837,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
@@ -21808,6 +21852,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "warfare"
@@ -21821,6 +21866,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance"
  },
  {
@@ -21832,6 +21878,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance",
   "topics": [
    "fellowship",
@@ -21848,6 +21895,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -21859,6 +21907,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -21870,6 +21919,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -21881,6 +21931,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance"
  },
  {
@@ -21892,6 +21943,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "eternity",
@@ -21907,6 +21959,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance"
  },
  {
@@ -21917,6 +21970,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
@@ -21928,6 +21982,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
@@ -21942,6 +21997,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
@@ -21956,6 +22012,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
@@ -21971,6 +22028,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -21982,6 +22040,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
@@ -21996,6 +22055,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
@@ -22009,7 +22069,8 @@
   "meter": "88.88 – 88.88",
   "hasChorus": true,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0358",
@@ -22020,6 +22081,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "fellowship"
@@ -22034,6 +22096,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "repentance",
@@ -22051,6 +22114,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "repentance",
@@ -22067,6 +22131,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "cross"
@@ -22081,6 +22146,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance",
   "topics": [
    "fellowship"
@@ -22095,6 +22161,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
@@ -22109,6 +22176,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -22120,6 +22188,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -22131,6 +22200,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -22142,6 +22212,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "word",
   "topics": [
    "comfort",
@@ -22156,7 +22227,8 @@
   "meter": "88.88 – 88",
   "hasChorus": true,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "tr0369",
@@ -22167,6 +22239,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "word"
  },
  {
@@ -22179,6 +22252,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
@@ -22190,6 +22264,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance"
  },
  {
@@ -22201,6 +22276,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -22212,6 +22288,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -22223,6 +22300,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -22234,6 +22312,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "eternity"

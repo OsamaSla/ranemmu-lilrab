@@ -1,0 +1,42 @@
+{
+  "book": "taranim",
+  "number": 365,
+  "title_he": "רָאוּי לְכָל־הַכָּבוֹד, הוֹי יֵשׁוּעַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "רָאוּי אַתָּה לְכָל־הַכָּבוֹד וְהַהוֹד, יֵשׁוּעַ",
+        "רָאוּי אַתָּה לְכָל־הַכָּבוֹד וְהַהוֹד, יֵשׁוּעַ",
+        "כָּל־בֶּרֶךְ תִּכְרַע לְךָ",
+        "וְכָל־לָשׁוֹן תּוֹדֶה בָךְ",
+        "רָאוּי אַתָּה לְכָל־הַכָּבוֹד וְהַהוֹד, יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כַּאֲשֶׁר נָבֹא לַעֲמֹד לְפָנֶיךָ, הוֹי יֵשׁוּעַ",
+        "כַּאֲשֶׁר נָבֹא לַעֲמֹד לְפָנֶיךָ, הוֹי יֵשׁוּעַ",
+        "כָּל־רָם יִכָּנַע",
+        "כָּל־הֶהָרוּס יִבָּנֶה",
+        "כַּאֲשֶׁר נָבֹא לַעֲמֹד לְפָנֶיךָ, הוֹי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "יִמָּלֵא הוֹד נוֹכְחוּתְךָ אֶת־עֵינֵינוּ, הוֹי יֵשׁוּעַ",
+        "יִמָּלֵא הוֹד נוֹכְחוּתְךָ אֶת־עֵינֵינוּ, הוֹי יֵשׁוּעַ",
+        "נִשְׁתַּנֶּה וְנִרְאֶה",
+        "כְּבוֹדְךָ בְּפָנִים מְגֻלּוֹת",
+        "יִמָּלֵא הוֹד נוֹכְחוּתְךָ אֶת־עֵינֵינוּ, הוֹי יֵשׁוּעַ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the acclamation of the Lamb: 1:1–5 is Rev 5:12 with Phil 2:10–11, 2:1–5 is Isa 40:4 with Luke 3:5, and 3:1–5 is 2 Cor 3:18 (בְּפָנִים מְגֻלּוֹת) with 1 John 3:2.",
+    "Each stanza frames its two short middle lines with the same long line repeated at the first, second and last positions, exactly as the print repeats its refrain; the payload keeps all three repetitions verbatim.",
+    "3:4 כְּבוֹדְךָ בְּפָנִים מְגֻלּוֹת quotes 2 Cor 3:18's phrase, because the stanza's change is from beholding to being changed and the verse is the only place the two are joined."
+  ]
+}

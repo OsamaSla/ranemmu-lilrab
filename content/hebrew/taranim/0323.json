@@ -1,0 +1,51 @@
+{
+  "book": "taranim",
+  "number": 323,
+  "title_he": "בֵּין יָדֶיךָ הָרַכּוֹת שַׂמְתִּי רֹאשִׁי בְּשָׁלוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בֵּין יָדֶיךָ הָרַכּוֹת",
+        "שַׂמְתִּי רֹאשִׁי בְּשָׁלוֹם",
+        "כִּי עֵינְךָ, אֲדֹנִי",
+        "תִּרְעֶה חַיַּי וְלֹא תָנוּם"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "יִשָּׁאֵר לִי רֵעִי",
+        "שַׁלְוַת לִבִּי וְעָרְבִי",
+        "כִּנּוֹרִי בְּבָדָד",
+        "רִנָּתִי בְּנָכְרִיּוּת",
+        "כִּי בְךָ, אֲדֹנִי",
+        "שִׁיר אֵין־לוֹ קֵץ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אִם יַכְבִּידוּ דְאָגוֹת",
+        "אוֹ אִם אֻמְלַלְתִּי",
+        "אָרוּץ אֵלֶיךָ, אֶפֹּל",
+        "כִּי חֵיקְךָ הוּא כַר־רֹאשִׁי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "תִּשָּׁאֵר לִי, אֲדֹנִי",
+        "רֵעַ בְּכָל־הַזְּמָן",
+        "תִּשָּׁאֵר אַהֲבָה שְׁלֵמָה",
+        "אַף נִפְלָאָה, מְחַיָּה כָל־הַיְקוּם"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the repose of the beloved: 1:1–4 is Ps 121:3–4 (לֹא־יָנוּם שֹׁמְרֶךָ) with Song 2:6, the chorus is Ps 42:9 with Ps 137:2 (the harp on the willows) and Ps 119:54, 2:1–4 is Ps 55:23 with Ps 94:19, and 3:1–4 is Ps 73:26 with Rom 8:38–39.",
+    "The chorus is printed as a block of six lines and the corpus records it as the labelled القرار stanza; the payload keeps six lines, with the harp-and-exile couplet in the middle, as the print sets it.",
+    "1:4 תִּרְעֶה חַיַּי וְלֹא תָנוּם — the Arabic تَرْعَى وُجُودِي لَا تَنَام joins the shepherd verb to the unsleeping eye; the Hebrew keeps both with רָעָה and נוּם, because Ps 121:4 is the verse behind the line and its comfort is the wakefulness.",
+    "2:4 כַּר־רֹאשִׁי — the Arabic وِسَادَتِي is the pillow; the Hebrew uses כַּר, the cushion-word of 1 Sam 19:13, so the bosom is a physical resting-place and not a figure for comfort."
+  ]
+}

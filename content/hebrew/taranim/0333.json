@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 333,
+  "title_he": "הֲיוּכַל אֲדֹנָי לַעֲשׂוֹת בִּי נִפְלָאוֹת",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הֲיוּכַל אֲדֹנָי בִּי",
+        "לַעֲשׂוֹת אֶת־הַנִּפְלָאוֹת",
+        "וְאִם אֲבַקֵּשׁ הַקְדָּשָׁתִי",
+        "הֲיַעֲנֶה אֶת־הַבַּקָּשָׁה?"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "כֵּן, כֵּן, כֵּן, אֹמֵר אֲדֹנֵינוּ:",
+        "הִתְקַדְּשׁוּ לַמְּלָאכָה",
+        "מָחָר אֶפְעַל בָּכֶם",
+        "בְּקִרְבְּכֶם, בְּקִרְבְּכֶם נִפְלְאוֹתָי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֲיוּכַל אֲדֹנָי אֶת־",
+        "הַגּוּף הַזֶּה לְהַקְדִּישׁ",
+        "עִם־חֻלְשָׁתוֹ וְחֶלְקַת כֹּחוֹ",
+        "לִהְיוֹת לוֹ לְעוֹלָם?"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הֲיוּכַל אֲדֹנָי אֶת־",
+        "כִּשְׁרוֹנוֹתַי לְהַפְעִיל",
+        "מְקַדֵּשׁ אֶת־רְגָשׁוֹתַי",
+        "לִכְבוֹד אֲשֶׁר אֲהֵבַנִי?"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הֲיוּכַל אֲדֹנָי אֶת־",
+        "עֲבוֹדָתִי לְבָרֵךְ",
+        "מַקְדִּישׁ לִכְבוֹדוֹ",
+        "אֶת־כֻּלִּי, כֻּלִּי לוֹ?"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the question of consecration: 1:1–4 is Num 11:23 (הֲיַד יְהוָה תִּקְצָר) with Exod 19:10, the chorus is Josh 3:5 (הִתְקַדְּשׁוּ) with John 14:12, 2:1–4 is Rom 12:1 with 2 Cor 12:9, 3:1–4 is 1 Pet 4:10–11, and 4:1–4 is Col 3:23 with Rom 11:36.",
+    "The chorus's first line is the threefold 'yes' plus the formula of the divine speech, as the print has نَعَمْ نَعَمْ نَعَمْ يَقُولُ رَبُّنَا; the Hebrew keeps the triple and the colon-convention before the quoted words.",
+    "1:1 and the openings of stanzas 2–4 all end on the same half-line (אֲדֹנָי בִּי / אֲדֹנָי אֶת־), following the print's repeated هَلْ يَسْتَطِيعُ الرَّبُّ أَنْ; the payload uses the same Hebrew frame each time and lets the enjambment carry the object."
+  ]
+}

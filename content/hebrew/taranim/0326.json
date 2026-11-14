@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 326,
+  "title_he": "אֲדֹנֵינוּ, בּוֹא, הִנְנוּ מְצַפִּים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנֵינוּ, בּוֹא, הִנְנוּ מְצַפִּים",
+        "לִבֵּנוּ כָּמֵהַּ לַמְּעוֹנוֹת הָהֵם",
+        "עוֹלָמֵנוּ אֵין־בּוֹ כִּי אִם־",
+        "עָמָל וּמְרִירוּת"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "אֲדֹנֵינוּ, בּוֹאָה",
+        "בּוֹא מְהֵרָה וּמַלֵּא הַתִּקְווֹת",
+        "כָּלְתָה נַפְשֵׁנוּ",
+        "בּוֹאָה, בּוֹאָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "נִכְסַפְנוּ לִפְגִשְׁתֶּךָ",
+        "מַטְּרָתֵנוּ לִרְאוֹתְךָ בִּכְבוֹדֶךָ",
+        "מַהֲרָה הַיּוֹם הַשָּׂמֵחַ",
+        "בּוֹאָה, בּוֹאָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "סְבִיבֵנוּ אוֹיְבִים בְּכָל־מָקוֹם",
+        "מִלְחַמְתֵּנוּ נִמְשֶׁכֶת בָּעֵת הַזֹּאת",
+        "עַל־כֵּן נְיַחֵל לְבוֹאֶךָ",
+        "לַחֲטֹף אוֹתָנוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עָזְרֵנוּ לַעֲבֹד שִׁמְךָ",
+        "וּלְהַגִּיד יְשׁוּעָתְךָ לְכָל־נְפָשׁוֹת",
+        "נִסְחַר בְּכִכְּרֹתֵינוּ",
+        "עַד־אֲשֶׁר תָּבוֹא"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the advent prayer: 1:1–3 is Phil 3:20 with 2 Cor 5:2, the chorus is Rev 22:17,20 with Ps 84:3, 2:1–3 is 2 Tim 4:8 with Titus 2:13, 3:1–3 is Eph 6:12 with Rev 12:7, and 4:1–3 is Matt 5:16 with Matt 25:14–30 (the talents).",
+    "The print breaks the last line of each stanza in two (الْأَتْعَابِ وَالْمَرَار, تَعَالَ تَعَال, لِاخْتِطَافِنَا, إِلَى أَنْ تَجِيء), and the corpus records those stanzas as four lines with the final phrase on its own line; the payload mirrors the break, so the short last line is the print's and not a truncation.",
+    "4:3 נִסְחַר בְּכִכְּרֹתֵינוּ — the Arabic نَتَّجِرُ بِوَزَنَاتِنَا is 'we trade with our talents'; the Hebrew uses סָחַר, the merchant verb of Gen 34:10, with כִּכָּר (the talent of 2 Kgs 5:5), so the parable's commerce survives rather than becoming a general 'serve'."
+  ]
+}

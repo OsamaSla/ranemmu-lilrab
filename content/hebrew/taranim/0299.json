@@ -1,0 +1,53 @@
+{
+  "book": "taranim",
+  "number": 299,
+  "title_he": "דַּי־לְךָ חַסְדִּי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "דַּי־לְךָ חַסְדִּי, דַּי־לְךָ חַסְדִּי",
+        "כֹּה אָמַר אֵל:",
+        "דַּי־לְךָ חַסְדִּי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוֹי עוֹלֵה דֶרֶךְ בַּמִּדְבָּר",
+        "דַּי־לְךָ חַסְדִּי",
+        "הוֹי אֶבְיוֹן חֲסַר כֹּל",
+        "דַּי־לְךָ חַסְדִּי",
+        "הוֹי דַּל, קַח־נָא אֶת־כֹּחִי",
+        "דַּי־לְךָ חַסְדִּי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הַמַּרְגִּישׁ חֻלְשָׁה, הִתְהַלֵּל",
+        "דַּי־לְךָ חַסְדִּי",
+        "כַּאֲשֶׁר תִּהְיֶה חַלָּשׁ, קַוֵּה",
+        "דַּי־לְךָ חַסְדִּי",
+        "כֹּחִי בְּחֻלְשָׁתְךָ יִתְנַצֵּחַ",
+        "דַּי־לְךָ חַסְדִּי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בּוֹא אֵלַי, הַשְׁלֵךְ עָלַי הַכֹּל",
+        "דַּי־לְךָ חַסְדִּי",
+        "כִּי אֲנִי אֲדֹנָי הַגָּדוֹל",
+        "דַּי־לְךָ חַסְדִּי",
+        "חֲזַק, בְּנִי, וְהַבֵּט אֵלַי",
+        "דַּי־לְךָ חַסְדִּי"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is 2 Corinthians 12:9 set as a dialogue: 1:1–3 is the divine word itself (דַּי־לְךָ חַסְדִּי, the Hebrew of 2 Cor 12:9), 2:1–6 is Ps 107:4–5 with Isa 40:29, 3:1–6 is 2 Cor 12:9–10, and 4:1–6 is Ps 55:23 with Isa 41:10.",
+    "The refrain is the same Hebrew sentence in all thirteen places, because the print repeats نِعْمَتِي تَكْفِيك unchanged and the whole piece is built on the iteration. Stanza 1 has three lines (the acclamation, the speaker's introduction, the quoted word) and the rest six.",
+    "1:2 keeps the colon before direct speech and does not put quotation marks inside the line, per the glossary convention; the print's «» marks are represented by the colon plus the refrain that follows."
+  ]
+}

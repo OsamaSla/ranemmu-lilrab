@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 357,
+  "title_he": "מַה־מְאֻשֶּׁר הַבַּיִת אֲשֶׁר שָׁכַן בּוֹ בֶּן־עֶלְיוֹן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַה־מְאֻשֶּׁר הַבַּיִת אֲשֶׁר",
+        "שָׁכַן בּוֹ בֶּן־עֶלְיוֹן",
+        "שָׁם הַמָּשִׁיחַ הַגֹּאֵל",
+        "הָיָה לְרֹאשׁ הַבָּיִת"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "אַשְׁרֵי בַיִת נָכוֹן",
+        "אֲשֶׁר יְסוֹדוֹ הָאֱמֶת",
+        "אַשְׁרֵי בַיִת נִשְׂגָּב וְרָם",
+        "דִּגְלוֹ הוּא כְבוֹד־אֵל"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בַּבַּיִת הַשָּׂמֵחַ הַהוּא",
+        "יִמְלֹךְ צֶדֶק וְשָׁלוֹם",
+        "כִּי אַהֲבַת גֹּאֲלֵנוּ הַנֶּהְדָּר",
+        "שָׁכְנָה בּוֹ, וְהַשָּׁלוֹם"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בַּיִת אֲשֶׁר שִׁירֵי שָׂשׂוֹן",
+        "מְצַלְצְלִים בְּכָל־חֲצֵרוֹתָיו",
+        "אֲדֹן הַשָּׁמַיִם יְמַלְּאֵהוּ",
+        "מִשֶּׁפַע מְרוֹמָיו"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the blessed household: 1:1–4 is 2 Sam 6:11 with Ps 127:1 and Eph 2:20–22, the chorus is Ps 128:1–4 with 1 Tim 3:15, 2:1–4 is Ps 133:1 with Rom 14:17, and 3:1–4 is Ps 100:2 with Ps 36:9.",
+    "The chorus follows stanza 1 as [القرار]; the payload keeps it as the labelled second stanza, and its two 'blessed' lines repeat the same frame (אַשְׁרֵי בַיִת) with the second element changing, as the print does with طُوبَى لِبَيْتٍ.",
+    "1:4 uses רֹאשׁ הַבַּיִת for 'head of the house', keeping the Hebrew household-word rather than a title, since the stanza is about a home and not an institution."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "book": "taranim",
+  "number": 319,
+  "title_he": "הוֹי חִיּוּךְ הַבֹּקֶר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי חִיּוּךְ הַבֹּקֶר בְּפָנֵי הַהֲוָיָה",
+        "הוֹי צֳרִי לַפְּצָעִים, מְקַיֵּם הַהַבְטָחוֹת",
+        "אֲדֹנִי, בְּשִׂמְחָתִי אַקְרִיב אֶת־הִשְׁתַּחֲוָיָתִי",
+        "בְּשֶׁטֶף יְגוֹנַי הַהַבְטָחוֹת יִסְעָדוּנִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יֵשׁוּעַ, אַתָּה רֶוַח לִי, וְעִמְּךָ לֹא אֶחְפֹּץ",
+        "דָּבָר, וְאַתָּה תְּהִלָּתִי בְּחַיַּי הָחֳדָשִׁים",
+        "שֶׁלֹּא אֶרְאֶךָ יוֹם אֶחָד הוּא עִנְיָן עָצוּב מְאֹד",
+        "הֱיֵה אֶצְלִי תָמִיד, וְאֶשָּׂא שִׂמְחָה תָמִיד"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מִי כָמוֹךָ יָפֶה, שׁוֹבֶה לְבָבוֹת?",
+        "מִי כָמוֹךָ רֵעַ בַּצָּרָה וּבַפְּגָעִים?",
+        "הוֹי כָּל־עַם אֲדֹנָי, מִי כְמוֹת הַמָּשִׁיחַ הַזֶּה?",
+        "מִי כָמוֹהוּ בְּאַהֲבָה, מִי כָמוֹהוּ מֵנִיחַ?"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the beloved's praise in joy and sorrow: 1:1–4 is Ps 30:6 with Jer 8:22 (הֲצֳרִי) and 2 Cor 1:20, 2:1–4 is Phil 3:8 (רֶוַח? no — the gain-word) with Ps 73:25–26, and 3:1–4 is Song 5:10 with Ps 89:9 and Ps 23:2.",
+    "The Arabic pairs رِبْح (gain) with سُبْح (praise) in 2:1–2; the Hebrew cannot rhyme the pair, so it keeps the commercial sense in רֶוַח (the glossary's gain-word) and gives the second line תְּהִלָּתִי, preserving the sense rather than forcing a rhyme the language will not carry.",
+    "1:2 uses צֳרִי for the balm (Jer 8:22, Gen 37:25), the same commodity the merchants carried, so the line is the healing trade-word and not a general comfort."
+  ]
+}

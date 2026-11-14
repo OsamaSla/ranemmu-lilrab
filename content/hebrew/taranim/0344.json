@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 344,
+  "title_he": "קָם הַמָּשִׁיחַ, הוֹי עָם, בַּשְּׂרוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "קָם הַמָּשִׁיחַ, הוֹי עָם, בַּשֵּׂר",
+        "כָּל־הַחֲטָאִים נִתְפַּזְּרוּ",
+        "הָיָה הַזֶּבַח לְךָ תְּמוּרָה",
+        "בּוֹ הַחוֹבוֹת כֻּלָּם שֻׁלָּמוּ"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "קָם הַמָּשִׁיחַ, קָם הַמָּשִׁיחַ",
+        "לֹא יוֹסִיף מָוֶת לְהַשְׁמִידֵנִי",
+        "סָר הָעֹנֶשׁ, שִׂמְחִי נַפְשִׁי",
+        "קָם הַמָּשִׁיחַ, וְאַשְׁרֵךְ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "גַּלֵּי הַמִּשְׁפָּט עָבְרוּ עָלָיו",
+        "כַּאֲשֶׁר נֶעֱנַשׁ בַּעֲוֺנֵךְ",
+        "קָם הַתְּמוּרָה וַיִּשְׁלַם הַשָּׁלוֹם",
+        "וְצִדְקַת הָאֵל כִּסְּתָה אוֹתָךְ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "קָם הַמָּשִׁיחַ וְהַקֶּבֶר הֵאִיר",
+        "טִפְרֵי הַמָּוֶת נִשְׁבְּרוּ",
+        "קָם הַדּוֹד וַתָּבֹא הַתְּשׁוּעָה",
+        "וְכָל־אוֹיְבַיִךְ נָסוּ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the resurrection: 1:1–4 is 1 Cor 15:17–20 with Isa 53:6 and Col 2:14, the chorus is 1 Cor 15:55–57 with Rom 8:1, 2:1–4 is Isa 53:5–6 with Rom 3:26, and 3:1–4 is Matt 28:2–3 with 2 Tim 1:10 and Col 2:15.",
+    "The chorus repeats 'Christ is risen' at its first line and its last, as the print repeats قَامَ الْمَسِيحُ; the payload keeps both, so the acclamation frames the stanza.",
+    "1:4 בּוֹ הַחוֹבוֹת כֻּלָּם שֻׁלָּמוּ — the Arabic بِهِ الدُّيُونُ قَدْ وُفِّيَتْ is 'by Him the debts were paid in full'; the Hebrew uses שִׁלֵּם, the verb of Exod 21:34 and Ps 37:21, and the plural חוֹבוֹת (the Aramaic-style plural of חוֹב), since the stanza is a reckoning and not a release."
+  ]
+}

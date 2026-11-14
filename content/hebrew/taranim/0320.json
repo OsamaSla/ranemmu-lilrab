@@ -1,0 +1,32 @@
+{
+  "book": "taranim",
+  "number": 320,
+  "title_he": "עָלָה עַל־כֹּל הָרֵעַ הַהוּא בְּאַהֲבָתוֹ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עָלָה עַל־כֹּל הָרֵעַ הַהוּא בְּאַהֲבָתוֹ",
+        "אֵין אָח כָּמוֹהוּ, אֱהָבֻהוּ!",
+        "כִּי הָרֵעִים כּוֹשְׁלִים",
+        "אוֹ גַם יַרְאוּ נָכְרִיּוּת",
+        "אַךְ הוּא לֹא יִבְגֹּד לְעוֹלָם, אֱהָבֻהוּ!"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בּוֹ לָנוּ שָׁלוֹם, אֱהָבֻהוּ!",
+        "וְלָאֹיְבֵינוּ מַפָּלָה, אֱהָבֻהוּ!",
+        "וּבוֹ לָנוּ הַהַבְטָחוֹת",
+        "וְהַצָּרָה לְטוֹבָה תָּשׁוּב",
+        "וְאֶל־הַכָּבוֹד יוֹלִיךְ, אֱהָבֻהוּ!"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the friend above all friends: 1:1–5 is Prov 18:24 with Ps 41:10 and 2 Tim 4:16, and 2:1–5 is Eph 2:14 with Rom 8:37 and Rom 8:28.",
+    "The acclamation אֱהָבֻהוּ closes every line that ends a thought, exactly as the print repeats أَحْبِبْ بِهِ; the payload keeps one form of it throughout rather than alternating imperatives.",
+    "1:1 uses עָלָה עַל־כֹּל, the verb of Ps 97:9 (עַל־כָּל־אֱלֹהִים), so the line says the friend is exalted above every other and not merely better liked."
+  ]
+}

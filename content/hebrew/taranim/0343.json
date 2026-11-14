@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 343,
+  "title_he": "מִיָּד בּוֹאוּ אֶל־הַמָּשִׁיחַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מִיָּד בּוֹאוּ אֶל־הַמָּשִׁיחַ",
+        "הוֹי כָּל־הַיְגֵעִים בְּמַשָּׂאֲכֶם",
+        "כִּי הוּא אֲשֶׁר חַסְדּוֹ יָנִיחַ",
+        "אֶת־אֲשֶׁר מַשָּׂאוֹ כָבֵד"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "כָּל־הָאוֹחֵז בַּמָּשִׁיחַ",
+        "מִשְׂגָּב לוֹ, וְשָׁם יָנוּחַ",
+        "יִחְיֶה שָׂמֵחַ בְּצִלּוֹ",
+        "בְּאַהֲבָתוֹ הַנִּשְׂגָּבָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הָאָדוֹן כְּבָר אָמַר: בּוֹאוּ",
+        "אֵלַי, כִּי אָנִי אָנִיחַ לָכֶם",
+        "וּמַהֲרוּ לְמַעַן תִּסָּתְרוּ",
+        "בְּצֵל צִלּוֹ הַמֵּצַל"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּאַהֲבָתוֹ יִשְׁתֶּה הַחוֹטֵא",
+        "וּקְרִיבָתוֹ מִרְעֵה הַנֹּעַם",
+        "וְאִתּוֹ מַעְיַן הַחַיִּים",
+        "אֲשֶׁר יֵרָפֵא בוֹ הַחוֹלֶה"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the invitation of Matt 11:28: 1:1–4 is Matt 11:28 with Gal 6:2, the chorus is Prov 18:10 with Ps 91:1, 2:1–4 is Matt 11:28 (quoted) with Isa 32:2, and 3:1–4 is Ps 36:9 with Jer 17:14.",
+    "The chorus follows stanza 1 and is printed as [القرار]; the payload keeps it as the labelled second stanza, so the structure is invitation–promise–invitation–promise.",
+    "2:4 בְּצֵל צִלּוֹ הַמֵּצַל — the Arabic بِظِلِّهِ الظَّلِيل doubles the shadow-word; the Hebrew reproduces the figure with the cognate צֵל / מֵצַל rather than substituting 'protection', because the double shadow is the stanza's image of shelter."
+  ]
+}

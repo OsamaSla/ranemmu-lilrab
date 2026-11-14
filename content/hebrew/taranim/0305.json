@@ -1,0 +1,53 @@
+{
+  "book": "taranim",
+  "number": 305,
+  "title_he": "אִם נֵלֵךְ אַחֲרֵי הַדּוֹד נוֹשְׂאִים אֶת־הַצְּלָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּטַח בְּיֵשׁוּעַ בְּצַיְתָנוּת וּבְיִרְאָה",
+        "תִּחְיֶה שָׂמֵחַ, בְּטַח בְּיֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אִם נֵלֵךְ אַחֲרֵי הַדּוֹד",
+        "נוֹשְׂאִים אֶת־הַצְּלָב",
+        "בְּהַכְנָעָה בְּעֵמֶק הַדְּמָעוֹת",
+        "אִם נִמְצָא אֶת־רְצוֹנוֹ",
+        "נִשְׁכֹּן בְּצִלּוֹ",
+        "בְּטוּחִים תָּמִיד בְּיֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אִם אֶהְיֶה בְּיָגוֹן עָמֹק",
+        "אוֹ בְדַאְגָה וָצַר",
+        "לֹא אֲבַקֵּשׁ לָשׁוּב מֵאֲדֹנִי",
+        "אַקְשִׁיב לְקוֹלוֹ",
+        "אֶהֱלֵךְ בִּרְצוֹנוֹ",
+        "בּוֹטֵחַ תָּמִיד בְּיֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לֹא נֵדַע אֶת־אַהֲבָתוֹ",
+        "לֹא נִרְאֶה אֶת־כְּבוֹדוֹ",
+        "אִם לֹא נִכָּנַע בְּהַכְנָעָה",
+        "אָז יָבוֹאוּ הַבְּרָכוֹת",
+        "מִשְּׁמֵי הַשָּׁמַיִם",
+        "אִם נִבְטַח תָּמִיד בְּיֵשׁוּעַ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the pilgrim's trust: 1:1–2 is John 14:1 with Phil 2:12, 2:1–6 is Matt 16:24 with Ps 84:7 (עֵמֶק הַבָּכָא) and Ps 91:1, 3:1–6 is Ps 23:4 with 1 Sam 3:10, and 4:1–6 is Eph 3:18–19 with Jas 1:17.",
+    "Stanza 1 is a two-line summons and stanzas 2–4 have six lines each (2/6/6/6), the print's `669.669 – 46.76`; the payload keeps the couplet as the hymn's motto.",
+    "2:3 בְּעֵמֶק הַדְּמָעוֹת — the Arabic فِي وَادِي الدُّمُوع is the valley of tears; the Hebrew uses the psalm's עֵמֶק הַבָּכָא (Ps 84:7) and renders it plainly as 'the valley of weeping', because the stanza is walking through it and the psalm's place-name would obscure the image.",
+    "4:3 בְּהַכְנָעָה — the Arabic بِالْخُضُوع recurs in stanzas 1, 2 and 4; the Hebrew keeps the same noun each time (הַכְנָעָה), so the hymn's single condition is audible as one word."
+  ]
+}

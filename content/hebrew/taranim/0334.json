@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 334,
+  "title_he": "הִנְנִי קָרֵב וּמְבַקֵּשׁ רְצוֹנְךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הִנְנִי קָרֵב",
+        "וּמְבַקֵּשׁ מִמְּךָ רָצוֹן",
+        "מִתְוַדֶּה כִּי אַתָּה",
+        "אַתָּה לְבַדְּךָ הַמְקֻוֶּה"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "כָּל־שִׂמְחָתִי אַתָּה",
+        "מִמְּךָ, אֲדֹנִי, עֶזְרִי וְכֹחִי",
+        "בְּךָ בֶאֱמֶת מְנוּחָתִי",
+        "הוֹי דּוֹדִי, הוֹי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יָגַעְתִּי מִלֶּכֶת לְאַט",
+        "וְהַזְּמָן עוֹבֵר בְּהֶבֶל",
+        "לֵךְ־נָא בְּפָנֶיךָ הַמְּאִירוֹת",
+        "לְפָנַי, הוֹי אוֹר הַתִּקְוָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְעִמְּךָ אַשְׁלִים",
+        "אֶת־מַסָּעִי בַּחַיִּים הָאֵלֶּה",
+        "לֹא יַסְנוּר נָגְהָהּ",
+        "עַיִן רָאֲתָה אוֹר אֵל"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the approach to the throne: 1:1–4 is Heb 4:16 with Ps 27:4, the chorus is Ps 73:25–26 with Phil 4:7, 2:1–4 is Ps 119:32 with Ps 43:3, and 3:1–4 is Phil 3:12–14 with 1 John 1:5.",
+    "The chorus follows stanza 1 as the print's [القرار]; the payload keeps it as the labelled second stanza, with the threefold 'in You / from You' of the Arabic مِنْكَ / فِيكَ preserved in the middle couplet.",
+    "3:3 לֹא יַסְנוּר נָגְהָהּ — the Arabic لَنْ يَبْهَرَ بَرِيقُهَا is 'its glitter shall not dazzle'; the Hebrew uses סָנוּר in the sense of blinding glare with נֹגַהּ (Isa 60:3), because the line must name the dazzle that the eye which has seen God's light no longer fears."
+  ]
+}

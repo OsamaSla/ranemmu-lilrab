@@ -1,0 +1,47 @@
+{
+  "book": "taranim",
+  "number": 338,
+  "title_he": "אַתָּה מְנַפֵּץ הַכְּבָלִים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אַתָּה מְנַפֵּץ הַכְּבָלִים",
+        "וְאַתָּה מְגַלֶּה הַסְּתָרִים",
+        "וְכָל־לֵב קָפוּא בְּקִפָּאוֹן",
+        "תִּגַּע בּוֹ וְיֵהָפֵךְ לְאֵשׁ",
+        "אַתָּה בְּאַהֲבָה תִּמְלֹךְ",
+        "אַתָּה תַּהֲרֹס הַחוֹמוֹת",
+        "וּתְהוֹשִׁיעַ אֶת־הַשָּׁב",
+        "אַתָּה קָדוֹשׁ וְצַדִּיק"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "וְעַתָּה אַתָּה בֵּינֵינוּ וְלֹא רָחוֹק מִמֶּנּוּ",
+        "שֹׁמֵעַ אוֹתָנוּ, מְמַלֵּא אוֹתָנוּ בְּרוּחֲךָ מֵחָדָשׁ",
+        "וְתִתְרוֹעֵעַ תְּהוֹמֵנוּ: אִתְּךָ לֹא נֶחְסַר דָּבָר",
+        "וְהִתְהַלְּכֵנוּ יָעִיד כִּי אַתָּה אָדוֹן נִכְבָּד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "תַּשְׁקִיט אֶת־גַּלֵּי הַיַּמִּים",
+        "וְתַעֲנִיק לָנוּ אֶת־הַשָּׁלוֹם",
+        "וְתִסְלַח חוֹב הָרָעוֹת",
+        "וְתִכַּסֶּה כָּל־הָעֲוֺנוֹת",
+        "אַתָּה לַלֵּב שָׂשׂוֹן",
+        "אַתָּה לַנֶּפֶשׁ מַרְפֵּא",
+        "וְהַזְּמָן כַּאֲשֶׁר יִסֹּב",
+        "אַתָּה עוֹרֵב לַשָּׁמַיִם"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the Christ who breaks and heals: 1:1–8 is Ps 107:14 with Dan 2:22 and Jer 23:29, the chorus is Matt 18:20 with Heb 13:5 and Eph 5:18, and 2:1–8 is Ps 107:29 with Mic 7:19 and Col 3:3–4.",
+    "The chorus is printed as a block of four long lines between the two eight-line stanzas, and the corpus records the shape as 8/4/8; the payload keeps the block rather than distributing it.",
+    "1:4 תִּגַּע בּוֹ וְיֵהָפֵךְ לְאֵשׁ — the Arabic تَلْمِسُهُ يُحَالُ نَار is 'You touch it and it turns to fire'; the Hebrew uses נָגַע with הָפַךְ, the pair of Exod 4:6 and 1 Sam 10:6, so the change is a real transformation and not a warm feeling."
+  ]
+}

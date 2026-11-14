@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 337,
+  "title_he": "קַוִּי לַאדֹנָי, נַפְשִׁי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "קַוִּי לַאדֹנָי, נַפְשִׁי",
+        "זִכְרִי טוּבוֹ, אַל־תִּשְׁכָּחִי",
+        "כִּי הוּא בְּאַהֲבָתוֹ הַנִּצְחִית",
+        "לָךְ הַיּוֹם כִּתְמוֹל"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "קַוִּי לַאדֹנָי, נַפְשִׁי",
+        "יֵשׁוּעַ קָרוֹב",
+        "יִטֶּה אֵלַיִךְ וְיִשְׁמָעֵךְ",
+        "כֵּן יַעֲנֶה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "קַוִּי לַאדֹנָי וְלַחַסְדּוֹ",
+        "יַרְאֵךְ נִפְלְאוֹת גְּבוּרָתוֹ",
+        "וְאִם תִּדְמֶה כִּי יִתְמַהְמֵהַּ",
+        "כִּי לְטוֹב בְּחָכְמָתוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "קַוִּי לַאדֹנָי, לֹא תֵבוֹשִׁי",
+        "מִי הִבִּיט אֵלָיו וְלֹא כָשַׁל",
+        "מֵאִיר פָּנִים וּמְרוֹמְמָן",
+        "נוֹתֵן בְּשֶׁפַע לַשּׁוֹאֵל"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "קַוִּי לַאדֹנָי, כִּי הוּא יָקִים",
+        "נוֹתֵן בִּנְדִיבוּת, כִּי נָדִיב הוּא",
+        "סוֹדֵד מַחְסוֹר, מַתִּיר מֵצַר",
+        "בְּאַהֲבָה נִצְחִית, כִּי נִשְׂגָּב הוּא"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the soul's self-exhortation: 1:1–4 is Ps 103:2 (אַל־תִּשְׁכְּחִי כָּל־גְּמוּלָיו) with Ps 136, the chorus is Ps 145:18 with Jas 4:8, 2:1–4 is Ps 103:7 with Isa 55:8–9, 3:1–4 is Ps 34:6 (הִבִּיטוּ אֵלָיו וְנָהָרוּ) with Ps 3:4, and 4:1–4 is Ps 145:16 with Phil 4:19.",
+    "The chorus follows stanza 1 as the print's [القرار]; the payload keeps its first line identical to 1:1, so the stanza and its refrain begin with the same summons.",
+    "1:2 keeps the feminine singular of the self-address (זִכְרִי … אַל־תִּשְׁכָּחִי), as the print's يَا نَفْسِي governs a feminine soul throughout; the psalm's own masculine form is adjusted to the hymn's gender."
+  ]
+}

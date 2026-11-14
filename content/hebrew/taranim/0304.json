@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 304,
+  "title_he": "יֵשׁוּעַ, שָׁם עַל־הַצְּלָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אִישׁ דְּמוּתְךָ עָרֵב לְלִבִּי",
+        "וְאַהֲבָתְךָ מְמַלְּאָה אוֹתִי",
+        "אֶמְשְׁשֶׁנּוּ, אַרְגִּישׁ, סוֹבֵב חַיַּי",
+        "הוּא מַאֲכָלִי, זוֹרֵם בְּדָמִי",
+        "בִּלְעָדָיו לֹא אוּכַל לִחְיוֹת"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יֵשׁוּעַ, שָׁם עַל־הַצְּלָב",
+        "נִשָּׂאתָ בַּעֲדִי, דּוֹדִי",
+        "דּוֹדִי, נָשָׂאתָ אֶת־הַמַּכְאוֹב",
+        "לָתֵת לִי אֶת־הַשָּׁלוֹם"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּדֶרֶךְ גָּלְגָּלְתָּא הַנּוֹרָאָה",
+        "הָלַכְתָּ לְשַׁלֵּם הָעֹנֶשׁ",
+        "כַּאֲשֶׁר מָסְמְרוּ אֶת־יָדֶיךָ",
+        "שָׁמַעְתָּ, וַתִּשְׁלַם הַיְשׁוּעָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עַל־הַצְּלָב רְאִיתִיךָ שָׁם",
+        "אֹהֵב אוֹתִי מִלִּבְּךָ",
+        "דּוֹדִי, לֹא שְׁכַחְתַּנִי שָׁם",
+        "אַף בְּתוֹךְ מַכְאוֹבֶיךָ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "נָהָר שֶׁל־אַהֲבָה עַזָּה",
+        "נָגַר מִצִּדְּךָ הַפָּצוּעַ",
+        "כִּי דָמְךָ נוֹשֵׂא יְשׁוּעָה",
+        "לְכָל־חוֹטֵא אָשֵׁם"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the love of the crucified: 1:1–5 is Song 5:16 with Phil 3:8 and John 6:56, 2:1–4 is Isa 53:5 with Phil 2:8, 3:1–4 is Matt 27:33 with Isa 53:10, 4:1–4 is Gal 2:20 with Lam 1:12, and 5:1–4 is John 19:34 with Zech 13:1.",
+    "Stanza 1 is five lines and the rest four (5/4/4/4/4), the print's `10.8.10.8 – 10.10.8.7.11.11`; the payload keeps the extra line rather than merging it.",
+    "1:3 אֶמְשְׁשֶׁנּוּ, אַרְגִּישֶׁנּוּ — the Arabic أَلْمِسُهُ أُحِسُّهُ pairs touch and feeling; the Hebrew uses מָשַׁשׁ (Gen 27:21, Exod 10:21) and רָגַשׁ in its late sense, so the line keeps the physical claiming of a person and not a metaphor of nearness.",
+    "3:4 וַתִּשְׁלַם הַיְשׁוּעָה — the Arabic فَتَمَّ الْخَلَاص is 'so salvation was accomplished'; the Hebrew uses שָׁלַם, the verb of Isa 53:10 and John 19:30 read together, because the stanza is the obedience that finishes the work."
+  ]
+}

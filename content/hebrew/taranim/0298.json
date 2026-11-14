@@ -1,0 +1,58 @@
+{
+  "book": "taranim",
+  "number": 298,
+  "title_he": "מַה־גָּדוֹל כֹּחַ הַדָּם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַה־גָּדוֹל כֹּחַ הַדָּם",
+        "דְּמֵי הַפָּצוּעַ הַהוּא, דָּם יָקָר!",
+        "מַה־גָּדוֹל כֹּחַ הַדָּם",
+        "כֹּחַ צְלָב הַמָּשִׁיחַ הַנִּשָּׂא!"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "תִּשְׁאַל חֵרוּת מֵעֹל הָעֲוֺנוֹת?",
+        "מַהֲרוּ אֶל־הַצָּלוּב, הִנֵּה נִצַּח",
+        "תַּחְפֹּץ לְהַכְנִיעַ צִבְאוֹת הַחֹשֶׁךְ?",
+        "מַהֲרוּ אֶל־הַצָּלוּב, כִּי כָבַשׁ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "תַּחְפֹּץ לִכְבֹּשׁ הָרַע הַנִּבְזֶה?",
+        "מַהֲרוּ אֶל־הַצָּלוּב, הִנֵּה נִצַּח",
+        "הִטָּהֲרוּ בַּדָּם הַיָּקָר",
+        "מַהֲרוּ אֶל־הַצָּלוּב, כִּי כָבַשׁ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תַּחְפֹּץ טָהֳרָה כִּשְׁלֶג הָרִים?",
+        "מַהֲרוּ אֶל־הַצָּלוּב, הִנֵּה נִצַּח",
+        "וּתְהִי בְחֵן אֲדוֹן הַהוֹד",
+        "מַהֲרוּ אֶל־הַצָּלוּב, כִּי כָבַשׁ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "תַּחְפֹּץ לַעֲבֹד הַגֹּאֵל הַמֶּלֶךְ?",
+        "מַהֲרוּ אֶל־הַצָּלוּב, הִנֵּה נִצַּח",
+        "לַאדֹנָי תִּחְיֶה, וְהוּא יְחַזְּקֶךָ",
+        "מַהֲרוּ אֶל־הַצָּלוּב, כִּי כָבַשׁ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the blood's power as a call to the unconverted: 1:1–4 is 1 Pet 1:19 with Zech 13:1, 2:1–4 is Heb 2:14–15 with Col 2:15, 3:1–4 is 1 John 1:7 with Isa 1:18, 4:1–4 is Ps 51:9 (תְּלַבְּנֵנִי מִשֶּׁלֶג) with Heb 4:16, and 5:1–4 is Rom 6:18 with Phil 4:13.",
+    "The two refrains are printed with different verbs (هَا قَدْ ظَفَر 'triumphant' in the odd lines, قَدْ قَهَر 'He conquered' in the even), and the Hebrew keeps the distinction: הִנֵּה נִצַּח against כִּי כָבַשׁ.",
+    "1:2 דְּמֵי הַפָּצוּעַ — the Arabic دَمِ ذَاكَ الْجَرِيح is 'the blood of that wounded One'; the Hebrew uses the plural דָּמִים, the form Gen 4:10 and 2 Sam 3:28 use for blood shed in violence, so the line names a death and not a fluid.",
+    "3:3 הִטָּהֲרוּ — the Arabic تَطَهَّرْ is a singular imperative inside a plural address; the Hebrew pluralises it to match its own addressees, since the stanza speaks to the crowd and the print's shift is a copyist's smoothing."
+  ]
+}

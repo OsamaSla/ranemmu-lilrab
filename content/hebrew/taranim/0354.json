@@ -1,0 +1,39 @@
+{
+  "book": "taranim",
+  "number": 354,
+  "title_he": "שָׂמֵחַ, שָׂמֵחַ אֲנִי הוֹלֵךְ אֶל־הַמִּשְׁכָּן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "שָׂמֵחַ, שָׂמֵחַ אֲנִי הוֹלֵךְ אֶל־",
+        "הַמִּשְׁכָּן הַמֵּאִיר בַּשֶּׂה",
+        "מַמְהִיר אֶל־רֵעַי אֲשֶׁר",
+        "נָסְעוּ לְפָנַי אֶל־הַמָּחוֹז הַנֶּאֱמָן",
+        "שָׁם אֶפְגְּשֵׁם בְּנֹעַם וָשֶׂבַע",
+        "הוֹי כִּסּוּפִי אֶל־הַכָּבוֹד הַגָּדוֹל!",
+        "כֻּלָּם עִם־הַגֹּאֵל שָׁם",
+        "שָׂמֵחַ, שָׂמֵחַ אֶל־הַמָּקוֹם הַהוּא"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוֹי כִּסּוּפִי אֶל־אוֹתָהּ פְּגִישָׁה",
+        "וְלִשְׁמֹעַ אֶת־תְּהִלּוֹת הַשָּׁמַיִם",
+        "הוֹי חִצֵּי הַמָּוֶת, לֹא אִירָא",
+        "פָּעָלֵךְ הַמַּר בְּיוֹם הַפְּרֵדָה",
+        "עֹקֶץ הַמָּוֶת דָּרַךְ הַמָּשִׁיחַ",
+        "שׁוֹבֵר וּמְכַתֵּת אֶת־דֶּלֶת הַקֶּבֶר",
+        "מֵת בַּעֲדִי לְמַעַן אֶחְיֶה בְּצִלּוֹ",
+        "שָׂמֵחַ, שָׂמֵחַ, עֵינִי תִּרְאֶנּוּ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the homeward journey: 1:1–8 is Heb 11:13–16 with Rev 21:23 (the Lamb is its light) and 1 Thess 4:14, and 2:1–8 is 1 Cor 15:55–57 (עֹקֶץ הַמָּוֶת) nearly verbatim with Hos 13:14 and 2 Tim 1:10.",
+    "Stanza 1 begins on a split word as the print does (الْـ / ـمَسْكَنِ); the payload keeps the break after אֶל־, so the reader crosses the line into 'the abode' exactly as the Arabic does.",
+    "2:5–6 keep the two participles (שׁוֹבֵר וּמְכַתֵּת) for the print's كَاسِرًا سَاحِقًا, using שָׁבַר and כִּתֵּת (Deut 9:21) so the crushing of the tomb door is a physical breaking and not a metaphor of defeat.",
+    "2:8 repeats the opening acclamation with the verb changed to sight, following the print's shift from أَمْضِي to عَيْنِي تَرَاه; the Hebrew keeps the same שָׂמֵחַ frame so the two stanzas close alike."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "book": "taranim",
+  "number": 328,
+  "title_he": "אֵין־לִי זוּלָתְךָ, אֲדֹנִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵין־לִי זוּלָתְךָ, אֲדֹנִי",
+        "חַיַּי הֵם רְצוֹנְךָ, אֲדֹנִי",
+        "אַתָּה מִשְׁעַנְתִּי, מַשְׁקִיט נַפְשִׁי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מָתוֹק, מַה־נֶּחְמַדְתָּ, אֲדֹנִי",
+        "מַחְשַׁבְתִּי לֹא שְׁכָחַתְךָ, אֲדֹנִי",
+        "מְשַׂמֵּחַ לִבִּי, הֵאַרְתָּ דַּרְכִּי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כַּאֲשֶׁר אֶפְגָּשְׁךָ, אֲדֹנִי",
+        "מָתוֹק, מַה־יָּפִיתָ, אֲדֹנִי",
+        "תְּפַזֵּר דְּאָגָתִי, תָּסִיר מִמֶּנִּי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בְּתוֹךְ הַקּוֹצִים, אֲדֹנִי",
+        "בְּעֵינַי אֶרְאֶךָ, אֲדֹנִי",
+        "תַּחֲבֹשׁ מַכָּתִי, תְּחַדֵּשׁ שִׂמְחָתִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "נַפְשִׁי בְּצִלְּךָ, אֲדֹנִי",
+        "עֵינִי אֶל־מְרוֹמְךָ, אֲדֹנִי",
+        "כֹּחִי אַהֲבָתְךָ, צוּרִי הַבְטָחָה"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a litany of 'none but You': 1:1–3 is Ps 73:25–26 with Isa 26:3, 2:1–3 is Ps 34:9 with Ps 119:105, 3:1–3 is Ps 16:11 with Ps 94:19, 4:1–3 is Song 2:2 with Ps 147:3, and 5:1–3 is Ps 91:1 with Ps 18:2.",
+    "The vocative אֲדֹנִי ends the first two lines of every stanza, exactly as the print ends them with يَا سَيِّدِي; the payload repeats it in all ten places rather than letting it fall away, because the address is the form of the hymn.",
+    "2:2 מַחְשַׁבְתִּי לֹא שְׁכָחַתְךָ — the Arabic فِكْرِي مَا سَلَاك is 'my thought never forgot You'; the Hebrew uses שָׁכַח with the object suffix, since the Arabic's verb is the forgetting one and a smoother 'I never ceased to think of You' would lose the negated memory."
+  ]
+}

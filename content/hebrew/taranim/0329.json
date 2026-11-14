@@ -1,0 +1,43 @@
+{
+  "book": "taranim",
+  "number": 329,
+  "title_he": "מִשְׁלַחַת נָתַתָּ לִי, אֲדֹנִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַקְדִּישׁ אָנֹכִי אֶת־נַפְשִׁי לְךָ",
+        "מַכְפִּיל אֶת־אַהֲבָתִי לְךָ",
+        "מָלֵא מֵרוּחֲךָ אֵלֵךְ אַחֲרֶיךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מִשְׁלַחַת נָתַתָּ לִי, אֲדֹנִי",
+        "לְסַפֵּר אֶת־אַהֲבָתְךָ",
+        "וְאָמַרְתָּ לִי: הַדֶּרֶךְ קוֹצָנִית",
+        "וְאָמַרְתָּ לִי כִּי אֶשָּׂא אֶת־הַצְּלָב",
+        "אַךְ הִבְטַחְתָּ לָתֵת לִי",
+        "מֵרוּחַ קָדְשְׁךָ עֵזֶר לֹא יְכַזֵּב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "רוּחִי וְגוּפִי, אֲדֹנִי, פִּקָּדוֹן",
+        "הִפְקַדְתַּנִי לְשָׁמְרָם לְךָ",
+        "רָצִיתָ כִּי אֶהְיֶה טָהוֹר",
+        "מֻבְדָּל וּמֻקְדָּשׁ לְפָנֶיךָ",
+        "קְרִיאַת הָעוֹלָם חֲזָקָה, חַזְּקֵנִי",
+        "לְמַעַן אֶכְחַשׁ אֶת־נַפְשִׁי וְאֶחְיֶה לְךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the charge to a servant: 1:1–3 is Rom 12:1 with Phil 3:12, 2:1–6 is 2 Tim 4:5 with John 15:20 (the thorny way) and Luke 11:13, and 3:1–6 is 1 Cor 6:19–20 with Rom 6:11 and 2 Tim 2:4.",
+    "Stanza 1 prints three lines and stanzas 2–3 six each (3/6/6), the print's `12.12.12.12.12.12 – 8.8.8.6`; the payload keeps the short opening as the consecration before the charge.",
+    "2:3–4 keep the two sayings of the Lord as two parallel lines beginning וְאָמַרְתָּ, following the print's twice-repeated وَقُلْتَ لِي; the colon of 2:3 is the glossary's device for the quoted speech, and the second line needs none because it continues the same report.",
+    "3:1 uses פִּקָּדוֹן, the deposit-word of Lev 5:21–23, for the Arabic أَمَانَة, so the body and spirit are something held in trust rather than owned."
+  ]
+}

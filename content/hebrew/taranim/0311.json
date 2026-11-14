@@ -1,0 +1,38 @@
+{
+  "book": "taranim",
+  "number": 311,
+  "title_he": "הוֹי עוֹבְרֵי דֶרֶךְ, הַגִּידוּ אָנָה תֵּלֵכוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי עוֹבְרֵי דֶרֶךְ, הַגִּידוּ",
+        "אָנָה אַתֶּם הוֹלְכִים",
+        "אָנוּ בַדֶּרֶךְ עוֹלִים",
+        "אֶל־גֹּאֲלֵנוּ הַחַנּוּן",
+        "בִּישִׁימוֹן וּבְמִדְבָּר",
+        "אֶל־שִׂמְחוֹת הָעוֹלָם",
+        "שָׁם בַּשָּׁמַיִם נִקְצֹר",
+        "כָּל־פְּרִי הַהַבְטָחוֹת"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוֹי עוֹבְרֵי דֶרֶךְ, הַאִם",
+        "תִּלְווּ אוֹתָנוּ בַּמַּסָּע?",
+        "בּוֹאוּ, הוֹי עָם, בְּרוּכִים",
+        "בּוֹאוּ אֶל־הַדָּרֶךְ",
+        "בּוֹאוּ, בְּרוּכִים וְשָׁלוֹם",
+        "כִּי גֹּאֲלֵנוּ אוֹמֵר:",
+        "הוֹי הָעָם, בּוֹאוּ",
+        "וְתִתְקַבְּלוּ בְרָצוֹן רַב"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the pilgrims' dialogue: 1:1–8 is Isa 35:8–10 with Ps 84:6–8 and Rev 7:17, 2:1–8 is Matt 11:28 with Isa 55:1 and Luke 14:23.",
+    "The print's second stanza sets the invitation in quotation marks from line 6 onward; the Hebrew keeps the colon at 2:6 and lets the last two lines be the voice, rather than importing quotation marks into the lines.",
+    "1:5–6 keep the two-stage geography of the Arabic (الْقِفَار then صَوْبَ أَفْرَاحِ الْخُلُود): the Hebrew uses יְשִׁימוֹן, the wilderness name of Deut 32:10 and Ps 107:4, so the road is a real desert and not a metaphor for difficulty."
+  ]
+}

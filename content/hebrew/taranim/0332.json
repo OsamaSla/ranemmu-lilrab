@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 332,
+  "title_he": "אֵיךְ, וְאַתָּה הַדּוֹד, יֶאֱהַב לִבִּי זוּלָתְךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵיךְ, וְאַתָּה הַדּוֹד",
+        "יֶאֱהַב לִבִּי זוּלָתְךָ",
+        "כִּי אַתָּה לֶחֶם נַפְשִׁי",
+        "מַטְּרַת חַיַּי רְצוֹנְךָ"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "לְךָ, אֲדֹנִי, כֻּלִּי",
+        "יָקָר מִן־הַחַיִּים",
+        "לְךָ כַּסְפִּי וּזְהָבִי",
+        "לְךָ נַפְשִׁי, הָאֵל"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֵיךְ, וְאַתָּה הָעוֹנֶה",
+        "אֲקַוֶּה, אֲדֹנִי, לְזוּלָתְךָ",
+        "כִּי אַתָּה מַעֲשִׁיר חַיַּי",
+        "נוֹתֵן כְּפִי עָשְׁרְךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֵיךְ, וְאַתָּה הַחֵלֶק",
+        "יַשְׂבִּיעֵנִי זוּלָתְךָ",
+        "כִּי אַתָּה מַסְפִּיק חַיַּי",
+        "לֹא יַסְפִּיק זוּלָתֶךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a threefold 'how could I love another': 1:1–4 is Jer 2:11–13 with John 6:35, the chorus is Ps 73:26 with Song 2:16 and Hag 2:8, 2:1–4 is Matt 7:7 with Phil 4:19, and 3:1–4 is Ps 16:5 with Ps 23:1.",
+    "The chorus follows stanza 1 as the print's labelled [القرار]; the payload keeps it as its own four-line stanza, so the hymn reads stanza–chorus–stanza–stanza as printed.",
+    "3:4 לֹא יַסְפִּיק לִי זוּלָתֶךָ — the Arabic لَا يَكْفِينِي إِلَّاك is 'none but You suffices me'; the Hebrew uses שָׂפַק (to suffice, 1 Kgs 20:10) with the same negative, so the line keeps the exact claim and its exclusivity."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 372,
+  "title_he": "רוֹצֶה אֲנִי לְבַלּוֹת חַיַּי בִּקְרָבְתְּךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "רוֹצֶה אֲנִי לְבַלּוֹת חַיַּי בִּקְרָבְתְּךָ",
+        "בְּעֵת שִׂמְחָתִי וּבְעֵת מַכְאוֹבַי",
+        "רוֹצֶה לְהִתְעַנֵּג, אֲדֹנִי, בִּפְנֵי דְמוּתְךָ",
+        "וְיִרְבֶּה שְׂשׂוֹנִי בְךָ וְשְׁלוֹמִי"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "לֹא יוּכַל הָעוֹלָם לְשַׂבְּעֵנִי",
+        "אַף אִם יְמַלֵּא אֶת־בַּקָּשׁוֹתַי",
+        "הֶבֶל וְכָלֶה הוּא, וּרְעוּת רוּחַ הוּא",
+        "אֲדֹנִי יַעֲשִׁיר חַיָּי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לֹא יוּכְלוּ נִסְיוֹנוֹת לְהַכְרִיעֵנִי",
+        "וְאַתָּה אֲדֹנָי, אֱלֹהַי רֹעִי",
+        "הוֹי אֲשֶׁר עָרַבְתָּ אֶת־חַיַּי, תּוּכַל",
+        "לַעֲרֹב גַּם אֶת־הַיָּמִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְאִם יֵרָאֶה לִבִּי נוֹטֶה לָעוֹלָם",
+        "יָבוֹא דּוֹדִי וְיִלְחַשׁ לִי",
+        "הֵן אָנֹכִי שִׁחְרַרְתִּי אוֹתְךָ, בָּחַרְתִּי בְךָ",
+        "וְהִנְּךָ אָהוּב לִי מִכֹּל"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the desire for Christ above the world: 1:1–4 is Ps 73:25–26 with Ps 16:11, the chorus is Ps 73:2 with Eccl 1:14 (הֶבֶל וּרְעוּת רוּחַ) and 1 Cor 1:5, 2:1–4 is Rom 8:35–39 with Ps 23:1, and 3:1–4 is 1 John 2:15 with John 15:16.",
+    "The chorus is placed after stanza 1 as [القرار]; the payload keeps it there, so the poem moves desire–disillusion–assurance–correction.",
+    "1:4 and 3:4 keep the first person's possessive forms on both sides of the exchange, because the Arabic pairs my joy / my peace with 'Precious to Me are you' in 3:4, and the Hebrew must sound the same voice speaking both parts."
+  ]
+}

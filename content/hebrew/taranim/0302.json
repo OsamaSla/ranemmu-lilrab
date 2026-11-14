@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 302,
+  "title_he": "גֹּאֲלִי מֵת עַל־הַצְּלָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לִבִּי נִמְלָא מֵאַהֲבָתוֹ",
+        "נַפְשִׁי כָּלְתָה לְמַרְאֵהוּ",
+        "לִרְאוֹת אוֹתוֹ בִּכְבוֹדוֹ",
+        "כָּבוֹד לַשֶּׂה הַהוּא"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "גֹּאֲלִי מֵת עַל־הַצְּלָב",
+        "כָּבוֹד לַשֶּׂה הַהוּא",
+        "מַה־נִּפְלֵאת הָאַהֲבָה הַזֹּאת",
+        "כָּבוֹד לַשֶּׂה הַהוּא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כָּל־חַטֹּאתַי סָלַח",
+        "כָּבוֹד לַשֶּׂה הַהוּא",
+        "עֲוֺנִי וְחֶרְפָּתִי כִּסָּה",
+        "כָּבוֹד לַשֶּׂה הַהוּא"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "יֵשׁוּעַ קָם וַיִּנְצַח",
+        "כָּבוֹד לַשֶּׂה הַהוּא",
+        "וּבוֹ נָשָׂאתִי הַנִּצָּחוֹן",
+        "כָּבוֹד לַשֶּׂה הַהוּא"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the Lamb's praise: 1:1–4 is Ps 119:11 with Ps 84:3 (נִכְסְפָה וְגַם־כָּלְתָה) and 1 John 3:2, 2:1–4 is Rev 5:6,9 with 1 Cor 2:7–8, 3:1–4 is Ps 103:3 with Ps 32:1, and 4:1–4 is 1 Cor 15:20 with 1 Cor 15:57.",
+    "The refrain כָּבוֹד לַשֶּׂה הַהוּא closes every line-pair in stanzas 2–4 and closes stanza 1, exactly as the print repeats مَجْدًا لِذٰلِكَ الْحَمَل; the payload repeats it verbatim rather than varying it.",
+    "1:2 נַפְשִׁי כָּלְתָה — the Arabic يَا لَشَوْقِي لِشَخْصِهِ is an exclamation of longing; the Hebrew uses the psalm's verb כָּלָה (Ps 84:3), because Hebrew expresses this longing as the soul fainting and not as a wish."
+  ]
+}

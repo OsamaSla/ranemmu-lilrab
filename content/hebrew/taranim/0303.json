@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 303,
+  "title_he": "אֵין־לִי פֹּה מְנוּחָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵין־לִי פֹּה מְנוּחָה",
+        "וְלֹא תִּקְוָה בַּנִּרְאֶה",
+        "בֶּאֱמוּנָה אֲנִי צוֹעֵד",
+        "נוֹשֵׂא חֶרְפַּת הַקָּלוֹן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כִּי כְּפִירָתִי אֶת־עַצְמִי",
+        "וּנְשִׂיאַת אֶת־הַצְּלָב",
+        "אֵינָם אֶלָּא לְמַעַן",
+        "אֵלֵךְ בְּעִקְּבוֹת הַדּוֹד הַהוּא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אִם אֵלֵךְ אַחֲרָיו, מָה",
+        "אֶפְגֹּשׁ אָנֹכִי פֹּה?",
+        "כָּל־חֶרְפָּה וּמַכְאוֹב",
+        "וּרְדִיפָה וָעָמָל"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מִי יֹאמַר מָה יִהְיֶה",
+        "אַחֲרֵי זֹאת בַּשָּׁמַיִם?",
+        "כָּל־כָּבוֹד וָנֹעַם",
+        "וְשָׂשׂוֹן וַעֲדָנִים"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the pilgrim's renunciation: 1:1–4 is Heb 13:14 (אֵין־לָנוּ פֹּה עִיר) with 2 Cor 4:18 and Heb 11:26, 2:1–4 is Matt 16:24 with 1 Pet 2:21, 3:1–4 is 2 Tim 3:12 with 1 Cor 4:11–13, and 4:1–4 is 1 Cor 2:9 with 2 Cor 4:17.",
+    "1:2 keeps the π/ن distinction of the Arabic: the hope is not 'in the visible' but in what faith sees, and the Hebrew uses the Niphal participle נִרְאֶה so the line carries 2 Cor 4:18's contrast (הַנִּרְאֶה … אֲשֶׁר־אֵינֶנּוּ נִרְאֶה).",
+    "3:1–2 leave the question open in both lines, as the print does; the Hebrew does not supply an answer that the stanza waits until stanza 4 to give."
+  ]
+}

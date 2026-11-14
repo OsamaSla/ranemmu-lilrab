@@ -1,0 +1,67 @@
+{
+  "book": "taranim",
+  "number": 358,
+  "title_he": "אֲדֹנֵינוּ, בַּעַל הַהוֹד, לְךָ נַקְרִיב תּוֹדָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנֵינוּ, בַּעַל הַהוֹד",
+        "לְךָ נַקְרִיב תּוֹדָה",
+        "בְּבוֹאֲךָ אֵלֵינוּ זָרַח הָאוֹר",
+        "אַתָּה אֲדֹן הַכָּבוֹד"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "הִנֵּה שְׁנֵי חֲתָנִים מִמְּךָ מְבַקְשִׁים",
+        "אֲשֶׁר תְּבָרֵךְ עַל־הַחִבּוּר הַזֶּה",
+        "כִּי בְפָעָלְךָ נֶחְבָּרִים הַלְּבָבוֹת",
+        "וְנִתְקַיְּמוּ הַבְּרִיתוֹת",
+        "וְהַחַיִּים יִזַּכּוּ וְתִמְלֹךְ הַשַּׁלְוָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וְיִטֹּף מָטָר מִטּוּבְךָ עַל",
+        "הַנִּשְׂאִים בַּבְּרִית",
+        "וְיֵרָאֶה הַצְלָחָתְךָ מִמָּרוֹם",
+        "בְּחַיֵּיהֶם"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִנָּם בְּלֵב אֶחָד כְּבָר נֶאֱחָדוּ",
+        "בְּחֶבְרַת אֲדֹנָי",
+        "לְמַעַן יִחְיוּ כִּשְׁנֵי בְּנֵי־זוּג לָעַד",
+        "בְּאַחְדוּת הַלֵּב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "חַזְּקֵם, הַצִּלֵּם בִּימִינְךָ",
+        "הוֹי הָעֶלְיוֹן",
+        "בִּרְצוֹן שֶׁפַע עָשְׁרְךָ תִּסְכֹּם עֲלֵיהֶם",
+        "כִּי אַתָּה הַנָּדִיב"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "תְּבוּנָה שְׁלֵמָה, אֲדֹנָי, תֶּן־לָהֶם",
+        "לִכְבוֹד שִׁמְךָ",
+        "בְּכָל־תְּקוּפוֹת הַחַיִּים תַּדְרִיכֵם",
+        "אוֹר פָּנֶיךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a wedding blessing: 1:1–4 is Ps 21:6 with Num 6:25–26, the chorus is Matt 19:6 with Mal 2:14 and John 2:1–11, 2:1–4 is Ps 65:10 with Prov 19:14, 3:1–4 is Gen 2:24 with Eph 5:31, 4:1–4 is Ps 121:5 with Phil 4:19, and 5:1–4 is Ps 143:10 with Ps 4:7.",
+    "The chorus is five lines (the print's six-line [القرار] with the last two merged), and the corpus records it as such; the payload keeps the five and does not split the closing couplet, since the book sets the 'life grows clear' clause as one line.",
+    "4:3 uses תִּסְכֹּם ('cover them over') for the blessing of overshadowing, the verb of Exod 40:3 and Ps 140:8, so the line is a sheltering and not merely a wish."
+  ]
+}

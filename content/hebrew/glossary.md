@@ -102,6 +102,11 @@ Arabic wins.
 | ناردين (nard) | נֵרְדְּ | Song 1:12, 4:13–14, Mark 14:3; the spice, never a general 'ointment'. |
 | سكيب / سكب (libation, outpouring) | נֶסֶךְ | Exod 29:40, Ps 16:4; the poured-out offering, used for the Arabic `سَكِيب` where the love is poured out like a drink-offering. |
 | حدّ / يحدّ (to bound, draw a circle) | חָגַג | Isa 40:22 (`הַיֹּשֵׁב עַל־חוּג הָאָרֶץ`), Job 26:10; the circling verb, chosen for the Arabic `حَدَّ تُخْمَ الْبِحَار` so the line is the Creator's compass and not a survey. |
+| زِمام (rein, control) | מֶתֶג | Ps 32:9, 2 Kgs 19:28; the bridle, used for `مَاسِك زِمَام الأمر` so providence is a hand on the reins, not an abstraction. |
+| أمانة (deposit, trust) | פִּקָּדוֹן | Lev 5:21–23; the thing held in trust, used where the Arabic says the body and spirit are `أَمَانَة`. |
+| ميناء (harbour, haven) | מִפְרָץ | Judg 5:17 (`מִפְרָצָיו`); biblical Hebrew has no harbour-noun, so the landing-place word carries `مِينَا السَّلَام`. |
+| أتون (furnace) | כִּבְשַׁן | Gen 19:28, Exod 9:8; the smelting-furnace, kept for `أَتُون النَّار` in the Daniel 3 line. |
+| أهيه (the divine I AM) | אֶהְיֶה | Exod 3:14; kept as the verse's own form where the Arabic transliterates `أَهْيَه`, never reduced to a title. |
 
 ## Pointing conventions
 

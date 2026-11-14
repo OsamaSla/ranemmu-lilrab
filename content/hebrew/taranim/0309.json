@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 309,
+  "title_he": "יֵשׁוּעַ אֲדֹנִי נָתַן לִי אֶת־הַשָּׁלוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יֵשׁוּעַ אֲדֹנִי נָתַן",
+        "לִי אֶת־הַשָּׁלוֹם הַשָּׁלֵם",
+        "שָׁטַף הַשָּׂשׂוֹן מְמַלֵּא",
+        "אֶת־לִבִּי עַד־תֻּמּוֹ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּתוֹךְ הַדְּאָגָה הָעַזָּה",
+        "נוֹבֵעַ הַשָּׁלוֹם הַהוּא",
+        "נַפְשִׁי הָעֲיֵפָה הָיְתָה",
+        "שָׁרָה תָּמִיד וָעֶד"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וּבַאֲשֶׁר הוּא נִתְעַנָּה",
+        "יָכֹל הוּא לַעֲזֹר לָנוּ",
+        "כִּי חַי בְּכָבוֹד לָנוּ",
+        "מַפְגִּיעַ בְּכָל־עֵת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לָמָּה אֶתְאוֹנֵן עַל־",
+        "דְּרָכִים קָשׁוֹת בַּחַיִּים",
+        "וְהִנֵּה בְקָרוֹב יָבוֹא",
+        "וְאֶמָּלֵט בִּישׁוּעָה?!"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the peace that outlasts care: 1:1–4 is John 14:27 with Phil 4:7, 2:1–4 is Ps 94:19 with Ps 119:7, 3:1–4 is Heb 2:18 with Heb 7:25, and 4:1–4 is Ps 42:10 with Luke 21:28.",
+    "The print breaks two words across the line-break (صُعُو / بَاتٍ and سَيَجِي / ـآ), and the Hebrew mirrors the enjambment at the same seams (עַל־ at the end of 4:1, the verb at the end of 4:3) rather than moving the words to make tidy lines.",
+    "1:1–2 keep the split between the Lord's act and the gift (נָתַן … אֶת־הַשָּׁלוֹם), because the Arabic حَبَا / نِي splits the same verb across the stanza's first two lines and the payload does not mend it."
+  ]
+}

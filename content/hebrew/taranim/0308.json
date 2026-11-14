@@ -1,0 +1,40 @@
+{
+  "book": "taranim",
+  "number": 308,
+  "title_he": "מַטְמִין רֹאשִׁי עַל־חֵיקוֹ בְּשַׁלְוָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַטְמִין רֹאשִׁי עַל־חֵיקוֹ בְּשַׁלְוָה גְּדוֹלָה",
+        "עֵינָיו נוֹשְׁפוֹת אֱמוּנָה עַל־רְצוֹנִי",
+        "וּבְתוֹךְ צַעֲקַת הֲמוֹנִים הוּא לוֹחֵשׁ לִי",
+        "אֶת־סוֹד עֲצָתוֹ הַנִּשָּׂאָה, וְלֹא אֶבָּהֵל"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יַחֲסִי אִישִׁי עִם־אֲשֶׁר פָּדָה אֶת־נַפְשִׁי",
+        "וּרְאִיָּתִי בְּרוּרָה אֵלָיו כַּשֶּׁמֶשׁ",
+        "לֹא תְּיַגַּע רֹאשִׁי מְבוּכָה אוֹ פַחַד",
+        "כִּי חַיַּי עִמּוֹ יְשִׁיבָה תְמִידִית שֶׁל־חֶבְרָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אִם הַשָּׁמַיִם וְהָאָרֶץ וּמוֹסְדֵי־עוֹלָם",
+        "יִנָּטוּ אֶל־כִּלָּיוֹן, יִכָּנְעוּ יוֹשְׁבִים",
+        "יִשָּׁאֵר שְׁלוֹמִי שָׁלֵם, כִּי אֲדוֹן הָעוֹלָמִים",
+        "אֹמֵר: בְּטַח! הִנְנִי פֹּה, וְאַתָּה בְּחֵיקִי"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the beloved's repose: 1:1–4 is John 13:23 with Ps 32:8, 2:1–4 is Job 19:25 with 2 Cor 3:18 and Ps 16:11, 3:1–4 is Ps 102:26–27 with Isa 51:6 and Deut 33:27.",
+    "The three stanzas are all four long lines (14 syllables each), the print's `14,14,14,14`; the payload keeps the uniform long line rather than breaking it into couplets, because the hymn's effect is one continuous utterance.",
+    "3:4 אֹמֵר: בְּטַח! הִנְנִי פֹּה — the print sets the divine speech in quotation marks; the Hebrew uses the colon before direct speech per the glossary, and keeps the two imperatives separate so the line sounds like a voice and not a proverb.",
+    "2:4 uses שֶׁל־חֶבְרָה, taking the glossary's חֶבְרָה for the Arabic دَائِمَةٌ الْأُنْسِ, since 'company' is what the stanza has been describing and a loftier abstraction would lose the intimacy."
+  ]
+}

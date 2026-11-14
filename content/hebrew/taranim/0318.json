@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 318,
+  "title_he": "אֱלֹהֵי הָאַהֲבָה הוֹשִׁיעַנִי",
+  "verses_he": [
+    {
+      "label": "القرار",
+      "lines": [
+        "אֵל הָאַהֲבָה הוֹשִׁיעֵנִי",
+        "בְּמוֹת הַצְּלָב הֶחֱיָנִי",
+        "בְּרוּחַ קָדְשׁוֹ יַדְרִיכֵנִי",
+        "יְנַחֲמֵנִי וְיִרְעֵנִי"
+      ]
+    },
+    {
+      "label": "1",
+      "lines": [
+        "הֲיֵשׁ כָּזֹאת אַהֲבָה",
+        "כְּמוֹת הָאַהֲבָה הַהִיא?",
+        "אַף בְּתוֹךְ הָרַע וְהָרִחוּק",
+        "בַּעֲדִי מֵת עַל־הַצְּלָב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עֲבָרִי נִכְסָה וְנֶעֱלָם",
+        "וְהָעָוֺן נִסְלַח",
+        "וַיָּפוּץ הַלֵּב בִּתְהִלָּה",
+        "וּבְרִנָּה וּבְהוֹדָיָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בּוֹאוּ וּרְאוּ אֶת־הָאַהֲבָה",
+        "טַעֲמוּ וּרְאוּ אֶת־אֲדֹנָי",
+        "אֶל־הַחַיִּים הוּא קוֹרֵא לָכֶם",
+        "עֲנוּ וּפִתְחוּ אֶת־הַלֵּב"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the love of God in the cross: the chorus is Rom 5:8 with Titus 3:5 and Ps 23:2; 1:1–4 is Rom 5:7–8 with Eph 2:13, 2:1–4 is Ps 32:1 with Col 2:13–14, and 3:1–4 is Ps 34:9 (טַעֲמוּ וּרְאוּ) with John 7:37.",
+    "The chorus stands first, as the print marks it [القرار] before the numbered stanzas; the payload keeps it as a labelled chorus-stanza rather than repeating it after each verse, since the book prints it once.",
+    "3:2 טַעֲמוּ וּרְאוּ אֶת־אֲדֹנָי quotes Ps 34:9 word for word, the psalm the Arabic وَذُوقُوا وَانْظُرُوا الرَّبَّ is quoting; the imperative pair is kept as the psalm's invitation and not softened to 'consider'."
+  ]
+}

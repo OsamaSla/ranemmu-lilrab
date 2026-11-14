@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 313,
+  "title_he": "אֶל־מוֹלַדְתִּי, אֶל־מוֹלַדְתִּי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֶל־מוֹלַדְתִּי, אֶל־מוֹלַדְתִּי",
+        "עֵינַי נְשׂוּאוֹת מֵעֵבֶר מִדְבָּר",
+        "אֶחֱזֶה מוֹלַדְתִּי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֵין־פֹּה מְנוּחָה בַּשְּׁמָמָה הַזֹּאת",
+        "כִּי אִם־עָמָל וִיגִיעָה",
+        "אֵיךְ אַצִּיב פֹּה אֶת־אָהֳלַי",
+        "וּמוֹלַדְתִּי קְרוֹבָה?!"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֵיךְ בַּשִּׁמְמוֹן הַנּוֹרָא הַזֶּה",
+        "יַעֲבֹר כָּמוֹנִי בְּלִי פַחַד קָט?",
+        "הֲיוּכַל חַלָּשׁ וּדַל צְעָדִים",
+        "לִהְיוֹת בָּטוּחַ מִפִּגְעֵי־עֵת?"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַךְ אֲדֹנִי בַּמִּדְבָּר הֲלֹא",
+        "לִוָּה אוֹתִי וְהֵכִין דַּרְכִּי",
+        "יַנְחֵנִי, וְאַף יִשָּׂאֵנִי",
+        "יִקָּחֵנִי לַכָּבוֹד"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the exile's homeward look: 1:1–3 is Ps 137:5–6 with Deut 8:15, 2:1–4 is Ps 84:7 with 2 Cor 5:4, 3:1–4 is Ps 23:4 with Isa 40:29, and 4:1–4 is Deut 1:31 with Isa 40:11 and Ps 73:24.",
+    "Stanza 1 prints three lines and the rest four (3/4/4/4), and its third line is short (the print's `10.10.10.6 – 5.5.10.6`); the payload keeps the short acclamation rather than padding it.",
+    "1:1 repeats the phrase twice, as the print repeats إِلَى وَطَنِي; the Hebrew does not vary the second occurrence, because the repetition is the homesickness.",
+    "2:3 uses אֹהֶל, the tent of the wilderness wanderings (Exod 33:8), so the question is about pitching camp in the desert and not about settling."
+  ]
+}

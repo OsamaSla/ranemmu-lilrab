@@ -1,0 +1,52 @@
+{
+  "book": "taranim",
+  "number": 360,
+  "title_he": "בָּאִים אֲנַחְנוּ, אָבִינוּ, שְׁמַע תְּפִלָּתֵנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בָּאִים אֲנַחְנוּ, אָבִינוּ, שְׁמַע תְּפִלָּתֵנוּ",
+        "בְּהַכְנָעָה יָשׁוּב עַמְּךָ",
+        "מְבַקֵּשׁ רַחֲמִים מֵאִתְּךָ",
+        "בִּלְבָבוֹת נִזְקָקִים אֵלֶיךָ"
+      ]
+    },
+    {
+      "label": "القرار",
+      "lines": [
+        "זֶה תִּקְוָתֵנוּ בְּךָ, אֱלֹהֵינוּ",
+        "וְהִנְנוּ מְצַפִּים לַהַבְטָחוֹת",
+        "אֵלֶיךָ נִשָּׂא אֶת־עֵינֵינוּ",
+        "וֶאֱמוּנָתֵנוּ בְּךָ תִּרְבֶּה",
+        "מַאֲמִינִים בְּכָל־הַבְטָחוֹתֶיךָ",
+        "כִּי אַתָּה נֶאֱמָן בְּהַבְטָחָתְךָ",
+        "מְמַלֵּא חַיֵּינוּ מִטּוּבְךָ",
+        "כָּבוֹד לְךָ, הוֹי הָעוֹזֵר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַרְצֵנוּ צְמֵאָה וּפְצָעִים מְלֵאִים",
+        "מִשֶּׁפַע אַהֲבָתְךָ תַּשְׁקֵנוּ",
+        "מַגַּע יָדְךָ יְרַפֵּא אוֹתָנוּ",
+        "וּתְשִׁיבֵנוּ שׁוּב אֵלֶיךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "שָׁבִים לְפָנֶיךָ, שָׁבִים אֶל־חֶמְלָתְךָ",
+        "מַכְרִיזִים מַלְכוּתְךָ בְּחַיֵּינוּ",
+        "בְּבָתֵּינוּ וּבְקִהֲלוֹתֵינוּ",
+        "וְלִבּוֹתֵינוּ מִשְׁתַּחֲוִים לָךְ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a penitential prayer for the land: 1:1–4 is Luke 15:18–19 with Dan 9:18, the chorus is Ps 123:1–2 with Heb 10:23 and Phil 4:19, 2:1–4 is Isa 35:1 with Ps 147:3, and 3:1–4 is Joel 2:12–13 with Matt 6:10.",
+    "The chorus is the print's eight-line [القرار] between stanzas 1 and 2, and the corpus records it as such; the payload keeps all eight, since the prayer's confidence is built by the accumulation and not by a single couplet.",
+    "3:1 repeats שָׁבִים twice, as the print repeats بِنْتُوب … بِنْعُود; the Hebrew keeps the doubled turning because the stanza's movement is a return upon a return."
+  ]
+}
