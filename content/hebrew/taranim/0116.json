@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 116,
+  "title_he": "הַלְלִי אֶת־הַגֹּאֵל",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הַלְלִי אֶת־הַגֹּאֵל",
+        "הַלְלִי אֶת־הַגֹּאֵל",
+        "הַלְלִי אֶת־הַגֹּאֵל",
+        "נַפְשִׁי, בְּכָל־עֵת"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "נַפְשִׁי, בָּרְכִי תָמִיד",
+        "אֱלֹהֵינוּ הַגָּדוֹל",
+        "וְכָל־אֲשֶׁר בְּקִרְבִּי",
+        "יְבָרֵךְ אֶת־הֶחָנוּן"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נַפְשִׁי בָּרְכִי אֶת־אֵל",
+        "אַל־תִּשְׁכְּחִי טוּבוֹ",
+        "וְהַלְלִיהוּ תָמִיד",
+        "כִּי הוּא הַמֵּטִיב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "רַחֲמָיו לְעוֹלָם",
+        "לְדֹר וָדֹר וָעֶד",
+        "עַל־כָּל־הַחֲסִידִים",
+        "וְיִרְאֵי אֵיתָן"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Psalm 103: בָּרְכִי נַפְשִׁי אֶת־יְהוָה (v1), וְכֹל קְרָבַי (v1), הַשֹּׁכֵחַ לְכָל־תַּגְמוּלוֹהִי (v2), הֶחָסִידִים (v17). The Arabic هَا سَبِّحِي الْفَادِي / يَا نَفْسِي كُلَّ حِين is v1, so the Hebrew follows the psalm's imperatives.",
+    "1:1–1:3 repeats the same imperative three times, because the Arabic prints هَا سَبِّحِي الْفَادِي three times before the fourth line; the repetition is the tune's opening, not a copying slip.",
+    "3:2 אַל־תִּשְׁכְּחִי טוּבוֹ — Psalm 103:2 (אַל־תִּשְׁכְּחִי כָּל־גְּמוּלָיו); the Arabic لَا تَنْسَيِ الْإِحْسَان is that verse.",
+    "3:4 כִּי הוּא הַמֵּטִיב — 'for He is the Benefactor', for فَإِنَّهُ الْمَنَّان; the Arabic divine name الْمَنَّان has no Hebrew noun, and מֵטִיב carries 'the One who does good'."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 114,
+  "title_he": "מָה־נִּפְלָא הָאַהֲבָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מָה־נִּפְלָא הָאַהֲבָה",
+        "אֲשֶׁר גִּלִּיתָ, יֵשׁוּעַ",
+        "בְּבוֹאֲךָ לְאֶרֶץ עָמָל",
+        "יָגוֹן וּדְמָעוֹת"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עָמֵל בַּמִּלְחָמָה",
+        "וּבַמַּכְאוֹבִים, בֶּן־אֵל",
+        "וְהִזִּיעַ דָּמֶיךָ",
+        "כַּדָּם בַּתְּפִלָּה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אָז נִלְקַחְתָּ בְּחָזְקָה",
+        "אֶל־מִחוּץ לַחוֹמוֹת",
+        "עַל־צְלָב נִשָּׂאתָ",
+        "בְּתוֹךְ הָרְשָׁעִים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֱלֹהִים עָשָׂה אוֹתְךָ",
+        "זֶבַח הָעֲוֺנוֹת",
+        "בְּדָמְךָ טִהַרְתָּנִי",
+        "נָתַתָּ לִי שָׁלוֹם"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הוֹי אַהֲבָה נִגְלֵית",
+        "מַלְאָה פֶּלֶא וָפָחַד",
+        "שָׁתִיתָ בִּרְצוֹן לִבְּךָ",
+        "כּוֹס הַחֵמָה בַּעֲדִי"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "אֵיךְ אֶשְׁכַּח אַהֲבָתְךָ",
+        "מַתָּ עַל־עֲוֺנִי",
+        "נֹשֵׂא חֶרְפָּה וּמַכְאוֹב",
+        "וְאֶת־הַצְּלָב"
+      ]
+    }
+  ],
+  "review": [
+    "2:3–2:4 וְהִזִּיעַ דָּמֶיךָ / כַּדָּם בַּתְּפִלָּה — Luke 22:44 (וַיְהִי זֵעָתוֹ כִּדְמֵי טִפִּים); the Arabic وَقَدْ نَضَحْتَ عَرَقًا / كَالدَّمِ فِي الصَّلَاة is that verse, and Hebrew keeps the comparison although the syntax reverses.",
+    "3:1–3:2 נִלְקַחְתָּ בְּחָזְקָה / אֶל־מִחוּץ לַחוֹמוֹת — the Arabic أُخِذْتَ عُنْوَةً ('seized by force') with Heb 13:12 (מִחוּץ לַמַּחֲנֶה); Hebrew keeps the outside-the-walls image the Arabic explains.",
+    "4:2 זֶבַח הָעֲוֺנוֹת — 'the sacrifice for sins' (Isa 53:10, אָשָׁם); the Arabic ذَبِيحَةَ الْآثَام is the guilt-offering, and זֶבַח with the plural is the closest construct at the line's length.",
+    "5:2 מַלְאָה פֶּלֶא וָפָחַד — 'full of wonder and awe'; the Arabic يُفْضِي إِلَى الْعَجَب is 'leading to wonder', and מָלֵא is used as a finite verb here for the beat.",
+    "6:4 וְאֶת־הַצְּלָב — the line is left at three words, as the Arabic الصَّلْبِ sits alone on its line after the split word; Hebrew cannot split, so the cross ends the stanza."
+  ]
+}

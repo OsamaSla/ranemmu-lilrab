@@ -1,0 +1,70 @@
+{
+  "book": "taranim",
+  "number": 99,
+  "title_he": "רָאִינוּ פֶּלֶא, הַדָּבָר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "רָאִינוּ פֶּלֶא",
+        "הָיָה בָשָׂר, הַלְלוּיָהּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוּא קַדְמוֹן וָעֶד",
+        "בֶּן־עֶלְיוֹן, הַלְלוּיָהּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בּוֹ כָּל־שְׁלֵמוּת",
+        "בַּעַל הוֹד, הַלְלוּיָהּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נִשָּׂא הַדּוֹד עַל־צְלָב",
+        "דָּבָר נִפְלָא, הַלְלוּיָהּ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "מֵת וְקָם בְּמָקוֹם רָם",
+        "בּוֹ שָׁלוֹם, הַלְלוּיָהּ"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "יָשַׁב הַנֶּאֱמָן",
+        "הוּא עוֹזְרֵנוּ, הַלְלוּיָהּ"
+      ]
+    },
+    {
+      "label": "7",
+      "lines": [
+        "הוּא הַגֹּאֵל הַבָּא",
+        "וְלֹא יְאַחֵר, הַלְלוּיָהּ"
+      ]
+    },
+    {
+      "label": "8",
+      "lines": [
+        "אֲדֹנֵינוּ, מַלֵּא",
+        "עֲמִידָתֵנוּ, הַלְלוּיָהּ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 — John 1:14 again; the stanza is only two lines in the print, so each couplet carries one sentence and ends on הַלְלוּיָהּ, which is left untranslated exactly as هَلِّلُويَا is.",
+    "2:1 קַדְמוֹן וָעֶד — 'the Ancient and Everlasting', for الْأَزَلِيّ وَالْأَبَدِيّ; the pair is the liturgical way of naming eternity past and future, which the Arabic's two adjectives distinguish.",
+    "4:1 נִשָּׂא הַדּוֹד עַל־צְלָב — 'the Beloved was lifted on a cross' (John 12:32, אִם אֶנָּשֵׂא); the Arabic رُفِعَ الْحَبِيب عَلَى الصَّلِيب is that lifting.",
+    "6:1 יָשַׁב הַנֶּאֱמָן לִימִין — Psalm 110:1 and Heb 10:12 (יָשַׁב לִימִין); the Arabic جَلَسَ الْأَمِين عَنِ الْيَمِين is the session, and לִימִין is the psalm's own preposition.",
+    "8:2 אֶת־עֲמִידָתֵנוּ — 'our waiting', for انْتِظَارَنَا; עֲמִידָה is the post-biblical noun for standing/awaiting, used because a longer clause would break the two-line stanza."
+  ]
+}

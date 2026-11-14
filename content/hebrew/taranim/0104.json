@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 104,
+  "title_he": "אֲהַלֵּל אֲדֹנִי יֵשׁוּעַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲהַלֵּל אֲדֹנִי",
+        "אָשִׁיר לִשְׁמוֹ",
+        "שִׁירִי עָרֵב לוֹ",
+        "וַאֲנִי בוֹ אֶשְׂמָח"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אָשִׁיר לוֹ בְּכָל־עֵת",
+        "כָּל־עוֹד אָנִי קַיָּם",
+        "הוּא אֲדֹנִי הֶאֱמָן",
+        "דּוֹד וְרַחוּם הוּא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נִפְלָא הוּא בְּאִישְׁכֶם",
+        "וְגַם בְּאַהֲבָתוֹ",
+        "פָּדָה אוֹתִי בַּצְּלָב",
+        "הוֹי אַהֲבָה עַזָּה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כָּל־חוֹבִי הוּא שִׁלֵּם",
+        "הַצֶּדֶק שָׁקַט כֵּן",
+        "וּבוֹ לִי כָּל־סִפּוּק",
+        "הוּא חֶלְקִי וְדַי"
+      ]
+    }
+  ],
+  "review": [
+    "2:1–2:2 אָשִׁיר לוֹ בְּכָל־עֵת / כָּל־עוֹד אָנִי קַיָּם — Psalm 104:33 (אָשִׁירָה לַיהוָה בְּחַיָּי); the Arabic أُغَنِّي لَهُ كُلَّ حِين / مَا دُمْتُ أَنَا فِي الْوُجُود is that resolve.",
+    "2:4 דּוֹד וְרַחוּם הוּא — 'Beloved and tender'; the Arabic الْحَبِيبُ وَالْوَدُود uses the two names, and וְרַחוּם is chosen as the biblical counterpart of الْوَدُود (Ex 34:6).",
+    "3:2 וְגַם בְּאַהֲבָתוֹ — 'matchless in His love'; the Arabic فَرِيد ('unique') has no adjective at four syllables, so the line states the love and leaves 'matchless' to the preceding נִפְלָא.",
+    "4:2 הַצֶּדֶק שָׁקַט כֵּן — 'justice was thus content'; the Arabic وَالْعَدْلُ هٰكَذَا اكْتَفَى is the satisfaction of justice, and שָׁקַט is the biblical verb for being at rest (Judg 3:11).",
+    "4:4 הוּא חֶלְקִי וְדַי — 'He is my portion — enough'; the Arabic فَهُوَ نَصِيبِي وَكَفَى is the same two-beat close, and דַּי is its exact Hebrew equivalent."
+  ]
+}

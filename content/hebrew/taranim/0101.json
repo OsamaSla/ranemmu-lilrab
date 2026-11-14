@@ -1,0 +1,58 @@
+{
+  "book": "taranim",
+  "number": 101,
+  "title_he": "אֱלֹהִים עֻזֵּנוּ וּמִשְׂגַּבֵּנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עַל־כֵּן לֹא נֶחֱרַד",
+        "וְלִבֵּנוּ לֹא יִפְחָד",
+        "לָמָּה נִתְמוֹטָט",
+        "וַאדֹנָי עוֹזְרֵנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֱלֹהִים עֻזֵּנוּ",
+        "מִשְׂגַּבֵּנוּ הָאֵיתָן",
+        "בַּצַּר עֵזֶר גִּבּוֹר",
+        "וּמוֹשִׁיעַ עַז"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אִם־תִּרְעַשׁ הָאָרֶץ",
+        "וְיָבֹאוּ מְצוּקוֹת",
+        "אוֹ יֵהָפְכוּ הָרֶיהָ",
+        "אֲדֹנָי לָנוּ מָגֵן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֲדֹנָי בְּקֶרֶב עַמּוֹ",
+        "וְעוֹזֵר לָעֵדָה",
+        "מִשֶּׁפַע יְשַׂמְּחֶהָ",
+        "בִּבְרָכוֹת יְקָרוֹת"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "גָּדוֹל אֲדֹנָי עֶלְיוֹן",
+        "נִשְׂגָּב וְנֶהְדָּר",
+        "אִתָּנוּ מָעֻזֵּנוּ",
+        "וּמִשְׂגַּבֵּנוּ הָאֵיתָן"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Psalm 46: God is our strength and refuge (v2), therefore we shall not fear though the earth quake and the mountains fall (v3–4), the Lord in the midst of His people (v6). The Arabic اللهُ قُوَّةٌ لَنَا / وَحِمَانَا الْوَطِيدُ is that psalm, so the Hebrew quotes its nouns.",
+    "4:2 לָעֵדָה — 'for the congregation'; the Arabic الْكَنِيسَة is the Church, and עֵדָה is the biblical assembly word used for Israel and carried over into the Church's own speech.",
+    "5:3 לְעוֹלָם אִתָּנוּ מָעֻזֵּנוּ — 'our stronghold is with us forever'; the Arabic لِلدَّهْرِ مَعْنَا حِصْنُنَا is the same claim, and מָעוֹז is the psalm's word for the fortress (Ps 46:2, מָעוֹז).",
+    "1:1 עַל־כֵּן לֹא נֶחֱרַד — Psalm 46 has לֹא־נִירָא ('we shall not fear'); the Arabic لَسْنَا نَجْزَع is 'we shall not panic', and חָרַד is the biblical verb for trembling, which is what the Arabic names."
+  ]
+}

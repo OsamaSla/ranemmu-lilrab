@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 102,
+  "title_he": "נַפְשִׁי, מַה־לִּי פֹה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נַפְשִׁי, מַה־לִּי פֹה",
+        "כִּי גֵר וְתוֹשָׁב אָנִי",
+        "אֵין לִי בָּאָרֶץ נַחֲלָה",
+        "וְלֹא חֵלֶק בָּהּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "תָּמִיד אֲנִי מְבַקֵּשׁ",
+        "לַחֲזוֹת בַּדּוֹד",
+        "כִּי־זֹאת תַּאֲוָתִי",
+        "וְזֶה חֶלְקִי הַטּוֹב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא הַחֵלֶק הַטּוֹב",
+        "מִיָּדִי לֹא יִנָּטֵל",
+        "נַפְשִׁי בָּחֲרָה בוֹ",
+        "וּבוֹ לִבִּי יִשְׂבַּע"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בְּהֵחָלֵץ הַזְּמָן",
+        "אֶשְׁכֹּן בֵּית עוֹלָם",
+        "אַרְוֶה צְמָא שׁוֹקִי",
+        "שָׁם עִם הֶחָנוּן"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 מַה־לִּי פֹה … גֵר וְתוֹשָׁב — Psalm 39:13 (גֵּר אָנֹכִי עִמָּךְ תּוֹשָׁב) and Gen 23:4; the Arabic ضَيْفٌ غَرِيب ('a guest, a stranger') is that pair, and the Hebrew keeps both nouns.",
+    "3:2 מִיָּדִי לֹא יִנָּטֵל — 'it shall not be taken from my hand' (John 10:28, לֹא יַחְטֹף אִישׁ מִיָּדִי); the Arabic وَمِنْ يَدِي لَا يُنْزَعُ is the same assurance.",
+    "4:1 בְּהֵחָלֵץ הַזְּמָן — 'when time is over', for حِينَ يَنْتَهِي الزَّمَان; חָלַץ in the sense of drawing off/finishing is biblical (Lev 14:43 uses it of removing), and the niphal keeps the passive.",
+    "4:3–4:4 אַרְוֶה צְמָא שׁוֹקִי / שָׁם עִם הֶחָנוּן — 'I shall slake the thirst of my longing there with the Gracious One'; the Arabic أُرْوِي ظَمَا شَوْقِي … مَعْ ذَاكَ الْوَدُود is one sentence split across the couplet, and Hebrew keeps the split so the name lands last."
+  ]
+}
