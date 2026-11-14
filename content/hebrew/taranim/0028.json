@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 28,
+  "title_he": "יֵשׁוּעַ אֲדֹנִי מַחְסִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יֵשׁוּעַ אֲדֹנִי מַחְסִי",
+        "עָלֶיךָ מִשְׁעַנְתִּי",
+        "צוּר עוֹלָמִים קֶדֶם",
+        "יְסוֹד אֱמוּנָתִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֶרְאֶךָ קָרוֹב יֵשׁוּעַ",
+        "בְּעֵין אֱמוּנָתִי",
+        "יְמִינְךָ תִּמְחֶה דִּמְעָה",
+        "בִּשְׁעַת עֶצְבּוֹנִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּבִדְלוּתִי בְּשִׁמְמָתִי",
+        "זִכְרְךָ נֶחָמָתִי",
+        "בְּנִסְיוֹנִי בְּצָרָתִי",
+        "תָּסִיר יְגוֹנִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אִם־אֶכָּשֵׁל בַּמַּשָּׂא",
+        "כְּנִכְאֶה סוֹבֵל",
+        "תּוֹשִׁיעֵנִי מִכָּל־רָע",
+        "וְלֹא תִשְׁכָּחֵנִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אֵין תּוֹחֶלֶת בִּי אֲדֹנִי",
+        "מֵעֶזְרַת אָדָם",
+        "אֱחֹז יָדִי מוֹשִׁיעִי",
+        "טוֹב מִכָּל־עוֹזֵר"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "יְמִינְךָ תּוֹרֵנִי דָרֶךְ",
+        "וְעֵינְךָ תִּשְׁמְרֵנִי",
+        "וּבְהִקְרֵב יוֹם נָסְעִי",
+        "אֶעְלֶה לְמוֹלַדְתִּי"
+      ]
+    }
+  ],
+  "review": [
+    "1:3 צוּר עוֹלָמִים קֶדֶם — 'Rock of ages from of old', for صَخْرَ الدُّهُورِ الْأَزَلِيّ; קֶדֶם is the biblical 'of old' and keeps the line at seven.",
+    "3:1 בְּבִדְלוּתִי בְּשִׁמְמָתִי — 'in my solitude, in my desolation'; שִׁמְמָה is the biblical waste/desolation (Lev 26:34), used here for وَحْشَة.",
+    "5:1 אֵין תּוֹחֶלֶת בִּי — 'there is no hope in me', for لَا نَفْعَ يُرْجَى; the passive 'is hoped' has no natural Hebrew equivalent, so the sense is carried by תּוֹחֶלֶת.",
+    "6:3 יוֹם נָסְעִי — 'the day of my setting out', for الرَّحِيل; נָסַע is the biblical verb for breaking camp, which keeps the pilgrimage image.",
+    "6:4 אֶעְלֶה לְמוֹלַדְתִּי — 'I shall go up to my homeland'; the glossary fixes מוֹלַדְתִּי for وَطَن, and the ascent fits 'in the Father's house on high' (hymn 29)."
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "book": "taranim",
+  "number": 41,
+  "title_he": "נַפְשִׁי שִׂמְחִי בְּקִהִלָּה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נַפְשִׁי שִׂמְחִי בְּקִהִלָּה",
+        "סְבִיב דּוֹדֵנוּ הֶחָנוּן",
+        "שָׁם נְבַקֵּשׁ כֻּלָּנוּ",
+        "לְהַקְרִיב הַשְׁתַּחֲוָיָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֵיךְ לֹא וְהוּא קָנָנוּ",
+        "מֵת עָלֵינוּ בַּצְּלָב",
+        "מֵת לְמַעַן נִחְיֶה",
+        "כָּל־תּוֹדָה לַדּוֹד"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מָה נִפְלָאָה אַהֲבָתוֹ",
+        "נִגְלְתָה בַּנֶּהְדָּר הַהוּא",
+        "בְּאַהֲבָה נִקְשַׁר",
+        "לֹא בְמַסְמְרֵי בַּרְזֶל"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "קֶבֶר אָסַף אוֹתוֹ",
+        "אַךְ גָּבַר עַל־מָוֶת וָקָם",
+        "וְעָלָה הַשָּׁמַיְמָה",
+        "מַפְגִּיעַ תָּמִיד"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "עַל־כֵּן כָּל־כֹּחוֹתֵינוּ",
+        "נַקְדִּישׁ אוֹתָם לָךְ",
+        "זוֹכְרִים אֵימַת מָוֶת",
+        "שָׁם נִגְלָה חַסְדְּךָ"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "נוֹצִיא לֶחֶם בְּתוֹדָה",
+        "כָּל־עוֹד אַתָּה שָׁם",
+        "נְיַחֵל לַבּוֹאֶךָ",
+        "עוֹד מְעַט וְנִרְאֶךָ"
+      ]
+    }
+  ],
+  "review": [
+    "2:1 קָנָנוּ — 'He bought/acquired us'; the glossary fixes קָנָה for اشترى, and the perfect is used because the purchase is accomplished at the cross.",
+    "3:2 בַּנֶּהְדָּר הַהוּא — 'in that Glorious One', for فِي ذَاكَ الْمَجِيد; the adjective is substantivised with the article, as in Ps 8:2's בַּנֶּהְדָּר.",
+    "3:3–3:4 בְּאַהֲבָה נִקְשַׁר / לֹא בְמַסְמְרֵי בַּרְזֶל — 'bound by love, not by iron nails'; the antithesis is the whole point of the stanza and is kept word for word.",
+    "4:4 מַפְגִּיעַ — the glossary word for intercession (Isa 53:12), used again here as in hymn 5.",
+    "6:2 כָּל־עוֹד אַתָּה שָׁם — 'while You are there', for طَالَمَا أَنْتَ هُنَاك; the Arabic طَالَمَا is 'as long as', and the Hebrew clause mirrors it.",
+    "6:3 נְיַחֵל לַבּוֹאֶךָ — 'we wait for Your coming'; the piel of יחל is the biblical verb of waiting in hope (Ps 42:6)."
+  ]
+}

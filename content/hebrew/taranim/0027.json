@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 27,
+  "title_he": "יֵשׁוּעַ אָהַבְתָּנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אַהֲבָתְךָ מַרְפֵּא",
+        "אַהֲבָתְךָ מַסְפִּיק",
+        "אַהֲבָתְךָ מְלֵאָה",
+        "אָהַבְתָּנוּ אָדוֹן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יֵשׁוּעַ אָהַבְתָּנוּ",
+        "עַד־מָוֶת חַנּוּן",
+        "בַּחֻלְשָׁה רָמַסְתָּ עָז",
+        "בְּמִבְצָרֵי עֹז"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִתְגָּרֶה בְּךָ הַצָּר",
+        "בַּחֲשֵׁכָה עֲמֻקָּה",
+        "בְּאֵימָה וּבְצוּקָה",
+        "וּבִנְטִישָׁה בְּלִי רֵעַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נָשָׂאתָ אֵימַת מָוֶת",
+        "בַּצְּלָב נִתְקַעְתָּ",
+        "גַּלָּיו עָבְרוּ עַל־רֹאשְׁךָ",
+        "עַל־רֹאשְׁךָ חָבִיב"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "וְכָכָה הִשְׁלַמְתָּ מַה",
+        "אֲשֶׁר יַעְשְׁרֵנוּ",
+        "בַּמְּנוּחָה הָעֶלְיוֹנָה",
+        "בִּכְבוֹדְךָ הָעֶלְיוֹן"
+      ]
+    }
+  ],
+  "review": [
+    "Stanza 1 is a fourfold acclamation of the one love under three aspects; Hebrew uses the construct 'Your love is healing / sufficing / full' so the four short lines stay parallel.",
+    "1:1–1:3 אַהֲבָתְךָ as the opening of each line: the Arabic repeats بِحُبِّكَ, and the anaphora is what carries the tune.",
+    "2:3 בַּחֻלְשָׁה — 'in weakness' (the noun is post-biblical but liturgical); the Arabic الضَّعْف is the point of the paradox, so it is kept rather than paraphrased.",
+    "3:4 וּבִנְטִישָׁה בְּלִי רֵעַ — the Arabic splits 'and the forsaking' across the line break (وَالـ / ـتَّرْكِ); Hebrew cannot split the word, so line 4 carries the whole phrase.",
+    "4:4 עַל־רֹאשְׁךָ חָבִיב — the Arabic has 'over Your head, O Beloved'; Hebrew repeats עַל־רֹאשְׁךָ from 4:3 because a bare חָבִיב would lose the address."
+  ]
+}

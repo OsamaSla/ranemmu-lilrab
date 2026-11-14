@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 42,
+  "title_he": "מְקוֹר שְׂשׂוֹנַי הֶעָשִׁיר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מְקוֹר שְׂשׂוֹנַי הֶעָשִׁיר",
+        "מְחַיֶּה בִּרְכוֹתָיו",
+        "הוֹד יָמַי הַמְּאִירִים",
+        "נֶחָמַת לֵילוֹתַי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בַּחֲשֵׁכָה הָעֲמֻקָּה",
+        "תִּזְרַח — יָאִיר שַׁחֲרִי",
+        "מַרְאֵה פָנֶיךָ בָּא",
+        "עִם־שֶׁמֶשׁ וְיָרֵחַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "תָּאִיר סְבִיבִי שָׁמַיִם",
+        "בְּהִגָּלוֹת אֲדֹנִי",
+        "אֶרְאֶה לְבָבוֹ כְּמוֹ",
+        "יִרְאֶה הוּא לְלִבִּי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תַּחְפֹּץ נַפְשִׁי אָז",
+        "לַעֲזֹב הָעוֹלָם",
+        "וְלַעֲלוֹת שָׁמָּה",
+        "לַמְּנוּחָה הָעֶלְיוֹנָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 מְחַיֶּה בִּרְכוֹתָיו — 'who gives life to His blessings', for مُحْيِي تَهَانِيهَا; the Arabic ثَنَايَا/تَهَانِي is congratulations, which has no biblical noun, so בְּרָכוֹת carries it.",
+    "2:2 תִּזְרַח — יָאִיר שַׁחֲרִי — the dash marks the caesura the Arabic has (لُحْتَ / ابْتَدَا); the verb זָרַח is the psalm verb for dawn (Ps 112:4).",
+    "3:3–3:4 אֶרְאֶה לְבָבוֹ כְּמוֹ / יִרְאֶה הוּא לְלִבִּי — 'I see His heart as He sees my heart'; the reciprocity is the Arabic's point and is kept, with the infinitive-like balance of the two lines.",
+    "4:1–4:3 תַּחְפֹּץ ... לַעֲזֹב ... וְלַעֲלוֹת — a chain of infinitives after a finite verb; the Arabic switches from أَنْ تَتْرُكَ to وَتَرْتَقِي, and Hebrew keeps the chain to hold the line lengths."
+  ]
+}

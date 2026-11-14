@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 40,
+  "title_he": "הִנְנוּ אֲדוֹן כָּל־בְּרִיאָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הִנְנוּ אֲדוֹן כָּל־בְּרִיאָה",
+        "בָּאנוּ לְהִשְׁתַּחֲווֹת לָךְ",
+        "סְבִיב גֹּאֲלֵנוּ הַדּוֹד",
+        "נוֹדֶה לְךָ עַל־כָּל־טוּב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כִּי בְדָבָר זֶה בְּחַרְתָּנוּ",
+        "מֵעוֹלָם וָקֶדֶם",
+        "וּבָא בִּמְלֹא הָעִתִּים",
+        "לְהַשְׁלִים כָּל־הַפְּעָלִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מֵת עָלֵינוּ עַל־הַצְּלָב",
+        "וַיַּשְׁלֵם אֶת־חֶפְצְךָ",
+        "וַיָּשֶׁב כְּבוֹדְךָ הַגָּזוּל",
+        "בְּמַלֹּאת רְצוֹנְךָ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְאַתָּה הַחַנּוּן",
+        "שַׂמְתָּהוּ עַל־כֹּל",
+        "הֲקִימוֹתָ לְמוֹשִׁיעַ",
+        "וְרוֹעֶה עַל־הָעֵדֶר"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "בִּשְׁמוֹ אֲנַחְנוּ מִשְׁתַּחֲוִים",
+        "מִלִּבֵּנוּ נָשִׁיר תּוֹדָה",
+        "בְּהַשְׁמִיעֵנוּ תְּהִלָּתְךָ",
+        "אָבִינוּ וֵאלֹהֵינוּ"
+      ]
+    }
+  ],
+  "review": [
+    "2:1–2:2 כִּי בְדָבָר זֶה בְּחַרְתָּנוּ / מֵעוֹלָם וָקֶדֶם — 'for in this matter You chose us, from eternity and of old'; Hebrew makes the 'in His person' explicit as בְדָבָר זֶה ('in this one') rather than repeating בְּאִישׁ ('in a man').",
+    "2:3 מְלֹא הָעִתִּים — 'the fullness of the times' (Eph 1:10); the Arabic مِلْءِ الزَّمَان is that phrase, and the plural הָעִתִּים is deliberate.",
+    "3:2–3:3 וַיַּשְׁלֵם ... וַיָּשֶׁב — two wayyiqtol verbs, because the Arabic قَضَى / أَكْمَلَ / رَدَّ is a narrative sequence and Hebrew narrative tense is the right register here.",
+    "3:3 כְּבוֹדְךָ הַגָּזוּל — 'Your stolen glory'; גָּזוּל is the passive participle of גזל (theft), which is the biblical word for what Adam lost.",
+    "4:1–4:2 וְאַתָּה הַחַנּוּן / שַׂמְתָּהוּ עַל־כֹּל — the Arabic أَيُّهَا الْحَنُون is a vocative; Hebrew keeps the article as a vocative of address, as in the psalms."
+  ]
+}

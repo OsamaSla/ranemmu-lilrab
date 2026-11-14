@@ -1,0 +1,66 @@
+{
+  "book": "taranim",
+  "number": 34,
+  "title_he": "יֵשׁוּעַ אַתָּה אֲדֹנִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יֵשׁוּעַ אֲדֹנִי",
+        "יַקִּירִי הַנֶּאֱמָן",
+        "לֹא אֶפְחַד מִצָּרָה",
+        "וְאַתָּה עוֹזְרִי",
+        "מַדּוּעַ אֶתְיַגֵּעַ",
+        "בְּדַרְכִּי הֵנָּה",
+        "אֵיךְ יִהְיֶה דַּרְכִּי",
+        "יוֹבִיל לַשָּׁמָיְמָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מַה־אִירָא מִיָּגוֹן",
+        "אַתָּה עִמָּדִי",
+        "אוֹ אֶחְתַּת מִיּוֹם",
+        "הַבָּא עָלַי",
+        "אִם־אֶקַּח צְלָבִי",
+        "לָלֶכֶת אַחֲרֶיךָ",
+        "אוֹ אֶהְיֶה נִבְזֶה",
+        "עוֹדֶנִּי עִמְּךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "לֹא־הִטְעָה אוֹתִי",
+        "כְּבוֹד הַזְּמַן הַזֶּה",
+        "שָׁמַעְתִּי תֹּאַר מָתוֹק",
+        "עַל־הַמָּקוֹם הַהוּא",
+        "אֲשֶׁר הֵכִין אֲדֹנִי",
+        "לִי מוֹשָׁב חָמוּד",
+        "אֶרְאֶה בְּעֵינַי",
+        "אֶת־מוֹשִׁיעִי הַדּוֹד"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בְּתוֹךְ כָּל־צָרָה",
+        "בַּחַיִּים הָאֵלֶּה",
+        "יֵשׁוּעַ עוֹזְרִי",
+        "נוֹתֵן לִי תְּשׁוּעָה",
+        "לֹא יִגְבַּר עָלַי הַצָּר",
+        "כִּי בְךָ מִבְטַחִי",
+        "יֵשׁוּעַ אֲדֹנִי",
+        "יַקִּירִי הַנֶּאֱמָן"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 and 4:7–4:8 repeat the same address ('Jesus, You are my Lord / my dear, faithful One'); the Arabic frames the hymn with it, so Hebrew repeats it word for word.",
+    "1:5–1:6 אֶתְיַגֵּעַ / בְּדַרְכִּי הֵנָּה — 'why do I toil on my way here'; the Arabic تُرَى لِمَاذَا is a rhetorical 'why, then', which Hebrew marks with מַדּוּעַ alone.",
+    "2:2 אַתָּה עִמָּדִי — 'You are with me' (Ps 23:4); the Arabic مُلَازِمِي ('clinging to me') is stronger, but the psalm echo is what the tune wants.",
+    "3:1 לֹא־הִטְעָה אוֹתִי — 'it did not deceive me'; the Arabic passive مَخْدُوع ('I was not deceived') becomes active in Hebrew, which has no natural passive of this verb here.",
+    "3:6 מוֹשָׁב חָמוּד — 'a desirable dwelling'; the Arabic الْمَسْكِنَ الْمَرْغُوب is a participle phrase, and the Hebrew adjective keeps the line at six."
+  ]
+}

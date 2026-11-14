@@ -1,0 +1,60 @@
+{
+  "book": "taranim",
+  "number": 43,
+  "title_he": "אֵיזֶה מַשָּׂא נָשָׂאתָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵיזֶה מַשָּׂא נָשָׂאתָ",
+        "אֲדֹנֵינוּ הַגָּדוֹל",
+        "בִּרְצוֹן לֵב שָׁמַעְתָּ",
+        "וַיִּכְרַע רֹאשׁ יָקָר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "פָּנֶיךָ בֹּהֲקִים יֹפִי",
+        "וְדָם רַב עֲלֵיהֶם",
+        "נִשְׁחַת לְמַעֲנִי",
+        "הוֹי אֲדֹנָי שַׁדַּי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "גַּלֵּי אֵל שׁוֹעֲקִים",
+        "עַל־רֹאשְׁךָ הַנִּשָּׂא",
+        "חֲמַת הַצֶּדֶק נָשָׂאתָ",
+        "נֶחְשַׁבְתָּ תַּחְתֵּנוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מֵאֵל נֶעֱזַבְתָּ",
+        "בְּשִׁמְמוֹת הַחֹשֶׁךְ",
+        "כָּל־חוֹבֵינוּ שִׁלַּמְתָּ",
+        "וַתַּעְנֵק לָנוּ שָׁלוֹם"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הוֹי דּוֹד הַלֵּב הַלְלוּ",
+        "עַל־הַיְשׁוּעָה וְהַתִּקְוָה",
+        "עוֹד מְעַט וְנִהְיֶה",
+        "עִמְּךָ בִּכְבוֹד שָׁמַיִם"
+      ]
+    }
+  ],
+  "review": [
+    "1:3 בִּרְצוֹן לֵב — 'with the will of the heart', for بِاخْتِيَارٍ; the noun רָצוֹן with לֵב marks willing consent, which is the doctrine of the stanza (John 10:18).",
+    "1:4 וַיִּכְרַע רֹאשׁ יָקָר — 'and the precious head bowed'; the Arabic الْكَرِيم is 'noble', but יָקָר is the word used of the head in Ps 139:17 and fits the metre.",
+    "2:1 פָּנֶיךָ בֹּהֲקִים יֹפִי — 'Your face, radiant with beauty'; בֹּהֲק is the rare biblical 'shining' (Ezek 21:10), chosen for the assonance and the five syllables.",
+    "3:1 גַּלֵּי אֵל — 'the billows of God' (Jonah 2:4, Ps 42:8); the Arabic تَيَّارَاتُ اللهِ is the same image and the psalm text is kept close.",
+    "3:4 נֶחְשַׁבְתָּ תַּחְתֵּנוּ — 'You were reckoned in our place'; the Arabic الْبَدِيل ('substitute') is a doctrinal term, and נֶחְשַׁב is the verb of Isa 53:4 (נֶחְשַׁב כִּמְצֹרָע).",
+    "4:4 וַתַּעְנֵק — 'and You gave us peace to enjoy'; the hiph'il of ענק is post-biblical but liturgical-standard, and it fills the line where שָׁלוֹם alone would fall short."
+  ]
+}

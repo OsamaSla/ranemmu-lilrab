@@ -1,0 +1,41 @@
+{
+  "book": "taranim",
+  "number": 32,
+  "title_he": "עֲמֹד חַיִּל בְּצַד הַצְּלָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עֲמֹד בְּצַד הַצְּלָב",
+        "הוֹי חַיִּל גִּבּוֹר",
+        "נְנַצֵּחַ מִקָּרוֹב",
+        "וְנָשׁוּב בִּתְשׁוּעָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עֲמֹד חַיִּל בְּצַד הַצְּלָב",
+        "עִם־הֶאִיר הָאוֹר",
+        "וְגַם בְּרֶדֶת הַחֹשֶׁךְ",
+        "בְּטַח בַּצּוּר אֲדֹנֵינוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עֲמֹד עַד־שׁוּב אֲדֹנֶיךָ",
+        "וְיִמְצָאֲךָ גּוֹבֵר",
+        "מִשְּׂפָתָיו תִּשְׁמַע",
+        "דַּי עָמָל בַּמִּלְחָמָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 חַיִּל — 'soldier'; the Arabic الْجُنْدِيّ is singular, and חַיִל is the biblical collective that can stand for one warrior in poetic address (cf. גִּבּוֹר חַיִל).",
+    "2:2 עִם־הֶאִיר הָאוֹר — 'when the light dawned', for عِنْدَ شُرُوقِ النُّور; the infinitive construct with עִם marks time, as in Gen 19:15.",
+    "2:4 בְּטַח בַּצּוּר אֲדֹנֵינוּ — the Arabic is 'trust our Lord, the Rock of ages'; Hebrew reverses the apposition because בְּטַח takes its object first, and צוּר carries 'Rock'.",
+    "3:1 עַד־שׁוּב אֲדֹנֶיךָ — the infinitive construct after עַד ('until your Lord returns') avoids a finite verb that would add a syllable.",
+    "3:2 וְיִמְצָאֲךָ גּוֹבֵר — 'and may He find you conquering'; the Arabic يَجِدْكَ is jussive after the imperative, and Hebrew keeps the same sequence."
+  ]
+}

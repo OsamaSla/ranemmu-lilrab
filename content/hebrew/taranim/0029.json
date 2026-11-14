@@ -1,0 +1,40 @@
+{
+  "book": "taranim",
+  "number": 29,
+  "title_he": "בְּבֵית־אָבִי בַּמָּרוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּבֵית־אָבִי בַּמָּרוֹם",
+        "הוּכַן מְקוֹמִי",
+        "שָׁם תָּנוּחַ נַפְשִׁי",
+        "כִּי טוֹב שְׂכָרִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עִם־דּוֹדִי הַטָּהוֹר",
+        "אֶזְרַח בְּכָבוֹד",
+        "שִׁבְתּוֹ תְּשַׂמְּחֵנִי",
+        "אַהֲבָתוֹ גִּילִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עִקְבוֹת חֵטְא יִמָּחוּ",
+        "וְהָרַע יַעְבֹּר",
+        "וּבַיּוֹם הַנִּצְחִי",
+        "אֶשְׁכֹּן עִם־דּוֹדִי"
+      ]
+    }
+  ],
+  "review": [
+    "1:3–1:4 שָׁם תָּנוּחַ נַפְשִׁי / כִּי טוֹב שְׂכָרִי — the Arabic is a fragment ('there is my rest, as the best reward is mine'); Hebrew joins the two lines into one clause so the couplet lands.",
+    "2:2 אֶזְרַח בְּכָבוֹד — 'I shall shine in glory'; זָרַח is the biblical verb for light breaking forth (Isa 60:1), which suits أَلْمَعُ better than a passive.",
+    "3:1 עִקְבוֹת חֵטְא יִמָּחוּ — 'the traces of sin shall be wiped out'; מָחָה is the biblical verb of blotting out (Ps 51:3), matching يَمَّحِي.",
+    "3:3 הַנִּצְחִי — 'the eternal [day]'; the adjective is post-biblical in this absolute use, but נֵצַח itself is biblical (Isa 34:10) and the line needs one word here."
+  ]
+}

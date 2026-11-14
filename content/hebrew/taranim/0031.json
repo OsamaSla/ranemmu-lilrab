@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 31,
+  "title_he": "שָׂאֵנִי קָרוֹב לַצְּלָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בַּצְּלָב בַּצְּלָב",
+        "מְנוּחָתִי וְתִפְאַרְתִּי",
+        "בְּחַיַּי וְעַד־נֶצַח"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "קָרְבֵנִי אֶל־הַצְּלָב",
+        "שָׁם נָבַע הַמָּקוֹר",
+        "בִּנְטֹף דַּם הַגּוֹאֵל",
+        "רִפֵּא מַחֲלָתִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נִמְחָה עַל־הַצְּלָב",
+        "דַּם אֲדֹנִי חֶטְאִי",
+        "וּמִלִּבִּי הַכּוֹאֵב",
+        "סָר כָּל־דְּאָגָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "רָאִינוּ בַּצְּלָב",
+        "כֹּחַ הָרַחֲמָן",
+        "כִּי־נִגְלָה דָבָר פֶּלֶא",
+        "כֹּפֶר לַחַיָּב"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "מִי־מֵת עַל־הַצְּלָב",
+        "זֶה כָּל־הַמַּטָּרָה",
+        "עוֹד מְעַט יֵרָאֶה",
+        "בְּכָבוֹד נִגְלֶה"
+      ]
+    }
+  ],
+  "review": [
+    "The Arabic prints the first stanza as three lines (the refrain, then two long lines); Hebrew keeps the same 3-line shape so the payload matches the printed book.",
+    "3:1 נִמְחָה עַל־הַצְּלָב — the Arabic has 'it wiped at the cross' with the subject in line 2; Hebrew fronts the verb and leaves the subject (דַּם אֲדֹנִי) for the next line, as the tune's caesura requires.",
+    "3:3–3:4 — 'from my gloomy heart all care has gone'; the Arabic puts הַמّ (care) at the head of 3:4, Hebrew at the end, to keep the rhyme of 3:2/3:4 (חֶטְאִי / דְּאָגָה is a near-rhyme only; the tune does not demand a true rhyme here).",
+    "4:4 כֹּפֶר לַחַיָּב — 'a ransom for the guilty'; כֹּפֶר is the biblical ransom (Ex 21:30) and the line is the doctrinal centre of the stanza."
+  ]
+}

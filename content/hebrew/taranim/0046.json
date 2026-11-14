@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 46,
+  "title_he": "הוֹי עַמִּים טַעֲמוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי עַמִּים טַעֲמוּ",
+        "וּרְאוּ מָה־טּוֹב אֵל",
+        "אַשְׁרֵי הַבֹּטְחִים",
+        "בּוֹ וְאֵין־בִּלְתּוֹ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "קוּמוּ יִרְאוּ אֶת־עֶלְיוֹן",
+        "הוֹי כָּל־קְדוֹשָׁיו",
+        "כִּי לֹא־יֶחְסַר",
+        "לְכָל־יְרֵאָיו"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עֲשִׁירִים נִדַּלּוּ",
+        "וַיִּהְיוּ רְעֵבִים",
+        "דֹּרְשֵׁי אֲדֹנָי לָהֶם",
+        "טוֹב בְּלִי־קֵץ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עֵינֵי אֲדֹנָי אֶל",
+        "יְרֵאָיו הַנֶּאֱמָנִים",
+        "וְאָזְנוֹ מַקְשֶׁבֶת",
+        "לִתְחִנַּת עָנִי"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 טַעֲמוּ / וּרְאוּ — Psalm 34:9 (טַעֲמוּ וּרְאוּ כִּי־טוֹב יְהוָה), quoted because the Arabic ذُوقُوا وَانْظُرُوا is that verse.",
+    "1:3 אַשְׁרֵי הַבֹּטְחִים — 'blessed are those who trust'; the Arabic طُوبَى is the beatitude formula, and אַשְׁרֵי is its fixed Hebrew equivalent.",
+    "2:1–2:2 — the Arabic imperative هَيَّا اتَّقُوا is plural, then addresses 'all His saints'; Hebrew fronts קוּמוּ ('come!') so the plural carries across both lines.",
+    "3:1–3:2 עֲשִׁירִים נִדַּלּוּ / וַיִּהְיוּ רְעֵבִים — Psalm 34:11 is the source (רָשִׁים רְעֵבִים), and נִדַּלּוּ is the biblical verb for being brought low.",
+    "4:2 יְרֵאָיו הַנֶּאֱמָנִים — 'His faithful fearers'; the Arabic خَائِفِهِ الْأَمِين is singular, Hebrew plural for the tune, with נֶאֱמָנִים carrying 'faithful'."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 35,
+  "title_he": "הִנֵּה יֵשׁוּעַ בָּא",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הִנֵּה יֵשׁוּעַ בָּא",
+        "נַפְשִׁי הֱיִי מְצַפָּה",
+        "וְאִם־תִּשְׁפְּכִי דִּמְעָה",
+        "לַיְלָה לְבֹקֶר יָבֹא"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "שִׂמְחִי בְכָל־מַצָּב",
+        "גִּילִי כִּי בָא אוֹר",
+        "אַל־תָּשִׁיתִי לֵב לַצַּר",
+        "רֶגַע הָעֲבֹר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אָמְרָה נַפְשִׁי: גִּילִי",
+        "מִצְוַת דּוֹדִי הַבָּהִיר",
+        "כִּי בְכָל־דֶּרֶךְ",
+        "דּוֹדִי לִי נֶחָמָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אָכֵן אוֹתוֹ אֶרְאֶה",
+        "כּוֹכַב־שַׁחַר נִפְלָא",
+        "וְאֶשְׂמַח בְּהוֹדוֹ",
+        "יִכְלֶה עֵת בֶּכִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אֶעְלֶה עַל־כָּל־שְׁחָקִים",
+        "עוֹלֶה עִם־דּוֹדִי",
+        "וְנַפְשִׁי תָּשִׁיר לוֹ",
+        "וְלִבִּי בוֹ יִיטַב"
+      ]
+    }
+  ],
+  "review": [
+    "1:4 לַיְלָה לְבֹקֶר יָבֹא — 'night shall turn to morning'; the Arabic is 'a night, then the day comes', and the Hebrew infinitive-like sequence keeps the 8 syllables.",
+    "2:3–2:4 אַל־תָּשִׁיתִי לֵב לַצַּר / רֶגַע הָעֲבֹר — 'do not set your heart on the foe: the crossing is a moment'; the Arabic الْعُبُور ('crossing') is the pilgrimage image, kept as עֲבֹר.",
+    "3:2 מִצְוַת דּוֹדִי הַבָּהִיר — 'my Beloved's command, the radiant One'; the Arabic أَمْرُ رَبِّي ذِي الْبَهَاء is a construct with a descriptive apposition, which Hebrew reproduces with the adjective.",
+    "4:2 כּוֹכַב־שַׁחַר — 'morning star' (Rev 2:28, 22:16); the Arabic الْعَجِيب ('wondrous') becomes נִפְלָא to keep the line at eight.",
+    "5:4 וְלִבִּי בוֹ יִיטַב — 'and my heart shall be glad in Him'; the Arabic يَطِيب is literally 'is good/sweet', and the yiph'il of יטב carries the same double sense."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 37,
+  "title_he": "לֹא יָדַעְתִּי מַה־יִּהְיֶה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לֹא יָדַעְתִּי מַה־יִּהְיֶה",
+        "מִן־חַיַּי לְמָחָר",
+        "דָּבָר אֶחָד יָדַעְתִּי",
+        "אֲדֹנִי אוֹחֵז יָדִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לֹא אֵדַע מַה־יָּבוֹא",
+        "מָחָר אוֹ אַחֲרָיו",
+        "מָחָר בְּיַד אֲדֹנִי",
+        "לֹא נִסְתָּר מִמֶּנּוּ",
+        "לֹא דְּאָגָתִי מַה־יִּהְיֶה",
+        "מֵהַדְּבָרִים הַבָּאִים",
+        "דְּאָגָתִי לִרְצוֹת דּוֹדִי",
+        "בַּחַיִּים וּבַמָּוֶת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "יוֹדֵעַ: דַּרְכִּי מְאִירָה",
+        "יוֹדֵעַ: דּוֹדִי נֶאֱמָן",
+        "כִּי־הוּא לִי טוֹב רֵעַ",
+        "וְהוּא לִי טוֹב עוֹזֵר",
+        "עוֹד מְעַט וְאֵלֵךְ",
+        "אֶל־בֵּית הַנֶּצַח",
+        "שָׁם לֹא־תִזַּל דִּמְעָה",
+        "וְלֹא יִמְלֹךְ מָוֶת"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 מִן־חַיַּי לְמָחָר — 'of my life for tomorrow'; the Arabic فِي الْغَدِ is literally 'in the morrow', and Hebrew needs the preposition to keep the 7 syllables.",
+    "2:1–2:2 — the Arabic opens stanza 2 by restating stanza 1 ('I know not what shall come tomorrow or after'); Hebrew keeps the restatement but varies the verb (לֹא אֵדַע) so the repetition does not read as a copyist's slip.",
+    "3:3–3:4 טוֹב רֵעַ / טוֹב עוֹזֵר — the Arabic repeats خَيْرُ ('best'), and Hebrew repeats טוֹב at the head of both half-lines as the tune's parallel.",
+    "3:7 שָׁם לֹא־תִזַּל דִּמְעָה — 'there no tear shall drip'; נָזַל is the biblical verb for tears running down (Job 3:24), which is stronger than a plain 'flow'.",
+    "Metre note: the printed stanza 1 is 4 lines, stanzas 2–3 are 8; the payload follows the print, so the meter script reports an irregular shape by construction."
+  ]
+}

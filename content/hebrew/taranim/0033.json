@@ -1,0 +1,67 @@
+{
+  "book": "taranim",
+  "number": 33,
+  "title_he": "נֹשֵׂא אֶת־צְלָבִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נֹשֵׂא אֲנִי אֶת־צְלָבִי",
+        "אֵלֵךְ אַחֲרֵי גֹאֲלִי",
+        "וּבְכָפְרִי בְּנַפְשִׁי",
+        "אֶשָּׂא חֶרְפַּת בּוּז",
+        "כִּי־הוּא חֶלְקִי הָעֶלְיוֹן",
+        "וְהוּא אֲדֹנִי חָבִיב",
+        "אִם־יִטְּשֵׁנִי כָּל־אָדָם",
+        "הוּא חֶלְקִי הָעֶלְיוֹן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מוֹשֵׁל בְּכָל־הַבְּרִיאוֹת",
+        "וְהוּא יוֹצְרָן הָעֶלְיוֹן",
+        "כָּל־אֲשֶׁר בַּשָּׁמַיִם",
+        "וָאָרֶץ לִי בַּעֲדוֹ",
+        "אֵין־לִי רֵעַ זוּלָתוֹ",
+        "אֲבַקֵּשׁ רְצוֹנוֹ",
+        "אַהֲבָתוֹ תַּאֲוָתִי",
+        "אֵין־לִי רֵעַ זוּלָתוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "לֹא־צָרָה וָרֹדֶף",
+        "יַרְחִיקוּ מֵרְצוֹנוֹ",
+        "לֹא אֶשְׁכַּח אַהֲבָתוֹ",
+        "בְּהַבְלֵי הֶחָיִים",
+        "הוּא לִי אוֹצָר יָקָר",
+        "וְהוּא לִי מִגְדַּל־עֹז",
+        "עִמּוֹ לִבִּי שֹׁכֵן",
+        "הוּא לִי אוֹצָר יָקָר"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עַל־כֵּן אֶחְיֶה בָאָרֶץ",
+        "כְּגֵר וְתוֹשָׁב בָּהּ",
+        "מְקַוֶּה אַחֲרֵי מְעָט",
+        "לִרְאוֹת פְּנֵי דוֹדִי",
+        "שָׁלוֹם וָעַד־עוֹלָם",
+        "עִם־הַדּוֹד הָרַחוּם",
+        "וְשִׂמְחָה נִצְחִית לָעַד",
+        "שָׁלוֹם וָעוֹלָם"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 — four participles in the Arabic (accepting, following, denying, wearing); Hebrew uses a participle then finite verbs, because a chain of four participles would read as a list rather than a confession.",
+    "1:4 אֶשָּׂא חֶרְפַּת בּוּז — 'I shall bear the reproach of shame'; חֶרְפָּה is the biblical word for the shame of the cross (Ps 69:8), and בּוּז sharpens it.",
+    "2:4 לִי בַּעֲדוֹ — 'is mine for His sake', for لِي مَا دَامَ لِي ('mine while He is mine'); the Hebrew idiom is shorter and keeps the line at eight.",
+    "3:6 מִגְדַּל־עֹז — Proverbs 18:10, the fixed glossary phrase for a strong fortress; it recurs in the refrain of hymn 6.",
+    "4:2 כְּגֵר וְתוֹשָׁב — 'as a stranger and a sojourner' (Gen 23:4); the Arabic نَزِيلًا غَرِيبًا is exactly this pair.",
+    "4:5 and 4:8 both render the Arabic refrain 'peace and eternity'; the second is shortened to four syllables because the Arabic shortens it there too (وَسَلَامٌ وَخُلُود)."
+  ]
+}

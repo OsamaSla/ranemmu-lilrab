@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 44,
+  "title_he": "עָלָה הָאָדוֹן אֶל־אָבִיו",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עָלָה אָדוֹן אֶל־אָבִיו",
+        "בְּכָבוֹד וָהָדָר",
+        "וְהֵכִין לָהֶם מָעוֹן",
+        "לְעַמּוֹ הַפָּדוּי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "שִׁירוּ בְּנִגּוּנֵי שִׁיר",
+        "לַמַּבְטִיחַ נֶאֱמָן",
+        "הַקְרִיבוּ שֶׁבַח וְתוֹדָה",
+        "לוֹ בְּכָל־עֵת וָעֵת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "דַּרְכֵּנוּ הוֹי מַאֲמִינִים",
+        "נֵלֵךְ בֶּאֱמוּנָה",
+        "זֵכֶר שֵׁם יֵשׁוּעַ",
+        "יָפִיץ הָעֲצָבוֹן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לְכוּ נָא בְּלִי דְּאָגָה",
+        "וּבְלִי פַּחַד אוֹיֵב",
+        "וּמִי־הֵכִין הַמָּעוֹן",
+        "הוּא יְקַיֵּם הַבְטָחָה"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "יָקִים מִתַּחַת עָפָר",
+        "יְשַׁנֶּה אֶת־גּוּפֵינוּ",
+        "יַחְטֹף אוֹתָנוּ וְלֹא",
+        "נִרְאֶה מָוֶת וָשֶׁבֶר"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "נִהְיֶה עִמּוֹ תָמִיד",
+        "בִּכְבוֹדוֹ הָרָם",
+        "וּבְשִׂמְחָה נַבִּיט",
+        "אֶל־יָפְיוֹ הַנִּפְלָא"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 עָלָה אָדוֹן אֶל־אָבִיו — the ascension is stated with עָלָה, the verb of Ps 68:19 and Eph 4:8, which is why no 'into heaven' is needed.",
+    "3:3 זֵכֶר שֵׁם — 'the remembrance of the Name'; the Arabic ذِكْرُ اسْمِ is a construct, and Hebrew keeps the double construct rather than saying 'mentioning'.",
+    "4:4 הוּא יְקַיֵּם הַבְטָחָה — 'He will fulfil the promise'; the Arabic سَيُنْجِزُ الْوَعْدَ is the same future certainty, kept as a verbless emphatic clause.",
+    "5:1–5:2 יָקִים ... יְשַׁנֶּה — 'He will raise from beneath the dust, He will change our bodies'; the two verbs are the resurrection sequence of 1 Cor 15:52 and Phil 3:21.",
+    "5:3–5:4 יַחְטֹף ... וְלֹא נִרְאֶה — 'He will snatch us away and we shall not see death or decay'; the Arabic يَخْطَفُنَا is 1 Thess 4:17, and חָטַף is the biblical verb for snatching (Judg 21:21)."
+  ]
+}

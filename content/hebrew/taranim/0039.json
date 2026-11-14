@@ -1,0 +1,60 @@
+{
+  "book": "taranim",
+  "number": 39,
+  "title_he": "חֶלְקֵךְ נַפְשִׁי אֲדֹנַיִךְ נֶאֱמָן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "חֶלְקֵךְ נַפְשִׁי אֲדֹנַיִךְ נֶאֱמָן",
+        "הַמַּאֲכִילֵךְ תָּמִיד לֶחֶם שְׁלֵמִים",
+        "אַל־נָא תֹּאכְלִי עוֹד מֵהֶם",
+        "מִלֶּחֶם מִצְרָיִם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "גָּמַלְתְּ מִמִּצְרַיִם לָמָּה לֹא תִּשְׂבְּעִי",
+        "בְּהִשָּׁמְרֵךְ בְּסֵתֶר אֲדֹנַיִךְ",
+        "אוֹצְרוֹתָיו הוּא יַרְאֵךְ",
+        "וְאַהֲבָתוֹ תְּצוּרֵךְ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "יַרְאֵךְ בַּמִּדְבָּר אֲדֹנַיִךְ הֶחָכָם",
+        "לְמַעַן תֵּדְעִי כִּי הוּא אֵל רַחוּם",
+        "מָעוֹז קָדוֹשׁ אֶרֶךְ אַפַּיִם",
+        "חַסְדּוֹ לְכָל־דֹּר"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְאִם־דַּרְכֵּךְ תֵּרָאֶה אֲרֻכָּה",
+        "יְחַדֵּשׁ כַּנֶּשֶׁר כֹּחֵךְ",
+        "רַגְלַיִךְ עִם־שִׂמְלוֹתַיִךְ",
+        "תַּגֵּדְנָה טוּב דּוֹדֵךְ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "וּכְשֶׁתָּבִיאֵךְ אַהֲבַת שַׁדַּי",
+        "אֶל־חֶפְצֵךְ בֵּית־אָבִינוּ הַמֵּאִיר",
+        "תָּשִׁירִי לָאָדוֹן הַנָּדִיב",
+        "שִׁיר אַהֲבָה גְדוֹלָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 לֶחֶם שְׁלֵמִים — 'the bread of the mature', for طَعَامَ الْبَالِغِين; שְׁלֵמִים is the biblical word for those grown to fullness (1 Cor 14:20 in the Greek behind it), and the construct keeps the line at twelve.",
+    "1:3–1:4 אַל־תֹּאכְלִי ... מִלֶּחֶם מִצְרָיִם — Egypt's bread as the type of the old life; the Arabic طَعَامَ مِصْرَ الْأَوَّلِ adds 'former', which Hebrew leaves to the context rather than spending a syllable.",
+    "2:2 בְּהִשָּׁמְרֵךְ בְּסֵתֶר — 'while you are kept in the hiding place'; the Arabic الْحِفْظَ الْخَفِيّ ('hidden keeping') is a cognate accusative, which Hebrew renders with the infinitive plus בְּסֵתֶר.",
+    "4:2 יְחַדֵּשׁ כַּנֶּשֶׁר כֹּחֵךְ — Isaiah 40:31 (יַחֲלִיפוּ כֹחַ, יַעֲלוּ אֵבֶר כַּנְּשָׁרִים); the Arabic كَنَسْرٍ quotes the same verse.",
+    "4:3 רַגְלַיִךְ עִם־שִׂמְלוֹתַיִךְ — 'your feet with your garments' is the Arabic image of a walker whose clothes outlast the road (Deut 8:4, 29:4); the Hebrew keeps the oddness instead of smoothing it.",
+    "5:1 אַהֲבַת שַׁדַּי — 'the love of the Almighty'; the glossary's שׁוֹמֵר/שַׁדַּי pairing (hymn 38) is kept so the two hymns read as a pair."
+  ]
+}

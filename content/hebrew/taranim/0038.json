@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 38,
+  "title_he": "נַפְשִׁי קוּמִי אֲדֹנַיִךְ טוֹב שׁוֹמֵר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נַפְשִׁי קוּמִי אֲדֹנַיִךְ טוֹב שׁוֹמֵר",
+        "אֵין יַד־זָר תַּעְצֹר בָּךְ",
+        "לְכִי וְאֵל שַׁדַּי יִשְׁמְרֵךְ",
+        "אֲשֶׁר פָּדָה אֲסִירִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֲדֶרֶךְ בַּמִּדְבָּר וּבִשְׁמָמָה",
+        "בִּמְקוֹם צָמָא נְהָרוֹת",
+        "שׁוֹפְעִים בְּשֶׁפַע נְדִיבָה",
+        "בָּךְ כָּל־רְוָיָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "דַּרְכֵּךְ לֵאלֹהַי נוֹדַעַת",
+        "וְאוֹרוֹ עַל־דַּרְכֵּךְ",
+        "טוּבוֹ לָךְ יוֹסִיף",
+        "אַהֲבָה עַד־יוֹם שָׂשׂוֹן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מְחוֹז חֶפְצֵךְ כְּבוֹד הַשָּׁמַיִם",
+        "וְעָנְיֵךְ וְיָגוֹנֵךְ יִכְלֶה",
+        "בִּרְאוֹתֵךְ גֹּאֲלֵךְ הַדּוֹד",
+        "הוּא חֶלְקֵךְ הַטּוֹב"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 טוֹב שׁוֹמֵר — 'the best of watchers', for نِعْمَ الرَّقِيب; the Arabic nعْمَ construction has no Hebrew equivalent, so the superlative adjective carries it.",
+    "1:3 אֵל שַׁדַּי — the patriarchal divine name is used for الْقَدِير ('the Almighty'), which is its standard rendering.",
+    "2:1–2:2 — the Arabic pairs 'wastes and deserts' with 'where thirst is'; Hebrew sets מִדְבָּר against שְׁמָמָה and keeps צָמָא, the word of Isa 35:7, where the thirsty ground becomes springs.",
+    "3:2 סוֹבֵב מַעֲלוֹתַיִךְ — 'enfolds your goings'; מַעֲלוֹת is used for the steps of a journey (Ps 121:3's 'going out'), matching مَسِيرَكِ.",
+    "4:1 מְחוֹז חֶפְצֵךְ — 'the haven of your desire', for مَقْصِدُكِ; מָחוֹז is the biblical 'haven' (Ps 107:30), which keeps the sea-voyage image behind the hymn."
+  ]
+}

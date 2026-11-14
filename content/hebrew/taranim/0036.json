@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 36,
+  "title_he": "נַפְשִׁי קִרְבִי בְּכִסּוּף",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נַפְשִׁי קִרְבִי בְּכִסּוּף",
+        "אֶל־כִּסֵּא רַחֲמָיו",
+        "שָׁם יֵשׁוּעַ לִתְפִלָּה",
+        "יַקְשִׁיב בְּחַסְדּוֹ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוֹי אֲשֶׁר הִבְטַחְתָּ",
+        "לַיָּגֵעַ מְנוּחָה",
+        "אֶקְרַב וְאֶתְבַּע",
+        "אֶת־הַבְטָחָתְךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֲדֹנָי הֱיֵה מָגֵן",
+        "וּמִשְׂגָּב עֹז",
+        "כִּי־טַעֲנָתִי נֶגֶד",
+        "פִּדְיוֹנְךָ הַיָּקָר"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תַּדְהִימֵנִי הָאַהֲבָה",
+        "אֲשֶׁר נִגְלָה בַּצְּלָב",
+        "עַל־יְסוֹדָהּ אֲנִי",
+        "אֶקְרָא וְתַעֲנֵנִי"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 כִּסֵּא רַחֲמָיו — the Arabic كُرْسِيُّ رَحْمَتِه is the 'mercy seat'; Hebrew keeps כִּסֵּא with the suffix, since כַּפֹּרֶת would name the lid rather than the throne.",
+    "2:3–2:4 אֶקְרַב וְאֶתְבַּע / אֶת־הַבְטָחָתְךָ — 'I draw near and claim Your promise'; the Arabic مُطَالِبًا is a participle of demand, which Hebrew turns into a finite verb for the rhyme with 2:4.",
+    "3:1–3:2 הֱיֵה מָגֵן / וּמִשְׂגָּב עֹז — two psalmic titles (Ps 3:4, Ps 9:10); the Arabic تُرْسًا ... وَمَلْجَأً حَصِينًا is the same pair.",
+    "3:3 טַעֲנָתִי נֶגֶד — 'my plea against' the accuser; נֶגֶד is left without an object because the accuser is supplied by the next clause in Arabic, and the line would otherwise run long.",
+    "4:1 תַּדְהִימֵנִי — 'astonishes me'; the biblical verb is תָּמַהּ, but the hiph'il of דהם is the liturgical form used for يُدْهِش."
+  ]
+}

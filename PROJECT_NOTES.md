@@ -507,8 +507,8 @@ melody so people can hear how it is sung. Only source available: recordings
 
 ## 15. Hebrew translation (verified 2026-11-14)
 
-Only `tr0001`–`tr0026` carry Hebrew so far (26 hymns, 531 verse lines, all
-pointed; `verify-hebrew.mjs` prints 557 because it counts the 26 `title_he`
+Only `tr0001`–`tr0046` carry Hebrew so far (46 hymns, 930 verse lines, all
+pointed; `verify-hebrew.mjs` prints 976 because it counts the 46 `title_he`
 strings as lines too).
 Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**,
 and the app displays the vocalised text (user's explicit choice — do not strip
@@ -530,8 +530,9 @@ corpus is never hand-edited.
   drift gate for CI/pre-commit.
 - `scripts/hebrew-meter.mjs` is a *relative* singability check, not metre
   proof: syllables ≈ vowel points (shva excluded) + shuruq, median per line
-  position across stanzas, flag > ±2. All 6 hymns pass; spread ≤ 1.5. A flag
-  is a prompt to re-read, not an automatic error (`--strict` to gate).
+  position across stanzas, flag > ±2. Hymns 1–46 pass except the deliberate
+  cases listed below. A flag is a prompt to re-read, not an automatic error
+  (`--strict` to gate).
 - `content/hebrew/glossary.md` holds the fixed renderings (`יֵשׁוּעַ` never
   `בישו`, `שָׁלוֹם לְךָ`, `אֶצְרֹף … כַּזָּהָב`, `גְּדוּדֵי שְׁאוֹל`,
   `מִגְדַּל־עֹז`, `שֶׁמֶן תּוּרַק`, `כֹּהֵן גָּדוֹל`, `מַפְגִּיעַ`,
@@ -550,28 +551,30 @@ corpus is never hand-edited.
 - Aya (Ollama `aya-expanse:8b`, `scripts/poc-hebrew2.mjs`) is **dropped from the
   loop**: correcting its drafts cost as much as translating from the Arabic, and
   the Arabic is the authority. Kept as a second opinion for a stubborn line.
-- Batch 2–26 review flags (112, all in the payload `review[]`): deliberate
-  borrowings from Song 1:3 / 8:7, Prov 18:10, Isa 26:20, Ps 23:4 / 97:9 / 119:105,
-  Isa 53:7, Rev 3:20 and Rom 5:10; post-biblical but fixed terms (`צְלָב`,
-  `בְּנִיּוּת`, `מוֹלַדְתִּי`); one dropped `رَبُّنَا` for metre (`tr0003` 3:2).
-  Read the flag list, not the whole batch.
+- Batch 2–46 review flags (212, all in the payload `review[]`): deliberate
+  borrowings from Song 1:3 / 8:7, Prov 18:10, Isa 26:20 / 40:31 / 53:4-12,
+  Ps 23:4 / 34:9-11 / 42:8 / 68:19 / 95:6 / 97:9 / 119:105, Lam 4:22,
+  Rev 3:20 / 2:28 and Rom 5:10; post-biblical but fixed terms (`צְלָב`,
+  `בְּנִיּוּת`, `מוֹלַדְתִּי`, `חֻלְשָׁה`); one dropped `رَبُّنَا` for metre
+  (`tr0003` 3:2). Read the flag list, not the whole batch.
 - `tr0003` 4:4 was **replaced by the user** with
   `כִּי אַהֲבָתוֹ רָבָה מִכָּל־תְּאוּרָה` — it runs 11 syllables against the
   hymn's 6-syllable line-4 median, so `hebrew-meter.mjs` flags it deliberately;
   do not "fix" it back.
-- `tr0014` prints 2/4/4 stanzas (an acclamation, then two long stanzas); the
-  meter script reports `irregular stanza shape` for it by construction. Its
-  per-position medians in stanzas 2–3 are what to read.
+- Printed shapes the meter script calls `irregular` by construction: `tr0014`
+  2/4/4, `tr0031` 3/4/4/4/4 (a 3-line refrain stanza first), `tr0037` 4/8/8.
+  Do not pad them to a rectangle. `tr0014` 2:2 (12 vs 8) comes from the same
+  mixed shape, not from a bad line.
 - Validated: `npm run check:hymns` (1824, all pass), `npm run build:corpus`
   (index 302 KB, 19 chunks), `npm run typecheck`, apply `--check` clean,
-  payload↔corpus parity for all 26 (`title_he`, `verses_he`, labels, shape).
+  payload↔corpus parity for all 46 (`title_he`, `verses_he`, labels, shape).
 - Browser (web, dev server, 2026-11-14): samples `tr0007`/`0013`/`0018`/`0021`/`0026`
   after clicking `HE` — chip fills `#5E35B1`, every stanza line rendered
   (`16/24/32/16/16`), all pointed, `direction: rtl`, `text-align: right`,
   platform font (`-apple-system`), zero console errors. `tr0027` (no Hebrew)
   still shows only `عر/EN/DE` and no Hebrew characters.
 - Not done: no admin editor for `verses_he` (admin-edit is ar/en/de only), home
-  book cards still show EN/DE pills only, 26 of 375 taranim hymns translated.
+  book cards still show EN/DE pills only, 46 of 375 taranim hymns translated.
 - Gotcha: hand-editing a payload's `review[]` is easy to leave a trailing comma
   in — `JSON.parse` aborts the whole apply run (seen once on `0006.json`).
 - Gotcha: Metro caches the imported corpus chunks, so after `build:corpus` the

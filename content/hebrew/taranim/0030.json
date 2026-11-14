@@ -1,0 +1,53 @@
+{
+  "book": "taranim",
+  "number": 30,
+  "title_he": "מִי יַגִּיד מִי כָמוֹהוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מִי יַגִּיד מִי כָמוֹהוּ",
+        "כְּגֹאֲלֵנוּ הֶחָבִיב",
+        "הַנּוֹשֵׂא מַשָּׂאֵינוּ",
+        "וְהַדְּאָגָה הַמְּמַסָּה",
+        "מָה רַב חֶסֶד נִשְׂגָּב",
+        "מֵאֵת אֲדֹנֵי יֶשַׁע",
+        "נַשְׁלִיךְ עָלָיו כָּל־מַשָּׂא",
+        "בִּתְפִלָּה בֶּאֱמוּנָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כַּמָּה צָרוֹת פָּגַשְׁנוּ",
+        "וְדִכְאוֹן הַחַיִּים",
+        "כִּי לֹא־הִשְׁלַכְנוּ עָלָיו",
+        "כָּל־מַשָּׂא בַּתְּפִלָּה",
+        "הֲנִסָּיוֹן וְהַצַּר",
+        "כְּגַלֵּי הַמָּיִם",
+        "הִכּוּנוּ וּטְרָפוּנוּ",
+        "עָלֵינוּ הַתְּפִלָּה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מִי־כָמוֹהוּ יָדִיד",
+        "גִּבּוֹר צַדִּיק נֶאֱמָן",
+        "רַךְ־לֵבָב וּמְרַחֵם",
+        "עַל־צָרוֹת אֱמוּנִים",
+        "וְאִם־נִהְיֶה עֲיֵפִים",
+        "מִנְּשֹׂא כֹּבֶד דְּאָגוֹת",
+        "נִתְפַּלֵּל אֶל־יֵשׁוּעַ",
+        "כִּי־הוּא אָדוֹן רַחוּם"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 מִי יַגִּיד — 'who can tell', standing for the Arabic exclamation يَا تُرَى; a literal 'who, I wonder' has no biblical idiom, so the rhetorical question is used.",
+    "1:2 כְּגֹאֲלֵנוּ הֶחָבִיב — 'like our beloved Redeemer'; גֹּאֵל is the fixed biblical kinsman-redeemer word, and הֶחָבִיב is the hymn's name for Christ throughout this book.",
+    "2:8 עָלֵינוּ הַתְּפִלָּה — 'prayer is upon us' (i.e. it is ours to do), for فَعَلَيْنَا بِالصَّلَاة; the Hebrew prepositional phrase is the closest idiom.",
+    "3:6 מִנְּשֹׂא כֹּבֶד דְּאָגוֹת — 'from bearing the weight of cares'; the construct chain replaces the Arabic جَرَّا حَمْلِ الْهُمُوم without the extra syllables of a relative clause.",
+    "Each stanza is one printed 8-line block; Hebrew keeps the 8-line block so the tune's two halves stay intact."
+  ]
+}
