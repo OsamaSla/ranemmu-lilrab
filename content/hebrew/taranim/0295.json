@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 295,
+  "title_he": "אַתָּה אֲדֹנִי, אוֹר לִבִּי, מְקוֹר אַהֲבָתִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אַתָּה אֲדֹנִי, אוֹר לִבִּי, מְקוֹר אַהֲבָתִי",
+        "הַדְרֵךְ נַפְשִׁי בַדָּרֶךְ",
+        "כִּדְבַר הַבְטָחָתֶךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנִי, הֵיטִיבָה לִּי וְאֶחְיֶה",
+        "כִּדְבָרְךָ הַנּוֹרָא",
+        "וּפְקַח נָא אֶת־עֵינַי",
+        "סוֹד אִמְרָתְךָ הַנִּפְלָאָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "גֵּר אָנֹכִי בָאָרֶץ",
+        "וְזָר וְגַם־תּוֹשָׁב",
+        "עַל־כֵּן אַל־תַּסְתֵּר מִמֶּנִּי",
+        "אֶת־אוֹר אֲמִתְּךָ הַנִּשָּׂאָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לְמִצְוֺתֶיךָ כָּלְתָה נַפְשִׁי",
+        "הֵם תִּפְאֶרֶת שַׁעֲשׁוּעָי",
+        "וְשִׁירֵי שְׂשׂוֹנִי",
+        "בְּאֶרֶץ מְגוּרַי וּגְלוּתִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "דְּבָרְךָ הוּא נֵר לְרַגְלִי",
+        "וְאוֹרִי בַדָּרֶךְ",
+        "וִישׁוּעָתִי וְחַיָּי",
+        "כִּדְבַר הַבְטָחָתֶךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Psalm 119 stanza by stanza: 1:1–3 is Ps 119:105 with Ps 119:116 (סָמְכֵנִי כְאִמְרָתְךָ וְאֶחְיֶה), 2:1–4 is Ps 119:17–18 (גְּמֹל עַל־עַבְדְּךָ אֶחְיֶה … גַּל־עֵינַי וְאַבִּיטָה), 3:1–4 is Ps 119:19 (גֵּר אָנֹכִי בָאָרֶץ) with Lev 25:23, 4:1–4 is Ps 119:20,111 with Ps 137:4, and 5:1–4 is 2 Sam 22:29 (נֵרִי) with Ps 119:105 and 116.",
+    "Stanza 1 is three printed lines against four in the rest (3/4/4/4/4); the payload keeps three and does not pad, because the printed book sets the theme-line with its two short lines before the stanzas settle into four.",
+    "2:1 הֵיטִיבָה לִּי וְאֶחְיֶה — the Arabic رَبِّي أَحْسِنْ إِلَيَّ فَأَحْيَا is Ps 119:17's גְּמֹל עַל־עַבְדְּךָ; the Hebrew keeps the imperative plus the purpose clause, so the line asks for life as the psalm asks for it and not as a general blessing.",
+    "4:1 לְמִצְוֺתֶיךָ כָּלְתָה נַפְשִׁי — the Arabic لِوَصَايَاكَ اشْتِيَاقِي is a noun clause ('my longing is for Your commandments'); the Hebrew uses כָּלְתָה נַפְשִׁי, the psalm's own verb for consuming longing (Ps 119:81), because a Hebrew line needs a verb to carry the stanza's momentum."
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "book": "taranim",
+  "number": 293,
+  "title_he": "בְּמִשְׁכְּנוֹת הַכָּבוֹד, אָכֵן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּמִשְׁכְּנוֹת הַכָּבוֹד, אָכֵן",
+        "נִהְיֶה בְּקָרוֹב מְאֹד",
+        "וְעַל־הַכִּנּוֹר נָשִׁיר",
+        "תְּהִלָּה לַדּוֹד הֶחָבִיב",
+        "מֵהֵיכְלֵי שֵׁן נְסַפֵּר",
+        "סִפּוּר אַהֲבָתוֹ",
+        "סִפּוּר אֲשֶׁר עָרֵב הֵדוֹ",
+        "וְרֵיחוֹ כַּבֹּשֶׂם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "רָאוּי אַתָּה לְבַדְּךָ",
+        "לִפְתֹּחַ סֵפֶר נוֹרָא",
+        "כִּי שִׁלַּמְתָּ הַמְּחִיר הַיָּקָר",
+        "דָּמְךָ עַל־הַצְּלָב",
+        "נִשְׁחַטְתָּ וְקָנִיתָ",
+        "לְךָ מִכָּל־עָם",
+        "וּמִשְׁפָּחָה וְאֻמָּה",
+        "כִּי לְךָ הַמְּלוּכָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְהַמַּלְאָכִים יָשִׁירוּ:",
+        "רָאוּי אֲדֹנֵינוּ",
+        "לָקַחַת אֶת־הַכָּבוֹד וְאֶת־",
+        "הַגְּדֻלָּה גַּם־הָעֹשֶׁר",
+        "וְהַבְּרִיאָה תַּעֲנֶה",
+        "בְּשָׂשׂוֹן וּבְגִיל",
+        "וְכֻלָּם מִשְׁתַּחֲוִים",
+        "לְעוֹלְמֵי עוֹלָמִים"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the song of the redeemed: 1:1–8 is Ps 137:1–4 with Ps 45:9 (הֵיכְלֵי שֵׁן) and Song 1:12, 2:1–8 is Rev 5:9–10 nearly verbatim (אַתָּה רָאוּי … כִּי נִשְׁחַטְתָּ וּקְנִיתָ), and 3:1–8 is Rev 5:12–13 with Rev 11:15.",
+    "1:5–8 keep the print's three separate comparisons (the ivory palaces, the sweet echo, the fragrance) rather than compressing them: the Hebrew uses הֵיכְלֵי שֵׁן from Ps 45:9, הֵד for the echo, and רֵיחַ with בֹּשֶׂם (Song 4:10) for the fragrance, so each image lands on its own line.",
+    "2:3–4 כִּי שִׁלַּמְתָּ הַמְּחִיר הַיָּקָר / דָּמְךָ עַל־הַצְּלָב — the Arabic splits the payment and the price across the two lines (the price / Your blood on the cross); the Hebrew keeps the enjambement so the couplet reads as one transaction, which is what Rev 5:9 says.",
+    "3:3–4 לָקַחַת אֶת־הַכָּבוֹד וְאֶת־ / הַגְּדֻלָּה — the Arabic divides וְالْـ / ـمَجْدَ across the printed line break; the Hebrew mirrors the break at the same syntactic seam (the object marker at the end of line 3), so the run-on is preserved without breaking a word."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "book": "taranim",
+  "number": 284,
+  "title_he": "הוֹשִׁיעֵנוּ, חַנּוּן, וּנְחֵנוּ בַּעֲבָרֵנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹשִׁיעֵנוּ, חַנּוּן, וּנְחֵנוּ בַּעֲבָרֵנוּ",
+        "בְּמִדְבַּר הָעָמָל נֵשֵׁב בּוֹ כְּגֵרִים",
+        "חַלָּשִׁים אֲנַחְנוּ, וְאַתָּה הָאֵל חָזָק",
+        "שָׂא־נָא אוֹתָנוּ בַּיָּד אֲשֶׁר לֹא תִּרְפֶּה",
+        "אַתָּה לֶחֶם שָׁמַיִם",
+        "הַאֲכִילֵנוּ, שַׂבְּעֵנוּ בְךָ, אֲדֹנִי, תָּמִיד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּעָבְרֵנוּ בַגַּיְא הַזֶּה, גֵּיא הַדְּמָעוֹת",
+        "לוּ יְהִי לָנוּ חַסְדְּךָ הַמִּרְעֶה הַטּוֹב",
+        "הוֹשִׁיעֵנוּ, נָדִיב, שָׁמְרֵנוּ לָנֶצַח",
+        "קְרוֹב צִדְּךָ, כִּי שָׁם נָנוּחַ לְעוֹלָם",
+        "נַנִּיחַ רֹאשׁ יָגֵעַ",
+        "שָׁם אַהֲבַת הָאָב לֹא תָסוּר וְלֹא תֶחְדָּל"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בּוֹא־נָא, הוֹשִׁיעַ, כִּי כָלִינוּ אֵלֶיךָ",
+        "כָּלִינוּ לִרְאוֹתְךָ, לִחְיוֹת וְלָקוּם אִתְּךָ",
+        "עַד אֲשֶׁר נַשִּׂיג וְנָבִין וְנֵדַע בֶּאֱמֶת",
+        "אֶת־אַהֲבָתְךָ הַנִּפְלָאָה וְאֶת־פִּדְיָךְ",
+        "בּוֹא, אֲדֹנֵינוּ יֵשׁוּעַ",
+        "עַמְּךָ מְיַחֵל בְּכִסּוּפִים לְמוֹעֵד שׁוּבְךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a pilgrim prayer: 1:1–6 is Ps 23:1–2 with Isa 40:11 (בִּזְרֹעוֹ יְקַבֵּץ טְלָאִים) and John 6:35 (לֶחֶם הַחַיִּים), 2:1–6 is Ps 84:7 (עֵמֶק הַבָּכָא) with Ps 23:2 and Heb 4:9, and 3:1–6 is Ps 42:2 with 1 Cor 13:12 and 2 Pet 3:12.",
+    "1:4 שָׂא־נָא אוֹתָנוּ בַּיָּד אֲשֶׁר לֹא תִּרְפֶּה — the Arabic بِالْيَدِ الَّتِي لَا تَرْتَخِي is 'with the hand that does not slacken'; the Hebrew uses רָפָה, the verb of Josh 10:6 and 2 Sam 24:16 for a hand that does not let go, so the line promises grip and not merely strength.",
+    "2:2 לוּ יְהִי לָנוּ חַסְדְּךָ הַמִּרְעֶה הַטּוֹב — the Arabic لَيْتَ حُبَّكَ لَنَا يَكُونُ خَيْرَ مَرْتَعِ is a wish ('would that Your love were our best pasture'); the Hebrew keeps the optative לוּ and the pastoral noun מִרְעֶה, because the stanza is walking through the valley of tears and the wish must stay a wish.",
+    "3:1–2 כָּלִינוּ … כָּלִינוּ — the Arabic نَحْنُ قَدْ تُقْنَا … تُقْنَا repeats the verb across the two lines; the Hebrew repeats Ps 84:3's כָּלְתָה נַפְשִׁי, so the yearning is the psalm's own and the repetition is the stanza's."
+  ]
+}

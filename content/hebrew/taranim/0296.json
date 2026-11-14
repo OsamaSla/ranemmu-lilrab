@@ -1,0 +1,65 @@
+{
+  "book": "taranim",
+  "number": 296,
+  "title_he": "לָמָּה־נָּא עֲצוּבָה אָתְּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לָמָּה־נָּא עֲצוּבָה אָתְּ",
+        "לָמָּה זֶה הָאֲנָחָה",
+        "נַפְשִׁי, אֲדֹנַיִךְ קַיָּם",
+        "נֶאֱמָן הוּא בְּהַבְטָחָיו",
+        "קַוִּי לַאדֹנַיִךְ, נַפְשִׁי",
+        "כִּי טוֹב אֲדֹנָי לְעֵזֶר",
+        "יְשׁוּעַת פָּנַי אֱלֹהָי",
+        "וְאוֹר לִבִּי הַיָּקָר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לָמָּה זוֹ הַכְּפִיפָה",
+        "לָמָּה זֶה הַבֶּכִי?",
+        "הָאֵל בַּכָּבוֹד יוֹדֵעַ",
+        "וְעוֹנֶה אֶל־הַתְּפִלָּה",
+        "נַפְשִׁי, קַוֵּה לוֹ",
+        "בִּטְחִי בַּאדֹן הַשָּׁמַיִם",
+        "הָאֵל אֲדֹנַיִךְ אַהֲבָה",
+        "הוּא עָרַב בַּפִּדְיוֹן"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וּבְרִית אֲדֹנַיִךְ אֱמֶת",
+        "בְּדָם נֶחְקְקָה וְנִכְתְּבָה",
+        "וְעָרֵב הַבְּרִית הוּא חַי",
+        "וּמַפְגִּיעַ בַּמָּרוֹם",
+        "הַכֹּהֵן הָרֹאשׁ יוֹדֵעַ",
+        "וְיָחוּס עַל־הַחַלָּשִׁים",
+        "וְעָרֵב הוּא לַיְשׁוּעָה",
+        "בִּטְחִי בַּאדֹן הַפִּדְיוֹן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נַפְשִׁי, אַךְ קַוֵּה־לּוֹ",
+        "יְהִי אֲשֶׁר יִהְיֶה מָר",
+        "כִּי הַבֹּקֶר בּוֹא יָבוֹא",
+        "מַה־נָּעִים הוּא הַצִּפּוּי",
+        "וְהַלַּיְלָה יַעֲבֹר",
+        "וְיָאִיר הַיּוֹם הַזֶּה",
+        "עִם הַמָּשִׁיחַ הֶחָבִיב",
+        "נִשְׂמַח בַּנִּצָּחוֹן"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the self-address of Ps 42–43: 1:1–8 is Ps 42:6 (מַה־תִּשְׁתּוֹחֲחִי נַפְשִׁי) with Ps 42:12 (יְשׁוּעֹת פָּנַי אֱלֹהָי), 2:1–8 is Ps 42:6 with Ps 65:3 and 1 John 4:8, 3:1–8 is Heb 9:15–22 with Heb 7:25 and 4:15, and 4:1–8 is Ps 30:6 (בָּעֶרֶב יָלִין בֶּכִי וְלַבֹּקֶר רִנָּה) with Rev 19:7.",
+    "The hymn's addressee is the soul, feminine throughout the Arabic; the Hebrew keeps the feminine forms (אָתְּ, אֲדֹנַיִךְ, בִּטְחִי, קַוִּי), because the psalm's self-address is grammatical and the gender is part of how the stanza speaks to itself.",
+    "1:6 כִּי טוֹב אֲדֹנָי לְעֵזֶר — the Arabic فَالرَّبُّ نِعْمَ الْمُعِين is 'the Lord is the best Helper'; the Hebrew uses the psalm's טוֹב with לְעֵזֶר (Ps 73:28, טוֹב־לִי קִרְבַת אֱלֹהִים), since a superlative 'best' would need a construction the short line cannot carry.",
+    "3:2 בְּדָם נֶחְקְקָה וְנִכְתְּבָה — the Arabic قَدْ سَطَّرَتْهُ الدِّمَاء is 'the bloods have inscribed it'; the Hebrew keeps the singular דָּם, as Gen 9:6 and Heb 9:22 do, and pairs חָקַק with כָּתַב, the engraving-and-writing pair of Isa 49:16 and Jer 31:33, so the covenant is a document written in blood."
+  ]
+}

@@ -95,6 +95,13 @@ Arabic wins.
 | ساهر / فَلْنَصْحُ (keep vigil for prayer) | שָׁקַד | Jer 1:12, Ps 102:8; the watching verb, not merely 'to pray', where the Arabic keeps the vigilance. |
 | أوصاف (traits, marks) | אֹפֶן | Post-biblical for a mode or aspect; used only where the Arabic lists the marks by which something is known, since biblical Hebrew has no noun for 'characteristic'. |
 | صحبة (company, fellowship) | חֶבְרָה | Post-biblical for companionship (biblical `חֶבֶר` is a company of men, Hos 6:9); used when the line is about the Lord's company with the soul. |
+| وجود (existence, being) | הֲוָיָה | Post-biblical noun for 'being'; used only where the Arabic says `وُجُود` and the line needs the whole of a life, since the psalm's `צֹאן` would narrow it to the flock. |
+| شوق / اشتياق (yearning) | כִּסּוּפִים | Ps 84:3 (`נִכְסְפָה`), Gen 31:30; the noun pair for longing, preferred to `תַּאֲוָה` (appetite) and `חֵפֶץ` (delight). |
+| مرصد / برج المراقبة (watchtower) | מִצְפֶּה | Isa 21:8, 2 Chr 20:24; the watch-post itself, distinct from `צֹפֶה` (the watchman) and `מִשְׁמֶרֶת` (the guard-duty). |
+| لؤلؤة (pearl) | פְּנִינָה | Job 28:18, Prov 3:15; the pearl of great price, kept as the concrete jewel. |
+| ناردين (nard) | נֵרְדְּ | Song 1:12, 4:13–14, Mark 14:3; the spice, never a general 'ointment'. |
+| سكيب / سكب (libation, outpouring) | נֶסֶךְ | Exod 29:40, Ps 16:4; the poured-out offering, used for the Arabic `سَكِيب` where the love is poured out like a drink-offering. |
+| حدّ / يحدّ (to bound, draw a circle) | חָגַג | Isa 40:22 (`הַיֹּשֵׁב עַל־חוּג הָאָרֶץ`), Job 26:10; the circling verb, chosen for the Arabic `حَدَّ تُخْمَ الْبِحَار` so the line is the Creator's compass and not a survey. |
 
 ## Pointing conventions
 

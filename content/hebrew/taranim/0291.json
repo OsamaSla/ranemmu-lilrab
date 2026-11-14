@@ -1,0 +1,46 @@
+{
+  "book": "taranim",
+  "number": 291,
+  "title_he": "אֲדוֹן הָאָדָם, עֹשֵׂה הַשָּׁלוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדוֹן הָאָדָם, עֹשֵׂה הַשָּׁלוֹם",
+        "בָּא בֶּעָנָן לַחֲטֹף אוֹתָנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדוֹן כָּל־הָאָדָם",
+        "אֲדֹנֵינוּ הַנּוֹרָא",
+        "עֹשֵׂה הַשָּׁלוֹם",
+        "לְעַמְּךָ הֶחָבִיב",
+        "בּוֹא מִמְּרוֹמֶיךָ",
+        "קָחֵנוּ אֶל־הַכָּבוֹד",
+        "מַה־יָּפֶה לִרְאוֹתְךָ",
+        "מוֹשִׁיעַ הַגְּוִיּוֹת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עוֹד נִרְאֶה יֵשׁוּעַ",
+        "חֲתָנֵנוּ הֶחָבִיב",
+        "אֲשֶׁר יִמְחֶה הַדְּמָעוֹת",
+        "בְּחַסְדּוֹ הַנִּפְלָא",
+        "גָּבַר כִּסּוּפֵנוּ",
+        "אֵלֶיךָ, דּוֹדִי",
+        "נְיַחֵל לַחֲטִיפָתֵנוּ",
+        "לַכָּבוֹד בְּקָרוֹב"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the rapture expectation: 1:1–2 is 1 Thess 4:16–17 with Rev 1:7 (בֶּעָנָן), 2:1–4 is Isa 9:5 with Ps 24:8, 2:5–8 is 1 Thess 4:17 with Rev 7:17, and 3:1–8 is Rev 22:20 with Isa 25:8 (מָחָה דִּמְעָה) and Phil 3:21.",
+    "The shape is 2/8/8: stanza 1 is a two-line acclamation and stanzas 2–3 are eight short lines each; the payload keeps stanza 1 at two lines, because the print sets the themes in a couplet before the hymn proper begins.",
+    "3:2 חֲתָנֵנוּ הֶחָבִיב — the Arabic عَرِيسَنَا الْحَبِيب is 'our beloved Bridegroom'; the Hebrew uses חָתָן, the bridegroom-word of Isa 62:5 and Matt 25:6, rather than the later רֵעַ or a circumlocution, so the bride-language of the hymn stays marital.",
+    "2:8 מוֹשִׁיעַ הַגְּוִיּוֹת — the Arabic مُخَلِّصَ الْأَجْسَاد is literally 'Saviour of the bodies'; the Hebrew keeps גְּוִיָּה, the poetic body-word of Job 19:26, because the line is about the resurrection of the body and not about deliverance in general."
+  ]
+}

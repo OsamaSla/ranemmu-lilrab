@@ -1,0 +1,55 @@
+{
+  "book": "taranim",
+  "number": 286,
+  "title_he": "יֵלֵךְ־נָא פָנֶיךָ תָּמִיד לְפָנַי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יֵלֵךְ־נָא פָנֶיךָ תָּמִיד לְפָנַי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יֵלֵךְ־נָא פָנֶיךָ תָּמִיד לְפָנַי",
+        "וִינִיחַ אֶת־לִבִּי בְּשֶׁפַע שָׁלוֹם רַב",
+        "אַתָּה הוּא אוֹרִי וְיִשְׁעִי, אֱלֹהָי",
+        "וְשָׁלוֹם הַנֶּפֶשׁ בְּעוֹלַם הַחֹשֶׁךְ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הַרְאֵנִי טוּבְךָ, אֲדֹנִי, דּוֹדִי",
+        "הַרְאֵנִי הָאַהֲבָה הַנִּפְלָאָה בַּצְּלָב",
+        "קְרָא־נָא שֵׁם אֲדֹנָי לְפָנַי, אֱלֹהָי",
+        "הַרְאֵנִי כְבוֹד שִׁמְךָ הַנִּשָּׂא וְהַנִּפְלָא"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "פָנֶיךָ הֵם הָאוֹר הַמְמַלֵּא לִבִּי",
+        "פָנֶיךָ הֵם הַטּוֹב הַמַּשְׂבִּיעַ אוֹתִי",
+        "פָנֶיךָ הֵם הַכָּבוֹד הַמַּכְלִים צוֹרְרָי",
+        "אַתָּה אֲדֹנִי הָאוֹהֵב אוֹתִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הִנְנִי מְבַקֶּשְׁךָ, אֲדֹנִי, דּוֹדִי",
+        "תֵּן־נָא חַסְדְּךָ אֲשֶׁר יָנִיחַ נַפְשִׁי",
+        "אֲדֹנִי, אַל־תְּאַחֵר, כִּי חָסִיתִי בָךְ",
+        "אֶל־כִּסֵּא הַחֶסֶד בְּשֵׁם הַמָּשִׁיחַ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the prayer for the shining face: 1:1 is the title-line and 2:1 repeats it verbatim, as the print does; 2:2–4 is Ps 27:1 with Num 6:26, 3:1–4 is Exod 33:18–19 (הַרְאֵנִי נָא אֶת־כְּבֹדֶךָ) with Ps 22:19, and 4:1–4 is Ps 4:7 with Ps 44:16, and 5:1–4 is Heb 4:16 (כִּסֵּא הַחֶסֶד) with Ps 118:8–9.",
+    "Stanza 1 is a single printed line, the theme of the hymn set on its own before the stanzas begin; the payload keeps it as one line and does not merge it with stanza 2, so the printed 1/4/4/4/4 shape survives.",
+    "3:3 קְרָא־נָא שֵׁם אֲדֹנָי לְפָנַי — the Arabic نَادِ بِاسْمِ الرَّبِّ قُدَّامِي is 'proclaim the Lord's name before me'; the Hebrew keeps the imperative and the tetragrammaton-substitute אֲדֹנָי, because the line is the Exod 33:19 proclamation (וַיִּקְרָא בְּשֵׁם יְהוָה) and not a general invocation.",
+    "4:3 הַמַּכְלִים צוֹרְרָי — the Arabic الَّذِي يُخْزِي الْأَعَادِي is 'which shames the foes'; the Hebrew uses כָּלַם, the verb of Ps 44:8 and Isa 41:11 for the shaming of enemies, so the line keeps the psalm's judicial shame and not merely defeat."
+  ]
+}
