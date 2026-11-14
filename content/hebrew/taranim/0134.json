@@ -1,0 +1,35 @@
+{
+  "book": "taranim",
+  "number": 134,
+  "title_he": "אֶשְׁתּוֹקֵק לְמַגָּעֲךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֶשְׁתּוֹקֵק לְמַגָּעֲךָ הַמַּרְפֵּא",
+        "אֶשְׁתּוֹקֵק לְחִיּוּךְ שַׁלְוָתֶךָ",
+        "אֶשְׁתּוֹקֵק לְמַבָּטְךָ הֶחָנוּן",
+        "בּוֹ תָּנוּחַ רוּחִי הַמְּעֻנָּה",
+        "כִּי אֵין זוּלָתְךָ מַשְׁקֶה חַיִּים",
+        "דּוֹדִי יֵשׁוּעַ, שְׂשׂוֹן הַחַיִּים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "דּוֹדִי, רְחַץ לִבִּי מִמַּה־שֶּׁבּוֹ",
+        "הַמַּעְצֵר אוֹתוֹ מֵרְאוֹת אֲדֹנָיו",
+        "כִּי שִׁמְעַת נַפְשִׁי, אֱלֹהַי, לִרְאוֹתְךָ",
+        "בְּכָל־בָּהִירוּת, יֵשׁוּעַ הַנָּאוֶה",
+        "מָתַי, דּוֹדִי, וְאַתָּה הָאֵל",
+        "תָּאִיר הַלֵּב, כִּי אַתָּה אוֹרוֹ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 — the Arabic repeats أَتُوقُ ('I long') at the head of the first three lines and then turns to its object; Hebrew repeats אֶשְׁתּוֹקֵק at the same points and keeps the fourth line as the consequence.",
+    "2:1–2:2 רְחַץ לִבִּי … הַמַּעְצֵר — Psalm 51:4 (הֶרֶב כַּבְּסֵנִי) and Heb 12:1 (הַמַּעֲמִיסָה); the Arabic اغْسِلِ الْقَلْبَ … يُعِيقُهُ is 'wash the heart of what hinders it', and עָצַר carries 'restrain' without a modern noun.",
+    "2:3 שִׁמְעַת נַפְשִׁי — 'my soul's longing', for اشْتِيَاقِي; the noun is built on the same root as the refrain's verb so the stanza stays tied to it.",
+    "2:6 תָּאִיר הַלֵּב, כִּי אַתָּה אוֹרוֹ — the Arabic تُنِيرُ الْفُؤَادَ فَأَنْتَ ضِيَاه is 'light the heart, for You are its light'; Hebrew keeps the causal clause but places the pronoun predicate last, as the psalm does in Ps 27:1."
+  ]
+}

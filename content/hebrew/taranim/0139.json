@@ -1,0 +1,45 @@
+{
+  "book": "taranim",
+  "number": 139,
+  "title_he": "הִנֵּה הִגִּיעַ יוֹם הַפְּגִישָׁה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הֵן הִגִּיעַ יוֹם הַפְּגִישָׁה / בְּכוֹכַב הַבֹּקֶר הַמֵּאִיר / וְעַתָּה הִיא שָׁעָה / לִפְדּוֹת אֶת־הַזְּמָן הַקָּצָר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "נָעִירָה בְּדַעַת / לִתְפִלּוֹת בְּכָל־עֵת / וְנַעֲבֹד אֶת־אֲדֹנָי יָחַד / בְּכֹחַ הָרוּחַ הָעוֹזֵר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְלִפְנֵי זֹאת יְהִי / אַהֲבָה עַזָּה בַּלְּבָבוֹת / כִּי הָאַהֲבָה תְּכַסֶּה פֶּשַׁע / וְתִסְלַח לַחֲטָאִים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְכָל־אִישׁ אֲשֶׁר לוֹ מַתָּנָה / יְשָׁרֵת בָּהּ בְּכָל־עֵת / לְמַעַן נִהְיֶה נֶאֱמָנִים / כְּסוֹכְנִים טוֹבִים"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "וְכָל־הַמַּרְבֶּה / בַּעֲבוֹדַת אֲדֹנָי הַיְקָרָה / לֹא לָרִיק יִיגָע / בַּאֲדֹנֵינוּ יֵשׁוּעַ"
+      ]
+    }
+  ],
+  "review": [
+    "The print sets each stanza as a single line with the four phrases separated by slashes; the payload mirrors that grid exactly (one line per stanza), so the meter script counts each stanza as one long line.",
+    "1:1–1:2 יוֹם הַפְּגִישָׁה … כּוֹכַב הַבֹּקֶר — 2 Peter 1:19 (עַד אֲשֶׁר יִזְרַח … כּוֹכַב נֹגַהּ); the Arabic يَوْمُ اللِّقَا / بِكَوْكَبِ الصُّبْحِ الْمُنِير is that morning star, and פְּגִישָׁה is the meeting of 1 Thess 4:17.",
+    "1:4 לִפְדּוֹת אֶת־הַזְּמָן — Ephesians 5:16 (פֹּדִים אֶת־הַזְּמָן); the Arabic لِنَفْتَدِي الْوَقْتَ الْقَصِيرْ is that command, and the Hebrew keeps the same verb and object.",
+    "3:3–3:4 תְּכַסֶּה פֶּשַׁע / וְתִסְלַח לַחֲטָאִים — Proverbs 10:12 and 1 Peter 4:8 (עַל־רֹב פְּשָׁעִים); the Arabic يَسْتُرُ الْخَطَا / وَيَصْفَحُ عَنِ الذُّنُوب is that pair, and כָּסָה is the proverb's verb.",
+    "4:4 כְּסוֹכְנִים טוֹבִים — 1 Peter 4:10 (כְּסֹכְנִים טוֹבִים עַל־חֶסֶד); the Arabic كَوُكَلاءَ صَالِحِينْ is the stewardship of that verse, and סוֹכֵן is its Hebrew noun.",
+    "5:3 לֹא לָרִיק יִיגָע — 1 Corinthians 15:58 (עֲמַלְכֶם לֹא לָרִיק); the Arabic فَبَاطِلًا لا يَتْعَبُ is that promise, and יָגַע with לָרִיק is Isaiah's phrase (Isa 65:23)."
+  ]
+}

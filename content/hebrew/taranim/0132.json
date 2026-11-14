@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 132,
+  "title_he": "בְּאַהֲבָתוֹ פְּדָאַנִי אֲדֹנִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּאַהֲבָתוֹ פְּדָאַנִי אֲדֹנִי",
+        "בְּאַהֲבָתוֹ סָלַח לַעֲוֺנִי",
+        "בְּאַהֲבָתוֹ מֵת בַּעֲדֵנוּ עַל־הַצְּלָב",
+        "לְשֵׁם זֶה תְּהִלָּה מִתּוֹךְ לִבִּי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּאַהֲבָתוֹ הִצִּיל יֵשׁוּעַ אוֹתִי",
+        "מִטִּיט הַחֲטָאִים הֱרִימָנִי",
+        "כַּאֲשֶׁר הָיִיתִי בָרָע טוֹבֵעַ וְאֹבֵד",
+        "בְּלִי תִקְוָה, וְדַרְכִּי הָיְתָה חֲשֵׁכָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּאַהֲבָתוֹ עַל־צְלָב גָּלְגָּלְתָּא",
+        "סָבַל בְּעַד נַפְשִׁי הַמְגֹאֶלֶת",
+        "וְנִהְיֵיתָה דַרְכִּי אֶל־הַכָּבוֹד הֶעָתִיד",
+        "וְגַם חָנַנִי חֹפֶשׁ וּמְחִילָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בְּאַהֲבָתוֹ נָפֹצוּ פַּחֲדַי",
+        "רַחֲמָיו נִגְלוּ בְּתוֹךְ הַצָּרוֹת",
+        "וְהוּא לְפָנַי פּוֹתֵחַ שַׁעַר הָעֹנֶג",
+        "לְמַעַן אֶמְלֹךְ עִמּוֹ בְּכָבוֹד נִצְחִי"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 — the refrain بِحُبِّهِ opens three stanzas and then becomes the whole stanza's argument in the fourth; the Hebrew repeats בְּאַהֲבָתוֹ at the same place, because the repetition is the tune.",
+    "2:1–2:2 מִטִּיט הַחֲטָאִים הֱרִימָנִי — Psalm 40:3 (מִטִּיט הַיָּוֵן); the Arabic مِنْ حَمْأَةِ الذُّنُوبِ قَدْ رَفَعَنِي is that pit and that lifting, and טִיט is the psalm's word.",
+    "3:1 צְלָב גָּלְגָּלְתָּא — the Arabic الْجُلْجُثَه is the Aramaic place-name, kept as the Gospels keep it (Mark 15:22); the construct needs the Aramaic form rather than a translation.",
+    "4:1 נָפֹצוּ פַּחֲדַי — the Arabic مَخَاوِفِي تَبَدَّدَت is 'my fears were scattered'; נָפוֹץ is the biblical verb for scattering, and the plural construct keeps the personal possessor.",
+    "4:3–4:4 פּוֹתֵחַ שַׁעַר הָעֹנֶג / לְמַעַן אֶמְלֹךְ עִמּוֹ — the Arabic فَاتِحٌ بَابَ النَّعِيم / كَيْ أَمْلِكَ مَعهُ is Rev 3:21 (אֶתֵּן לוֹ לָשֶׁבֶת עִמִּי), and Hebrew keeps 'reign with Him' as the purpose clause."
+  ]
+}

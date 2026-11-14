@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 138,
+  "title_he": "אֲדֹנָי הוּא עֻזֵּנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנָי הוּא עֻזֵּנוּ",
+        "בּוֹ נִשְׂבָּעָה",
+        "וְכָל־עֹז בִּלְעָדָיו",
+        "אָכֵן יִנָּטֵל"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מַה־גָּדוֹל אָשְׁרֵנוּ",
+        "בְּעֻזֵּנוּ הַנִּבְחָר",
+        "עִמּוֹ נָחַלְנוּ חֶבֶר",
+        "וְלָנוּ בּוֹ יִתְרוֹן"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "לוּ נִשְׂבַּע בּוֹ",
+        "וְנִשְׁתַּדֵּל בֶּאֱמוּנָה",
+        "וְלֹא נִמָּשֵׁךְ עוֹד",
+        "בַּשָּׁוְא וּבַמַּרְאֶה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כִּי עִמּוֹ נֵשֵׁב",
+        "וְנִזְכֶּה לִשְׁלֵמוּת",
+        "נַבִּיט בּוֹ עֲטוּר",
+        "בְּכָבוֹד וּבְהָדָר"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 עֻזֵּנוּ … נִשְׂבָּעָה — Psalm 46:2 (עֹז) with Ps 16:11 and Eph 3:19 (תִּמָּלְאוּ); the Arabic عِزُّنَا … نَشْبَعُ is that pair, and עֹז is the psalm's noun for strength.",
+    "1:3–1:4 וְכָל־עֹז בִּלְעָדָיו / אָכֵן יִנָּטֵל — the Arabic وَكُلُّ عِزٍّ غَيْرَهُ / لَا بُدَّ يُنْزَعُ is 'every might besides Him must be taken away'; נָטַל in the niphal is the biblical verb for being lifted off (Isa 33:20 of a tent taken down).",
+    "2:3–2:4 נָחַלְנוּ חֶבֶר / וְלָנוּ בּוֹ יִתְרוֹן — the Arabic نِلْنَا شِرْكَةً / لَنَا بِهَا امْتِيَاز is 'we obtained a fellowship, and in it a distinction'; חֶבֶר is the biblical noun for a company joined together (Ps 119:63), and יִתְרוֹן is Qoheleth's word for advantage.",
+    "3:1–3:2 לוּ נִשְׂבַּע בּוֹ / וְנִשְׁתַּדֵּל — the Arabic يَا لَيْتَ بِهِ نَقْنَعُ / وَنَسْعَى is an optative; לוּ with the imperfect is the biblical way to say 'would that we…', and שָׁקַד/שָׁדַל in the hithpa'el carries the striving.",
+    "4:3 נַבִּיט בּוֹ עֲטוּר — Revelation 19:12 and Heb 2:9 (בְּכָבוֹד וְהָדָר תְּעַטְּרֵהוּ); the Arabic نَنْظُرُهُ مُكَلَّلًا / بِالْمَجْدِ وَالْجَلَال is that crowning, and the Hebrew keeps the participle with the two nouns on the next line."
+  ]
+}

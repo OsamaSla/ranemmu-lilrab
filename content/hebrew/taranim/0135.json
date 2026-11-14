@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 135,
+  "title_he": "אֲדֹנָי, הִנְנִי לָךְ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנָי, הִנְנִי לָךְ",
+        "מַקְדִּישׁ אֶת־חַיַּי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֲדָמְךָ הַזַּךְ",
+        "נִשְׁפַּךְ עַל־חֶטְאִי",
+        "וְעַל־עֲוֺנָי",
+        "הֲנִדְכֵּיתָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הֲבַעֲדִי סָבַלְתָּ",
+        "נֹשֵׂא הַיִּסּוּרִים",
+        "וְלִבְּךָ הָרַךְ",
+        "כַּדּוֹנַג נָמַס"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הָיִיתָ לִי כָפְרִי",
+        "קָדְשִׁי וְצִדְקִי",
+        "נָתַתָּ לִי חַיִּים",
+        "לְעוֹלְמֵי עַד"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הוֹי בַּעַל הַחֶסֶד",
+        "הֵן רֵיקָה יָדִי",
+        "מָה־אַקְרִיב לָךְ",
+        "מָה־אֶתֵּן לָךְ"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives stanza 1 as two lines and stanzas 2–5 as four; the payload follows the print. The hymn's whole shape is a chain of rhetorical questions, so every stanza after the first opens with הֲ־.",
+    "3:2–3:4 נֹשֵׂא הַיִּסּוּרִים … כַּדּוֹנַג נָמַס — Isaiah 53:4 (נֹשֵׂא מַכְאֹבֵינוּ) with Ps 22:15 (נָמֵס כַּדּוֹנַג לִבִּי); the Arabic مُحْتَمِلَ الْعَذَاب / كَالشَّمْعِ عَنِّي ذَاب is that pair, and דּוֹנַג is the psalm's wax.",
+    "4:1–4:4 הָיִיתָ לִי כָפְרִי / קָדְשִׁי וְצִדְקִי — the Arabic غَدَوْتَ لِي فِدَاي / قَدَاسَتِي بِرِّي; Hebrew turns the abstract nouns into predicates with a possessive, which is how 1 Cor 1:30 states it (נִהְיָה לָנוּ … קְדֻשָּׁה וּפְדוּת).",
+    "2:4 הֲנִדְכֵּיתָ — the Arabic سُحِقْتَ is 'were crushed', and דכא is the verb of Isa 53:5/10; the question particle sits on the line that carries the verb so the interrogative is not stranded.",
+    "5:2 הֵן רֵיקָה יָדִי — 'behold, my hand is empty'; the Arabic لَقَدْ خَلَتْ يَدِي is the same image, and the clause is cast as a verbless sentence for the beat."
+  ]
+}
