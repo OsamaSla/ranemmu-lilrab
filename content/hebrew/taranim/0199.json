@@ -1,0 +1,60 @@
+{
+  "book": "taranim",
+  "number": 199,
+  "title_he": "אֵלֶיךָ תְּהִלָּתֵנוּ, הוֹי הַגּוֹאֵל הֶחָנוּן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵלֶיךָ תְּהִלָּתֵנוּ",
+        "הוֹי הַגּוֹאֵל הֶחָנוּן",
+        "כִּי בָאתָ לְהַגִּיד לָנוּ",
+        "סוֹד הַחֲסִידוּת הֶחָזָק"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הַמָּשִׁיחַ אֲדֹנֵינוּ",
+        "וְאַתָּה פִּסְחֵנוּ הַיָּחִיד",
+        "בְּמוֹתְךָ הוֹשַׁעְתָּנוּ",
+        "וְקַמְתָּ רֹאשֵׁנוּ הַנִּכְבָּד"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "גַּם בְּלֵיל הַמַּכְאוֹבִים",
+        "נָתַתָּ לָנוּ הַסְּעוּדָה",
+        "וַתֹּאמֶר: זֹאת עֲשׂוּ תָּמִיד",
+        "לִזְכֹּר אַהֲבָתְךָ הָרַבָּה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בְּקַחְתֵּנוּ אֶת־הַלֶּחֶם",
+        "נַבִּיט בְּצִדְּךָ הַפָּצוּעַ",
+        "תִּרְבֶּה תּוֹדָתֵנוּ לָךְ",
+        "בְּזָכְרֵנוּ אַהֲבַת אֱמֶת"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "עוֹד מְעַט וְתָשׁוּב אֵלֵינוּ",
+        "הוֹי הַגּוֹאֵל הֶחָנוּן",
+        "וְנִזְכֶּה אִתְּךָ לָנֶצַח",
+        "בַּחֲתֻנָּה וּבַמַּלְכוּת"
+      ]
+    }
+  ],
+  "review": [
+    "1:4 סוֹד הַחֲסִידוּת — 1 Tim 3:16 μυστήριον τῆς εὐσεβείας; the Hebrew keeps סוֹד in its Danielic sense of a revealed secret (Dan 2:18, 27) with חֲסִידוּת for εὐσέβεια, rather than a descriptive phrase like 'the teaching of godliness'.",
+    "2:1 הַמָּשִׁיחַ אֲדֹנֵינוּ — the Arabic أَنْتَ الْمَسِيحُ رَبُّنَا is an explicit 'You are'; the Hebrew keeps a verbless equational clause (the pattern of 1 Kings 18:39, יְהוָה הוּא הָאֱלֹהִים) because the addressee is already established in stanza 1 and the shorter line matches the tune. Both nouns are definite, so this is apposition, not a construct chain.",
+    "2:2 פִּסְחֵנוּ הַיָּחִיד — 1 Cor 5:7 (כִּי־פִסְחֵנוּ אַף־הַמָּשִׁיחַ נִזְבַּח); the singular 'our Passover' is kept, and הַיָּחִיד carries the Arabic الْوَحِيد without turning it into 'only' as an adverb.",
+    "2:4 רֹאשֵׁנוּ הַנִּכְבָּד — Eph 1:22 (רֹאשׁ לַכֹּל); the Hebrew keeps רֹאשׁ as headship rather than 'leader', so the stanza ends on the resurrection's gift to the church.",
+    "3:3–4 וַתֹּאמֶר: זֹאת עֲשׂוּ … לִזְכֹּר — Luke 22:19; the colon is the glossary's rule for direct speech, and לִזְכֹּר keeps the infinitive of the memorial command rather than a noun.",
+    "5:4 בַּחֲתֻנָּה וּבַמַּלְכוּת — Rev 19:7 (כִּי־בָאָה חֲתֻנַּת הַשֶּׂה) with Rev 11:15; the two nouns are kept apart so the stanza names both the wedding and the reign, not a vague 'glory'."
+  ]
+}

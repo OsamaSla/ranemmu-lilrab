@@ -1,0 +1,69 @@
+{
+  "book": "taranim",
+  "number": 209,
+  "title_he": "עַל־צְלָב גָּלְגָּלְתָּא נָשָׂא כָּל־עָנְשֵׁנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עַל־הַצְּלָב בְּגָלְגָּלְתָּא",
+        "נָשָׂא כָּל־עָנְשֵׁנוּ",
+        "מְקַיֵּם עֲצַת הַשַּׁדַּי",
+        "כְּסוֹד עוֹלָמִים נֶעְלָם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מֵתִים הָיִינוּ כֻּלָּנוּ",
+        "וַיָּבֹא אֵלֵינוּ הָאָדוֹן",
+        "וּבְעַנְוָה עוֹלָה עַל־כֹּל",
+        "חָיָה יֵשׁוּעַ כָּעֲבָדִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מַשְׁקֶה הַצְּמֵאִים הוּא צָמֵא",
+        "וְגַם הַחֹמֶץ שָׁתָה",
+        "וְכֵן הֻשְׁלַם הַכָּתוּב",
+        "וְכָל־אֲשֶׁר עָלָיו נִכְתָּב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אָז קָרָא בְּקוֹל: אָבִי",
+        "אֶת־הַכֹּל הִשְׁלַמְתִּי לְפָנֶיךָ",
+        "עַל־כֵּן אַפְקִידָה",
+        "רוּחִי עַתָּה בְּיָדֶיךָ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "עַל־כֵּן נִזְכֹּר אֶת־הַשֶּׂה",
+        "וְאֵת אֲשֶׁר סָבַל עַל־הַצְּלָב",
+        "וּנְסַפֵּר אֶת־מוֹתוֹ",
+        "עַד־כִּי יָבוֹא בְּקָרוֹב"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "בְּגָלְגָּלְתָּא נָפַל אֲדֹנִי",
+        "בַּעֲדִי עַל־עֵץ הַצְּלָב",
+        "בְּגָלְגָּלְתָּא מָצָאתִי רָצוֹן",
+        "וְהַתּוֹדָה לַגּוֹאֵל הָאָהוּב"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 עַל־צְלָב גָּלְגָּלְתָּא — the Arabic keeps both nouns (صَلِيبِ الْجُلْجُثَة), and so does the Hebrew; צְלָב is the glossary's fixed word, and גָּלְגָּלְתָּא stays Aramaic as the place-name rather than being Hebraised to 'the skull place'.",
+    "2:1–2 מֵתִים הָיִינוּ כֻּלָּנוּ — Eph 2:1; the Hebrew keeps the plural and the 'all of us', so the rescue is not the rescue of an individual only.",
+    "2:3–4 וּבְעַנְוָה עוֹלָה עַל־כֹּל … כָּעֲבָדִים — Phil 2:7–8 (דְּמוּת עֶבֶד); the plural כָּעֲבָדִים keeps the Arabic كَالْعَبِيد, i.e. He lived the life slaves live, not merely 'like a servant'.",
+    "3:1–2 the One who gives the thirsty drink thirsted, and vinegar too He drank — John 19:28–29 with Ps 69:22 (בְּצָמְאִי יַשְׁקוּנִי חֹמֶץ); the participle מַשְׁקֶה is kept against the finite 'He gives drink', so the irony stands in one breath.",
+    "4:1–4 the seventh word is split exactly where the print splits it (أَبَتَاه / الْكُلَّ أَكْمَلْتُ / أَسْتَوْدِعُ / رُوحِي), and the Hebrew follows John 19:30 (נִשְׁלַם) with Ps 31:6 (בְּיָדְךָ אַפְקִיד רוּחִי), so the last line quotes the psalm Jesus quoted.",
+    "6:1–4 is identical to tr0205 6:1–4 in the print and is kept word-for-word identical here."
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "book": "taranim",
+  "number": 205,
+  "title_he": "עֲצַת הִתְגַּלְּמוּתוֹ הַגְּדוֹלָה כְּסוֹד עוֹלָמִים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עֲצַת הִתְגַּלְּמוּתוֹ הַגְּדוֹלָה",
+        "כְּסוֹד עוֹלָם נוֹעָצָה",
+        "גִּלָּה הַגּוֹאֵל הֶחָנוּן",
+        "עַל־הַצְּלָב כַּשֶּׂה נִזְבָּח"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֵן הוּא הֵרִיק אֶת־נַפְשׁוֹ",
+        "וְלָקַח אֶת־מַעֲמָדֵנוּ",
+        "וֵאלֹהִים הִכָּהוּ",
+        "בְּחַרְבּוֹ הַנּוֹרָא בַּעֲדֵנוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כִּרְאוֹת הַחֶרֶב לוֹהֶטֶת",
+        "צָעַק מִפַּחַד הָאָף:",
+        "אֵלִי, לָמָה עֲזַבְתָּנִי",
+        "וּפָנֶיךָ מִמֶּנִּי נִסְתָּרוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הֵן אַתָּה הִכִּיתַנִי",
+        "בְּחֶרֶב מִשְׁפָּטְךָ הַנּוֹרָא",
+        "נָמֵס לִבִּי בְּקִרְבִּי",
+        "כַּדּוֹנַג לִפְנֵי הַלֶּהָבָה"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "וַיֵּט רֹאשׁוֹ הַיָּקָר",
+        "מֵת בַּעֲדֵנוּ, הָרַחוּם",
+        "נוֹשֵׂא אֶת־כָּל־הָאָף",
+        "וְטוֹעֵם אֶת־אֵימַת הַמָּוֶת"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "בְּגָלְגָּלְתָּא נָפַל אֲדֹנִי",
+        "בַּעֲדִי עַל־עֵץ הַצְּלָב",
+        "בְּגָלְגָּלְתָּא מָצָאתִי רָצוֹן",
+        "וְהַתּוֹדָה לַגּוֹאֵל הָאָהוּב"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 עֲצַת הִתְגַּלְּמוּתוֹ … כְּסוֹד עוֹלָם — Eph 1:11 with 3:11 (עֲצַת עוֹלָמִים); הִתְגַּלְּמוּת is the glossary term for incarnation, kept rather than paraphrased as 'His becoming man', so the stanza can name the counsel before it names the cross.",
+    "2:1 הֵרִיק אֶת־נַפְשׁוֹ — Phil 2:7 ἐκένωσεν ἑαυτόν; the Hiphil of ריק keeps the emptying as an act, and נֶפֶשׁ keeps 'self' whole, as the glossary requires.",
+    "2:3–4 וֵאלֹהִים הִכָּהוּ בְּחַרְבּוֹ — Zech 13:7 (חֶרֶב עוּרִי עַל־רֹעִי); the sword is kept, so the stanza's next line can quote the cry it produces.",
+    "3:3–4 is Ps 22:2 verbatim (אֵלִי אֵלִי לָמָה עֲזַבְתָּנִי) with the hidden face of Ps 88:15; the Hebrew keeps both halves rather than collapsing the quotation into the first.",
+    "4:1–2 הִכִּיתַנִי בְּחֶרֶב מִשְׁפָּטְךָ — the Arabic puts the words in the Sufferer's mouth (إِنَّكَ قَدْ ضَرَبْتَنِي), so the Hebrew keeps the second person and the 'sword of justice' (בְּחֶרֶב מִשְׁפָּטְךָ) rather than turning it into narration.",
+    "4:3–4 נָמֵס לִבִּי … כַּדּוֹנַג — Ps 22:15 (הָיָה לִבִּי כַּדּוֹנַג, נָמֵס בְּתוֹךְ מֵעָי); the psalm's own wax image is reused.",
+    "5:1 וַיֵּט רֹאשׁוֹ — John 19:30 (וַיֵּט אֶת־רֹאשׁוֹ); kept as the Gospel's gesture rather than a modern 'הרכין ראשו'.",
+    "6:1–4 recurs word-for-word as tr0209 6:1–4, because the print repeats the stanza in both hymns; the two payloads are kept identical so the shared stanza does not drift."
+  ]
+}

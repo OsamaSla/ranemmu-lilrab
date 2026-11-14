@@ -52,6 +52,13 @@ Arabic wins.
 | قطر الشهاد (honeycomb) | נֹפֶת צוּפִים | Ps 19:11; fixed for the "sweet as honey" line. |
 | رمام (corpses) | יְקָבִים | "Graves/bodies"; used for "dead as corpses" (tr0194 2:2). |
 | أوصاف (traits) | אֳפָיִים | Job 41:4; the rare biblical noun, not `תְּכוּנוֹת`. |
+| صخرة الدهور (Rock of Ages) | צוּר הָעוֹלָמִים | Deut 32:4; the divine Rock is `צוּר`, never `סֶלַע`. |
+| خطر (peril) | סַכָּנָה | Mishnaic, but the only noun for Rom 8:35's κίνδυνος; kept inside the biblical tribulation list. |
+| جسد / أجساد (body) | גְּוִיָּה | Biblical body/corpse (Gen 47:18, Judg 14:8); keeps the resurrection sense that `גוף` loses. |
+| الجلجثة (Golgotha) | גָּלְגָּלְתָּא | Kept Aramaic as a place-name; do not Hebraise to "the skull place". |
+| مقام (station, standing) | מַעֲמָד | Pairs with `עֲמִידָה`; used for the "station on high" of tr0211. |
+| عرس (wedding) | חֲתֻנָּה | Song-of-Songs and Rev 19:7; never the Modern `חתונה`. |
+| أمة / شعب مقتنى (acquired people) | עַם סְגֻלָּה | Exod 19:5, 1 Pet 2:9; kept as a title, not "a special people". |
 
 ## Pointing conventions
 

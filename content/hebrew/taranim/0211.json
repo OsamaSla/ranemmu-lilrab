@@ -1,0 +1,58 @@
+{
+  "book": "taranim",
+  "number": 211,
+  "title_he": "יֶשׁ־לִי מַעֲמָד נָאֶה בַּמָּרוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נִפָּגֵשׁ עוֹד בְּקָרוֹב",
+        "בֶּעָנָנִים סְבִיב הַגּוֹאֵל הָאָהוּב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יֶשׁ־לִי מַעֲמָד נָאֶה בַּמָּרוֹם",
+        "כְּבוֹדוֹ עָלָה עַל־אוֹר הַיּוֹם",
+        "בַּמְּרוֹמִים אֲשֶׁר שָׁם גּוֹאֵל כָּל־בָּשָׂר",
+        "פָּנָיו כַּשֶּׁמֶשׁ מְאִירוֹת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נַגִּישׁ לַאֲדֹנֵינוּ",
+        "תְּהִלַּת תּוֹדָה מְתוּקָה וְרַכָּה",
+        "כִּי בַעֲדֵנוּ נָתַן נַפְשׁוֹ",
+        "כַּשֶּׂה לְמָוֶת כּוֹאֵב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נִפָּגֵשׁ בַּמָּרוֹם אַחֲרֵי",
+        "אֲשֶׁר יִתֹּם מַסָּעֵנוּ מִזֶּה",
+        "בַּאֲשֶׁר יִכְלֶה יְגוֹן הַמָּוֶת",
+        "וְיִשָּׁכַח עָמָל וָדְוַי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "בַּאֲשֶׁר נְקַבֵּל עֲטָרוֹתֵינוּ",
+        "לַחֲלֹק עִם הַמְּנַצֵּחַ",
+        "הוּא אֲדוֹן הָאֲדוֹנִים הָעֶלְיוֹן",
+        "אַרְיֵה גּוֹבֵר וְכַבִּיר"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 is the two-line acclamation stanza the print puts before the four-line stanzas (tune 99.99 – 69.69); like tr0157/0177 it is kept as two lines and not padded, which is why the metre script will call it short by design.",
+    "2:3 גּוֹאֵל כָּל־בָּשָׂר — the Arabic فَادِي الْوَرَى; בָּשָׂר is kept as in Joel 3:1 so 'all flesh' remains the scope of the redemption.",
+    "2:4 פָּנָיו כַּשֶּׁמֶשׁ מְאִירוֹת — Rev 1:16 (וּפָנָיו כַּשֶּׁמֶשׁ הַיָּפֶה); the simile is kept as a simile and the plural פָּנִים takes a plural participle, which is the biblical agreement.",
+    "3:2 תְּהִלַּת תּוֹדָה — the Arabic حُلْوَ تَسْبِيحِ شُكْرٍ رَخِيم is a construct chain of three nouns ('sweet hymn of thanks'); the Hebrew keeps a chain (תְּהִלַּת תּוֹדָה) with two adjectives, rather than splitting it into a sentence.",
+    "4:3–4 יְגוֹן הַמָּוֶת … הֶעָמָל וְהַדְּוַי — the Arabic حُزْنُ الرَّدَى / الشَّقَا وَالْعَنَا; דְּוַי (Ps 41:4) is kept for الشَّقَا, a sickness-sorrow rather than generic tiredness, so the pair is sorrow and disease, not sorrow and work.",
+    "5:3–4 אֲדוֹן הָאֲדוֹנִים … אַרְיֵה גּוֹבֵר — Rev 19:16 with Rev 5:5; both are kept as titles in apposition, since the stanza ends by naming Him rather than describing Him."
+  ]
+}

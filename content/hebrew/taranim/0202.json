@@ -1,0 +1,44 @@
+{
+  "book": "taranim",
+  "number": 202,
+  "title_he": "הָבָה הָרִימוּ הַדְּגָלִים וְהִתְעוֹדְדוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הִנֵּה הַמַּעֲרָכָה מוּכָנָה / וְאֵין לִשְׁכֹּב / הָבָה הִתְאַמְּצוּ לְהַשִּׂיג הַמַּטָּרָה / עִמְדוּ בַּסֵּבֶל וְהַמְשִׁיכוּ בַּמִּלְחָמָה / נֶגֶד הָרֶשַׁע וְהַשַּׁחַת / תַּחַת דֶּגֶל מוֹשִׁיעַ הָעֲבָדִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הָבָה הָרִימוּ הַדְּגָלִים וְהִתְעוֹדְדוּ / הוֹי הַגִּבּוֹרִים / הִנֵּה הָאָדוֹן קוֹרֵא לִצְבָאוֹ: / הַשְׁלִיכוּ הַמַּשָּׂאוֹת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִנֵּה עֲנַן הָעֵדִים זֹהֵר / בְּכָל־הַדְרַת חֵן וָהָדָר / וְזֹהַר אֱמוּנָתָם מֵאִיר / לְמֶרְחַק כָּל־הַדּוֹרוֹת וָעַד"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מִי יַפְרִידֵנוּ מֵאַהֲבַת הַמְּנַצֵּחַ / צָרָה אוֹ מֵצַר / רְדִיפָה רָעָב עֵירֹם אוֹ סַכָּנָה / בְּכָל־הַדָּרֶךְ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "נַעֲמֹד בְּאֹמֶץ עַד־יִתֹּם הַמִּלְחָמָה / בְּהַשִּׂיג הַמַּטָּרָה / כִּי יָבוֹא הָאָדוֹן אֲדוֹן הַכָּבוֹד / וְיִפְדֶּה אֶת־הַגְּוִיּוֹת"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives all five stanzas as single slash-joined lines under the tune 11.5.11.5 – 7.7.11.11.7.11; each payload stanza is therefore one string, like tr0139/0151/0181, and the slash groups mirror the Arabic's own phrase breaks.",
+    "2:3 the Lord's call is introduced with a colon before the direct speech, per the glossary rule, where the Arabic prints it inside „ “.",
+    "4:1–2 is Rom 8:35 — מִי יַפְרִידֵנוּ מֵאַהֲבַת הַמָּשִׁיחַ — kept as an interrogative, because the Arabic مَنْ يَفْصِلُنَا is a question, not an assertion.",
+    "4:3 the tribulations are kept as six bare nouns (צָרָה / מֵצַר / רְדִיפָה / רָעָב / עֵירֹם / סַכָּנָה), as Rom 8:35 lists them without verbs; סַכָּנָה is Mishnaic rather than biblical, accepted here because the Arabic خطر is 'peril' and no biblical noun covers it.",
+    "5:4 וְיִפְדֶּה אֶת־הַגְּוִיּוֹת — the Arabic يَفْدِي الأَجْسَاد is 'ransoms the bodies'; גְּוִיָּה is the biblical word for a body or corpse (Gen 47:18, Judg 14:8), chosen so the resurrection sense survives, which 'the people' would lose."
+  ]
+}

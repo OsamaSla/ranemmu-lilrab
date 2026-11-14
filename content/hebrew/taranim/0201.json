@@ -1,0 +1,67 @@
+{
+  "book": "taranim",
+  "number": 201,
+  "title_he": "הוֹי יוֹצֵר כָּל־בָּשָׂר, הוֹי שׁוֹכֵן מָרוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי יוֹצֵר כָּל־בָּשָׂר",
+        "הוֹי שׁוֹכֵן מָרוֹם",
+        "מָתַי הַפְּגִישָׁה",
+        "הוֹי נֶאֱמַן דְּבָרֶיךָ",
+        "אֵין אֲנַחְנוּ מִזֶּה",
+        "אֵין לָנוּ כָּאן",
+        "אֲנַחְנוּ הַנִּבְזִים",
+        "אֵין לָנוּ מַעֲמָד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "גֵּרִים בָּאֲרָצוֹת",
+        "וְחַיִּים בְּהַסְתָּרָה",
+        "אֵין לָנוּ שֵׁם",
+        "אֵין לָנוּ מְנוּחָה",
+        "הִנְנוּ מְצַפִּים",
+        "בַּלַּיְלָה וּבַיּוֹם",
+        "לִקְרַאת בּוֹאֶךָ",
+        "הוֹי כּוֹכַב הַשָּׁחַר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אָנוּ יוֹדְעִים לִבְּךָ",
+        "אֶל־עַמְּךָ הַנֶּאֱהָב",
+        "זְכֹר כַּלָּתֶךָ",
+        "בְּעֵמֶק הַדְּמָעוֹת",
+        "אָמַרְתָּ: הִנְנִי",
+        "בָא מְהֵרָה אֲלֵיכֶם",
+        "אָמֵן, בּוֹאָה נָּא",
+        "הוֹי אֲדֹנֵינוּ יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תָּאֲבָה לְךָ הַכַּלָּה",
+        "כָּלְתָה לְךָ נַפְשֵׁנוּ",
+        "אָרֹךְ גָּלוּתֵנוּ",
+        "הוֹי נֶאֱמַן דְּבָרֶיךָ",
+        "זְכֹר קְרִיאָתֵנוּ",
+        "וּשְׁמַע תְּפִלָּתֵנוּ",
+        "בּוֹא, חֲתָנֵנוּ",
+        "לְךָ כָּל־הִשְׁתַּחֲוָיָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 יוֹצֵר כָּל־בָּשָׂר with שׁוֹכֵן מָרוֹם — Jer 32:27 and Isa 57:15; the two titles are the Arabic's خَالِقَ الْمَلَا / سَاكِنَ الْعُلَا, and the Hebrew keeps the biblical pair rather than a modern 'Creator of people'.",
+    "1:5–8 four short denials of belonging are kept as four lines, as the Arabic has four (فَلَسْنَا مِنْ هُنَا / لَيْسَ لَنَا هَنَا / نَحْنُ الْمُزْدَرَى / لَيْسَ لَنَا وُجُود) — the repetition is the stanza's argument.",
+    "2:1 גֵּרִים — 1 Pet 2:11 (כְּגֵרִים וְתוֹשָׁבִים); 'strangers' is kept as the resident-alien, not 'foreigners', because the stanza's comfort is that the exile is legal and temporary.",
+    "2:8 כּוֹכַב הַשָּׁחַר — Rev 22:16 (כּוֹכַב נֹגַהּ הַשָּׁחַר); the star is kept as a title of address, since the stanza ends by naming Him, not by describing the dawn.",
+    "3:5–8 the close is Rev 22:7 (הִנְנִי בָא מְהֵרָה) plus Rev 22:20 verbatim (אָמֵן, בּוֹאָה אֲדֹנֵינוּ יֵשׁוּעַ), so the hymn ends inside the Bible's own last prayer.",
+    "4:2 כָּלְתָה לְךָ נַפְשֵׁנוּ — Ps 84:3 (נִכְסְפָה וְגַם־כָּלְתָה נַפְשִׁי); the bride's longing borrows the psalmist's verb instead of a modern 'we miss You'."
+  ]
+}

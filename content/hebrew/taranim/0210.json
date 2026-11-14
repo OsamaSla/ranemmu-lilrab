@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 210,
+  "title_he": "בְּצִפִּיָּה לְאוֹרְךָ אֲשֶׁר יְפַזֵּר עֲנָנָי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּצִפִּיָּה לְאוֹרְךָ יְפַזֵּר עֲנָנָי",
+        "בְּצִפִּיָּה לְאַהֲבָתְךָ תִּמְחֶה דְּאָגָי",
+        "בְּצִפִּיָּה לְפָנֶיךָ הַמְּתוּקִים",
+        "בְּצִפִּיָּה לְךָ, אָבִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּצִפִּיָּה לְךָ, נֶחָמָה בַּצָּרוֹת",
+        "כִּי־תָסִיר מִמֶּנִּי אֲשֶׁר יְעַנֶּה כִּלְיוֹתַי",
+        "כִּי לֵב טָהוֹר בְּךָ, הוֹי מַחְסִי",
+        "בְּצִפִּיָּה לְךָ, אָבִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּצִפִּיָּה לְךָ, אֱלֹהַי, לָחֹן",
+        "עַל־חוֹלֶה אֲשֶׁר סָבַל יִסּוּרִים עַזִּים",
+        "כִּי־תִקְוָתִי בְךָ עוֹד נֶאֱמָנָה",
+        "בְּצִפִּיָּה לְךָ, אָבִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אָבִי, בְּשֵׁם הַיָּדִיד הָאָדוֹן אָבֹא",
+        "וַעֲנֵנִי נָא בִּשְׁמוֹ, אָבִי, וְתֵן",
+        "כִּי הִנְנִי בְּצִפִּיָּה עִם בְּרָכוֹת",
+        "בְּצִפִּיָּה לְךָ, אָבִי"
+      ]
+    }
+  ],
+  "review": [
+    "The refrain is the Arabic's bracketed (فِي انْتِظَارِكَ أَبِي)3 — printed once with a repetition mark. The payload keeps it once per stanza, because the reader prints one line and the threefold repetition is a musical direction, not three lines of text.",
+    "1:1–3 the anaphora בְּצִפִּיָּה is kept on every line, as the Arabic repeats فِي انْتِظَارِ four times per stanza; the opening word is the stanza's shape, so it is never varied for metre.",
+    "2:2 כִּלְיוֹתַי — the Arabic مَا يُضْنِي حَشَايَ is 'what wastes my inward parts'; the Hebrew keeps the psalm's כִּלְיוֹת (Ps 73:21, Job 19:27) rather than a flat 'my inside', so the complaint has a body.",
+    "2:3 לֵב טָהוֹר … מַחְסִי — Ps 51:12 (לֵב טָהוֹר בְּרָא־לִי) with Ps 62:8 (מַחְסִי); the Arabic نَقَاءُ الْقَلْبِ فِيكَ يَا حِمَايَ pairs cleanness with shelter, and the Hebrew keeps both nouns.",
+    "4:1–2 the prayer is made 'in the name of the beloved Lord' and answered 'in His name', keeping the two prepositions of the Arabic (بِاسْمِ الْحَبِيبِ … بِاسْمِهِ) rather than merging them into one mention of the name."
+  ]
+}

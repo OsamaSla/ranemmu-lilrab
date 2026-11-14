@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 212,
+  "title_he": "אֱלֹהִים הוּא אַהֲבָה, הַשָּׁמַיִם וְהָאָרֶץ יַגִּידוּ אַהֲבָתוֹ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֱלֹהִים הוּא אַהֲבָה, הַשָּׁמַיִם",
+        "וְהָאָרֶץ יַגִּידוּ אַהֲבָתוֹ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֱלֹהִים הוּא אַהֲבָה, הַשָּׁמַיִם",
+        "וְהָאָרֶץ יַגִּידוּ אַהֲבָתוֹ",
+        "לוֹ יָשִׁיר לְשׁוֹנִי זִמְרָה",
+        "וְהַלֵּב יֶאֱהַב קִרְבָתוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֱלֹהִים הוּא אַהֲבָה, כֻּלָּנוּ",
+        "חַיִּים בּוֹ וְנִתְקַיְּמָה",
+        "לְשֵׁם קָדְשׁוֹ נָשִׂיא תּוֹדָה",
+        "וְאֶת־שְׁמוֹ נְכַבֵּד בְּשֶׁבַח"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֱלֹהִים הוּא אַהֲבָה, שִׂמְחוּ",
+        "כִּי אַהֲבָתוֹ לֹא תִתֹּם",
+        "מֵעַל פָּנָיו לֹא נִדָּחֶה",
+        "מִמֶּנּוּ לָנוּ כָּל־שֶׁנַּחְמֹד"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אֱלֹהִים הוּא אַהֲבָה, כִּי פָדָה",
+        "דַּם בְּנוֹ נֶפֶשׁ הַחוֹטֵא",
+        "עַל־כֵּן נִחְיֶה לָעַד",
+        "בַּכָּבוֹד בְּבֵית הַנֹּעַם"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 is the refrain alone as the printed first stanza (the same shape as tr0126/0180); it is kept unpadded so the hymn opens on the sentence the whole hymn repeats.",
+    "1:1 אֱלֹהִים הוּא אַהֲבָה — 1 John 4:8 (כִּי הָאֱלֹהִים הוּא אַהֲבָה); the article is kept on both nouns, as the verse has it, so the line is an identification and not a description.",
+    "3:1–2 חַיִּים בּוֹ וְנִתְקַיְּמָה — Acts 17:28 (כִּי־בוֹ אָנוּ חַיִּים וְנָעִים וְהֹוִים); נִתְקַיְּמָה is chosen for 'exist' so the verb stays a verb, rather than importing a philosophical noun.",
+    "4:2–3 לֹא תִתֹּם … לֹא נִדָּחֶה — Lam 3:22 (כִּי לֹא־תָמְנוּ רַחֲמֵי יְהוָה) with John 6:37 (אֶת־הַבָּא אֵלַי לֹא אֲגָרְשֶׁנּוּ); the two promises stay two clauses, as the Arabic keeps them.",
+    "5:2 נֶפֶשׁ הַחוֹטֵא — the Arabic نَفْسَ الْأَثِيم; נֶפֶשׁ is kept per the glossary for the whole living person, so the blood is given for the guilty one and not merely for his guilt."
+  ]
+}

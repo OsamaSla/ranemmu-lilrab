@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 207,
+  "title_he": "מַה־נָּעִים לִבְטֹחַ בַּאֲדֹנִי הַמָּשִׁיחַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֱלֹהַי, הִנְנִי בוֹטֵחַ",
+        "אַף נִשְׁעָן עָלֶיךָ",
+        "כָּל־הַבְטָחָה מִמְּךָ אֱמֶת",
+        "הִנְנִי בֵּין יָדֶיךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מַה־נָּעִים לִבְטֹחַ",
+        "בַּאֲדֹנִי הַמָּשִׁיחַ",
+        "וּבְהַבְטָחָתוֹ הַיְקָרָה",
+        "אֶשְׁקֹט וְאֶמְצָא מְנוּחָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מַה־נָּעִים לִבְטֹחַ",
+        "בַּאֲדֹנִי הַנֶּהְדָּר",
+        "אֲשֶׁר הִבְטִיחַ לִהְיוֹת",
+        "עִמָּנוּ עַד־הַקֵּץ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מַה־נָּעִים לִבְטֹחַ",
+        "בְּפוֹדֶה כָּל־בָּשָׂר",
+        "כִּי הוּא נוֹתֵן לִי שָׂשׂוֹן",
+        "מְנוּחָה וְגַם שָׁלוֹם"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 בּוֹטֵחַ … נִשְׁעָן — the Arabic pairs two verbs (وَاثِق / مُتَّكِل), and the Hebrew keeps both, as Isa 26:3–4 sets בָּטוּחַ beside the Rock that endures.",
+    "1:3 כָּל־הַבְטָחָה … נֶאֱמָנָה — the Arabic كُلُّ وَعْدٍ مِنْكَ صَادِق is singular 'every promise is true'; the Hebrew keeps the singular noun with a singular predicate rather than 'all Your promises are true', so each promise is weighed on its own.",
+    "2:4 אֶשְׁקֹט — Isa 30:15 (בְּהַשְׁקֵט וּבְבִטְחָה תִּהְיֶה גְבוּרַתְכֶם); the rest is the promised quiet, not a mood, which is why the verb is kept rather than 'ארגיש שלווה'.",
+    "3:4 עַד־הַקֵּץ — Matt 28:20 (וְהִנֵּה אָנֹכִי אִתְּכֶם כָּל־הַיָּמִים עַד־קֵץ הָעוֹלָם); the Hebrew stops at הַקֵּץ as the Arabic stops at الْمُنْتَهَى, without adding 'of the world'.",
+    "4:2 בְּפוֹדֶה כָּל־בָּשָׂר — the Arabic مُفْتَدِي الْأَنَام is 'Redeemer of mankind'; בָּשָׂר is kept in the Joel 3:1 sense of all flesh, so the title stays universal without becoming abstract."
+  ]
+}
