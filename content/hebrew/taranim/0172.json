@@ -1,0 +1,40 @@
+{
+  "book": "taranim",
+  "number": 172,
+  "title_he": "בְּצִלְּךָ, אֲהוּבִי, אֶחְפְּצָה לָשָׁבֶת",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּצִלְּךָ, אֲהוּבִי",
+        "אֶחְפְּצָה לָשָׁבֶת",
+        "שָׁם כָּל־שַׁעֲשׁוּעָי",
+        "שָׁם אֶשְׁכַּח יָגוֹן",
+        "בְּצִלְּךָ, אֲהוּבִי",
+        "אֶשְׁמַע זֶמֶר פְּדוּת",
+        "אֵיךְ בְּדָמוֹ זָכַנִי",
+        "חֶסֶד לְעוֹלָם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּצִלְּךָ, אֲהוּבִי",
+        "אֶמְצָא אֶת־הַסֵּפֶר",
+        "פְּרִי מָתוֹק לְחִכִּי",
+        "אֲדֹנִי, מָה־מָתוֹק אָתָּה",
+        "חִכְּךָ, אֲהוּבִי",
+        "כֻּלּוֹ מַחֲמַדִּים",
+        "רוּחֲךָ הַקְּדוֹשָׁה",
+        "הִיא מְקוֹר נֶחָמוֹת"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 בְּצִלְּךָ … אֶחְפְּצָה לָשָׁבֶת — Song of Songs 2:3 (בְּצִלּוֹ חִמַּדְתִּי וְיָשַׁבְתִּי); the Arabic تَحْتَ ظِلِّكَ … أَشْتَهِي أَنْ أَجْلِسَ is that verse, and the Hebrew keeps חָמַד ('to desire') even though the Arabic uses a different verb.",
+    "2:1–2:4 אֶמְצָא אֶת־הַסֵּפֶר … פְּרִי מָתוֹק לְחִכִּי — the Arabic أَجِدُ الْكِتَابَ لِي / ثَمَرًا يَحْلُو لِحَلْقِي is 'I find the Book for me, fruit sweet to my palate'; the Hebrew keeps the book as a found object and the taste as its effect, with חֵךְ as the biblical palate (Ps 119:103).",
+    "2:5–2:6 חִכְּךָ … כֻּלּוֹ מַחֲמַדִּים — Song 5:16 (חִכּוֹ מַמְתַקִּים וְכֻלּוֹ מַחֲמַדִּים); the Arabic حَلْقُكَ … كُلُّهُ مُشْتَهَيَات is that verse, and the Hebrew keeps the Song's rare noun מַחֲמַדִּים which the Arabic paraphrases.",
+    "1:7–1:8 אֵיךְ בְּדָמוֹ זָכַנִי / חֶסֶד לְעוֹלָם — the Arabic كَيْفَ بِالدَّمِ حَبَانِي / رَحْمَةً طُولَ الْمَدَى is 'how with His blood He endowed me with mercy evermore'; זָכָה is used in its biblical sense of being granted a share (Num 5:28), so the line is a gift received, not a merit earned.",
+    "The refrain בְּצִלְּךָ, אֲהוּבִי opens stanzas 1 and 2 at the same two positions the Arabic repeats تَحْتَ ظِلِّكَ حَبِيبِي, and the 8-line stanza shape is kept from the print (2 stanzas of 8)."
+  ]
+}

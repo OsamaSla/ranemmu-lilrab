@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 175,
+  "title_he": "בֹּאוּ מַאֲמִינִים וּמַאֲמִינוֹת",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בֹּאוּ מַאֲמִינִים וּמַאֲמִינוֹת",
+        "כָּל־יוֹרְשֵׁי כְּבוֹד הַשָּׁמָיִם",
+        "נְיַחֵל לַדּוֹד שְׁלֵם הַמִּדּוֹת",
+        "תִּפְאֶרֶת מַאֲמִינִים, מְקוֹר בְּרָכָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כְּבוֹד אֶרֶץ הֶבֶל, גַּאֲוָתָהּ כְּאֵב",
+        "מְנוּחַת יְגֵעִים, נְוֵה הַשָּׁלוֹם",
+        "בֹּאוּ לָנוּעַ, בֹּאוּ הָלְאָה",
+        "לֹא אָחוֹר כִּי הָלְאָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִנֵּה הַדּוֹד רֹאשׁ מִשְׁפַּחְתֵּנוּ",
+        "מִבְצָרֵנוּ הָעַז וּמַנְהִיגֵנוּ",
+        "מִי יוּכַל לְהַלְשִׁין עָלֵינוּ",
+        "מִי יוּכַל לְהַפְרִידֵנוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נַעֲבֹר הַדֶּרֶךְ בְּלִי פָחַד",
+        "נְחַכֶּה לְבוֹא גֹּאֲלֵנוּ הַנֶּאֱמָן",
+        "נַעֲלֶה לָאֲוִיר רוֹנִים נִצָּחוֹן",
+        "בַּדּוֹד הָיִינוּ לָבֶטַח"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "מַה־נָּאוֶה הַמָּקוֹם הַמּוּכָן לָנוּ",
+        "מְהֻדָּר בְּיָפְיוֹ שֶׁל־אֲדֹנֵינוּ",
+        "שָׁם נָנוּחַ מִכָּל־עֲמָלֵנוּ",
+        "וְנִרְאֶה הַדּוֹד אֲשֶׁר־הֵנִיחַ"
+      ]
+    }
+  ],
+  "review": [
+    "3:1–3:4 הִנֵּה הַדּוֹד רֹאשׁ מִשְׁפַּחְתֵּנוּ … מִי יוּכַל לְהַלְשִׁין … מִי יוּכַל לְהַפְרִידֵנוּ — the Arabic مَنْ ذَا يَسْتَطِيعُ أَنْ يَشِي بِنَا / أَنْ يَفْصِلَنَا is Romans 8:33–35; the Hebrew keeps both rhetorical questions and the verb הלשׁין ('to slander, accuse') of Ps 15:3 rather than the Modern Hebrew לְהַאֲשִׁים.",
+    "4:3–4:4 נַעֲלֶה לָאֲוִיר … נִצָּחוֹן — the Arabic نَرْقَى لِلْهَوَا بِالنَّصْرِ هَاتِفِين is 1 Thess 4:17 (נִלָּקַח בֶּעָבִים לַאֲוִיר); the Hebrew keeps אֲוִיר, the word the epistle uses, so the line is the ascension of the church and not a general 'rising'.",
+    "5:1 הַמָּקוֹם הַמּוּכָן לָנוּ — the Arabic مَكَانًا أُعِدَّ لَنَا is John 14:2–3 (מָקוֹם … אָכִין לָכֶם); the Hebrew keeps the prepared place rather than a 'dwelling', because the stanza ends by naming who made it ready.",
+    "2:3–2:4 בֹּאוּ לָנוּעַ … לֹא אָחוֹר כִּי הָלְאָה — the Arabic هَيَّا لِلرَّحِيلِ … لَيْسَ لِلْوَرَاءِ بَلْ إِلَى قُدَّام is 'come, let us depart … not backward but onward'; הָלְאָה is the biblical 'onward' (Gen 19:9), used as in hymn 142, and the pair אָחוֹר / הָלְאָה keeps the Arabic's contrast.",
+    "2:1–2:2 כְּבוֹד אֶרֶץ הֶבֶל … נְוֵה הַשָּׁלוֹם — the Arabic مَجْدُ الْأَرْضِ بَاطِل … مَوْطِنُ السَّلَام is 'earth's glory is vain … abode of peace'; הֶבֶל is Ecclesiastes' word, and נָוֶה is the biblical dwelling (Jer 31:23), so the two abodes are named with the same vocabulary as hymns 142 and 153."
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 176,
+  "title_he": "אֶשְׂבַּע בְּמַרְאֵה פְּנֵי גֹּאֲלֵנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֶשְׂבַּע בְּמַרְאֵה פְּנֵי גֹּאֲלֵנוּ",
+        "לַלֵּב בַּפָּנִים הָאֵלֶּה כָּל־חֶפְצוֹ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲנִי מוֹסֵר לוֹ נַפְשִׁי בִּשְׁלֵמוּת",
+        "בּוֹ הַשִּׂמְחָה, בּוֹ עֶדֶן הֶחָזוֹן"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אִם־תִּשְׁכֹּן בִּי אַהֲבָתוֹ וּבֵרְכַנִי",
+        "תִּהְיֶה חַיַּי חַיֵּי שֶׁפַע וּפִרְיוֹן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "יֵהָפֵךְ הַכֶּלֶא עִמּוֹ לְגַן",
+        "יָפְיוֹ יִשְׁבֶּה מִשֶּׁמֶשׁ וּמִיָּרֵחַ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אֵין הֶבְדֵּל בְּמָקוֹם אוֹ בִּזְמַן אֶצְלִי",
+        "כָּל־עוֹד בְּקִרְבִּי יוֹלִיךְ נַפְשִׁי לַנִּצָּחוֹן"
+      ]
+    }
+  ],
+  "review": [
+    "4:1–4:2 יֵהָפֵךְ הַכֶּלֶא … לְגַן / יָפְיוֹ יִשְׁבֶּה מִשֶּׁמֶשׁ וּמִיָּרֵחַ — the Arabic فَالسِّجْنُ يُمْسِي بِهِ رَوْضًا … تَسْبِي، وَتَزْرِي سَنًى بِالشَّمْسِ وَالْقَمَرِ is 'prison becomes with Him a garden; His beauties enchant and outshine sun and moon'; the Hebrew keeps both clauses, with שָׁבָה ('take captive') for the enchanting.",
+    "1:2 לַלֵּב … כָּל־חֶפְצוֹ — the Arabic لِلْقَلْبِ فِي ذَا الْمُحَيَّا غَايَةُ الْوَطَرِ is 'for the heart in that face is the utmost of desire'; חֵפֶץ is the biblical noun for what one delights in (Isa 58:13), and the line keeps the face as the object, not the means.",
+    "3:2 חַיֵּי שֶׁפַע וּפִרְיוֹן — the Arabic حَيَاةَ الْخِصْبِ وَالثَّمَرِ is 'a life of fertility and fruit'; שֶׁפַע is the biblical abundance (Deut 33:19) and פִּרְיוֹן its fruitfulness, so the pair stays agricultural rather than abstract.",
+    "5:1–5:2 אֵין הֶבְדֵּל בְּמָקוֹם אוֹ בִזְמַן … לַנִּצָּחוֹן — the Arabic لَا فَرْقَ فِي مَوْضِعٍ عِنْدِي وَلا زَمَنِ / مَا دَامَ فِيَّ يَقُودُ النَّفْسَ لِلظَّفَرِ keeps place and time in one line and the leading to triumph in the other; the Hebrew keeps both halves, with נִצָּחוֹן as the goal.",
+    "The print gives the hymn five two-line stanzas (5×2); the payload keeps that shape rather than pairing the stanzas into longer units."
+  ]
+}

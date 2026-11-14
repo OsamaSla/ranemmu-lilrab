@@ -1,0 +1,40 @@
+{
+  "book": "taranim",
+  "number": 162,
+  "title_he": "אֲדֹנִי, מֶה־תִּרְצֶה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנִי, מֶה־תִּרְצֶה",
+        "נְחֵנִי אֶל־תִּרְצֶה",
+        "לֹא אֶחְפֹּץ דָּבָר כִּי",
+        "אִם־לַעֲשׂוֹת רְצוֹנְךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנִי, נַפְשִׁי לָךְ",
+        "עַל־הֲדֹם רַגְלֶיךָ",
+        "וְחַיַּי בְּיָדֶיךָ",
+        "מִמְּךָ וְאֵלֶיךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הַרְאֵנִי נָא פָנֶיךָ",
+        "לָלֶכֶת בְּעִקְּבוֹתֶיךָ",
+        "אַתָּה אֲדֹנִי לְבַדֶּךָ",
+        "רְצוֹנְךָ הוּא מַשְׂכִּי"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 the Arabic is a chain of 'what You want' (مَاذَا تُرِيد … حَيْثُ تُرِيد … مَا تُرِيد); the Hebrew keeps the root רצה in three of the four lines, since the repetition is the stanza's device, not an accident of rhyme.",
+    "3:4 רְצוֹנְךָ הוּא מַשְׂכִּי — the Arabic بُغْيَتِي نَيْلُ رِضَاك is 'winning Your pleasure is my aim'; מַשְׂכִּי is formed as the object of שִׂכָּה ('to look for', Ps 11:4), keeping the sense of a thing aimed at without the Modern Hebrew מַטָּרָה.",
+    "2:2 עַל־הֲדֹם רַגְלֶיךָ — the Arabic عِنْدَ مَوْطِئِ قَدَمَيْكَ is 'at the footstool of Your feet'; הֲדֹם is the biblical noun of Ps 99:5 and Isa 66:1, and the construct is kept as a place rather than a posture.",
+    "2:4 מִמְּךָ וְאֵלֶיךָ — the Arabic فَهيَ مِنْكَ وَإِلَيْك is 'it is from You and to You'; the Hebrew keeps the two prepositions with no verb, so the line stays the epigram it is in Arabic."
+  ]
+}

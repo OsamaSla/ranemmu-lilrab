@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 165,
+  "title_he": "אֱלֹהִים הוֹשַׁעְתָּנוּ וּבִקְרִיאָה קְרָאתָנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֱלֹהִים הוֹשַׁעְתָּנוּ",
+        "וּבִקְרִיאָה קְרָאתָנוּ",
+        "בַּעֲצָה וָחֶסֶד, לֹא",
+        "בְּמַעֲשֶׂה אֲשֶׁר־לָנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מַה־גְּדֻלַּת הַחֶסֶד",
+        "אֲשֶׁר נִתַּן לִפְנֵי־עַד",
+        "בַּאֲדֹנֵינוּ, וְכֵן",
+        "בְּאִישׁוּתוֹ נִגְלָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוֹי נִפְלָא הַחֶסֶד",
+        "אֲשֶׁר־כֹּל בּוֹ יִשְׁתּוֹמֵם",
+        "אֵין לוֹ רֵאשִׁית וְלֹא",
+        "קֵץ נִרְאֶה וְלֹא חֵקֶר"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בָּהּ יְשׁוּעָתֵנוּ נִפְלֵאת",
+        "יְסוֹדָהּ דַּם הַצְּלָב",
+        "עַל־כֵּן נָגִיל בְּכָל־עֵת",
+        "בָּאַהֲבָה הַנִּפְלָאָה"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "תּוֹדָתֵנוּ לָךְ",
+        "עַל־שְׁלֵמוּת אַהֲבָה זוֹ",
+        "אַהֲבָה אֲשֶׁר הֶרְאֵיתָ",
+        "בְּיֵשׁוּעַ הֶעָשִׁיר"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 the Arabic is 2 Timothy 1:9 (الَّذِي خَلَّصَنَا وَدَعَانَا دَعْوَةً مُقَدَّسَةً … بِحَسَبِ قَصْدِهِ وَنِعْمَتِهِ … لَا بِحَسَبِ أَعْمَالِنَا); the Hebrew keeps the same four elements in the same order, including the 'not by works' turn at the end of the stanza.",
+    "2:2 לִפְנֵי־עַד — the Arabic قَبْلَ الدُّهُورِ is 'before the ages'; לִפְנֵי־עַד is the biblical phrase for 'before everlasting' (Ps 55:20; Hab 1:12), so the line does not need the Modern Hebrew נִצְחִיּוּת.",
+    "2:4 בְּאִישׁוּתוֹ נִגְלָה — the Arabic بِشَخْصِهِ قَدْ أُظْهِرَتْ is 'in His person it was revealed'; the glossary noun אִישׁוּת ('personhood') is used, but as a predicate of the revealing, not as an abstract doctrine.",
+    "3:3–3:4 אֵין לוֹ רֵאשִׁית … וְלֹא חֵקֶר — the Arabic لَيْسَ لَهَا بَدْءٌ وَلَا / حَدٌّ يُرَى وَلَا قَرَار is 'no beginning, no visible bound, no limit'; the Hebrew keeps all three negations with biblical nouns (רֵאשִׁית, קֵץ, חֵקֶר) rather than the Arabic's two.",
+    "5:4 בְּיֵשׁוּעַ הֶעָשִׁיר — the Arabic فِي الرَّبِّ يَسُوعَ الْغَنِيِّ keeps 'the rich' from 2 Cor 8:9; the Hebrew keeps הֶעָשִׁיר as an attribute so the stanza closes on the same contrast with which hymn 159 opens."
+  ]
+}

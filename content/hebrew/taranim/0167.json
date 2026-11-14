@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 167,
+  "title_he": "הַזֹּרֵעַ בִּבְרָכוֹת בִּבְרָכוֹת יִקְצֹר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הַזֹּרֵעַ בִּבְרָכוֹת",
+        "בִּבְרָכוֹת יִקְצֹר",
+        "וְהַזֹּרֵעַ בְּצִמְצוּם",
+        "בְּצִמְצוּם גַּם־יִמְצָא"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וְהַנּוֹתֵן בְּשִׂמְחָה",
+        "אוֹתוֹ יֶאֱהַב הָאֵל",
+        "אַשְׁרֵי הַנּוֹדֵב לָתֵת",
+        "וְשִׁפְעַת חַסְדּוֹ תַּעְשִׁיר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נֶפֶשׁ נְדִיבָה תַּשְׁמִין",
+        "וּמַשְׁקֶה גַּם־יֻשְׁקֶה",
+        "וַאדֹנָי מִמְּרוֹם",
+        "לֹא יִשְׁכַּח לֵב־בָּר"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַל־נִשְׁכַּח לַעֲשׂוֹת טוֹב",
+        "וְלָתֵת, כִּי קָצַר הָעֵת",
+        "הֵנָּה זִבְחֵי־רָצוֹן",
+        "אֲשֶׁר־בָּם יֶחְפַּץ אֵל"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 the Arabic is 2 Corinthians 9:6 (مَنْ يَزْرَعُ بِالْبَرَكَاتِ فَبِالْبَرَكَاتِ يَحْصُدُ); the Hebrew keeps the epistle's doubled noun and the seed/harvest pair, with בְּצִמְצוּם ('sparingly') as the counterpart of بشحّ.",
+    "2:2 אוֹתוֹ יֶאֱהַב הָאֵל — the Arabic وَالْمُعْطِي أَيْضًا بِالسُّرُور / يُحِبُّهُ الرَّبُّ الْكَرِيم is 2 Cor 9:7; the Hebrew keeps the object-first order so the line lands on 'God loves him', as the Arabic does.",
+    "3:1–3:2 נֶפֶשׁ נְדִיבָה תַּשְׁמִין / וּמַשְׁקֶה גַּם־יֻשְׁקֶה — the Arabic نَفْسُ السَّخِيِّ تَسْمَنُ / وَالْمُرْوِي أَيْضًا يَرْتَوِي is Proverbs 11:25 (נֶפֶשׁ־בְּרָכָה תְדֻשָּׁן וְרַוֵּה גַם־הוּא יוֹרֶא); the Hebrew keeps the two clauses and the passive turn of the second.",
+    "4:1–4:2 אַל־נִשְׁכַּח לַעֲשׂוֹת טוֹב / וְלָתֵת — Hebrews 13:16 (וְאַל־תִּשְׁכְּחוּ לַעֲשׂוֹת טוֹב וּלְהִתְחַלֵּק); the Arabic لَا نَنْسَ فِعْلَ الْخَيْرِ وَالتَّوْزِيعَ is that verse, and the Hebrew keeps the first-person plural exhortation rather than a third-person rule.",
+    "4:3–4:4 זִבְחֵי־רָצוֹן / אֲשֶׁר־בָּם יֶחְפַּץ אֵל — the Arabic ذَبَائِحُ / بِهَا مَسَرَّةُ الْقَدِير is 'sacrifices in which the Almighty delights'; the Hebrew uses the sacrificial formula of Exod 29:18 (רֵיחַ נִיחֹחַ) recast as זִבְחֵי־רָצוֹן, so giving remains worship and not merely charity."
+  ]
+}

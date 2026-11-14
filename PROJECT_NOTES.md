@@ -507,14 +507,14 @@ melody so people can hear how it is sung. Only source available: recordings
 
 ## 15. Hebrew translation (verified 2026-11-14)
 
-Only `tr0001`–`tr0158` carry Hebrew so far (158 hymns, 3120 verse lines, all
-pointed; `verify-hebrew.mjs` prints 3278 because it counts the 158 `title_he`
+Only `tr0001`–`tr0178` carry Hebrew so far (178 hymns, 3517 verse lines, all
+pointed; `verify-hebrew.mjs` prints 3695 because it counts the 178 `title_he`
 strings as lines too).
 Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**,
 and the app displays the vocalised text (user's explicit choice — do not strip
 niqqud at render time). Chosen cadence: Book 2 in printed order, 20 per batch,
 flags-only review. Batches land as `content/hebrew/taranim/NNNN.json`; the
-corpus is never hand-edited. **Resume at `tr0159`** — batch size is free (the
+corpus is never hand-edited. **Resume at `tr0179`** — batch size is free (the
 apply script merges whatever payloads exist), so continue in 10–20 hymn steps
 and keep committing per step.
 
@@ -532,7 +532,7 @@ and keep committing per step.
   drift gate for CI/pre-commit.
 - `scripts/hebrew-meter.mjs` is a *relative* singability check, not metre
   proof: syllables ≈ vowel points (shva excluded) + shuruq, median per line
-  position across stanzas, flag > ±2. Hymns 1–158 pass except the deliberate
+  position across stanzas, flag > ±2. Hymns 1–178 pass except the deliberate
   cases listed below. A flag is a prompt to re-read, not an automatic error
   (`--strict` to gate).
 - `content/hebrew/glossary.md` holds the fixed renderings (`יֵשׁוּעַ` never
@@ -553,7 +553,7 @@ and keep committing per step.
 - Aya (Ollama `aya-expanse:8b`, `scripts/poc-hebrew2.mjs`) is **dropped from the
   loop**: correcting its drafts cost as much as translating from the Arabic, and
   the Arabic is the authority. Kept as a second opinion for a stubborn line.
-- Batch 2–158 review flags (741, all in the payload `review[]`): deliberate
+- Batch 2–178 review flags (839, all in the payload `review[]`): deliberate
   borrowings from Song 1:3 / 2:3 / 5:10-16 / 8:7, Prov 8:24-30 / 18:10,
   Isa 26:20 / 40:31 / 51:17 / 52:14 / 53 (fully, hymn 130) / 55:1,
   Ps 4:8 / 16:8 / 22:2 / 23:4 / 33:1 / 34:9-11 / 36:9-10 / 39:13 / 42:8 / 46 /
@@ -562,11 +562,13 @@ and keep committing per step.
   Matt 17:8 / 18:20 / 23:8 / 27:37 / 28:18, Luke 18:7 / 22:44, John 1:14-18 /
   3:16 / 5:24 / 6:35 / 7:37 / 10:28 / 12:32 / 13:1 / 14:2-27 / 17:5 / 19:30-34 /
   20:19, Rom 3:19 / 5:1-14 / 6:9 / 8:1-39 / 10:11 / 13:12 / 14:8, 1 Cor 9:24 /
-  11:26 / 12:13 / 15:55, 2 Cor 5:14 / 8:9, Gal 2:20 / 6:14, Eph 1:3-23 /
-  2:1-18 / 3:10-20 / 4:8-30 / 5:16, Phil 2:7 / 3:7-12, Col 1:15-20 / 2:9 /
-  3:1, 1 Thess 4:16-17, 1 Tim 2:5 / 3:16 / 6:15, 2 Tim 1:10, Heb 1:3 / 4:15 /
-  6:19 / 7:22-25 / 10:12 / 13:12-20, 1 Pet 1:4 / 2:11 / 5:10, 1 John 3:2,
-  Rev 1:5-6 / 3:20 / 4:11 / 5:12-13 / 7:9 / 11:12 / 19:7 / 21:4 / 22:20;
+  11:26 / 12:13 / 15:55, 2 Cor 5:5-14 / 8:9 / 9:6-7, Gal 2:20 / 6:14,
+  Eph 1:3-23 /
+  2:1-18 / 3:10-20 / 4:8-30 / 5:16, Phil 2:7-9 / 3:7-12, Col 1:15-20 / 2:9 /
+  3:1-14, 1 Thess 4:16-17, 1 Tim 2:5 / 3:16 / 6:15, 2 Tim 1:9-10, Heb 1:3 /
+  4:15 / 6:19 / 7:22-25 / 10:12 / 12:1-2 / 13:12-20, 1 Pet 2:11-24 / 5:10,
+  1 John 3:2,
+  Rev 1:5-6 / 3:20-21 / 4:11 / 5:12-13 / 7:9 / 11:12 / 19:7 / 21:4 / 22:16-20;
   post-biblical but fixed terms (`צְלָב`, `בְּנִיּוּת`, `מוֹלַדְתִּי`,
   `חֻלְשָׁה`, `שַׁיָּכוּת`, `הִתְגַּלְּמָה`/`הִתְגַּלְּמוּת`, `מָצָב`, `זִקָּה`,
   `עֲמִידָה`, `חֻפָּה`); one dropped `رَبُّنَا` for metre (`tr0003` 3:2). Read
@@ -583,7 +585,11 @@ and keep committing per step.
   two-line refrain stanza first), `tr0135` 2/4/4/4/4 (a two-line consecration
   first), `tr0156` 3/4/4 (a bracketed question stanza first), `tr0157` 4/4/4/4
   where stanza 1 is the short acclamation (printed metre `15.11.15.11 – 8.8.8.11`),
-  `tr0158` 2/3/3/3/3 (two acclamation lines first). Do not pad them to a
+  `tr0158` 2/3/3/3/3 (two acclamation lines first), `tr0168` 6/4/4/4 (a six-line
+  first stanza where lines 3 and 6 are the repeated refrain), `tr0176` 2/2/2/2/2
+  (five two-line epigrams), `tr0177` 4/4/4/4 with the short acclamation first
+  (same printed metre as `tr0157`), `tr0178` 5/5/5 where stanza 1 is the summons
+  (printed metre `11.11.11.11.11 – 12.12.12.12.11`). Do not pad them to a
   rectangle. `tr0014` 2:2 (12 vs 8) comes from the
   same mixed shape. `tr0139` and `tr0151` are stanzas of one printed line each, with the
   phrases separated by `/` in the source; the payload keeps one string per
@@ -596,18 +602,20 @@ and keep committing per step.
   the awaited Christ of Isaiah 53 (130), and who is the Head of the gathered
   church (143).
 - Validated: `npm run check:hymns` (1824, all pass), `npm run build:corpus`
-  (index 303 KB, 19 chunks), `npm run typecheck`, apply `--check` clean,
-  payload↔corpus parity for all 158 (`title_he`, `verses_he`, labels, shape).
+  (index 304 KB, 19 chunks), `npm run typecheck`, apply `--check` clean,
+  payload↔corpus parity for all 178 (`title_he`, `verses_he`, labels, shape).
 - Browser (web, dev server, 2026-11-14): samples `tr0007`/`0013`/`0018`/`0021`/`0026`,
   `tr0077`/`0086`/`0093`/`0096`, `tr0098`/`0099`/`0113`/`0116`,
-  `tr0120`/`0125`/`0128`/`0130`, `tr0131`/`0133`/`0135`/`0139` and
-  `tr0141`/`0143`/`0146`/`0149`/`0151`/`0157`/`0158` after clicking
-  `HE` — chip fills `#5E35B1`, every stanza line rendered (`20/28/35/30/5/16/14`), all
+  `tr0120`/`0125`/`0128`/`0130`, `tr0131`/`0133`/`0135`/`0139`,
+  `tr0141`/`0143`/`0146`/`0149`/`0151`/`0157`/`0158` and
+  `tr0159`/`0163`/`0168`/`0172`/`0176`/`0177`/`0178` after clicking
+  `HE` — chip fills `#5E35B1`, every stanza line rendered
+  (`20/28/35/30/5/16/14`, then `24/24/18/16/10/16/15`), all
   pointed, `direction: rtl`, `text-align: right`, platform font
   (`-apple-system`), zero console errors. `tr0027` (no Hebrew) still shows only
   `عر/EN/DE` and no Hebrew characters.
 - Not done: no admin editor for `verses_he` (admin-edit is ar/en/de only), home
-  book cards still show EN/DE pills only, 158 of 375 taranim hymns translated.
+  book cards still show EN/DE pills only, 178 of 375 taranim hymns translated.
 - Gotcha: hand-editing a payload's `review[]` is easy to leave a trailing comma
   in — `JSON.parse` aborts the whole apply run (seen once on `0006.json`).
 - Gotcha: Metro caches the imported corpus chunks, so after `build:corpus` the

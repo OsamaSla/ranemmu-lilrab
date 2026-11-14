@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 166,
+  "title_he": "לְךָ הַכָּבוֹד לָעַד, יֵשׁוּעַ אֲדֹנֵינוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לְךָ הַכָּבוֹד לָעַד",
+        "יֵשׁוּעַ אֲדֹנֵינוּ",
+        "נָשָׂאתָ בַבָּשָׂר",
+        "עֲוֺנֵנוּ וְדִינֵנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עָרַבְתָּ בַּעֲדֵנוּ",
+        "אֲהוּבִי, נֹשֵׂא דִין",
+        "הַדִּין הַנּוֹרָא הַהוּא",
+        "הֻשְׁלַם עַל־הַצְּלָב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אַהֲבָתְךָ הַנִּפְלֵאת",
+        "עָלְתָה עַל־דַּעַת כֹּל",
+        "וְאֵימַת הַצְּלָב לֹא",
+        "חָסַם הָאַהֲבָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כִּי עַזָּה כַמָּוֶת",
+        "אֵשׁ שַׁלְהֶבֶתְיָה",
+        "לֹא נָהָר יְכַבֶּנָּה",
+        "וְלֹא רַבִּים מַיִם"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אֵין לָהּ גְּבוּל וְקָצֶה",
+        "וְלֹא מִדָּה וְחֵקֶר",
+        "כָּל־מַחְשְׁבוֹת אֱנוֹשׁ",
+        "בָּהּ תִּשְׁתּוֹמֵם לָעַד"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "לְךָ כָל־הַתְּהִלָּה",
+        "יֵשׁוּעַ הַגּוֹאֵל",
+        "כִּי נָתַתָּ לָנוּ",
+        "תִּקְוָה וִישׁוּעַת עוֹלָם"
+      ]
+    }
+  ],
+  "review": [
+    "4:1–4:4 כִּי עַזָּה כַמָּוֶת … לֹא נָהָר יְכַבֶּנָּה / וְלֹא רַבִּים מַיִם — Song of Songs 8:6–7 word for word; the Arabic فَهُوَ كَالْمَوْتِ قَوِيّ / نَارُهُ لَظَى الْإِلٰه / لَا بِسَيْلٍ يَنْطَفِي / أَوْ بِكَثْرَةِ الْمِيَاه is that passage, and the Hebrew keeps the Song's own nouns.",
+    "2:1–2:2 עָרַבְתָּ בַּעֲדֵנוּ — the Arabic نُبْتَ عَنَّا is 'You stood surety for us'; עָרַב is the biblical verb of pledging (Gen 43:9; Prov 11:15), which is exactly the commercial image the Arabic uses, and it keeps the line from becoming a general 'You took our place'.",
+    "3:3–3:4 וְאֵימַת הַצְּלָב לֹא / חָסַם הָאַהֲבָה — the Arabic لَمْ يَكُنْ هَوْلُ الصَّلِيب / دُونَ ذَا الْحُبِّ يَحُول is 'the cross's horror could not bar that love'; חָסַם ('to muzzle, block') is used in the biblical sense of stopping a way (Ps 58:5 of the deaf adder), so the barrier is real but ineffective.",
+    "5:3–5:4 כָּל־מַחְשְׁבוֹת אֱנוֹשׁ / בָּהּ תִּשְׁתּוֹמֵם — the Arabic كُلُّ فِكْرٍ لِلْوَرَى / عِنْدَ ذَا الْحُبِّ يَحَار repeats 'all minds marvel' from stanza 3; the Hebrew keeps the repetition with the same verb (שָׁתַם → הִשְׁתּוֹמֵם), as the Arabic does.",
+    "1:3–1:4 נָשָׂאתָ בַבָּשָׂר / עֲוֺנֵנוּ וְדִינֵנוּ — the Arabic قَدْ حَمَلْتَ فِي الْجَسَد / إِثْمَنَا وَحُكْمَنَا pairs sin and sentence; the Hebrew keeps both, because the stanza goes on to distinguish the sentence from the guilt in stanza 3 of hymn 164."
+  ]
+}

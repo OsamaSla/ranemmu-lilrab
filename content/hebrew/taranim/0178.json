@@ -1,0 +1,44 @@
+{
+  "book": "taranim",
+  "number": 178,
+  "title_he": "יֵשׁוּעַ, כּוֹכַב הַבֹּקֶר הַמֵּאִיר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "כָּל־הַמַּאֲמִינִים, הַלְלוּהוּ",
+        "בְּשִׂמְחַת לֵב עִבְדוּהוּ תָמִיד",
+        "זִכְרוּ חֶסֶד אֲדֹנֵינוּ וְשַׁנְּנוּהוּ",
+        "קוֹרְאִים בְּכָל־עֵת, כַּבְּדוּהוּ",
+        "בַּמָּשִׁיחַ יִגְדַּל נִצְחוֹנֵנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יֵשׁוּעַ, כּוֹכַב הַבֹּקֶר הַמֵּאִיר",
+        "לַיְשׁוּעָה אַתָּה יוֹצֵר גִּבּוֹר",
+        "וּמְשַׁחְרֵר אֶת־הָאָסִיר מִמַּסְגֵּר",
+        "פּוֹקֵחַ עֵינֵי הָעִוֵּר בְּאוֹר",
+        "בְּךָ תָּמִיד יִגְדַּל נִצְחוֹנֵנוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּיִחוּל אֲקַוֶּה לַאדֹנָי אֱלֹהִים",
+        "כִּי הוּא אֲדֹנָי שׁוֹמֵעַ קוֹרְאָיו",
+        "לְהַשְׁפִּיעַ הָרוּחַ בִּי בִּתְפִלָּה",
+        "לְבַלּוֹת יָמַי תָּמִיד בִּרְצוֹנוֹ",
+        "בְּךָ תָּמִיד יִגְדַּל נִצְחוֹנֵנוּ"
+      ]
+    }
+  ],
+  "review": [
+    "The printed metre is 11.11.11.11.11 – 12.12.12.12.11: stanza 1 is the summons with five 11-syllable lines and the refrain, stanzas 2–3 the long lines. The payload keeps that shape, so the refrain line reads the same in all three stanzas as it does in the Arabic (بِالْمَسِيحِ / بِكَ … انْتِصَارُنَا).",
+    "2:1–2:2 כּוֹכַב הַבֹּקֶר … יוֹצֵר גִּבּוֹר — the Arabic كَوْكَبَ الصُّبْحِ الْمُنِير / صَانِعٌ قَدِير is Rev 22:16 (כּוֹכַב נֹגַהּ הַבֹּקֶר) with the Creator title; the Hebrew keeps 'bright morning star' as a title in construct, not as a metaphor for dawn.",
+    "2:3 וּמְשַׁחְרֵר אֶת־הָאָסִיר מִמַּסְגֵּר — the Arabic وَمُحَرِّرٌ مِنَ الْأَسْرِ الْأَسِير is 'liberator of the bound captive'; מַסְגֵּר is the biblical prison (Isa 24:22), so the line keeps the place as well as the person.",
+    "3:1–3:4 בְּיִחוּל אֲקַוֶּה … לְהַשְׁפִּיעַ הָרוּחַ … לְבַלּוֹת יָמַי — the Arabic بِانْتِظَارٍ أَرْتَجِي … أَنْ يَفِيضَ الرُّوحُ … كَيْ أُقَضِّي الْعُمْرَ is one chain of purpose; the Hebrew keeps the infinitive chain (לְהַשְׁפִּיעַ … לְבַלּוֹת), because the stanza is a single prayer with one object.",
+    "3:2 שׁוֹמֵעַ קוֹרְאָיו — the Arabic سَامِعٌ مَنْ قَدْ دَعَاه is 'who hears him who called Him'; the Hebrew uses the participle with the suffix (as in Ps 145:18, קְרֹב … לְכֹל אֲשֶׁר יִקְרָאֻהוּ), so the divine attribute stays a present act."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 160,
+  "title_he": "אֲדֹנֵינוּ, קְהִלָּתֵנוּ בְּשִׁמְךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנֵינוּ, קְהִלָּתֵנוּ",
+        "בְּשִׁמְךָ וְחִבּוּרֵנוּ",
+        "בְּתוֹכֵנוּ אַתָּה אָז",
+        "כְּדִבְרֵי אֱמֶת לָנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הַגְדֵּל שִׂמְחוֹתֵינוּ",
+        "וְנֶחָמַת הָרוּחַ",
+        "הַרְאֵה בָנוּ רָאשְׁךָ",
+        "וּנְטֵה לַאֲשֶׁר תִּרְצֶה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הַנְחֵה אֶת־עֲבוֹדָתֵנוּ",
+        "כֵּן הַשְׁלֵם לְכֻלָּם",
+        "אֶת־פָּנֶיךָ הָאֱמֶת",
+        "אֲשֶׁר הִבְטַחְתָּ, שׁוֹמֵעַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הֲבֵן לָנוּ וּתְבוּנָה",
+        "וְחָכְמָה מִמָּרוֹם",
+        "וְיַגֵּד הָרוּחַ",
+        "אֶת־אֲשֶׁר־לְךָ, וְיְנַחֵם"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הַרְאֵה כְּבוֹדְךָ הֶהָדָר",
+        "כְּבוֹד אֱלֹהֵינוּ הַיָּפֶה",
+        "בְּפָנֶיךָ זוֹרְחֵי־נֹגַהּ",
+        "דְּמוּת אֱלֹהִים עֶלְיוֹן"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 the Arabic is Matthew 18:20 (حَيْثُمَا اجْتَمَعَ اثْنَانِ … هُنَاكَ أَكُونُ); the Hebrew keeps the three nouns (קְהִלָּה, חִבּוּר, דְּבַר אֱמֶת) and the 'then' of the inference, so the stanza still argues from the promise to the presence.",
+    "3:3–3:4 אֶת־פָּנֶיךָ הָאֱמֶת … שׁוֹמֵעַ — the Arabic حُضُورَكَ الْحَقَّ … يَا سَمِيع is 'Your true presence … O Hearer'; פָּנִים is the biblical idiom for presence (Exod 33:14–15), and שׁוֹמֵעַ is kept as the divine title of Ps 65:3.",
+    "2:3–2:4 הַרְאֵה בָנוּ רָאשְׁךָ — the Arabic أَظْهِرْ بِهِ رِيَاسَتَك / فِينَا is 'show Your headship in us'; רֹאשׁ is used concretely (as in Eph 1:22, רֹאשׁ לַכֹּל) rather than the abstract Modern Hebrew מַנְהִיגוּת.",
+    "5:3 בְּפָנֶיךָ זוֹרְחֵי־נֹגַהּ — the Arabic فِي وَجْهِكَ بَاهِي السَّنَا is 'in Your face, radiant in splendour'; נֹגַהּ is the prophetic noun for brightness (Isa 4:5; Ezek 1:4), kept over the Modern Hebrew בְּהִירוּת.",
+    "5:4 דְּמוּת אֱלֹהִים עֶלְיוֹן — the Arabic يَا صُورَةَ اللهِ الْعَلِيّ is 'O image of God Most High'; the Hebrew keeps the two words of Gen 1:27 (דְּמוּת) and Num 24:16 (עֶלְיוֹן) rather than the later theological דְּמוּת אֱלֹהִית."
+  ]
+}

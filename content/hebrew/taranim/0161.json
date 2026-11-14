@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 161,
+  "title_he": "אֲדֹנָי, נָרִים לְךָ כָּל־עֲבוֹדָה וָשֶׁבַח",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנָי, נָרִים לְךָ",
+        "כָּל־עֲבוֹדָה וָשֶׁבַח",
+        "אֵין יָדִיד זוּלָתְךָ",
+        "בּוֹ לְעוֹלָם אֶשְׁקֹט"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּמוֹשָׁבְךָ נִשְׁפַּךְ",
+        "נִרְדִּי וְהֵרִיחַ",
+        "רֵיחַ נִיחוֹחַ עָרֵב",
+        "לְךָ, מְקוֹר הַטּוֹב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מָשְׁכֵנִי, גּוֹאֲלִי",
+        "וְנָרוּץ אַחֲרֶיךָ",
+        "אַתָּה חֶלְקִי הַטּוֹב",
+        "וְלֹא אֶחְפֹּץ זוּלָתֶךָ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַהֲבָתְךָ תִּלְחָצֵנִי",
+        "לִחְיוֹת לְךָ תָּמִיד",
+        "וְכָל־כִּסּוּפִי אֲשֶׁר",
+        "אֶרְאֶךָ וְאֵשֵׁב עִמָּךְ"
+      ]
+    }
+  ],
+  "review": [
+    "The Arabic addresses the Lord in the singular throughout (نَرْفَعُ … أَسْتَرِيح … أَشْتَهِي), and stanza 3 quotes Song 1:4 (اجْذِبْنِي فَنَجْرِي وَرَاك); the Hebrew keeps the same movement from 'we' in stanza 1 to 'I' in stanza 3, because the hymn is the soul speaking inside the congregation.",
+    "2:1–2:4 נִרְדִּי וְהֵרִיחַ … רֵיחַ נִיחוֹחַ — Song 1:12 (נִרְדִּי נָתַן רֵיחוֹ) with the sacrificial רֵיחַ נִיחוֹחַ (Gen 8:21); the Arabic نَارِدِينِي قَدْ أَفَاح / رَائِحَةً زَكِيَّةً is that nard, and the Hebrew keeps the Song's own noun.",
+    "3:1–3:2 מָשְׁכֵנִי … וְנָרוּץ אַחֲרֶיךָ — Song 1:4 exactly (מָשְׁכֵנִי אַחֲרֶיךָ נָרוּצָה); the Arabic is that verse, and the singular 'draw me' with plural 'let us run' is kept rather than smoothed out.",
+    "4:1 אַהֲבָתְךָ תִּלְחָצֵנִי — the Arabic فَحُبُّكَ يَحْصُرُنِي is 'Your love constrains me'; לָחַץ is the biblical verb for pressing/hemming in (Ps 42:10), so the line keeps the pressure of 2 Cor 5:14 rather than the Modern Hebrew מְחַיֵּב.",
+    "1:3–1:4 אֵין יָדִיד זוּלָתְךָ / בּוֹ לְעוֹלָם אֶשְׁקֹט — the Arabic فَلَا حَبِيبَ غَيْرَكَ / بِهِ دَوَامًا أَسْتَرِيح is 'no beloved but You, in whom I ever rest'; יָדִיד is the noun of Deut 33:12 and Isa 5:1, and the Hebrew attaches the rest to Him rather than to the beloved in general."
+  ]
+}

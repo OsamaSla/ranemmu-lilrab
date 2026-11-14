@@ -1,0 +1,52 @@
+{
+  "book": "taranim",
+  "number": 168,
+  "title_he": "יוֹם הַפְּגִישָׁה, רֹאשֵׁנוּ הֶחָבִיב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יוֹם הַפְּגִישָׁה אָז יָשִׂישׂ הַלֵּב",
+        "יוֹם הַפְּגִישָׁה יִכְלֶה הַנְּהִי",
+        "וּמָתוֹק מִכֹּל פְּנֵי יֵשׁוּעַ",
+        "יוֹם הַפְּגִישָׁה מָתוֹק מִיָּמִים",
+        "יוֹם הַפְּגִישָׁה נָבֹא בַחֲתֻנָּה",
+        "וּמָתוֹק מִכֹּל פְּנֵי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "רֹאשֵׁנוּ הֶחָבִיב, רַב הַכִּסּוּף",
+        "לַיּוֹם אֲשֶׁר־בּוֹ תִּכְלֶה נָדוּדֵנוּ",
+        "עַמְּךָ לַתִּקְוָה יְחַכֶּה תָמִיד",
+        "לָבוֹא לְחַלְּצָם מִן־הָעִנּוּי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "שָׁם אֵין חֻלְשָׁה בַּהִשְׁתַּחֲוָיָה",
+        "כִּי־נִרְאֶה כְּבוֹדוֹ בִּפְנֵי הֶחָבִיב",
+        "וְאֵין קְפִיאוּת בָּעֲמִידָה שָׁם",
+        "בְּזָכְרֵנוּ אַהֲבָה שֶׁנִּגְלְתָה בַצְּלָב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "שָׁם נָשִׁיב כָּל־תּוֹדָה וָשֶׁבַח",
+        "לְמִי שֶׁפְּדָנוּ מֵאֲבַדּוֹן שְׁאוֹל",
+        "שָׁם נִשְׂמַח לָנֶצַח בַּמָּשִׁיחַ",
+        "וְנֵשֵׁב לְעוֹלְמֵי עַד בְּכָבוֹד גָּדוֹל"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives stanza 1 six lines and stanzas 2–4 four each (6/4/4/4); the payload follows that grid rather than padding it to a rectangle, so the meter script's position medians mix the two shapes and flag the hymn as a whole.",
+    "1:3 and 1:6 both read וּמָתוֹק מִכֹּל פְּנֵי יֵשׁוּעַ — the Arabic repeats وَأَحْلَى مَا فِيهِ نَرَى وَجْهَ يَسُوع twice inside stanza 1, and the Hebrew keeps the repetition at the same two places, because the line is the stanza's refrain.",
+    "4:2 מֵאֲבַדּוֹן שְׁאוֹל — the Arabic مِنْ هَلَاكٍ فِي الْجَحِيم is 'from ruin in hell'; אֲבַדּוֹן is the biblical name of the place of destruction (Job 26:6; Prov 15:11), so the line names the ruin without importing later Hebrew terms.",
+    "2:2 תִּכְלֶה נָדוּדֵנוּ — the Arabic فِيهِ تُنْهِي الاِغْتِرَاب is 'in which You end the estrangement'; נָדוּד is the biblical noun for wandering (Isa 58:7), kept because the stanza treats the present life as exile rather than merely difficulty.",
+    "3:3 קְפִיאוּת בָּעֲמִידָה — the Arabic جُمُود in الْمَشَاعِر is 'frozenness of feeling'; the Hebrew uses קְפִיאוּת with עֲמִידָה (the glossary term for 'standing'), so the contrast is with the worship of the previous line rather than with emotion in general."
+  ]
+}

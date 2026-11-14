@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 170,
+  "title_he": "אָבִינוּ הַמְבֹרָךְ, שְׁמֹר אוֹתָנוּ בַדָּרֶךְ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אָבִינוּ הַמְבֹרָךְ",
+        "שְׁמֹר אוֹתָנוּ בַדָּרֶךְ",
+        "בְּאֹרַח אֲשֶׁר־הָלַךְ",
+        "לְפָנֵינוּ אֲדֹנָי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מַשְׁלִיכִים כָּל־מַשָּׂא",
+        "רָצִים בַּמִּלְחָמָה",
+        "סוֹבְלִים בְּכָל־עֵת",
+        "וּמוֹדִים בְּכֹחַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְתֵן לָנוּ לָלֶכֶת",
+        "בְּהַבִּיטֵנוּ בַּדּוֹד",
+        "כִּי לְמַעַן הַשִּׂמְחָה",
+        "סָבַל הוּא הַצְּלָב"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עַל־כִּסֵּא כְּבוֹדְךָ",
+        "יָשַׁב הוּא לִימִין",
+        "וְגַם־אֲנַחְנוּ עִמּוֹ",
+        "נֵשֵׁב עַל־כִּסְאוֹ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "תִּקְוָתֵנוּ, אָבִינוּ",
+        "בְּךָ רֵאשִׁית וְאַחֲרִית",
+        "וְשִׂמְחַת הַטּוֹב",
+        "הַשְׁלֵם אוֹתָהּ בְּשָׁלוֹם"
+      ]
+    }
+  ],
+  "review": [
+    "2:1–2:4 מַשְׁלִיכִים כָּל־מַשָּׂא / רָצִים בַּמִּלְחָמָה … סוֹבְלִים … וּמוֹדִים — Hebrews 12:1–3; the Arabic طَارِحِينَ كُلَّ ثِقْلٍ / رَاكِضِينَ فِي الْجِهَاد / صَابِرِينَ … شَاكِرِينَ is that passage, and the Hebrew keeps all four participles in the same order.",
+    "3:3–3:4 לְמַעַן הַשִּׂמְחָה / סָבַל הוּא הַצְּלָב — Hebrews 12:2 (אֲשֶׁר בְּעַד הַשִּׂמְחָה … סָבַל אֶת־הַצְּלָב); the Arabic فَهُوَ مِنْ أَجْلِ السُّرُورِ / قَدِ احْتَمَلَ الصَّلِيب is that verse, and the Hebrew keeps the causal 'for the sake of' rather than 'despite'.",
+    "4:1–4:4 עַל־כִּסֵּא … לִימִין … נֵשֵׁב עַל־כִּסְאוֹ — Psalm 110:1 with Rev 3:21 (אֶתֵּן לוֹ לָשֶׁבֶת עִמִּי עַל־כִּסְאִי); the Arabic جَلَسَ عَنِ الْيَمِين / وَنَحْنُ مَعهُ سَنَجْلِس keeps the shared throne, and the Hebrew keeps the singular 'His throne' of the Revelation verse.",
+    "5:2 בְּךָ רֵאשִׁית וְאַחֲרִית — the Arabic فِيكَ بَدْءًا وَخِتَام is 'in You beginning and end'; רֵאשִׁית וְאַחֲרִית is the Isa 44:6 formula, kept as a pair without the article so it reads as a title.",
+    "1:3–1:4 בְּאֹרַח אֲשֶׁר־הָלַךְ / לְפָנֵינוּ אֲדֹנָי — the Arabic فِي سَبِيلٍ سَارَ فِيهِ / قَبْلَنَا الرَّبُّ الْأَمِين is 'on a path the faithful Lord trod before us'; אֹרַח is the poetic path of Ps 25:4, and 'the faithful Lord' is kept as the subject so the path is His before it is ours."
+  ]
+}

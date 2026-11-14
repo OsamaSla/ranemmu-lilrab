@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 177,
+  "title_he": "מָה־אָשְׁרִי בַּדּוֹד אֲשֶׁר־פְּדָנִי בַצְּלָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מָה־אָשְׁרִי בַּדּוֹד",
+        "אֲשֶׁר־פְּדָנִי בַצְּלָב",
+        "חֶלְקִי כוֹסִי גוֹרָלִי",
+        "וְחַיַּי בּוֹ זַכִּים, אַף־מְתוּקִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מָה־אָשְׁרִי כַּאֲשֶׁר בָּרוּחַ אָשִׁירָה",
+        "זֶמֶר אַהֲבָה וּתְהִלָּה נִפְלָאָה",
+        "לְמַעַן יִשְׁמַע שָׁמַיִם וָאֶרֶץ זְמִירָתִי",
+        "מַלְאָכִים וּבְנֵי אָדָם יַחַד"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מָה־אָשְׁרִי כַּאֲשֶׁר בָּרוּחַ אֶקְרָבָה",
+        "וּתְפִלָּתִי בְּיִרְאָה אֶשָּׂאָה",
+        "כְּיֶלֶד אֶל־אָבִיו קָרֵב בְּלִי פָחַד",
+        "כִּי בְחֵיק אָבִיו יִשְׂבַּע רָצוֹן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מָה־אָשְׁרִי, מָה־אָשְׁרִי, כִּי שַׁדַּי הוּא אָבִי",
+        "וְיֵשׁוּעַ מוֹשִׁיעִי הַנֶּדִיב",
+        "וְרוּחַ הַקֹּדֶשׁ בְּקִרְבִּי מַדְרִיכִי בַּדָּרֶךְ",
+        "מָה־אָשְׁרִי, מָה־גוֹרָלִי הַגָּדוֹל"
+      ]
+    }
+  ],
+  "review": [
+    "The printed metre is 15.11.15.11 – 8.8.8.11: stanza 1 is the short fourfold acclamation and stanzas 2–4 carry the long lines. The payload follows that pattern, so the metre script's position medians (taken across all four stanzas) call stanza 1 short by design, exactly as with hymn 157.",
+    "1:3 חֶלְקִי כוֹסִי גוֹרָלִי — the Arabic قِسْمَتِي كَأْسِي نَصِيبِي keeps three words in apposition with no verb; the Hebrew keeps the same three (חֵלֶק, כּוֹס, גּוֹרָל), all of them nouns of Ps 16:5, rather than collapsing them into 'my portion'.",
+    "3:3–3:4 כְּיֶלֶד אֶל־אָבִיו … כִּי בְחֵיק אָבִיו יִשְׂבָּע — the Arabic مِثْلَ طِفْلٍ لِأَبِيهِ يَدْنُو لَا خَوْفَ لَهُ / بَلْ بِأَحْضَانِ أَبِيهِ يَشْبَع is that child-and-father image; the Hebrew keeps חֵיק ('bosom') and שָׂבַע ('be filled'), the verbs of Deut 33:23 and Ps 17:15.",
+    "4:3 וְרוּחַ הַקֹּדֶשׁ בְּקִרְבִּי מַדְרִיכִי — the Arabic وَالرُّوحُ الْقُدُّوسُ فِيَّ مُرْشِدِي is 'the Holy Spirit in me is my guide'; the Hebrew uses the participial מַדְרִיכִי rather than a noun, so the line stays an active leading (Ps 25:5) and not a title.",
+    "2:3–2:4 לְמַעַן יִשְׁמַע שָׁמַיִם וָאֶרֶץ … מַלְאָכִים וּבְנֵי אָדָם יַחַד — the Arabic كَيْمَا تَسْمَعَ السَّمَا وَالْأَرْضُ تَرْنِيمِي لَهُ / الْمَلائِكَةُ وَالنَّاسُ مَعًا pairs creation with the two orders of praise; the Hebrew keeps the singular verb with the compound subject, as biblical Hebrew does (Ps 69:35)."
+  ]
+}
