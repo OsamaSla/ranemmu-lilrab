@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 191,
+  "title_he": "אֲדֹנָי יֵשׁוּעַ, אַתָּה מְקוֹר כָּל־אַהֲבָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנָי יֵשׁוּעַ הוֹי",
+        "מְקוֹר כָּל־אַהֲבָה אָתָּה",
+        "מוֹשַׁע הַתִּקְוָה אָתָּה",
+        "וּמָעוֹז כָּל־לֵבָב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַתָּה דּוֹאֵג לְחַיָּי",
+        "וּמֵגֵן מִכָּל־רָע",
+        "מָגִנִּי וּמִבְצָרִי",
+        "בְּךָ כָּל־נִצָּחוֹן לִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עֻזִּי וְנֶחָמָתִי",
+        "בְּךָ כָּל־עֵדֶן שָׁלֵם",
+        "מוֹרִי וְתִקְוָתִי",
+        "מְקוֹר כָּל־שָׁלוֹם"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "רוֹפְאִי אַתָּה וּמַרְפֵּא",
+        "מְרַפֵּא כָּל־חֳלִי",
+        "לְךָ, אֲדֹנָי, הַתְּהִלָּה",
+        "בְּיִרְאָה רַבָּה"
+      ]
+    }
+  ],
+  "review": [
+    "The whole hymn is a chain of appositive titles with almost no verbs, exactly as the Arabic (أَنْتَ نَبْعُ … أَنْتَ مَوْضُوعُ … أَنْتَ تُرْسِي …). The Hebrew keeps the verbless equation in 1:2–1:4 and 3:1–3:4, because the psalm's own confession is a string of nouns with suffixes (Ps 18:2–3).",
+    "2:3–2:4 מָגִנִּי וּמִבְצָרִי … נִצָּחוֹן — the Arabic أَنْتَ تُرْسِي أَنْتَ حِصْنِي … كُلَّ نَصْر; the Hebrew keeps מָגֵן and מִבְצָר, the two nouns of Ps 18:3 (מָגִנִּי וְקֶרֶן־יִשְׁעִי מִשְׂגַּבִּי וּמְנוּסִי), rather than the Modern מָגֵן וְהַגָּנָה.",
+    "4:1–4:2 רוֹפְאִי … מְרַפֵּא כָּל־חֳלִי — the Arabic يَا طَبِيبِي وَالدَّوَاءُ / مُبْرِئٌ كُلَّ سَقَام is 'my physician and the cure, healing every sickness'; the Hebrew keeps the physician and the healing participle, with חֳלִי from Exod 15:26 (כָּל־הַמַּחֲלָה), so the line holds both the person and the act.",
+    "3:3–3:4 מוֹרִי וְתִקְוָתִי / מְקוֹר כָּל־שָׁלוֹם — the Arabic مُرْشِدِي أَنْتَ الرَّجَاءُ / مَصْدَرُ كُلِّ سَلَام places 'guide' and 'hope' in apposition and then 'source of peace'; the Hebrew keeps the three, so the stanza does not collapse the guidance into the peace.",
+    "1:2–1:3 מְקוֹר … מוֹשַׁע — the Arabic نَبْعُ … مَوْضُوعُ الرَّجَاءِ is 'fount … the theme of hope'; the Hebrew uses מוֹשַׁע ('salvation/help', Ps 18:3) for the second rather than a literal 'subject', because the line must still say what the Lord is to the singer."
+  ]
+}

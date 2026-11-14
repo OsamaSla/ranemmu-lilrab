@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 194,
+  "title_he": "מַחֲנֵה נְדִיבִים, בּוֹאוּ, לְאֵל כָּל־בָּשָׂר נָרִים תְּהִלָּתֵנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַחֲנֵה נְדִיבִים, בּוֹאוּ אִתָּנוּ",
+        "לְאֵל כָּל־בָּשָׂר נָרִים תְּהִלָּתֵנוּ",
+        "בִּבְשׂוֹרַת שָׁלוֹם בָּא אֶל־אַרְצֵנוּ",
+        "בְּשִׁפְלוּת תְּמִימָה נִהְיָה כָמוֹנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּאָדָם הָיִינוּ בְּנֵי חֵמָה",
+        "מֵתִים כִּיְקָבִים בְּאֶרֶץ עָמָל",
+        "עַל־כֵּן נִמְסַר הַיָּדִיד הַנֶּאֱהָב",
+        "זֹאת עֲצַת קֶדֶם, וּבָהּ הַפֶּלֶא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עַל־הַצְּלָב מֵת הוּא בַּעֲדֵנוּ",
+        "בִּנְשֹׂא הֶעָוֹן כִּפֵּר אוֹתָנוּ",
+        "וְאַחֲרֵי קוּמוֹ הָיָה רֹאשֵׁנוּ",
+        "וְתָמִיד מַפְגִּיעַ בַּעֲדֵנוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הָאָב נָתַן לָנוּ מַעֲמָד רָם",
+        "וּבוֹ חָנַנִי בְּחַסְדֵי שָׁמַיִם",
+        "לַכָּבוֹד קָרָא אֶל־מְקוֹם רַבֵּנוּ",
+        "הָאָדוֹן תִּקְוָתֵנוּ וְהַכָּבוֹד"
+      ]
+    }
+  ],
+  "review": [
+    "2:1–2:2 בְּאָדָם הָיִינוּ בְּנֵי חֵמָה … מֵתִים כִּיְקָבִים — Eph 2:1–3 (בְּנֵי חֵמָה … מֵתִים בַּפְּשָׁעִים); the Arabic قَدْ كُنَّا فِي آدَم أَبْنَاءَ الْغَضَب / أَمْوَاتًا كَالرِّمَم is that double state, and the Hebrew keeps 'children of wrath' with 'dead as corpses' using יְקָבִים ('graves/corpses', as in the Aramaic of the Targum) rather than a Modern 'dead bodies'.",
+    "3:3–3:4 הָיָה רֹאשֵׁנוּ … מַפְגִּיעַ בַּעֲדֵנוּ — the Arabic صَارَ رَأْسَنَا … شَافِعٌ لَنَا is 'became our Head … interceding for us'; the Hebrew keeps רֹאשׁ for headship (Eph 1:22) and the glossary term מַפְגִּיעַ for intercession (Heb 7:25), so the two offices stay distinct in one stanza.",
+    "4:1–4:2 מַעֲמָד רָם … חַסְדֵי שָׁמַיִם — the Arabic مَقَامًا سَمَا … إِنْعَامَ السَّمَا is 'a sublime station … the favour of heaven'; the Hebrew keeps מַעֲמָד as the standing/station (as in the glossary's עֲמִידָה) and חַסְדֵי שָׁמַיִם as the plural 'mercies of heaven' (Isa 55:3, חַסְדֵי דָוִד הַנֶּאֱמָנִים).",
+    "1:3–1:4 בִּבְשׂוֹרַת שָׁלוֹם … בְּשִׁפְלוּת תְּמִימָה — the Arabic بِبُشْرَى السَّلَامِ … بِاتِّضَاعٍ تَامٍّ is 'with the gospel of peace … in full humility'; the Hebrew keeps בְּשׂוֹרָה ('good tidings', Isa 40:9) and the 'full/complete' adjective שָׁלֵם→תְּמִימָה, so incarnation and humility are named together.",
+    "4:4 הָאָדוֹן תִּקְוָתֵנוּ וְהַכָּבוֹד — the Arabic فَالرَّبُّ رَجَانَا وَالْمَجْدُ لَنَا is 'the Lord is our hope, and glory is ours'; the Hebrew keeps the two clauses without a copula, as the Arabic does, so the line is a confession rather than a sentence."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 187,
+  "title_he": "אִם־בָּא שָׂשׂוֹן לַלֵּב, קוּמוּ הוֹדוּ וְזַמְּרוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אִם־בָּא שָׂשׂוֹן לַלֵּב",
+        "קוּמוּ הוֹדוּ וְזַמְּרוּ",
+        "וְרוֹמְמוּ אֶת־הָאָב הַסַּלָּח",
+        "גַּדְּלוּהוּ וְכַבְּדוּהוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בָּעֶצֶב הִתְפַּלְּלוּ וּקְחוּ",
+        "תַּנְחוּמוֹת רוּחַ נֶאֱמָן",
+        "כִּי הָאָב לֹא יִשְׁכַּח",
+        "קוֹל קוֹרְאוֹ הֶעָצוּב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִתְפַּלְּלוּ בְּתוֹדָה כַּאֲשֶׁר",
+        "תָּבֹאנָה רָעוֹת וּצְרָרוֹת",
+        "כִּי מֵאֵל שָׁמַיִם הָעֵזֶר",
+        "וְהוּא יַמְתִּיק הַלְּבָבוֹת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נָרִים קוֹל תְּפִלָּה אֶל־עַל",
+        "וְהָאָב יִשְׁמָעֵנוּ",
+        "בְּטוּב רְצוֹנוֹ יִתֵּן לָנוּ",
+        "וְהָרוּחַ מַפְגִּיעַ בָּנוּ"
+      ]
+    }
+  ],
+  "review": [
+    "4:4 וְהָרוּחַ מַפְגִּיעַ בָּנוּ — Rom 8:26 (וְהָרוּחַ בְּעַצְמוֹ מַפְגִּיעַ בַּעֲדֵנוּ); the Arabic وَالرُّوحُ فِينَا يَشْفَعُ is that intercession, and מַפְגִּיעַ is the glossary term for the Spirit's pleading, kept so the line stays that verse and not a generic 'helps'.",
+    "2:2–2:4 תַּנְחוּמוֹת הָרוּחַ … קוֹל קוֹרְאוֹ הֶעָצוּב — the Arabic تَعْزِيَةَ الرُّوحِ الْأَمِينِ … صَوْتِ دَاعِيهِ الْحَزِين is 'the faithful Spirit's comfort … His grieving caller's voice'; the Hebrew keeps the voice as the thing heard across 2:4, so the Father's non-forgetfulness lands on the cry.",
+    "3:4 יַמְתִּיק הַלְּבָבוֹת — the Arabic يُطَيِّبُ الْقُلُوب is 'sweetens the hearts'; הִמְתִּיק is the biblical verb (Ps 119:103 אִמְרָתְךָ … מַמְתִּיק לְחִכִּי), so the comfort is tasted as in hymn 172.",
+    "1:2–1:3 קוּמוּ הוֹדוּ … רוֹמְמוּ — the imperative chain of the Arabic (قُومُوا احْمَدُوا وَرَنِّمُوا) is kept as three imperatives, with הוֹדוּ as the root of 'thanks' and זַמְּרוּ the song, so the summons stays three-fold.",
+    "2:1 בָּעֶצֶב — 'in grief'; עֶצֶב is the biblical noun of toil/sorrow (Gen 3:16, Prov 14:13), kept over the Modern Hebrew צַעַר, so the line pairs grief with prayer the way the psalmist does."
+  ]
+}

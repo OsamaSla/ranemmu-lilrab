@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 192,
+  "title_he": "מַה־יָּפֶה כִּי נִקָּהֵל סָבִיב לַיָּדִיד לְהַלֵּל",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "כָּבוֹד לְמִי שֶׁהִשְׁפִּיל",
+        "לְהָאִיר אֶת־הַקָּהָל",
+        "כָּבוֹד לְמִי שֶׁבְּתוֹכֵנוּ",
+        "כָּבוֹד לְיוֹשֵׁב מְרוֹמִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מַה־יָּפֶה כִּי נִקָּהֵל",
+        "סָבִיב לַיָּדִיד לְהַלֵּל",
+        "וְאַהֲבָתֵנוּ צְרוּפָה",
+        "וּמַטָּרָתֵנוּ כְּבוֹדוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "שְׂשׂוֹן הָאָב כִּי נִדְרֹשׁ",
+        "תָּמִיד אֶת־כְּבוֹדוֹ",
+        "שְׂשׂוֹן הָאָב כִּי נִרְאֶה",
+        "אֶת־יֵשׁוּעַ לְבַדּוֹ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בֵּין אָהוּבִים יִשְׁכֹּן",
+        "וּבְרָכוֹת יְצַוֶּה",
+        "תַּנְחוּמִים שׁוֹפְעִים",
+        "מִטּוּבוֹ יִנְהֲרוּ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הוּא יְדִידֵנוּ הֶעָשִׁיר",
+        "וּמֵעָשְׁרוֹ נֶעֱשַׁרְנוּ",
+        "וְהַלֵּב מִמֶּנּוּ יִמָּלֵא",
+        "וְאֶת־עֶזְרָתוֹ נְיַחֵל"
+      ]
+    }
+  ],
+  "review": [
+    "3:1–3:4 repeats 'This is the Father's joy, that' twice, with the second clause changed (we seek His glory / we see Jesus alone). The Hebrew keeps the anaphora שְׂשׂוֹן הָאָב כִּי at both 3:1 and 3:3, as the Arabic does, because the doubling is what turns the stanza from duty into the Father's own delight.",
+    "5:1–5:2 הוּא יְדִידֵנוּ הֶעָשִׁיר … נֶעֱשַׁרְנוּ — 2 Cor 8:9 (כִּי בִגְלַל עֲנִיּוּתוֹ תַּעֲשִׁירוּ); the Arabic فَهُوَ حَبِيبُنَا الْغَنِيّ / وَمِنْ غِنَاهُ نَغْتَنِي is that exchange, and the Hebrew keeps הֶעָשִׁיר / נֶעֱשַׁרְנוּ as the same root, so the riches are transferred, not merely admired.",
+    "4:1–4:2 בֵּין אָהוּבִים יִשְׁכֹּן … יְצַוֶּה — the Arabic وَسْطَ الْأَحِبَّا يَحْضُرُ / بِالْبَرَكَاتِ يَأْمُرُ is 'among the loved ones He is present, commanding blessings'; the Hebrew keeps the promised presence 'in the midst' (Exod 20:24, בְּכָל־הַמָּקוֹם אֲשֶׁר אַזְכִּיר אֶת־שְׁמִי) and the verb 'command' for the blessing.",
+    "1:1–1:2 כָּבוֹד לְמִי שֶׁהִשְׁפִּיל … לְהָאִיר — the Arabic مَجْدًا لِمَنْ تَنَازَلَ حَتَّى يُنِيرَ is 'glory to Him who condescended so as to enlighten'; the Hebrew keeps the purpose clause with לְהָאִיר, so the condescension is not merely admired but names its end.",
+    "1:4 יוֹשֵׁב מְרוֹמִים — the Arabic سَاكِنِ الْعُلَا is 'Dweller of the heights'; the Hebrew uses יֹשֵׁב מָרוֹם, the Isaiah title (Isa 33:5, יֹשֵׁב מָרוֹם), kept so the stanza's arc runs from the lowly assembly to the exalted throne."
+  ]
+}

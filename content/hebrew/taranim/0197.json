@@ -1,0 +1,51 @@
+{
+  "book": "taranim",
+  "number": 197,
+  "title_he": "אֲדֹנִי, קַח אֶת־חַיַּי וְקַדֵּשׁ אוֹתָם לָךְ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנִי, קַח אֶת־חַיָּי",
+        "כֹּחוֹת שִׂכְלִי וְעַצְמִי",
+        "בְּחַיַּי וּבְמוֹתִי הִנְנִי",
+        "כִּי אֲנִי קִנְיַן אֲדֹנִי הַמָּשִׁיחַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנִי, קַח חַיַּי וְקַדֵּשׁ אוֹתָם לָךְ",
+        "וְיָפִיץ לִבִּי תְּהִלָּה נֶצַח",
+        "אֱחֹז יָדִי וְהָנֵעַ אוֹתָהּ בְּאַהֲבָתְךָ",
+        "יַפֵּה רַגְלַי לָלֶכֶת בְּדֶרֶךְ יֹשֶׁר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "שְׁמֹר קוֹלִי מְזַמֵּר שֵׁם מַלְכִּי וְאֵין זוּלָתוֹ",
+        "וּמַלֵּא פִי בִּבְשׂוֹרַת הַפְּדוּת",
+        "קַח נַפְשִׁי, אֱלֹהַי, כָּל־אֲשֶׁר לִי בַּחַיִּים",
+        "וְהָפְעֵל אֶת־כֹּחוֹתַי כְּכָל־חֶפְצְךָ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "יְהִי רְצוֹנִי כִּרְצוֹנְךָ בְּיָדֶיךָ",
+        "וְיִהְיֶה לִבִּי לְךָ כִּסֵּא מְנוּחָה",
+        "וְתִהְיֶה אַהֲבָתִי שֶׁמֶן תּוּרַק לְרַגְלֶיךָ",
+        "וְנַפְשִׁי תִּהְיֶה תָּמִיד לַמָּשִׁיחַ"
+      ]
+    }
+  ],
+  "review": [
+    "The printed metre is 15.11.15.11 – 8.8.8.11: stanza 1 is the short fourfold consecration and stanzas 2–4 carry the long lines. The payload follows that (as with hymns 157 and 177), so the meter script's position medians call stanza 1 short by design.",
+    "1:1–1:4 קַח אֶת־חַיָּי … קִנְיַן אֲדֹנִי — the Arabic سَيِّدِي اسْتَلِمْ حَيَاتِي … إِنَّنِي مِلْكٌ لِسَيِّدِي is 'Master, receive my life … I am the possession of my Master'; קִנְיָן is the acquired property of Gen 23:18 and Lev 25:16, kept so the line grounds consecration in purchase, not in resolve.",
+    "3:1–3:2 שְׁמֹר קוֹלִי מְזַמֵּר … בִּבְשׂוֹרַת הַפְּדוּת — the Arabic صَوْتِيَ احْفَظْ مُنْشِدًا لِاسْمِ مَلِيكِي … بِرِسَالَةِ الْفِدَاء is 'keep my voice chanting my King's name … with the message of redemption'; the Hebrew keeps the participle מְזַמֵּר and the singular 'name', so the consecration of the voice is to a name, not to song in general.",
+    "4:3 שֶׁמֶן תּוּרַק — Song 1:3 (שֶׁמֶן תּוּרַק שְׁמֶךָ); the Arabic سَكِيبَ الطِّيبِ is 'pourings of perfume', and the Hebrew uses the Song's own phrase so the love offered is the same poured oil that the Bridegroom's name is compared to.",
+    "4:1–4:2 יְהִי רְצוֹנִי כִּרְצוֹנְךָ … כִּסֵּא מְנוּחָה — the Arabic لِتَكُنْ إِرَادَتِي كَمَا تَشَا … قَلْبِي لَكَ الْعَرْشَ الْمُرِيح is 'let my will be as You will … my heart be for You a restful throne'; the Hebrew keeps the wish-form יְהִי and the (otherwise unusual) image of the heart as a throne, since the Arabic makes the heart the seat, not merely the gift.",
+    "2:2 וְיָפִיץ לִבִּי תְּהִלָּה — the Arabic وَلْيَفِضْ قَلْبِي بِحَمْدٍ is 'let my heart overflow with praise'; the Hebrew keeps the Hiphil 'cause to flow/overflow' (Ps 19:3, יַפִּיחַ), so the praise is what the heart pours out, not what it contains."
+  ]
+}

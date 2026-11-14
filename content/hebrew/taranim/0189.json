@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 189,
+  "title_he": "הוֹי מוֹשִׁיעִי, אַתָּה נֶחָמָתִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי מוֹשִׁיעִי, הוֹי מוֹשִׁיעִי",
+        "אַתָּה נֶחָמָתִי",
+        "פָּנֶיךָ הַמְּאִירוֹת יִרְפְּאוּ",
+        "חֻלְשַׁת אֱמוּנָתִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הַשּׁוֹאֵל חֶסֶד יִמְצָא",
+        "הוֹי אֲב הָרַחֲמִים",
+        "מִכִּסֵּא כְּבוֹדְךָ מִיָּד",
+        "רַחֲמִים רַבִּים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אַךְ־כָּל־חֶפְצִי הָעִקָּר",
+        "פָּנֶיךָ הַבְּהִירִים",
+        "רְפָא נָא מַכָּתִי בְּחֶסֶד",
+        "הוֹי תַּאֲוַת נְפָשׁוֹת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַתָּה הוּא כָּל־שִׂמְחָתִי",
+        "מְקוֹר כָּל־הַחֲסָדִים",
+        "אַתָּה לִי טוֹב חֶלְקִי",
+        "הוֹי נִשְׂגָּב הָאֳפָיִם"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 the Arabic يَا مُنَجِّي يَا مُنَجِّي … أَنْتَ سُلْوَانِي repeats the vocative and then names consolation; the Hebrew keeps the doubled הוֹי מוֹשִׁיעִי and נֶחָמָתִי, since the repetition is the stanza's rocking rhythm, not an overflow.",
+    "1:4–2:1 חֻלְשַׁת אֱמוּנָתִי … חֶסֶד יִמְצָא — the Arabic ضَعْفَ إِيمَانِي / سَائِلٌ نُعْمَاكَ يَلْقَى uses 'weakness' and 'finds'; the Hebrew keeps חֻלְשָׁה (the glossary term for weakness, from חֻלְשָׁה in Ps 77:11) and the seeker-finds verb of Jer 29:13.",
+    "3:2–3:4 פָּנֶיךָ הַבְּהִירִים … תַּאֲוַת נְפָשׁוֹת — the Arabic وَجْهُكَ الْوَضَّاح … مُنْيَةَ الْأَرْوَاح is 'Your radiant face … the desire of souls'; the Hebrew keeps פָּנִים as the object of the longing (as in Ps 27:8, לְךָ אָמַר לִבִּי בַּקְּשׁוּ פָנָי) rather than a general 'presence'.",
+    "4:2–4:3 מְקוֹר כָּל־הַחֲסָדִים … טוֹב חֶלְקִי — the Arabic مَنْبَعُ الْأَلْطَافِ … خَيْرُ نَصِيبٍ is 'fount of graces … best portion'; the Hebrew keeps חֵלֶק in the psalm's sense of the assigned portion (Ps 16:5, מְנָת־חֶלְקִי), so the line is the believer's lot, not merely a preference.",
+    "4:4 הָאֳפָיִם — the Arabic الْأَوْصَاف is 'traits/attributes'; the Hebrew uses אֳפָיִם (Job 41:4, 'his features') rather than the later תְּכוּנוֹת, keeping the rare biblical noun for the splendour of His character."
+  ]
+}

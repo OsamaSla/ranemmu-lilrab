@@ -1,0 +1,77 @@
+{
+  "book": "taranim",
+  "number": 196,
+  "title_he": "אַל־תַּזְכִּירוּ לִי מֵהָעוֹלָם דָּבָר שֶׁאֶרְדֹּף אַחֲרָיו",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַטָּרָתִי הַמָּשִׁיחַ, מַטָּרָתִי הַמָּשִׁיחַ",
+        "לָכֵן אֶרְדֹּף אֶל־הַמַּטָּרָה",
+        "מַטָּרָתִי הַמָּשִׁיחַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַל־תַּזְכִּירוּ לִי מֵהָעוֹלָם",
+        "דָּבָר אֲשֶׁר אֶרְדֹּף בִּשְׁבִילוֹ",
+        "כִּי קְרִיאָתִי הִיא קְרִיאַת מַעְלָה",
+        "מַטָּרָתִי הַמָּשִׁיחַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עוֹבְרִים הַחַיִּים וְתַאֲוָתָם",
+        "וְצוּרָתָם עוֹבֶרֶת עִמָּהֶם",
+        "כְּחָצִיר יִבֹּל צִיצָתוֹ",
+        "מַטָּרָתִי הַמָּשִׁיחַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֶשְׁכַּח נִסְיוֹנוֹת וָעָמָל",
+        "וּבוֹזֶה לְכָל־אֲשֶׁר פֹּה",
+        "כִּי הַהֲוָיָה אֶל־כְּלָיוֹן",
+        "מַטָּרָתִי הַמָּשִׁיחַ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "מַה־שֶּׁיִּהְיוּ עָמְלֵי הַדֶּרֶךְ",
+        "מִשְּׁמָמָה וּמִלְחָמָה רַבָּה",
+        "עֻזִּי בּוֹ, וְהוּא הַשַּׁדַּי",
+        "מַטָּרָתִי הַמָּשִׁיחַ"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "וַאֲנִי הִנֵּה לְפָנַי שָׁמַיִם",
+        "אֲשֶׁר שָׁמָּה עָלָה אֲדֹנִי",
+        "וּכְדֶרֶךְ שֶׁהָלַךְ פֹּה אֵלֵךְ",
+        "מַטָּרָתִי הַמָּשִׁיחַ"
+      ]
+    },
+    {
+      "label": "7",
+      "lines": [
+        "לִי מְנוּחָה נִשְׁאֲרָה אֶצְלוֹ",
+        "אֶרְדֹּף לִרְאוֹת אֶת־כְּבוֹדוֹ",
+        "זֶה חִכּוּיִי וְאֵין עוֹד",
+        "מַטָּרָתִי הַמָּשִׁיחַ"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives stanza 1 three lines and stanzas 2–7 four lines, with غَايَتِي الْمَسِيح (my goal is Christ) as the refrain that closes every stanza. The payload keeps the refrain identical in all seven places, because it is the hymn's engine, not a line to vary.",
+    "1:2–2:3 לָכֵן אֶרְדֹּף … קְרִיאַת מַעְלָה — Phil 3:13–14 (אֶרְדְּפָה … אֶל־הַמַּטָּרָה לְשָׂכָר הַקְּרִיאָה הָעֶלְיוֹנָה); the Arabic أَسْعَى … الدَّعْوَةُ الْعُلْيَا is that verse, and the Hebrew keeps both the running verb רָדַף and the 'upward call'.",
+    "3:3–3:4 כְּחָצִיר יִבֹּל צִיצָתוֹ — Isa 40:7–8 with 1 Pet 1:24 (יָבֵשׁ חָצִיר נָבֵל צִיץ); the Arabic كَالْعُشْبِ تَسْقُطُ زَهْرَتُهَا is that image, and the Hebrew keeps חָצִיר and צִיץ, the two nouns of the prophet.",
+    "5:3–5:4 עֻזִּי בּוֹ, וְהוּא הַשַּׁדַּי — the Arabic فَقُوَّتِي فِيهِ وَهوَ الْقَدِير is 'my strength is in Him, and He is the Mighty'; the Hebrew keeps עֹז as the psalm's strength (Ps 28:7, יְהוָה עֻזִּי וּמָגִנִּי) and שַׁדַּי as the divine name of Gen 17:1.",
+    "7:1 לִי מְנוּחָה נִשְׁאֲרָה אֶצְלוֹ — Heb 4:9 (נִשְׁאֲרָה אֵפוֹא מְנוּחָה לְעַם הָאֱלֹהִים); the Arabic لِي رَاحَةٌ بَقِيَتْ عِنْدَهُ is 'rest remains for me with Him', and the Hebrew keeps the same 'remains' verb and the same noun, so the stanza quotes the epistle rather than paraphrasing it.",
+    "6:2–6:3 אֲשֶׁר שָׁמָּה עָלָה אֲדֹנִי … וּכְדֶרֶךְ שֶׁהָלַךְ — the Arabic حَيْثُ ارْتَقَى سَيِّدِي … سَارَ هُنَا سَأَسِيرُ is 'where my Master ascended … as He walked here, I shall walk'; the Hebrew keeps the ascent and the walking as two separate verbs, so the stanza distinguishes His going up from His earthly walk that we imitate."
+  ]
+}

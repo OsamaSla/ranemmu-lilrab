@@ -1,0 +1,39 @@
+{
+  "book": "taranim",
+  "number": 181,
+  "title_he": "בְּזִכְרְךָ נִזּוֹן יַחְדָּו, הוֹי הַמּוֹשִׁיעַ הַנֶּעֱבָד",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּזִכְרְךָ נִזּוֹן יַחְדָּו / הוֹי הַמּוֹשִׁיעַ הַנֶּעֱבָד / בַּמִּדְבָּר עָרַכְתָּ שֻׁלְחָן / לִזְכֹּר אַהֲבָתְךָ, יָדִיד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עֲוֺנוֹתֵינוּ וּפְשָׁעֵינוּ הֵם / הֵטִילוּ עָלֶיךָ מַשָּׂא כָבֵד / עַל־כֵּן עַתָּה בְּחַג אֶחָד / נִזְכֹּר אַהֲבָתְךָ הַנָּאָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בַּאֲכֹל הַלֶּחֶם וּבִשְׁתוֹת הַכּוֹס / נִרְאֲךָ מֵת עַל־פְּנֵי הַצְּלָב / סְבִיבְךָ אֲנַחְנוּ עַמְּךָ סְגֻלָּה / נַעֲשֶׂה זִכָּרוֹן לְאַהֲבָתְךָ הַנִּפְלָאָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בְּקָרוֹב, הוֹי הַגּוֹאֵל, הִנֵּה / נִרְאֲךָ בְּכָבוֹד זוֹהֵר / וְנַשִּׂיג בְּכָבוֹד עוֹלָם / אֶת־הָאַהֲבָה אֲשֶׁר לֹא תִכְלֶה"
+      ]
+    }
+  ],
+  "review": [
+    "The print sets each stanza as a single line whose four phrases are joined by slashes, as in hymns 139 and 151; the payload mirrors that, so each stanza is one string and the meter checker sees one long line per stanza.",
+    "1:1 בְּזִכְרְךָ נִזּוֹן יַחְדָּו — the Arabic بِذِكْرِكَ نَتَغَذَّى مَعًا is 'in Your memory we feed together'; the Hebrew uses נִזּוֹן (to be fed) to keep the passive/feeding sense of the Lord's Supper rather than an active 'we eat', and יַחְדָּו carries the 'together'.",
+    "1:3 בַּמִּדְבָּר עָרַכְתָּ שֻׁלְחָן — Psalm 23:5 (תַּעֲרֹךְ לְפָנַי שֻׁלְחָן) placed in the wilderness (תְּעָרֹךְ … בַּמִּדְבָּר, Ps 78:19); the Arabic فِي الْقَفْرِ אَعْدَدْتَ مَائِدَةً is that table, and the Hebrew keeps the psalm's verb עָרַךְ.",
+    "3:4 נַעֲשֶׂה זִכָּרוֹן — Luke 22:19 (לְזִכְרוֹנִי תַעֲשׂוֹּ זֹאת); the Arabic نَصْنَعُ ذِكْرֵי is 'we make the memorial', and the Hebrew keeps the verb 'do/make' with זִכָּרוֹן so the line remains a re-enactment, not a mere recollection.",
+    "2:1–2:2 the Arabic آثَامُنَا وَمَعَاصِينَا … أَلْقَتْ … حِمْلَنَا pairs sin and trespass with a cast-load; עָוֹן and פֶּשַׁע are the two biblical nouns (Lev 16:21, Isa 53:5), and הֵטִילוּ keeps the 'threw' of the Arabic rather than the general 'placed'.",
+    "3:1 שְׁתוֹת for 'drinking' is the biblical infinitive (Deut 29:5) kept over the later שְׁתִיָּה, so the cup remains part of the covenant meal vocabulary of hymn 173."
+  ]
+}

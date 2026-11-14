@@ -45,6 +45,13 @@ Arabic wins.
 | نفس | נֶפֶשׁ | Not `רוח` — the Arabic `نفس` is the whole living self. |
 | روح | רוּחַ | Ambiguous by design (wind/spirit); disambiguate with the verb, not by changing the noun. |
 | سلام (peace given) | שָׁלוֹם | `שָׁלוֹם לְךָ` only in greeting; otherwise bare `שָׁלוֹם`. |
+| غاية (goal, Phil 3) | מַטָּרָה | Phil 3:14; `מַטָּרָתִי הַמָּשִׁיחַ` is the fixed refrain of tr0196. |
+| ملك / مقتنى (possession) | קִנְיָן | Acquired property (Gen 23:18, Lev 25:16); pairs with `קָנָה`. |
+| سجن / جب (prison) | סֹהַר / בּוֹר | `סֹהַר` is Joseph's prison (Gen 39:20); `בּוֹר` the pit/den (Dan 6). |
+| لجة / غمر (deep) | מְצוּלָה | Ps 69:3; keep apart from `תְּהוֹם`. |
+| قطر الشهاد (honeycomb) | נֹפֶת צוּפִים | Ps 19:11; fixed for the "sweet as honey" line. |
+| رمام (corpses) | יְקָבִים | "Graves/bodies"; used for "dead as corpses" (tr0194 2:2). |
+| أوصاف (traits) | אֳפָיִים | Job 41:4; the rare biblical noun, not `תְּכוּנוֹת`. |
 
 ## Pointing conventions
 
@@ -54,7 +61,9 @@ Arabic wins.
   `מִגְדַּל־עֹז`, `בֶּן־אָדָם`, `עַד־עַד`, `יֶשׁ־לָנוּ`. Do not use it as a
   hyphen for line breaks.
 - Divine name: `יָהּ` is allowed in short liturgical lines; `אֲדֹנָי` and
-  `אֱלֹהִים` elsewhere. Never the tetragrammaton.
+  `אֱלֹהִים` elsewhere. The tetragrammaton appears only where the Arabic itself
+  prints `يَهْوَه` (tr0091, tr0130, tr0143), because there the point is that the
+  Name is applied to Jesus; do not substitute `אֲדֹנָי` in those lines.
 - `יֵשׁוּעַ` keeps its final `ע` with patah; do not use the abbreviated `יֵשׁוּ`.
 - Furtive patah stays on the final guttural: `רוּחַ`, `שָׁמֵחַ`, `מָשִׁיחַ`.
 - Where a choice changes the tune, prefer the shorter pointing; note it in the

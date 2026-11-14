@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 182,
+  "title_he": "בְּשִׁמְךָ, אֲדֹנָי, תְּקַהֵל אוֹתָנוּ סָבִיב לְאִישׁוּתְךָ בְּאַהֲבָה טְהוֹרָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בְּשִׁמְךָ, אֲדֹנָי, תְּקַהֵל אוֹתָנוּ",
+        "סָבִיב לְאִישׁוּתְךָ בְּאַהֲבָה טְהוֹרָה",
+        "כָּכָה נָשִׂישׂ יַחְדָּו פֹּה",
+        "נַגִּיד מוֹתְךָ עַד־תָּבוֹא"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "סָבִיבְךָ, אֲדֹנָי, עֲדָתְךָ",
+        "תִּשְׁתַּחֲוֶה עַד־פְּגִישָׁה קְרוֹבָה",
+        "אוֹכְלִים לֶחֶם וְשׁוֹתִים הַכּוֹס",
+        "לִזְכֹּר חַסְדְּךָ, אֲהוּבִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּנוֹכְחוּתְךָ יָשִׂישׂ הַלֵּב",
+        "וּבְחֵרוּת הָרוּחַ נִשְׁתַּחֲוֶה",
+        "סָבִיבְךָ אָנוּ מְזַמְּרִים",
+        "לְךָ, הוֹי הַשֶּׂה הַטָּבוּחַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מַה־רַבּוֹת שִׂמְחוֹת הַנּוֹכְחוּת",
+        "סָבִיבְךָ בְּבֵיתוֹ אֲשֶׁר לְעוֹלָם",
+        "הוֹי גֹּדֶל עֵדֶן וָשָׂשׂוֹן",
+        "לָעֵדָה אִתְּךָ בְּכָבוֹד"
+      ]
+    }
+  ],
+  "review": [
+    "1:3–1:4 כָּכָה נָשִׂישׂ … נַגִּיד מוֹתְךָ עַד־תָּבוֹא — 1 Cor 11:26 (כָּל־פַּעַם שֶׁתֹּאכְלוּ … תַּגִּידוּ אֶת־מוֹת הָאָדוֹן עַד כִּי יָבוֹא); the Arabic نُذِيعُ مَوْتَكَ حَتَّى تَجِي is that verse, and the Hebrew keeps the 'proclaim … until You come' frame so the stanza stays eucharistic rather than general.",
+    "1:2 לְאִישׁוּתְךָ — the Arabic حَوْلَ شَخْصِكَ is 'around Your person'; the glossary noun אִישׁוּת ('personhood/person') is kept, because the hymn insists the gathering is around a person, not a name or an idea.",
+    "3:4 הַשֶּׂה הַטָּבוּחַ — Rev 5:6, 12 (עָמַד שֶׂה כְּאִלּוּ טָבוּחַ); the Arabic الْخَرُوفُ الْمَذْبُوحُ is that Lamb, and the Hebrew keeps טָבוּחַ (slain) rather than the general 'sacrificed', to preserve the Revelation image of the standing slain Lamb.",
+    "4:2 בְּבֵיתוֹ אֲשֶׁר לְעוֹלָם — the Arabic فِي الْبَيْتِ الْأَبَدِيّ is 'in the eternal house'; the Hebrew keeps בַּיִת with לְעוֹלָם as the eternal qualifier of Ps 23:6 (וְשַׁבְתִּי בְּבֵית־יְהוָה לְאֹרֶךְ יָמִים).",
+    "2:2 עַד־פְּגִישָׁה קְרוֹבָה — the Arabic حَتَّى اللِّقَاءِ الْقَرِيب is 'until the near meeting'; פְּגִישָׁה is the term used through hymns 168–178 for the awaited meeting, kept for consistency."
+  ]
+}

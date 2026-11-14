@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 193,
+  "title_he": "מֵאָז כִּבְּדַנִי אֲדֹנִי בְּמַבָּט בָּשִׂים אֵלַי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "כָּבוֹד לְמוֹחֵה הָעָוֹן",
+        "טִהֲרַנִי עַד־תָּמִים",
+        "לִבִּי מָלֵא אַהֲבָה רָמָה",
+        "כְּאִלּוּ בַּשָּׁמַיִם אָנִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מֵאָז כִּבְּדַנִי אֲדֹנִי",
+        "בְּמַבַּט חֵן אֵלַי",
+        "לִבִּי מָלֵא אַהֲבָה רָמָה",
+        "כְּאִלּוּ בַּשָּׁמַיִם אָנִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אִם־בְּאַרְמוֹן אֵשֵׁב",
+        "אוֹ בְּסֻכָּה בְלִי מָגֵן",
+        "שָׁוֶה הוּא לִי, כִּי אֲנִי",
+        "אוֹרֵחַ לַשָּׁמַיִם מוּכָן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לֹא יַבְהִילוּ דְאָגוֹת",
+        "גּוֹאֲלִי הוּא מָעוֹז טוֹב",
+        "תּוֹדָה לַגּוֹאֵל הָרַחוּם",
+        "הַמּוֹלִיךְ נַפְשִׁי שָׁמָיְמָה"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "כְּבוֹדִי שִׂמְחָתִי וְעֶדְנִי",
+        "לָשֶׁבֶת אִתּוֹ לָנֶצַח",
+        "אֲשֶׁר פָּדַנִי וַיָּשֶׂם",
+        "מַחְשְׁבוֹתַי שָׁמָיְמָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:3–4 and 2:3–4 are identical in the print (قَلْبِي امْتَلَا حُبًّا سَمَا / كَأَنِّي دَوْمًا فِي السَّمَا), and the payload repeats the two lines verbatim, so the refrain closes both stanzas. This is the hymn's device: the second stanza changes only its cause, not its conclusion.",
+    "3:3–3:4 שָׁוֶה הוּא לִי, כִּי אֲנִי אוֹרֵחַ — the Arabic سِيَّانِ عِنْدِي إِنَّنِي / ضَيْفٌ مُعَدٌّ لِلسَّمَا is 'alike to me, for I am a guest bound for heaven'; the Hebrew keeps the 'guest' (אוֹרֵחַ, as in 2 Sam 12:4) and the 'prepared/bound' participle, so the indifference to palace or hut rests on destination, not on Stoic detachment.",
+    "4:2–4:4 מָעוֹז טוֹב … הַמּוֹלִיךְ נַפְשִׁי שָׁמָיְמָה — the Arabic خَيْرُ حِمَى … يَهْدِي نَفْسِي لِلسَّمَا is 'best shelter … guiding my soul heavenward'; the Hebrew keeps מָעוֹז as the psalm's refuge (Ps 27:1) and the Hiphil 'lead up' (Ps 107:7, וַיַּדְרִיכֵם בְּדֶרֶךְ יְשָׁרָה).",
+    "5:1–5:3 כְּבוֹדִי שִׂמְחָתִי וְעֶדְנִי … אֲשֶׁר פָּדַנִי וַיָּשֶׂם — the Arabic مَجْدِي سُرُورِي لَذَّتِي … مَنْ قَدْ فَدَانِي جَاعِلًا is a threefold self-description followed by the ransoming agent; the Hebrew keeps both halves and the singular verb, so the praise still belongs to the One who acted.",
+    "1:1–1:2 כָּבוֹד לְמוֹחֵה הָעָוֹן / טִהֲרַנִי עַד־תָּמִים — the Arabic مَجْدًا لِمَنْ مَحَا الْآثَام / طَهَّرَنِي إِلَى التَّمَام is 'glory to Him who wiped out sins, who cleansed me to completeness'; the Hebrew keeps מָחָה ('blot out', Ps 51:3, Isa 43:25) and עַד־תָּמִים, so both the blotting and the thoroughness are stated."
+  ]
+}
