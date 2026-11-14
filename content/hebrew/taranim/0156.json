@@ -1,0 +1,40 @@
+{
+  "book": "taranim",
+  "number": 156,
+  "title_he": "הֲרוֹאִים בְּךָ אֶת־יֵשׁוּעַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "(הֲרוֹאִים בְּךָ אֶת־יֵשׁוּעַ?)",
+        "הַגֵּה־בוֹ, עֶבֶד שׁוֹמֵעַ",
+        "עַד־יִרְאוּ בְךָ אֶת־יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּהַלֶּכְתְּךָ בַּחַיִּים הָאֵלֶּה",
+        "הֲמוֹנִים יִרְאוּ אוֹתְךָ",
+        "חֲיֵה טָהוֹר בָּרוּחַ וּבַגּוּף",
+        "עַד־יִרְאוּ בְךָ אֶת־יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "חַיֶּיךָ לִפְנֵיהֶם",
+        "סֵפֶר גַּם־נִדְפָּס",
+        "הַאִם לַשָּׁמַיִם תּוֹלִיכֵם?",
+        "הֲרוֹאִים בְּךָ אֶת־יֵשׁוּעַ?"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives stanza 1 three lines (the bracketed question, the summons, and the refrain) and stanzas 2–3 four each, so the payload is 3/4/4. Not padded to a rectangle; the metre script calls it irregular for that reason alone.",
+    "1:1 the Arabic opens with a parenthetical question (هَلْ فِيكَ يَرَوْنَ يَسُوع); the payload keeps the parentheses so the printed shape and the rhetorical frame are preserved.",
+    "1:2 עֶבֶד שׁוֹמֵעַ — the Arabic كُنْ عَبْدًا يَطُوع is 'be an obedient slave'; the Hebrew uses the biblical idiom of the hearing servant (1 Sam 15:22, שְׁמֹעַ … מִזֶּבַח), avoiding the Modern Hebrew צַיְתָן.",
+    "3:2 סֵפֶר גַּם־נִדְפָּס — the Arabic سِفْرٌ كَذَاكَ الْمَطْبُوع is 'a book, likewise printed'; נִדְפָּס is the passive participle of דָּפַס (Ps 45:2 of a swift scribe's pen), so the image of a written page stays biblical.",
+    "3:3 הַאִם לַשָּׁמַיִם תּוֹלִיכֵם — the Arabic هَلْ لِلسَّمَا تَقُودُهُمْ is 'do you lead them heavenward?'; the Hebrew keeps the interrogative and the direction, with הָאִם as the biblical question opener."
+  ]
+}

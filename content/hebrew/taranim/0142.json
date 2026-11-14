@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 142,
+  "title_he": "עַתָּה אֲדֹנֵינוּ הַגִּבּוֹר לְפָנֵינוּ יְהַלֵּךְ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עַתָּה אֲדֹנֵינוּ הַגִּבּוֹר",
+        "לְפָנֵינוּ יְהַלֵּךְ",
+        "וְתַחַת־דֶּגֶל אַהֲבָתוֹ",
+        "נִצְעַד כֻּלָּנוּ יָחַד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּעוֹדֵנוּ נֹסְעִים הֵנָּה",
+        "הוּא לָנוּ חָבֵר נֶאֱמָן",
+        "וְרוּחוֹ תַּנְחֵנוּ",
+        "וְאַחֲרָיו בַּדָּרֶךְ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא לַחְמֵנוּ הַנֶּחְמָד",
+        "בְּכֹל יְמֵי הַמַּסָּע",
+        "וְהַמָּן וְהַצּוּר לָנוּ",
+        "בְּעוֹדֵנוּ בַמִּדְבָּר"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְעַתָּה, עַם־הַמָּשִׁיחַ",
+        "סְעוּ הָלְאָה בֶּאֱמוּנָה",
+        "סְעוּ וְנָנוּחַ יָחַד",
+        "בִּנְוֵה הַשָּׁלוֹם"
+      ]
+    }
+  ],
+  "review": [
+    "1:3–1:4 תַּחַת־דֶּגֶל אַהֲבָתוֹ — Song of Songs 2:4 (וְדִגְלוֹ עָלַי אַהֲבָה); the Arabic وَتَحْتَ لِوَا حُبِّهِ is that banner, and דֶּגֶל is the word of the verse.",
+    "3:3 וְהַמָּן וְהַצּוּר — Exodus 16:15 (מָן) with 1 Cor 10:4 (וְהַצּוּר הָיָה הַמָּשִׁיחַ); the Arabic وَالْمَنُّ وَالصَّخْرُ is that pair, and the Hebrew keeps the wilderness nouns rather than a general 'food'.",
+    "3:1–3:2 לַחְמֵנוּ הַנֶּחְמָד / בְּכֹל יְמֵי הַמַּסָּע — the Arabic طَعَامُنَا الشَّهِيّ / فِي مُدَّةِ السَّيْر is 'our delicious food during the journey'; נֶחְמָד is the niphal participle of חמד ('desirable'), the adjective of Gen 3:6 and Isa 53:2.",
+    "4:2 סְעוּ הָלְאָה — the Arabic سِيرُوا إِلَى الْأَمَام is 'march forward'; הָלְאָה ('onward, further') is biblical (Gen 19:9), so the line keeps the imperative without resorting to the Modern Hebrew קָדִימָה."
+  ]
+}

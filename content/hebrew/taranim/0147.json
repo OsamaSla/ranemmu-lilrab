@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 147,
+  "title_he": "חָזְקִי בְּכָל־עֵת שֶׁנַּפְשִׁי תִּרְעָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "חָזְקִי כָּל־עֵת שֶׁנַּפְשִׁי תִּרְעָב",
+        "וְתִקְוָתִי כַּאֲשֶׁר אַזִּיל דִּמְעָה",
+        "וּשְׁלוֹמִי כָּל־עֵת שֶׁצָּרָה תְּבַעֵת",
+        "אֲשֶׁר־פָּדָה נַפְשִׁי, מוֹשִׁיעִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוּא צִדְקִי בַּעֲלוֹת עָלַי חֲטָאָי",
+        "הוּא כִסּוּיִי אִם־תָּרוּם מוּם נַפְשִׁי",
+        "הוּא אוֹרִי כָּל־עֵת שֶׁהַלַּיְלָה יָשׁוּב",
+        "אֲשֶׁר־פָּדָה נַפְשִׁי, מוֹשִׁיעִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא רִבְחִי אִם־יֹאבַד כָּל־הוֹנִי",
+        "הוּא מִשְׁפַּחְתִּי אִם־אֶדָּחֶה רָחוֹק",
+        "הוּא שְׂשׂוֹנִי אִם־אֶהְיֶה בוֹכֶה",
+        "אֲשֶׁר־פָּדָה נַפְשִׁי, מוֹשִׁיעִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בִּשְׁקִיטָתִי וּבְבָדָד אֶפְגְּשֵׁהוּ",
+        "יְמַלֵּא לִבִּי נֹעַם, יַרְאֵהוּ",
+        "אַהֲבָתוֹ הָעֶלְיוֹנָה, וְכַמָּה טוֹב בָּהּ",
+        "אֲשֶׁר־פָּדָה נַפְשִׁי, מוֹשִׁיעִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הוּא אוֹצָרִי, בּוֹ כָּל־אֲשֶׁר אֶחְפָּץ",
+        "אוֹצָר גָּדוֹל הָיָה־לִּי בַשָּׁמָיִם",
+        "כִּי הוּא שָׁם בַּעֲדִי בַּמָּרוֹם",
+        "אֲשֶׁר־פָּדָה נַפְשִׁי, מוֹשִׁיעִי יֵשׁוּעַ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:3 חָזְקִי … תִּקְוָתִי … וּשְׁלוֹמִי — the Arabic إِنَّ قُوتِي … وَرَجَائِي … وَسَلَامِي is a threefold predicate chain resolved in the refrain; Hebrew keeps the same three nouns first and the answer last, which is how the stanza holds its suspense.",
+    "2:2 כִּסּוּיִי — the Arabic سِتْرِي is 'my covering'; כִּסּוּי is the biblical noun of covering (Exod 26:14), kept over the Modern Hebrew מִכְסֶה because the line needs the personal suffix.",
+    "4:2 יַרְאֵהוּ אַהֲבָתוֹ — the Arabic يَمْلَأُ الْقَلْبَ هَنَاءً وَيُرِيه / حُبَّهُ is 'fills the heart with bliss and shows it His love'; the Hebrew keeps the suffix chain (the heart is shown), rather than turning it into 'shows me'.",
+    "5:2–5:3 הָאוֹצָר … בַּמָּרוֹם — Matthew 6:20 (אוֹצָר בַּשָּׁמַיִם) with Col 3:1; the Arabic ذُخْرًا … فِي السَّمَاء / هُنَاكَ فِي الْعَلَاء is that treasure laid up above, and Hebrew keeps both the treasure and the place.",
+    "4:1–4:3 בִּשְׁקִיטָתִי וּבְבָדָד — the Arabic فِي سُكُونِي وَانْفِرَادِي is 'in my stillness and solitude'; בָּדָד is the biblical word for being alone (Ps 102:8), not the Modern Hebrew בְּדִידוּת."
+  ]
+}

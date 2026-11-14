@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 141,
+  "title_he": "לָנוּ הַשָּׁלוֹם וְהַחֹזֶק בַּאֲדֹנָי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לָנוּ הַשָּׁלוֹם וְהַחֹזֶק",
+        "בַּאֲדֹנָי כָּל־עֵת",
+        "כִּי בַחַיִּים וּבַמָּוֶת",
+        "מַחְסֵנוּ הַנֶּאֱמָן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מֵעוֹלָם רָעָה אוֹתָנוּ",
+        "וְלֹא יֶחְדַּל לִרְעוֹת",
+        "עֵינוֹ עָלֵינוּ תָּנוּחַ",
+        "בְּרָצוֹן וּבְנַחַת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נְשׂוּאִים מִן־הָרֶחֶם וְהַבֶּטֶן",
+        "עַד־שֵׂיבָה וְזִקְנָה",
+        "הוּא עָלֵינוּ יַשְׁגִּיחַ",
+        "בְּחֶסֶד וּבְרַחֲמִים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הֲתִשְׁכַּח אֵם עוּלָהּ",
+        "וַאדֹנָי לֹא יִשְׁכָּח",
+        "וְתִקְוַת הַבֹּטֵחַ בּוֹ",
+        "לֹא תֵבוֹשׁ לְעוֹלָם"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "וְהָאָב עָלֵינוּ יָחוּס",
+        "עַל־כֵּן לֹא נֵחָת",
+        "הוּא יָדַע צָרְכֵּנוּ",
+        "בְּטֶרֶם נִשְׁאָלֵהוּ"
+      ]
+    }
+  ],
+  "review": [
+    "4:1–4:2 הֲתִשְׁכַּח אֵם עוּלָהּ / וַאדֹנָי לֹא יִשְׁכָּח — Isaiah 49:15 (הֲתִשְׁכַּח אִשָּׁה עוּלָהּ … וְאָנֹכִי לֹא אֶשְׁכָּחֵךְ); the Arabic الْأُمُّ قَدْ تَنْسَى الرَّضِيع / وَالرَّبُّ لَا يَنْسَى is that verse, and the Hebrew keeps the interrogative and the divine name in the same order.",
+    "1:1–1:2 הַשָּׁלוֹם וְהַחֹזֶק — the Arabic السَّلَامُ وَالثَّبَات is 'peace and steadfastness'; חֹזֶק is the noun of Exod 15:2 (עָזִּי וְזִמְרָת), chosen over the abstract Modern Hebrew חֲזָקָה.",
+    "2:1 מֵעוֹלָם רָעָה אוֹתָנוּ — Psalm 23:1 with Ps 28:9 (וּרְעֵם); the Arabic مُنْذُ الْوُجُودِ قَدْ رَعَى is 'since existence He shepherded', and רָעָה keeps the shepherd verb of the psalm.",
+    "3:3 יַשְׁגִּיחַ — Psalm 33:13 (הִשְׁגִּיחַ מִשָּׁמַיִם); the Arabic يَعْتَنِي is 'tends/cares for', and שָׁגַח is the biblical verb for looking after, without the modern טִפֵּל.",
+    "5:4 בְּטֶרֶם נִשְׁאָלֵהוּ — Matthew 6:8 (בְּטֶרֶם תִּשְׁאֲלוּ … יוֹדֵעַ); the Arabic مِنْ قَبْلِ أَنْ نَسْأَل is that verse, and the suffix keeps 'before we ask Him' rather than the abstract 'before our asking'."
+  ]
+}

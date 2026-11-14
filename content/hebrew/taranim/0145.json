@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 145,
+  "title_he": "הוּא רֹפֵא נַפְשִׁי, וְקוֹלוֹ מַרְפֵּא",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוּא רֹפֵא נַפְשִׁי",
+        "וְקוֹלוֹ גַּם־מַרְפֵּא",
+        "וּבוֹ יֵרָפֵא לִבִּי",
+        "וְיִמָּלֵא שִׂמְחָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כָּל־עֵת אֲשֶׁר אֶעֱרֹג",
+        "עָרֵב לִי עִמּוֹ",
+        "וּבְכָל־קָרְבִי אֵלָיו",
+        "יוֹסִיף עֶרְגָּתִי אֵלָיו"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מָתַי אָזְנַי תִּשְׁמַעְנָה",
+        "קוֹל רִנַּת דּוֹדִי",
+        "וְאֶרְאֵהוּ עַיִן בְּעָיִן",
+        "בְּיָפְיוֹ הַנִּפְלָא"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אָז יִכְלֶה יְגוֹנִי",
+        "וְכָל־דְּאָגָה תֹּאבֵד",
+        "וְכֵן יִשְׂמַח לִבִּי",
+        "וְהָאֲהוּבִים בַּדּוֹד"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:4 רֹפֵא נַפְשִׁי … מַרְפֵּא — the Arabic شَخْصُهُ طَبِيبُ نَفْسِي / صَوْتُهُ أَيْضًا عِلَاج sets the person against the voice; Hebrew keeps the same parallel with the noun מַרְפֵּא (the healing, as in Jer 8:22), not the Modern Hebrew תְּרוּפָה.",
+    "4:4 וְהָאֲהוּבִים בַּדּוֹד — the Arabic وَالْأَحِبَّا بِالْحَبِيب is 'and the loved ones in the Beloved'; בַּדּוֹד keeps the preposition of union (as in Song 2:16, דּוֹדִי לִי), so the line is not merely 'the beloved ones'.",
+    "3:3 עַיִן בְּעָיִן — the Arabic بِالْعِيَانِ is 'plainly, face to face'; the Hebrew idiom (Num 14:14) keeps the sight physical, which is what the stanza asks for.",
+    "2:3–2:4 וּבְכָל־קָרְבִי אֵלָיו / יוֹסִיף עֶרְגָּתִי — the Arabic كُلَّمَا أَدْنُو لَدَيْهِ / زَادَنِي لَهُ اشْتِيَاق is the paradox 'the nearer, the more longing'; the Hebrew keeps both comparatives implicit and lets the two lines carry the turn."
+  ]
+}

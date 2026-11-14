@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 153,
+  "title_he": "אֲנַחְנוּ בְנֵי הָאָב הָרַחוּם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲנַחְנוּ בְנֵי הָאָב הָרַחוּם",
+        "וְכֻלָּנוּ אַחִים",
+        "נְוֵה הַנֹּעַם יַאַסְפֵנוּ",
+        "מַה־נָּעִים הַמָּקוֹם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אִם־יִשְׁתַּנּוּ מִסְפָּרֵינוּ",
+        "בַּגֶּזַע וּבַלָּשׁוֹן",
+        "נִקְשְׁרוּ נַפְשׁוֹתֵינוּ",
+        "בְּאַחְדוּת הָאֱמוּנָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "יֵשׁוּעַ הוּא מִדָּתֵנוּ",
+        "בָּאַהֲבָה וּבַחֶסֶד",
+        "וּתְהֵא אַהֲבַת הָאַחִים",
+        "מְלֹא כָּל־לִבּוֹתֵינוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נִבְכֶּה עִם־הַבּוֹכִים",
+        "נִשְׂמַח עִם־הַשְּׂמֵחִים",
+        "נֶאֱהַב בֶּאֱמֶת, לֹא בְּמִלִּים",
+        "וְלֹא בַלָּשׁוֹן לְבָד"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "נַעֲשֶׂה הַטּוֹב, וְיוֹתֵר מִכֹּל",
+        "לָאַחִים בֶּאֱמֶת",
+        "כִּי אֵת אֲשֶׁר נִזְרָעֵהוּ",
+        "נִקְצֹר בְּעִתּוֹ"
+      ]
+    }
+  ],
+  "review": [
+    "4:1–4:2 נִבְכֶּה עִם־הַבּוֹכִים / נִשְׂמַח עִם־הַשְּׂמֵחִים — Romans 12:15 (לִבְכּוֹת עִם־הַבֹּכִים); the Arabic نَبْكِي مَعَ الْبَاكِي … نُسَرُّ لِلْفَرْحَان is that verse, and the Hebrew keeps the same preposition and the substantivised participle.",
+    "4:3–4:4 נֶאֱהַב בֶּאֱמֶת … וְלֹא בַלָּשׁוֹן — 1 John 3:18 (לֹא בְּמִלָּה וְלֹא בַלָּשׁוֹן); the Arabic نُحِبُّ بِالْحَقِّ … وَاللِّسَان splits the article across the line break; Hebrew cannot split a word, so the sense is re-cut whole and the verse's two negations are kept.",
+    "5:1–5:2 נַעֲשֶׂה הַטּוֹב … לָאַחִים — Galatians 6:10 (נַעֲשֶׂה טוֹב … וְיֹתֵר לִבְנֵי אֱמוּנָה); the Arabic وَبِالْأَخَصِّ لِلْإخْوَان is that 'especially', and the Hebrew keeps וְיוֹתֵר ('and more') as the comparative the verse uses.",
+    "5:3–5:4 אֵת אֲשֶׁר נִזְרָעֵהוּ / נִקְצֹר — Galatians 6:7–8 (מַה־שֶּׁיִּזְרַע … יִקְצֹר); the Arabic فَإِنَّ مَا نَزْرَعُهُ / نَحْصُدُ is that law of sowing, and the Hebrew keeps the relative clause and the harvest verb.",
+    "1:3–1:4 נְוֵה הַנֹּעַם … מַה־נָּעִים הַמָּקוֹם — Psalm 84:2 (מַה־יְּדִידוֹת מִשְׁכְּנוֹתֶיךָ) with the Arabic دَارُ النَّعِيم / يَا حَبَّذَا الْمَكَان; the Hebrew keeps the exclamation as the psalm does, and נָוֶה is the biblical noun for a dwelling."
+  ]
+}

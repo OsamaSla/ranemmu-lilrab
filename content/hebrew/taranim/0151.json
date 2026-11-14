@@ -1,0 +1,44 @@
+{
+  "book": "taranim",
+  "number": 151,
+  "title_he": "מִי־יְבַקֵּשׁ אֶת־אֲדֹנָי יִמְצָא",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מִי־יְבַקֵּשׁ אֶת־אֲדֹנָי יִמְצָא / מֵאִתּוֹ הַנֶּאֱמָנוּת וְהָעֵזֶר / כִּי הוּא אֵל טוֹב / וְחַסְדּוֹ לָעַד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הָבָה נִקְרְבָה יַחַד / לְפָנָיו וְנִבְטַח / כִּי הוּא אֵל נֶאֱמָן וְתָמִים / בְּכָל־הַבְטָחָיו נֶאֱמָן"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וּמִי שֶׁיָּגֵעַ / מִכֹּבֶד הַמַּשָּׂא / יַשְׁלֵךְ מַשָּׂאוֹ עַל / אֲדֹנָי מָגִנּוֹ וִישׁוּעָתוֹ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְהוּא יַעֲנֶה לַמְקַוֶּה / וְיַרְאֶה כָל־רָצוֹן / לֹא יִזְכֹּר רֹעַ הַחֵטְא / וְיִמְחֹל עַל־אֲשֶׁר עָבָר"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "לָכֵן נוֹדֶה וּנְהַלֵּל / וּנְכַבֵּד אֶת־אֲשֶׁר הִבְטִיחַ / כִּי הוּא אֵל טוֹב / וְחַסְדּוֹ לָעַד"
+      ]
+    }
+  ],
+  "review": [
+    "The print sets each stanza as a single line with its four phrases separated by slashes, exactly as in hymn 139; the payload mirrors that grid, so each stanza is one string and the meter checker counts it as one long line.",
+    "3:3–3:4 יַשְׁלֵךְ מַשָּׂאוֹ עַל / אֲדֹנָי — Psalm 55:23 (הַשְׁלֵךְ עַל־יְהוָה יְהָבְךָ); the Arabic فَلْيُلْقِ حِمْلَهُ عَلَى رَبِّ الْحِمَاء is that casting, and the Hebrew keeps the same verb and preposition.",
+    "3:4 מָגִנּוֹ וִישׁוּעָתוֹ — the Arabic رَبِّ الْحِمَاءِ وَالنَّجَاه is 'Lord of shelter and rescue'; מָגֵן ('shield') is the biblical noun for shelter (Ps 18:3), and the two nouns are kept as a pair.",
+    "1:1–1:2 מִי־יְבַקֵּשׁ … יִמְצָא — Jeremiah 29:13 (תְּבַקְשֻׁנִי וּמְצָאתֶם); the Arabic مَنْ يَطْلُبِ الرَّبَّ يَجِد is that promise, and Hebrew keeps the seek/find pair with a finite verb in the apodosis.",
+    "4:3–4:4 לֹא יִזְכֹּר רֹעַ הַחֵטְא / וְיִמְחֹל — the Arabic لَا يَذْكُرُ شَرَّ الْخَطَا / وَيَصْفَحُ is 'He recalls no evil of the sin and pardons'; the Hebrew keeps both verbs distinct (זָכַר and מָחַל) rather than merging them into 'forgives'."
+  ]
+}

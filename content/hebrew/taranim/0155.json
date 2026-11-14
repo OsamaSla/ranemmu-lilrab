@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 155,
+  "title_he": "שְׁמֹר חַיַּי, אֲדֹנָי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "שְׁמֹר חַיַּי, וְתִהְיֶה קְדֻשָּׁתָם",
+        "לְךָ לְבַדְּךָ, אֲדֹנָי",
+        "וּשְׁמֹר אוֹתִי מוֹדֶה תָמִיד",
+        "עַל־פָּעָלְךָ כָּל־יְמֵי חַיָּי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וּשְׁמֹר יָדִי וְהָנִיעָהּ בְּאַהֲבָה",
+        "בְּאַהֲבָתְךָ הָרַבָּה",
+        "וּשְׁמֹר צַעֲדֵי רַגְלַי",
+        "בְּאָרְחוֹתֶיךָ הַיְשָׁרוֹת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "שְׁמֹר קוֹלִי הַמְזַמֵּר",
+        "לַאֲדֹנִי לְאֹרֶךְ יָמִים",
+        "וּשְׁמֹר אֶת־שְׂפָתַי",
+        "לְהַגִּיד בְּשׂוֹרַת הַפְּדוּת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "שְׁמֹר רְצוֹנִי, כִּי הוּא לָךְ",
+        "לֹא לִי חֶפְצִי עוֹד",
+        "שְׁמֹר לִבִּי, וְיִהְיֶה קָנוּי",
+        "בְּאַהֲבָתְךָ הָעֶלְיוֹנָה"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "וּשְׁמֹר אֶת־אַהֲבָתִי, צְפוּנָה",
+        "כְּאוֹצָר הַיָּקָר מִכֹּל",
+        "וֶהְיֵה לְנַפְשִׁי שׁוֹמֵר",
+        "כִּי חַלָּשׁ אָנֹכִי, הוֹי עוֹזֵר"
+      ]
+    }
+  ],
+  "review": [
+    "The Arabic opens each stanza with the imperative احْفَظْ ('guard/keep'), five times over; the Hebrew keeps the same anaphora with שְׁמֹר, which is the hymn's whole device.",
+    "4:2 לֹא לִי חֶפְצִי עוֹד — the Arabic لَيْسَ مُرَادِي الْآنَ لِي is 'my wish is no longer mine'; the Hebrew keeps the verbless negation and the dative לִי, so the line reads as the surrender it is.",
+    "4:3–4:4 קָנוּי — the Arabic فَيُمْتَلَك is 'that it be possessed'; the glossary verb קָנָה keeps the sense of acquisition (Exod 15:16, קָנִיתָ), which is stronger than a bare 'belonging'.",
+    "2:4 בְּאָרְחוֹתֶיךָ הַיְשָׁרוֹת — the Arabic سُلُوكِ طُرْقِكَ الْقَوِيم is 'walking Your upright paths'; אֹרַח is the poetic path (Ps 25:4) and יָשָׁר the adjective of the same psalm, so the verse's vocabulary is kept.",
+    "5:1 צְפוּנָה — the Arabic ذَاخِرًا is 'storing up'; צָפַן is the biblical verb for laying up treasure (Prov 2:7), and the feminine agrees with אַהֲבָה so the line stays one image."
+  ]
+}

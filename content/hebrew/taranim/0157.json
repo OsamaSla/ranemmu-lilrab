@@ -1,0 +1,51 @@
+{
+  "book": "taranim",
+  "number": 157,
+  "title_he": "הוֹי דּוֹדִי, הוֹי כָפְרִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי דּוֹדִי, הוֹי כָפְרִי",
+        "הוֹי רֹפְאִי, הוֹי מַרְפְּאִי",
+        "הוֹי חַיַּי, הוֹי מַאֲכָלִי",
+        "הוֹי שְׂשׂוֹן הַנֶּפֶשׁ, הוֹי אֲדֹנִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנִי, בְּחֵיקְךָ רוּחִי תָּנוּחַ וְתִשְׁקֹט",
+        "כִּי גָאַלְתָּ הַנֶּפֶשׁ בְּדָם יָקָר",
+        "הוֹי חֲבִיב הַלֵּב, נַפְשִׁי בְךָ תָּמִיד תִּתְעַנָּג",
+        "הוֹי שְׂשׂוֹן הַנֶּפֶשׁ, הוֹי רֵעִי הַקָּרוֹב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "גְּנֹן־נָא עָלַי בְּעֵת יָבוֹא הָרוּחַ בְּגַלִּים עַזִּים",
+        "בַּחֲשֵׁכַת לַיְלָה, אֲדֹנִי, גְּנֹן",
+        "וּצְוֵה לָרוּחַ וּלְמִשְׁבְּרֵי הַיָּם לַעֲמֹד מִיָּד",
+        "אַף בּוֹא־נָא, דּוֹדִי, וְנַחֲמֵנִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "פָּנֶיךָ הַמְּאִירִים בָּאוֹר הֵם אוֹרִי, הוֹי דּוֹדִי",
+        "וְנֶחָמַת הָרוּחַ בְּעוֹלָם הֶעָמָל",
+        "קוֹלְךָ הַמָּתוֹק מַאֲכַל נַפְשִׁי, מַיִם נִפְלָאִים",
+        "בְּךָ תָּנוּחַ חַיַּי בְּנֹעַם"
+      ]
+    }
+  ],
+  "review": [
+    "The printed metre is 15.11.15.11 – 8.8.8.11: stanza 1 is the short fourfold acclamation (8.8.8.11) and stanzas 2–4 carry the long lines. The payload follows that pattern, so the metre script's position medians (taken across all four stanzas) call stanza 1 short by design.",
+    "1:1–1:4 the Arabic piles four pairs (يَا حَبِيبِي … يَا طَبِيبِي … يَا حَيَاتِي … يَا هَنَاءَ الرُّوح); the Hebrew keeps the same eightfold הוֹי anaphora, because the stanza is a litany of titles, not a sentence.",
+    "2:1 בְּחֵיקְךָ רוּחִי תָּנוּחַ וְתִשְׁקֹט — the Arabic فِي حِضْنِكَ رُوحِي تَسْتَرِيحُ تَهْدَأ is 'in Your bosom my spirit rests, is calm'; the Hebrew keeps both verbs as one compound predicate, matching the tune.",
+    "3:1–3:3 יָבוֹא הָרוּחַ בְּגַלִּים עַזִּים … מִשְׁבְּרֵי הַיָּם — Psalm 107:25–29 (רוּחַ סְעָרָה … מִשְׁבְּרֵיהֶם) with Jonah 1:4; the Arabic الرِّيحُ بِالْمَوْجِ الْعَنِيف / مَوْجَ الْبَحْرِ is that storm, and מִשְׁבָּר is the psalm's word for breakers.",
+    "4:1 פָּנֶיךָ הַמְּאִירִים … אוֹרִי — Psalm 4:7 (הָאֵר פָּנֶיךָ) with Num 6:25; the Arabic وَجْهُكَ الْمُشْرِقُ بِالنُّورِ ضِيَائِي is that shining face, and the Hebrew keeps the face as the source of light rather than a metaphor for favour.",
+    "4:3 מַאֲכַל הַנֶּפֶשׁ — the Arabic غِذَاءُ الرُّوحِ is 'the food of the spirit'; מַאֲכָל is the biblical noun for food (Gen 1:29), and the line keeps it in construct so the voice is what feeds."
+  ]
+}

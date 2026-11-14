@@ -1,0 +1,53 @@
+{
+  "book": "taranim",
+  "number": 158,
+  "title_he": "אֲדֹנָי הוּא חֶלְקִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "שָׂשׂוֹן שָׂשׂוֹן, חֶלְקִי בַּחַיִּים",
+        "שָׁלוֹם שָׁלוֹם, כִּי אֱלֹהִים הוּא גוֹרָלִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנָי הוּא חֶלְקִי, גּוֹרָלִי וְחֶפְצִי",
+        "מִמֶּנּוּ יִשְׁפַּע כּוֹסִי, כִּי־הוּא נַחֲלַת נַפְשִׁי",
+        "תּוֹמֵךְ גּוֹרָלִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הָיִיתָ לִי לְחֶלְקִי, אֲדֹנִי הֶחָבִיב",
+        "כִּי נַחֲלָתִי מְתוּקָה, טוֹבָה וְזֹהֶרֶת",
+        "קְדוֹשָׁה, נִפְלָאָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֲדֹנָי אִתִּי תָמִיד, לִימִינִי",
+        "עַל־כֵּן יִשְׂמַח לִבִּי, יָגִיל בַּאֲדֹנָי",
+        "מוֹשִׁיעִי הַנֶּאֱמָן"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "וּבְעֵת הַנְּסִיעָה אֶשְׁכֹּן בְּשַׁלְוָה",
+        "אֶשְׁכַּב בְּשָׁלוֹם, עַל־תִּקְוַת הַתְּקוּמָה",
+        "עַד־יָבוֹא הַמּוֹעֵד"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives stanza 1 as two short acclamation lines and stanzas 2–5 as three lines each (2/3/3/3/3); the payload follows that grid rather than padding it to a rectangle. The metre script's position medians mix the two lengths, so the shape is flagged, not any single line.",
+    "2:2–2:3 מִמֶּנּוּ יִשְׁפַּע כּוֹסִי … תּוֹמֵךְ גּוֹרָלִי — Psalm 16:5–6 (כּוֹסִי … חֶבֶל נַחֲלָתִי); the Arabic مِنْهُ تَفِيضُ كَأْسِي … قَابِضُ قُرْعَتِي is that cup and that lot, and the Hebrew keeps the psalm's nouns.",
+    "4:1–4:2 אֲדֹנָי אִתִּי תָמִיד, לִימִינִי / עַל־כֵּן יִשְׂמַח לִבִּי — Psalm 16:8–9 (שִׁוִּיתִי יְהוָה לְנֶגְדִּי תָמִיד … לֵב שָׂמֵחַ); the Arabic الرَّبُّ كُلَّ حِين مَعِي عَنِ الْيَمِين / يُسَرُّ قَلْبِي is that pair, and the Hebrew keeps the right hand and the heart's joy in the same order.",
+    "1:1–1:2 שָׂשׂוֹן … שָׁלוֹם — the Arabic سُرُور سُرُور … سَلَام سَلَام doubles each noun; the Hebrew repeats them in the same place and keeps the verbless second line (כִּי אֱלֹהִים הוּא גוֹרָלִי), as the print does.",
+    "5:2 אֶשְׁכַּב בְּשָׁלוֹם — Psalm 4:9 (בְּשָׁלוֹם יַחְדָּו אֶשְׁכְּבָה וְאִישָׁן); the Arabic أَرْقُدُ فِي السَّلَامَه is that sleep, and the Hebrew keeps the psalm's verb because the stanza is about dying in peace."
+  ]
+}

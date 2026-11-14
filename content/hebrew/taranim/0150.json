@@ -1,0 +1,54 @@
+{
+  "book": "taranim",
+  "number": 150,
+  "title_he": "עֵדוּתִי אַגִּיד בֵּין הֲמוֹנִים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עֵדוּתִי אַגִּיד בֵּין הֲמוֹנִים",
+        "לְמַעַן יֵדְעוּ כֹל פִּדְיוֹן יֵשׁוּעַ",
+        "הָיִיתִי בַגֹּאֵל שָׂמֵחַ",
+        "מִיּוֹם מוֹלַדְתִּי הֶחָדָשׁ",
+        "וְשִׂמְחָתִי תָּמִיד תִּרְבֶּה, עַל־כֵּן אָשִׁיר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אוֹתִי פָּדָה אֲדֹנִי הָרַחוּם",
+        "וָאֶזְכֶּה בַפְּדוּת עַל־הַמָּוֶת",
+        "הָיִיתִי אָסִיר בָּעֲוֺנוֹת",
+        "וַיְפַתְּחֵנִי גֹּאֵל הָאֱנוֹשׁ",
+        "שִׁחְרְרַנִי עַד־תָּמִים, וְאֶת־אֲדֹנָי אֲהַלֵּל"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוֹאֵל וּנְחֵנִי, אֲדֹנָי",
+        "חַזֵּק עֵדוּתִי לְאֹרֶךְ יָמִים",
+        "שִׂים מַסָּעִי בִּרְצוֹנְךָ",
+        "תָּמִיד וְאֶרְדֹּף אֶת־עִקְּבוֹתֶיךָ",
+        "וְחַזְּקֵנִי, עַבְדְּךָ, לִהְיוֹת עֵד לָאֱמֶת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "טַעֲמוּ וּרְאוּ אֶת־גֹּאֵל הָאָדָם",
+        "וְהַגִּידוּ לָעָם אֶת־אֲשֶׁר קָרָה",
+        "מַה־טּוֹב אֲדֹנָי הָאֱלֹהִים",
+        "לְמִי שֶׁהֶאֱמִין בִּפְדוּתוֹ",
+        "כָּל־הַבָּא אֵלָיו יָשִׂיג יְשׁוּעָה וְיֵלֵךְ וְיָעִיד"
+      ]
+    }
+  ],
+  "review": [
+    "4:1 טַעֲמוּ וּרְאוּ — Psalm 34:9 (טַעֲמוּ וּרְאוּ כִּי־טוֹב יְהוָה); the Arabic ذُوقُوهُ وَانْظُرُوا is the psalm's own invitation, and the Hebrew keeps the two imperatives rather than a single 'experience'.",
+    "4:3 מַה־טּוֹב אֲדֹנָי — Psalm 34:9 again, now as the answer the invitation promises; the Arabic مَا أَطْيَبَ الرَّبَّ الْإلٰه is that exclamation, and the Hebrew casts it as the psalm's clause so the stanza closes on the verse it opened with.",
+    "1:4 מִיּוֹם מוֹלַדְתִּי הֶחָדָשׁ — the Arabic مِنْ يَوْمِ مَوْلِدِي الْجَدِيد is 'from the day of my new birth'; the glossary noun מוֹלֶדֶת is kept so the line says birth, not the Modern Hebrew לֵדָה.",
+    "3:4 אֶרְדֹּף אֶת־עִקְּבוֹתֶיךָ — the Arabic أَقْتَفِي خُطَاك is 'I follow Your steps'; the Hebrew keeps the concrete footprints (עִקְּבוֹת, as in Song 1:8) rather than the abstract 'walk'.",
+    "2:4 וַיְפַתְּחֵנִי — Job 39:5 (יְפַתֵּחַ) and Ps 116:16 (פִּתַּחְתָּ); the Arabic فَكَّنِي is 'He loosed my fetters', and the Hebrew keeps the verb of unfastening chains rather than the general 'freed'."
+  ]
+}

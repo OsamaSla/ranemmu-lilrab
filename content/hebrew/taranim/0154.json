@@ -1,0 +1,69 @@
+{
+  "book": "taranim",
+  "number": 154,
+  "title_he": "נִתְלָה הַגֹּאֵל עַל־עֵץ צְלָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נִתְלָה הַגֹּאֵל עַל־",
+        "עֵץ צְלָב וְנִבְזֶה",
+        "כָּל־לַעַג הוּא נָשָׂא",
+        "וְהוּא אֲדוֹן עוֹלָמִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "חָשַׁךְ שֶׁמֶשׁ הַשָּׁמָיִם",
+        "נִבְקְעוּ צוּרִים חֵרְשִׁים",
+        "נִקְרַע אוֹתוֹ הַפָּרֹכֶת",
+        "נִפְתְּחוּ אוֹתָם הַקְּבָרִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נָתַן רוּחוֹ וַיָּמֹת",
+        "בְּעַד רְשָׁעִים חוֹטְאִים",
+        "בְּחֶשְׁכַת הַקֶּבֶר לָן",
+        "וְהוּא שַׂר הַחַיִּים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נִקְבַּר מְחַיֵּה עָפָר",
+        "בְּקֶבֶר כִּבְנֵי אָדָם",
+        "נֶעְלְמָה הַפְּנִינָה הַטּוֹבָה",
+        "בְּתוֹךְ הָאֶבֶן הֶחָתוּם"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "קָם בַּבֹּקֶר הַמֵּאִיר",
+        "וַיְגָרֵשׁ אֲפֵלַת לֵיל",
+        "מְקַיֵּם צֶדֶק הַשַּׁדַּי",
+        "כּוֹבֵשׁ צְבָא הָאוֹיְבִים"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "וַיַּעַל עַל־כִּסֵּא רָם",
+        "מַפְגִּיעַ בַּעֲדָם",
+        "עַל־כֵּן גְּמוּלוֹ נַשְׁמִיעַ",
+        "מוֹדִים בְּכָל־עֵת"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 וְנִבְזֶה — Isaiah 53:3 (נִבְזֶה וַחֲדַל אִישִׁים); the Arabic وَأُهِين is 'and despised', and the Hebrew keeps the prophet's participle of the Servant.",
+    "2:3 נִקְרַע … הַפָּרֹכֶת — Matthew 27:51 (וַתִּקָּרַע פָּרֹכֶת הַהֵיכָל); the Arabic شُقَّ ذٰلِكَ الْحِجَاب is that veil torn, and פָּרֹכֶת is the temple word, so the sign stays tied to the sanctuary rather than a general curtain.",
+    "2:1–2:4 חָשַׁךְ … נִבְקְעוּ … נִקְרַע … נִפְתְּחוּ — the four signs of Matt 27:45–52 in the Arabic order; the Hebrew keeps all four as niphal passives so the stanza reads as one chain of divine passives.",
+    "4:1 מְחַיֵּה עָפָר — the Arabic مُحْيِي الرَّمِيم is 'the Enlivener of the dust/corruption'; the Hebrew keeps the concrete עָפָר (dust, as in Dan 12:2, יְשֵׁנֵי עֲפַר־אֲדָמָה) rather than an abstract 'the dead'.",
+    "6:1–6:2 וַיַּעַל עַל־כִּסֵּא רָם / מַפְגִּיעַ — Psalm 110:1 with Hebrews 7:25 (מַפְגִּיעַ בַּעֲדָם); the Arabic وَاعْتَلَى الْعَرْشَ … شَافِعًا is that session and intercession, and the glossary term מַפְגִּיעַ is kept.",
+    "5:3–5:4 מְקַיֵּם צֶדֶק … כּוֹבֵשׁ — the Arabic مُوفِيًا عَدْلَ الْقَدِير / قَاهِرًا جَيْشَ الْعِدَى is 'fulfilling the Almighty's justice, conquering the army of foes'; the Hebrew keeps both participles, since the resurrection is presented as justice kept and enemies defeated."
+  ]
+}
