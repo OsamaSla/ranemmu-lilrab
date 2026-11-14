@@ -1,0 +1,56 @@
+{
+  "book": "taranim",
+  "number": 267,
+  "title_he": "עָרַכְתָּ לָנוּ שֻׁלְחָן בְּעוֹדֵנוּ בְּמַעֲבָר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עָרַכְתָּ לָנוּ שֻׁלְחָן בְּעוֹדֵנוּ בְּמַעֲבָר",
+        "עַד־בּוֹאֲךָ הַקָּרוֹב, הוֹי מְקוֹר הַשָּׂשׂוֹן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲנַחְנוּ אֲשֶׁר כֻּלָּנוּ בְּעָוֺן נוֹצַרְנוּ",
+        "וְכֵן בְּחֵטְא אִמֵּנוּ חוֹלָלְנוּ וְיֻלַּדְנוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מָה רַב הַחֶסֶד הַשּׁוֹפֵעַ בְּטוּבוֹ",
+        "אֲנַחְנוּ וְזֶה שָׁרְשֵׁנוּ, וְיֵשׁ־לָנוּ מָקוֹם"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לְפָנֶיךָ, אֲדֹנֵינוּ, נִשְׁכַּח כָּל־סְבִיבֵנוּ",
+        "נִזְכָּרְךָ, אֲשֶׁר נָתַתָּ נַפְשְׁךָ בַּעֲדֵנוּ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "נִזְכֹּר אַהֲבָתְךָ אֲשֶׁר הִגְלֵיתָ, הוֹי אוֹהֵב",
+        "נִזְכְּרֶנָּה כָּל־עוֹדֵנוּ בַּחַיִּים וּבַיְּקוּם"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "יִשְׁפַּע מִלִּבּוֹתֵינוּ הַתּוֹדָה לִפְנֵי כִסְאֶךָ",
+        "נָרִים קוֹלֵנוּ אֵלֶיךָ: מָה גָדַל טוּבְךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the Lord's Supper as a table on the way: 1:1–2 is Ps 23:5 (תַּעֲרֹךְ לְפָנַי שֻׁלְחָן) with 1 Cor 11:26, 2:1–2 Ps 51:7 (הֵן בְּעָוֺן חוֹלָלְתִּי), 3:1–2 Eph 2:4–5 with 1 Cor 4:7, 4:1–2 Phil 3:13–14, 5:1–2 2 Cor 5:14, and 6:1–2 Ps 145:7.",
+    "1:1 עָרַכְתָּ … שֻׁלְחָן — the Arabic رَتَّبْتَ لَنَا مَائِدَه is not a quotation, but עָרַךְ שֻׁלְחָן is the psalms' fixed idiom (Ps 23:5, Ps 78:19), so the line carries the psalm even though the Arabic does not quote it. The participle בְּמַעֲבָר keeps the printed 'while in transit'.",
+    "2:2 וְיֻלַּדְנוּ — the Arabic وَكَذَا بِالْخَطِيَّةِ قَدْ حُبِلَ بِنَا is 'and in sin we were conceived'; the Hebrew pairs חוֹלָלְנוּ (Ps 51:7's 'writhed forth') with יֻלַּדְנוּ, and names אִמֵּנוּ because the psalm's confession is the mother's conception, so the stanza needs both halves of the verse and not a general statement about heredity.",
+    "3:2 אֲנַחְנוּ וְזֶה שָׁרְשֵׁנוּ — the Arabic إِنَّا وَهٰذَا أَصْلُنَا is 'we and this our root'; the Hebrew keeps the verbless apposition with וְזֶה, so the line still points at the guilty origin rather than describing it, and the clause 'we have a place here' follows as the stanza's surprise.",
+    "6:2 מָה גָדַל טוּבְךָ — the Arabic يَا عُظْمَ جُودِكَ is an exclamation ('O the greatness of Your bounty'); Hebrew cannot put an abstract noun in the vocative without awkwardness, so the line uses the verb גָּדַל with מָה, the same construction as Ps 92:6 (מַה־גָּדְלוּ מַעֲשֶׂיךָ), and keeps it a shout."
+  ]
+}

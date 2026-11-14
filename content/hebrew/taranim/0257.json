@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 257,
+  "title_he": "הוֹי כָּל־פְּדוּיֵי יְהוָה, רַנְּנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי כָּל־אֲשֶׁר נִפְדָּה, רַנְּנוּ לָאֵל",
+        "לַמָּשִׁיחַ בְּתוֹדָה הָרִיעוּ",
+        "מְהֵרָה יָבוֹא — עַל־כֵּן גַּם שְׂמָחוּ",
+        "וּבִכְבוֹדוֹ נִזְכֶּה כֻּלָּנוּ יָחַד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בַּבֹּקֶר נֶחֱזֶה אֶת־דּוֹדֵנוּ",
+        "וַעֲנַן הַתְּלָאוֹת יַעֲבֹר וָיָסַף",
+        "וְדִמְעוֹת הַיָּגוֹן תִּשָּׁכַחְנָה, וְהַנְּהִי",
+        "וּבִכְבוֹדוֹ נִזְכֶּה כֻּלָּנוּ יָחַד"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "לוּ נֵלֵךְ בְּדֶרֶךְ תָּמִיד בְּצֵל כְּנָפָיו",
+        "מַרְאִים בְּחַיֵּינוּ אֶת־עֹשֶׁר כְּבוֹדוֹ",
+        "לְמַעַן יִהְיֶה מַעֲשֵׂינוּ כִּרְצוֹנוֹ",
+        "וּבִכְבוֹדוֹ נִזְכֶּה כֻּלָּנוּ יָחַד"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֵינֶנִּי כָּאן כִּי אִם־גֵּר וְתוֹשָׁב",
+        "אֲחַכֶּה לְבוֹא גֹּאֲלִי הַקָּרֵב",
+        "יִקָּחֵנִי לָשֶׁבֶת בַּבַּיִת הָרָחָב",
+        "וּבִכְבוֹדוֹ נִזְכֶּה כֻּלָּנוּ יָחַד"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הוֹי חֲתַן הַכָּבוֹד, חוּשָׁה לַחֲתֻנָּה",
+        "הִנֵּה הַכַּלָּה מְחַכָּה לַחֲטִיפָה",
+        "כַּאֲשֶׁר יִשְׁלַם הַשָּׂשׂוֹן וְהַתְּרוּעָה",
+        "וּבִכְבוֹדְךָ נִזְכֶּה כֻּלָּנוּ יָחַד"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the marriage of the Lamb: 1:1–3 is Isa 62:11 (הִנֵּה יִשְׁעֵךְ בָּא) with Rev 22:12, 2:1–3 Rev 21:4 (וְלֹא־יִהְיֶה־שָּׁם עוֹד מָוֶת … וְלֹא נְהִי), 3:1–3 1 Pet 2:9–12, 4:1–3 Heb 11:13 (גֵּרִים וְתוֹשָׁבִים) with John 14:2, and 5:1–3 Rev 19:7–9.",
+    "The refrain is identical in stanzas 1–4 and switches to the second person in stanza 5 (וּבִכְבוֹדְךָ), because the printed Arabic itself changes from وَبِمَجْدِهِ to وَبِمَجْدِكَ in the last stanza: by then the Bride is addressing the Bridegroom, not speaking of Him.",
+    "1:2 הָרִיעוּ — the Arabic وَاهْتِفُوا is a shout, and the Hebrew keeps the distinction between רִנָּה (singing) in line 1 and תְּרוּעָה (the shout) here and in 5:3; both are cultic words (Ps 47:6, הָרִיעוּ לֵאלֹהִים בְּקוֹל רִנָּה).",
+    "2:2 יַעֲבֹר וָיָסַף — the Arabic تَغِيب is simply 'vanishes'; the Hebrew uses the doubled verb of Job 14:10's passing-away idiom so the cloud has the weight of a thing that is really gone. The line is one verb longer than the Arabic, which the printed metre absorbs.",
+    "5:2 לַחֲטִיפָה — the Arabic الاِخْتِطَاف is the rapture; חֲטִיפָה is post-biblical for a snatching-away, and the line needs it rather than a paraphrase, because the whole stanza hangs on the Bride waiting for that one event. Glossary entry added."
+  ]
+}

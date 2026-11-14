@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 260,
+  "title_he": "בָּאתִי אֶל־הַגֹּאֵל אָסוּר וְנִשְׁבָּר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "גֹּאֵל הָאָדָם מָחָה הֶעָוֺן",
+        "שָׂם שָׁנִי כַּשֶּׁלֶג לְעֵינֵי כֹל"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בָּאתִי אֶל־הַגֹּאֵל, אָסוּר וְנִשְׁבָּר",
+        "וַיַּתֵּר אֲדֹנִי, וְשִׁחְרֵר הָאָסִיר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מֵת עַל־עֲוֺנִי, צְלָבוֹ הוּא תִפְאַרְתִּי",
+        "אֵין בִּי צֶדֶק — וְהוּא צִדְקָתִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֶרְאֵהוּ כַּאֲשֶׁר יָבוֹא מִשָּׁמַיִם",
+        "אֵלָיו אֶעְלֶה, אֶפְגְּשֵׁהוּ בָּאֲוִיר"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "בִּכְבוֹדוֹ הָעֶלְיוֹן אֶהְיֶה בְכָל־עֵת",
+        "כִּי מָחָה עֲוֺנִי בְּדָמוֹ הַיָּקָר"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Isaiah 1:18 with Romans 3–4: 1:1–2 is Isa 1:18 (אִם־יִהְיוּ חֲטָאֵיכֶם כַּשָּׁנִי כַּשֶּׁלֶג יַלְבִּינוּ), 2:1–2 Ps 146:7 with John 8:36, 3:1–2 Jer 23:6 (יְהוָה צִדְקֵנוּ) with 2 Cor 5:21, and 4:1–2 1 Thess 4:17 (נִלָּקֵט … בָּאֲוִיר). Every stanza is the printed two-line shape.",
+    "1:2 שָׂם שָׁנִי כַּשֶּׁלֶג — the Arabic جَاعِلًا قِرْمِزَهَا كَالثَّلْجِ is Isa 1:18's crimson-and-snow; the Hebrew shortens 'crimson' to שָׁנִי (the verse's own word) because the line must hold 'before all eyes', which the Arabic adds with فِي الْأَعْلَام. The colour word is not modernised to אָדֹם.",
+    "3:2 וְהוּא צִדְקָתִי — the Arabic فَشَخْصُهُ بِرِّي is 'His person is my righteousness'; the Hebrew avoids the abstract בְּרִי (which would sound like 'my merit') and uses צְדָקָה, the noun of the great exchange of 2 Cor 5:21, so the line states imputation and not a quality.",
+    "4:2 בָּאֲוִיר — the Arabic فِي الْهَوَاء is deliberately 1 Thess 4:17's ἀέρα; the Hebrew keeps אֲוִיר, the later loan for 'air', because the verse is being quoted and the meeting is in the air, not in heaven.",
+    "5:1 בִּכְבוֹדוֹ הָעֶלְיוֹן — the Arabic فِي مَجْدِهِ الْأَسْنَى is 'in His loftiest glory'; the Hebrew keeps הָעֶלְיוֹן as an adjective of height, the same root as the divine title, so the line's glory is God's own and not a place."
+  ]
+}

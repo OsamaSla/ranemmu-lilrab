@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 263,
+  "title_he": "הוֹי צְבָא הָרַחֲמָן אֲשֶׁר נִתְגַּיְּסוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "תַּם הַפִּדְיוֹן, הַלְלוּיָהּ, רַנְּנוּ",
+        "תַּם הַפִּדְיוֹן, הַלְלוּיָהּ, רַנְּנוּ",
+        "תַּם הַפִּדְיוֹן, הַלְלוּיָהּ, רַנְּנוּ",
+        "לַאֲדֹנֵינוּ יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוֹי צְבָא הָרַחֲמָן אֲשֶׁר נִתְגַּיְּסוּ",
+        "בְּמַעֲמַד הָאֵל הָעֶלְיוֹן הַלְלוּ",
+        "נִצַּחְתֶּם נִצָּחוֹן עוֹלָם — הוֹדוּ",
+        "לְמַלְכֵּנוּ הַמְנֻצָּח"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֲשֶׁר רָמַס כֹּחוֹת שְׁאוֹל וּפָדָה",
+        "אֶת־שְׁבוּיֵי הַכִּלָּיוֹן הָאֻמְלָלִים",
+        "וַיְנַהֲלֵם אֶל־הַמָּרוֹם, מְחַדֵּשׁ",
+        "אֶת־חַסְדּוֹ הַמְפֻרְסָם"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הִנֵּה קוֹל קְדוֹשֵׁי מָרוֹם בַּתְּהִלָּה",
+        "וְהַתּוֹדָה וְהַשֶּׁבַח יַעַל מַגִּיד",
+        "לַאדֹנָי כָּבוֹד, כִּי הוּא נָתַן לָנוּ",
+        "יְשׁוּעָתוֹ הַמְהֻלָּלֶת"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the victory procession of Psalm 68:18 and Colossians 2:15: 1:1–4 is John 19:30 (נִשְׁלַם) with Rev 5:9, 3:1–2 Ps 68:19 (עָלִיתָ לַמָּרוֹם שָׁבִיתָ שֶּׁבִי) with Isa 49:25, and 4:1–2 Rev 5:12 and 7:10.",
+    "1:1–3 repeats the same line three times, exactly as the printed تَمَّ الْخَلَاصُ هَلِّلُويَا رَنِّمُوا is set three times before the short address; the Hebrew does not vary the three lines, because the repetition is the stanza's whole form and the third line leads straight into the acclamation of line 4.",
+    "1:4 לַאֲדֹנֵינוּ יֵשׁוּעַ — the printed short line is لِرَبِّنَا يَسُوع, four words against the long triple; the Hebrew keeps the brevity, so the stanza ends on a name and not on a clause.",
+    "2:3 נִצָּחוֹן עוֹלָם — the Arabic بِنَصْرٍ دَائِمٍ is 'with a lasting victory'; the Hebrew uses נִצָּחוֹן, the noun of 1 Sam 15:29 and 1 Chr 29:11 for the eternal triumph that belongs to God, so the army's win is His and not its own.",
+    "3:1 רָמַס כֹּחוֹת שְׁאוֹל — the Arabic دَاسَ قُوَّاتِ الْجَحِيمِ is 'trampled the powers of hell'; רָמַס is the biblical verb for treading down (Isa 63:3, פּוּרָה דָּרַכְתִּי לְבַדִּי), and שְׁאוֹל is kept instead of a later hell-word, because the line is about the powers and not the place."
+  ]
+}

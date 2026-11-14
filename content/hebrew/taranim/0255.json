@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 255,
+  "title_he": "אֲדוֹנִי, בִּרְאוֹתִי אֶת־כּוֹכְבֵיךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נַפְשִׁי תְּזַמֵּר, הוֹי מוֹשִׁיעִי",
+        "מָה אַדִּיר אַתָּה, מָה אַדִּיר אַתָּה",
+        "נַפְשִׁי תְּזַמֵּר, הוֹי מוֹשִׁיעִי",
+        "מָה אַדִּיר אַתָּה, מָה אַדִּיר אַתָּה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדוֹנִי, בִּרְאוֹתִי אֶת־כּוֹכְבֵי שָׁמֶיךָ",
+        "וְכָל־הַסּוֹבֵב בְּגַלְגַּלֵּי מְרוֹמִים",
+        "אֶשְׁמַע קוֹל רַעַם בַּעֲנָנֶיךָ",
+        "וְכֻלָּם מַעֲשֵׂה יָדֶיךָ הֵמָּה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וּבְהִתְהַלְּכִי בְּסִבְכֵי הַיָּעַר",
+        "וְאֶשְׁמַע רִנַּת צִפֳּרִים בָּעֳפָיִים",
+        "יֵרֵד הַמַּיִם מִן־הֶהָרִים",
+        "וַהֲמוֹנוֹ יָבֹא עִם־נְעִימוֹת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וּבְזָכְרִי אֵיךְ אֲדֹנָי הִתְעַנָּה",
+        "נָתַן נַפְשׁוֹ בְּעַד הַחוֹטְאִים",
+        "וּבְדָמוֹ הֵסִיר כָּל־עֲוֺנִי",
+        "וֶהֱשִׁיבַנִי לָלֶכֶת בִּרְצוֹנוֹ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "כַּאֲשֶׁר יָבוֹא הַמָּשִׁיחַ מְהֵרָה",
+        "יִקָּחֵנִי שָׁמָיְמָה אֶל־שָׁם",
+        "בְּשִׂמְחָה אֶשְׁתַּחֲוֶה לְדוֹדִי",
+        "וְאָשִׁיר לוֹ: מָה אַדִּיר אַתָּה"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the created order answering the Creator: 2:1–4 is Ps 8:4 (כִּי אֶרְאֶה שָׁמֶיךָ מַעֲשֵׂה אֶצְבְּעֹתֶיךָ) with Ps 19:2, 3:3–4 Ps 104:10 (הַמְשַׁלֵּחַ מַעְיָנִים בַּנְּחָלִים) with Ps 104:12 (עֲלֵי־עֳפָאָיו תִּשְׁכּוֹן), and 4:2–4 Isa 53:10–11 with 1 Pet 2:24–25.",
+    "1:1–4 repeats the couplet, as the print does: the Arabic gives نَفْسِي تُغَنِّي يَا مُخَلِّصِي / مَا أَعْظَمَك twice and then again, so the Hebrew keeps all four lines rather than compressing the stanza to one couplet. מָה אַדִּיר אַתָּה is the psalm's exclamation (Ps 8:2, מָה־אַדִּיר שִׁמְךָ) and not the modern 'how great'.",
+    "2:2 בְּגַלְגַּלֵּי מְרוֹמִים — the Arabic فِي الْأَفْلَاك is the astronomical 'spheres'; biblical Hebrew has גַּלְגַּל only in the vision of Ezek 10:13, and the plural with מְרוֹמִים keeps the sense of the revolving heavens without importing the later cosmology as a doctrine.",
+    "3:4 וַהֲמוֹנוֹ יָבֹא עִם־נְעִימוֹת — the Arabic خَرِيرُهُ يَأْتِي مَعَ الْأَلْحَان is 'its murmur comes with melodies'; הָמוֹן is the biblical sound of many waters (Ezek 43:2, קוֹל מַיִם רַבִּים) and נְעִימוֹת the psalm's word for sweet music (Ps 81:3), so the stream is both noise and song.",
+    "4:1 הִתְעַנָּה — the Arabic does not say 'suffered' here, only that the Lord gave Himself; the Hebrew adds the self-humbling of Isa 53:7 and Phil 2:8, because the stanza's argument is that the Creator of stanza 2 is the Servant of stanza 4."
+  ]
+}

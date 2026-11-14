@@ -1,0 +1,60 @@
+{
+  "book": "taranim",
+  "number": 259,
+  "title_he": "הִנֵּה תַּאֲוַת הַלֵּב רַבָּה וְרָבְתָה הַכְּמִיהָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֶרְאֶה, אֶרְאֶה בְעֵינַי גֹּאֵל הָאָדָם",
+        "אֶשְׁכֹּן בְּצִדּוֹ בְּלִי נְהִי",
+        "אֶשְׁכַּח אֶת־עֲמָלִי כָּאן",
+        "אֶשְׁכַּח אֶת־מַכְאוֹבַי כָּאן",
+        "כַּאֲשֶׁר אֶפְגֹּשׁ אֶת־יֵשׁוּעַ דּוֹדִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הִנֵּה תַּאֲוַת הַלֵּב רַבָּה",
+        "וְרָבְתָה הַכְּמִיהָה",
+        "מָתַי יָבוֹא הַיּוֹם הַזֶּה",
+        "וְיִבָּטֵל הָאָנָק"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אִם יָבוֹא מַהֵר וְאִם יְאַחֵר",
+        "אֶצְפֶּה לַבֹּקֶר",
+        "יִתְפַּזְּרוּ כָּל־הֶעָבִים",
+        "כַּאֲשֶׁר יָאִיר הַשָּׁחַר"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֶפָּטֵר מֵחֹשֶׁךְ הַחַיִּים",
+        "וּמֵעֲכִירוּת הַחַיִּים",
+        "וְאֶשְׂמַח כַּאֲשֶׁר אֶרְאֶה",
+        "דּוֹדִי עַל־הַכִּסֵּא"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "תֹּאחַז יָדִי אֶת־הַכִּנּוֹר",
+        "מַעֲשֵׂה הַגֹּאֵל הַזֶּה",
+        "אֲזַמֵּר נְגִינַת הַנִּצָּחוֹן",
+        "בָּהּ לָנֶצַח עַד"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a song of the departure: 1:1–5 is Ps 17:15 (אֲנִי בְּצֶדֶק אֶחֱזֶה פָנֶיךָ) with 1 John 3:2, 2:3–4 Ps 130:6 with Rev 21:4, 3:3–4 Isa 60:2 with Mal 3:20, and 4:4 Rev 7:17. The printed metre breaks each stanza differently, which is why the shape is 5/4/4/4/4.",
+    "1:1–2 אֶרְאֶה … בְעֵינַי — the Arabic سَأَرَى سَأَرَى عِيَانًا doubles the verb, and the Hebrew doubles it too; the second occurrence carries בְעֵינַי ('with my eyes'), because عِيَانًا is the word for seeing face to face.",
+    "2:2 הַכְּמִיהָה — the Arabic الْحَنِين is the ache of longing; biblical Hebrew has no single noun, and כְּמִיהָה is post-biblical for that ache, used here because the line is short and an infinitive clause would not fit. The same noun recurs in 4:3's joy, so the stanza pair is longing then satisfaction.",
+    "4:1 אֶפָּטֵר — the Arabic أُوَدِّعُ is 'I bid farewell'; פָּטַר in the Mishnaic sense of taking leave is the only Hebrew verb that keeps the courtesy of the Arabic, since the biblical פָּטַר means 'to exempt' and would change the line's meaning.",
+    "5:1–2 תֹּאחַז יָדִי אֶת־הַכִּנּוֹר / מַעֲשֵׂה הַגֹּאֵל הַזֶּה — the Arabic تُمْسِك يَدِي قِيثَارَةً مِنْ صُنْعِ ذَا الْفَادِي has no verb for 'made'; the Hebrew keeps the construct מַעֲשֵׂה … on the second line, so the harp is still the Redeemer's handiwork and not merely a thing held."
+  ]
+}

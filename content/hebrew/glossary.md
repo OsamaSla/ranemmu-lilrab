@@ -83,6 +83,13 @@ Arabic wins.
 | حال / وضع (situation, state) | מָצָב | Post-biblical for a circumstance; used where the Arabic has `حَال` and no biblical noun fits the line. |
 | شهوة / شوق (desire, longing) | תַּאֲוָה | Ps 10:3, 21:3; the object that fills the heart, not a vague emotion. |
 | رواية / سرد (tale, narrative) | סִפּוּר | Post-biblical for a recounted account; kept for the hymn's "love tale" refrain, where `סֵפֶר` would suggest a written book. |
+| اختطاف (rapture, snatching away) | חֲטִיפָה | Post-biblical; the noun for being caught up (1 Thess 4:17), used when the line needs the event and not a paraphrase. |
+| حنين / شوق (yearning) | כְּמִיהָה | Post-biblical for the ache of longing; used where biblical Hebrew has only the verb `כָּמַהּ` (Ps 42:2) and the line needs a noun. |
+| أثر / رسم (impress, mark) | רֹשֶׁם | Post-biblical for a visible trace; kept for the marks of the wounds, where the biblical `רָשַׁם` supplies no noun. |
+| منزل / مسكن (dwelling) | מָדוֹר | Mishnaic for an abode; used for the prepared place of John 14:2, where `מָעוֹן` would sound like the temple. |
+| نصر / انتصار (victory) | נִצָּחוֹן | Post-biblical noun; the biblical language expresses victory verbally (`נָצַח`, `יָשַׁע`), so this is used only where the line needs the abstract. |
+| حمل الله (Lamb of God) | שֵׂה הָאֱלֹהִים | John 1:29's fixed title; never `حَمَل` as a common noun when it is a name. |
+| فدية / فداء (ransom, redemption) | פִּדְיוֹן | Exod 21:30, Ps 49:8–9; the price paid, distinct from `פְּדוּת` (the act) and `כֹּפֶר` (the covering). |
 
 ## Pointing conventions
 

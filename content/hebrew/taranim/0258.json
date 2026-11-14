@@ -1,0 +1,47 @@
+{
+  "book": "taranim",
+  "number": 258,
+  "title_he": "אֶקְדִּישׁ לַאדֹנִי יֵשׁוּעַ תּוֹדָתִי וְשִׁבְחִי בְּהַכְנָעָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי מַעְיַן הָרַחֲמִים, מְקוֹר הַחֶסֶד",
+        "נְחֵה חַיַּי, מַדְרִיךְ לַטּוֹב בְּכָל־עֵת"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֶקְדִּישׁ לַאדֹנִי יֵשׁוּעַ",
+        "תּוֹדָתִי וּתְהִלָּתִי בְּהַכְנָעָה",
+        "מְשַׁבֵּחַ בֵּין הָמוֹנִים",
+        "תְּהִלַּת אַהֲבָה בִּכְנִיעָה",
+        "יִמְתַּק שִׁירִי וְהַשֶּׁבַח",
+        "כִּי הַשֶּׁפַע מִמֶּנּוּ בַּיְּקוּם",
+        "וּבוֹ לִבִּי יָנוּחַ",
+        "לִי מִמֶּנּוּ שֶׁפַע עַל־שֶׁפַע"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נַפְשִׁי, כַּמָּה פְּעָמִים",
+        "הִצִּילֵךְ אֲדֹנַיִךְ הַנַּדִּיב",
+        "נַפְשִׁי, כַּמָּה צָרוֹת",
+        "הֱבִיאוּךְ אֶל־מֶרְחָב רַב",
+        "נַפְשִׁי, עִדִי עַל־רַחֲמִים",
+        "אֲשֶׁר גָּבְרוּ עַל כָּל־הַדְּאָגוֹת",
+        "כֵּן הוֹדִי עַל־חֶסֶד",
+        "אֲשֶׁר הֵפִיץ כָּל־הֶעָבִים"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Ps 103:2 (בָּרְכִי נַפְשִׁי … וְאַל־תִּשְׁכְּחִי כָּל־גְּמוּלָיו) turned into testimony: stanza 1 asks to be led, stanza 2 offers praise with a sacrifice's submission, and stanza 3 counts the rescues. 3:5–8 is Ps 107:6,13–14 and Isa 55:12.",
+    "1:1–2 is the printed two-long-line stanza; the Arabic يَا مَنْبَعَ الْحَنَان يَا مَصْدَرَ الْإِحْسَان is not a couplet the rest repeats, so the Hebrew keeps two lines and does not break them into the eight short lines of the following stanzas.",
+    "2:6 בַּיְּקוּם — the Arabic فِي الْوُجُود is 'in existence'; biblical Hebrew has no noun for the created order as a whole, so the line uses יְקוּם (Gen 7:4, כָּל־הַיְקוּם), the fixed term for all that exists. 2:8 שֶׁפַע עַל־שֶׁפַע renders جُودٌ فَوْقَ جُود with the same doubling.",
+    "3:2 אֲדֹנַיִךְ — the Arabic رَبُّكِ is feminine-suffixed because the soul is addressed as a woman throughout ('O soul'); the Hebrew keeps the second-person feminine singular in every vocative (נַפְשִׁי … הִצִּילֵךְ … הֱבִיאוּךְ), so the stanza reads as one address and not as a mixed one.",
+    "3:4 הֱבִיאוּךְ אֶל־מֶרְחָב רַב — the Arabic أَفْضَتْ إِلَى رَحْبٍ عَظِيم is 'led out into a wide place'; מֶרְחָב is the psalm's word for the open space of deliverance (Ps 18:20, וַיּוֹצִיאֵנִי לַמֶּרְחָב), and the plural subject (the straits) is kept from the Arabic."
+  ]
+}
