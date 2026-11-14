@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 220,
+  "title_he": "בְּחַסְדּוֹ קְרָאַנִי מוֹשִׁיעִי הֶחָבִיב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "פָּנָיו קְרָאוּנִי, דָּמוֹ פְּדָאַנִי",
+        "אַהֲבָתוֹ הֱבִיאַנִי אֶל־הַצְּלָב",
+        "הוֹי גֹּדֶל חֶסֶד הֶחָבִיב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּחַסְדּוֹ קְרָאַנִי, מוֹשִׁיעִי הֶחָבִיב",
+        "בְּרוּחוֹ נִחַנִי לְאוֹרוֹ הַנִּפְלָא",
+        "וַיְזַמְּרוּ הַמַּלְאָכִים",
+        "לְהַדְרָכַת נַפְשִׁי הָאוֹבֶדֶת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מוֹשִׁיעִי בָּא אֵלַי בְּפָנָיו הַמְּאִירוֹת",
+        "בַּחֲבוּרָתוֹ רְפָאַנִי וְחִבֵּשׁ פְּצָעָי",
+        "הוֹי פֶּלֶא אַהֲבָתוֹ",
+        "כִּי רָצָה בִּצְלָבוֹ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וּלְרַגְלָיו נָעַם־לִי לָשֶׁבֶת",
+        "בְּזַמֵּר וּבְכַבֵּד מוֹשִׁיעִי הַקָּדוֹשׁ",
+        "כִּי כָל־נֶצַח וָעַד",
+        "לֹא־יַסְפִּיק שֶׁבַח הַנִּפְדֶּה"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–3 is a three-line opening stanza against the print's four-line tune 76.76.88 – 66.99 (the same class as tr0211); it is kept short rather than padded, so the abbreviated cry 'O the greatness of the Beloved's grace' stands alone.",
+    "2:2 בְּרוּחוֹ נִחַנִי — the Arabic بِرُوحِهِ هَدَانِي is 'by His Spirit He guided me'; נָחָה is the Exodus verb (Exod 13:21, נֹחֶה), so guidance is the wilderness-leading and not mere advice.",
+    "3:2 וְחִבֵּשׁ פְּצָעָי — the Arabic وَضَمَّدَ الْجِرَاح is 'He bound up the wounds'; חָבַשׁ is the biblical verb of Isa 61:1 (לַחֲבֹשׁ לְנִשְׁבְּרֵי־לֵב) and Ps 147:3, and the same verse supplies the 'healing' of the first clause.",
+    "3:2 בַּחֲבוּרָתוֹ — the Arabic بِحُبْرِهِ is the print's spelling of بِحُبُرِهِ 'with His stripes' (Isa 53:5, וּבַחֲבֻרָתוֹ נִרְפָּא־לָנוּ); the Hebrew therefore quotes the Isaiah noun directly, which also explains why the wound-healing follows in the same line.",
+    "4:4 לֹא־יַסְפִּיק שֶׁבַח הַנִּפְדֶּה — the Arabic لَا يَكْفِي سُبْحُ الْمُفْتَدِي is 'the praise of the ransomed does not suffice'; the singular is kept as a collective, so the line speaks of the ransomed person generically rather than of 'our praise'."
+  ]
+}

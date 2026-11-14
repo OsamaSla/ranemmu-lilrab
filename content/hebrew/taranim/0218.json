@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 218,
+  "title_he": "אֱלֹהִים יִשְׁעִי, וְאֵין לִי זוּלָתוֹ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֱלֹהִים יִשְׁעִי, אֱלֹהִים יִשְׁעִי",
+        "אֱלֹהִים יִשְׁעִי וְאֵין־לִי זוּלָתוֹ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לֵאלֹהִים נַפְשִׁי, קַוִּי",
+        "מִמֶּנּוּ לִי תִּקְוָתִי",
+        "הוּא יִשְׁעִי וּמִשְׂגַּבִּי",
+        "וְצוּרִי, מַחְסִי הוּא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֲדֹנָי צוּר עֻזִּי",
+        "וּמִשְׂגַּבִּי הַבָּצוּר",
+        "עַל־כֵּן בּוֹ בִּטְחוּ",
+        "הוֹי עַם, בְּכָל־עֵת"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הָבָה שִׁפְכוּ לְבַבְכֶם",
+        "לִפְנֵי הָעֶלְיוֹן הַנֶּאֱמָן",
+        "אֱלֹהִים מַחְסֵנוּ הוּא",
+        "וְהוּא לָנוּ עוֹזֵר"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 is the refrain given alone as the first stanza, the same printed shape as tr0126/0180/0212; it is kept unpadded and the doubled 'God is my salvation' is kept doubled, since the Arabic prints it twice on one line. That doubling is also what makes the metre script flag 1:1 (+4 against the other stanzas' seven) — it is the one deliberate long line in the hymn.",
+    "2:1–4 is Psalm 62:2–3 and 6–7 (אַךְ אֶל־אֱלֹהִים דּוּמִיָּה נַפְשִׁי / אַךְ הוּא צוּרִי וִישׁוּעָתִי / מִשְׂגַּבִּי לֹא־אֶמּוֹט); the psalm's four nouns are kept as four, in the order the Arabic gives them (خَلَاص / مَعْقِل / صَخْرَة / مَلْجَأ).",
+    "3:1–4 is Psalm 62:8–9 nearly verbatim: צוּר עֻזִּי (v.8), שִׁפְכוּ לְפָנָיו לְבַבְכֶם (v.9), and בִּטְחוּ בוֹ בְכָל־עֵת — the vocative הוֹי עַם stands where the psalm's 'people' does, so the stanza is addressed to the congregation and not to an individual.",
+    "3:1 the Hebrew uses אֲדֹנָי where the Arabic prints الرَّبُّ, since the Arabic here has the ordinary word and not the tetragrammaton; יְהֹוָה is reserved for the hymns where the print itself has يَهْوَه (tr0091, tr0130, tr0143).",
+    "4:2 הַנֶּאֱמָן — the Arabic الْأَمِين is 'the faithful one'; אָמַן is the verb of Gen 15:6 and the adjective of Deut 7:9, so faithfulness is kept as trustworthiness rather than 'honest'."
+  ]
+}

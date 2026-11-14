@@ -1,0 +1,52 @@
+{
+  "book": "taranim",
+  "number": 213,
+  "title_he": "אֵין לִבִּי יֶאֱהַב זוּלָתִי גֹּאֲלִי הֶחָבִיב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לִבִּי לֹא יֶאֱהַב זוּלָתוֹ",
+        "כִּי אִם־גֹּאֲלִי הֶחָבִיב",
+        "בִּשְׁמוֹ מָצָאתִי יְשׁוּעָתִי",
+        "כִּי־פָדָה אוֹתִי בַּצְּלָב",
+        "כָּל־דָּבָר אֵין־בּוֹ מָתוֹק",
+        "זוּלָתִי הַשֵּׁם הַנִּכְבָּד",
+        "נַפְשִׁי לֹא־תִּרְצֶה בִּלְעָדָיו",
+        "אַךְ־אוֹתוֹ תִּבְחַר לָנֶצַח"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כָּל־לִבִּי בְּקִרְבִּי כָּמֵהַּ",
+        "אֶל־אִישׁ תָּמִים וְנֶאֱהָב",
+        "לֹא אֲבַקֵּשׁ בְּחַיַּי דָּבָר",
+        "זוּלָתִי כְּבוֹדוֹ הֶעָצוּם",
+        "וְכָל־כֹּחִי וְחַיַּי הֵמָּה",
+        "נַחֲלַת אֲדֹנִי וְאֵין־עוֹד",
+        "כִּי בְדָמוֹ קָנָה אוֹתִי",
+        "וְהֶעֱנִיק לִי אֶת־הַחַיִּים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כָּל־שִׂכְלִי לְיֵשׁוּעַ הוּא",
+        "כָּל־אֲשֶׁר־לִי בַּחַיִּים",
+        "כָּל־אַהֲבָתִי לְיֵשׁוּעַ",
+        "וְשִׂמְחָתִי בִּרְצוֹנוֹ",
+        "כָּל־לִבִּי לְיֵשׁוּעַ הוּא",
+        "וְהוּא אוֹצָרִי וְתִקְוָתִי",
+        "תִּפְאַרְתִּי וְעַמּוּדִי",
+        "שֵׁם אֲדֹנִי מַחְמַד נַפְשִׁי"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 keeps the Arabic's enjambment (لَيْسَ يَهْوَى / غَيْرَ فَادِيَّ الْحَبِيب) as 'loves none / but my beloved Redeemer', with כִּי אִם doing the work of غَيْرَ in a negative clause, as Gen 39:9 does.",
+    "1:5–6 כָּל־דָּבָר אֵין־בּוֹ מָתוֹק — the Arabic كُلُّ شَيْءٍ لَيْسَ يَحْلُو مَا خَلَا الاِسْمَ الْمَجِيد is 'nothing is sweet except the glorious name'; מָתוֹק is kept as sweetness rather than 'pleasant', since the stanza is about taste and the next line names the Name.",
+    "2:6 נַחֲלַת אֲדֹנִי וְאֵין־עוֹד — the Arabic مِلْكُ رَبِّي لَا سِوَاه is 'my Lord's possession, none besides'; the Hebrew keeps מִלְכָּה as inheritance (Num 18:20, נַחֲלָה) so what is owned is also what is given, and the closing וְאֵין־עוֹד carries the Arabic's لَا سِوَاه in four syllables instead of a second relative clause.",
+    "3:8 שֵׁם אֲדֹנִי מַחְמַד נַפְשִׁי — the printed Arabic is garbled at 'يَ اسْمُ رَبِّي مُشْتَهَاي' (the vocative يَا has lost its alif and the metre is broken, as the print's line 8 does here); the sense is 'the name of my Lord is my soul's desire', which the Hebrew supplies rather than reproducing the misprint."
+  ]
+}

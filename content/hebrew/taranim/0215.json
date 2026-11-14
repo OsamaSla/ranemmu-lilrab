@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 215,
+  "title_he": "כִּי פָדִיתָ אוֹתִי וּקְנִיתָנִי, הוֹי מוֹשִׁיעִי הַנֶּהְדָּר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מָשְׁכֵנִי, אֲדֹנָי, אֶל־הַצְּלָב",
+        "מָשְׁכֵנִי, הוֹי הָרַחוּם",
+        "מָשְׁכֵנִי, אֲדֹנָי, אֶל־הַצְּלָב",
+        "אֶל־צִדְּךָ הַמְדֻקָּר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כִּי פָדִיתָ אוֹתִי וּקְנִיתָנִי",
+        "הוֹי מוֹשִׁיעִי הַנֶּהְדָּר",
+        "אַךְ מַטְּרָתִי הִיא כָּאן",
+        "כִּי תִּרְבֶּה אֱמוּנָתִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "תִּמְתַּק עֶדְנִי, תָּרוּם שִׂמְחָתִי",
+        "בְּהִתְיַחֲדִי עִם־אֲדֹנִי",
+        "נִקְצֹר עֹנֶג בְּשִׂיחוֹתֵינוּ",
+        "תַּחַת סִתְרוֹ הָעֶלְיוֹן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "חָנֵּנִי וְקַדְּשֵׁנִי לָךְ",
+        "עֶבֶד לַעֲשׂוֹת רְצוֹנְךָ",
+        "בְּכָל־רֶגַע, בְּכָל־עֵת",
+        "תָּמִיד לָלֶכֶת אִתְּךָ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "עֹמֶק אַהֲבָתוֹ, גֹּדֶל טוּבוֹ",
+        "לֹא אֶשַּׂג בַּחַיִּים",
+        "מְלֹא שָׂשׂוֹן, קְצֵה הַשִּׂמְחָה",
+        "הֵם לִי כִּי־אֶרְאֵהוּ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–4 is the printed four-line acclamation with the verb repeated three times, as the Arabic repeats اِجْذِبْنِي; the Hebrew keeps the repetition on מָשְׁכֵנִי rather than varying to 'draw near', because the stanza's force is the repeated pull (Song 1:4, מָשְׁכֵנִי אַחֲרֶיךָ).",
+    "3:2 בְּהִתְיַחֲדִי עִם־אֲדֹנִי — the Arabic إِذْ بِرَبِّي أَخْتَلِي is 'when I am alone with my Lord'; הִתְיַחֵד is the biblical verb for being set apart (Exod 29:43, נוֹעַד), so 'alone with' keeps its sense of a private appointed meeting rather than mere solitude.",
+    "3:3 נִקְצֹר עֹנֶג — the Arabic نَجْتَنِي الْهَنَا is 'we reap bliss'; the harvest verb is kept (Lev 25:11, קָצַר), so conversation with the Lord is pictured as reaping.",
+    "4:1 חָנֵּנִי וְקַדְּשֵׁנִי לָךְ — the Arabic جُدْ وَكَرِّسْنِي لَكَ خَصِّصْنِي is three imperatives ('bestow, consecrate, appoint'); the Hebrew keeps three acts but compresses the last two into קַדֵּשׁ + לָךְ, since a fourth imperative overruns the tune's ten syllables.",
+    "5:2 לֹא אֶשַּׂג — the Arabic لَا أَعِي is 'I do not grasp/comprehend'; the Hebrew uses the Hiphil of נשׂג as in Ps 139:6 (לֹא אוּכַל), so the line is about comprehension failing, not memory."
+  ]
+}

@@ -59,6 +59,15 @@ Arabic wins.
 | مقام (station, standing) | מַעֲמָד | Pairs with `עֲמִידָה`; used for the "station on high" of tr0211. |
 | عرس (wedding) | חֲתֻנָּה | Song-of-Songs and Rev 19:7; never the Modern `חתונה`. |
 | أمة / شعب مقتنى (acquired people) | עַם סְגֻלָּה | Exod 19:5, 1 Pet 2:9; kept as a title, not "a special people". |
+| منية / مشألة (wish, petition) | מִשְׁאָלָה | Ps 20:6 (`כָּל־מִשְׁאֲלוֹתֶיךָ`); something asked of God, not merely wanted. |
+| هول (dread) | בַּלָּהָה | Job 24:17, Ps 88:16; the terror-noun, not the vaguer `סכנה`. |
+| قبة الأفلاك (vault of the skies) | כִּפָּה | Post-biblical for dome; kept because the Arabic's image is architectural. |
+| وطن / موطن (homeland) | מוֹלֶדֶת | Gen 24:4, Ruth 2:11; the land one was born to, never `ארץ` alone. |
+| إمكان (possibility) | אֶפְשָׁר | Mishnaic and the only word for it; kept because the line's subject *is* possibility. |
+| عواطف (emotions) | רֶגֶשׁ / הֶרְגֵּשׁ | Job 12:5 only; no biblical category noun exists, so the post-biblical abstract is used sparingly. |
+| معين / ينبوع (spring, fountain) | מַעְיָן | Ps 114:8, Prov 5:18; keep apart from `בְּאֵר` (well). |
+| ملك / نصيب (portion, possession) | נַחֲלָה | Num 18:20; what is owned is also what is given. |
+| صدى (echo) | הֵד | Job 37:4; used for "echo back to the Father" (tr0225 1:5). |
 
 ## Pointing conventions
 

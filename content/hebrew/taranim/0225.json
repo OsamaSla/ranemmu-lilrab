@@ -1,0 +1,53 @@
+{
+  "book": "taranim",
+  "number": 225,
+  "title_he": "מַה־גָּדוֹל הָאַהֲבָה הַנִּשְׂגָּבָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי אַתֶּם אֲשֶׁר שְׁמַעְתֶּם הַקְּרִיאָה",
+        "אֲשֶׁר קִבַּלְתֶּם הַהַדְרָכָה",
+        "אֲשֶׁר קִבַּלְתֶּם אֶת־הַפְּדוּת",
+        "אֱהָבוּ כַּאֲשֶׁר נֶאֱהַבְתֶּם",
+        "הָשִׁיבוּ לָאָב הֵד",
+        "תְּנוּ כַּאֲשֶׁר נִתַּן לָכֶם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מַה־גָּדוֹל הָאַהֲבָה הַנִּשְׂגָּבָה",
+        "מֵאֵל אֲשֶׁר לֹא־שְׁכָחַנִי",
+        "הֵרִיק הַנָּדִיב אֶת־נַפְשׁוֹ",
+        "מִתְרוֹשֵׁשׁ וְהוּא הֶעָשִׁיר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֵין בָּאַהֲבָה גַּאֲוָה וְקִנְאָה",
+        "אֵין מַחְשֶׁבֶת רָע עַל־אִישׁ",
+        "כִּי אִם בְּרָכוֹת וָעֵזֶר",
+        "בָּאַהֲבָה, כָּל־עוֹד יֶאֱרַךְ הַזְּמָן"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בָּאַהֲבָה אֲמִתַּת הַדָּבָר",
+        "בָּאַהֲבָה אֶרֶךְ אַפַּיִם",
+        "הָאַהֲבָה עֲטֶרֶת הַיֹּפִי",
+        "חֶסֶד וְכָבוֹד לֹא יָסוּרוּ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–6 is the six-line opening stanza (88.88.88 against the print's 88.88), kept whole because it is the hymn's charge: the three 'who' clauses address the same people the Arabic addresses three times (يَا مَنْ … يَا مَنْ … يَا مَنْ), and the imperative lands only at line 4.",
+    "1:4–6 אֱהָבוּ … תְּנוּ — the Arabic حُبُّوا كَمَا أُحْبِبْتُمُ / أَعْطُوا كَمَا أُعْطِيتُمُ is the golden-rule pattern; the Hebrew keeps the passive 'as you were loved/given' with the same verbs, and adds הָשִׁיבוּ לָאָב הֵד for 'echo to the Father', since הֵד is the biblical echo-word of Job 37:4 (קוֹל יִשָּׁמֵעַ).",
+    "2:1–2 מֵאֵל אֲשֶׁר לֹא־שְׁכָחַנִי — the Arabic مِنْ خَالِقٍ لَمْ يَنْسَنِي is 'from a Creator who did not forget me'; the relative clause is kept as a relative clause, so the love is located in an act of remembering, which is the psalm's category (Ps 9:13, לֹא־שָׁכַח).",
+    "2:3–4 הֵרִיק … מִתְרוֹשֵׁשׁ וְהוּא הֶעָשִׁיר — Phil 2:7 with 2 Cor 8:9 (כִּי־עָשִׁיר הָיָה, בַּעֲבוּרְכֶם הֶעֱנִי); the two halves of the verse are kept in the two lines in the same order as the Arabic (أَخْلَى … مُفْتَقِرًا وَهوَ الْغَنِيّ).",
+    "4:2 בָּאַהֲבָה אֶרֶךְ אַפַּיִם — the Arabic صَبْرٌ وَاحْتِمَال is 'patience and endurance'; the Hebrew uses the single biblical phrase אֶרֶךְ אַפַּיִם (Exod 34:6, אֶרֶךְ אַפַּיִם וְרַב־חֶסֶד), which covers both the bearing and the long-suffering, because two separate nouns overran the tune's nine syllables.",
+    "4:4 חֶסֶד וְכָבוֹד לֹא יָסוּרוּ — the Arabic فَضْلٌ وَمَجْدٌ لَا يُزَال is 'favour and glory that are not removed'; סוּר is the biblical verb of departing (1 Sam 16:14), and the negative is kept so the line promises permanence rather than merely praising."
+  ]
+}

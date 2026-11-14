@@ -1,0 +1,53 @@
+{
+  "book": "taranim",
+  "number": 222,
+  "title_he": "בֹּא אֶל־גּוֹאֵל הָאָדָם, הוֹי צְבָא אֲדֹנָי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "וּבְהִתַּם הַמִּלְחָמָה נְעַטֵּר",
+        "כֵּן נְעַטֵּר, כֵּן נְעַטֵּר",
+        "וּבְהִתַּם הַמִּלְחָמָה נְעַטֵּר",
+        "בְּמוֹלֶדֶת הָאֹשֶׁר",
+        "נִלְבַּשׁ, נִלְבַּשׁ, נִלְבַּשׁ עֲטֶרֶת",
+        "וּבְהִתַּם הַמִּלְחָמָה נְעַטֵּר",
+        "בְּמוֹלֶדֶת הָאֹשֶׁר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בֹּא אֶל־גּוֹאֵל הָאָדָם",
+        "הוֹי צְבָא אֲדֹנָי",
+        "וּפְרֹשׂ עָלֶיךָ הַדֶּגֶל",
+        "בְּמַעְמַד הַמִּלְחָמָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מִלְחָמָה קְצָרָה בִזְמָן",
+        "גְּבֹר וְאַל־תֵּחָת",
+        "כִּי עַתָּה דִּמְעַת הַיָּגוֹן",
+        "אַךְ מָחָר תִּנָּשֵׂא"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עֲטֶרֶת כָּבוֹד מַזְהֶרֶת",
+        "תִּנָּתֵן לַנִּכְנָע",
+        "יִזְכֶּה בִּכְבוֹד הַמּוֹלֶדֶת",
+        "וְיִכְלֶה הַדֶּמַע"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–7 is the printed seven-line refrain stanza, with the two clauses repeated three times and the 'crowned' acclamation doubled inside it; the payload reproduces the repetition line for line (including the triple נִלְבַּשׁ) because that repetition is the tune, and shortening it would break the 86.86 – 66.66.6.67.66.6 shape.",
+    "3:2 גְּבֹר וְאַל־תֵּחָת — the Arabic فَاغْلِبْ وَلَا تَجْزَعْ is 'conquer and do not be dismayed'; חָתַת is the verb used in Deut 1:21 / Josh 1:9 (אַל־תֵּחָת), the same 'do not be shattered' of the conquest charge, so the army language stays coherent.",
+    "3:4 תִּנָּשֵׂא — the Arabic غَدًا يُنْزَع is 'tomorrow it is removed'; the Hebrew uses נָשָׂא in the sense of taking away (Isa 53:8, נִגְזַר) rather than 'lifted up', since the Arabic's verb is removal and the subject is the tear.",
+    "4:2 לַנִּכְנָע — the Arabic مَنْ يَخْضَع is 'whoever submits'; the Niphal participle is kept so the condition is submission itself, not humility as a character trait.",
+    "4:4 וְיִכְלֶה הַדֶּמַע — the Arabic وَيَنْتَهِي الْمَدْمَع is 'the weeping ends'; the Hebrew keeps the singular collective דֶּמַע (as in Jer 9:17, דִּמְעָה) with the verb of Ps 69:4, and pairs it with the opening 'war ends', so the stanza closes the same door the refrain opened."
+  ]
+}

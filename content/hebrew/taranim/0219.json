@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 219,
+  "title_he": "הִנֵּה יָבוֹא אֲשֶׁר־מֵת בְּעַד הָאָדָם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הִנֵּה יָבוֹא, הִנֵּה יָבוֹא",
+        "הוּא יָבוֹא אֲשֶׁר־מֵת בַּעֲדִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הִנֵּה יָבוֹא אֲשֶׁר",
+        "מֵת בְּעַד כָּל־הָאָדָם",
+        "בְּכָבוֹד עוֹלֶה עַל־כֹּל",
+        "כַּאֲשֶׁר עָלָה בֶעָנָן"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִנֵּה יָבוֹא עִם־",
+        "צִבְאוֹת קֹדֶשׁ וּמַלְאָכִים",
+        "בְּאוֹר כָּבוֹד זוֹהֵר",
+        "מִכִּפַּת הַשָּׁמָיִם"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וַאֲנַחְנוּ סְבִיב כִּסְאוֹ",
+        "נֵשֵׁב מְעֻטָּרִים",
+        "עַל־כִּסְאוֹת כָּבוֹד בְּתוֹךְ",
+        "בְּסִתְרוֹ נֵשֵׁב בָּטוּחַ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 and 2:1–2 both break the sentence mid-clause (لَا بُدَّ أَنْ يَأْتِي / مَنْ مَاتَ …), and the Hebrew keeps the break ('He must come who / died'), so line 2:1 ends on the relative particle as the Arabic ends on مَنْ.",
+    "2:4 כַּאֲשֶׁר עָלָה בֶעָנָן — Acts 1:9–11 (נִשָּׂא … וְעָנָן קִבְּלוּהוּ) with Dan 7:13; the ascent in the cloud is kept as the ground of the return, since the Arabic كَمَا مَضَى مَعَ الْغَمَام is an argument from the first coming to the second.",
+    "3:2 צִבְאוֹת קֹדֶשׁ — the Arabic أَجْنَادِ وَالْأَمْلَاك is 'hosts and angels'; the Hebrew keeps both classes with the construct צִבְאוֹת קֹדֶשׁ (holy hosts) rather than collapsing them into 'angels'.",
+    "3:4 מִכִּפַּת הַשָּׁמָיִם — the Arabic مِنْ قُبَّةِ الْأَفْلَاك is the vault of the spheres; כִּפָּה is post-biblical for dome, accepted here because the Arabic's image is architectural (the sky as a vault) and 'from heaven' would lose it.",
+    "4:2–4 עֲטָרוֹת / כִּסְאוֹת — the Arabic نَبْقَى مُكَلَّلِين … عَلَى عُرُوشِ الْمَجْدِ is Rev 3:21 (וְיָשַׁבְתִּי … עַל־כִּסְאִי) with 1 Cor 6:3; the thrones and crowns are kept as two separate promises, as the Arabic keeps them."
+  ]
+}

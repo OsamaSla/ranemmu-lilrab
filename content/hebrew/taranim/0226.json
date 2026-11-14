@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 226,
+  "title_he": "אֲדֹנֵינוּ יֵשׁוּעַ, לְשִׁמְךָ הַנִּשָּׂא הַנִּפְלָא",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנֵינוּ יֵשׁוּעַ, נָשִׂיא",
+        "לְשִׁמְךָ הַנִּשָּׂא הַנִּפְלָא",
+        "כָּל־תּוֹדָה וְהִשְׁתַּחֲוָיָה",
+        "וּתְהִלָּה, הוֹי יָדִיד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֵין אַהֲבָה כָאַהֲבָה",
+        "מִמְּךָ אֵלֵינוּ נִגְלָה",
+        "כִּי מַתָּה בְּשִׂמְחָה",
+        "הוֹי אוֹהֵב בְּנֵי־אָדָם"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מֵחֲטָאֵינוּ רֻחַצְנוּ",
+        "בַּדָּם הַזַּךְ הַיָּקָר",
+        "וְלִמְלָכִים נַעֲשֵׂינוּ",
+        "לֵאלֹהֵינוּ הַגָּדוֹל"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נִבְצַע הַלֶּחֶם בְּתוֹדָה",
+        "כָּל־עוֹד אַתָּה שָׁם אִתָּנוּ",
+        "נְקַוֶּה כִּי תָבוֹא",
+        "בְּקָרוֹב וְנִרְאֶךָ"
+      ]
+    }
+  ],
+  "review": [
+    "3:1–2 רֻחַצְנוּ בַּדָּם — the Arabic غُسِلْنَا بِالدَّمِ is Rev 1:5 (הַמְרַחֵץ אֹתָנוּ מֵחֲטָאֵינוּ בְּדָמוֹ) with Rev 7:14; the Hebrew uses the passive of רָחַץ and keeps the blood as the means, so washing and blood stay in one breath as they do in the Greek.",
+    "3:3–4 וְלִמְלָכִים נַעֲשֵׂינוּ — Rev 1:6 (וַיַּעַשׂ אֹתָנוּ מְלָכִים); the Hebrew keeps the plural 'kings' rather than 'a kingdom', because the Arabic مُلُوكًا is plural and the stanza's point is the dignity of the washed.",
+    "4:2 כָּל־עוֹד אַתָּה שָׁם — the Arabic طَالَمَا أَنْتَ هُنَاك is 'as long as You are there'; the Hebrew keeps the temporal clause with כָּל־עוֹד, and the 'there' is left unspecified as the Arabic's هُنَاك is, so the line points at the table rather than at heaven.",
+    "4:3–4 נְקַוֶּה … וְנִרְאֶךָ — the Arabic نَتَرَجَّى أَنْ تَجِيءَ … فَنَرَاك is hope followed by sight; קָוָה is the psalm's waiting verb (Ps 130:5, קִוִּיתִי יְהוָה) and רָאָה is kept for the beatific sight (Job 19:27, וּמִבְּשָׂרִי אֶחֱזֶה), so the stanza ends in seeing, not merely in arriving.",
+    "1:1–2 נָשִׂיא … הַנִּשָּׂא — the Hebrew plays on the same root (נָשִׂיא / נִשָּׂא) because the Arabic pairs رَبَّنَا with السَّامِي; the pun is deliberate and is the reason the first line ends on 'prince' rather than 'Lord', which the next line's 'Your lofty name' then answers."
+  ]
+}

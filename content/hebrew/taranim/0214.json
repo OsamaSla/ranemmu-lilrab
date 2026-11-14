@@ -1,0 +1,40 @@
+{
+  "book": "taranim",
+  "number": 214,
+  "title_he": "אֱלֹהַי, אַתָּה יוֹדֵעַ כַּמָּה רַבָּה חֻלְשַׁת נַפְשִׁי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֶקְרַב אֵלֶיךָ, מַחְסִי",
+        "בְּתוֹךְ דְּאָגִי וְיָגוֹנִי",
+        "אֶשְׁכַּח עִמְּךָ, יְשׁוּעָתִי",
+        "כָּל־דִּמְעָה בְּעֵינֵינוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֱלֹהַי, אַתָּה יוֹדֵעַ",
+        "כַּמָּה רַבָּה חֻלְשָׁתִי",
+        "אַךְ בַּחֻלְשָׁה אַתָּה הוּא",
+        "תְּחַיֶּה רוּחִי תִּשְׁמְרֶנּוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "רַבִּי, לַמְּדֵנִי אֵיךְ",
+        "אֶשְׁפֹּךְ אֶת־נַפְשִׁי לְפָנֶיךָ",
+        "בּוֹטֵחַ כִּי כָל־הַדְּבָרִים",
+        "תָּמִיד בְּיָדֶיךָ הֵמָּה"
+      ]
+    }
+  ],
+  "review": [
+    "2:2 חֻלְשָׁתִי uses the glossary's fixed חֻלְשָׁה for the Arabic ضَعْف, kept rather than the Modern חולשה so the weakness is the same noun the Pauline 'strength in weakness' uses (2 Cor 12:9–10 in the Hebrew tradition).",
+    "2:3–4 mimics the Arabic's broken sentence (إِنَّمَا فِي الضَّعْفِ أَنْتَ / تُحْيِي رُوحِي بَلْ تَصُون) — 'but in weakness You / quicken my spirit, indeed guard it'; the verbless clause is left verbless because the print's line-break mid-sentence is the tune's, not the translator's.",
+    "3:4 הֵמָּה is the biblical emphatic pronoun (Gen 3:20, Ps 25:3), chosen so the line ends on a full syllable, as دَائِمًا بَيْنَ يَدَيْك does.",
+    "No merism or New-Testament citation is forced into this hymn: the Arabic itself is general devotional speech, so only Ps 62:9 (שִׁפְכוּ לְפָנָיו לְבַבְכֶם) stands behind 3:1–2, and it is not quoted verbatim."
+  ]
+}

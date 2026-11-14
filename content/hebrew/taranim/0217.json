@@ -1,0 +1,46 @@
+{
+  "book": "taranim",
+  "number": 217,
+  "title_he": "הֲרֵיקוֹתָ אֶת־נַפְשְׁךָ וְאַתָּה הַמָּרוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הֲרֵיקוֹתָ אֶת־נַפְשְׁךָ וְאַתָּה הַמָּרוֹם",
+        "וַתָּגָר בָּעוֹלָם וְנָשָׂאתָ הָעָמָל",
+        "וַאֲנִי, מָה־אֵפוֹא, מֶה־עָזַבְתִּי בַּעֲבוּרְךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "שָׁפַכְתָּ דָּמְךָ הַיָּקָר בַּעֲדִי",
+        "פְּדוּת לְמַעַן אֶמָּלֵט מִן־הַבַּלָּהָה",
+        "וַאֲנִי, מָה־אֵפוֹא, מֶה־עָשִׂיתִי בַּעֲבוּרְךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "טָעַמְתָּ עַל־צְלָבְךָ מְרִירוּת הָעִנּוּי",
+        "מֵרָצוֹן לְמַעַן אֶמָּלֵט מִן־הָעֹנֶשׁ",
+        "וַאֲנִי, מָה־אֵפוֹא, מֶה־סָבַלְתִּי בַּעֲבוּרְךָ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אַתָּה הֵבֵאתָ הַסְּלִיחָה וְהַתְּשׁוּעָה",
+        "וְאַתָּה נָתַתָּ לִי יְשׁוּעָה וְחַיִּים",
+        "וַאֲנִי, מָה־אֵפוֹא, מֶה־נָתַתִּי בַּעֲבוּרְךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The repeated third line is the hymn's whole device: each stanza ends with the same interrogative frame (وَمَا أَنَا … مِنْ أَجْلِك), and the Hebrew keeps it word-for-word except for the one verb, so the stanzas are judged against each other.",
+    "1:1–2 הֲרֵיקוֹתָ … וַתָּגָר — the Arabic أَخْلَيْتَ نَفْسَكَ … وَجُلْتَ فِي الدُّنْيَا is Phil 2:7's emptying followed by a sojourn; הֵרִיק is the glossary verb for ἐκένωσεν, and גּוּר is kept for the alien stay (Gen 12:10, וַיָּגָר), so the world is a place He lodged in, not merely visited.",
+    "2:2 בַּלָּהָה — Job 24:17 and Ps 88:16 (אֵימִים), the biblical terror-noun, chosen for الْهَوْل so the escape is from dread and not from a vague 'danger'.",
+    "3:1 טָעַמְתָּ … מְרִירוּת — the Arabic ذُقْتَ … مَرَارَةَ الْعَذَاب keeps the taste metaphor, and the Hebrew keeps it with טָעַם (Ps 34:9, טַעֲמוּ וּרְאוּ) rather than a flat 'you suffered'.",
+    "4:1 הַסְּלִיחָה — the noun is post-biblical in this absolute form (the biblical verb is סָלַח); it is accepted here because the Arabic الْغُفْرَانِ is likewise a noun, and the verbal noun keeps the line's balance with הַתְּשׁוּעָה."
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 224,
+  "title_he": "מַה־מָּתוֹק גֹּאֲלִי הַנָּדִיב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "מַה־מָּתוֹק גֹּאֲלִי הַנָּדִיב",
+        "כֵּן, וּמַה־טּוֹב הוּא",
+        "וְכָל־לֵב יָשָׁר וְתָמִים",
+        "מִטּוּבוֹ יַשְׂבִּיעֶנּוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֲדֹנָי, מְלֹךְ עַל",
+        "רְגָשׁוֹתַי וְהֶרְגֵּשַׁי",
+        "וְתַבֵּטְנָה עֵינַי אֵלֶיךָ",
+        "בְּמָצֳקִים הָעֲזוּזִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֲדֹנָי, הַסֵּב מַבָּטִי",
+        "מִכָּל־מַרְאֶה כָּאן",
+        "כִּי כָל־מַרְאֶה זוּלָתְךָ",
+        "יֶשׁ־בּוֹ מְרִירוּת וָעָמָל"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הַנִּיחֵנִי לִחְיוֹת בִּרְצוֹנְךָ",
+        "וְאֶתְמַצֵּא בַּמִּלְחָמָה",
+        "עֵינַי אֵלֶיךָ, לֹא אַחֵר",
+        "עַד־אֶזְכֶּה בַּמְּבֻקָּשׁ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הֵן חַיַּי הַיְגֵעִים",
+        "יִכְלוּ בְּעוֹד מְעָט",
+        "נַפְשִׁי, הֱיִי מוֹדָה",
+        "וְסוֹבֶלֶת בְּסֵבֶל נָאֶה"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "וְעוֹד מְעַט תִּפָּגְשִׁי",
+        "בֶּעָנָן גֹּאֲלֵךְ",
+        "וְלוֹ תּוֹדִי תָמִיד",
+        "שָׁם בְּבֵית הַנֶּצַח"
+      ]
+    }
+  ],
+  "review": [
+    "5:4 בְּסֵבֶל נָאֶה — the Arabic الصَّبْرَ الْجَمِيل is the Qur'anic phrase for 'beautiful patience'; the Hebrew equivalent is built from the same two elements, with נָאֶה doing the work of جَمِيل, since the Arabic's phrase is idiomatic and not a quotation the reader would recognise from the Tanakh.",
+    "6:1–2 תִּפָּגְשִׁי … בֶּעָנָן גֹּאֲלֵךְ — the address turns feminine singular here as the Arabic turns to يَا نَفْسِي and then تُلاَقِينْ; the Hebrew keeps the feminine because נֶפֶשׁ is feminine, so the soul is spoken to as a woman through to the last stanza. The cloud is singular (בֶּעָנָן) as the Arabic's السُّحْبِ is construed with the meeting, and this line drops the Arabic's الْوَدُودْ to stay at the tune's six syllables; the tenderness is carried by גֹּאֲלֵךְ with the feminine suffix.",
+    "6:4 בֵּית הַנֶּצַח — the Arabic دَارُ الْخُلُودْ is 'abode of eternity'; בֵּית is kept rather than a Modern 'דירה', and נֶצַח carries both 'eternity' and 'victory' (1 Chr 29:11), which suits a hymn that ends with the soul's triumph.",
+    "4:2 וְאֶתְמַצֵּא בַּמִּלְחָמָה — the Arabic وَأَسْتَمِرُّ فِي الْجِهَاد is 'and I persist in the struggle'; the Hebrew uses the Niphal of מצא in its 'be found' sense with בְּ, i.e. 'be found in the battle', rather than inventing a Modern 'להתמיד', so the line states presence in the fight.",
+    "2:2 הֶרְגֵּשַׁי — a post-biblical noun, unavoidable here because the Arabic عَوَاطِفِي is abstract 'emotions' and biblical Hebrew has no such category word; רֶגֶשׁ occurs in Job 12:5 in the sense of feeling, which is why the form is used rather than a paraphrase."
+  ]
+}

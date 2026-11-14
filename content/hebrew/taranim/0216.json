@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 216,
+  "title_he": "אַתָּה שִׂמְחָתִי, מִשְׁאַלְתִּי, מַטְּרָתִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הֶאֱמַנְתִּי, אֲדֹנָי, חַזֵּק אֱמוּנָתִי",
+        "חַזֵּק בִּטְחוֹנִי וְהַרְבֵּה בְךָ מִשְׁעַנְתִּי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַתָּה שִׂמְחָתִי, מִשְׁאַלְתִּי, מַטְּרָתִי",
+        "אֲדֹנִי, הַרְבֵּה אַהֲבָתִי וְשִׁעוּנִי",
+        "נַפְשִׁי מָצְאָה מְנוּחָה בְּדַם־הַבְּרִית",
+        "אֵין לִי זוּלָתְךָ, הַרְבֵּה אֱמוּנָתִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִנְנִי חַלָּשׁ, רָפֶה בְּאַהֲבָה",
+        "אַךְ־לִי מַעְיַן חֲסָדֶיךָ",
+        "בְּחֵיקְךָ הַמַּשְׁקֶה צְמָא לֵב",
+        "אֲדֹנִי, הַרְבֵּה אַהֲבָתִי וְאֶמְצָאֵנִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "רַבֵּה קִרְבָתִי אֵלֶיךָ בַּלֵּב",
+        "אַתָּה הָאוֹהֵב, בְּאַהֲבָה רֹעִי",
+        "מִלִּבְּךָ נָהֲרוּ נְהָרִים",
+        "שָׁטְפוּ, בָּרֵךְ וְהַרְבֵּה אֶת־אֱמוּנָתִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אֲדֹנִי, מַאֲמִין אָנִי, הַרְבֵּה־לִּי",
+        "עֵצָה מְחַזֶּקֶת בַּפְּדוּת תִּקְוָתִי",
+        "וְשִׂים בִּטְחוֹנִי נָכוֹן עַד־יְסוֹד",
+        "וְחַזֵּק בְּרוּחֲךָ, אֲדֹנִי, אֶת־אֱמוּנָתִי"
+      ]
+    }
+  ],
+  "review": [
+    "The printed tune 10.10.10.12 – 12.12 is faithfully awkward: stanza 1 has two lines, every later stanza four, and the last line of each is a long 'increase my faith' petition. The payload keeps that asymmetry instead of padding stanza 1, which is why the metre script will flag the irregular 2/4/4/4/4 shape.",
+    "1:1 הֶאֱמַנְתִּי … חַזֵּק — the Arabic آمَنْتُ يَا رَبِّ فَقَوِّ إِيمَانِي is aorist + imperative; the Hebrew keeps the perfect of faith followed by an imperative, as Isa 7:9's 'if you will not believe' pattern works, rather than turning the confession into a wish.",
+    "2:1 שִׂמְחָתִי / מִשְׁאַלְתִּי / מַטְּרָתִי — the Arabic's three bare nouns (ابْتِهَاجِي / مُنْيَتِي / قَصْدِي) are kept as three appositions; מִשְׁאָלָה is the request-noun of Ps 20:6 (יְמַלֵּא יְהוָה כָּל־מִשְׁאֲלוֹתֶיךָ), so 'wish' is something asked of God rather than merely wanted.",
+    "2:3 בְּדַם־הַבְּרִית — the Arabic بِدَمِ الْعَهْدِ echoes Zech 9:11 (בְּדַם־בְּרִיתֵךְ) and Matt 26:28 (דָּם הַבְּרִית הַחֲדָשָׁה); the construct is kept whole, and the rest found there is the stanza's 'my soul rested'.",
+    "5:2 עֵצָה מְחַזֶּקֶת — the Arabic عَزْمًا يُقَوِّي is 'resolve that strengthens'; the Hebrew keeps עֵצָה as counsel/resolve (Isa 11:2, רוּחַ עֵצָה), which carries the double sense of the noun without importing Modern 'החלטה'."
+  ]
+}

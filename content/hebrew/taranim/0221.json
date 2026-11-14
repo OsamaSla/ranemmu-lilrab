@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 221,
+  "title_he": "אֵיכָה אֶשְׁכַּח אֶת־אֲדֹנִי הֶחָבִיב, אֶת־הַמָּשִׁיחַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵיכָה אֶשְׁכַּח אֲדֹנִי הַמָּשִׁיחַ הַיָּקָר",
+        "אֵיכָה אֶשְׁכַּח דַּם־צִדּוֹ הַפָּצוּעַ",
+        "אֲשֶׁר רָאָנִי בְּקָלוֹנִי וּבָא מֵרָצוֹן",
+        "אֲשֶׁר פָּדָה אוֹתִי וּקְנָאַנִי וְשִׁבַּר מוֹסְרוֹת יָדַי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֵיכָה אֶשְׁכַּח לִבְּךָ הַסּוֹלֵחַ הַגָּדוֹל",
+        "אֲשֶׁר סָלַח לִי עֲוֺנִי וְאֶת־פִּשְׁעִי הַנּוֹרָא",
+        "וַיִּמַח אֶת־כָּל־חַטֹּאתַי וְהֵחֵל בְּרִית חֲדָשָׁה",
+        "וַיְמַלֵּא בָרוּחַ אֶת־לִבִּי וַיְהִי לִבִּי שָׂמֵחַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֵיכָה אֶשְׁכַּח אֶת־סִפּוּר חַיַּי אֲשֶׁר",
+        "יְסַפֵּר וִיחַוֶּה אֵיךְ הָיְתָה אַהֲבָתְךָ",
+        "מְצוּקוֹתַי וּפְצָעַי רִפְּאוּ־לִי יָדֶיךָ",
+        "וִישׁוּעָתִי וְהַצְלָחָתִי — מִי נְתָנָם לִי זוּלָתֶךָ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֵיכָה אֶשְׁכַּח אֶת־סִתְרְךָ בְּכָל־הַשָּׁנִים",
+        "יָדְךָ שׁוֹמֶרֶת אוֹתִי בְּכָל־עֵת וָעֵת",
+        "בְּעֵת יְגוֹנִי, בְּעֵת מְצוּקָתִי בְּתוֹךְ גַּלֵּי הַחַיִּים",
+        "אַתָּה מִבְצָרִי וּמְלַוִּי, אַתָּה שַׁעַר יְשׁוּעָתִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "תְּנָה־לִּי לִשְׁכֹּחַ, אֲדֹנִי, אֶת־עַצְמִי כָּאן",
+        "כִּי עַקְשָׁנוּתִי הִטְעִימָה אוֹתִי עָמָל",
+        "וְאֶחְיֶה בְּהַכְנָעָה לְךָ, אֲדֹנָי הֶחָבִיב",
+        "זוֹכֵר כִּי בֶאֱמֶת תָּשׁוּב וְתָבוֹא אֵלֵינוּ בְּקָרוֹב מְאֹד"
+      ]
+    }
+  ],
+  "review": [
+    "The refrain is an interrogative 'How shall I forget' on every stanza, and the Hebrew keeps the question form with אֵיכָה (Lam 1:12, אֵיכָה) rather than a rhetorical 'I will not forget'; the Arabic كَيْفَ أَنْسَى is likewise a question.",
+    "1:4 שִׁבַּר מוֹסְרוֹת יָדַי — the Arabic كَاسِرًا قَيْدَ يَدَيّ is 'breaking the fetter of my hands'; מוֹסֵר is the biblical fetter (Ps 2:3, נְנַתְּקָה מוֹסְרוֹתֵיהֶם), kept in the dual-free plural because Hebrew has no dual for this noun.",
+    "2:3 וְהֵחֵל בְּרִית חֲדָשָׁה — the Arabic وَابْتَدَا عَهْدًا جَدِيدًا is 'began a new covenant'; הֵחֵל is the verb used of beginning the work in Gen 11:6 / Ezra 3:6, and the phrase is kept as a fresh beginning rather than as 'made' a covenant, since the Arabic's point is the starting.",
+    "3:4 מִי נְתָנָם לִי זוּלָתֶךָ — the Arabic مَنْ وَهَبهَا لِي سِوَاك is a rhetorical question; the Hebrew keeps the plural suffix on the verb (נְתָנָם) because the Arabic's two subjects are feminine singular and the Hebrew's two nouns are likewise two things, not one.",
+    "5:2 הִטְעִימָה — the Arabic قَدْ أَذَاقَنِي is again the taste verb; the Hiphil of טָעַם is kept (Ps 119:103, מַה־נִּמְלְצוּ … טַעְמֵנוּ) so stubbornness is something the speaker has tasted, not merely known."
+  ]
+}
