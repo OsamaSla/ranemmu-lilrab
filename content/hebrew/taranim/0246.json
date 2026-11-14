@@ -1,0 +1,41 @@
+{
+  "book": "taranim",
+  "number": 246,
+  "title_he": "אָהַבְתִּי אֶת־אֲדֹנָי, לֹא לְמַעַן נַחַת",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אָהַבְתִּי אֶת־אֲדֹנָי, לֹא לְמַעַן נַחַת",
+        "וְלֹא לְהִמָּלֵט מִן־עֶצֶב שְׁאוֹל",
+        "אַךְ אוֹהֲבֵהוּ, כִּי עָרֵב חַסְדּוֹ",
+        "וְהוּא בְחַסְדּוֹ אֲהֵבַנִי רִאשׁוֹנָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוּא אֲשֶׁר בַּעֲבוּרֵנוּ נִבְזֶה כְּעֶבֶד",
+        "נָשָׂא הַצְּלָב וַיִּשְׁכַּב בַּקָּבֶר",
+        "הֶעָשִׁיר חַי בָּאָרֶץ כְּאֶבְיוֹן",
+        "בְּעַד אוֹיְבָיו — מִי דוֹמֶה לָזֹאת?"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הַאַחֲרֵי־כֵן אֶעֱבֹד מֵסִיר מַשָּׂאִי",
+        "בְּחֶמְדַּת שָׂכָר אוֹ מִיִּרְאַת אֵשׁ",
+        "לֹא כִי, כִּי אֲהֵבַנִי אֲדֹנִי",
+        "נִשְׂגָּבוֹת מִדּוֹתָיו, וְלִבִּי אוֹהֲבוֹ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn's argument is 1 John 4:10,19 (לֹא שֶׁאֲנַחְנוּ אָהַבְנוּ … כִּי הוּא אָהַב אֹתָנוּ רִאשׁוֹנָה) worked out against a mercenary faith: 1:1–2 denies reward and fear as motives, 1:3–4 gives the true motive, 2:1–4 is Phil 2:7–8 with 2 Cor 8:9, and 3:1–4 restates the denial and ends on the character of God.",
+    "1:1–2 names the two false motives the Arabic names (النَّعِيم and الْعَذَاب / الْجَحِيم); the Hebrew keeps them as נַחַת and שְׁאוֹל, since נַחַת is the glossary's word for contentment and שְׁאוֹל is the biblical place of the dead, not the later word for hell.",
+    "2:3 הֶעָשִׁיר … כְּאֶבְיוֹן — the Arabic وَهوَ الْغَنِيُّ عَاشَ فِي الْأَرْضِ هُنَا فَقِير is 2 Cor 8:9 (אֲשֶׁר בַּעֲבוּרְכֶם הֶעֱנִי); the Hebrew keeps הֶעָשִׁיר as a definite noun ('the Rich One') because the stanza's force is the reversal of a title, not simply that He was rich.",
+    "3:3 לֹא כִי — the Arabic كَلَّا is the sharp refusal; Hebrew's refusal particle is לֹא כִי (Gen 42:12) rather than a bare לֹא, which would read as a prediction instead of a rejection of the previous lines.",
+    "3:4 נִשְׂגָּבוֹת מִדּוֹתָיו — the Arabic وَقَدْ سَمَتْ صِفَاتُهُ is 'His attributes are sublime'; biblical Hebrew has no abstract noun for 'attributes', and מִדּוֹת is the settled liturgical term (the thirteen מִדּוֹת of Exod 34:6–7), so the line names God's character in the vocabulary the tradition uses for exactly this."
+  ]
+}

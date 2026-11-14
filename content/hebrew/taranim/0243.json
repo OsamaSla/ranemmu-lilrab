@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 243,
+  "title_he": "הִנֵּה הַמָּשִׁיחַ בָּא, שִׁמְרוּ הַמְּצוּדוֹת",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הִנֵּה אֲדֹנֵינוּ בָּא",
+        "שִׁמְרוּ הַמְּצוּדוֹת",
+        "אַל־תִּירְאוּ מִפּוֹרֵץ",
+        "עָרִיץ וּבוֹגֵד"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "שָׁלַף צוֹרֵר הַנֶּפֶשׁ",
+        "אֶת־חֶרֶב מִלְחַמְתּוֹ",
+        "וְכַאֲרִי יִשְׁאָג",
+        "מְבַקֵּשׁ הַקְּרָב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הֵן אֹיְבֵי הַצֶּדֶק",
+        "כַּאֲרָיוֹת בַּקְרָב",
+        "חִגְרוּ כְלֵי נָשֶׁק",
+        "הוֹי הַלּוֹחֲמִים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "תִּבְעַר מִלְחַמְתֵּנוּ",
+        "כְּלֶהָבָה עַזָּה",
+        "אַךְ הַגֹּאֵל הָאוֹהֵב",
+        "מַנְהִיג מְפֹאָר"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "חֶסֶד אֲדֹנָי הָרַב",
+        "תִּסְמֹךְ לְחָלְשֵׁנוּ",
+        "אֵיךְ נִירָא מִתְּבוּסָה",
+        "תְּשׁוּעָתֵנוּ גְּלוּיָה"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the church's warfare: 1:1 is Rev 22:7 with 1 Pet 5:8, 1:2–3 Eph 6:10–11 (הִתְחַזְּרוּ בִּכְלֵי נֶשֶׁק), 2:2–4 1 Pet 5:8 (כְּאַרְיֵה שֹׁאֵג) with Job 1:7, 3:3 the armour of Eph 6:14–17, and 4:4–5 the Captain of Zech 14:3 and Rev 19:11.",
+    "2:1 שָׁלַף צוֹרֵר הַנֶּפֶשׁ — the Arabic إِنَّ خَصْمَ النَّفْسِ يَشْهَر صَارِمَ الْقِتَال puts the drawing and the sword in two lines; the Hebrew follows the same enjambment, so the sword does not appear until the second line, which is how the print builds the threat.",
+    "3:1 אֹיְבֵי הַצֶּדֶק — the plural construct is deliberate: the Arabic أَعْدَاءَ الصَّلَاحِ is 'the foes of righteousness', and the Hebrew keeps the abstract הַצֶּדֶק rather than a moral adjective, so the stanza's enemy is a power and not merely wicked men.",
+    "4:1 תִּבְעַר מִלְחַמְתֵּנוּ — the Arabic حَرْبُنَا الْعُظْمَى تَشُبُّ is 'our great war flames up'; the Hebrew keeps בָּעַר (Exod 3:2, בֹּעֵר בָּאֵשׁ) as the verb of the flame and puts the greatness into the noun, so the line still reads as one clause.",
+    "5:3–4 אֵיךְ נִירָא מִתְּבוּסָה … תְּשׁוּעָתֵנוּ גְּלוּיָה — the Arabic's rhetorical question is kept as a question, because the stanza's force is the absurdity of fear, not a statement of courage; תְּבוּסָה is post-biblical for 'defeat', used because biblical Hebrew has no single noun for it and the line needs the abstract."
+  ]
+}

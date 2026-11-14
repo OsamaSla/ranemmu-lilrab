@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 251,
+  "title_he": "בָּרְכִי נַפְשִׁי אֶת־אֲדֹנָי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בָּרְכִי נַפְשִׁי אֶת־אֲדֹנָי",
+        "הַלְלִי שְׁמוֹ וּפָאֲרִי",
+        "זִכְרִי טוֹבָתוֹ וְהוֹדִי לוֹ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "נַפְשִׁי, בָּרְכִי תָמִיד שֵׁם אֲדֹנָי",
+        "שִׁירִי בְּשֶׁבַח אֲדֹנִי חַנּוּן",
+        "וּבָרְכִי אוֹתוֹ מֵעֹמֶק לִבִּי",
+        "הוֹדִי לוֹ, אַל־תִּשְׁכְּחִי טוֹבָתוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הָרֹפֵא לְכָל־מַחֲלָתֵכִי",
+        "הַסֹּלֵחַ עֲוֺנוֹת וָפֶשַׁע",
+        "הַגֹּאֲלֵךְ מִכָּל־צָרוֹתַיִךְ",
+        "מְחַדֵּשׁ נְעוּרַיִךְ וְלִבֵּךְ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כִּרְחֹק מִזְרָח מִן־הַמַּעֲרָב",
+        "הִרְחִיק עֲוֺנֵינוּ מִמֶּנּוּ",
+        "יְרַחֵם עָלֵינוּ כְּאָב עַל־בָּנָיו",
+        "אֲדוֹן הַפְּדוּת יִתֵּן שָׁלוֹם"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Psalm 103: 1:1 is v.1 (בָּרְכִי נַפְשִׁי אֶת־יְהוָה), 1:2–3 vv.2–3, 3:1–4 vv.3–5, and 4:1–4 vv.12–13 with v.10. The Arabic is a free paraphrase throughout, so where it departs from the psalm the Hebrew restores the psalm's wording; the one exception is that 1:1 reads אֲדֹנָי, because the Arabic says اسْمَ رَبِّي ('my Lord's name') and not the tetragrammaton, and the liturgical reading of the verse is אֲדֹנָי in any case.",
+    "3:1–2 הָרֹפֵא … הַסֹּלֵחַ — the participles are kept with the definite article as in v.3, because the stanza is a list of titles and not a series of actions; the psalm's own forms (הָרֹפֵא לְכָל־מַחֲלָתֵכִי, הַסֹּלֵחַ לְכָל־עֲוֺנֵכִי) are used rather than infinitive clauses.",
+    "3:3 הַגֹּאֲלֵךְ מִכָּל־צָרוֹתַיִךְ — the Arabic يُنْجِيكِ مِنْ ضِيقَاتِكِ الشَّدِيدَه is 'saving you from your sore straits'; the Hebrew keeps the psalm's גָּאַל with מִן (v.4, הַגֹּאֲלֵךְ מִשַּׁחַת) and uses the plural צָרוֹת for the Arabic's plural, so rescue is from many pressures and not one.",
+    "4:2 הִרְחִיק עֲוֺנֵינוּ מִמֶּנּוּ — the Arabic اَلرَّبُّ عَنَّا أَبْعَدَ الْآثَام is v.12's הִרְחִיק … כִּרְחֹק מִזְרָח מִן־הַמַּעֲרָב; the Hebrew puts the verb first and keeps מִמֶּנּוּ, so the line states the removal before the next line names the distance.",
+    "4:4 אֲדוֹן הַפְּדוּת — the Arabic رَبُّ الْفِدَا is 'the Lord of redemption'; the construct is kept because Hebrew names God by what He owns (Ps 78:35, אֵל עֶלְיוֹן גֹּאֲלָם), and פְּדוּת is the noun of the redemption the psalm has just described."
+  ]
+}

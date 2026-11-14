@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 242,
+  "title_he": "הֱקִימָנוּ אֱלֹהִים בִּהְיוֹתֵנוּ מֵתִים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הֱקִימָנוּ אֱלֹהִים",
+        "מֵתִים הָיִינוּ בַּפֶּשַׁע",
+        "כָּכָה נֵלֵךְ מֵעָתָּה",
+        "תָּמִיד בְּחַיִּים חֲדָשִׁים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "נֵלֵךְ בְּדֶרֶךְ הַתֹּם",
+        "נֵלֵךְ בְּעִקְבֵי דוֹדִי",
+        "וּנְסַפֵּר חֶסֶד אֲשֶׁר",
+        "קָרָא לָנוּ לְאוֹר פֶּלֶא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "חַיֵּינוּ אֵינָם לָנוּ",
+        "אֲדֹנֵינוּ קָנָנוּ",
+        "נִחְיֶה לִכְבוֹד אֲשֶׁר",
+        "פָּדָה אוֹתָנוּ כֻּלָּנוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נִגְדַּל בְּדַעַת אֵל",
+        "גֹּאֲלֵנוּ הַחָבִיב",
+        "נִחְיֶה בִּקְדֻשָּׁתוֹ",
+        "הֵן אֲדֹנֵינוּ קָרוֹב"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "נַעֲבְדָה יַחְדָּו לָאֵל",
+        "עוֹדֶנּוּ גֵרִים הֵנָּה",
+        "וּנְקַוֶּה בְּכָל־עֵת",
+        "לְבוֹאוֹ מִשָּׁמָיִם"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "יִגָּלֶה הַמָּשִׁיחַ",
+        "נֵרָאֶה כְמוֹתוֹ",
+        "וּמִי־לוֹ תִּקְוָה זֹּאת",
+        "הוּא יְטַהֵר נַפְשׁוֹ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Ephesians 2 with 1 John 3:2: 1:1–4 is Eph 2:5–6,10 (הֱקִימָנוּ … בְּחַיִּים חֲדָשִׁים, cf. Rom 6:4's חֲדָשׁוּת הַחַיִּים), 2:1–4 is Eph 2:10 with 1 Pet 2:9 (קָרָא … לְאוֹר פֶּלֶא), 3:1–4 is 1 Cor 6:19–20, 4:1–4 is Eph 4:15 with 2 Pet 3:18, 5:1–4 is Heb 13:14, and 6:1–4 is 1 John 3:2–3 almost word for word.",
+    "1:2 מֵתִים הָיִינוּ בַּפֶּשַׁע — the Arabic إِذْ كُنَّا أَمْوَاتًا خُطَاه uses a singular 'trespass' like the Greek παράπτωμα of Eph 2:1, so the Hebrew keeps the singular בַּפֶּשַׁע and not the usual plural, because the verse's point is the one condition, not a list of sins.",
+    "2:2 נֵלֵךְ בְּעִקְבֵי דוֹדִי — the stanza repeats נֵלֵךְ from 1:3 because the Arabic repeats نَسْلُكُ (1:3) and نَتْبَعُ (2:2); 'following' and 'walking' are then the same motion, which is the stanza's argument, and עִקְבֵי is the biblical 'heel-prints' of Ps 89:52 and Song 1:8.",
+    "4:1 נִגְדַּל בְּדַעַת אֵל — the Arabic وَلْنَنْمُ فِي مَعْرِفَةِ الـرَّبِّ splits 'the Lord' across lines ('الـ' / 'ـرَّبِّ'); Hebrew cannot divide a word across lines without breaking the reader, so the break falls at the natural construct boundary and the next line names the Redeemer.",
+    "6:4 הוּא יְטַהֵר נַפְשׁוֹ — the Arabic فَنَفْسَهُ يُطَهِّرُ is 1 John 3:3 (כָּל־אֲשֶׁר־לוֹ הַתִּקְוָה הַזֹּאת יְטַהֵר אֶת־נַפְשׁוֹ); the Hebrew adds the pronoun הוּא only to fill the line, and keeps יְטַהֵר as the verse's Piel, so purification stays an act and not a state."
+  ]
+}

@@ -75,6 +75,14 @@ Arabic wins.
 | ربح / خسارة (profit / loss) | רֶוַח / הֶפְסֵד | Phil 3:7–8's accounting; `רֶוַח` is the biblical profit-noun, `הֶפְסֵד` post-biblical for loss. |
 | رئيس السلام (Prince of Peace) | שַׂר־שָׁלוֹם | Isa 9:5; kept as a fixed title in the construct, not "a peaceful prince". |
 | ناموس (law, Rom/Gal) | נָמוֹס | The Greek loan, as in the Rabbinic and Pauline Hebrew tradition; distinguishes the Torah-as-system from `תּוֹרָה`. |
+| سرور / لذة (delight) | שַׁעֲשֻׁעַי | Ps 119:24,77 (`שַׁעֲשֻׁעָי`); the plural of the object of delight, kept for "what I delight in". |
+| صفات (attributes, of God) | מִדּוֹת | Post-biblical for God's character (the thirteen `מִדּוֹת` of Exod 34:6–7); biblical Hebrew has no abstract noun, so this is the liturgical term. |
+| هزيمة (defeat) | תְּבוּסָה | Post-biblical; used only where the line needs a noun for defeat, since biblical Hebrew expresses it verbally (`נִגַּף`, `נָפַל`). |
+| رضيع (suckling) | עוֹלֵל | Isa 49:15 (`עוּלָהּ`), Lam 2:11; the infant at the breast, not the general `תִּינוֹק`. |
+| فدية / كفارة (ransom) | כֹּפֶר | Exod 30:12, Prov 21:18; the price of a life, kept distinct from `פְּדוּת` (the act of redemption). |
+| حال / وضع (situation, state) | מָצָב | Post-biblical for a circumstance; used where the Arabic has `حَال` and no biblical noun fits the line. |
+| شهوة / شوق (desire, longing) | תַּאֲוָה | Ps 10:3, 21:3; the object that fills the heart, not a vague emotion. |
+| رواية / سرد (tale, narrative) | סִפּוּר | Post-biblical for a recounted account; kept for the hymn's "love tale" refrain, where `סֵפֶר` would suggest a written book. |
 
 ## Pointing conventions
 

@@ -1,0 +1,41 @@
+{
+  "book": "taranim",
+  "number": 241,
+  "title_he": "קוֹל יֵשׁוּעַ הַמָּתוֹק שָׁמַעְתִּי אוֹמֵר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "קוֹל יֵשׁוּעַ הַמָּתוֹק שָׁמַעְתִּי אוֹמֵר",
+        "בֹּא אֵלַי וְתִמְצָא מְנוּחָה מְהֵרָה",
+        "וָאָבֹא כַּאֲשֶׁר אָנִי, עָצֵב וְיָגֵעַ",
+        "וְנִשְׁלַם לִי בְּשִׂמְחָה כָּל־מִשְׁאֲלָתִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "שָׁמַעְתִּי קוֹלוֹ מַכְרִיז הַדָּבָר בְּגָלוּי",
+        "מֵי הַחַיִּים אָנֹכִי נֹתֵן חִנָּם",
+        "בֹּא נָא הַצָּמֵא וּשְׁתֵה וּקְנֵה חַיִּים",
+        "וָאָבֹא מִיָּד וָאֶשְׁתֶּה מִמַּעְיָנָיו"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "שָׁמַעְתִּי קוֹל יֵשׁוּעַ הַמָּתוֹק בְּאָמְרוֹ",
+        "אֲנִי אוֹר הָעוֹלָם הַמֻּחְשָׁךְ, הוֹי הַתּוֹעֶה",
+        "וּמְצָאתִיו אוֹר גָּדוֹל וְזוֹרֵחַ מַבְהִיל",
+        "וּבְאוֹרוֹ אָרוּץ עַד אַחֲרִית הַמַּסָּע"
+      ]
+    }
+  ],
+  "review": [
+    "The three stanzas are one chain of the Lord's own 'I am' sayings: Matt 11:28 in 1:2 (בֹּא אֵלַי … מְנוּחָה), John 7:37–38 with Isa 55:1 in 2:2–3 (מֵי הַחַיִּים … חִנָּם), and John 8:12 in 3:2 (אוֹר הָעוֹלָם); the Arabic is quoting these verses, so the Hebrew restores their wording instead of translating the Arabic paraphrase.",
+    "1:1 and 3:1 both open with קוֹל יֵשׁוּעַ הַמָּתוֹק but are not identical, because the Arabic differs between صَوْتَ يَسُوعَ الْحُلْوَ (stanza 1) and صَوْتُ يَسُوعَ الْحُلْوُ (stanza 3); the Hebrew keeps the variation in word order rather than flattening the two into one line.",
+    "1:3 וָאָבֹא כַּאֲשֶׁר אָנִי — the Arabic فَجِئْتُهُ كَمَا أَنَا ('I came to Him just as I am') is the hymn's central confession; the Hebrew keeps the clause as a verbless comparison with אָנִי, since Hebrew has no idiom for 'as I am' that does not sound like a condition.",
+    "1:4 מִשְׁאֲלָתִי — the Arabic الْمَطْلَب is 'the request, the thing sought'; מִשְׁאָלָה is the psalm's noun for a petition granted (Ps 20:6, יְמַלֵּא יְהוָה כָּל־מִשְׁאֲלוֹתֶיךָ), and it is the glossary's fixed word for a request, so the line closes on answered prayer and not on a vague 'goal'.",
+    "2:4 מִמַּעְיָנָיו — the Arabic مِنْ مَجْرَاه is 'from its channel'; מַעְיָן is the glossary's word for a spring (Ps 114:8) and keeps the water imagery of the stanza, whereas a channel-word would break the metaphor of drinking at the source."
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "book": "taranim",
+  "number": 248,
+  "title_he": "הַשְׁלֵךְ עַל־יְהוָה יְהָבְךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הַשְׁלֵךְ עַל־יְהוָה יְהָבְךָ",
+        "וְהוּא יְכַלְכְּלֶךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּבוֹא עָלֶיךָ לַיְלָה",
+        "וְכָל־אֲשֶׁר־בּוֹ חֹשֶׁךְ",
+        "אוֹר יָאִיר הַלַּיְלָה",
+        "בְּאוֹר אֲדוֹן שָׁלוֹם",
+        "אֲדֹנֶיךָ נֹתֵן זֶמֶר",
+        "גַּם בְּתוֹךְ הַמַּכְאוֹבִים",
+        "יָגוֹן יַהֲפֹךְ לְגִיל",
+        "שָׂשׂוֹן תָּמִיד לָנֶצַח"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא לֹא־חָסַךְ אֶת־בְּנוֹ",
+        "כִּי מְסָרוֹ לְכֹפֶר",
+        "כֹּה אֲהֵבְךָ אֱלֹהִים",
+        "נוֹתֵן לְךָ תִּקְוָה",
+        "וְאֵיךְ לֹא יִתֵּן לָךְ",
+        "בְּצָרָתְךָ תַּנְחוּמָה",
+        "וְאֵיךְ לֹא יָחֹן עָלֶיךָ",
+        "נוֹשְׂאֲךָ מֵעַל עָמָל"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הִשָּׁעֵן עָלָיו תָּמִיד",
+        "בּוֹטֵחַ בְּהַבְטָחָתוֹ",
+        "כְּתִינוֹק יָנוּחַ בֶּטַח",
+        "לִבְּךָ יָנוּחַ בְּחֵיקוֹ",
+        "וְהוּא לֹא שָׁכַח עוֹלֵל",
+        "אֲשֶׁר נְשָׁהוּ אִמּוֹ",
+        "נוּסָה אֵלָיו וֶחְיֵה",
+        "בֶּטַח בְּסֵתֶר עֶלְיוֹן"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 is Psalm 55:23 nearly word for word (הַשְׁלֵךְ עַל־יְהוָה יְהָבְךָ וְהוּא יְכַלְכְּלֶךָ), because the Arabic أَلْقِ عَلَى الرَّبِّ هَمَّك فَهُوَ يَعُولُكَ is quoting it; the Hebrew restores the verse rather than translating the Arabic's 'care' and 'sustains'.",
+    "2 is the night-song of Job 35:10 (זַמְּרוֹת בַּלָּיְלָה) with Ps 30:6 and Ps 42:9; 2:4 names אֲדוֹן שָׁלוֹם because the Arabic رَبِّ السَّلَام is a title and the Hebrew has a settled construct for it (Judg 6:24, יְהוָה שָׁלוֹם).",
+    "3:1–2 הוּא לֹא־חָסַךְ אֶת־בְּנוֹ — the Arabic فَهوَ لَمْ يُشْفِقْ عَلَى ابْنِه is Rom 8:32 (אֲשֶׁר אֶת־בְּנוֹ … לֹא חָשַׂךְ); the Hebrew keeps חָסַךְ and the 'not' before it, since the verse's argument is the measure of the gift, and the next two lines draw the 'how much more' from the same verse.",
+    "3:5–8 וְאֵיךְ לֹא יִתֵּן לָךְ … נוֹשְׂאֲךָ מֵעַל עָמָל — the Arabic's double 'how much more' is kept as two questions, because Rom 8:32 is itself a rhetorical question and the stanza's comfort depends on the answer being obvious.",
+    "4:5–6 וְהוּא לֹא שָׁכַח עוֹלֵל / אֲשֶׁר נְשָׁהוּ אִמּוֹ — the Arabic فَهوَ لَمْ يَنْسَ رَضِيعًا / قَدْ نُسِي مِنْ أُمِّهِ is Isa 49:15 (הֲתִשְׁכַּח אִשָּׁה עוּלָהּ); the Hebrew keeps עוֹלֵל, the verse's word for the suckling, and pairs שָׁכַח with נָשָׁה for the mother's forgetting, so the contrast is between two verbs and not one repeated."
+  ]
+}

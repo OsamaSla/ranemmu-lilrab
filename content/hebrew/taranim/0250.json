@@ -1,0 +1,66 @@
+{
+  "book": "taranim",
+  "number": 250,
+  "title_he": "אָבִינוּ, בְּבִנְךָ נִגַּשׁ אֵלֶיךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "כֻּלָּנוּ נָרִים לְךָ קוֹל",
+        "יְהִי שִׁמְךָ מְבֹרָךְ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אָבִינוּ, בְּבִנְךָ",
+        "נַקְרִיב לְךָ תּוֹדָה",
+        "נִשְׁתַּחֲוֶה לְפָנֶיךָ",
+        "כּוֹרְעִים לְךָ מַלְאָכִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הָיִינוּ בְנֵי עֶבְרָה",
+        "וּבַחֲטָאִים אֲסוּרִים",
+        "שִׁחְרַרְתָּנוּ — הוֹי פֶּלֶא",
+        "הָיִינוּ בָנִים חֲבִיבִים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נָתַתָּ לָנוּ יֵשׁוּעַ",
+        "וּבְיָדוֹ נָתַתָּנוּ",
+        "בִּכְבוֹדוֹ נָחַלְנוּ חֵלֶק",
+        "כִּי בוֹ בְחַרְתָּנוּ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הִבְטִיחַ כִּי יָבוֹא",
+        "כֵּן, בִּנְךָ יָבוֹא לָנוּ",
+        "הִנְנוּ מְחַכִּים לוֹ",
+        "יִקָּחֵנוּ לְבֵיתֶךָ"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "שָׁם נְרוֹמִמְךָ",
+        "בְּאוֹרְךָ וּבִכְבוֹדֶךָ",
+        "וְכָל־עַמְּךָ אֲנָחְנוּ",
+        "וּתְהִלָּתֵנוּ לְךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn follows Ephesians 1–2: 3:1–2 is Eph 2:3 (בְּנֵי־אַף / בְּנֵי עֶבְרָה) and 2:12, 3:3–4 Eph 2:4–5 with John 1:12, 4:1–4 Eph 1:4–6 and 1:11, 5:1–4 Eph 1:13–14 with John 14:3, and 6:1–4 Eph 1:6,12,14. It is a doxology, so the Hebrew keeps the epistle's own nouns where the Arabic paraphrases.",
+    "1:1–2 is the printed two-line call, with the Arabic نَهْتِفُ كُلُّنَا لَكَ ('we all cry out to You') rendered as נָרִים לְךָ קוֹל, since Hebrew cries out by lifting the voice (Judg 2:4, וַיִּשְׂאוּ הָעָם אֶת־קוֹלָם); the answer «لِيَتَبَارَكِ اسْمُكَ» is the synagogue's בָּרוּךְ שֵׁם and is kept as a jussive.",
+    "3:1 בְנֵי עֶבְרָה — the Arabic أَبْنَاءَ الْغَضَب is Eph 2:3; the Hebrew uses עֶבְרָה rather than אַף because אַף also means 'nose' and the line is short, and because עֶבְרָה is the prophetic word for overflowing wrath (Isa 9:18, 13:13).",
+    "4:3 בִּכְבוֹדוֹ נָחַלְנוּ חֵלֶק — the Arabic فِي مَجْدِهِ أَشْرَكْتَنَا is 'in His glory You made us share'; the Hebrew avoids the modern 'share' verb and uses the inheritance idiom of Eph 1:11 (נָחַלְנוּ), so the stanza's gift is an allotted portion and not a partnership.",
+    "6:3 וְכָל־עַמְּךָ אֲנָחְנוּ — the Arabic وَشَعْبُكَ جَمِيعُنَا is a verbless apposition; the Hebrew supplies אֲנָחְנוּ to make the line a clause, since a bare 'and all Your people' would read as a new address rather than as the subject of the next line."
+  ]
+}

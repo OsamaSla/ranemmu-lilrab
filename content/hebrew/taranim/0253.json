@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 253,
+  "title_he": "בְּהִמָּנַע מֶנִּי פְּנֵי דוֹדִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לֹא אֶרְאֶה פְּנֵי דוֹדִי",
+        "הָאוֹר בְּעֵינַי כַּחֹשֶׁךְ",
+        "וְשֶׁמֶשׁ תָּבֹא בִּשְׁקִיעָה",
+        "עָטוּהָ הֶעָבִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַךְ בְּהֵרָאוֹת הַגֹּאֵל",
+        "יָאִיר פָּנָיו בִּשְׂחוֹק",
+        "יִזְכּוּ חַיַּי וְיִמְתָּקוּ",
+        "וְגִילִי יָרוּם בָּאַחֲרִית"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כְּרֵיחַ נִחוֹחַ זִכְרוֹ",
+        "שִׁיר מָתוֹק לִלְבָבוֹת",
+        "כְּגַן נָאוֶה רֵיחָתוֹ",
+        "מָחָה מֶנִּי יְגוֹנָי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אִם יָאֵר בִּי אוֹרוֹ",
+        "לֹא יַעְלִים הַשֶּׁקַע אוֹר",
+        "וַיְהִי דְבָרוֹ לִי",
+        "מָתוֹק, רוֹפֵא לֵב יָגֵעַ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the soul's night and sunrise: 1:1–2 is Song 5:6 (נַפְשִׁי יָצְאָה בְדַבְּרוֹ) with Ps 30:6, 1:3–4 Job 3:9 and Joel 2:2, 2:2–4 Ps 67:2 with 2 Cor 4:6, 3:1–2 Song 1:3 (לְרֵיחַ שְׁמָנֶיךָ טוֹבִים) with Ps 104:34, and 4:1–4 2 Cor 3:18 with Ps 147:3.",
+    "1:1 לֹא אֶרְאֶה פְּנֵי דוֹדִי — the Arabic إِذْ لَا أَرَى وَجْهَ الْحَبِيب is a temporal clause ('when I do not see'), but Hebrew has no way to front a bare 'when' without a conjunction and the stanza's first line must stand alone; the negative is therefore stated as fact and the next three lines supply the 'then'.",
+    "1:4 עָטוּהָ הֶעָבִים — the Arabic مَحْجُوبَةً خَلْفَ الْغَمَام is a passive participle ('veiled behind the clouds'); the Hebrew turns it into an active verb with the clouds as subject, because a bare participle would leave the line without a predicate. עָטָה is the biblical verb for wrapping (Ps 104:2, עֹטֶה אוֹר).",
+    "3:1 כְּרֵיחַ נִחוֹחַ זִכְרוֹ — the Arabic عَرْفٌ زَكِيٌّ ذِكْرُهُ is 'His remembrance is a pure fragrance'; רֵיחַ נִחוֹחַ is the sacrificial 'pleasing odour' of Gen 8:21 and Lev 1:9, kept because the stanza is about the sweetness of His name and the offering-language is the psalm's way of saying it.",
+    "4:3–4 וַיְהִי דְבָרוֹ לִי / מָתוֹק, רוֹפֵא לֵב יָגֵעַ — the Arabic بَلْ كَانَ عِنْدِي أَمْرُهُ / حُلْوًا شَفَى الْقَلْبَ التَّعُوب splits 'His word' from 'sweet'; the Hebrew keeps the enjambment with the adjective on the second line, so the sweetness lands where the print puts it."
+  ]
+}

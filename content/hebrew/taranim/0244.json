@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 244,
+  "title_he": "יֵשׁוּעַ, דַּרְכִּי לַמָּרוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יֵשׁוּעַ",
+        "דַּרְכִּי לַמָּרוֹם, מוֹלִיכִי שָׁמָיְמָה",
+        "הַכֵּן רַגְלִי, קַדֵּשׁ מַטָּרָתִי",
+        "וְהָרֵם נִשְׁמָתִי בַּדֶּרֶךְ לַמָּרוֹם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יֵשׁוּעַ, דַּרְכִּי אַתָּה",
+        "לַמָּרוֹם אֶל־זָהֳרֶךָ",
+        "אַתָּה אוֹרִי וּמוֹרִי",
+        "אֶל־הָדְרֵי שָׁמֶיךָ",
+        "אֵלֵךְ בַּאֲשֶׁר הָלַכְתָּ",
+        "אֵלֵךְ בְּעִקְבוֹתֶיךָ",
+        "אֶחְפֹּץ מַה־שֶּׁחָפַצְתָּ",
+        "שַׁעֲשֻׁעַי בִּרְצוֹנֶךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "טַהֵר לִבִּי וּלְשׁוֹנִי",
+        "וְהָסֵר מֶנִּי מוּמִי",
+        "קַבֵּל מֶנִּי אֶת־נַפְשִׁי",
+        "הוֹי מְטַהֵר לְבָבוֹת",
+        "מָשְׁכֵנִי לַמָּרוֹם",
+        "אֵלִי הַנּוֹרָא",
+        "חָפַצְתִּי לִשְׁכֹּן",
+        "אִתְּךָ, הוֹי דּוֹדִי"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a pilgrim song of ascent: 1:2 is Ps 121:1 (אֶשָּׂא עֵינַי אֶל־הֶהָרִים) with Ps 25:4, 2:4 Ps 24:7 (שְׁעָרִים … הִנָּשְׂאוּ), 2:5–6 1 Pet 2:21 (לְמַעַן תֵּלְכוּ בַּעֲקֵבוֹתָיו), and 3:3–4 Ps 51:12–13 with Ps 139:23–24.",
+    "1:1 is a single word, matching the printed يَا يَسُوعُ of the first stanza, which is why the 4/8/8 shape begins with a one-word line; it is not padded to a full line, since the invocation is the tune's pickup and not a stanza line.",
+    "2:6 אֵלֵךְ בְּעִקְבוֹתֶיךָ — the Arabic سَوْفَ أَتْبَعُ خُطَاك is 'I will follow Your footsteps'; עִקְבוֹת is the heel-track word of Ps 89:52 and Song 1:8, and the same noun recurs in 2:5 as a verb, so walking and following are one act in the stanza.",
+    "3:4 מְטַהֵר לְבָבוֹת — the Arabic يَا مُطَهِّرَ الْقُلُوب is a vocative title; the Hebrew keeps the participle as a title with הוֹי, since a construct 'Purifier of hearts' would need a noun Hebrew does not have for the office.",
+    "3:7–8 חָפַצְתִּי לִשְׁכֹּן אִתְּךָ — the Arabic قَدْ رَغِبْتُ فِي الْبَقَاءِ مَعكَ is 'I longed to remain with You'; the Hebrew keeps the infinitive of שָׁכַן (Ps 15:1, מִי־יִשְׁכֹּן בְּהַר־קָדְשֶׁךָ) so the last line answers the psalm's question rather than expressing a general wish."
+  ]
+}

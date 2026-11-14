@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 254,
+  "title_he": "בִּרְעֹשׁ יָם הַחַיִּים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בִּרְעֹשׁ יָם הַחַיִּים הַזֶּה",
+        "וְצַר לְךָ וְיָרֵאתָ הַכִּשָּׁלוֹן",
+        "מְנֵה הָרַחֲמִים וּמָצָאתָ פֶּלֶא",
+        "וְיַפְלִיא אֲדֹנָי בְּמַעֲשָׂיו"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וְאִם לָאֲחֵרִים הוֹן וָרֶוַח",
+        "בְּהַבְטָחַת גֹּאֲלֵנוּ כָּל־הוֹן",
+        "מְנֵה הָרַחֲמִים: שָׁמַיִם לֹא יִקָּנוּ",
+        "בְּכֶסֶף, אַף לֹא יֵאָסֵפוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְאִם יִכְבַּד עָלֶיךָ הַחַיִּים",
+        "וְצָלְבְּךָ הֶחָזָק לֹא יִסָּבֵל",
+        "מְנֵה הָרַחֲמִים וּמָצָאתָ יֶשַׁע",
+        "וְתָשִׁיר שִׁיר שָׂשׂוֹן וְתִקְוָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְאַל־יָפוּג עֹז לְבָבְךָ, וְאַל",
+        "תִּירָא — אֲדֹנֶיךָ עַל־כֹּל",
+        "מְנֵה הָרַחֲמִים — צְבָא הַמָּרוֹם",
+        "יִסֹּב אוֹתְךָ כַּחוֹמָה תָּמִיד"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a refrain-hymn on counting mercies: 1:1–2 is Ps 107:23–27 with Ps 42:8, 1:3–4 Ps 77:12 (אֶזְכֹּר מַעַלְלֵי־יָהּ) with Ps 118:23, 2:1–2 Ps 49:7–8 with Eph 3:8, 2:3–4 Isa 55:1–2 with 1 Pet 1:18–19, 3:1–2 2 Cor 4:8–9 with Ps 34:20, and 4:3–4 Ps 34:8 with Zech 2:9.",
+    "The bracketed lines of the print (فَعُدَّ الْمَرَاحِمَ …) are the refrain and recur three times (1:3, 2:3, 3:3, 4:3); the Hebrew keeps the same opening מְנֵה הָרַחֲמִים each time, and varies only the second half, exactly as the Arabic varies تَلْقَ الْعَجَب / لَيْسَتْ تُنَال / تَلْقَ النَّجَاة / جُنْدُ الْعُلَا.",
+    "2:3–4 שָׁמַיִם לֹא יִקָּנוּ / בְּכֶסֶף — the Arabic سَمَاءٌ بِمَالٍ وَلَا تُقْتَنَى is broken across the two refrain lines; the Hebrew also breaks after the verb, so 'with silver' begins the next line, which is where the print puts the emphasis.",
+    "4:1–2 וְאַל־יָפוּג עֹז לְבָבְךָ, וְאַל / תִּירָא — the Arabic فَلَا يَهُنِ الْعَزْمُ مِنْكَ وَلَا / تَخَفْ breaks after 'nor'; the Hebrew reproduces the enjambment with a trailing וְאַל, which is grammatical in Hebrew as the start of the next clause and keeps the line's shape. יָפוּג is the verb of Gen 45:26 (וַתָּפָג רוּחוֹ), and עֹז לְבָבְךָ stands for the Arabic's الْعَزْمُ ('resolve').",
+    "4:3–4 צְבָא הַמָּרוֹם … כַּחוֹמָה — the Arabic جُنْدُ الْعُلَا تُحِيطُكَ دَوْمًا بِسُورٍ مَنِيع is 'the host of the heights surrounds you with a mighty wall'; the Hebrew keeps both images, the host as צְבָא and the wall as חוֹמָה, because the stanza's comfort is that the mercies are an army and not merely a mood."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "book": "taranim",
+  "number": 249,
+  "title_he": "סִפּוּר הָאַהֲבָה, אַהֲבַת הַגֹּאֵל",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "זַמְּרוּ, זַמְּרוּ, זַמְּרוּ",
+        "אֶת־שִׁיר הָאַהֲבָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "סִפּוּר אַהֲבַת הַגֹּאֵל הַנִּפְלָא",
+        "סִפּוּר הָאַהֲבָה נִגְלָה בַּצְּלָב",
+        "יֵשׁוּעַ מֵת בְּמִשְׁמַעַת",
+        "עָלָה לַכִּסֵּא מֵלִיץ",
+        "קוּמוּ נָשִׁיר כֻּלָּנוּ שִׁיר הָאַהֲבָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "סִפּוּר אַהֲבַת הַגֹּאֵל הַנֶּאֱמָן",
+        "שְׁנֵה סִפּוּר הָאַהֲבָה תָּמִיד",
+        "בּוֹ כָּל־מְלוֹא צָרְכִּי",
+        "בּוֹ נֶחָמָה וּמִשְׁעָן",
+        "וּבוֹ אַחֲרִית נָאָה — סִפּוּר הָאַהֲבָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "סִפּוּר אַהֲבַת פּוֹדֵה הַפּוֹשְׁעִים",
+        "מִלֵּא לִבִּי תַּאֲוָה לִרְאוֹתוֹ",
+        "הִנֵּה אֲדֹנֵינוּ בָּא מַהֵר",
+        "וְנִפְגְּשֵׁהוּ כֻּלָּנוּ",
+        "נַקְרִיב לוֹ שֶׁבַח נָאֶה — שִׁיר הָאַהֲבָה"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is a narrative of redemption: 2:2 is 1 Cor 15:3 with Phil 2:8 (מֵת … בְּמִשְׁמַעַת), 2:4 is Heb 7:25 (מֵלִיץ) with Mark 16:19, 3:3–5 is Ps 23:1 with Eph 1:7, and 4:3–4 is 1 Thess 4:16–17. The Arabic عَشَاء / رِوَايَة is 'tale, narrative', which Hebrew renders with סִפּוּר rather than a modern story-word.",
+    "1:1–2 is the printed two-line call to sing, with the triple زَنِّمُوا kept as a triple imperative זַמְּרוּ; the Hebrew does not reduce it to one, since the repetition is the tune's whole opening.",
+    "2:1 and 3:1 and 4:1 all begin סִפּוּר אַהֲבַת … but with a different third element (הַנִּפְלָא, הַנֶּאֱמָן, פּוֹדֵה הַפּוֹשְׁעִים), exactly as the Arabic varies الْعَجِيب / الْأَمِين / فَادِي الْخُطَاه; the variation is the stanza's structure and is preserved.",
+    "3:2 שְׁנֵה — the Arabic أَعِدْهَا is 'repeat it'; the Hebrew uses the imperative of שָׁנָה (Deut 17:18, מִשְׁנֵה הַתּוֹרָה), the verb behind the whole practice of reciting a text again, so the line asks for rehearsal and not merely for a second telling.",
+    "4:2 מִלֵּא לִבִּי תַּאֲוָה לִרְאוֹתוֹ — the Arabic قَدْ مَلأتْ قَلْبِي شَوْقًا لِأَنْ أَرَاه is 'filled my heart with longing to see Him'; תַּאֲוָה is the biblical noun for desire (Ps 10:3, 21:3) and is kept in the construct, so the longing is the object that fills the heart rather than a vague emotion."
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "book": "taranim",
+  "number": 247,
+  "title_he": "בֵּין קוֹצֵי הַצָּרָה — לֹא אֶשְׁכָּחֲךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לֹא אֶשְׁכָּחֲךָ, לֹא אֶשְׁכָּחֲךָ",
+        "וְהַבְטָחָתוֹ לָעַד: לֹא אֶשְׁכָּחֲךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּתוֹךְ קוֹצֵי הַצָּרָה",
+        "רַגְלַי נוֹטְפוֹת דָּם",
+        "מַחְסִי הוּא הַבְטָחָתוֹ",
+        "לֹא אֶשְׁכָּחֲךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כִּי בַעֲדִי נָשָׂא מָוֶת",
+        "וְכָל־טוֹב בּוֹ כָּלוּל",
+        "וְהַהַבְטָחָה נִצֶּבֶת כַּצּוּר",
+        "לֹא אֶשְׁכָּחֲךָ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְיָבֹא אֵפוֹא כָּל־מָצָב",
+        "טוֹב יְהִי אוֹ רָע",
+        "יֵשׁוּעַ פּוֹדֵה הַנֶּפֶשׁ אָמַר",
+        "לֹא אֶשְׁכָּחֲךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The refrain is Isa 49:15 (גַּם־אֵלֶּה תִשְׁכַּחְנָה וְאָנֹכִי לֹא אֶשְׁכָּחֵךְ) and is kept in the first person singular as His own promise, because the print puts it in quotation marks: the soul is quoting what the Lord said to her, not making a vow of her own.",
+    "1:1 doubles the refrain within one line, as the Arabic أَنَا لَا أَنْسَاكا أَنَا لَا أَنْسَاكا does; the doubling is the tune's opening and is not trimmed to a single occurrence.",
+    "2:2 רַגְלַי נוֹטְפוֹת דָּם — the Arabic تَنْزِفَ رِجْلَايَ دَما is 'my feet bleed blood'; נָטַף is the biblical verb for dripping (Judg 5:4, גַּם־שָׁמַיִם נָטָפוּ; Song 5:5, יָדַי נָטְפוּ מוֹר), kept because the stanza's image is blood dripping on the road and not a medical description.",
+    "3:3 וְהַהַבְטָחָה נִצֶּבֶת כַּצּוּר — the Arabic فَالْوَعْدُ رَاسٍ كَالْجَبَل is 'the promise stands firm as the mountain'; the Hebrew uses נִצֶּבֶת (Gen 28:12, נִצָּב) with צוּר rather than הַר, since צוּר is the psalm's word for the unmovable rock (Ps 18:3) and carries the theology the stanza needs.",
+    "4:1–2 וְיָבֹא אֵפוֹא כָּל־מָצָב / טוֹב יְהִי אוֹ רָע — the Arabic إِذًا لِيَأْتِ أَيُّ حَال / خَيْرًا يَكُونُ أَوْ وَبَال keeps an optative and then a bare alternative; the Hebrew keeps both with the jussive יְהִי, so the stanza remains a submission and not a prediction. מָצָב is the glossary's word for a situation or state."
+  ]
+}

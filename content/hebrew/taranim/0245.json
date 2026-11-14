@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 245,
+  "title_he": "בַּמֶּה יְזַכֶּה נַעַר אֶת־דַּרְכּוֹ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בַּמֶּה יְזַכֶּה אָרְחוֹתָיו",
+        "וּבַמֶּה יָאִיר הַנָּעַר",
+        "בִּשְׁמֹר אִמְרַת עֶלְיוֹן",
+        "וְהָלֹךְ בְּמֵישָׁרִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּכָל־לִבִּי אֲבַקֵּשׁ",
+        "פָּנֶיךָ, הוֹי חַנּוּן",
+        "הַדְרֵךְ דַּרְכִּי תָּמִיד",
+        "בְּאֱמִתְּךָ הַיְשָׁרָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "צָפַנְתִּי אִמְרָתְךָ",
+        "בְּתוֹךְ לִבִּי לָנֶצַח",
+        "לְמַעַן לֹא אֶחֱטָא",
+        "לְךָ, אֲדֹנִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בָּרוּךְ אַתָּה, עִזּוּז",
+        "פּוֹדֶה כָּל־נְפָשׁוֹת",
+        "הֱיֵה תָמִיד מוֹרִי",
+        "בְּרוּחַ קָדְשֶׁךָ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "דְּבָרְךָ הוּא שַׁעֲשׁוּעָי",
+        "לָנֶצַח לֹא אֶשְׁכָּחֵהוּ",
+        "וּבְמִצְוֺתָיו אֶשְׁעָה",
+        "אֶהְגֶּה בְּכָל־חַיָּי"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "בִּשְׂפָתַי סִפַּרְתִּים",
+        "לִבִּי בָהֶם שָׂמֵחַ",
+        "הֵם הָעֹשֶׁר, כָּל־הוֹנִי",
+        "תִּפְאַרְתִּי לְדוֹר וָדוֹר"
+      ]
+    }
+  ],
+  "review": [
+    "The whole hymn is Psalm 119: 1:1–2 is v.9 almost word for word (בַּמֶּה יְזַכֶּה־נַּעַר אֶת־אָרְחוֹ), 1:3–4 vv.1–3, 2:1 v.10 (בְּכָל־לִבִּי דְרַשְׁתִּיךָ), 2:3 v.35 (הַדְרִיכֵנִי בִּנְתִיב מִצְוֺתֶיךָ), 3:1–3 v.11 (בְּלִבִּי צָפַנְתִּי אִמְרָתֶךָ), 4:4 v.37, 5:1–4 vv.14–16 and 24, 6:1–4 vv.13–14 and 111.",
+    "1:1–2 keeps the psalm's own division: the Arabic puts 'his ways' in line 1 and 'the young man' in line 2, and so does v.9, where נַעַר stands after the verb; the Hebrew therefore does not move the subject up into the first line, even though that would read more smoothly.",
+    "3:4 לְךָ, אֲדֹנִי — the Arabic إِلَيْكَ يَا رَبِّي is the tail of 'lest I sin against You'; the Hebrew leaves the prepositional phrase as its own short line, exactly as the print does, so the stanza ends on the address rather than on the verb.",
+    "5:3–4 וּבְמִצְוֺתָיו אֶשְׁעָה — the Arabic وَبِوَصَايَاهُ أَنَا أَلْهَجُ splits 'I' from 'meditate'; the Hebrew puts the pronoun into the verb and uses שָׁעָה ('to gaze, to regard', Isa 17:7) for the first clause and הָגָה (Ps 1:2) for the second, so the two verbs of the psalm's delight are both present.",
+    "6:1 בִּשְׂפָתַי סִפַּרְתִּים — the Arabic وَبِفَمِي حَسَبْتُهָה is 'with my mouth I recounted them', which is v.13 (בִּשְׂפָתַי סִפַּרְתִּי); the Hebrew keeps the psalm's lips rather than the Arabic's mouth, since the verse is being quoted."
+  ]
+}
