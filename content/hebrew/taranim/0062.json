@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 62,
+  "title_he": "הוֹי אָב עָשִׁיר בַּכֹּל",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוֹי אָב עָשִׁיר בַּכֹּל",
+        "בִּבְנְךָ בָּחַרְתָּנוּ",
+        "אֲהַבְתָּנוּ מֵעוֹלָם",
+        "וּבוֹ בֵּרַכְתָּנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַתָּה אָבִינוּ עֻזֵּנוּ",
+        "וַאֲנַחְנוּ לְךָ בָנִים",
+        "בִּבְנְךָ אִמַּצְתָּנוּ",
+        "לְהַלֵּל כְּבוֹד חַסְדֶּךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וּבוֹ הָיָה לָנוּ",
+        "בְּךָ דְּבֵקוּת לָנֶצַח",
+        "וּבוֹ שִׂמַּחְתָּנוּ",
+        "הוֹי אָב נֶצַח עוֹלָמִים"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "בּוֹ כָּל־שִׂמְחָתֵנוּ",
+        "בּוֹ הַחֹשֶׁךְ נִהְיָה אוֹר",
+        "הוּא מְקוֹר הַשְּׂשׂוֹנוֹת",
+        "לָנוּ עַד־עוֹלְמֵי עַד"
+      ]
+    }
+  ],
+  "review": [
+    "1:3–1:4 and 3:3 אֲהַבְתָּנוּ / שִׂמַּחְתָּנוּ — the Arabic repetitions (أَحْبَبْتَنَا, أَسْعَدْتَنَا) are kept, including the same suffix, because the hymn's argument is the Father's single act in the Son.",
+    "2:3 בִּבְנְךָ אִמַּצְתָּנוּ — 'by Your Son You made us sons'; אִמֵּץ is the biblical verb of making firm, used here for the adoption because the direct hiph'il of בנה would read as 'build'.",
+    "3:2 דְּבֵקוּת לָנֶצַח — 'cleaving forever'; the Arabic الْتِصَاق is the noun, and דְּבֵקוּת is its liturgical Hebrew equivalent (Deut 11:22 uses the verb דָּבַק).",
+    "3:4 נֶצַח עוֹלָמִים — 'the eternity of eternities', for الْآبُ الصَّمَد; the Arabic الصَّمَد is the Qur'anic 'eternal, self-sufficient', and נֶצַח עוֹלָמִים is the biblical superlative that carries it."
+  ]
+}

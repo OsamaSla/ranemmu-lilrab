@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 52,
+  "title_he": "שֵׁם אֲדֹנִי מִגְדַּל־עֻזִּי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "שֵׁם אֲדֹנִי מִגְדַּל־עֻזִּי",
+        "כָּל־יָמַי בּוֹ אֶשָּׁעֵן",
+        "הוּא צוּרִי בְּתוֹךְ יְגוֹנִי",
+        "מָה אַשְׁרִי הוּא עוֹזְרִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בַּחֲשֵׁכָה הוּא לִי רֵעַ",
+        "פָּנָיו מְאִירוֹת מַדְרִיכוֹת דֶּרֶךְ",
+        "לִבּוֹ הָרַךְ רַב־הֶחָסֶד",
+        "הוּא לִי רֵעַ כָּל־עוֹד זְמָן"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּצָרוֹתֵינוּ וּבְאֵידֵינוּ",
+        "נוֹשֵׂא עָמָל מוֹשִׁיעַ נִכְנָע",
+        "הֲיֵשׁ כָּמוֹהוּ אֲדֹנִי",
+        "הוּא יְדִידִי בּוֹ אָנוּחַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הַלְלוּהוּ שֶׁמֶשׁ וִירֵחִים",
+        "הוֹי שָׁמַיִם אֶרֶץ יַמִּים",
+        "בָּרְכוּ שְׁמוֹ בְּנֵי הָאֱמוּנָה",
+        "הוֹי צְבָאָיו הוּא הַנּוֹתֵן"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 מִגְדַּל־עֻזִּי — Proverbs 18:10, the fixed glossary phrase, here with the 1cs suffix because the Arabic says 'my tower'.",
+    "2:2 פָּנָיו מְאִירוֹת — 'His face shines', the priestly blessing of Num 6:25; the Arabic الْبَسَّام ('smiling') is softened to the biblical idiom.",
+    "3:3–3:4 הֲיֵשׁ כָּמוֹהוּ / הוּא יְדִידִי — the Arabic has 'Has He a peer, my Master Christ / He is the intimate Friend'; Hebrew drops 'Christ' to keep ten syllables and keeps the confession in יְדִידִי.",
+    "4:1–4:3 — the Arabic calls sun, moons, heaven, earth and seas to praise (Ps 148); Hebrew keeps the same list and adds בְּנֵי הָאֱמוּנָה for 'sons of faith'."
+  ]
+}

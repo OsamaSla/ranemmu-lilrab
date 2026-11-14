@@ -1,0 +1,47 @@
+{
+  "book": "taranim",
+  "number": 64,
+  "title_he": "דְּבָרְךָ אֲדֹנָי אוֹרִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נֵר לְרַגְלִי דְבָרְךָ",
+        "וְאוֹר לִנְתִיבָתִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "דְּבָרְךָ אֲדֹנָי אוֹרִי",
+        "הוּא מוֹרִי בַּדָּרֶךְ",
+        "בּוֹ יָדַעְתִּי אֵיךְ בָּאתָ",
+        "אֵיךְ פָּדִיתָ גִּבּוֹר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הוּא זָהֳרִי בַּחֲשֵׁכָה",
+        "הוּא רֵעַ מַסָּעִי",
+        "בּוֹ מְזוֹנִי בּוֹ שְׁלוֹמִי",
+        "נֶחָמָתִי בְּצָרָתִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עָזְרֵנִי לִצְפֹּן",
+        "דְּבָרְךָ בְּתוֹךְ לִבִּי",
+        "וְלֹא אֶחֱטָא עוֹד לָךְ",
+        "וְאַהֲבָתִי תָעִיד"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 is Psalm 119:105 verbatim (נֵר־לְרַגְלִי דְבָרֶךָ וְאוֹר לִנְתִיבָתִי); the Arabic سِرَاجٌ لِرِجْلِي كَلَامُكَ is that verse, and the stanza is only two lines in the print, so the whole verse fits.",
+    "2:2 הוּא מוֹרִי — 'He is my teacher/guide'; the participle of ירה in the hiph'il ('to instruct') is biblical (Ex 15:25), and it carries هُدَايَ ('my guidance').",
+    "3:1 זָהֳרִי — 'my radiance'; the noun זֹהַר is biblical (Ezek 8:2, Dan 12:3), used for ضِيَاء.",
+    "4:1–4:2 עָזְרֵנִי לִצְפֹּן / דְּבָרְךָ — 'help me to store up Your word'; the Arabic أُخَبِّئَنَّ is 'hide', and צָפַן is the verb of Ps 119:11 (צָפַנְתִּי אִמְרָתְךָ בְלִבִּי), which is the verse behind the stanza."
+  ]
+}

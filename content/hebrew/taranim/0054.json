@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 54,
+  "title_he": "עַל־אֱלֹהִים הִשָּׁעֵן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הִתְעַנֵּג בַּאדֹנֵינוּ",
+        "וְיִתֶּן־לְךָ מִשְׁאָלְךָ",
+        "הַשְׁלֵךְ עָלָיו דַּרְכֶּךָ",
+        "וְאַתָּה לֹא תִּיגָע"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עַל־אֱלֹהִים הִשָּׁעֵן",
+        "וַעֲשֵׂה הַטּוֹב",
+        "וֶהְיֵה נֶאֱמָן תָּמִיד",
+        "אַחֲרֵי הָאֱמֶת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עָלָיו הִשָּׁעֵן תָּמִיד",
+        "וְהוּא אֲשֶׁר יִפְעַל",
+        "יוֹצִיא כָאוֹר צִדְקֶךָ",
+        "אֶת־אֲשֶׁר־עָשִׂיתָ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "כַּצָּהֳרַיִם צִדְקְךָ",
+        "הוּא יְגַלֵּהוּ",
+        "קַוֵּה לַאדֹנָי הָעֶלְיוֹן",
+        "וֶהְיֵה לוֹ סַבְלָן"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Psalm 37:3–7 throughout, so the Hebrew follows the psalm: הִתְעַנֵּג עַל־יְהוָה (v4), הַשְׁלֵךְ עַל־יְהוָה דַּרְכֶּךָ (v5), וְהוּא יַעֲשֶׂה (v5), וְהוֹצִיא כָאוֹר צִדְקֶךָ (v6), קַוֵּה אֶל־יְהוָה (v7).",
+    "1:2 וְיִתֶּן־לְךָ מִשְׁאָלְךָ — the psalm has וְיִתֶּן־לְךָ מִשְׁאֲלֹת לִבֶּךָ; the short form is used so the line stays at nine syllables.",
+    "1:4 וְאַתָּה לֹא תִּיגָע — 'and you shall not grow weary', for وَأَنْتَ لَا تَتْعَب; the Arabic is a promise, and Hebrew keeps the imperfect of result.",
+    "4:4 וֶהְיֵה לוֹ סַבְלָן — 'and be patient for Him', for وَكُنْ لَهُ صَابِر; the noun סַבְלָן is post-biblical, but the piel סִבֵּל ('endure') is biblical (Isa 53:4) and the adjective is the shortest faithful option."
+  ]
+}

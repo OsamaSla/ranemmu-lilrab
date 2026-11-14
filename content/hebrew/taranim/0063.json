@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 63,
+  "title_he": "אֲדֹנֵינוּ רֹאשׁ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנֵינוּ רֹאשׁ",
+        "וּמְלֹאוֹ אֲנַחְנוּ",
+        "יָסוּר הַפַּחַד",
+        "וְהַסָּפֵק וְהַיָּגוֹן"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עָלָה הַשָּׁמַיְמָה",
+        "כִּמְבַשֵּׂר לָנוּ",
+        "וְשָׁם עַתָּה בוֹ",
+        "גַּם מַצָּבֵנוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בָּרוּחַ נִקְשָׁרִים",
+        "לְרֹאשֵׁנוּ הָעַז",
+        "וּכְצֶלֶם הַנֶּאֱמָן",
+        "כֻּלָּנוּ נִהְיֶה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עַל־הַדֶּרֶךְ עַתָּה",
+        "הַחֶסֶד יִשְׁמְרֵנוּ",
+        "עַד נִרְאֵהוּ בְּעַיִן",
+        "וְנוֹדֶה לָרַחֲמִים"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 רֹאשׁ / וּמְלֹאוֹ — Eph 1:23 (הַמְּלֵאָה, 'the fullness'); the Arabic رَأْسٌ وَمِلْؤُهُ is that verse, and the Hebrew keeps the head/body image without adding 'the church'.",
+    "2:2 כִּמְבַשֵּׂר — 'as one announcing good news', for كَسَابِقٍ ('forerunner'); the Greek πρόδρομος behind the Arabic is 'forerunner', and Hebrew has no noun for it, so the participle carries the sense of going ahead to announce.",
+    "3:3 וּכְצֶלֶם הַנֶּאֱמָן — 'and after the image of the Faithful One'; the Arabic صُورَةِ الْأَمِين is 2 Cor 3:18 / Rom 8:29, and צֶלֶם is the Genesis word for image.",
+    "4:3 עַד נִרְאֵהוּ בְּעַיִן — 'until we see Him with the eye', for بِالْعِيَان; the phrase is the biblical 'eye to eye' (Isa 52:8) stripped to its shortest form for the metre."
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 51,
+  "title_he": "סְבִיב שֻׁלְחָנְךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "סְבִיב שֻׁלְחָנְךָ",
+        "אֲדֹנֵינוּ הֶחָבִיב",
+        "נַזְכִּיר מוֹתְךָ עַד",
+        "כִּי־תָבוֹא מְהֵרָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הַלֶּחֶם הַזֶּה נֹאכַל",
+        "נַעֲשֶׂה זִכְרְךָ",
+        "עַל־מְרֹרִים נִזְכֹּר",
+        "אֶת־נִדְכָּאוּתְךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְזֹאת הַכּוֹס אֲשֶׁר",
+        "תְּבָרֵךְ לָנוּ",
+        "תְּסַפֵּר עַל־דָּמְךָ",
+        "אֲשֶׁר־נִשְׁפַּךְ לָנוּ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "לְפָנֶיךָ בְּזֵכֶר",
+        "מַה־נֹּאמַר אֲנַחְנוּ",
+        "אֵיזוֹ מִלָּה תְּסַפֵּר",
+        "אַהֲבָה מִכָּל־שֵׂכֶל"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "עַל־כֵּן נִיחוֹחַ",
+        "אַהֲבָתֵנוּ נָסִיךְ",
+        "בְּיִרְאָה תְּהַלְּלֶךָ",
+        "אֲדֹנֵינוּ יֵשׁוּעַ"
+      ]
+    }
+  ],
+  "review": [
+    "1:3–1:4 נַזְכִּיר מוֹתְךָ עַד / כִּי־תָבוֹא — 'we proclaim Your death until You come' (1 Cor 11:26); the Arabic نَذْكُرُ مَوْتَكَ إِلَى أَنْ تَأْتِيَ is that verse, and the Hebrew keeps עַד … כִּי.",
+    "2:3–2:4 עַל־מְרֹרִים ... אֶת־נִדְכָּאוּתְךָ — 'on bitter herbs … Your being crushed'; מְרֹרִים is the Passover word (Ex 12:8) and the Isaiah 53 echo is kept in the same line, as in the Arabic.",
+    "3:1–3:2 וְזֹאת הַכּוֹס אֲשֶׁר / תְּבָרֵךְ — 'this cup which You bless'; the Hebrew keeps the relative clause that Arabic drops, so the line pairs with 3:4.",
+    "4:2–4:4 — three rhetorical questions in the Arabic; Hebrew keeps all three and closes on מִכָּל־שֵׂכֶל ('beyond all understanding'), which is the sense of فَاقَ الْعُقُول.",
+    "5:2 אַהֲבָתֵנוּ נָסִיךְ — 'we will pour out our love'; the Arabic نَسْكُبُ is 'pour', and נָסַךְ is the biblical verb for pouring out (Ex 30:9), used figuratively here."
+  ]
+}

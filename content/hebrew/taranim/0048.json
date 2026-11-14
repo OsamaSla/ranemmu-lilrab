@@ -1,0 +1,78 @@
+{
+  "book": "taranim",
+  "number": 48,
+  "title_he": "אֲדֹנָי רֹעִי לֹא אֶחְסָר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲדֹנָי רֹעִי",
+        "לֹא יֶחְסַר לִי",
+        "בִּנְאוֹת דֶּשֶׁא",
+        "יַרְבִּיצֵנִי אֵל חַי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עַל־מֵי מְנוּחֹת",
+        "יְנַהֲלֵנִי",
+        "וְאֶת־נַפְשִׁי יָשׁוֹב",
+        "בְּמַעְגְּלֵי־צֶדֶק"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "גַּם־כִּי־אֵלֵךְ",
+        "בְּגֵיא צַלְמָוֶת",
+        "לֹא־אִירָא רָע",
+        "כִּי־אַתָּה עִמָּדִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מַשְׁעַנְתְּךָ הָעַזָּה",
+        "תִּשְׁמְרֵנִי אָדוֹן",
+        "שִׁבְטְךָ יַנְחֵנִי",
+        "וּבוֹ תְּנַחֲמֵנִי"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "שֻׁלְחָן בְּשָׂשׂוֹן",
+        "עָרַכְתָּ לִי",
+        "נֶגֶד צוֹרְרַי",
+        "כִּי אַתָּה רַחוּם"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "בְּשֶׁמֶן זָךְ",
+        "מָשַׁחְתָּ רֹאשִׁי",
+        "בְּחֶסֶד מִמְּךָ",
+        "כּוֹסִי רְוָיָה"
+      ]
+    },
+    {
+      "label": "7",
+      "lines": [
+        "אַךְ־טוֹב וָחֶסֶד",
+        "כָּל־יְמֵי חַיָּי",
+        "וּבֵית־אֲדֹנָי",
+        "מְעוֹן עוֹלָמִים"
+      ]
+    }
+  ],
+  "review": [
+    "The whole hymn is Psalm 23, so the Hebrew follows the psalm's own wording wherever the Arabic quotes it: רֹעִי / לֹא יֶחְסַר / בִּנְאוֹת דֶּשֶׁא / מֵי מְנוּחֹת / גֵּיא צַלְמָוֶת / שֻׁלְחָן / כּוֹסִי רְוָיָה.",
+    "1:4 יַרְבִּיצֵנִי אֵל חַי — the psalm has simply יַרְבִּיצֵנִי; 'the living God' is the Arabic's addition (إِلٰهِي الْحَيّ) and is kept so the line reaches eight syllables.",
+    "2:3 וְאֶת־נַפְשִׁי יָשׁוֹב — the psalm reads יְשׁוֹבֵב ('He restores'); the short form is used to keep the line at eight without dropping the verb.",
+    "3:4 כִּי־אַתָּה עִמָּדִי — Psalm 23:4 exactly (עִמָּדִי, not עִמִּי), which is also the syllable count the tune needs.",
+    "4:1–4:4 — the Arabic separates the staff, the rod and the comfort into four short lines; Hebrew does the same but keeps the psalm's nouns (מִשְׁעֶנֶת, שֵׁבֶט, נִחוּם) so the stanza still reads as Psalm 23:4.",
+    "6:2–6:3 מָשַׁחְתָּ רֹאשִׁי / בְּחֶסֶד מִמְּךָ — the psalm has 'You anoint my head with oil'; Hebrew puts the oil in 6:1 and the grace in 6:3, following the Arabic's order."
+  ]
+}

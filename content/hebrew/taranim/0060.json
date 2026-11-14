@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 60,
+  "title_he": "אָבִינוּ קִבַּלְתָּנוּ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אָבִינוּ קִבַּלְתָּנוּ",
+        "בֵּן תּוֹעֶה שָׁנִים",
+        "וּבְחֶסֶד אָמַרְתָּ",
+        "שַׁחֲטוּ עֵגֶל מְפֻטָּם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "נֹאכַל עַתָּה וְנִשְׂמָח",
+        "כִּי־בָא הָאוֹבֵד",
+        "חָיָה זֶה אֲשֶׁר־מֵת",
+        "הֲיֵשׁ לְאַהֲבָתְךָ כְּמוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "יוֹדְעִים הַגְּדוּדִים בָּנוּ",
+        "רֹב רַחֲמֶיךָ",
+        "וַעֲשִׁירוּת חֶסֶד",
+        "עִם־חָכְמָתְךָ הַנִּפְלָאָה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וּבְהִקָּבֵץ כֻּלָּנוּ",
+        "סְבִיב מְשִׁיחֵנוּ",
+        "בָּנֶיךָ נָבִין",
+        "מְלֹא אַהֲבָתְךָ הַנְּכוֹנָה"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Luke 15:11–32 (the prodigal son), so 1:4 quotes the father's command: שַׁחֲטוּ אֶת־עֵגֶל הַמַּרְבֵּק in the text, shortened to עֵגֶל מְפֻטָּם for the tune.",
+    "1:2 בֵּן תּוֹעֶה שָׁנִים — 'a son wandering for years'; the Arabic شَارِدًا ضَلَّ سِنِين is a participle plus verb, and Hebrew compresses it into a construct so the line stays at six.",
+    "2:3 חָיָה זֶה אֲשֶׁר־מֵת — Luke 15:24 (כִּי זֶה בְנִי הָיָה מֵת וַיֶּחִי); the Hebrew keeps the relative clause rather than the demonstrative alone.",
+    "3:1 יוֹדְעִים הַגְּדוּדִים — 'the hosts know'; the glossary fixes גְּדוּד for جُنْد, and the plural here is the heavenly host of Eph 3:10, which is what the Arabic الأَجْنَادُ means in this hymn.",
+    "4:4 הַנְּכוֹנָה — 'the right/true love'; the Arabic الصَّحِيح is 'sound, correct', and נָכוֹן is its biblical equivalent (Ps 51:12)."
+  ]
+}

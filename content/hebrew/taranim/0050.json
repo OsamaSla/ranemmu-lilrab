@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 50,
+  "title_he": "הֲנִשְׁחַטְתָּ עָלַי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הֲנִשְׁחַטְתָּ עָלַי",
+        "וְטָעַמְתָּ אֵימַת צְלָב",
+        "וְהֲכָרַעְתָּ רֹאשְׁךָ",
+        "לִנְשֹׂא כְּלִמָּתִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "נָגוּעַ הָיִיתָ שָׁם",
+        "נִדְכָּא נִדְכָּא בַּצְּלָב",
+        "וְדָמְךָ עָלָיו נִגָּר",
+        "בַּעֲוֺן פִּשְׁעִי הָרָע"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כָּל־הַיְסוּרִים הָאֵלֶּה",
+        "כָּל־הַדִּכְאוֹן הַזֶּה",
+        "כָּל־הַבּוּזָה הַזֹּאת",
+        "עָלַי הָעֱנִי הַזֶּה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "עָלַי כֵּן עָלַי",
+        "אַהֲבָתוֹ לִי נִפְלֵאת",
+        "תְּזַמֵּר לָהּ תְּהִלָּתִי",
+        "כִּי־פָדָנִי בַּצְּלָב"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:3 — the Arabic's three questions (were You slain, did You taste, did You bow) are Isaiah 53 in question form; Hebrew keeps the interrogative הֲ only on the first verb, which carries the whole stanza.",
+    "2:2 נִדְכָּא נִדְכָּא — the doubling of the Arabic سُحِقْتَ سَحْقًا ('crushed with crushing') is a cognate accusative; Hebrew repeats the participle instead, since a noun of the same root would add a syllable.",
+    "2:4 בַּעֲוֺן פִּשְׁעִי הָרָע — 'for the guilt of my evil transgression'; the Arabic ذَنْبِيَ الْمَعِيب ('my faulty guilt') is one noun phrase, and Hebrew needs the construct to reach eight syllables.",
+    "3:4 עָלַי הָעֱנִי הַזֶּה — the Arabic repeats عَنِّي أَنَا ('for me') four times in stanza 3; Hebrew carries the emphasis with the fronted עָלַי and the demonstrative, so the question lands.",
+    "4:1 עָלַי כֵּן עָלַי — word-for-word the Arabic عَنِّي أَنَا نَعَمْ عَنِّي; the answer to stanza 3 must sound like the same voice."
+  ]
+}

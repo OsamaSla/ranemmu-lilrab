@@ -1,0 +1,54 @@
+{
+  "book": "taranim",
+  "number": 53,
+  "title_he": "לֹא אֶשְׁכַּח יוֹם אֲדֹנִי אֵצֶל הַצְּלָב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לֹא אֶשְׁכַּח יוֹם אֲדֹנִי אֵצֶל הַצְּלָב",
+        "הִגְלֵיתָ לִי אַהֲבָתְךָ חָבִיב",
+        "(הַיּוֹם אֲנִי שָׂמֵחַ)",
+        "כִּי־אַהֲבָתְךָ נִשְׂגָּבָה",
+        "אֲדֹנִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "לֹא אֶשְׁכַּח יָמִים שֶׁעָבְרוּ בְּאַהֲבָתְךָ",
+        "עִטַּרְתָּ אוֹתָם אֲדֹנִי בְּטוּבְךָ",
+        "(צְעָדַי מְעִידִים לְךָ)",
+        "יָמַי מְסַפְּרִים אַהֲבָתְךָ",
+        "אֲדֹנִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "רֹעִי אַתָּה אֲדֹנִי אֲדֹן הַדֶּרֶךְ",
+        "הַטּוֹב וְהַחֶסֶד לִי כָּל־עוֹד",
+        "(תַּנְחֵנִי תַּרְגִּיעֵנִי)",
+        "תּוֹשִׁיבֵנִי בְּכָבוֹד נִשְׂגָּב",
+        "אֲדֹנִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הֵן יוֹם יָבוֹא אֲדֹנִי כִּי תָשׁוּב",
+        "הֵן תָּבוֹא לְהַשְׁלִים הַהַבְטָחוֹת",
+        "(אָמֵן אֲדֹנִי בּוֹאָה)",
+        "בּוֹאָה וְקַיֵּם הַתִּקְווֹת",
+        "אֲדֹנִי"
+      ]
+    }
+  ],
+  "review": [
+    "The Arabic prints the third and fourth lines of each stanza in parentheses (a refrain within the stanza) and closes every stanza with يا سيدي; Hebrew keeps both conventions, including the parentheses, so the printed layout matches.",
+    "1:2 הִגְלֵיתָ לִי אַהֲבָתְךָ — 'You revealed Your love to me'; גִּלָּה is the biblical verb of uncovering (Amos 3:7), and the Arabic أَعْلَنْتَ is the same idea.",
+    "3:1 אֲדֹן הַדֶּרֶךְ — 'Lord of the way', for رَبُّ الْهُدَى; the construct with the definite noun is used instead of a noun of guidance, which Hebrew lacks in the right register.",
+    "3:2 הַטּוֹב וְהַחֶסֶד — Psalm 23:6 (אַךְ טוֹב וָחֶסֶד יִרְדְּפוּנִי), quoted because the Arabic الْخَيْرُ وَالرَّحْمَةُ is that verse.",
+    "4:3 אָמֵן אֲדֹנִי בּוֹאָה — Revelation 22:20 (אָמֵן, בֹּאָה אֲדֹנֵינוּ); the stanza ends the hymn on the church's own prayer."
+  ]
+}
