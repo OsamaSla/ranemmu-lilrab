@@ -41,21 +41,46 @@ const CHECK = args.has('--check');
 const VERBOSE = args.has('--verbose');
 
 /**
+ * Reads every corpus file once and indexes its hymns by book.
+ *
+ * A book can be split across files — the 1000 hymns of `main` live in
+ * `main.json` and hymns 1001–1047 in `main-1001-1047.json` — so the index
+ * remembers which file each hymn came from and every write goes back there.
+ */
+async function loadCorpora() {
+  const names = (await readdir(join(ROOT, 'content'))).filter(
+    (f) => f.endsWith('.json') && f !== 'authors.json',
+  );
+  const files = new Map();
+  const byBook = new Map();
+
+  for (const name of names) {
+    const corpus = await readCorpusFile(join(ROOT, 'content', name));
+    const book = name.replace(/\.json$/, '');
+    files.set(corpus.path, corpus);
+    corpus.list.forEach((hymn, index) => {
+      const key = hymn.book ?? book;
+      if (!byBook.has(key)) byBook.set(key, []);
+      byBook.get(key).push({ corpus, hymn, index });
+    });
+  }
+  return { files, byBook };
+}
+
+/**
  * Reads a corpus file and remembers how it was serialised, so the write can
  * reproduce the authoring format byte for byte.
  */
-async function readCorpus(book) {
-  const path = join(ROOT, 'content', `${book}.json`);
+async function readCorpusFile(path) {
   const raw = await readFile(path, 'utf8');
   const data = JSON.parse(raw);
   const list = Array.isArray(data) ? data : data.hymns;
-  if (!Array.isArray(list)) throw new Error(`${book}.json: no hymn array`);
+  if (!Array.isArray(list)) throw new Error(`${path}: no hymn array`);
   return {
     path,
     raw,
     data,
     list,
-    arrayRoot: Array.isArray(data),
     eol: raw.includes('\r\n') ? '\r\n' : '\n',
     trailing: raw.endsWith('\n'),
   };
@@ -68,15 +93,15 @@ function serialise(corpus) {
 }
 
 /** Shape + language checks for one payload against its Arabic hymn. */
-function inspect(payload, hymn, file) {
+function inspect(payload, hymn, file, bookId) {
   const issues = [];
   const at = `${file}`;
 
   for (const key of Object.keys(payload)) {
     if (!ALLOWED_KEYS.has(key)) issues.push(`${at}: unexpected key '${key}'`);
   }
-  if (payload.book !== hymn.book) {
-    issues.push(`${at}: book '${payload.book}' vs '${hymn.book}' in the corpus`);
+  if (payload.book !== bookId) {
+    issues.push(`${at}: book '${payload.book}' vs '${bookId}' (payload folder)`);
   }
   if (typeof payload.title_he !== 'string' || !payload.title_he.trim()) {
     issues.push(`${at}: missing 'title_he'`);
@@ -201,36 +226,36 @@ if (payloads.length === 0) {
   process.exit(0);
 }
 
-const corpora = new Map();
+const concatCorpora = await loadCorpora();
+const corpora = concatCorpora.files;
+const byBook = concatCorpora.byBook;
 const issues = [];
 const applied = [];
 const seen = new Set();
 
 for (const { book, file, payload } of payloads) {
-  if (!corpora.has(book)) corpora.set(book, await readCorpus(book));
-  const corpus = corpora.get(book);
-  const key = `${book}:${payload.number}`;
-  if (seen.has(key)) issues.push(`${file}: duplicate payload for ${book} ${payload.number}`);
+  const bookId = book;
+  const key = `${bookId}:${payload.number}`;
+  if (seen.has(key)) issues.push(`${file}: duplicate payload for ${bookId} ${payload.number}`);
   seen.add(key);
 
-  const hymn = corpus.list.find(
-    (h) => (h.book ?? book) === book && h.number === payload.number,
-  );
-  if (!hymn) {
-    issues.push(`${file}: no hymn ${payload.number} in ${book}.json`);
+  const entries = byBook.get(bookId) ?? [];
+  const entry = entries.find((item) => item.hymn.number === payload.number);
+  if (!entry) {
+    issues.push(`${file}: no hymn ${payload.number} in ${bookId}`);
     continue;
   }
 
-  const found = inspect(payload, hymn, file);
+  const found = inspect(payload, entry.hymn, file, bookId);
   if (found.length) {
     issues.push(...found);
     continue;
   }
 
-  const next = withHebrew(hymn, payload);
-  const index = corpus.list.indexOf(hymn);
-  corpus.list[index] = next;
-  applied.push({ book, file, number: payload.number, title: next.title, flags: payload.review?.length ?? 0 });
+  const next = withHebrew(entry.hymn, payload);
+  entry.corpus.list[entry.index] = next;
+  entry.hymn = next;
+  applied.push({ book: bookId, file, number: payload.number, title: next.title, flags: payload.review?.length ?? 0 });
 }
 
 if (issues.length) {
@@ -240,11 +265,17 @@ if (issues.length) {
 }
 
 const changed = [];
-for (const [book, corpus] of corpora) {
+const touched = new Set();
+for (const item of applied) {
+  const entry = (byBook.get(item.book) ?? []).find((e) => e.hymn.number === item.number);
+  if (entry) touched.add(entry.corpus.path);
+}
+for (const corpus of corpora.values()) {
+  if (!touched.has(corpus.path)) continue;
   const before = corpus.raw;
   const after = serialise(corpus);
   if (before === after) continue;
-  changed.push(book);
+  changed.push(corpus.path.replace(/\\/g, '/').replace(`${ROOT.replace(/\\/g, '/')}/`, ''));
   if (!CHECK) await writeFile(corpus.path, after, 'utf8');
 }
 
@@ -262,7 +293,7 @@ if (VERBOSE || CHECK) {
 let failed = false;
 if (CHECK) {
   if (changed.length === 0) {
-    out.push(`✓ ${applied.length} ${noun} already applied in ${corpora.size} book(s) — no drift.`);
+    out.push(`✓ ${applied.length} ${noun} already applied in ${new Set(applied.map((a) => a.book)).size} book(s) — no drift.`);
   } else {
     out.push(
       `✗ ${applied.length} ${noun} in payload files but ${changed.join(', ')} would change. Run without --check to write.`,

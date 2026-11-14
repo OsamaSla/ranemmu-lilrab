@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-14, commit bd0a880b (Hebrew reader language; see §15)
+Last verified: 2026-11-15, commit bd0a880b (Hebrew reader language; see §15)
 
 ## 1. What this is
 
@@ -537,9 +537,9 @@ Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**
 and the app displays the vocalised text (user's explicit choice — do not strip
 niqqud at render time). Chosen cadence: Book 2 in printed order, 20 per batch,
 flags-only review. Batches land as `content/hebrew/taranim/NNNN.json`; the
-corpus is never hand-edited. **Resume with the next book** (`book3` / `hymns`):
-start a new payload directory and extend `hebrew-apply.mjs` + the meter prefix
-map, which already knows `book3` → `b3` and any other book → `h`. Batch size is free (the
+corpus is never hand-edited. **Book 2 is complete; Books 1 and 3 have their
+authoring base ready — see §16** for folders, tooling and the first batch.
+Batch size is free (the
 apply script merges whatever payloads exist), so continue in 10–20 hymn steps
 and keep committing per step.
 
@@ -741,5 +741,40 @@ and keep committing per step.
   predates this work. `npm run lint` is broken here (`expo lint` is not a
   command in this CLI); lint files directly with
   `node node_modules/eslint/bin/eslint.js <files>`.
+
+## 16. Hebrew translation base — Books 1 and 3 (prepared 2026-11-15, commit f2797605)
+
+Book 2 is finished (§15). The remaining two books now have the same authoring
+base, so a batch can start on either without touching code.
+
+| Folder | Book | Hymns | Verse lines | Chorus hymns | Labels |
+|---|---|---|---|---|---|
+| `content/hebrew/main/` | Book 1 — رنموا للرب | 1,047 | 19,685 | 694 | `1` … `13` (Western digits) |
+| `content/hebrew/book3/` | Book 3 — هلم نرنم | 402 | 3,827 | 0 | `١` … `٨` (Arabic-Indic) plus refrain labels `القرار` (180) and `قرار` (66) |
+
+- `hebrew-apply.mjs` now indexes hymns by **book across all `content/*.json`
+  files**, because Book 1 is split between `main.json` (1–1000) and
+  `main-1001-1047.json` (1001–1047). It writes each hymn back to the file it
+  came from and only re-serialises files that actually changed (otherwise the
+  first run reformatted all of `book3.json`). Payload `book` must equal the
+  folder name, and missing `book` keys in the corpus fall back to the file name.
+- New tooling (also npm scripts): `hebrew:digest` (`scripts/hebrew-digest.mjs`
+  — AR + EN + metre + shape for a range), `hebrew:skeleton`
+  (`scripts/hebrew-skeleton.mjs` — exact-label stub payloads, `--write` to
+  create them), `hebrew:progress` (`scripts/hebrew-progress.mjs` — coverage,
+  pointed %, flags, next numbers per book).
+- Labels are **data, not design**: Book 3 mixes `القرار` and `قرار`, and two of
+  its hymns start at `1` instead of `١`. Never retype a label — run
+  `hebrew:skeleton` and replace only the `""` lines.
+- Verified: `hebrew:skeleton book3 1 1 --write` produces a stub that
+  `hebrew:apply --check` rejects with exactly the 17 expected errors (missing
+  title + 16 empty lines), and deleting the stub returns the gate to "no
+  drift". `hebrew:progress` reports
+  `taranim 375/375 · 7,386 lines · 100% pointed` and 0/1,047 and 0/402 for the
+  other two.
+- Start with **Book 3** (402 hymns, 9.5 lines each, no chorus fields) as the
+  cheaper proof that the workflow carries over; Book 1 is the long tail and
+  needs `chorus_he` on 694 hymns. First batch:
+  `node scripts/hebrew-digest.mjs book3 1 10`.
 
 
