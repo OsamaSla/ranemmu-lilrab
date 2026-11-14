@@ -507,8 +507,8 @@ melody so people can hear how it is sung. Only source available: recordings
 
 ## 15. Hebrew translation (verified 2026-11-14)
 
-Only `tr0001`–`tr0066` carry Hebrew so far (66 hymns, 1324 verse lines, all
-pointed; `verify-hebrew.mjs` prints 1390 because it counts the 66 `title_he`
+Only `tr0001`–`tr0076` carry Hebrew so far (76 hymns, 1510 verse lines, all
+pointed; `verify-hebrew.mjs` prints 1586 because it counts the 76 `title_he`
 strings as lines too).
 Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**,
 and the app displays the vocalised text (user's explicit choice — do not strip
@@ -551,7 +551,7 @@ corpus is never hand-edited.
 - Aya (Ollama `aya-expanse:8b`, `scripts/poc-hebrew2.mjs`) is **dropped from the
   loop**: correcting its drafts cost as much as translating from the Arabic, and
   the Arabic is the authority. Kept as a second opinion for a stubborn line.
-- Batch 2–66 review flags (302, all in the payload `review[]`): deliberate
+- Batch 2–76 review flags (345, all in the payload `review[]`): deliberate
   borrowings from Song 1:3 / 8:7, Prov 18:10, Isa 26:20 / 40:31 / 53:4-12,
   Ps 23:4 / 34:9-11 / 42:8 / 68:19 / 95:6 / 97:9 / 119:105, Lam 4:22,
   Rev 3:20 / 2:28 and Rom 5:10; post-biblical but fixed terms (`צְלָב`,
@@ -567,14 +567,14 @@ corpus is never hand-edited.
   rectangle. `tr0014` 2:2 (12 vs 8) comes from the same mixed shape.
 - Validated: `npm run check:hymns` (1824, all pass), `npm run build:corpus`
   (index 302 KB, 19 chunks), `npm run typecheck`, apply `--check` clean,
-  payload↔corpus parity for all 66 (`title_he`, `verses_he`, labels, shape).
+  payload↔corpus parity for all 76 (`title_he`, `verses_he`, labels, shape).
 - Browser (web, dev server, 2026-11-14): samples `tr0007`/`0013`/`0018`/`0021`/`0026`
   after clicking `HE` — chip fills `#5E35B1`, every stanza line rendered
   (`16/24/32/16/16`), all pointed, `direction: rtl`, `text-align: right`,
   platform font (`-apple-system`), zero console errors. `tr0027` (no Hebrew)
   still shows only `عر/EN/DE` and no Hebrew characters.
 - Not done: no admin editor for `verses_he` (admin-edit is ar/en/de only), home
-  book cards still show EN/DE pills only, 66 of 375 taranim hymns translated.
+  book cards still show EN/DE pills only, 76 of 375 taranim hymns translated.
 - Gotcha: hand-editing a payload's `review[]` is easy to leave a trailing comma
   in — `JSON.parse` aborts the whole apply run (seen once on `0006.json`).
 - Gotcha: Metro caches the imported corpus chunks, so after `build:corpus` the

@@ -1,0 +1,56 @@
+{
+  "book": "taranim",
+  "number": 74,
+  "title_he": "קָם אָכֵן קָם שַׂר־הַשָּׁלוֹם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "קָם אָכֵן קָם שַׂר־הַשָּׁלוֹם",
+        "הַלְלוּיָהּ הַלְלוּיָהּ קָם אֲדֹנָי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וְהַתַּלְמִידִים רָאוּהוּ בְּתוֹכָם",
+        "וַיֹּאמֶר לָהֶם: שָׁלוֹם לָכֶם"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הֶרְאָם יָדָיו וְגַם אֶת־צִדּוֹ",
+        "וַיִּשְׂמְחוּ בִּרְאֹתָם אוֹתוֹ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הַלְלוּיָהּ כִּי־נֶאֱמַן הַדָּבָר",
+        "הַלְלוּיָהּ נִשְׁבַּר עֹקֶץ הַמָּוֶת"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הַלְלוּיָהּ מוֹשִׁיעַ בְּנֵי אָדָם",
+        "רָמַס הַקֶּבֶר קָם וְנִצָּח"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "הַלְלוּיָהּ קָם שַׂר־הַשָּׁלוֹם",
+        "הַלְלוּיָהּ הַלְלוּיָהּ קָם אֲדֹנָי"
+      ]
+    }
+  ],
+  "review": [
+    "הַלְלוּיָהּ is kept untranslated, as in the Arabic and in the Hebrew Psalter, so the six stanzas open and close on the same liturgical word.",
+    "1:1 שַׂר־הַשָּׁלוֹם — Isaiah 9:5 (שַׂר־שָׁלוֹם), for رَئِيسُ السَّلَام; the construct with the article is the fixed title.",
+    "2:2 וַיֹּאמֶר לָהֶם: שָׁלוֹם לָכֶם — John 20:19, the Easter greeting; the Arabic سَلَامٌ لَكُم quotes the same words.",
+    "4:2 עֹקֶץ הַמָּוֶת — 1 Cor 15:55 (אַיֵּה עָקְצְךָ מָוֶת); the Arabic شَوْكَةَ الْمَوْتِ is 'the sting of death', and עֹקֶץ is the biblical noun for it.",
+    "5:2 רָמַס הַקֶּבֶר — 'He trampled the grave'; רָמַס is the biblical verb for treading down (Isa 63:3), used for the Arabic سَحَقَ without adding a word."
+  ]
+}

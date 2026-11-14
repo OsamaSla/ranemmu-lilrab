@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 75,
+  "title_he": "לְכוּ נָשִׁיר לְשֵׁם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לְכוּ נָשִׁיר לְשֵׁם מִי",
+        "אֲשֶׁר־מֵת עָלֵינוּ בַּצְּלָב",
+        "וּבְאָהֳבוֹ אוֹתָנוּ",
+        "רָחַץ אוֹתָנוּ מֵחֵטְא"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וֵאלֹהִים הִצְדִּיקָנוּ",
+        "כִּי־מֵת בַּעֲדֵנוּ",
+        "וְהוּא שָׁם מַפְגִּיעַ",
+        "לָנוּ — וּמִי יַשְׁטִין"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "וְהָאָב אָהַב אוֹתָנוּ",
+        "בְּאַהֲבַת בְּנוֹ הֶחָבִיב",
+        "כִּי־אָנוּ בוֹ וְזֶה",
+        "פֵּרוּשׁ הַסּוֹד הַנִּפְלָא"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֱלֹהֵינוּ מַחְסֵנוּ",
+        "וְצוּרֵנוּ טוֹב מִשְׁעָן",
+        "אֲשֶׁר־נִהְיְתָה אַהֲבָתוֹ",
+        "נוֹשֵׂא תְּהִלָּה לָעַד"
+      ]
+    }
+  ],
+  "review": [
+    "1:4 רָחַץ אוֹתָנוּ מֵחֵטְא — Revelation 1:5 (הַמְּרַחֵץ אוֹתָנוּ מֵחֲטָאֵינוּ בְּדָמוֹ); the Arabic غَسَّلَنَا مِنَ الذُّنُوب is that verse, and רָחַץ is the biblical verb for washing away.",
+    "2:1 וֵאלֹהִים הִצְדִּיקָנוּ — Romans 8:33 (אֱלֹהִים הוּא הַמַּצְדִּיק); the Arabic وَاللهُ قَدْ بَرَّرَنَا is that verse, and the hiph'il of צדק is the fixed term for justification.",
+    "2:4 וּמִי יַשְׁטִין — 'and who will accuse?' (Rom 8:33–34); שָׂטַן as a verb is the biblical 'to accuse' (Ps 38:21), which keeps the courtroom image.",
+    "3:1–3:2 בְּאַהֲבַת בְּנוֹ הֶחָבִיב — 'with the love of His beloved Son'; the Arabic مَحَبَّةَ ابْنِهِ الْحَبِيب is a construct, and Hebrew keeps it although the sense is 'as He loves His Son'.",
+    "4:2 טוֹב מִשְׁעָן — 'the best of stays', for نِعْمَ السَّنَد; the Arabic nعْمَ construction has no Hebrew equivalent, so the comparative adjective carries the superlative as in hymn 38."
+  ]
+}
