@@ -1,0 +1,66 @@
+{
+  "book": "taranim",
+  "number": 280,
+  "title_he": "אֱלֹהַי, תֵּן־לִי לֵב כִּלְבָבְךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֱלֹהַי, תֵּן־לִי לֵב",
+        "דּוֹרֵשׁ אֶת־רְצוֹנְךָ",
+        "וְאֶחְיֶה כִּדְבָרֶיךָ",
+        "עֹשֶׂה אֶת־חֶפְצֶךָ",
+        "אָז יִרְאוּ הַבְּרִיּוֹת",
+        "בְּהִלּוּכַי צַלְמֶךָ",
+        "וְיָשׁוּב כָּבוֹד לִשְׁמֶךָ",
+        "בְּרֹב טוּב חַסְדֶּךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אֱלֹהַי, תֵּן־לִי לֵב",
+        "שָׂמֵחַ כִּי יִתֵּן",
+        "עֵזֶר נוֹתֵן מֵאַהֲבָה",
+        "יִתֵּן הוֹן בְּיָד רְחָבָה",
+        "כִּדְבָרְךָ, אֱלֹהַי",
+        "לֹא תִּשְׁכַּח כּוֹס מָיִם",
+        "נִתָּן בְּשֵׁם הַגֹּאֵל",
+        "לָנוּ נָתַן דָּמוֹ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֱלֹהַי, תֵּן־לִי לֵב",
+        "וְאַהֲבָתוֹ נְכוֹנָה",
+        "בְּלִי חֵמָה וּבְלִי מִרְמָה",
+        "מוֹחֵל כַּמָּשִׁיחַ",
+        "יֵיטִיב וְלֹא יָרֵעַ",
+        "מִתּוֹךְ שָׂשׂוֹן וְנַחַת",
+        "עֹשֶׂה טוֹב לְכָל־אָדָם",
+        "בְּתוֹךְ כָּל־מַאֲבָק"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֱלֹהַי, תֵּן־לִי לֵב",
+        "כְּלִבְּךָ הֶחָנוּן",
+        "עָנָו וְרַב־חֶסֶד תָּמִיד",
+        "לַכֹּל כְּאִישׁ יָדִיד",
+        "נוֹטֵה יָד לְכָל־כּוֹשֵׁל",
+        "יְנַחֵם הַנֶּעְצָב",
+        "דּוֹרֵשׁ טוֹבַת אַחֵר",
+        "בְּכָל־אֹרֶךְ הַדֶּרֶךְ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the heart's petition: 1:1–8 is Ps 51:12 (לֵב טָהוֹר בְּרָא־לִי) with Ps 119:37 and Matt 5:16, 2:1–8 is 2 Cor 9:7 (כָּל־אִישׁ כַּאֲשֶׁר יָדְבֶּנּוּ לִבּוֹ) with Matt 10:42 (כּוֹס מַיִם) and 1 Pet 1:19, 3:1–8 is 1 Cor 13:4–7 with Eph 4:32, and 4:1–8 is Matt 11:29 with Gal 6:2.",
+    "The refrain אֱלֹהַי, תֵּן־לִי לֵב is identical in all four stanzas, as the printed يَا إِلٰهِي هَبْنِي قَلْبًا is; the Hebrew does not vary it, because each stanza then names a different colour of the one heart that is asked for.",
+    "1:2 דּוֹרֵשׁ אֶת־רְצוֹנְךָ — the Arabic يَقْصِدُ مَسَرَّتَكَ is 'seeking Your pleasure'; the Hebrew uses דָּרַשׁ, the verb of seeking God and His will (Ps 34:5, דָּרַשְׁתִּי אֶת־יְהוָה), rather than a general 'wanting', so the petition is for a heart oriented to God's will and not merely pleased by it.",
+    "2:6 לֹא תִּשְׁכַּח כּוֹס מָיִם — the Arabic لَسْتَ تَنْسَى كَأْسَ مَاء is Matt 10:42's cup of cold water; the Hebrew keeps the negative with לֹא and the concrete כּוֹס, because the line's comfort is that the smallest material gift is remembered, which an abstract 'reward' would lose.",
+    "2:8 לָנוּ נָתַן דָּמוֹ — the Arabic سَفَكَ عَنَّا الدِّمَاء is plural ('bloods'); biblical Hebrew uses דָּם in the singular for shed blood (Gen 9:6), so the Hebrew keeps the singular and the line still names the violent death rather than a medical quantity."
+  ]
+}

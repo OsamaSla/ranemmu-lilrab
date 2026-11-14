@@ -1,0 +1,39 @@
+{
+  "book": "taranim",
+  "number": 276,
+  "title_he": "הָבָה נָבוֹא בְּרִנָּה, בִּתְהִלָּה וּתְפִלָּה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "שְׂפָתְךָ הַשְּׂחוֹק מְרַפֵּא הַמַּחֲלָה",
+        "נוֹתֵן שָׁלוֹם, הוּא גַּם־שִׂמְחָתֵנוּ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הָבָה נָבוֹא בְּרִנָּה, בִּתְהִלָּה וּתְפִלָּה",
+        "בְּתוֹדָה וּבְשֶׁבַח נַעֲבֹד אֶת־אֵלֵינוּ",
+        "מַה־נָּעִים אַחִים בְּיַחַד בְּצֵל אֲדֹנֵינוּ",
+        "בֶּאֱמוּנָה נִרְאֶךָ, לְךָ נָשִׁיב שִׁבְחֵנוּ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אֵין לָנוּ זוּלָתְךָ, אֵל שְׁלֵם בְּמִדּוֹת",
+        "מַרְאֵה־פָנֶיךָ יְשַׂמְּחֵנוּ, אֵל הַמַּתָּנוֹת",
+        "בָּרֵךְ אֶת־קְהִלָּתֵנוּ, אֲדֹנֵינוּ הַנֶּאֱמָן",
+        "חַזֵּק אֶת־לִבֹּתֵינוּ בְּרוּחַ קָדְשֶׁךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the assembly's greeting: 1:1–2 is the smile of the Lord healing (Prov 15:30, מְאוֹר־עֵינַיִם יְשַׂמַּח־לֵב) with Num 6:26, 2:1–4 is Ps 133:1 (מַה־טּוֹב וּמַה־נָּעִים שֶׁבֶת אַחִים גַּם־יָחַד) with Col 3:16, and 3:1–4 is Ps 16:2 with Phil 4:19 and Eph 3:16.",
+    "The shape is 2/4/4: stanza 1 is a two-line acclamation and stanzas 2–3 have four long lines each. The payload keeps stanza 1 at two lines, because the printed book sets it as a couplet before the hymn proper begins.",
+    "1:1 שְׂפָתְךָ הַשְּׂחוֹק — the Arabic ثَغْرُكَ الْبَسَّام is literally 'your smiling mouth'; Hebrew has no adjective from the root of שָׂחַק that will sit in a construct, so the line uses the noun הַשְּׂחוֹק with שְׂפָתֶיךָ as the subject, keeping the smile on the lips rather than on the face.",
+    "2:3 מַה־נָּעִים אַחִים בְּיַחַד — the Arabic مَا أَجْمَلَ الْإِخْوَان is 'how fair the brethren'; the Hebrew quotes Ps 133:1's מַה־נָּעִים … גַּם־יָחַד and keeps אַחִים, so the stanza's fellowship is the psalm's and not a general sociability.",
+    "3:2 אֵל הַמַּתָּנוֹת — the Arabic يَا مَانِحَ الْهِبَات is 'O Giver of gifts'; the Hebrew keeps the construct with the plural מַתָּנוֹת (the word of Jas 1:17, מַתְּנֵי טוֹב), because the stanza is listing what God gives and the singular would flatten it into a title."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "book": "taranim",
+  "number": 279,
+  "title_he": "עֲטֶרֶת קוֹצִים קְלוּעָה בַּעֲבוּרִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "עֲטֶרֶת קוֹצִים קְלוּעָה בַּעֲבוּרִי",
+        "דָּם עַל־מֵצַח זוֹבֵעַ, נָאֶה מִכָּל־הוֹד",
+        "יָדַיִם מְלֵאוֹת עָוֺן שָׂמוּהוּ לְחֶרְפָּה",
+        "עֲטֶרֶת לְרֹאשׁ הַגֹּאֵל, צַדִּיק מָרוֹם"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "בְּחֶרְפָּה רָצִיתָ, וְגַם בְּמַכְאוֹב הַצְּלָב",
+        "דָּמְךָ נִזְרַק לְטָהֳרָה וְלִסְלִיחָה",
+        "זַעֲקָתְךָ הַמָּרָה תְּקָרֵעַ לְבָבוֹת",
+        "בַּעֲבוּרִי נֶעֱזַבְתָּ, הוֹי מַחְמַדִּי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עַל־יַד הַצְּלָב אֶכְרְעָה לְהוֹדוֹת לָאֵל",
+        "מוֹשִׁיעִי פְּדָאַנִי בְּשָׁפְכוֹ אֶת־דָּמוֹ",
+        "הַנִּיחֵנִי לְבַלּוֹת יָמַי בְּהַכְנָעָה",
+        "הוֹי אֲשֶׁר מַתָּה בַּעֲדִי, אֲדֹנִי יֵשׁוּעַ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the crown of thorns: 1:1–4 is Matt 27:29 (וַיִּשְׂמוּ עַל־רֹאשׁוֹ עֲטֶרֶת קוֹצִים) with Isa 53:3 and Ps 22:7, 2:1–4 is Matt 27:46 with 1 Pet 1:19, and 3:1–4 is Gal 6:14 with Phil 2:8.",
+    "1:2 דָּם עַל־מֵצַח זוֹבֵעַ — the Arabic يُدْمَى بِهِ جَبِينٌ is 'a brow made to bleed by it'; biblical Hebrew has no adjective for 'bleeding', so the line uses זָב, the verb of Lev 15 and Lam 1:16 (עֵינִי עֵינִי יֹרְדָה מַּיִם), and puts the blood first so the image strikes before the explanation.",
+    "1:4 עֲטֶרֶת לְרֹאשׁ הַגֹּאֵל, צַדִּיק מָרוֹם — the Arabic تَاجًا لِرَأْسِ الْفَادِي رَبِّ السَّمَاءِ الْبَارّ has three titles; the Hebrew keeps the crown, the Redeemer's head, and the righteousness, but compresses 'Lord of heaven' into מָרוֹם, because the line is already long and the stanza's point is the mock-crown on the righteous One.",
+    "2:2 דָּמְךָ נִזְרַק לְטָהֳרָה וְלִסְלִיחָה — the Arabic دِمَاكَ تَجْرِي طُهْرًا لِلصَّفْحِ is 'Your blood flows for cleansing, for pardon'; the Hebrew uses זָרַק, the priestly verb for sprinkling blood (Lev 4:6), so the line is the sacrifice and not a description of bleeding.",
+    "3:4 הוֹי אֲשֶׁר מַתָּה בַּעֲדִי — the Arabic يَا مَنْ قَضَيْتَ عَنِّي is 'O You who died for me'; the Hebrew keeps the relative clause with אֲשֶׁר because a bare participle would make the line an address to the cross rather than to the One who died on it."
+  ]
+}

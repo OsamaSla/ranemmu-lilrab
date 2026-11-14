@@ -90,6 +90,11 @@ Arabic wins.
 | نصر / انتصار (victory) | נִצָּחוֹן | Post-biblical noun; the biblical language expresses victory verbally (`נָצַח`, `יָשַׁע`), so this is used only where the line needs the abstract. |
 | حمل الله (Lamb of God) | שֵׂה הָאֱלֹהִים | John 1:29's fixed title; never `حَمَل` as a common noun when it is a name. |
 | فدية / فداء (ransom, redemption) | פִּדְיוֹן | Exod 21:30, Ps 49:8–9; the price paid, distinct from `פְּדוּת` (the act) and `כֹּפֶר` (the covering). |
+| إكليل / تاج (crown) | עֲטֶרֶת | Prov 12:4, Isa 28:5; the wreath actually worn, kept for the thorn crown, where `כֶּתֶר` (a royal diadem) would make the mockery a coronation. |
+| مسربل / متسربل (robed in) | עָטָה | Ps 104:2 (עֹטֶה אוֹר כַּשַּׂלְמָה), Isa 59:17; the verb already contains the garment, so no separate word for 'robe' is needed. |
+| ساهر / فَلْنَصْحُ (keep vigil for prayer) | שָׁקַד | Jer 1:12, Ps 102:8; the watching verb, not merely 'to pray', where the Arabic keeps the vigilance. |
+| أوصاف (traits, marks) | אֹפֶן | Post-biblical for a mode or aspect; used only where the Arabic lists the marks by which something is known, since biblical Hebrew has no noun for 'characteristic'. |
+| صحبة (company, fellowship) | חֶבְרָה | Post-biblical for companionship (biblical `חֶבֶר` is a company of men, Hos 6:9); used when the line is about the Lord's company with the soul. |
 
 ## Pointing conventions
 

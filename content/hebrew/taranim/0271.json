@@ -1,0 +1,53 @@
+{
+  "book": "taranim",
+  "number": 271,
+  "title_he": "הָבָה נָשִׁיר לַאדֹן שָׁמַיִם",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הָבָה נָשִׁיר לַאדֹן שָׁמַיִם",
+        "מְרַנְּנִים מְרַנְּנִים, שָׁרִים",
+        "צוּר יִשְׁעֵנוּ, אֲדוֹן הַפְּדוּת",
+        "מְרַנְּנִים וְצוֹהֲלִים",
+        "נָבוֹא אֵלָיו בִּתְהִלָּה רַבָּה",
+        "נָרִיעָה בְּשִׂמְחָה עוֹלָמִית",
+        "נָשִׁיר לַאדֹן יְשׁוּעָתֵנוּ",
+        "מְרַנְּנִים וְצוֹהֲלִים"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "כִּי הוּא אֵל גָּדוֹל וְנִשְׂגָּב מְאֹד",
+        "זַמְּרוּ לֵאלֹהִים, זַמֵּרוּ",
+        "וְהוּא מֶלֶךְ נִשְׂגָּב וְגָדוֹל",
+        "זַמְּרוּ לוֹ, צוֹהֲלִים",
+        "כָּל־הָאֲרָצוֹת וְכָל־הֶהָרִים",
+        "כֹּל בְּיָדוֹ, הוּא אֲדוֹן הַהוֹד",
+        "וְהַיָּם מַעֲשֵׂה יְדֵי עֶלְיוֹן",
+        "זַמְּרוּ לוֹ, צוֹהֲלִים"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "עַתָּה נִתְפַּלְּלָה אֵלָיו",
+        "מְרַנְּנִים מְרַנְּנִים, שָׁרִים",
+        "נִכְרְעָה לְפָנָיו, נִשְׁתַּחֲוֶה",
+        "מְרַנְּנִים וְצוֹהֲלִים",
+        "הוּא אֵל, וַאֲנַחְנוּ עֲבָדָיו",
+        "עַמּוֹ, הוּא רֹעֵנוּ הַמְהֻלָּל",
+        "יִרְעֶה צֹאנוֹ בְּאַהֲבָה רַבָּה",
+        "זַמְּרוּ לוֹ, צוֹהֲלִים"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is Psalm 95 and 100 sung as a procession: 1:1–8 is Ps 95:1 (נָרִיעָה לְצוּר יִשְׁעֵנוּ) with Ps 100:2, 2:1–8 Ps 95:3–5 (אֲשֶׁר־לוֹ הַיָּם וְהוּא עָשָׂהוּ) with Ps 24:1–2, and 3:1–8 Ps 95:6–7 (נִכְרְעָה וְנִשְׁתַּחֲוֶה … וְהוּא רֹעֵנוּ) nearly verbatim.",
+    "The refrains are not identical across the stanzas, because the printed Arabic is not: stanza 1 repeats مرنمين مرنمين / مرنمين هاتفين, while stanzas 2–3 change the first refrain to غنوا له مرنمين. The Hebrew renders the first with זַמְּרוּ לֵאלֹהִים, זַמֵּרוּ (Ps 47:7) and keeps the second constant, so the difference of the print survives.",
+    "1:3 צוּר יִשְׁעֵנוּ, אֲדוֹן הַפְּדוּת — the Arabic صَخْرِ الْخَلَاصِ وَرَبِّ الْفِدَا is Ps 95:1's צוּר יִשְׁעֵנוּ; the Hebrew keeps the verse's construct and adds אֲדוֹן הַפְּדוּת for the second half of the Arabic, since a bare repetition of 'rock' would lose the redemption the stanza is celebrating.",
+    "3:5 הוּא אֵל, וַאֲנַחְנוּ עֲבָדָיו — the Arabic فَهُوَ الْإِلَهُ وَنَحْنُ الْعَبِيد is the Ps 95:7 relation; the Hebrew keeps the stark verbless clause and the word עֲבָדִים, because the stanza's comfort depends on the distance the next line closes with עַמּוֹ.",
+    "3:7 יִרְעֶה צֹאנוֹ — the Arabic يَرْعَى الْقَطِيعَ uses the flock-word; the Hebrew uses צֹאן, the word of Ps 95:7 and 100:3 (עַם מַרְעִיתוֹ וְצֹאן יָדוֹ), so the line quotes the psalm's own pastoral noun rather than a later synonym."
+  ]
+}

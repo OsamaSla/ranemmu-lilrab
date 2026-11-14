@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 277,
+  "title_he": "יְרוּשָׁלַיִם שֶׁבַּמָּרוֹם, עִיר אֵל עֶלְיוֹן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יְרוּשָׁלַיִם שֶׁבַּמָּרוֹם",
+        "אֵל־עֶלְיוֹן הוּא בְרָאָהּ",
+        "וְהִיא קִרְיַת הָעֶלְיוֹן",
+        "הִיא מֶרְכַּז הַמַּלְכוּת"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "וְהָאָדוֹן בְּקִרְבָּהּ מוֹלֵךְ",
+        "עוֹטֶה הוֹד וּגְאוֹן עוֹלָם",
+        "וְעִמּוֹ נִמְלֹךְ יַחַד",
+        "בְּהוֹד וְהָדָר וְיֹפִי"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "כָּל־בֶּרֶךְ לוֹ תִּכְרַעְנָה",
+        "וְכָל־לָשׁוֹן תּוֹדֶה לוֹ",
+        "וְהוֹד הָאָב בְּיֵשׁוּעַ",
+        "בְּכָל־מָקוֹם יִמָּלֵא"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הִנֵּה הַלַּיְלָה כִּמְעַט",
+        "וְכוֹכַב־הַנֹּגַהּ זָרַח",
+        "וְהַמַּלְכוּת עוֹד תֵּחֵל",
+        "כִּי־יִזְרַח אוֹר הַשָּׁחַר"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "אָנוּ בָרוּחַ נֹאמַר",
+        "בּוֹא, אֲדֹנֵינוּ יֵשׁוּעַ",
+        "אָמֵן, אָמֵן, בּוֹאָה נָּא",
+        "קַיֵּם־לָנוּ אִמְרָתֶךָ"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the heavenly Jerusalem: 1:1–4 is Heb 12:22 (יְרוּשָׁלַיִם שֶׁל מַעְלָה) with Ps 48:3, 2:1–4 Rev 21:3 with 2 Tim 2:12, 3:1–4 Phil 2:10–11 nearly verbatim, 4:1–4 Rom 13:12 with Num 24:17 (דָּרַךְ כּוֹכָב מִיַּעֲקֹב), and 5:1–4 Rev 22:17,20 with 1 Cor 16:22.",
+    "1:2 אֵל־עֶלְיוֹן הוּא בְרָאָהּ — the Arabic اللهُ بَارِيهَا الْمَجِيد is 'God its glorious Maker'; the Hebrew puts the divine title first and the verb second, because a construct 'אֱלֹהֵי בוֹרְאָהּ' would be four syllables too many and the stanza needs the line to end on the city.",
+    "2:2 עוֹטֶה הוֹד וּגְאוֹן עוֹלָם — the Arabic مُسَرْبَلًا ثَوْبَ الْجَلَال is 'robed in the garment of majesty'; the Hebrew uses עָטָה, the verb of Ps 104:2 (עֹטֶה אוֹר כַּשַּׂלְמָה), and drops the explicit 'garment' because the verb already means to wrap oneself in a thing.",
+    "4:2 וְכוֹכַב־הַנֹּגַהּ זָרַח — the Arabic وَالْكَوْكَبُ الْمُنِيرُ لَاح is 'the bright star appeared'; the Hebrew uses נֹגַהּ, the prophetic word for the brightness that rises on Zion (Isa 60:3, לְנֹגַהּ זַרְחֵךְ), so the star of the stanza is the one of Num 24:17 read through Isaiah.",
+    "5:3–4 אָמֵן, אָמֵן, בּוֹאָה נָּא / קַיֵּם־לָנוּ אִמְרָתֶךָ — the Arabic نَعَمْ آمِينَ فَتَعَال / أَنْجِزْ لَنَا صِدْقَ الْمَقَال keeps the double assent and then the petition; the Hebrew keeps both, since the stanza is the Spirit's answer in Rev 22:17 and the church's 'Amen' must not be merged into the invitation."
+  ]
+}

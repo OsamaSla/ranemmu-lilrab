@@ -1,0 +1,67 @@
+{
+  "book": "taranim",
+  "number": 282,
+  "title_he": "נַפְשִׁי, הִנֵּה בָא יֵשׁוּעַ, אֲדוֹן הַפִּדְיוֹן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "זֶמֶר מָתוֹק בַּמָּרוֹם",
+        "לִשְׁמוֹ עָרֵב בָּאָרֶץ",
+        "יוֹדוּהוּ הַצְּבָאִים בְּשֶׁבַח"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הִנֵּה בָא יֵשׁוּעַ, נַפְשִׁי",
+        "אֲדוֹן הַפִּדְיוֹן, גִּבּוֹר",
+        "מֵחֹלִי רַע יִרְפָּאֵךְ",
+        "הוּא רוֹפְאֵךְ הַנִּבְחָר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הִנֵּה אָמַר הַמָּשִׁיחַ",
+        "הֵן נָשָׂאתִי עֲוֺנֵךְ",
+        "לְכִי־נָא בְשָׁלוֹם וָנַחַת",
+        "שִׁלְכִי עָלַי יְגוֹנֵךְ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אִם חֶבְרָתִי תִּדְרֹשִׁי",
+        "הִנֵּה עֶזְרִי אֵלַיִךְ",
+        "אַל־תִּירְאִי, כֹּחִי הוּא",
+        "בְּחָלְשֵׁךְ הוּא יוּשְׁלַם"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "עוֹגֶן נַפְשִׁי נָכוֹן",
+        "בִּדְבָרְךָ אַתָּה נֶאֱמָן",
+        "עִמִּי כָּל־יְמֵי חַיָּי",
+        "הוֹי אֲדֹנָי, הוּא עוֹזְרִי"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "אֵין פַּחַד כֹּחוֹת שְׁאוֹל",
+        "וְלֹא אִירָא מָוֶת",
+        "כִּי בַגֹּאֵל הַנַּדִּיב",
+        "אֶשָּׁאֵר נָצוּר לָעַד"
+      ]
+    }
+  ],
+  "review": [
+    "The hymn is the soul's bedside word from its Redeemer: 1:1–3 is Ps 96:1 (שִׁירוּ לַיהוָה שִׁיר חָדָשׁ) with Rev 5:12, 2:1–4 is Matt 9:12 (הָרֹפֵא) with Ps 103:3, 3:1–4 is Matt 9:2 (נְשׂוּאוֹת חֲטָאֹתַיִךְ) with 1 Pet 5:7, 4:1–4 is 2 Cor 12:9 (כִּי בְחֻלְשָׁה תִּשְׁלַם גְּבוּרָתִי), 5:1–4 is Heb 6:19 (עֹגֶן) with Ps 118:7, and 6:1–4 is Matt 16:18 with 1 Pet 1:5.",
+    "The shape is 3/4/4/4/4/4: stanza 1 is a three-line acclamation and the rest are four-line stanzas. The first stanza is the praise the hosts owe, and the payload keeps it at three lines rather than padding it, because the printed book begins the hymn's address only in stanza 2.",
+    "3:2 הֵן נָשָׂאתִי עֲוֺנֵךְ — the Arabic إِنِّي غَفَرْتُ إِثْمَك is 'I forgave your sin'; the Hebrew uses נָשָׂא עָוֺן, the phrase of Exod 34:7 and Isa 53:12, so the forgiveness is the bearing of the guilt and not a mere remission, which is what the stanza's comfort rests on.",
+    "5:1 עוֹגֶן נַפְשִׁי נָכוֹן — the Arabic مِرْسَاةُ نَفْسِي فِي ثَبَات is 'my soul's anchor is in firmness'; עֹגֶן is the biblical anchor-word of Heb 6:19, and the line keeps the nautical image rather than translating it into 'my hope is sure'.",
+    "6:1 אֵין פַּחַד כֹּחוֹת שְׁאוֹל — the Arabic لَا هَوْلَ قُوَّاتِ الْجَحِيم is 'no dread of the powers of hell'; the Hebrew keeps שְׁאוֹל, the grave-and-underworld word of the psalms, because the line is about the powers that Christ disarmed (Col 2:15) and not about a later topography of hell."
+  ]
+}
