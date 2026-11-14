@@ -1,0 +1,40 @@
+{
+  "book": "taranim",
+  "number": 124,
+  "title_he": "הֲכָל־זֶה בַּעֲדִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בַּעֲדִי אָנִי? כֵּן, בַּעֲדִי",
+        "אַהֲבָתוֹ לִי נִשְׂגָּבָה",
+        "אָשִׁיר לוֹ בְּרִנָּה",
+        "כִּי פְּדָאַנִי בַּצְּלָב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֲכָל־זֶה בַּעֲדִי",
+        "הַמָּשִׁיחַ סָבַל",
+        "בָּא מִמְּרוֹם שָׁמַיִם",
+        "וְטָעַם עָלַי כְּאֵב"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הֲבַעֲדִי הִרְכִּין רֹאשׁוֹ",
+        "וְסָבַל כָּל־הָעָמָל",
+        "בַּעֲדִי הַפְּדוּת הִשְׁלִים",
+        "וְנָתַן שָׁלוֹם בְּחֵן"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 בַּעֲדִי אָנִי? כֵּן, בַּעֲדִי — the Arabic عَنِّي أَنَا؟! نَعَمْ عَنِّي is a question and its answer inside one line; Hebrew keeps both halves and the exclamation, because the whole hymn rests on that turn from doubt to assurance.",
+    "3:1 הֲבַעֲדִי הִרְכִּין רֹאשׁוֹ — John 19:30 (וַיֵּט רֹאשׁוֹ); the Arabic هَلْ عَنِّي رَأْسَهُ حَنَى is that bowing of the head, and Hebrew keeps the question form of the stanza.",
+    "3:3–3:4 בַּעֲדִי הַפְּדוּת הִשְׁלִים / וְנָתַן שָׁלוֹם בְּחֵן — John 19:30 (נִשְׁלַם) with the peace-gift of John 14:27; the Arabic عَنِّي الْفِدَاءَ تَمَّمَ / أَعْطَى السَّلَامَ مُنْعِمًا joins the finished redemption to the free peace, and Hebrew keeps the pair.",
+    "1:2 אַהֲבָתוֹ לִי נִשְׂגָּבָה — 'His love for me is exalted', for حُبُّهُ لِي سَامٍ عَجِيب; the Arabic has two adjectives and the line holds one, so נִשְׂגָּב carries both the height and the wonder."
+  ]
+}

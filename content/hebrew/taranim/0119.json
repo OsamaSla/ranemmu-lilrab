@@ -1,0 +1,68 @@
+{
+  "book": "taranim",
+  "number": 119,
+  "title_he": "הַלְלוּיָהּ, קָם אֲדֹנָי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הַלְלוּיָהּ, קָם אֲדֹנָי",
+        "אַחֲרֵי שְׁלֹם הַפְּעֻלָּה",
+        "אַחֲרֵי מָוֶת וּכְאֵב",
+        "נְגַדֵּל אֶת־הַשֶּׂה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "מֵת בַּעֲדֵנוּ, הַצַּדִּיק",
+        "דּוֹדֵנוּ הֶחָבִיב",
+        "הֵפֵר אֶת־הַמָּוֶת",
+        "וְנָתַן חַיֵּי עַד"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "קָם גֹּאֵל הַמַּאֲמִינִים",
+        "גּוֹבֵר, נוֹתֵן חַיִּים",
+        "קָם בֶּאֱמֶת, בְּיֶדַע",
+        "פּוֹתֵחַ שַׁעַר יֶשַׁע"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "וְהוּא עַל־כִּסֵּא עֶלְיוֹן",
+        "מַפְגִּיעַ בְּכָל־עֵת",
+        "וְהִבְטִיחַ לָבוֹא",
+        "לִנְטוֹל הַמַּאֲמִינִים"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "הַיּוֹם הַמְאֻשָּׁר",
+        "רֵאשִׁית חֻפָּתֵנוּ",
+        "כִּי נָשִׁיר בְּשִׁירָה",
+        "לְחָתָנֵנוּ הַיָּחִיד"
+      ]
+    },
+    {
+      "label": "6",
+      "lines": [
+        "נָרֹן בַּנִּצָּחוֹן",
+        "בְּשִׂמְחָה וּתְרוּעָה",
+        "נִחְיֶה בְּצִפִּיָּה",
+        "בְּתִקְוַת הֶחָטְפֵנוּ"
+      ]
+    }
+  ],
+  "review": [
+    "2:3–2:4 הֵפֵר אֶת־הַמָּוֶת / וְנָתַן חַיֵּי עַד — 2 Timothy 1:10 (הֵפֵר אֶת־הַמָּוֶת וְהֵאִיר חַיִּים); the Arabic أَبْطَلَ الْمَوْتَ … الْحَيَاةَ وَالْخُلُود is that verse, and Hebrew keeps the two clauses on two lines because the Arabic splits a word (أَنَا / رَ) across them and Hebrew cannot.",
+    "1:2 אַחֲרֵי שְׁלֹם הַפְּעֻלָּה — 'after the work was completed', for بَعْدَ إِكْمَالِ الْعَمَل; the noun פְּעֻלָּה is the biblical word for work done (Ps 64:10), and שָׁלֵם carries 'finished'.",
+    "5:2 רֵאשִׁית חֻפָּתֵנוּ — 'the beginning of our wedding-canopy', for بَدْءُ عُرْسِنَا الْمَجِيد; חֻפָּה is the glossary word for the marriage canopy, and the glory is carried by the next line's שִׁירָה rather than repeated.",
+    "6:4 בְּתִקְוַת הֶחָטְפֵנוּ — 'in the hope of our being snatched away', for لِرَجَاءِ الاِخْتِطَاف; the rapture noun has no biblical abstract, so the niphal infinitive carries it as in hymn 98.",
+    "4:2 מַפְגִּיעַ — Hebrews 7:25 (מַפְגִּיעַ בַּעֲדָם); the glossary fixes this participle for the Arabic شَافِعٌ ('interceding')."
+  ]
+}

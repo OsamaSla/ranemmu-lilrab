@@ -1,0 +1,50 @@
+{
+  "book": "taranim",
+  "number": 125,
+  "title_he": "יִמְחֶה אֲדֹנָי הַדְּמָעוֹת",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "כָּבוֹד לוֹ, עוֹד נִרְאֵהוּ",
+        "כָּבוֹד לוֹ, עוֹד נִרְאֵהוּ",
+        "מְהֵרָה, מְהֵרָה, מְהֵרָה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יִמְחֶה אֲדֹנָי הַדְּמָעוֹת",
+        "לֹא בֶכִי בַּגְּבוּלוֹת הָהֵם",
+        "בַּשָּׁמַיִם עִם־יֵשׁוּעַ",
+        "נָגִיל, נָרִיעַ, הֵי קְהִלּוֹת"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "נִזְכֶּה בַּדּוֹד הַהוּא",
+        "כִּי נִרְאֶה פָנָיו מִקָּרוֹב",
+        "בַּשָּׁמַיִם חֶלְקִי",
+        "עִם־הַגֹּאֵל יֵשׁוּעַ דּוֹדִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "נֵחָטֵף אֶל־הֶעָנָן",
+        "וְנִשְׁמַע קוֹל הַבְּרָכָה",
+        "בַּשָּׁמַיִם, בְּבֵית הָאָב",
+        "נִלְבַּשׁ בִּגְדֵי לָבָן"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives stanza 1 as three lines (the acclamation twice, then the thrice-repeated 'soon') and stanzas 2–4 as four lines; the payload follows the print, so `hebrew-meter.mjs` reports the shape 3/4/4/4 as irregular by construction.",
+    "2:1 יִמְחֶה אֲדֹנָי הַדְּמָעוֹת — Revelation 21:4 (וּמָחָה אֱלֹהִים כָּל־דִּמְעָה); the Arabic سَوْفَ يَمْسَحُ رَبِّي الدُّمُوع is the title of the hymn, and Hebrew keeps the plural tears with the singular verb, as the psalm does in Ps 116:8.",
+    "2:2 לֹא בֶכִי בַּגְּבוּלוֹת הָהֵם — 'no weeping in those borders', for لَا بُكَاءَ فِي تِلْكَ الرُّبُوع; רְבָעִים is 'quarters/regions', and גְּבוּלוֹת is the biblical word for the territories of the age to come.",
+    "4:1 נֵחָטֵף אֶל־הֶעָנָן — 1 Thessalonians 4:17 (נֵחָטֵף … בָּעֲנָנִים); the Arabic سَوْفَ نُخْطَفُ عَلَى السَّحَاب is that verse, and עָנָן is kept singular as in the epistle.",
+    "4:2–4:3 וְנִשְׁמַע קוֹל הַבְּרָכָה / בְּבֵית הָאָב — John 14:2 (בְּבֵית אָבִי); the Arabic صَوْتَ التَّرْحَاب / فِي بَيْتِ الْآب is the welcome in the Father's house, and בְּרָכָה carries the greeting without the modern Hebrew שָׁלוֹם עֲלֵיכֶם.",
+    "4:4 נִלְבַּשׁ בִּגְדֵי לָבָן — Revelation 7:9 (לְבוּשִׁים בִּגְדֵי לָבָן); the Arabic بِيضَ الثِّيَاب is that clothing."
+  ]
+}

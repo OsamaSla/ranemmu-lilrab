@@ -1,0 +1,58 @@
+{
+  "book": "taranim",
+  "number": 123,
+  "title_he": "אֶשְׁתּוֹקֵק לָגֶשֶׁת",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֶשְׁתּוֹקֵק לָגֶשֶׁת",
+        "אֶל־אֲדֹנִי הַגִּבּוֹר",
+        "וְשִׁמְעַת לִבִּי כִּי",
+        "בִּנְתִיבוֹתָיו אֵלֵךְ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הוּא נָדִיב בְּתִתּוֹ",
+        "רַב־חֶסֶד בְּחָלְקוֹ",
+        "וְסוֹלֵחַ עַל־חֵטְא",
+        "בְּחַסְדּוֹ הַנִּפְלָא"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מָה־נָּעֲמוּ שָׁעוֹת",
+        "בִּהְיוֹתִי עִם־דּוֹדִי",
+        "שִׂיחָתִי עִמּוֹ",
+        "בְּסֵתֶר, בְּלִי רוֹאֶה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "מִי בַשָּׁמַיִם אֵפוֹא",
+        "מִלְּבַד אֱלֹהַי חָי",
+        "וְעִמּוֹ מֵעָל",
+        "לֹא אֶחְפֹּץ דָּבָר"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "כִּי אַהֲבָתוֹ תָּשִׂים",
+        "בָּז לִי הָעוֹלָם",
+        "בּוֹחֵר אֲנִי לַעֲלוֹת",
+        "אֶל־מְנוּחָה עֶלְיוֹנָה"
+      ]
+    }
+  ],
+  "review": [
+    "4:1–4:4 מִי בַשָּׁמַיִם … וְעִמּוֹ … לֹא אֶחְפֹּץ — Psalm 73:25 (מִי־לִי בַשָּׁמָיִם וְעִמְּךָ לֹא־חָפַצְתִּי בָאָרֶץ); the Arabic مَنْ فِي السَّمَاءِ … وَمَعهُ فَوْقَ الْأَرْضِ لَا / أُرِيدُ … شَيْ is that verse, so the Hebrew follows the psalm's two clauses rather than the Arabic's line split.",
+    "3:3–3:4 שִׂיחָתִי עִמּוֹ / בְּסֵתֶר, בְּלִי רוֹאֶה — the Arabic يَجْرِي حَدِيثِي مَعَهُ / سِرًّا وَلَا رَقِيب is 'my converse with Him runs secretly, with no watcher'; רָקִיב ('watcher') has no Hebrew noun, so בְּלִי רוֹאֶה carries it.",
+    "1:3–1:4 וְשִׁמְעַת לִבִּי כִּי / בִּנְתִיבוֹתָיו אֵלֵךְ — 'and my heart's report is that I walk in His paths'; the Arabic وَشَوْقُ قَلْبِي أَنَّنِي / فِي طُرْقِهِ أَسِير names longing, and Hebrew names the inner testimony, because אֶשְׁתּוֹקֵק already carries the longing in the first line.",
+    "5:2 בָּז לִי הָעוֹלָם — 'the world is despised to me', for أَحْتَقِرُ الدُّنْيَا; the Arabic verb is transitive ('I despise'), and Hebrew turns it into a predicate so the line can carry the object without a second verb."
+  ]
+}

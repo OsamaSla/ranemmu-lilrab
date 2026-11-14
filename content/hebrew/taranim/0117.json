@@ -1,0 +1,59 @@
+{
+  "book": "taranim",
+  "number": 117,
+  "title_he": "שָׁלְמָה נַפְשִׁי, יֵשׁוּעַ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "שָׁלְמָה נַפְשִׁי, יֵשׁוּעַ",
+        "מֵאָז יְדַעְתִּיךָ",
+        "כָּל־יָמַי עֲדָנִים",
+        "תַּחַת צִלְּךָ"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַתָּה אֲדֹנִי, דּוֹדִי",
+        "יָם חֶסֶד שׁוֹפֵעַ",
+        "עֲזַרְתַּנִי, וְהִנְנִי",
+        "בְּךָ גּוֹבֵר"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בָּאתָ, הֵשַׁבְתָּ רוּחִי",
+        "אַתָּה שִׂמְחָתִי",
+        "וּבְמַסָּעִי אֶשִּׂיג",
+        "מִמְּךָ חָזְקִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "הוֹי זֹהַר כְּבוֹד אֵל",
+        "וְצֶלֶם הָעֶלְיוֹן",
+        "נְחֵה צְעָדַי, מַלְּאֵנִי",
+        "בֶּאֱמֶת בָּרָה"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "פָּנֶיךָ יֵלְכוּ לְפָנַי",
+        "יֵשׁוּעַ, תָּמִיד",
+        "וְיָסוּר הַלַּיְלָה כַּאֲשֶׁר",
+        "תּוֹפִיעַ בְּשִׂמְחָה"
+      ]
+    }
+  ],
+  "review": [
+    "1:1 שָׁלְמָה נַפְשִׁי — 'my soul is whole/at peace', for طِبْتُ نَفْسًا; the Arabic طاب نفسا is 'my soul was well pleased', and שָׁלֵם is the biblical verb for being whole, which carries the sense without the idiomatic طاب.",
+    "2:2 יָם חֶסֶד שׁוֹפֵעַ — 'a brimming sea of grace', for بَحْرُ لُطْفٍ زَاخِر; the Arabic keeps both the sea and the overflowing, and Hebrew keeps both nouns.",
+    "4:1–4:2 זֹהַר כְּבוֹד אֵל / וְצֶלֶם הָעֶלְיוֹן — Hebrews 1:3 (זֹהַר כְּבוֹדוֹ וְצֶלֶם עַצְמוּתוֹ); the Arabic بَهَاءَ مَجْدِ اللهِ / وَصُورَةَ الْعَلِيّ is that verse, and Hebrew keeps its two nouns.",
+    "5:1 פָּנֶיךָ יֵלְכוּ לְפָנַי — Exodus 33:14 (פָּנַי יֵלֵכוּ); the Arabic سِرْ بِوَجْهِكَ أَمَامِي is 'walk before me with Your face', and the Hebrew keeps the face as the subject that leads.",
+    "5:3–5:4 וְיָסוּר הַלַּיְלָה … תּוֹפִיעַ בְּשִׂמְחָה — the Arabic فَيُوَلِّي اللَّيْلُ حِينَ / تَبْدُو بَاسِمًا makes the night flee at Your smiling appearance; Hebrew keeps the same causal order, with the smile rendered as appearing 'in joy'."
+  ]
+}

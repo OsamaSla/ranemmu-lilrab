@@ -1,0 +1,49 @@
+{
+  "book": "taranim",
+  "number": 121,
+  "title_he": "יֵשׁוּעַ לְבַדּוֹ כָּלַל",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "יֵשׁוּעַ לְבַדּוֹ כָּלַל",
+        "כָּל־מִדּוֹת הַשְּׁלֵמוּת",
+        "וְהוּא נִפְלָא בְּזֹהַר",
+        "וּבְעֹז, אַף בְּהָדָר"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "זֶה הוּא רֹאשׁ הַגּוּף",
+        "וְהוּא עַל־הַכֹּל עָלָה",
+        "לְיֵשׁוּעַ לְבַדּוֹ",
+        "גַּם הַמִּשְׂרָה נִתָּנָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "מִי זֶה אֵפוֹא",
+        "דּוֹמֶה לְאִישְׁכֶם הַמֵּאִיר",
+        "אֵין לוֹ בֵּין בְּנֵי אָדָם",
+        "אוֹ בַשָּׁמַיִם דּוֹמֶה"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֵין לָנוּ משֶׁה אֵפוֹא",
+        "וְלֹא אֵלִיָּהוּ עִמּוֹ",
+        "אֵין אָנוּ חֲפֵצִים",
+        "כִּי אִם־יֵשׁוּעַ לְבַדּוֹ"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–1:2 כָּלַל / כָּל־מִדּוֹת הַשְּׁלֵמוּת — Colossians 2:9 (כָּל־מְלֹא הָאֱלֹהוּת); the Arabic حَوَى / جَمِيعَ أَوْصَافِ الْكَمَال is 'contains all the attributes of perfection', and כָּלַל is the biblical verb for comprising a whole.",
+    "2:3–2:4 לְיֵשׁוּעַ לְבַדּוֹ / גַּם הַמִּשְׂרָה נִתָּנָה — Matthew 28:18 (נִתַּן־לִי כָּל־שָׁלְטָן); the Arabic splits السُّلْطَان ('dominion') across the line break, which Hebrew cannot do, so the sentence starts on the third line and lands on the fourth.",
+    "4:1–4:4 אֵין לָנוּ משֶׁה … כִּי אִם־יֵשׁוּעַ לְבַדּוֹ — the Transfiguration, Matthew 17:8 (לֹא רָאוּ אִישׁ זוּלָתוֹ); the Arabic لَيْسَ لَنَا مُوسَى إِذًا / وَلَا إِيلِيَّا مَعَهُ / … إِلَّا يَسُوعَ وَحْدَهُ is that scene, and Hebrew keeps Moses and Elijah unnamed of glory and named only to be set aside.",
+    "3:2 לְאִישְׁכֶם הַמֵּאִיר — 'to His radiant person', for شَخْصِهِ الْمُنِير; אִישׁ in the sense of 'person' is the same choice as in hymns 94 and 112."
+  ]
+}

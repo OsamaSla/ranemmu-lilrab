@@ -1,0 +1,57 @@
+{
+  "book": "taranim",
+  "number": 126,
+  "title_he": "רוֹעִי הַנֶּאֱמָן יִרְעֵנִי",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הוּא יוֹלִיכֵנִי בְּיָדוֹ",
+        "כֵּן, יוֹלִיכֵנִי, יַנְחֵנִי"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "רוֹעִי הַנֶּאֱמָן יִרְעֵנִי",
+        "בְּאַהֲבָה וּבְיָד יָמִין",
+        "יַנְחֵנִי בְּכָל־עֵת וָעֵת",
+        "בְּאוֹר וּבֶאֱמֶת יְקָרָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בְּעֹצֶם הַיָּגוֹן הַמֵּמֵס",
+        "וּבְשִׂמְחָתִי הַנִּפְלֵאת",
+        "בָּאוֹר וּבַאֲפֵלָה נוֹרָאָה",
+        "יוֹלִיכֵנִי הָרוֹעֶה דּוֹדִי"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "שָׁמְרֵנִי, אֲדֹנִי, בְּצִלְּךָ",
+        "לֹא אֲבַקֵּשׁ אִישׁ זוּלָתֶךָ",
+        "כָּל־נֶחָמָתִי בִּרְצוֹנֶךָ",
+        "עַד אֶרְאֶךָ בִּשְׁמֵי מְרוֹמֶךָ"
+      ]
+    },
+    {
+      "label": "5",
+      "lines": [
+        "כַּאֲשֶׁר אַשְׁלִים שְׁלִיחוּתִי",
+        "וְאֶזְכֶּה בַמְּנוּחָה",
+        "לֹא אִירָא חֶשְׁכַּת הַמָּוֶת",
+        "אֶעֱלֶה לִנְצָחִים"
+      ]
+    }
+  ],
+  "review": [
+    "The print gives stanza 1 as two long lines (the refrain quoted twice, then answered) and stanzas 2–5 as four lines; the payload follows the print, so `hebrew-meter.mjs` reports the shape 2/4/4/4 as irregular by construction.",
+    "1:1–1:2 הוּא יוֹלִיכֵנִי … בְּיָדוֹ יֹאחֲזֵנִי — Psalm 139:10 (תֹּאחֲזֵנִי יְמִינֶךָ) and Ps 23:3; the Arabic يَقُودُنِي … بِيَدِهِ يُمْسِكُنِي is the leading and the holding, and Hebrew keeps both participles.",
+    "2:2–2:3 בְּיָד יָמִין / יַנְחֵנִי — Psalm 16:8 and 73:23 (בִּימִינִי תָּמַכְתָּ); the Arabic بِالْحُبِّ وَالْيَدِ الْيَمِين is 'in love and the right hand', and the Hebrew keeps the hand as the instrument of guidance.",
+    "4:2 לֹא אֲבַקֵּשׁ אִישׁ זוּלָתֶךָ — Psalm 73:25; the Arabic لَا أَبْتَغِي شَخْصًا سِوَاك uses شَخْص ('person'), and אִישׁ is the Hebrew equivalent in that sense, as in hymns 94 and 121.",
+    "5:3–5:4 לֹא אִירָא חֶשְׁכַּת הַמָּוֶת / אֶעֱלֶה לִנְצָחִים — Psalm 23:4 (צַלְמָוֶת) and the ascent of Rev 11:12; the Arabic لَنْ أَخْشَى ظُلْمَةَ الْمَوْتِ / أَرْقَى لِلْأَبَدِيَّةِ is that pair, and חֶשְׁכָּה is the biblical noun for darkness."
+  ]
+}
