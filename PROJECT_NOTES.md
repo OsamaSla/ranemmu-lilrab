@@ -514,7 +514,9 @@ Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**
 and the app displays the vocalised text (user's explicit choice — do not strip
 niqqud at render time). Chosen cadence: Book 2 in printed order, 20 per batch,
 flags-only review. Batches land as `content/hebrew/taranim/NNNN.json`; the
-corpus is never hand-edited.
+corpus is never hand-edited. **Resume at `tr0077`** — batch size is free (the
+apply script merges whatever payloads exist), so continue in 10–20 hymn steps
+and keep committing per step.
 
 - Fields: `title_he` / `verses_he` / `chorus_he` on the hymn record,
   `hasHe` on `HymnSummary` (emitted by `scripts/build-corpus.mjs`). Any content
