@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-15, commit d0770355 (Hebrew stanza alignment; see §17)
+Last verified: 2026-11-15, commit 5f494694 (hymns shared between books; see §18)
 
 ## 1. What this is
 
@@ -70,6 +70,9 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
   old stanza 2 (`1, قرار, 2…`), `keep` leaves it first. EN/DE are reordered and
   relabelled identically; re-running is refused once a hymn has a refrain. Run
   `npm run check:hymns` + `npm run build:corpus` afterwards.
+- `npm run duplicates` (`scripts/find-duplicates.mjs`) — lists the hymns the
+  corpus prints in more than one book, with each copy's line count and whether
+  it carries Hebrew, and says which copies can borrow a translation. See §18.
 - `npm run typecheck` (`npx tsc --noEmit`) — works on this machine; exit 0 with
   no output (needs the restored untracked `tsconfig.json`, see §2).
 - Web build: `npx expo export --platform web` produces the real app in `dist/`
@@ -530,9 +533,11 @@ melody so people can hear how it is sung. Only source available: recordings
 
 ## 15. Hebrew translation (verified 2026-11-14)
 
-Only `tr0001`–`tr0375` carry Hebrew so far (375 hymns, 7386 verse lines, all
-pointed; `verify-hebrew.mjs` prints 7761 because it counts each `title_he` as
-one extra line). **Book 2 (taranim) is now complete.**
+Only `tr0001`–`tr0375` carry **authored** Hebrew so far (375 hymns, 7386 verse
+lines, all pointed; `verify-hebrew.mjs` prints 7761 because it counts each
+`title_he` as one extra line). **Book 2 (taranim) is now complete.** On top of
+that, `build:corpus` now lends Book 1/3 copies the Hebrew their Book 2 twin
+already has (14 hymns in the built corpus; see §18).
 Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**,
 and the app displays the vocalised text (user's explicit choice — do not strip
 niqqud at render time). Chosen cadence: Book 2 in printed order, 20 per batch,
@@ -838,6 +843,73 @@ and refrains defined in the admin editor.
 - Gotcha: the dev server on 8081 was held by a stale Metro process from a
   previous session (listening, but not answering); `netstat -ano | findstr
   :8081` then `Stop-Process -Id <pid>`.
+
+## 18. Hymns printed in more than one book (2026-11-15)
+
+Books overlap, and until now the app had no idea: each record (`h0487`,
+`tr0166`, `b30013`) was independent, so the same hymn was translated twice.
+61 groups (123 records) are the *same text*; 228 further groups share only a
+title and are **different hymns** — never link those.
+
+| pair | groups |
+|---|---|
+| Book 3 ↔ Book 1 | 44 |
+| Book 1 ↔ Book 2 | 16 |
+| all three (`h0128` / `tr0318` / `b30007`) | 1 |
+
+- Detection: `scripts/lib/duplicates.mjs` (`hymnKey`). Arabic **letters only** —
+  harakat, tatweel, punctuation and spaces dropped, `أإآ→ا`, `ى→ي`, `ة→ه` —
+  because each book typesets the same hymn differently. Same-book repeats are
+  ignored.
+- **A matching text does not mean matching lines.** The same hymn is cut into
+  different printed lines (and stanzas): `b30013` 4 lines vs `h0142` 8;
+  `main:168` `1:4 / 1:4* / 2:4` vs `book3:31` `١:2 / القرار:4* / ٢:2`. Only
+  **14 of the 61 groups** print a compatible line grid; the other 47 need the
+  lines re-broken by hand before a translation can be re-cut.
+- `lineCompatible(a, b)` compares the normalised printed lines one by one and
+  is the gate for reuse. `reflowHebrew(target, source)` then re-lays the flat
+  list of Hebrew lines onto **the target's own stanza widths, labels and
+  `chorus` flags**, and returns `null` if the counts disagree (so a mismatch
+  can never silently shift text).
+- `build-corpus.mjs` does this every build: writes
+  `assets/hymns/links.json` (`id → sibling ids`, 123 entries) and lends Hebrew
+  in book order `b3 → main → taranim`, skipping a target that already has
+  `verses_he` **or** `title_he` — a hand-authored payload always wins. Build log
+  prints the pairs: currently 14 (`h0128←tr0318`, `h0107←tr0113`, …,
+  `h0788←tr0362`). Books 1 and 3 therefore show Hebrew for 14 hymns even though
+  `content/hebrew/main/` and `book3/` are still empty; `hebrew:align` still
+  reports 375 because it audits authored payloads, not the built corpus.
+- Read path: `getLinks(id)` in `src/data/loader.ts` resolves the ids through the
+  **merged** summaries, so an admin rename shows the new title and a deleted
+  copy disappears without regenerating anything.
+- UI (the "where else does it appear" ask):
+  - reader header, under the topics line: `موجودة أيضاً في: ترانيم روحية 166`;
+  - reader body, a card under the text with a `HymnRow` per copy (book name as
+    subtitle) that navigates to `/hymn/<id>`;
+  - info sheet: its own section above the topics, rows close the sheet and push;
+  - admin editor: a card listing the copies (with `· HE`), each opening that
+    copy's editor — editing one copy does **not** change the others (they have
+    their own stanza grid), which is why the card exists.
+  - `reader.alsoIn` (ar/en/de) + `bookLabelKey()` in `src/i18n/index.ts`; using
+    `t('book.book3')` inline would fall back to "Sing to the Lord" when a key
+    is missing.
+- Verified on the dev server (2026-11-15): `h0487` shows the `HE` chip with the
+  borrowed 24 pointed lines (6×4, labels `1…6`), header caption and card both
+  list `ترنيمات روحية 166`; the card navigated to `tr0166`; `b30013` (4 lines,
+  no Hebrew) shows `رنموا للرب 142` and the reverse on `h0142`. Admin editor for
+  `h0487` (`?id=h0487&lang=en`) shows the copies card with `HE`; zero console
+  errors, `typecheck` + `eslint` clean, `check:hymns` 30,898 lines / 100 %
+  vocalised.
+- Gotcha fixed while here: `HymnInfoSheet`'s backdrop was declared
+  `accessibilityRole="button"` **around** the whole panel, so every interactive
+  row became a `<button>` inside a `<button>` — React logged a hydration
+  warning on web as soon as the sheet gained links. The backdrop is now a plain
+  `Pressable`; the close icon and `onRequestClose` carry the accessible
+  dismissal.
+- Not done (deliberate): no shared patch. Stanza order, refrain and wording stay
+  per book, so an admin restructure cannot break the other book's shape. Title
+  matching is *not* used to guess duplicates.
+
 
 
 
