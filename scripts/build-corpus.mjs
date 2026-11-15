@@ -18,6 +18,7 @@ import { mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateCorpus, formatIssues } from './lib/validate.mjs';
+import { crossBookGroups, lineCompatible, reflowHebrew } from './lib/duplicates.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT_DIR = join(ROOT, 'content');
@@ -147,9 +148,46 @@ async function main() {
   await rm(ASSET_DIR, { recursive: true, force: true });
   await mkdir(FULL_DIR, { recursive: true });
 
+  // Hymns the corpus prints in more than one book. Two things come out of
+  // this: the "also in" pointers (links.json, read by the reader and the admin
+  // editor) and the Hebrew a twin already has. Books reprint the same hymn with
+  // their own stanza grid, so the translation is re-cut onto the target's
+  // stanzas rather than copied verse-for-verse; when even the printed lines
+  // differ there is no safe re-cut and the hymn only gets the link.
+  const groups = crossBookGroups(hymns);
+  const links = {};
+  const borrowed = [];
+  for (const group of groups) {
+    for (const hymn of group) {
+      links[hymn.id] = group.filter((other) => other.id !== hymn.id).map((other) => other.id);
+    }
+  }
+  for (const group of groups) {
+    // Book order (b3, main, taranim): a borrower may lend to the next book, so
+    // one hand-authored translation covers every copy that shares its lines.
+    for (const target of group) {
+      if (target.verses_he?.length || target.title_he) continue;
+      const source = group.find(
+        (other) => other.id !== target.id && other.verses_he?.length && lineCompatible(target, other),
+      );
+      if (!source) continue;
+      const reflowed = reflowHebrew(target, source);
+      if (!reflowed) continue;
+      Object.assign(target, reflowed);
+      borrowed.push(`${target.id}<-${source.id}`);
+    }
+  }
+  await writeFile(
+    join(ASSET_DIR, 'links.json'),
+    JSON.stringify(
+      Object.fromEntries(Object.keys(links).sort().map((id) => [id, links[id]])),
+      null,
+      1,
+    ) + '\n',
+  );
+
   const summaries = hymns.map(toSummary);
   await writeFile(join(ASSET_DIR, 'index.json'), JSON.stringify(summaries, null, 1) + '\n');
-
   const chunks = [];
   for (let i = 0; i < hymns.length; i += CHUNK_SIZE) {
     const index = chunks.length;
@@ -168,6 +206,11 @@ async function main() {
       `full ~${(bytes / 1024 / 1024).toFixed(2)} MB`,
   );
   console.log('wrote assets/hymns/ and src/data/generated-chunks.ts');
+  console.log(
+    `${groups.length} hymn(s) printed in more than one book · ` +
+      `${borrowed.length} lent a sibling's Hebrew` +
+      (borrowed.length > 0 ? ` (${borrowed.join(', ')})` : ''),
+  );
 }
 
 main().catch((err) => {

@@ -9,6 +9,7 @@
 import { ar, type Dictionary, type TranslationKey } from './ar';
 import { en } from './en';
 import { de } from './de';
+import type { BookId } from '../data/types';
 
 export type LocaleCode = 'ar' | 'en' | 'de';
 
@@ -54,6 +55,18 @@ export function isRTL(locale: LocaleCode): boolean {
  */
 export function translate(locale: LocaleCode, key: TranslationKey): string {
   return DICTIONARIES[locale][key] ?? DICTIONARIES.ar[key] ?? key;
+}
+
+/**
+ * Display name of a book. Kept next to the dictionaries because the reader's
+ * "also in" rows, the admin lists and the book picker all need the same three
+ * labels; a missing `book.book3` key would otherwise silently fall back to
+ * "Sing to the Lord".
+ */
+export function bookLabelKey(book: BookId | string | undefined): TranslationKey {
+  if (book === 'taranim') return 'book.taranim';
+  if (book === 'book3') return 'book.book3';
+  return 'book.main';
 }
 
 export type { TranslationKey, Dictionary };

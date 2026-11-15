@@ -10,9 +10,11 @@ import { useRouter } from 'expo-router';
 import { AppText } from './AppText';
 import { IconButton } from './IconButton';
 import { MeterText } from './MeterText';
+import { getLinks } from '../data/loader';
 import { displayMeter } from '../data/meterFamilies';
 import { TOPIC_COLORS, allTopicsOf } from '../data/topics';
 import type { Hymn } from '../data/types';
+import { bookLabelKey } from '../i18n';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
 import type { TranslationKey } from '../i18n';
@@ -34,6 +36,9 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
     ? [{ label: 'info.meter', value: shownMeter }]
     : [];
   const hymnTopics = hymn ? allTopicsOf(hymn) : [];
+  // Other books that print this same hymn. Resolved here (not passed in) so the
+  // list follows admin renames and drops copies deleted on this device.
+  const linked = hymn ? getLinks(hymn.id) : [];
 
   return (
     <Modal
@@ -42,9 +47,12 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
       animationType="slide"
       onRequestClose={onClose}
       statusBarTranslucent>
+      {/* Backdrop: tapping outside closes the sheet. It is deliberately not a
+          `button` role — it wraps the whole panel, so declaring it one nests
+          every row (topics, "also in", close) inside a button, which is invalid
+          HTML on web and useless for screen readers. The close icon and
+          onRequestClose carry the accessible dismissal. */}
       <Pressable
-        accessibilityRole="button"
-        accessibilityLabel={t('common.close')}
         onPress={onClose}
         style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-end' }}>
         <Pressable
@@ -113,8 +121,49 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
             </View>
           ))}
 
-          {hymnTopics.length > 0 ? (
+          {linked.length > 0 ? (
             <View
+              style={{
+                paddingVertical: spacing.md,
+                borderTopWidth: 1,
+                borderTopColor: colors.border,
+              }}>
+              <AppText variant="body" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
+                {t('reader.alsoIn')}
+              </AppText>
+              {linked.map((sibling) => (
+                <Pressable
+                  key={sibling.id}
+                  onPress={() => {
+                    onClose();
+                    router.push(`/hymn/${sibling.id}`);
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${t(bookLabelKey(sibling.book))} ${sibling.number}`}
+                  android_ripple={{ color: colors.border }}
+                  style={({ pressed }) => ({
+                    flexDirection: direction.row,
+                    alignItems: 'center',
+                    gap: spacing.sm,
+                    paddingVertical: spacing.xs,
+                    opacity: pressed ? 0.7 : 1,
+                  })}>
+                  <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
+                    {t(bookLabelKey(sibling.book))} {sibling.number}
+                  </AppText>
+                  <AppText
+                    variant="caption"
+                    color={colors.textMuted}
+                    numberOfLines={1}
+                    style={{ flex: 1 }}>
+                    {sibling.title}
+                  </AppText>
+                </Pressable>
+              ))}
+            </View>
+          ) : null}
+
+          {hymnTopics.length > 0 ? (            <View
               style={{
                 paddingVertical: spacing.md,
                 borderTopWidth: 1,

@@ -73,6 +73,24 @@ alone. Two things keep the Hebrew attached to its stanza:
 `npm run hebrew:align` audits the merged corpus after either of those; any
 "label" / "refrain flag" / "lines" fault it prints is a shipped error.
 
+## Hymns that another book already has
+
+61 hymns are printed in more than one book. `build:corpus` finds them
+(`scripts/lib/duplicates.mjs`) and, when the printed lines agree, lends the
+Hebrew of a translated copy to the copies still untranslated — re-cut onto the
+borrower's own stanzas, labels and refrain flags. `npm run duplicates` lists
+every group with its line counts and says which copies can borrow.
+
+- Do not author a payload for a hymn that already shows Hebrew in the app from a
+  twin; check `npm run duplicates` first. A hand-authored payload always wins,
+  so writing one is not harmful, just duplicated work.
+- A group marked "cannot re-cut (line counts differ)" needs its Hebrew authored
+  for that book (or the lines re-broken by hand) — the flat text matches, the
+  line breaks do not.
+- Nothing is shared at edit time: stanza order, refrains and wording stay per
+  book. Same *title* is not evidence of the same hymn.
+
+
 
 ## Rules that have already cost time
 

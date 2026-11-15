@@ -32,9 +32,10 @@ import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
 import { ReaderSearchOverlay } from '../../../components/ReaderSearchOverlay';
 import type { SegmentOption } from '../../../components/SegmentedControl';
-import { ensureHymn, getHymn, getNeighbours, getSummaries, isHymnPending } from '../../../data/loader';
+import { ensureHymn, getHymn, getLinks, getNeighbours, getSummaries, isHymnPending } from '../../../data/loader';
 import { allTopicsOf } from '../../../data/topics';
 import { findSimilar } from '../../../data/search';
+import { bookLabelKey } from '../../../i18n';
 import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
 import { useLibrary } from '../../../store/library';
@@ -194,6 +195,15 @@ export default function ReaderScreen() {
           )
         : [],
     [hymn],
+  );
+  // The same hymn as printed by another book (61 hymns appear in two books or
+  // more). Its siblings are a link, not a similarity: the text is identical, so
+  // the reader only needs to point at them.
+  const linked = useMemo(
+    () => (id ? getLinks(id) : []),
+    // corpusVersion/remoteVersion carry admin renames and tombstoned copies.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [id, corpusVersion, remoteVersion],
   );
 
   // The hymn body lives in a lazily imported chunk: show a loading shell
@@ -1023,6 +1033,27 @@ export default function ReaderScreen() {
                 </AppText>
               </Pressable>
             ) : null}
+            {/* Same hymn in another book. Tapping opens the info sheet, which
+                lists every copy with its title; the same list is repeated as a
+                card under the text. */}
+            {linked.length > 0 ? (
+              <Pressable
+                onPress={() => setInfoHymn(true)}
+                accessibilityRole="button"
+                accessibilityLabel={t('reader.alsoIn')}
+                android_ripple={{ color: 'rgba(255,255,255,0.3)' }}>
+                <AppText
+                  variant="caption"
+                  numberOfLines={1}
+                  color={colors.onPrimary}
+                  style={{ opacity: 0.85, textAlign: 'right', direction: 'rtl' }}>
+                  {t('reader.alsoIn')}:{' '}
+                  {linked
+                    .map((sibling) => `${t(bookLabelKey(sibling.book))} ${sibling.number}`)
+                    .join(' · ')}
+                </AppText>
+              </Pressable>
+            ) : null}
           </View>
         </View>
       </View>
@@ -1048,6 +1079,23 @@ export default function ReaderScreen() {
             alignSelf: 'center',
           }}>
           {versesView}
+
+          {linked.length > 0 ? (
+            <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
+              <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+                {t('reader.alsoIn')}
+              </AppText>
+              {linked.map((sibling) => (
+                <HymnRow
+                  key={sibling.id}
+                  hymn={sibling}
+                  showStar={false}
+                  subtitle={t(bookLabelKey(sibling.book))}
+                  onPress={() => router.push(`/hymn/${sibling.id}`)}
+                />
+              ))}
+            </Card>
+          ) : null}
 
           {similar.length > 0 ? (
             <Card style={{ marginTop: spacing.md, padding: spacing.md }}>

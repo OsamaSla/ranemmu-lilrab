@@ -51,6 +51,7 @@ export const en: PartialDictionary = {
   'reader.settings': 'Text Settings',
   'reader.info': 'Hymn Info',
   'reader.similar': 'Similar Hymns',
+  'reader.alsoIn': 'Also in',
   'reader.share': 'Share',
   'reader.fullscreen': 'Fullscreen',
   'reader.exitFullscreen': 'Exit fullscreen',

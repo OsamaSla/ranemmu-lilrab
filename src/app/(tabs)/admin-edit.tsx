@@ -17,7 +17,7 @@ import { Card } from '../../components/Card';
 import { EmptyState } from '../../components/EmptyState';
 import { TextButton } from '../../components/TextButton';
 import { TopicPicker } from '../../components/TopicPicker';
-import { getHymn, ensureHymn, isHymnPending } from '../../data/loader';
+import { getHymn, ensureHymn, getLinks, isHymnPending } from '../../data/loader';
 import { isFirebaseConfigured, getFirebaseAuth } from '../../data/firebase';
 import { syncHymnToCloud } from '../../data/liveSync';
 import { isValidMediaUrl } from '../../data/media';
@@ -25,6 +25,7 @@ import type { TopicId } from '../../data/topics';
 import { useT } from '../../hooks/useT';
 import { useCanEdit } from '../../hooks/useCanEdit';
 import { useTheme } from '../../hooks/useTheme';
+import { bookLabelKey } from '../../i18n';
 import { useOverrides } from '../../store/overrides';
 import { radius, spacing } from '../../theme/tokens';
 
@@ -402,6 +403,10 @@ export default function AdminEditScreen() {
   const hasEn = Boolean(hymn?.verses_en ?? hymn?.title_en);
   const hasDe = Boolean(hymn?.verses_de ?? hymn?.title_de);
   const hasHe = Boolean(hymn?.verses_he ?? hymn?.title_he);
+  // The same hymn as printed by another book. Editing one copy does not change
+  // the others (they have their own stanza grid), so say so before the admin
+  // retypes anything.
+  const linked = hymn ? getLinks(hymn.id) : [];
 
   // Language filter for the verse editor. `showLang` follows the default until
   // the user pins a choice; a language the hymn does not carry stays hidden.
@@ -757,6 +762,37 @@ export default function AdminEditScreen() {
             </>
           ) : null}
         </Card>
+        ) : null}
+
+        {linked.length > 0 ? (
+          <Card style={{ marginBottom: spacing.md, padding: spacing.md }}>
+            <AppText variant="caption" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
+              {t('reader.alsoIn')}
+            </AppText>
+            {linked.map((sibling) => (
+              <Pressable
+                key={sibling.id}
+                onPress={() => router.push({ pathname: '/admin-edit', params: { id: sibling.id } })}
+                accessibilityRole="button"
+                accessibilityLabel={`${t(bookLabelKey(sibling.book))} ${sibling.number}`}
+                android_ripple={{ color: colors.border }}
+                style={({ pressed }) => ({
+                  flexDirection: direction.row,
+                  alignItems: 'center',
+                  gap: spacing.sm,
+                  paddingVertical: spacing.xs,
+                  opacity: pressed ? 0.7 : 1,
+                })}>
+                <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
+                  {t(bookLabelKey(sibling.book))} {sibling.number}
+                </AppText>
+                <AppText variant="caption" color={colors.textMuted} numberOfLines={1} style={{ flex: 1 }}>
+                  {sibling.title}
+                  {sibling.hasHe ? ' · HE' : ''}
+                </AppText>
+              </Pressable>
+            ))}
+          </Card>
         ) : null}
 
         <Pressable onPress={() => setExpandedTopics(!expandedTopics)} style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'space-between', marginBottom: spacing.sm, paddingHorizontal: spacing.xs }}>
