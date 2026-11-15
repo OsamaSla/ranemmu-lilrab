@@ -154,6 +154,8 @@ export const de: PartialDictionary = {
   'admin.titleDe': 'Deutscher Titel',
   'admin.chorusDe': 'Deutscher Kehrvers',
   'admin.translationDe': 'Deutsche Übersetzung',
+  'admin.titleHe': 'Hebräischer Titel',
+  'admin.chorusHe': 'Hebräischer Kehrvers',
   'admin.addHymn': 'Neues Lied hinzufügen',
   'admin.hymnNumber': 'Liednummer',
   'admin.stanzaLine': 'Strophenzeile',

@@ -2,7 +2,7 @@
  * Admin hymn editor (text-level only).
  *
  * Structural edits (add/delete/reorder stanzas) are PC-only by design: the
- * EN/DE sheets must mirror the Arabic stanza-for-stanza, and the importer
+ * EN/DE/HE sheets must mirror the Arabic stanza-for-stanza, and the importer
  * rejects anything else. Saving therefore requires identical stanza and
  * line counts to the bundled record.
  */
@@ -73,6 +73,9 @@ export default function AdminEditScreen() {
     title_de: '',
     chorus_de: '',
     linesDe: [] as string[][],
+    title_he: '',
+    chorus_he: '',
+    linesHe: [] as string[][],
     sourceStamp: '',
   };
   /**
@@ -101,6 +104,9 @@ export default function AdminEditScreen() {
       h.title_de,
       h.chorus_de,
       h.verses_de?.map((v) => v.lines),
+      h.title_he,
+      h.chorus_he,
+      h.verses_he?.map((v) => v.lines),
     ]);
   const toForm = (key: typeof id, h: typeof hymn) =>
     h
@@ -128,6 +134,9 @@ export default function AdminEditScreen() {
           title_de: h.title_de ?? '',
           chorus_de: h.chorus_de ?? '',
           linesDe: h.verses_de ? h.verses_de.map((v) => [...v.lines]) : [],
+          title_he: h.title_he ?? '',
+          chorus_he: h.chorus_he ?? '',
+          linesHe: h.verses_he ? h.verses_he.map((v) => [...v.lines]) : [],
         }
       : { key, sourceId: '', ...blank };
   // Lazy init so the first open already shows the hymn's current words
@@ -149,7 +158,7 @@ export default function AdminEditScreen() {
   // Arabic plus the language you arrived from (`?lang=de` from the review
   // queue). Any tap pins the user's own choice for the rest of the session.
   const [langChoice, setLangChoice] = useState<Partial<
-    Record<'ar' | 'en' | 'de', boolean>
+    Record<'ar' | 'en' | 'de' | 'he', boolean>
   > | null>(null);
   // The hymn body is imported on demand; bump this once it lands so the form
   // (and the not-found fallback) re-reads getHymn().
@@ -243,6 +252,27 @@ export default function AdminEditScreen() {
     backgroundColor: colors.surfaceMuted,
   } as const;
 
+  /**
+   * Hebrew text inside the editor. None of the six bundled families carry
+   * Hebrew glyphs, so the platform font is the only one with both the letters
+   * and the niqqud positioning — the same reason the reader uses it. Direction
+   * and alignment are per field because the app itself is RTL Arabic. The line
+   * box is taller than the Latin one: the points above and below the letters
+   * are clipped by a 40px field.
+   */
+  const hebrewText = {
+    fontFamily: undefined,
+    writingDirection: 'rtl',
+    textAlign: 'right',
+  } as const;
+  const hebrewField = {
+    ...translationField,
+    ...hebrewText,
+    fontSize: 16,
+    minHeight: 48,
+    lineHeight: 26,
+  } as const;
+
   const set = (patch: Partial<typeof form>) => {
     setForm((f) => ({ ...f, ...patch }));
     setDirty(true);
@@ -272,12 +302,18 @@ export default function AdminEditScreen() {
     }));
   };
 
-  const setTranslatedLine = (lang: 'en' | 'de', verseIndex: number, lineIndex: number, value: string) => {
+  const setTranslatedLine = (
+    lang: 'en' | 'de' | 'he',
+    verseIndex: number,
+    lineIndex: number,
+    value: string,
+  ) => {
     setDirty(true);
     const mapLines = (all: string[][]) =>
       all.map((ls, vi) => (vi === verseIndex ? ls.map((l, li) => (li === lineIndex ? value : l)) : ls));
     if (lang === 'en') setForm((f) => ({ ...f, linesEn: mapLines(f.linesEn) }));
-    else setForm((f) => ({ ...f, linesDe: mapLines(f.linesDe) }));
+    else if (lang === 'de') setForm((f) => ({ ...f, linesDe: mapLines(f.linesDe) }));
+    else setForm((f) => ({ ...f, linesHe: mapLines(f.linesHe) }));
   };
 
   /**
@@ -317,6 +353,7 @@ export default function AdminEditScreen() {
         chorusFlags: nextChorus,
         linesEn: f.linesEn.length ? reorder(f.linesEn) : f.linesEn,
         linesDe: f.linesDe.length ? reorder(f.linesDe) : f.linesDe,
+        linesHe: f.linesHe.length ? reorder(f.linesHe) : f.linesHe,
       };
     });
   };
@@ -350,24 +387,33 @@ export default function AdminEditScreen() {
 
   const hasEn = Boolean(hymn?.verses_en ?? hymn?.title_en);
   const hasDe = Boolean(hymn?.verses_de ?? hymn?.title_de);
+  const hasHe = Boolean(hymn?.verses_he ?? hymn?.title_he);
 
   // Language filter for the verse editor. `showLang` follows the default until
   // the user pins a choice; a language the hymn does not carry stays hidden.
-  const showLang = (key: 'ar' | 'en' | 'de'): boolean => {
+  // Hebrew follows the same rule as English: it is on unless the editor was
+  // opened from the German queue, which wants Arabic and German side by side.
+  const showLang = (key: 'ar' | 'en' | 'de' | 'he'): boolean => {
     if (key === 'en' && !hasEn) return false;
     if (key === 'de' && !hasDe) return false;
+    if (key === 'he' && !hasHe) return false;
     if (langChoice) return Boolean(langChoice[key]);
     if (key === 'ar') return true;
-    if (key === 'en') return lang !== 'de';
-    return lang === 'de';
+    if (key === 'de') return lang === 'de';
+    return lang !== 'de';
   };
 
-  const toggleLang = (key: 'ar' | 'en' | 'de') => {
-    const next = { ar: showLang('ar'), en: showLang('en'), de: showLang('de') };
+  const toggleLang = (key: 'ar' | 'en' | 'de' | 'he') => {
+    const next = {
+      ar: showLang('ar'),
+      en: showLang('en'),
+      de: showLang('de'),
+      he: showLang('he'),
+    };
     next[key] = !next[key];
-    // Never hide all three: a bare line number would not say which language the
-    // row below it belongs to.
-    if (!next.ar && !next.en && !next.de) next.ar = true;
+    // Never hide every language: a bare line number would not say which
+    // language the row below it belongs to.
+    if (!next.ar && !next.en && !next.de && !next.he) next.ar = true;
     setLangChoice(next);
   };
 
@@ -462,6 +508,19 @@ export default function AdminEditScreen() {
         return;
       }
     }
+    // Hebrew ships pointed, so an empty line is always a mistake and never an
+    // untranslated gap the way an EN/DE draft can be.
+    if (hasHe && hymn.verses_he) {
+      if (!sameShape(form.linesHe, hymn.verses_he)) {
+        setMsg(t('admin.errShape'));
+        return;
+      }
+      const heBlank = firstBlank(form.linesHe, hymn.verses_he.map((v) => v.lines));
+      if (heBlank) {
+        setMsg(`${t('admin.errBlank')} — ${blankWhere('HE', heBlank)}`);
+        return;
+      }
+    }
     // Send only the fields that actually changed. A full patch carries the
     // current value of untouched fields too — including blank ones such as an
     // empty mediaUrl — and a local override outranks cloud data on this device,
@@ -528,6 +587,20 @@ export default function AdminEditScreen() {
         }));
         if (!sameVerses(hymn.verses_de, versesDe)) {
           patch.verses_de = versesDe;
+        }
+      }
+    }
+    if (hasHe) {
+      if (!sameText(hymn.title_he, form.title_he.trim())) patch.title_he = form.title_he.trim();
+      if (!sameText(hymn.chorus_he, form.chorus_he.trim())) patch.chorus_he = form.chorus_he.trim();
+      if (hymn.verses_he) {
+        const versesHe = form.linesHe.map((ls, i) => ({
+          label: form.labels[i] ?? hymn.verses_he?.[i]?.label ?? String(i + 1),
+          lines: ls.map((l) => l.trim()),
+          chorus: form.chorusFlags[i] ? true : undefined,
+        }));
+        if (!sameVerses(hymn.verses_he, versesHe)) {
+          patch.verses_he = versesHe;
         }
       }
     }
@@ -649,6 +722,26 @@ export default function AdminEditScreen() {
               />
             </>
           ) : null}
+          {hasHe ? (
+            <>
+              <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
+                {t('admin.titleHe')}
+              </AppText>
+              <TextInput
+                value={form.title_he}
+                onChangeText={(v) => set({ title_he: v })}
+                style={[fieldStyle, hebrewText]}
+              />
+              <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
+                {t('admin.chorusHe')}
+              </AppText>
+              <TextInput
+                value={form.chorus_he}
+                onChangeText={(v) => set({ chorus_he: v })}
+                style={[fieldStyle, hebrewText]}
+              />
+            </>
+          ) : null}
         </Card>
         ) : null}
 
@@ -681,6 +774,7 @@ export default function AdminEditScreen() {
               { key: 'ar' as const, label: t('admin.langAr') },
               ...(hasEn ? [{ key: 'en' as const, label: t('common.enShort') }] : []),
               ...(hasDe ? [{ key: 'de' as const, label: t('common.deShort') }] : []),
+              ...(hasHe ? [{ key: 'he' as const, label: t('common.heShort') }] : []),
             ]).map((option) => {
               const selected = showLang(option.key);
               return (
@@ -814,6 +908,23 @@ export default function AdminEditScreen() {
                         onChangeText={(v) => setTranslatedLine('de', i, j, v)}
                         multiline
                         style={[fieldStyle, translationField, { flex: 1 }]}
+                      />
+                    </View>
+                  ) : null}
+                  {showLang('he') && form.linesHe[i] ? (
+                    <View
+                      style={{ flexDirection: direction.row, alignItems: 'flex-start', marginTop: spacing.xs }}>
+                      <AppText
+                        variant="caption"
+                        color={colors.textMuted}
+                        style={{ width: 26, paddingTop: spacing.sm, fontWeight: '700' }}>
+                        {t('common.heShort')}
+                      </AppText>
+                      <TextInput
+                        value={form.linesHe[i][j] ?? ''}
+                        onChangeText={(v) => setTranslatedLine('he', i, j, v)}
+                        multiline
+                        style={[fieldStyle, hebrewField, { flex: 1 }]}
                       />
                     </View>
                   ) : null}

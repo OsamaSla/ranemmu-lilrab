@@ -167,6 +167,8 @@ admin: {
     titleDe: 'العنوان بالألمانية',
     chorusDe: 'القرار بالألمانية',
     translationDe: 'الترجمة الألمانية',
+    titleHe: 'العنوان بالعبرية',
+    chorusHe: 'القرار بالعبرية',
     addHymn: 'إضافة ترنيمة جديدة',
     hymnNumber: 'رقم الترنيمة',
     stanzaLine: 'سطر المقطع',

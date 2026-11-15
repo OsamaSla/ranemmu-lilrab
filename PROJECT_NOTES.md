@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-15, commit bd0a880b (Hebrew reader language; see §15)
+Last verified: 2026-11-15, commit 9a6c740c (Hebrew stanza alignment; see §17)
 
 ## 1. What this is
 
@@ -727,7 +727,8 @@ and keep committing per step.
   pointed, `direction: rtl`, `text-align: right`, platform font
   (`-apple-system`), zero console errors. `tr0027` (no Hebrew) still shows only
   `عر/EN/DE` and no Hebrew characters.
-- Not done: no admin editor for `verses_he` (admin-edit is ar/en/de only). Taranim
+- Admin editor now covers Hebrew (`title_he`, `chorus_he`, `verses_he`, a `HE`
+  chip next to AR/EN/DE, RTL/platform-font fields) — see §17. Taranim
   is **complete** (375/375); books 3–4 are untouched. Home book cards now show a
   third `HE` pill when the book carries Hebrew (`getBooks()` returns `hasHe`;
   the language row wraps so three badges never overflow a narrow card).
@@ -776,5 +777,61 @@ base, so a batch can start on either without touching code.
   cheaper proof that the workflow carries over; Book 1 is the long tail and
   needs `chorus_he` on 694 hymns. First batch:
   `node scripts/hebrew-digest.mjs book3 1 10`.
+
+## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
+
+Two defects, both found on Book 2 after the Arabic stanzas had been reordered
+and refrains defined in the admin editor.
+
+- **The admin editor had no Hebrew.** `src/app/(tabs)/admin-edit.tsx` now
+  carries `title_he` / `chorus_he` / `linesHe` through the form, reorders
+  `linesHe` in `moveStanza`, validates the Hebrew grid (`sameShape`,
+  `firstBlank`) and writes `verses_he` in the save patch. `HE` is a fourth
+  language chip; it shows by default unless the editor was opened from the
+  German queue (`?lang=de`). Inputs use the platform font with
+  `writingDirection: 'rtl'` — none of the six bundled families carry Hebrew
+  glyphs (`fontFamily` is deliberately overridden), and the line box is 48px so
+  niqqud is not clipped.
+- **Overrides left the translation behind.** An admin edit is a *patch*
+  (`store/overrides.ts`), and moving a stanza rewrites `patch.verses` while the
+  bundled `verses_he` stayed in the old order; `loader.ts` spread the patch
+  over the record and paired `verses_he[i]` with the wrong Arabic stanza. Fixed
+  at read time in `src/data/translationAlign.ts` (`alignTranslation`), called
+  from `applyPatch` in `src/data/loader.ts` for `getHymn` and `getCorpus`:
+  stanzas are matched by **text** (labels are renumbered when a refrain is
+  defined, so they cannot identify a stanza), with a shared-line fallback for a
+  stanza that was moved *and* edited, and leftovers keeping source order. Only
+  the bundled copy is realigned — a patch that carries `verses_he` was written
+  against the patched order already. This means overrides already saved in
+  Firestore or in another device's AsyncStorage fix themselves; no migration.
+- `hebrew-apply.mjs` now copies each Hebrew verse's `label` and `chorus` from
+  the Arabic verse at the same index instead of trusting the payload, and 30
+  taranim hymns were re-applied: they had shipped a refrain stanza without the
+  `chorus` flag (`tr0315`, `0318`, `0323`, `0326`, `0332`–`0334`, `0337`,
+  `0338`, `0342`–`0344`, `0350`, `0351`, `0353`, `0357`–`0360`, `0362`–`0364`,
+  `0366`, `0368`–`0374`). Labels already matched; only the flag was missing, so
+  the reader rendered the right text but not the `القرار` heading style.
+- New gate: `npm run hebrew:align` (`scripts/hebrew-align.mjs`) compares the
+  merged corpus stanza by stanza — count, label, refrain flag, line count —
+  and exits non-zero on any fault. Run it after editing Arabic in a translated
+  hymn. Current state: `✓ 375 translated hymn(s)`.
+- Verified on the dev server (2026-11-15), two ways:
+  1. Injected an override for `tr0315` with the refrain moved last and one
+     Arabic line edited (`moved + edited` case). Reader under the `HE` chip
+     showed `מַה־סּוֹד…` / `וְהַכַּלָּה…` / `וּבַסּוֹף…` / refrain `הִנֵּה הֶחָתָן בָּא`
+     under the matching Arabic stanzas, `القرار` heading on the last one.
+  2. In the editor (non-Firebase build for the PIN gate): the Hebrew fields
+     render with 18 pointed values, `move down` on stanza 1 carried its Hebrew
+     and renumbered the headings to `(القرار) (1) (2) (3)`, and save wrote
+     `verses=[4] · verses_en=[4] · verses_de=[4] · verses_he=[4]` with all four
+     grids in the same order. `typecheck` and `eslint` clean; zero console
+     errors.
+- Gotcha: `useAdminGate` is intentionally **not persisted**, so a full page
+  load re-locks the editor. To test the editor in a browser, unlock on `/admin`
+  and then navigate **client-side** (the review list row), not by URL.
+- Gotcha: the dev server on 8081 was held by a stale Metro process from a
+  previous session (listening, but not answering); `netstat -ano | findstr
+  :8081` then `Stop-Process -Id <pid>`.
+
 
 

@@ -67,6 +67,7 @@
     "hebrew:apply": "node scripts/hebrew-apply.mjs",
     "hebrew:check": "node scripts/hebrew-apply.mjs --check",
     "hebrew:meter": "node scripts/hebrew-meter.mjs",
+    "hebrew:align": "node scripts/hebrew-align.mjs",
     "hebrew:digest": "node scripts/hebrew-digest.mjs",
     "hebrew:skeleton": "node scripts/hebrew-skeleton.mjs",
     "hebrew:progress": "node scripts/hebrew-progress.mjs",

@@ -31,6 +31,11 @@ File name = `NNNN.json`, zero-padded to the hymn number (`main/0001.json`,
 - `verses_he` must mirror the Arabic hymn **exactly**: same stanza count, same
   labels (Book 3 prints Arabic-Indic numerals, `١` `٢` …, and some hymns label a
   refrain stanza `القرار`), same line count per stanza.
+- `label` and `chorus` on a Hebrew verse are **copied from the Arabic verse at
+  that index** by the apply script; a payload cannot set them differently. The
+  Arabic record owns the stanza grid — a payload was authored against one
+  snapshot of it and cannot know that a stanza later became the refrain (this
+  is why 30 taranim hymns used to ship a refrain stanza without the flag).
 - `chorus_he` is required only when the hymn carries a separate `chorus` field.
 - Every line must be pointed Hebrew with no Latin/Arabic characters.
 - `review[]` holds the translator notes for that hymn (they are printed by the
@@ -45,11 +50,29 @@ node scripts/hebrew-skeleton.mjs book3 1 10 --write  # exact-label stubs
 # … replace the empty strings with pointed Hebrew, fill title_he and review[] …
 npm run hebrew:apply        # merge (aborts the whole run on any mismatch)
 npm run hebrew:meter        # relative syllable balance, flags > ±2
+npm run hebrew:align        # Hebrew grid vs Arabic grid, hymn by hymn
 npm run build:corpus && npm run check:hymns && npm run typecheck
 ```
 
 Commit per batch. `npm run hebrew:check` is the drift gate: it must print
 "no drift" before a commit that touches the corpus.
+
+## When the Arabic stanzas change
+
+Reordering a stanza or flagging a refrain in the admin editor is an *override
+patch*: it rewrites `verses` for that hymn and leaves the bundled `verses_he`
+alone. Two things keep the Hebrew attached to its stanza:
+
+- `src/data/translationAlign.ts` (used by `src/data/loader.ts`) realigns the
+  bundled Hebrew against the edited Arabic order **at read time**, matching by
+  stanza text, so overrides saved by an older build or already in Firestore fix
+  themselves with no migration.
+- The admin editor now edits Hebrew too (`verses_he`), and moves it with the
+  Arabic stanza, so a fresh save stores an aligned copy.
+
+`npm run hebrew:align` audits the merged corpus after either of those; any
+"label" / "refrain flag" / "lines" fault it prints is a shipped error.
+
 
 ## Rules that have already cost time
 

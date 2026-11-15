@@ -14,6 +14,7 @@ import {
 import { BOOKS } from './types';
 import type { BookId, Hymn, HymnSummary } from './types';
 import { type TopicId } from './topics';
+import { alignTranslation } from './translationAlign';
 import { getRemoteFullDocs, getRemoteSummaries, isFullDoc, useRemote } from '../store/remote';
 import { invalidateSearchCache } from './search';
 
@@ -110,8 +111,26 @@ function mergedPatch(
   return merged;
 }
 
-/** Applies an admin overlay patch to a summary (topic fields included). */
-function applySummaryPatch(s: HymnSummary, patch: Partial<Hymn>): HymnSummary {
+/**
+ * Bundled record plus the admin patch, with translations kept on their stanza.
+ *
+ * A patch that rewrites `verses` (stanza moved, refrain flagged) carries no
+ * Hebrew — the payload ships with the bundle and no editor that predates the
+ * Hebrew fields knows about it — so the two would otherwise pair by position
+ * against the *old* order. `alignTranslation` puts the Hebrew back in step.
+ * Only the bundled copy needs it: a patch that does carry `verses_he` was
+ * written against the patched order already.
+ */
+function applyPatch(hymn: Hymn, patch: Partial<Hymn>): Hymn {
+  const merged = { ...hymn, ...patch };
+  if (patch.verses !== undefined && patch.verses_he === undefined) {
+    const aligned = alignTranslation(hymn.verses, hymn.verses_he, merged.verses);
+    if (aligned) merged.verses_he = aligned;
+  }
+  return merged;
+}
+
+/** Applies an admin overlay patch to a summary (topic fields included). */function applySummaryPatch(s: HymnSummary, patch: Partial<Hymn>): HymnSummary {
   return {
     ...s,
     number: patch.number ?? s.number,
@@ -286,7 +305,7 @@ export function getCorpus(book?: BookId): Hymn[] {
 
   const merged = all.map((hymn) => {
     const patch = mergedPatch(hymn.id, patches, overlays);
-    return patch ? { ...hymn, ...patch } : hymn;
+    return patch ? applyPatch(hymn, patch) : hymn;
   });
   const present = new Set(merged.map((h) => h.id));
   const deleted = deletedSet();
@@ -326,7 +345,7 @@ export function getHymn(id: string): Hymn | undefined {
   const found = bundledHymn(id);
   if (found) {
     const patch = mergedPatch(id, useRemote.getState().patches, overlayReader());
-    const merged = patch ? { ...found, ...patch } : found;
+    const merged = patch ? applyPatch(found, patch) : found;
     byId.set(id, merged);
     return merged;
   }

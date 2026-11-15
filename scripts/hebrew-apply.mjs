@@ -172,6 +172,18 @@ function withHebrew(hymn, payload) {
     if (typeof value === 'string' && value.trim()) he[key] = value;
     else if (Array.isArray(value) && value.length > 0) he[key] = value;
   }
+  // Labels and refrain flags belong to the stanza grid, and the Arabic record
+  // owns that grid. A payload is authored against one snapshot of it and cannot
+  // know that a stanza later became the refrain, so mirror the Arabic verse at
+  // the same index instead of trusting the payload's copy. Without this, 30
+  // taranim hymns shipped a Hebrew stanza that was not flagged as the refrain.
+  if (Array.isArray(he.verses_he) && he.verses_he.length === hymn.verses.length) {
+    he.verses_he = he.verses_he.map((verse, i) => ({
+      label: hymn.verses[i].label,
+      lines: verse.lines,
+      ...(hymn.verses[i].chorus ? { chorus: true } : {}),
+    }));
+  }
 
   const anchors = [
     'chorus_de', 'verses_de', 'title_de',

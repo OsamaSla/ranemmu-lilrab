@@ -149,6 +149,8 @@ export const en: PartialDictionary = {
   'admin.titleDe': 'German title',
   'admin.chorusDe': 'German refrain',
   'admin.translationDe': 'German translation',
+  'admin.titleHe': 'Hebrew title',
+  'admin.chorusHe': 'Hebrew refrain',
   'admin.addHymn': 'Add New Hymn',
   'admin.hymnNumber': 'Hymn Number',
   'admin.stanzaLine': 'Stanza Line',
