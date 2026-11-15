@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-15, commit 2ec55797 (Hebrew stanza alignment; see §17)
+Last verified: 2026-11-15, commit d0770355 (Hebrew stanza alignment; see §17)
 
 ## 1. What this is
 
@@ -829,6 +829,12 @@ and refrains defined in the admin editor.
 - Gotcha: `useAdminGate` is intentionally **not persisted**, so a full page
   load re-locks the editor. To test the editor in a browser, unlock on `/admin`
   and then navigate **client-side** (the review list row), not by URL.
+- Gotcha: `flattenStyle` copies `fontFamily: undefined` through, so
+  `[fieldStyle, { fontFamily: undefined }]` still renders in Cairo. The Hebrew
+  fields are built from a font-less box instead; verified by computed style —
+  Arabic fields `Cairo`, Hebrew fields
+  `-apple-system, …, "Segoe UI", Roboto, …` (no bundled family has Hebrew
+  glyphs, so Cairo would be tofu).
 - Gotcha: the dev server on 8081 was held by a stale Metro process from a
   previous session (listening, but not answering); `netstat -ano | findstr
   :8081` then `Stop-Process -Id <pid>`.
