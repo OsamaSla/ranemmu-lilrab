@@ -222,7 +222,11 @@ export default function AdminEditScreen() {
     );
   }
 
-  const fieldStyle = {
+  /**
+   * Box shared by every field on this screen. The Arabic/Latin fields add the
+   * app font on top; the Hebrew ones deliberately do not (see below).
+   */
+  const fieldBox = {
     borderWidth: 1,
     borderColor: colors.border,
     borderRadius: radius.md,
@@ -231,8 +235,12 @@ export default function AdminEditScreen() {
     paddingVertical: spacing.sm,
     minHeight: 48,
     color: colors.text,
-    fontFamily,
     fontSize: 16,
+  } as const;
+
+  const fieldStyle = {
+    ...fieldBox,
+    fontFamily,
     textAlign: direction.textAlign,
     writingDirection: direction.dir,
   } as const;
@@ -253,24 +261,30 @@ export default function AdminEditScreen() {
   } as const;
 
   /**
-   * Hebrew text inside the editor. None of the six bundled families carry
-   * Hebrew glyphs, so the platform font is the only one with both the letters
-   * and the niqqud positioning — the same reason the reader uses it. Direction
-   * and alignment are per field because the app itself is RTL Arabic. The line
-   * box is taller than the Latin one: the points above and below the letters
-   * are clipped by a 40px field.
+   * Hebrew text inside the editor. It must not inherit `fontFamily`: none of
+   * the six bundled families carry Hebrew glyphs, so Cairo would render tofu,
+   * and the platform font is the only one with both the letters and the niqqud
+   * positioning — the same reason the reader uses it. Direction and alignment
+   * are per field because the app itself is RTL Arabic. The line box is taller
+   * than the Latin one: the points above and below the letters are clipped by a
+   * 40px field.
    */
   const hebrewText = {
-    fontFamily: undefined,
     writingDirection: 'rtl',
     textAlign: 'right',
   } as const;
   const hebrewField = {
-    ...translationField,
+    ...fieldBox,
     ...hebrewText,
-    fontSize: 16,
-    minHeight: 48,
     lineHeight: 26,
+    textAlignVertical: 'center',
+  } as const;
+  const hebrewLineField = {
+    ...hebrewField,
+    borderWidth: 0,
+    borderStartWidth: 2,
+    borderStartColor: colors.accent,
+    textAlignVertical: 'top',
   } as const;
 
   const set = (patch: Partial<typeof form>) => {
@@ -730,7 +744,7 @@ export default function AdminEditScreen() {
               <TextInput
                 value={form.title_he}
                 onChangeText={(v) => set({ title_he: v })}
-                style={[fieldStyle, hebrewText]}
+                style={hebrewField}
               />
               <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
                 {t('admin.chorusHe')}
@@ -738,7 +752,7 @@ export default function AdminEditScreen() {
               <TextInput
                 value={form.chorus_he}
                 onChangeText={(v) => set({ chorus_he: v })}
-                style={[fieldStyle, hebrewText]}
+                style={hebrewField}
               />
             </>
           ) : null}
@@ -924,7 +938,7 @@ export default function AdminEditScreen() {
                         value={form.linesHe[i][j] ?? ''}
                         onChangeText={(v) => setTranslatedLine('he', i, j, v)}
                         multiline
-                        style={[fieldStyle, hebrewField, { flex: 1 }]}
+                        style={[hebrewLineField, { flex: 1 }]}
                       />
                     </View>
                   ) : null}
