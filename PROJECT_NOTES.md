@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-15, commit 9a6c740c (Hebrew stanza alignment; see §17)
+Last verified: 2026-11-15, commit 2ec55797 (Hebrew stanza alignment; see §17)
 
 ## 1. What this is
 
