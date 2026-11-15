@@ -384,6 +384,15 @@
     {
       "id": "b30004",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 18,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 4,
       "title": "أحبك ربى يسوع",
       "verses": [
@@ -706,6 +715,15 @@
     {
       "id": "b30008",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "isa",
+          "chapter": 9,
+          "from": 6,
+          "to": 6,
+          "review": true
+        }
+      ],
       "number": 8,
       "title": "يا عجيباً فى محبته العظيمة",
       "verses": [
@@ -812,6 +830,15 @@
     {
       "id": "b30009",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "isa",
+          "chapter": 53,
+          "from": 7,
+          "to": 7,
+          "review": true
+        }
+      ],
       "number": 9,
       "title": "حبيبى أيا من لأجلى جُرحت",
       "verses": [
@@ -1703,6 +1730,15 @@
     {
       "id": "b30019",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "lam",
+          "chapter": 3,
+          "from": 24,
+          "to": 24,
+          "review": true
+        }
+      ],
       "number": 19,
       "title": "نصيبى هو الرب",
       "verses": [
@@ -2741,6 +2777,15 @@
     {
       "id": "b30030",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 69,
+          "from": 20,
+          "to": 20,
+          "review": true
+        }
+      ],
       "number": 30,
       "title": "لأجلكم شربت كأس مر رهيب",
       "verses": [
@@ -4302,6 +4347,22 @@
     {
       "id": "b30046",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "rom",
+          "chapter": 8,
+          "from": 37,
+          "to": 37,
+          "review": true
+        },
+        {
+          "book": "php",
+          "chapter": 3,
+          "from": 13,
+          "to": 13,
+          "review": true
+        }
+      ],
       "number": 46,
       "title": "هيا ننسى ما ورا نمتد إلى قدام",
       "verses": [
@@ -4535,6 +4596,15 @@
     {
       "id": "b30048",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "isa",
+          "chapter": 61,
+          "from": 10,
+          "to": 10,
+          "review": true
+        }
+      ],
       "number": 48,
       "title": "فرحاً أفرح بالرب بهجة فرحي إلهي",
       "verses": [
@@ -4850,6 +4920,15 @@
     {
       "id": "b30051",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "zec",
+          "chapter": 9,
+          "from": 17,
+          "to": 17,
+          "review": true
+        }
+      ],
       "number": 51,
       "title": "يسوع ما أجوده يسوع ما أجمله",
       "verses": [
@@ -4995,6 +5074,15 @@
     {
       "id": "b30052",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 59,
+          "from": 17,
+          "to": 17,
+          "review": true
+        }
+      ],
       "number": 52,
       "title": "يا قوتي لك أرنم لأن الله ملجأي",
       "verses": [
@@ -5390,6 +5478,15 @@
     {
       "id": "b30057",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 104,
+          "from": 33,
+          "to": 33,
+          "review": true
+        }
+      ],
       "number": 57,
       "title": "يا حياة القلب يا حبيب روحي ضامني",
       "verses": [
@@ -6878,6 +6975,15 @@
     {
       "id": "b30070",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 16,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 70,
       "title": "احفظنى يا الله لأنى عليك توكلت",
       "verses": [
@@ -7045,6 +7151,15 @@
     {
       "id": "b30072",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 73,
+          "from": 25,
+          "to": 25,
+          "review": true
+        }
+      ],
       "number": 72,
       "title": "يابسمة الصباح فى وجه ذا الوجود",
       "verses": [
@@ -7128,6 +7243,15 @@
     {
       "id": "b30073",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "2co",
+          "chapter": 12,
+          "from": 9,
+          "to": 9,
+          "review": true
+        }
+      ],
       "number": 73,
       "title": "يا رب صخرتى إليك صرختى فأنت مخلصى",
       "verses": [
@@ -7642,6 +7766,15 @@
     {
       "id": "b30078",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "gen",
+          "chapter": 32,
+          "from": 26,
+          "to": 26,
+          "review": true
+        }
+      ],
       "number": 78,
       "title": "ما لم تباركنى ربى لن أطلقك لن أتركك",
       "verses": [
@@ -7924,6 +8057,15 @@
     {
       "id": "b30081",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 107,
+          "from": 9,
+          "to": 9,
+          "review": true
+        }
+      ],
       "number": 81,
       "title": "هللويا الرب صالح إلى الأبد رحمته",
       "verses": [
@@ -9233,6 +9375,15 @@
     {
       "id": "b30094",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 119,
+          "from": 105,
+          "to": 105,
+          "review": true
+        }
+      ],
       "number": 94,
       "title": "كلامك أيارب نورى هو هداى فى المسير",
       "verses": [
@@ -10047,6 +10198,15 @@
     {
       "id": "b30103",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "2co",
+          "chapter": 12,
+          "from": 9,
+          "to": 9,
+          "review": true
+        }
+      ],
       "number": 103,
       "title": "أيها السائح فى البرية نعمتى تكفيك",
       "verses": [
@@ -10158,6 +10318,15 @@
     {
       "id": "b30104",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "job",
+          "chapter": 42,
+          "from": 2,
+          "to": 2,
+          "review": true
+        }
+      ],
       "number": 104,
       "title": "أثق يا سيدى أن يداك تشفى فى الأعماق الداء",
       "verses": [
@@ -10353,6 +10522,15 @@
     {
       "id": "b30106",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 65,
+          "from": 2,
+          "to": 2,
+          "review": true
+        }
+      ],
       "number": 106,
       "title": "علمنى يا رب أصلى دربنى لأسكب قلبى",
       "verses": [
@@ -10974,6 +11152,15 @@
     {
       "id": "b30112",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 116,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 112,
       "title": "أحببت أن سيدى يسمع صوتى ودعاى",
       "verses": [
@@ -11296,6 +11483,15 @@
     {
       "id": "b30115",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 25,
+          "from": 4,
+          "to": 4,
+          "review": true
+        }
+      ],
       "number": 115,
       "title": "علمنى أنتظرك يا رب عرفنى رؤيتك للدرب",
       "verses": [
@@ -11700,6 +11896,15 @@
     {
       "id": "b30119",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "pro",
+          "chapter": 3,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 119,
       "title": "يا ابنى لا تنسى شريعتى",
       "verses": [
@@ -11742,6 +11947,15 @@
     {
       "id": "b30120",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "exo",
+          "chapter": 33,
+          "from": 14,
+          "to": 15,
+          "review": true
+        }
+      ],
       "number": 120,
       "title": "يا سيدى إن لم يسر أمامى وجهك الطريق",
       "verses": [
@@ -12569,6 +12783,15 @@
     {
       "id": "b30128",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 36,
+          "from": 7,
+          "to": 7,
+          "review": true
+        }
+      ],
       "number": 128,
       "title": "أسكن تحت ظل جناحيك أعرف معنى السلام فى حبك",
       "verses": [
@@ -12866,6 +13089,15 @@
     {
       "id": "b30131",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 91,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 131,
       "title": "الساكن فى ستر ربى القدير يبيت فى ظل الرحوم",
       "verses": [
@@ -13424,6 +13656,15 @@
     {
       "id": "b30136",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 40,
+          "from": 17,
+          "to": 17,
+          "review": true
+        }
+      ],
       "number": 136,
       "title": "يهتم بى عونى منقذى إلهى لا يبطىء",
       "verses": [
@@ -13654,6 +13895,15 @@
     {
       "id": "b30138",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 34,
+          "from": 10,
+          "to": 10,
+          "review": true
+        }
+      ],
       "number": 138,
       "title": "إن الأشبال احتاجت وإن جاعت الأسود",
       "verses": [
@@ -13848,6 +14098,15 @@
     {
       "id": "b30140",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 8,
+          "from": 9,
+          "to": 9,
+          "review": true
+        }
+      ],
       "number": 140,
       "title": "اسمك ربى يسوع مانح الخلاص",
       "verses": [
@@ -14980,6 +15239,15 @@
     {
       "id": "b30149",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 18,
+          "from": 2,
+          "to": 2,
+          "review": true
+        }
+      ],
       "number": 149,
       "title": "فى ضيقى دعوتُكَ يا ربى",
       "verses": [
@@ -15086,6 +15354,15 @@
     {
       "id": "b30150",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "isa",
+          "chapter": 64,
+          "from": 4,
+          "to": 4,
+          "review": true
+        }
+      ],
       "number": 150,
       "title": "لم تَرَ عينٌ إلهاً غيرك",
       "verses": [
@@ -15537,6 +15814,15 @@
     {
       "id": "b30155",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "job",
+          "chapter": 42,
+          "from": 2,
+          "to": 2,
+          "review": true
+        }
+      ],
       "number": 155,
       "title": "قد علمتُ أنك تستطيع كل شئ",
       "verses": [
@@ -16828,6 +17114,15 @@
     {
       "id": "b30167",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "isa",
+          "chapter": 12,
+          "from": 2,
+          "to": 2,
+          "review": true
+        }
+      ],
       "number": 167,
       "title": "الله أنت خلاصى فأطمئن",
       "verses": [
@@ -17323,6 +17618,15 @@
     {
       "id": "b30172",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "rom",
+          "chapter": 8,
+          "from": 26,
+          "to": 26,
+          "review": true
+        }
+      ],
       "number": 172,
       "title": "كل الماضى بيشهد ليك",
       "verses": [
@@ -17527,6 +17831,15 @@
     {
       "id": "b30174",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 16,
+          "from": 5,
+          "to": 5,
+          "review": true
+        }
+      ],
       "number": 174,
       "title": "أنت نصيب قسمتى وكأسى",
       "verses": [
@@ -18259,6 +18572,15 @@
     {
       "id": "b30181",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 22,
+          "from": 19,
+          "to": 19,
+          "review": true
+        }
+      ],
       "number": 181,
       "title": "ياربُّ فيك نُصرتى",
       "verses": [
@@ -18551,6 +18873,15 @@
     {
       "id": "b30184",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "2co",
+          "chapter": 2,
+          "from": 14,
+          "to": 14,
+          "review": true
+        }
+      ],
       "number": 184,
       "title": "شكراً لله الذى يقودنا فى موكب النصرة",
       "verses": [
@@ -19086,6 +19417,15 @@
     {
       "id": "b30189",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "2ch",
+          "chapter": 16,
+          "from": 9,
+          "to": 9,
+          "review": true
+        }
+      ],
       "number": 189,
       "title": "عينا الرب تجولان فى كل الأرض",
       "verses": [
@@ -19225,6 +19565,15 @@
     {
       "id": "b30191",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 55,
+          "from": 22,
+          "to": 22,
+          "review": true
+        }
+      ],
       "number": 191,
       "title": "إلق على الرب همك فهو يعولك",
       "verses": [
@@ -19343,6 +19692,15 @@
     {
       "id": "b30192",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "jer",
+          "chapter": 32,
+          "from": 17,
+          "to": 17,
+          "review": true
+        }
+      ],
       "number": 192,
       "title": "أيها السيد أنت قد صنعت السموات والأرض",
       "verses": [
@@ -20262,6 +20620,15 @@
     {
       "id": "b30201",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "isa",
+          "chapter": 54,
+          "from": 10,
+          "to": 10,
+          "review": true
+        }
+      ],
       "number": 201,
       "title": "تزول الجبال وتفنى التلال",
       "verses": [
@@ -20609,6 +20976,15 @@
     {
       "id": "b30204",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "rom",
+          "chapter": 8,
+          "from": 35,
+          "to": 35,
+          "review": true
+        }
+      ],
       "number": 204,
       "title": "من سيفصلنا عن محبة المسيح",
       "verses": [
@@ -21498,6 +21874,15 @@
     {
       "id": "b30212",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 115,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 212,
       "title": "ليس لنا يا رب ليس لنا",
       "verses": [
@@ -22806,6 +23191,15 @@
     {
       "id": "b30225",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 18,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 225,
       "title": "يا رب علمنى كيف أحبك",
       "verses": [
@@ -23151,6 +23545,15 @@
     {
       "id": "b30229",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 65,
+          "from": 2,
+          "to": 2,
+          "review": true
+        }
+      ],
       "number": 229,
       "title": "قلبى إشتهى يا ربى حبا لك أمين",
       "verses": [
@@ -24107,6 +24510,15 @@
     {
       "id": "b30239",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 139,
+          "from": 23,
+          "to": 23,
+          "review": true
+        }
+      ],
       "number": 239,
       "title": "يا سيدى اختبرنى فأنت بى خبير",
       "verses": [
@@ -26339,6 +26751,15 @@
     {
       "id": "b30260",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "gal",
+          "chapter": 6,
+          "from": 15,
+          "to": 15,
+          "review": true
+        }
+      ],
       "number": 260,
       "title": "أنا فى المسيح خليقة جديدة",
       "verses": [
@@ -26411,6 +26832,15 @@
     {
       "id": "b30261",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "rom",
+          "chapter": 8,
+          "from": 37,
+          "to": 37,
+          "review": true
+        }
+      ],
       "number": 261,
       "title": "هيا يا شعب المسيح هيا للجنب الجريح",
       "verses": [
@@ -26635,6 +27065,15 @@
     {
       "id": "b30263",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "eph",
+          "chapter": 3,
+          "from": 20,
+          "to": 20,
+          "review": true
+        }
+      ],
       "number": 263,
       "title": "والقادر أن يفعل فوق كل شيء",
       "verses": [
@@ -26677,6 +27116,15 @@
     {
       "id": "b30264",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "gen",
+          "chapter": 17,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 264,
       "title": "سر أمامى وكن كاملا سر أمامى وكن كاملا",
       "verses": [
@@ -28405,6 +28853,15 @@
     {
       "id": "b30282",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "1ch",
+          "chapter": 4,
+          "from": 10,
+          "to": 10,
+          "review": true
+        }
+      ],
       "number": 282,
       "title": "ليتك تباركنى وتوسع تخومى",
       "verses": [
@@ -28503,6 +28960,15 @@
     {
       "id": "b30284",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 103,
+          "from": 2,
+          "to": 2,
+          "review": true
+        }
+      ],
       "number": 284,
       "title": "باركى يا نفسى الرب ولا تنسى كل حسناته",
       "verses": [
@@ -28615,6 +29081,15 @@
     {
       "id": "b30285",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 103,
+          "from": 1,
+          "to": 2,
+          "review": true
+        }
+      ],
       "number": 285,
       "title": "باركى يا نفسى الرب وكل ما فى باطنى",
       "verses": [
@@ -28779,6 +29254,15 @@
     {
       "id": "b30287",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "luk",
+          "chapter": 7,
+          "from": 48,
+          "to": 48,
+          "review": true
+        }
+      ],
       "number": 287,
       "title": "من يوم ماقابلت حبيبى يسوع",
       "verses": [
@@ -28918,6 +29402,15 @@
     {
       "id": "b30288",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 97,
+          "from": 9,
+          "to": 9,
+          "review": true
+        }
+      ],
       "number": 288,
       "title": "علوت جدا أيها الرب الإله",
       "verses": [
@@ -30536,6 +31029,15 @@
     {
       "id": "b30300",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 139,
+          "from": 23,
+          "to": 24,
+          "review": true
+        }
+      ],
       "number": 300,
       "title": "اختبرنى ياالله",
       "verses": [
@@ -32112,6 +32614,15 @@
     {
       "id": "b30315",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "luk",
+          "chapter": 1,
+          "from": 68,
+          "to": 68,
+          "review": true
+        }
+      ],
       "number": 315,
       "title": "مباركٌ الربُّ إلهنا لأنه افتقد شعبه",
       "verses": [
@@ -33546,6 +34057,15 @@
     {
       "id": "b30329",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 91,
+          "from": 14,
+          "to": 14,
+          "review": true
+        }
+      ],
       "number": 329,
       "title": "لأنه تعلق بى أنجيه أرفعه لأنه عرف اسمى",
       "verses": [
@@ -34701,6 +35221,15 @@
     {
       "id": "b30339",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "heb",
+          "chapter": 10,
+          "from": 37,
+          "to": 37,
+          "review": true
+        }
+      ],
       "number": 339,
       "title": "بعد قليل جداً ييجى ييجى يوم الاختطاف",
       "verses": [
@@ -34804,6 +35333,15 @@
     {
       "id": "b30340",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 25,
+          "from": 15,
+          "to": 15,
+          "review": true
+        }
+      ],
       "number": 340,
       "title": "عيناى دائماً إلى الرب",
       "verses": [
@@ -35419,6 +35957,15 @@
     {
       "id": "b30346",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 89,
+          "from": 1,
+          "to": 1,
+          "review": true
+        }
+      ],
       "number": 346,
       "title": "برأحم الرب أغنى",
       "verses": [
@@ -36658,6 +37205,15 @@
     {
       "id": "b30359",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "1ki",
+          "chapter": 1,
+          "from": 29,
+          "to": 29,
+          "review": true
+        }
+      ],
       "number": 359,
       "title": "كفايتي في من فدى نفسى من الهلاك",
       "verses": [
@@ -36782,6 +37338,15 @@
     {
       "id": "b30360",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "1ti",
+          "chapter": 6,
+          "from": 11,
+          "to": 11,
+          "review": true
+        }
+      ],
       "number": 360,
       "title": "إن أتاك الشر فأهرب",
       "verses": [
@@ -38883,6 +39448,15 @@
     {
       "id": "b30382",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "sng",
+          "chapter": 2,
+          "from": 16,
+          "to": 16,
+          "review": true
+        }
+      ],
       "number": 382,
       "title": "انت راعى وانا باتعلم",
       "verses": [
@@ -39185,6 +39759,15 @@
     {
       "id": "b30386",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 28,
+          "from": 7,
+          "to": 7,
+          "review": true
+        }
+      ],
       "number": 386,
       "title": "الرب عزى وترسى عليه اتكل قلبى",
       "verses": [
@@ -39792,6 +40375,15 @@
     {
       "id": "b30392",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 56,
+          "from": 3,
+          "to": 3,
+          "review": true
+        }
+      ],
       "number": 392,
       "title": "محتاجلك تدارينى من خوفى وتحمينى",
       "verses": [
@@ -40178,6 +40770,15 @@
     {
       "id": "b30396",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 104,
+          "from": 34,
+          "to": 34,
+          "review": true
+        }
+      ],
       "number": 396,
       "title": "آتى اليك يا فادى حياتى يا مَنْ تزيل كل خوفى",
       "verses": [
@@ -40303,6 +40904,15 @@
     {
       "id": "b30397",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 119,
+          "from": 18,
+          "to": 18,
+          "review": true
+        }
+      ],
       "number": 397,
       "title": "اكشف عن عينى فأرى عجائب من شريعتك",
       "verses": [
@@ -40451,6 +41061,15 @@
     {
       "id": "b30399",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 71,
+          "from": 23,
+          "to": 23,
+          "review": true
+        }
+      ],
       "number": 399,
       "title": "يا الله من مثلك يا الله من مثلك",
       "verses": [
@@ -40584,6 +41203,15 @@
     {
       "id": "b30401",
       "book": "book3",
+      "scriptures": [
+        {
+          "book": "psa",
+          "chapter": 92,
+          "from": 4,
+          "to": 5,
+          "review": true
+        }
+      ],
       "number": 401,
       "title": "ما أعظم أعمالك يارب ما أعظمها",
       "verses": [

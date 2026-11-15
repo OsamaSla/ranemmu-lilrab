@@ -1,0 +1,12 @@
+{
+  "book": "book3",
+  "number": 46,
+  "refs": [
+    "php.3.13",
+    "rom.8.37"
+  ],
+  "review": [
+    "php.3.13",
+    "rom.8.37"
+  ]
+}

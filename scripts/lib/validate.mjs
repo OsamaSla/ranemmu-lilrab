@@ -4,6 +4,7 @@
  * Run directly with: npm run check:hymns
  */
 import { TOPIC_IDS } from './topic-keywords.mjs';
+import { refToString, validateScriptureRef } from './bible-books.mjs';
 
 /**
  * Arabic letters that must never appear in hymn content. These are the result
@@ -201,6 +202,29 @@ export function validateCorpus(hymns) {
         if (new Set(hymn.topics).size !== hymn.topics.length) {
           issues.push(`${at} (${hymn.number}): duplicate entries in 'topics'`);
         }
+      }
+    }
+
+    // Scripture references: structured, canonical order, no duplicates. The
+    // text is parsed once by scripture-apply; a bad ref must never reach the
+    // app, which only formats what it is given.
+    if (hymn.scriptures !== undefined) {
+      if (!Array.isArray(hymn.scriptures) || hymn.scriptures.length === 0) {
+        issues.push(`${at} (${hymn.number}): 'scriptures' present but empty — omit the key instead`);
+      } else {
+        const seen = new Set();
+        hymn.scriptures.forEach((ref, i) => {
+          if (!ref || typeof ref !== 'object') {
+            issues.push(`${at} (${hymn.number}): scriptures[${i}] is not an object`);
+            return;
+          }
+          for (const problem of validateScriptureRef(ref)) {
+            issues.push(`${at} (${hymn.number}): scriptures[${i}] ${problem}`);
+          }
+          const key = refToString(ref);
+          if (seen.has(key)) issues.push(`${at} (${hymn.number}): scriptures[${i}] repeats ${key}`);
+          seen.add(key);
+        });
       }
     }
   });

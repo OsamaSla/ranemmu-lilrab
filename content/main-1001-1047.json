@@ -2926,6 +2926,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 73,
+     "from": 23,
+     "to": 24,
+     "review": true
+    }
+   ],
    "number": 1026,
    "title": "أمسكت بيدي اليمنى برأيك",
    "verses": [
@@ -4200,6 +4209,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=r5W-dr0P95w"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 27,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 1037,
    "title": "اختبارات المؤمنين في كل يوم",
    "verses": [

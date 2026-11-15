@@ -1954,6 +1954,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "jdg",
+     "chapter": 5,
+     "from": 21,
+     "to": 21,
+     "review": true
+    }
+   ],
    "number": 16,
    "title": "دوسي يا نفس بعز",
    "verses": [
@@ -2085,6 +2094,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 94,
+     "from": 19,
+     "to": 19,
+     "review": true
+    }
+   ],
    "number": 17,
    "title": "ربي من لي في حيرتي",
    "verses": [
@@ -2597,6 +2615,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "sng",
+     "chapter": 6,
+     "from": 4,
+     "to": 4,
+     "review": true
+    }
+   ],
    "number": 21,
    "title": "كسرت سهام العدو",
    "verses": [
@@ -3180,6 +3207,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 23,
+     "from": 4,
+     "to": 4,
+     "review": true
+    }
+   ],
    "number": 25,
    "title": "ما دمت راعي يا ربي الحبيب",
    "verses": [
@@ -3956,6 +3992,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "jol",
+     "chapter": 3,
+     "from": 14,
+     "to": 14,
+     "review": true
+    }
+   ],
    "number": 31,
    "title": "وسط الجماهير",
    "verses": [
@@ -4357,6 +4402,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "gal",
+     "chapter": 2,
+     "from": 19,
+     "to": 20,
+     "review": true
+    }
+   ],
    "number": 34,
    "title": "قد مت عن خطيتي",
    "verses": [
@@ -5335,6 +5389,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 31,
+     "from": 19,
+     "to": 19,
+     "review": true
+    }
+   ],
    "number": 41,
    "title": "ستستجيب طلبتي",
    "verses": [
@@ -8207,6 +8270,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "1jn",
+     "chapter": 1,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 62,
    "title": "إن قلنا أننا له",
    "verses": [
@@ -8333,6 +8405,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "1co",
+     "chapter": 15,
+     "from": 3,
+     "to": 3,
+     "review": true
+    }
+   ],
    "number": 63,
    "title": "مات من أجل خطايانا",
    "verses": [
@@ -8871,6 +8952,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 92,
+     "from": 12,
+     "to": 12,
+     "review": true
+    }
+   ],
    "number": 67,
    "title": "يرتفع فوق الأحقاد",
    "verses": [
@@ -10154,6 +10244,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=Q1xMHwKwdDM"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 34,
+     "from": 22,
+     "to": 22,
+     "review": true
+    }
+   ],
    "number": 76,
    "title": "ما أحلى الجلوس مع فادي النفوس",
    "verses": [
@@ -10817,6 +10916,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=pXibQcpQ9A0"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 100,
+     "from": 3,
+     "to": 3,
+     "review": true
+    }
+   ],
    "number": 81,
    "title": "لنعبد الرب بالفرح والحمد",
    "verses": [
@@ -11598,6 +11706,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "php",
+     "chapter": 3,
+     "from": 14,
+     "to": 14,
+     "review": true
+    }
+   ],
    "number": 87,
    "title": "أسعى أنا نحو الغرض",
    "verses": [
@@ -12176,6 +12293,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 18,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 91,
    "title": "هاعيش احبك واستناك",
    "verses": [
@@ -15489,6 +15615,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "jol",
+     "chapter": 3,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 115,
    "title": "شكرا من كل القلب",
    "verses": [
@@ -16099,6 +16234,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "luk",
+     "chapter": 1,
+     "from": 47,
+     "to": 47,
+     "review": true
+    }
+   ],
    "number": 120,
    "title": "يا مخلصي اصحبني",
    "verses": [
@@ -16155,6 +16299,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 9,
+     "from": 6,
+     "to": 6,
+     "review": true
+    }
+   ],
    "number": 121,
    "title": "يا عجيبا في محبته العظيمة",
    "verses": [
@@ -17324,6 +17477,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 53,
+     "from": 7,
+     "to": 7,
+     "review": true
+    }
+   ],
    "number": 129,
    "title": "حبيبي أيا من لأجلي جرحت",
    "verses": [
@@ -17468,6 +17630,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 18,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 130,
    "title": "أحبك ربي يسوع",
    "verses": [
@@ -18575,6 +18746,15 @@
    "author": "سهيل مدانات"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 84,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 138,
    "title": "أحلى ما في حياتي إنت",
    "verses": [
@@ -19395,6 +19575,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 69,
+     "from": 20,
+     "to": 20,
+     "review": true
+    }
+   ],
    "number": 146,
    "title": "لأجلكم شربت كأس مر رهيب",
    "verses": [
@@ -20820,6 +21009,22 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "rom",
+     "chapter": 8,
+     "from": 37,
+     "to": 37,
+     "review": true
+    },
+    {
+     "book": "php",
+     "chapter": 3,
+     "from": 13,
+     "to": 13,
+     "review": true
+    }
+   ],
    "number": 156,
    "title": "هيا ننسى ما وراء",
    "verses": [
@@ -21687,6 +21892,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 61,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 163,
    "title": "فرحا أفرح بالرب",
    "verses": [
@@ -23038,6 +23252,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 104,
+     "from": 33,
+     "to": 33,
+     "review": true
+    }
+   ],
    "number": 172,
    "title": "يا حياة القلب يا حبيب روحي ضامني",
    "verses": [
@@ -25930,6 +26153,22 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 45,
+     "from": 2,
+     "to": 2,
+     "review": true
+    },
+    {
+     "book": "sng",
+     "chapter": 2,
+     "from": 3,
+     "to": 3,
+     "review": true
+    }
+   ],
    "number": 191,
    "title": "تحت ظلك حبيبي",
    "verses": [
@@ -27099,6 +27338,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 57,
+     "from": 7,
+     "to": 7,
+     "review": true
+    }
+   ],
    "number": 199,
    "title": "راحتي يا رب حقا",
    "verses": [
@@ -27735,6 +27983,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 73,
+     "from": 25,
+     "to": 25,
+     "review": true
+    }
+   ],
    "number": 203,
    "title": "يا بسمة الصباح في وجه ذا الوجود",
    "verses": [
@@ -27833,6 +28090,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 119,
+     "from": 105,
+     "to": 105,
+     "review": true
+    }
+   ],
    "number": 204,
    "title": "كلامك أيا رب نوري",
    "verses": [
@@ -28397,6 +28663,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "2co",
+     "chapter": 12,
+     "from": 9,
+     "to": 9,
+     "review": true
+    }
+   ],
    "number": 208,
    "title": "أيها السائح في البرية",
    "verses": [
@@ -28895,6 +29170,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "job",
+     "chapter": 42,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 212,
    "title": "أثق يا سيدي أن يديك",
    "verses": [
@@ -29062,6 +29346,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=NsnbyZGBtQg"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 16,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 213,
    "title": "من لي هنا أو في السما",
    "verses": [
@@ -29861,6 +30154,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 107,
+     "from": 9,
+     "to": 9,
+     "review": true
+    }
+   ],
    "number": 219,
    "title": "لأنه أشبع نفسا مشتهية",
    "verses": [
@@ -31034,6 +31336,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 40,
+     "from": 17,
+     "to": 17,
+     "review": true
+    }
+   ],
    "number": 229,
    "title": "يهتم بي عوني منقذي",
    "verses": [
@@ -31953,6 +32264,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "exo",
+     "chapter": 33,
+     "from": 14,
+     "to": 15,
+     "review": true
+    }
+   ],
    "number": 237,
    "title": "يا سيدي إن لم يسر",
    "verses": [
@@ -32570,6 +32890,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 62,
+     "from": 5,
+     "to": 5,
+     "review": true
+    }
+   ],
    "number": 241,
    "title": "انتظري الرب يا نفسي",
    "verses": [
@@ -33260,6 +33589,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 91,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 245,
    "title": "الساكن في ستر ربي القدير",
    "verses": [
@@ -33699,6 +34037,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 94,
+     "from": 19,
+     "to": 19,
+     "review": true
+    }
+   ],
    "number": 248,
    "title": "في صليبك فدائي وعزائي",
    "verses": [
@@ -34664,6 +35011,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 18,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 255,
    "title": "في ضيقي دعوتك يا ربي",
    "verses": [
@@ -34798,6 +35154,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 8,
+     "from": 9,
+     "to": 9,
+     "review": true
+    }
+   ],
    "number": 256,
    "title": "اسمك ربي يسوع مانح الخلاص",
    "verses": [
@@ -35018,6 +35383,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 64,
+     "from": 4,
+     "to": 4,
+     "review": true
+    }
+   ],
    "number": 257,
    "title": "لم تر عين إلها غيرك",
    "verses": [
@@ -37545,6 +37919,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 23,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 275,
    "title": "سنين طويلة مضت",
    "verses": [
@@ -37860,6 +38243,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 22,
+     "from": 19,
+     "to": 19,
+     "review": true
+    }
+   ],
    "number": 277,
    "title": "يا رب فيك نصرتي",
    "verses": [
@@ -38465,6 +38857,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 58,
+     "from": 11,
+     "to": 11,
+     "review": true
+    }
+   ],
    "number": 281,
    "title": "يقودك الرب على الدوام",
    "verses": [
@@ -39519,6 +39920,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 55,
+     "from": 22,
+     "to": 22,
+     "review": true
+    }
+   ],
    "number": 289,
    "title": "عندما يغشاك ليل",
    "verses": [
@@ -40061,6 +40471,15 @@
    "author": "ماهر فايز"
   },
   {
+   "scriptures": [
+    {
+     "book": "job",
+     "chapter": 8,
+     "from": 9,
+     "to": 9,
+     "review": true
+    }
+   ],
    "number": 293,
    "title": "أيامنا ع الأرض ظل",
    "verses": [
@@ -41111,6 +41530,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "jer",
+     "chapter": 32,
+     "from": 17,
+     "to": 17,
+     "review": true
+    }
+   ],
    "number": 300,
    "title": "أيها السيد أنت قد صنعت",
    "verses": [
@@ -41583,6 +42011,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 54,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 304,
    "title": "تزول الجبال وتفنى التلال",
    "verses": [
@@ -44353,6 +44790,15 @@
    "authorOriginal": "B. B. McKinney"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 139,
+     "from": 23,
+     "to": 23,
+     "review": true
+    }
+   ],
    "number": 324,
    "title": "يا سيدي اختبرني",
    "verses": [
@@ -44794,6 +45240,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 36,
+     "from": 7,
+     "to": 7,
+     "review": true
+    }
+   ],
    "number": 327,
    "title": "أسكن تحت ظل جناحيك",
    "verses": [
@@ -45805,6 +46260,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "dan",
+     "chapter": 4,
+     "from": 2,
+     "to": 3,
+     "review": true
+    }
+   ],
    "number": 335,
    "title": "الآيات والعجائب التي صنعها",
    "verses": [
@@ -46223,6 +46687,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "rom",
+     "chapter": 8,
+     "from": 37,
+     "to": 37,
+     "review": true
+    }
+   ],
    "number": 339,
    "title": "هيا يا شعب المسيح",
    "verses": [
@@ -46407,6 +46880,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "eph",
+     "chapter": 5,
+     "from": 20,
+     "to": 20,
+     "review": true
+    }
+   ],
    "number": 340,
    "title": "في اسم ربنا يسوع",
    "verses": [
@@ -46959,6 +47441,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 103,
+     "from": 22,
+     "to": 22,
+     "review": true
+    }
+   ],
    "number": 344,
    "title": "الذي يغفر كل آثامك",
    "verses": [
@@ -47277,6 +47768,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "luk",
+     "chapter": 7,
+     "from": 48,
+     "to": 48,
+     "review": true
+    }
+   ],
    "number": 346,
    "title": "من يوم ما قابلت حبيبي يسوع",
    "verses": [
@@ -47488,6 +47988,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 97,
+     "from": 9,
+     "to": 9,
+     "review": true
+    }
+   ],
    "number": 347,
    "title": "علوت جدا أيها الرب الإله",
    "verses": [
@@ -47991,6 +48500,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 91,
+     "from": 14,
+     "to": 14,
+     "review": true
+    }
+   ],
    "number": 351,
    "title": "لأنه تعلق بي أنجيه",
    "verses": [
@@ -48213,6 +48731,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "1pe",
+     "chapter": 1,
+     "from": 8,
+     "to": 8,
+     "review": true
+    }
+   ],
    "number": 353,
    "title": "فرحت قلبي يوم ما قابلتك",
    "verses": [
@@ -48672,6 +49199,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 103,
+     "from": 3,
+     "to": 3,
+     "review": true
+    }
+   ],
    "number": 356,
    "title": "الذي يغفر ذنوبك جميع ذنوبك",
    "verses": [
@@ -50156,6 +50692,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=ZCVd3h18sew"
   },
   {
+   "scriptures": [
+    {
+     "book": "luk",
+     "chapter": 1,
+     "from": 68,
+     "to": 68,
+     "review": true
+    }
+   ],
    "number": 366,
    "title": "مبارك الرب إلهنا",
    "verses": [
@@ -53589,6 +54134,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "heb",
+     "chapter": 10,
+     "from": 37,
+     "to": 37,
+     "review": true
+    }
+   ],
    "number": 390,
    "title": "بعد قليل جدا ييجي",
    "verses": [
@@ -53920,6 +54474,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 28,
+     "from": 7,
+     "to": 7,
+     "review": true
+    }
+   ],
    "number": 392,
    "title": "الرب عزي وترسي",
    "verses": [
@@ -56800,6 +57363,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 8,
+     "from": 9,
+     "to": 9,
+     "review": true
+    }
+   ],
    "number": 413,
    "title": "لأنك الإله",
    "verses": [
@@ -58210,6 +58782,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "luk",
+     "chapter": 19,
+     "from": 34,
+     "to": 34,
+     "review": true
+    }
+   ],
    "number": 423,
    "title": "محتاج لك تداريني",
    "verses": [
@@ -58532,6 +59113,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "gal",
+     "chapter": 6,
+     "from": 15,
+     "to": 15,
+     "review": true
+    }
+   ],
    "number": 426,
    "title": "أنا في المسيح خليقه جديده",
    "verses": [
@@ -58906,6 +59496,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "job",
+     "chapter": 42,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 430,
    "title": "قد علمت أنك تستطيع كل شيء",
    "verses": [
@@ -60301,6 +60900,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "jhn",
+     "chapter": 15,
+     "from": 13,
+     "to": 13,
+     "review": true
+    }
+   ],
    "number": 441,
    "title": "حب سما فوق كل حب",
    "verses": [
@@ -60867,6 +61475,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 115,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 445,
    "title": "إليك نضرع والباب نقرع",
    "verses": [
@@ -60956,6 +61573,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 23,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 446,
    "title": "الرب لي راع فلا يعوزني شيء",
    "verses": [
@@ -61199,6 +61825,15 @@
    "author": "Nasef Subhi Naseef"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 65,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 448,
    "title": "قلبي اشتهى يا ربي",
    "verses": [
@@ -63297,6 +63932,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 104,
+     "from": 34,
+     "to": 34,
+     "review": true
+    }
+   ],
    "number": 464,
    "title": "آتي إليك يا فادي حياتي",
    "verses": [
@@ -64011,6 +64655,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 40,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 469,
    "title": "كنت في طين الحمأه باقاسي",
    "verses": [
@@ -64578,6 +65231,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 135,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 473,
    "title": "من مثل الرب إلهنا",
    "verses": [
@@ -64653,6 +65315,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "php",
+     "chapter": 1,
+     "from": 23,
+     "to": 23,
+     "review": true
+    }
+   ],
    "number": 474,
    "title": "قد ضاقت بي الحياة هنا",
    "verses": [
@@ -66897,6 +67568,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=yC0EbnfQIQw"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 71,
+     "from": 23,
+     "to": 23,
+     "review": true
+    }
+   ],
    "number": 489,
    "title": "يا الله من مثلك",
    "verses": [
@@ -67137,6 +67817,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 13,
+     "from": 6,
+     "to": 6,
+     "review": true
+    }
+   ],
    "number": 491,
    "title": "لإسم ربي دوما أغني",
    "verses": [
@@ -68500,6 +69189,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 45,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 501,
    "title": "ربي قد صرت سكيبا",
    "verses": [
@@ -69307,6 +70005,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "sng",
+     "chapter": 5,
+     "from": 15,
+     "to": 16,
+     "review": true
+    }
+   ],
    "number": 506,
    "title": "حبيبي فتى مثل أرز لبنان",
    "verses": [
@@ -69673,6 +70380,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "rev",
+     "chapter": 1,
+     "from": 16,
+     "to": 16,
+     "review": true
+    }
+   ],
    "number": 508,
    "title": "يسوع وحده حوى",
    "verses": [
@@ -70055,6 +70771,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 5,
+     "from": 1,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 510,
    "title": "يا رب أنت الكل في عالمي هنا",
    "verses": [
@@ -70653,6 +71378,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 8,
+     "from": 5,
+     "to": 5,
+     "review": true
+    }
+   ],
    "number": 514,
    "title": "من أنا يا رب لتذكرني",
    "verses": [
@@ -71175,6 +71909,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=X-7NrbP30f0"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 51,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 518,
    "title": "مثل عظيم رحمتك يا خالقي ارحمني",
    "verses": [
@@ -71460,6 +72203,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 95,
+     "from": 6,
+     "to": 6,
+     "review": true
+    }
+   ],
    "number": 520,
    "title": "أتينا بانكسار نعبد شخصك",
    "verses": [
@@ -72763,6 +73515,22 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "sng",
+     "chapter": 1,
+     "from": 4,
+     "to": 4,
+     "review": true
+    },
+    {
+     "book": "sng",
+     "chapter": 5,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 529,
    "title": "أدخلني الملك إلى حجاله",
    "verses": [
@@ -72930,6 +73698,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "1pe",
+     "chapter": 1,
+     "from": 8,
+     "to": 8,
+     "review": true
+    }
+   ],
    "number": 530,
    "title": "فرحا اغمرنا يا ربنا الحبيب",
    "verses": [
@@ -74799,6 +75576,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 121,
+     "from": 1,
+     "to": 4,
+     "review": true
+    }
+   ],
    "number": 543,
    "title": "رفعت عيني إلى الجبال",
    "verses": [
@@ -75209,6 +75995,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 119,
+     "from": 17,
+     "to": 17,
+     "review": true
+    }
+   ],
    "number": 547,
    "title": "رب أحسن لي فأحيا",
    "verses": [
@@ -75647,6 +76442,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "sng",
+     "chapter": 2,
+     "from": 14,
+     "to": 14,
+     "review": true
+    }
+   ],
    "number": 550,
    "title": "حبيبتي هيا رجوعا إلي",
    "verses": [
@@ -77730,6 +78534,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 86,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 564,
    "title": "لا مثل لك بين الآلهة",
    "verses": [
@@ -77884,6 +78697,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 59,
+     "from": 9,
+     "to": 9,
+     "review": true
+    }
+   ],
    "number": 566,
    "title": "أتكل عليك ألتجئ إليك",
    "verses": [
@@ -78983,6 +79805,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 108,
+     "from": 4,
+     "to": 4,
+     "review": true
+    }
+   ],
    "number": 575,
    "title": "لأن رحمتك قد عظمت",
    "verses": [
@@ -81003,6 +81834,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 47,
+     "from": 4,
+     "to": 4,
+     "review": true
+    }
+   ],
    "number": 594,
    "title": "لاسمك يا فادينا بصدق",
    "verses": [
@@ -81196,6 +82036,15 @@
    "author": "هاني يوسف"
   },
   {
+   "scriptures": [
+    {
+     "book": "neh",
+     "chapter": 9,
+     "from": 6,
+     "to": 6,
+     "review": true
+    }
+   ],
    "number": 596,
    "title": "أنت صنعت السماوات وسماء السماوات",
    "verses": [
@@ -81407,6 +82256,22 @@
    "mediaUrl": "https://www.youtube.com/watch?v=YXQJ89IOy78"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 72,
+     "from": 11,
+     "to": 11,
+     "review": true
+    },
+    {
+     "book": "psa",
+     "chapter": 89,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 598,
    "title": "ملوك الأرض يسجدون",
    "verses": [
@@ -81769,6 +82634,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 63,
+     "from": 3,
+     "to": 3,
+     "review": true
+    }
+   ],
    "number": 601,
    "title": "رحمتك أفضل من الحياه",
    "verses": [
@@ -82240,6 +83114,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "luk",
+     "chapter": 1,
+     "from": 43,
+     "to": 43,
+     "review": true
+    }
+   ],
    "number": 606,
    "title": "كيف ربي مع أنك الإله",
    "verses": [
@@ -82851,6 +83734,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 79,
+     "from": 13,
+     "to": 13,
+     "review": true
+    }
+   ],
    "number": 612,
    "title": "نحن شعبك وغنم مرعاك",
    "verses": [
@@ -83353,6 +84245,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 139,
+     "from": 23,
+     "to": 24,
+     "review": true
+    }
+   ],
    "number": 616,
    "title": "اختبرني يا الله",
    "verses": [
@@ -84795,6 +85696,15 @@
    "author": "منال سمير"
   },
   {
+   "scriptures": [
+    {
+     "book": "mrk",
+     "chapter": 11,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 628,
    "title": "أوصنا أوصنا أوصنا في الأعالي",
    "verses": [
@@ -85069,6 +85979,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "1pe",
+     "chapter": 1,
+     "from": 8,
+     "to": 8,
+     "review": true
+    }
+   ],
    "number": 630,
    "title": "عجز لساني عن التعبير",
    "verses": [
@@ -85531,6 +86450,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 45,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 633,
    "title": "فاض قلبي بكلام بكلام صالح",
    "verses": [
@@ -86085,6 +87013,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 84,
+     "from": 1,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 637,
    "title": "ما أحلى مساكنك يا رب الجنود",
    "verses": [
@@ -87083,6 +88020,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 5,
+     "from": 7,
+     "to": 7,
+     "review": true
+    }
+   ],
    "number": 645,
    "title": "أما أنا فبكثرة رحمتك",
    "verses": [
@@ -87679,6 +88625,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "rev",
+     "chapter": 22,
+     "from": 16,
+     "to": 16,
+     "review": true
+    }
+   ],
    "number": 650,
    "title": "كامل الجمال أشرق",
    "verses": [
@@ -88421,6 +89376,22 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 65,
+     "from": 1,
+     "to": 1,
+     "review": true
+    },
+    {
+     "book": "psa",
+     "chapter": 65,
+     "from": 11,
+     "to": 11,
+     "review": true
+    }
+   ],
    "number": 655,
    "title": "لك ينبغي التسبيح",
    "verses": [
@@ -88777,6 +89748,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 133,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 657,
    "title": "لأنه هناك أمر الرب بالبركه",
    "verses": [
@@ -88837,6 +89817,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 16,
+     "from": 8,
+     "to": 8,
+     "review": true
+    }
+   ],
    "number": 658,
    "title": "جعلت الرب أمامي",
    "verses": [
@@ -89210,6 +90199,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "job",
+     "chapter": 35,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 661,
    "title": "مؤتي الأغاني في ليل آلامي",
    "verses": [
@@ -89517,6 +90515,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 5,
+     "from": 4,
+     "to": 4,
+     "review": true
+    }
+   ],
    "number": 663,
    "title": "ما هو ذنبي",
    "verses": [
@@ -90542,6 +91549,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "rev",
+     "chapter": 4,
+     "from": 11,
+     "to": 11,
+     "review": true
+    }
+   ],
    "number": 670,
    "title": "فوق كل قوة ورياسة",
    "verses": [
@@ -90856,6 +91872,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "mat",
+     "chapter": 27,
+     "from": 46,
+     "to": 46,
+     "review": true
+    }
+   ],
    "number": 673,
    "title": "ما للشمس تحجب وجهها",
    "verses": [
@@ -91005,6 +92030,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 53,
+     "from": 7,
+     "to": 7,
+     "review": true
+    }
+   ],
    "number": 674,
    "title": "لا لن أرى حبا أعظم وأقوى",
    "verses": [
@@ -92444,6 +93478,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "sng",
+     "chapter": 2,
+     "from": 6,
+     "to": 6,
+     "review": true
+    }
+   ],
    "number": 684,
    "title": "أنا جيت سلمتك قلبي",
    "verses": [
@@ -92751,6 +93794,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "act",
+     "chapter": 16,
+     "from": 30,
+     "to": 31,
+     "review": true
+    }
+   ],
    "number": 686,
    "title": "ماذا أنا أفعل كي",
    "verses": [
@@ -93122,6 +94174,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 116,
+     "from": 12,
+     "to": 12,
+     "review": true
+    }
+   ],
    "number": 688,
    "title": "ماذا أرد للرب الذي فدى",
    "verses": [
@@ -95008,6 +96069,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=NE3NOdNL_yE"
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 139,
+     "from": 1,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 701,
    "title": "اختبرتني إلهي",
    "verses": [
@@ -95344,6 +96414,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "php",
+     "chapter": 2,
+     "from": 9,
+     "to": 9,
+     "review": true
+    }
+   ],
    "number": 703,
    "title": "لا اسم يحلو ذكره",
    "verses": [
@@ -96200,6 +97279,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "rev",
+     "chapter": 22,
+     "from": 16,
+     "to": 16,
+     "review": true
+    }
+   ],
    "number": 709,
    "title": "قم ونغم يا مرنم",
    "verses": [
@@ -97055,6 +98143,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "rev",
+     "chapter": 22,
+     "from": 16,
+     "to": 16,
+     "review": true
+    }
+   ],
    "number": 715,
    "title": "يا يسوع كوكب الصبح المنير",
    "verses": [
@@ -101948,6 +103045,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 27,
+     "from": 13,
+     "to": 13,
+     "review": true
+    }
+   ],
    "number": 748,
    "title": "من نبع جنبك الطعين",
    "verses": [
@@ -104209,6 +105315,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "jos",
+     "chapter": 24,
+     "from": 15,
+     "to": 15,
+     "review": true
+    }
+   ],
    "number": 763,
    "title": "هيا اذكروا كم قادنا",
    "verses": [
@@ -104819,6 +105934,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "act",
+     "chapter": 17,
+     "from": 28,
+     "to": 28,
+     "review": true
+    }
+   ],
    "number": 768,
    "title": "لأننا به نحيا ونتحرك",
    "verses": [
@@ -104862,6 +105986,15 @@
    "author": "نبيل وصفي بباوي"
   },
   {
+   "scriptures": [
+    {
+     "book": "isa",
+     "chapter": 43,
+     "from": 1,
+     "to": 3,
+     "review": true
+    }
+   ],
    "number": 769,
    "title": "إذا اجتزت في المياه والأنهار",
    "verses": [
@@ -108136,6 +109269,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "jon",
+     "chapter": 2,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 793,
    "title": "جازت من حولي التيارات",
    "verses": [
@@ -110746,6 +111888,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 119,
+     "from": 68,
+     "to": 68,
+     "review": true
+    }
+   ],
    "number": 811,
    "title": "بالحكمه إنت وحدك",
    "verses": [
@@ -111544,6 +112695,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "php",
+     "chapter": 2,
+     "from": 7,
+     "to": 7,
+     "review": true
+    }
+   ],
    "number": 816,
    "title": "آخذا صورة عبد",
    "verses": [
@@ -112396,6 +113556,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "sng",
+     "chapter": 1,
+     "from": 2,
+     "to": 2,
+     "review": true
+    }
+   ],
    "number": 822,
    "title": "حبك أطيب م الخمر",
    "verses": [
@@ -113800,6 +114969,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 30,
+     "from": 5,
+     "to": 5,
+     "review": true
+    }
+   ],
    "number": 831,
    "title": "في الهزيع الرابع",
    "verses": [
@@ -115724,6 +116902,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "luk",
+     "chapter": 7,
+     "from": 48,
+     "to": 48,
+     "review": true
+    }
+   ],
    "number": 844,
    "title": "القلب كفايته واحد",
    "verses": [
@@ -119256,6 +120443,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "gal",
+     "chapter": 2,
+     "from": 20,
+     "to": 20,
+     "review": true
+    }
+   ],
    "number": 872,
    "title": "لذاك أحيا بالروح",
    "verses": [
@@ -122246,6 +123442,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "heb",
+     "chapter": 13,
+     "from": 8,
+     "to": 8,
+     "review": true
+    }
+   ],
    "number": 894,
    "title": "نحن نعلن حضور يسوع",
    "verses": [
@@ -122453,6 +123658,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 34,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 896,
    "title": "إن الأشبال احتاجت",
    "verses": [
@@ -126907,6 +128121,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "rev",
+     "chapter": 19,
+     "from": 16,
+     "to": 16,
+     "review": true
+    }
+   ],
    "number": 932,
    "title": "يا حياة المسيحيه يا مسيح الحياة",
    "verses": [
@@ -128346,6 +129569,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 30,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 944,
    "title": "يسوع ما أعظمك ما أعظمك",
    "verses": [
@@ -128812,6 +130044,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 27,
+     "from": 1,
+     "to": 1,
+     "review": true
+    }
+   ],
    "number": 948,
    "title": "الرب نوري وخلاصي",
    "verses": [
@@ -130668,6 +131909,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "rom",
+     "chapter": 8,
+     "from": 26,
+     "to": 26,
+     "review": true
+    }
+   ],
    "number": 961,
    "title": "ما بننساش الإيد الحلوة",
    "verses": [
@@ -131345,6 +132595,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 99,
+     "from": 5,
+     "to": 5,
+     "review": true
+    }
+   ],
    "number": 966,
    "title": "اسمه سما قد علا عن كل اسم",
    "verses": [
@@ -132216,6 +133475,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "luk",
+     "chapter": 7,
+     "from": 7,
+     "to": 7,
+     "review": true
+    }
+   ],
    "number": 973,
    "title": "يا الله الكلمة الأزلي",
    "verses": [
@@ -132344,6 +133612,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "1co",
+     "chapter": 13,
+     "from": 4,
+     "to": 4,
+     "review": true
+    }
+   ],
    "number": 974,
    "title": "المحبه تتأنى",
    "verses": [
@@ -134723,6 +136000,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "rom",
+     "chapter": 8,
+     "from": 35,
+     "to": 35,
+     "review": true
+    }
+   ],
    "number": 990,
    "title": "من سيفصلنا عن محبة المسيح",
    "verses": [
@@ -134859,6 +136145,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "1ch",
+     "chapter": 29,
+     "from": 11,
+     "to": 11,
+     "review": true
+    }
+   ],
    "number": 991,
    "title": "نباركك يا مليك المجد",
    "verses": [
@@ -135062,6 +136357,15 @@
    "mediaUrl": "https://www.youtube.com/watch?v=5Zoim2uqCt0"
   },
   {
+   "scriptures": [
+    {
+     "book": "eph",
+     "chapter": 3,
+     "from": 20,
+     "to": 20,
+     "review": true
+    }
+   ],
    "number": 993,
    "title": "والقادر أن يفعل",
    "verses": [
@@ -135417,6 +136721,15 @@
    ]
   },
   {
+   "scriptures": [
+    {
+     "book": "psa",
+     "chapter": 51,
+     "from": 10,
+     "to": 10,
+     "review": true
+    }
+   ],
    "number": 996,
    "title": "قلبا نقيا طاهرا",
    "verses": [
@@ -135470,6 +136783,15 @@
    "topics": []
   },
   {
+   "scriptures": [
+    {
+     "book": "1ti",
+     "chapter": 6,
+     "from": 11,
+     "to": 11,
+     "review": true
+    }
+   ],
    "number": 997,
    "title": "إن أتاك الشر فاهرب دونما جدال",
    "verses": [

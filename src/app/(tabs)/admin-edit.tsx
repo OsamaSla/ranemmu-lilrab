@@ -21,6 +21,8 @@ import { getHymn, ensureHymn, getLinks, isHymnPending } from '../../data/loader'
 import { isFirebaseConfigured, getFirebaseAuth } from '../../data/firebase';
 import { syncHymnToCloud } from '../../data/liveSync';
 import { isValidMediaUrl } from '../../data/media';
+import { formatScriptureLine, parseScriptureText, refToString } from '../../data/scriptures';
+import type { ScriptureRef } from '../../data/types';
 import type { TopicId } from '../../data/topics';
 import { useT } from '../../hooks/useT';
 import { useCanEdit } from '../../hooks/useCanEdit';
@@ -62,6 +64,10 @@ export default function AdminEditScreen() {
     meter: '',
     chorus: '',
     mediaUrl: '',
+    // Free-text scripture field: parsed by `parseScriptureText` on save and
+    // rendered back as the Arabic display line, so the stored array and the
+    // field always say the same thing.
+    scripturesText: '',
     verified: false,
     primaryTopic: '' as TopicId | '',
     topics: [] as TopicId[],
@@ -99,6 +105,7 @@ export default function AdminEditScreen() {
       h.primaryTopic,
       h.topics,
       h.verses.map((v) => [v.label, v.chorus, v.lines]),
+      h.scriptures,
       h.title_en,
       h.chorus_en,
       h.verses_en?.map((v) => v.lines),
@@ -124,6 +131,7 @@ export default function AdminEditScreen() {
           meter: h.meter ?? '',
           chorus: h.chorus ?? '',
           mediaUrl: h.mediaUrl ?? '',
+          scripturesText: formatScriptureLine(h.scriptures, ' · '),
           primaryTopic: h.primaryTopic ?? ('' as TopicId | ''),
           topics: [...(h.topics ?? [])],
           lines: h.verses.map((v) => [...v.lines]),
@@ -408,6 +416,22 @@ export default function AdminEditScreen() {
   // retypes anything.
   const linked = hymn ? getLinks(hymn.id) : [];
 
+  /**
+   * The scripture field is free text, parsed here so the admin sees exactly
+   * what the reader will print (or the parser's complaint) while typing. The
+   * parser is the same one that runs on save, so the preview can never drift
+   * from the stored value.
+   */
+  const scripturePreview = (() => {
+    const text = form.scripturesText.trim();
+    if (!text) return { line: '', error: '' };
+    try {
+      return { line: formatScriptureLine(parseScriptureText(text)), error: '' };
+    } catch (error) {
+      return { line: '', error: (error as Error).message };
+    }
+  })();
+
   // Language filter for the verse editor. `showLang` follows the default until
   // the user pins a choice; a language the hymn does not carry stays hidden.
   // Hebrew follows the same rule as English: it is on unless the editor was
@@ -492,6 +516,16 @@ export default function AdminEditScreen() {
       setMsg(t('admin.errUrl'));
       return;
     }
+    // Scriptures are parsed before anything else is written: a bad reference
+    // must stop the save with the parser's own words, not reach the app and
+    // crash the reader's formatter.
+    let scriptureRefs: ScriptureRef[] = [];
+    try {
+      scriptureRefs = parseScriptureText(form.scripturesText);
+    } catch (error) {
+      setMsg(`${t('admin.errScripture')} — ${(error as Error).message}`);
+      return;
+    }
     if (form.lines.length !== hymn.verses.length) {
       setMsg(t('admin.errCount'));
       return;
@@ -569,6 +603,12 @@ export default function AdminEditScreen() {
     }
     const topics = form.topics.filter((x) => x !== form.primaryTopic);
     if (changed(hymn.topics ?? [], topics)) patch.topics = topics;
+    // Compare canonical keys, not the full objects: the `review` flag is
+    // bookkeeping that a save of unchanged text must not silently erase.
+    const refKeys = (refs: ScriptureRef[] | undefined) => (refs ?? []).map(refToString);
+    if (changed(refKeys(hymn.scriptures), refKeys(scriptureRefs))) {
+      patch.scriptures = scriptureRefs;
+    }
     const verses = form.lines.map((ls, i) => ({
       label: form.labels[i] ?? hymn.verses[i]?.label ?? String(i + 1),
       lines: ls.map((l) => l.trim()),
@@ -701,6 +741,32 @@ export default function AdminEditScreen() {
           <AppText variant="label" color={colors.textMuted} style={{ marginTop: 4 }}>
             {t('admin.mediaUrlHint')}
           </AppText>
+          <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
+            {t('admin.scriptures')}
+          </AppText>
+          <TextInput
+            value={form.scripturesText}
+            onChangeText={(v) => set({ scripturesText: v })}
+            style={fieldStyle}
+            placeholder={t('admin.scripturesHint')}
+            placeholderTextColor={colors.textMuted}
+            autoCapitalize="none"
+            autoCorrect={false}
+            multiline
+          />
+          {scripturePreview.error ? (
+            <AppText variant="label" color={colors.danger} style={{ marginTop: 4 }}>
+              {scripturePreview.error}
+            </AppText>
+          ) : scripturePreview.line ? (
+            <AppText variant="label" color={colors.textMuted} style={{ marginTop: 4 }}>
+              {scripturePreview.line}
+            </AppText>
+          ) : (
+            <AppText variant="label" color={colors.textMuted} style={{ marginTop: 4 }}>
+              {t('admin.scripturesHint')}
+            </AppText>
+          )}
           {hasEn ? (
             <>
               <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>

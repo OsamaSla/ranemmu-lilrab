@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-15, commit 3f3afcd9 (hymns shared between books; see §18)
+Last verified: 2026-11-15, commit 3f3afcd9 (scripture references; see §19)
 
 ## 1. What this is
 
@@ -73,6 +73,11 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 - `npm run duplicates` (`scripts/find-duplicates.mjs`) — lists the hymns the
   corpus prints in more than one book, with each copy's line count and whether
   it carries Hebrew, and says which copies can borrow a translation. See §18.
+- `npm run scripture:suggest` / `scripture:curate` / `scripture:apply` /
+  `scripture:check` — draft Bible references from the Smith & Van Dyke text
+  (cached in gitignored `content/.cache/`), copy the human verdicts into
+  `content/scriptures/<book>/`, merge them into the corpus, gate drift. Read
+  `content/scriptures/README.md` first; details in §19.
 - `npm run typecheck` (`npx tsc --noEmit`) — works on this machine; exit 0 with
   no output (needs the restored untracked `tsconfig.json`, see §2).
 - Web build: `npx expo export --platform web` produces the real app in `dist/`
@@ -920,6 +925,75 @@ title and are **different hymns** — never link those.
 - Not done (deliberate): no shared patch. Stanza order, refrain and wording stay
   per book, so an admin restructure cannot break the other book's shape. Title
   matching is *not* used to guess duplicates.
+
+## 19. Scripture references — the hymn's ground (2026-11-15)
+
+The reader shows where a hymn is founded in scripture: **one small centred RTL
+line above stanza 1**, 12px muted, `book-cross` glyph, refs joined with `·`.
+Arabic book name and Arabic-Indic digits whatever the UI language, because the
+reference belongs to the Arabic hymn. **Not tappable**, and no Bible text is
+bundled, cached in git or shipped — only the reference string. A hymn with no
+confident reference renders nothing (no placeholder, no topic fallback).
+Present in fullscreen too.
+
+- Data: structured `scriptures: [{ book:'isa', chapter:53, from:4, to:6, review?:true }]`
+  (`src/data/types.ts`). Canonical order, no duplicates. Payload text is parsed
+  once, by `scripture-apply`, so the app never parses.
+- `src/data/scripture-books.json` — 66 books `{ id, ar, en, also?, chapters }`,
+  chapter counts verified against GetBible `arabicsv`; `psa` prints as
+  `مزمور`, 25 books carry print-spelling aliases.
+- Logic mirrors: `scripts/lib/bible-books.mjs` (Node) and
+  `src/data/scriptures.ts` (Metro). Deliberately duplicated — the scripts use
+  `node:` imports Hermes cannot load; the book table itself is shared JSON.
+  App-side **error messages are Arabic**; the script copy stays English
+  (logs). Mixing English text into the RTL field produced a bidi jumble
+  (`chapter 99 outside 1..66` wedged inside `إشعياء ٩٩: ١`).
+- Authoring tree: `content/scriptures/<book>/<number>.json`
+  `{ book, number, refs: ["isa.53.4-6" | "إشعياء ٥٣: ٤-٦"], review: [same form] }`.
+  `refs: []` clears. `content/*.json` is generated — never hand-edit.
+  Docs for authors: `content/scriptures/README.md`.
+- Pipeline (`package.json`): `scripture:suggest` → `_drafts/report.md`
+  (drafts · weak · near misses) → `scripture:curate` (`DROP`/`FIX` verdicts) →
+  `scripture:apply` → `scripture:check` (drift gate). `.gitignore` covers
+  `content/.cache/` and `content/scriptures/_drafts/`.
+- Matching: Arabic folding + IDF-weighted cosine + rarity-weighted phrase
+  strength. Bars in `SCORE` (`scripts/scripture-suggest.mjs`, printed in every
+  report): phrase ≥ 20 alone, ≥ 16 with cos ≥ 0.15, ≥ 13 with cos ≥ 0.25;
+  word pair ≥ 18 alone, ≥ 13 with cos ≥ 0.30; cosine only ≥ 0.35. Adjacent
+  verses merge while overlap keeps up (`rangeShare 0.55`, `maxRange 6`).
+- Current state (2026-11-15): 265 drafts from 1,824 hymns (phrase 118,
+  phrase+overlap 80, word pair 35, overlap 32), 407 weak phrase matches listed
+  but **not** drafted. Human pass dropped 11 false positives (idioms such as
+  «لست أدرى», verses saying the opposite) and corrected 13 by hand →
+  **261 references on 254 hymns**, all still `review: true`. ~14 % coverage is
+  expected: the rest intentionally show nothing.
+- `scripts/lib/validate.mjs` now rejects unknown book, chapter out of range,
+  reversed range, duplicate ref and an empty `scriptures` array (all five
+  negative cases fired in a throwaway check).
+- Admin editor (`/admin-edit?id=h0529&lang=en`): free-text field `scripturesText`
+  parsed by `parseScriptureText`; live preview line while typing, Arabic parser
+  message in red on error; save writes `patch.scriptures` only when the
+  **canonical keys** changed, so re-saving untouched text does not erase a
+  `review` flag.
+- Verified on the 8091 dev server at a real 360×740 viewport (headless Edge via
+  the repo's `playwright-core`): `h0529` (longest line, 38 chars →
+  `نشيد الأنشاد ١: ٤ · نشيد الأنشاد ٥: ١٠`) renders 168×18px, one line, both
+  normal and fullscreen, `scrollWidth === 360`, zero console errors; `b30001`
+  (no refs) shows nothing above stanza 1. Admin field: invalid input →
+  `إشعياء: الفصل ٩٩ خارج ١-٦٦`; valid input previews; save reports
+  `scriptures=[1]`.
+- Gotcha fixed: `scripture-apply` serialised every corpus with indent 1, so the
+  first run rewrote `content/book3.json` (indent **2**) end to end — 40k lines
+  of noise. It now detects the file's own indent (`readCorpusFile`), and
+  `main.json` / `taranim.json` stay at 1.
+- Gotcha (pre-existing, left alone): saving any admin form rewrites `verses`,
+  `verses_en`, `verses_de` even when only `scriptures` changed, because a
+  chorus stanza's stored label (`"1"`) is replaced by the refrain word
+  (`"القرار"`) in `toForm`, so `sameVerses` always differs. Verified on
+  `h0529` (`scriptures=[1] · verses=[7] · verses_en=[7] · verses_de=[7]`).
+  Worth fixing separately; do not "fix" it inside a scripture change.
+- Not done (deliberate): per-stanza citations; clearing `review` flags (a human
+  must actually read the verse first); any Bible-text display.
 
 
 

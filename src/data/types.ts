@@ -69,7 +69,30 @@ export interface HymnSummary {
   topics?: TopicId[];
 }
 
+/**
+ * One Bible reference a hymn is founded on. Structured on purpose: the app
+ * only formats refs, it never parses them (that happens once, in
+ * scripts/scripture-apply.mjs), and no Bible text ships with the app.
+ */
+export interface ScriptureRef {
+  /** Canonical book id from ./scripture-books.json (`isa`, `1co`, …). */
+  book: string;
+  chapter: number;
+  /** First verse of the range. */
+  from: number;
+  /** Last verse; equal to `from` for a single verse. */
+  to: number;
+  /** Set while nobody has read the verse against the hymn's text. */
+  review?: boolean;
+}
+
 export interface Hymn extends HymnSummary {
+  /**
+   * Where the hymn's subject is founded in scripture, in canonical order.
+   * Absent when nobody has established a reference — the reader then shows
+   * nothing rather than a guessed topic.
+   */
+  scriptures?: ScriptureRef[];
   /**
    * The printed label of the refrain (e.g. "القرار"), rendered above any
    * stanza flagged `chorus`. Kept at the hymn level because a book uses one

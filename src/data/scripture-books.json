@@ -1,0 +1,482 @@
+[
+  {
+    "id": "gen",
+    "ar": "تكوين",
+    "en": "Genesis",
+    "chapters": 50
+  },
+  {
+    "id": "exo",
+    "ar": "خروج",
+    "en": "Exodus",
+    "chapters": 40
+  },
+  {
+    "id": "lev",
+    "ar": "لاويين",
+    "en": "Leviticus",
+    "chapters": 27
+  },
+  {
+    "id": "num",
+    "ar": "عدد",
+    "en": "Numbers",
+    "chapters": 36
+  },
+  {
+    "id": "deu",
+    "ar": "تثنية",
+    "en": "Deuteronomy",
+    "chapters": 34
+  },
+  {
+    "id": "jos",
+    "ar": "يشوع",
+    "en": "Joshua",
+    "chapters": 24
+  },
+  {
+    "id": "jdg",
+    "ar": "القضاة",
+    "en": "Judges",
+    "also": [
+      "قضاة"
+    ],
+    "chapters": 21
+  },
+  {
+    "id": "rut",
+    "ar": "راعوث",
+    "en": "Ruth",
+    "chapters": 4
+  },
+  {
+    "id": "1sa",
+    "ar": "صموئيل الأول",
+    "en": "1 Samuel",
+    "also": [
+      "1 صموئيل"
+    ],
+    "chapters": 31
+  },
+  {
+    "id": "2sa",
+    "ar": "صموئيل الثاني",
+    "en": "2 Samuel",
+    "also": [
+      "2 صموئيل"
+    ],
+    "chapters": 24
+  },
+  {
+    "id": "1ki",
+    "ar": "الملوك الأول",
+    "en": "1 Kings",
+    "also": [
+      "1 الملوك",
+      "ملوك الأول"
+    ],
+    "chapters": 22
+  },
+  {
+    "id": "2ki",
+    "ar": "الملوك الثاني",
+    "en": "2 Kings",
+    "also": [
+      "2 الملوك",
+      "ملوك الثاني"
+    ],
+    "chapters": 25
+  },
+  {
+    "id": "1ch",
+    "ar": "أخبار الأيام الأول",
+    "en": "1 Chronicles",
+    "also": [
+      "1 أخبار الأيام"
+    ],
+    "chapters": 29
+  },
+  {
+    "id": "2ch",
+    "ar": "أخبار الأيام الثاني",
+    "en": "2 Chronicles",
+    "also": [
+      "2 أخبار الأيام"
+    ],
+    "chapters": 36
+  },
+  {
+    "id": "ezr",
+    "ar": "عزرا",
+    "en": "Ezra",
+    "chapters": 10
+  },
+  {
+    "id": "neh",
+    "ar": "نحميا",
+    "en": "Nehemiah",
+    "chapters": 13
+  },
+  {
+    "id": "est",
+    "ar": "أستير",
+    "en": "Esther",
+    "chapters": 10
+  },
+  {
+    "id": "job",
+    "ar": "أيوب",
+    "en": "Job",
+    "chapters": 42
+  },
+  {
+    "id": "psa",
+    "ar": "مزمور",
+    "en": "Psalm",
+    "also": [
+      "المزامير",
+      "مزامير",
+      "psalms",
+      "psa"
+    ],
+    "chapters": 150
+  },
+  {
+    "id": "pro",
+    "ar": "الأمثال",
+    "en": "Proverbs",
+    "also": [
+      "امثال",
+      "أمثال"
+    ],
+    "chapters": 31
+  },
+  {
+    "id": "ecc",
+    "ar": "الجامعة",
+    "en": "Ecclesiastes",
+    "also": [
+      "جامعة"
+    ],
+    "chapters": 12
+  },
+  {
+    "id": "sng",
+    "ar": "نشيد الأنشاد",
+    "en": "Song of Songs",
+    "also": [
+      "song of solomon"
+    ],
+    "chapters": 8
+  },
+  {
+    "id": "isa",
+    "ar": "إشعياء",
+    "en": "Isaiah",
+    "chapters": 66
+  },
+  {
+    "id": "jer",
+    "ar": "إرميا",
+    "en": "Jeremiah",
+    "chapters": 52
+  },
+  {
+    "id": "lam",
+    "ar": "مراثي إرميا",
+    "en": "Lamentations",
+    "chapters": 5
+  },
+  {
+    "id": "ezk",
+    "ar": "حزقيال",
+    "en": "Ezekiel",
+    "chapters": 48
+  },
+  {
+    "id": "dan",
+    "ar": "دانيال",
+    "en": "Daniel",
+    "chapters": 12
+  },
+  {
+    "id": "hos",
+    "ar": "هوشع",
+    "en": "Hosea",
+    "chapters": 14
+  },
+  {
+    "id": "jol",
+    "ar": "يوئيل",
+    "en": "Joel",
+    "chapters": 3
+  },
+  {
+    "id": "amo",
+    "ar": "عاموس",
+    "en": "Amos",
+    "chapters": 9
+  },
+  {
+    "id": "oba",
+    "ar": "عوبديا",
+    "en": "Obadiah",
+    "chapters": 1
+  },
+  {
+    "id": "jon",
+    "ar": "يونان",
+    "en": "Jonah",
+    "chapters": 4
+  },
+  {
+    "id": "mic",
+    "ar": "ميخا",
+    "en": "Micah",
+    "chapters": 7
+  },
+  {
+    "id": "nam",
+    "ar": "ناحوم",
+    "en": "Nahum",
+    "chapters": 3
+  },
+  {
+    "id": "hab",
+    "ar": "حبقوق",
+    "en": "Habakkuk",
+    "chapters": 3
+  },
+  {
+    "id": "zep",
+    "ar": "صفنيا",
+    "en": "Zephaniah",
+    "chapters": 3
+  },
+  {
+    "id": "hag",
+    "ar": "حجي",
+    "en": "Haggai",
+    "chapters": 2
+  },
+  {
+    "id": "zec",
+    "ar": "زكريا",
+    "en": "Zechariah",
+    "chapters": 14
+  },
+  {
+    "id": "mal",
+    "ar": "ملاخي",
+    "en": "Malachi",
+    "chapters": 4
+  },
+  {
+    "id": "mat",
+    "ar": "متى",
+    "en": "Matthew",
+    "chapters": 28
+  },
+  {
+    "id": "mrk",
+    "ar": "مرقس",
+    "en": "Mark",
+    "chapters": 16
+  },
+  {
+    "id": "luk",
+    "ar": "لوقا",
+    "en": "Luke",
+    "chapters": 24
+  },
+  {
+    "id": "jhn",
+    "ar": "يوحنا",
+    "en": "John",
+    "chapters": 21
+  },
+  {
+    "id": "act",
+    "ar": "أعمال الرسل",
+    "en": "Acts",
+    "also": [
+      "أعمال",
+      "اعمال"
+    ],
+    "chapters": 28
+  },
+  {
+    "id": "rom",
+    "ar": "رومية",
+    "en": "Romans",
+    "chapters": 16
+  },
+  {
+    "id": "1co",
+    "ar": "كورنثوس الأولى",
+    "en": "1 Corinthians",
+    "also": [
+      "1 كورنثوس"
+    ],
+    "chapters": 16
+  },
+  {
+    "id": "2co",
+    "ar": "كورنثوس الثانية",
+    "en": "2 Corinthians",
+    "also": [
+      "2 كورنثوس"
+    ],
+    "chapters": 13
+  },
+  {
+    "id": "gal",
+    "ar": "غلاطية",
+    "en": "Galatians",
+    "chapters": 6
+  },
+  {
+    "id": "eph",
+    "ar": "أفسس",
+    "en": "Ephesians",
+    "chapters": 6
+  },
+  {
+    "id": "php",
+    "ar": "فيليبي",
+    "en": "Philippians",
+    "also": [
+      "فيلبي"
+    ],
+    "chapters": 4
+  },
+  {
+    "id": "col",
+    "ar": "كولوسي",
+    "en": "Colossians",
+    "chapters": 4
+  },
+  {
+    "id": "1th",
+    "ar": "تسالونيكي الأولى",
+    "en": "1 Thessalonians",
+    "also": [
+      "1 تسالونيكي"
+    ],
+    "chapters": 5
+  },
+  {
+    "id": "2th",
+    "ar": "تسالونيكي الثانية",
+    "en": "2 Thessalonians",
+    "also": [
+      "2 تسالونيكي"
+    ],
+    "chapters": 3
+  },
+  {
+    "id": "1ti",
+    "ar": "تيموثاوس الأولى",
+    "en": "1 Timothy",
+    "also": [
+      "1 تيموثاوس"
+    ],
+    "chapters": 6
+  },
+  {
+    "id": "2ti",
+    "ar": "تيموثاوس الثانية",
+    "en": "2 Timothy",
+    "also": [
+      "2 تيموثاوس"
+    ],
+    "chapters": 4
+  },
+  {
+    "id": "tit",
+    "ar": "تيطس",
+    "en": "Titus",
+    "chapters": 3
+  },
+  {
+    "id": "phm",
+    "ar": "فليمون",
+    "en": "Philemon",
+    "chapters": 1
+  },
+  {
+    "id": "heb",
+    "ar": "عبرانيين",
+    "en": "Hebrews",
+    "chapters": 13
+  },
+  {
+    "id": "jas",
+    "ar": "يعقوب",
+    "en": "James",
+    "chapters": 5
+  },
+  {
+    "id": "1pe",
+    "ar": "بطرس الأولى",
+    "en": "1 Peter",
+    "also": [
+      "1 بطرس"
+    ],
+    "chapters": 5
+  },
+  {
+    "id": "2pe",
+    "ar": "بطرس الثانية",
+    "en": "2 Peter",
+    "also": [
+      "2 بطرس"
+    ],
+    "chapters": 3
+  },
+  {
+    "id": "1jn",
+    "ar": "يوحنا الأولى",
+    "en": "1 John",
+    "also": [
+      "1 يوحنا"
+    ],
+    "chapters": 5
+  },
+  {
+    "id": "2jn",
+    "ar": "يوحنا الثانية",
+    "en": "2 John",
+    "also": [
+      "2 يوحنا"
+    ],
+    "chapters": 1
+  },
+  {
+    "id": "3jn",
+    "ar": "يوحنا الثالثة",
+    "en": "3 John",
+    "also": [
+      "3 يوحنا"
+    ],
+    "chapters": 1
+  },
+  {
+    "id": "jud",
+    "ar": "يهوذا",
+    "en": "Jude",
+    "chapters": 1
+  },
+  {
+    "id": "rev",
+    "ar": "الرؤيا",
+    "en": "Revelation",
+    "also": [
+      "رؤيا",
+      "رؤيا يوحنا",
+      "revelations"
+    ],
+    "chapters": 22
+  }
+]

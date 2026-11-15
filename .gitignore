@@ -22,6 +22,10 @@ translation-debug-*.txt
 translation-run.log
 content/**/*.bak
 
+# Scripture drafting: downloaded Bible text and machine drafts stay local
+content/.cache/
+content/scriptures/_drafts/
+
 # Dependencies
 node_modules/
 

@@ -33,6 +33,7 @@ import { IconButton } from '../../../components/IconButton';
 import { ReaderSearchOverlay } from '../../../components/ReaderSearchOverlay';
 import type { SegmentOption } from '../../../components/SegmentedControl';
 import { ensureHymn, getHymn, getLinks, getNeighbours, getSummaries, isHymnPending } from '../../../data/loader';
+import { formatScriptureLine } from '../../../data/scriptures';
 import { allTopicsOf } from '../../../data/topics';
 import { findSimilar } from '../../../data/search';
 import { bookLabelKey } from '../../../i18n';
@@ -255,6 +256,10 @@ export default function ReaderScreen() {
   const transVerses = translation?.verses;
   const transTitle = translation?.title;
   const transChorus = translation?.chorus;
+  // Where the hymn's subject is founded in scripture, printed once above the
+  // first stanza. It belongs to the hymn, not the interface language, so it is
+  // always Arabic and never translated. Empty when no reference is known.
+  const scriptureLine = formatScriptureLine(hymn?.scriptures);
 
   const translationOptions: SegmentOption<ReaderLang>[] = [
     { value: 'ar', label: 'العربية' },
@@ -711,6 +716,42 @@ export default function ReaderScreen() {
               {TRANSLATION_NOTES[parallel]}
             </AppText>
           ) : null}
+        </View>
+      ) : null}
+      {/* Where the hymn is founded in scripture: one small centred line above
+          the first stanza, in Arabic whatever the UI language. Deliberately
+          not tappable — the app bundles no Bible text, so the reference is a
+          pointer for the reader, not a link. Hidden when nothing is known. */}
+      {scriptureLine ? (
+        <View
+          style={{
+            flexDirection: direction.row,
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: spacing.xs,
+            marginBottom: spacing.md,
+            paddingHorizontal: spacing.sm,
+          }}>
+          <MaterialCommunityIcons
+            name="book-cross"
+            size={13}
+            color={fullscreen ? palette.readerText : colors.textMuted}
+            style={{ opacity: fullscreen ? 0.7 : 0.85 }}
+          />
+          <AppText
+            numberOfLines={2}
+            accessibilityLabel={scriptureLine}
+            style={{
+              flexShrink: 1,
+              fontSize: 12,
+              lineHeight: 18,
+              writingDirection: 'rtl',
+              textAlign: 'center',
+              color: fullscreen ? palette.readerText : colors.textMuted,
+              opacity: fullscreen ? 0.8 : 0.9,
+            }}>
+            {scriptureLine}
+          </AppText>
         </View>
       ) : null}
       {hymn.verses.map((verseBlock, verseIndex) => {
