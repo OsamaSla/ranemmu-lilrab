@@ -580,6 +580,12 @@ export default function ReaderScreen() {
           dark,
         })}
         {headerIcon({
+          name: 'information-outline',
+          label: t('reader.info'),
+          onPress: () => setInfoHymn(true),
+          dark,
+        })}
+        {headerIcon({
           name: 'cog-outline',
           label: t('reader.settings'),
           onPress: () => setSettingsOpen(true),
@@ -796,7 +802,9 @@ export default function ReaderScreen() {
    * single-stanza hymns.
    */
   const stanzaRail = (dark: boolean) => {
-    if (hymn.verses.length < 2) return null;
+    // A one-stanza hymn has nothing to jump to, but the rail still carries the
+    // "also in" badges, so it is only hidden when there is neither.
+    if (hymn.verses.length < 2 && linked.length === 0) return null;
     return (
       <View
         accessibilityRole="menu"
@@ -810,11 +818,12 @@ export default function ReaderScreen() {
           backgroundColor: 'transparent',
         }}>
         <ScrollView
+          style={{ flex: 1 }}
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{
             alignItems: 'center',
             paddingTop: spacing.md,
-            paddingBottom: insets.bottom + spacing.lg,
+            paddingBottom: spacing.sm,
             gap: spacing.sm,
           }}>
           {hymn.verses.map((verseBlock, verseIndex) => {
@@ -887,6 +896,91 @@ export default function ReaderScreen() {
             );
           })}
         </ScrollView>
+
+        {/* The same hymn as printed by another book. It sits at the foot of the
+            rail — the empty stretch below the stanza dots — rather than in the
+            header, so the "where am I" column also answers "where else is it".
+            Outside the ScrollView so it stays reachable when the hymn has more
+            stanzas than the screen fits. Tapping opens that copy. */}
+        {linked.length > 0 ? (
+          <View
+            accessibilityRole="menu"
+            accessibilityLabel={t('reader.alsoIn')}
+            style={{
+              alignItems: 'center',
+              gap: 6,
+              paddingTop: spacing.sm,
+              // The tab bar overlays the bottom of the screen (same reason the
+              // text scroller ends with xxl), so the badge must clear it, not
+              // just the home-indicator inset.
+              paddingBottom: insets.bottom + spacing.xxl,
+              borderTopWidth: 1,
+              borderTopColor: dark ? 'rgba(255,255,255,0.22)' : colors.border,
+            }}>
+            <AppText
+              useAppFont={false}
+              style={{
+                fontFamily: readerFont,
+                fontSize: 9,
+                lineHeight: 12,
+                textAlign: 'center',
+                color: dark ? palette.readerText : colors.textMuted,
+                opacity: 0.75,
+              }}>
+              {t('reader.alsoInShort')}
+            </AppText>
+            {linked.map((sibling) => (
+              <Pressable
+                key={sibling.id}
+                onPress={() => router.push(`/hymn/${sibling.id}`)}
+                accessibilityRole="button"
+                accessibilityLabel={`${t(bookLabelKey(sibling.book))} ${sibling.number}`}
+                hitSlop={HIT_SLOP}
+                android_ripple={{ color: colors.border }}
+                style={({ pressed }) => ({
+                  width: RAIL_DOT,
+                  alignItems: 'center',
+                  paddingVertical: 5,
+                  paddingHorizontal: 1,
+                  borderRadius: 10,
+                  gap: 1,
+                  backgroundColor: dark ? 'rgba(255,255,255,0.12)' : colors.surfaceMuted,
+                  borderWidth: 1,
+                  borderColor: dark ? 'rgba(255,255,255,0.3)' : colors.border,
+                  opacity: pressed ? 0.6 : 1,
+                })}>
+                <MaterialCommunityIcons
+                  name="book-open-variant"
+                  size={13}
+                  color={dark ? palette.readerText : colors.textMuted}
+                />
+                <AppText
+                  useAppFont={false}
+                  numberOfLines={2}
+                  style={{
+                    fontFamily: readerFont,
+                    fontSize: 9,
+                    lineHeight: 11,
+                    textAlign: 'center',
+                    color: dark ? palette.readerText : colors.textMuted,
+                  }}>
+                  {t(bookLabelKey(sibling.book))}
+                </AppText>
+                <AppText
+                  useAppFont={false}
+                  style={{
+                    fontFamily: readerFontBold,
+                    fontSize: 12,
+                    lineHeight: 14,
+                    fontWeight: '700',
+                    color: dark ? palette.readerText : colors.text,
+                  }}>
+                  {sibling.number}
+                </AppText>
+              </Pressable>
+            ))}
+          </View>
+        ) : null}
       </View>
     );
   };
@@ -1029,27 +1123,6 @@ export default function ReaderScreen() {
                   {t('info.topics')}:{' '}
                   {allTopicsOf(hymn)
                     .map((id) => t(`topic.${id}` as const))
-                    .join(' · ')}
-                </AppText>
-              </Pressable>
-            ) : null}
-            {/* Same hymn in another book. Tapping opens the info sheet, which
-                lists every copy with its title; the same list is repeated as a
-                card under the text. */}
-            {linked.length > 0 ? (
-              <Pressable
-                onPress={() => setInfoHymn(true)}
-                accessibilityRole="button"
-                accessibilityLabel={t('reader.alsoIn')}
-                android_ripple={{ color: 'rgba(255,255,255,0.3)' }}>
-                <AppText
-                  variant="caption"
-                  numberOfLines={1}
-                  color={colors.onPrimary}
-                  style={{ opacity: 0.85, textAlign: 'right', direction: 'rtl' }}>
-                  {t('reader.alsoIn')}:{' '}
-                  {linked
-                    .map((sibling) => `${t(bookLabelKey(sibling.book))} ${sibling.number}`)
                     .join(' · ')}
                 </AppText>
               </Pressable>

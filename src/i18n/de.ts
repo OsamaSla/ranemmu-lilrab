@@ -57,6 +57,7 @@ export const de: PartialDictionary = {
   'reader.info': 'Liedinfo',
   'reader.similar': 'Ähnliche Lieder',
   'reader.alsoIn': 'Auch in',
+  'reader.alsoInShort': 'Auch in',
   'reader.share': 'Teilen',
   'reader.fullscreen': 'Vollbild',
   'reader.exitFullscreen': 'Vollbild beenden',

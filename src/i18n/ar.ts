@@ -67,6 +67,7 @@ export const ar = {
     info: 'معلومات الترنيمة',
     similar: 'ترنيمات مشابهة',
     alsoIn: 'موجودة أيضاً في',
+    alsoInShort: 'أيضاً في',
     share: 'مشاركة',
     fullscreen: 'ملء الشاشة',
     exitFullscreen: 'إنهاء ملء الشاشة',
