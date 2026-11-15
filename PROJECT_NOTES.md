@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-15, commit 5f494694 (hymns shared between books; see §18)
+Last verified: 2026-11-15, commit 3f3afcd9 (hymns shared between books; see §18)
 
 ## 1. What this is
 
@@ -883,20 +883,31 @@ title and are **different hymns** — never link those.
   **merged** summaries, so an admin rename shows the new title and a deleted
   copy disappears without regenerating anything.
 - UI (the "where else does it appear" ask):
-  - reader header, under the topics line: `موجودة أيضاً في: ترانيم روحية 166`;
-  - reader body, a card under the text with a `HymnRow` per copy (book name as
+  - reader: docked at the **foot of the stanza rail** on the physical right —
+    a small caption (`reader.alsoInShort`) plus one badge per copy showing a
+    book glyph, the book name (9px, wraps to 2 lines) and the number at 12px;
+    tapping it opens that copy. It sits *outside* the rail's ScrollView so it
+    stays put when a hymn has more stanzas than fit, and pads
+    `insets.bottom + spacing.xxl` because the tab bar overlays the screen.
+    The earlier header line (`موجودة أيضاً في: …`) was removed: the same text in
+    the header and the rail was noise.
+  - reader body: a card under the text with a `HymnRow` per copy (book name as
     subtitle) that navigates to `/hymn/<id>`;
   - info sheet: its own section above the topics, rows close the sheet and push;
   - admin editor: a card listing the copies (with `· HE`), each opening that
     copy's editor — editing one copy does **not** change the others (they have
     their own stanza grid), which is why the card exists.
-  - `reader.alsoIn` (ar/en/de) + `bookLabelKey()` in `src/i18n/index.ts`; using
-    `t('book.book3')` inline would fall back to "Sing to the Lord" when a key
-    is missing.
+  - `reader.alsoIn` / `reader.alsoInShort` (ar/en/de) + `bookLabelKey()` in
+    `src/i18n/index.ts`; using `t('book.book3')` inline would fall back to
+    "Sing to the Lord" when a key is missing.
+  - The info sheet used to be reachable **only** through the header's also-in
+    chip (the toolbar had no info button). With that line gone, a
+    `information-outline` button was added to the reader toolbar.
 - Verified on the dev server (2026-11-15): `h0487` shows the `HE` chip with the
-  borrowed 24 pointed lines (6×4, labels `1…6`), header caption and card both
-  list `ترنيمات روحية 166`; the card navigated to `tr0166`; `b30013` (4 lines,
-  no Hebrew) shows `رنموا للرب 142` and the reverse on `h0142`. Admin editor for
+  borrowed 24 pointed lines (6×4, labels `1…6`), the rail badge reads
+  `ترنيمات روحية 166` under the stanza dots and taps through to `tr0166`, and
+  the card under the text lists the same copy; `b30013` (4 lines, no Hebrew)
+  shows `رنموا للرب 142` and the reverse on `h0142`. Admin editor for
   `h0487` (`?id=h0487&lang=en`) shows the copies card with `HE`; zero console
   errors, `typecheck` + `eslint` clean, `check:hymns` 30,898 lines / 100 %
   vocalised.
