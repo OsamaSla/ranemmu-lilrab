@@ -1047,6 +1047,45 @@ Result: **3.13 GB → 1.08 GB**, and 971 MB of that is `node_modules`.
   objects that made the pack large, and those only accumulate when branches are
   abandoned or a rewrite is abandoned midway.
 
+## 21. Deezer previews — tried and rejected (2026-11-16, no code kept)
+
+A working prototype (search + JSONP + 30-second playback under the listen
+buttons in «إعدادات النص») was built, verified and **deliberately reverted**:
+a 30-second sample of a hymn is not worth the UI. Nothing of it remains in
+`src/`.
+
+Rejected because the clip length is **not ours to choose**: `preview` is a
+fixed 30-second MP3 that Deezer renders per track (`cdnt-preview.dzcdn.net`,
+signed, expiring). There is no length or offset parameter, and full-track
+streaming needs their JS SDK plus a logged-in user (OAuth, registered app id)
+or a Premium download — never a plain URL. Do not rebuild this before Deezer
+offers longer previews.
+
+- **Web cannot `fetch` `api.deezer.com`.** It returns the CORS method and header
+  lists but **no `access-control-allow-origin`**, so the body is hidden;
+  `output=jsonp&callback=cb` works (proved with `node fetch` + an `Origin`
+  header). Native `fetch` is fine. This is the trap worth remembering.
+- **Catalogue is good, format is the blocker:** a 60-hymn sample across the
+  three books returned **17 (28 %) usable matches**, mostly exact-title hits on
+  real Arabic hymn channels (Maher Fayez, Lydia Shadeed, Ayman Kafrouny, St
+  Mary's Choir Ard El Golf). Scoring on the share of distinctive title words
+  works; 0.75 for ≥3-word titles rejected the one false positive (0.67, a
+  different hymn by the same singer).
+- **expo-audio on web plays a detached `new Audio(uri)`**, so
+  `document.querySelector('audio')` finds nothing — hook `window.Audio` in
+  Playwright to read `currentTime`. Verified playing at t=2.8 s, pausing, and
+  rewinding to 0 when the modal closed.
+- **If `ReaderSettingsModal` ever grows again**, cap the sheet at
+  `maxHeight: '92%'` with the handle + title row pinned and the body in a
+  `ScrollView`: adding one block pushed the title to **top −128 px** on a
+  360×640 screen, leaving the close button unreachable.
+- Full-hymn playback alternatives were weighed and none taken: embedded
+  YouTube (needs a Data API key — search costs 100 units, ~182k for the whole
+  corpus — plus `react-native-webview`), SoundCloud (app registration, id in
+  the public bundle, patchy catalogue), hosting audio (rights). The existing
+  «ابحث عن اللحن على يوتيوب» button also needs no key and plays the full hymn.
+
+
 
 
 
