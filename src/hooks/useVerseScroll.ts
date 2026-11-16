@@ -125,13 +125,16 @@ export function useVerseScroll(
   );
 
   // `?verse=n` deep link: wait for the keyed ScrollView's onLayout to land.
+  // `hasHymn` flips when the lazily imported chunk resolves, and `id` changes
+  // on next/prev navigation — both must re-arm the timer.
+  const hasHymn = hymn !== undefined;
   useEffect(() => {
-    if (verse === undefined || hymn === undefined) return;
+    if (verse === undefined || !hasHymn) return;
     const target = Number.parseInt(verse, 10);
     if (Number.isNaN(target)) return;
     const timer = setTimeout(() => scrollToVerse(target), 350);
     return () => clearTimeout(timer);
-  }, [verse, hymn?.id, scrollToVerse]);
+  }, [verse, hasHymn, id, scrollToVerse]);
 
   return {
     scrollRef,
