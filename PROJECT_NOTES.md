@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-16, commit adae2beb (repo size cleanup; see §20)
+Last verified: 2026-11-16, commit 7742eb07 (reader sheet + header; see §22)
 
 ## 1. What this is
 
@@ -1084,6 +1084,38 @@ offers longer previews.
   corpus — plus `react-native-webview`), SoundCloud (app registration, id in
   the public bundle, patchy catalogue), hosting audio (rights). The existing
   «ابحث عن اللحن على يوتيوب» button also needs no key and plays the full hymn.
+
+## 22. Reader chrome: compact settings sheet + centred header (2026-11-16)
+
+`ReaderSettingsModal` was **567 px tall on a 360×640 screen (89 %)**, hiding the
+hymn behind it. It is now **370 px (58 %)**, and 46 % at 412×800. Measured with
+Playwright at `/hymn/tr0009`; the four cuts:
+
+- font-size label moved **onto** the stepper row (`flexDirection: row`), not a
+  separate line — saves ~26 px;
+- `FontChips` takes `scroll` (`src/components/FontChips.tsx`): one horizontal
+  `ScrollView` instead of a wrapping block. Chips use `paddingHorizontal:
+  spacing.sm` and `gap: spacing.xs` **only when `scroll`**, so the row is 392 px
+  in a 328 px slot — the cut last chip is the scroll cue. Height stays 48.
+  The settings screen keeps the default wrapped block;
+- the «المظهر» heading is gone (the segmented control labels itself);
+- the two listen pills share one row (`flex: 1` each) with `reader.listenShort`
+  («استمع» / Listen / Anhören) and `reader.listenSearchShort` («يوتيوب» /
+  YouTube). Full wording stays on `accessibilityLabel`.
+
+Header (`src/app/(tabs)/hymn/[id].tsx`): `headerIcon` box is **34 px** (was
+40), toolbar `gap: 0`, `paddingHorizontal: spacing.xs`, plus `flexGrow: 1` +
+`justifyContent: 'center'` on the toolbar content container; both header columns
+also use `spacing.xs`. Why 34: header padding 8 + back button 48 leaves a
+**288 px** column at 360 px wide, and 8 icons × 34 = **272 px** fit, so the row
+centres under the hymn number (icons centre 156 vs row centre 154 → 2 px off;
+`scrollWidth == clientWidth`). Below ~340 px the row scrolls from the RTL start
+with nothing clipped. `IconButton`'s `hitSlop` keeps the 34 px boxes tappable.
+
+Checks: `tsc --noEmit` clean, 0 console errors, font stepper 20 → 22 works.
+`eslint` reports one pre-existing `react-hooks/set-state-in-effect` at
+`[id].tsx:320` — it is on HEAD too, not from this change.
+
 
 
 
