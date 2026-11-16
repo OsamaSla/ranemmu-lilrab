@@ -541,7 +541,7 @@ melody so people can hear how it is sung. Only source available: recordings
 
 Only `tr0001`–`tr0375` carry **authored** Hebrew so far (375 hymns, 7386 verse
 lines, all pointed; `verify-hebrew.mjs` prints 7761 because it counts each
-`title_he` as one extra line), plus Book 3 hymns 1–10 (§16). **Book 2 (taranim)
+`title_he` as one extra line), plus Book 3 hymns 1–50 (§16). **Book 2 (taranim)
 is now complete.** On top of
 that, `build:corpus` now lends Book 1/3 copies the Hebrew their Book 2 twin
 already has (14 hymns in the built corpus; see §18).
@@ -811,7 +811,7 @@ base, so a batch can start on either without touching code.
   Register: elevated biblical Hebrew, full niqqud, glossary terms
   (`יֵשׁוּעַ`, `שַׂר שָׁלוֹם`, `שַׁעֲשׁוּעַי`), each printed line keeps the
   Arabic's two half-phrases joined by ` · ` so the grid matches one-to-one.
-  Next batch: `node scripts/hebrew-digest.mjs book3 11 20`.
+  Next batch: `node scripts/hebrew-digest.mjs book3 51 60`.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 
