@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-16, commit d9a2b0f7 (§22 reader chrome; §23 quick fix)
+Last verified: 2026-11-16, commit b0816397 (§23 quick fix; §16 Book 3 batch 1)
 
 ## 1. What this is
 
@@ -541,7 +541,8 @@ melody so people can hear how it is sung. Only source available: recordings
 
 Only `tr0001`–`tr0375` carry **authored** Hebrew so far (375 hymns, 7386 verse
 lines, all pointed; `verify-hebrew.mjs` prints 7761 because it counts each
-`title_he` as one extra line). **Book 2 (taranim) is now complete.** On top of
+`title_he` as one extra line), plus Book 3 hymns 1–10 (§16). **Book 2 (taranim)
+is now complete.** On top of
 that, `build:corpus` now lends Book 1/3 copies the Hebrew their Book 2 twin
 already has (14 hymns in the built corpus; see §18).
 Register is elevated biblical/liturgical Hebrew, **fully vocalised with niqqud**,
@@ -799,6 +800,18 @@ base, so a batch can start on either without touching code.
   cheaper proof that the workflow carries over; Book 1 is the long tail and
   needs `chorus_he` on 694 hymns. First batch:
   `node scripts/hebrew-digest.mjs book3 1 10`.
+
+- First batch landed (b30001–b30010, 10 hymns, 108 verse lines, 2026-11-16):
+  5 stanzas with refrains, 1 single-stanza hymn, 1 long hymn (9, 5 lines × 3).
+  Gates: `hebrew:apply --check` clean, `hebrew:meter` flags 6 of 10 (deliberate
+  asymmetry in b30009's closing line and the short refrains of b30005/b30008),
+  `hebrew:align` reports 385 translated hymns, `build:corpus` 1824 hymns,
+  `check:hymns` all pass, `tsc --noEmit` clean. Browser: HE chip + disclaimer
+  render on b30001/b30006/b30009, 0 console errors.
+  Register: elevated biblical Hebrew, full niqqud, glossary terms
+  (`יֵשׁוּעַ`, `שַׂר שָׁלוֹם`, `שַׁעֲשׁוּעַי`), each printed line keeps the
+  Arabic's two half-phrases joined by ` · ` so the grid matches one-to-one.
+  Next batch: `node scripts/hebrew-digest.mjs book3 11 20`.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 
