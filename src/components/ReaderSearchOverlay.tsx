@@ -10,7 +10,7 @@
  * text matches titles immediately and the lyrics once every chunk is loaded.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useState, useDeferredValue } from 'react';
 import { Modal, Pressable, ScrollView, TextInput, useWindowDimensions, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -20,7 +20,7 @@ import { HymnRow } from './HymnRow';
 import { areAllChunksLoaded, ensureAllChunks } from '../data/chunks';
 import { getBooks, getCorpus, getSummaries } from '../data/loader';
 import { normalizeText } from '../data/normalize';
-import { searchHymns } from '../data/search';
+import { searchHymns, titleKey } from '../data/search';
 import type { BookId, HymnSummary } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -56,7 +56,8 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const summaries = useMemo(() => getSummaries(activeBook), [activeBook, chunkVersion]);
 
-  const trimmed = query.trim();
+  const deferredQuery = useDeferredValue(query);
+  const trimmed = deferredQuery.trim();
   const needle = normalizeText(trimmed);
   const isNumberQuery = /^\d+$/.test(needle);
   const wantsLyrics = needle.length >= 2 && !isNumberQuery;
@@ -69,7 +70,7 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
       if (exact.length > 0) return exact;
       return summaries.filter((s) => String(s.number).startsWith(digits));
     }
-    return summaries.filter((s) => normalizeText(s.title).includes(needle));
+    return summaries.filter((s) => titleKey(s).includes(needle));
   }, [summaries, needle, isNumberQuery]);
 
   useEffect(() => {
@@ -96,8 +97,8 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
     const rows = [...titleMatches];
     if (wantsLyrics && lyricsReady) {
       const byId = new Map(summaries.map((s) => [s.id, s]));
-      for (const hit of searchHymns(getCorpus(activeBook), trimmed, 200)) {
-        if (hit.inTitle || seen.has(hit.hymn.id)) continue;
+      for (const hit of searchHymns(getCorpus(), trimmed, 200, activeBook)) {
+        if (seen.has(hit.hymn.id)) continue;
         const summary = byId.get(hit.hymn.id);
         if (!summary) continue;
         seen.add(hit.hymn.id);

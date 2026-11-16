@@ -12,7 +12,7 @@
  * It can be prefilled from the reader's jump bar via `?q=`.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useEffect, useMemo, useRef, useState, useCallback } from 'react';
+import { useEffect, useMemo, useRef, useState, useCallback, useDeferredValue } from 'react';
 import { Keyboard, Pressable, SectionList, TextInput, View } from 'react-native';
 import type { ViewToken } from 'react-native';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -32,7 +32,7 @@ import {
   getTopicCounts,
 } from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
-import { searchHymns } from '../../data/search';
+import { searchHymns, titleKey } from '../../data/search';
 import { isTopicId, matchesTopic, TOPIC_COLORS, TOPIC_IDS, type TopicId } from '../../data/topics';
 import type { BookId, HymnSummary, SearchMatch } from '../../data/types';
 import { useT } from '../../hooks/useT';
@@ -114,7 +114,8 @@ export default function LibraryScreen() {
   // In-list search. A number stays a cheap summary lookup (no chunk import).
   // Free text matches titles straight away from the summaries, then the
   // lyrics once the lazily imported chunks are in memory.
-  const trimmed = query.trim();
+  const deferredQuery = useDeferredValue(query);
+  const trimmed = deferredQuery.trim();
   const needle = normalizeText(trimmed);
   const isNumberQuery = /^\d+$/.test(needle);
   const wantsLyrics = needle.length >= 2 && !isNumberQuery;
@@ -127,7 +128,7 @@ export default function LibraryScreen() {
       if (exact.length > 0) return exact;
       return topicFiltered.filter((s) => String(s.number).startsWith(digits));
     }
-    return topicFiltered.filter((s) => normalizeText(s.title).includes(needle));
+    return topicFiltered.filter((s) => titleKey(s).includes(needle));
   }, [topicFiltered, needle, isNumberQuery]);
 
   // Hymn bodies are lazily imported, so the first text query pulls every
@@ -154,30 +155,49 @@ export default function LibraryScreen() {
 
   // Lyrics hits, capped at two lines per hymn so one hymn cannot flood the
   // list. Hymns already listed as title matches are not repeated here.
-  const lyricMatches = useMemo(() => {
-    if (!wantsLyrics || !lyricsReady) return [];
+  // Translated-title hits (EN/DE/HE) surfaced by searchHymns as inTitle are
+  // collected separately so they render as normal HymnRow rows.
+  const { lyricMatches, extraTitleMatches } = useMemo(() => {
+    if (!wantsLyrics || !lyricsReady) return { lyricMatches: [], extraTitleMatches: [] };
     const titleIds = new Set(titleMatches.map((s) => s.id));
     const perHymn = new Map<string, SearchMatch[]>();
-    for (const hit of searchHymns(getCorpus(activeBook), trimmed, 400)) {
-      if (hit.inTitle || titleIds.has(hit.hymn.id)) continue;
+    const extra: HymnSummary[] = [];
+    const extraSeen = new Set<string>();
+    for (const hit of searchHymns(getCorpus(), trimmed, 400, activeBook)) {
+      if (titleIds.has(hit.hymn.id)) continue;
       if (topic && !matchesTopic(hit.hymn, topic)) continue;
+      if (hit.inTitle) {
+        if (!extraSeen.has(hit.hymn.id)) {
+          extraSeen.add(hit.hymn.id);
+          extra.push(hit.hymn);
+        }
+        continue;
+      }
       const bucket = perHymn.get(hit.hymn.id);
       if (!bucket) perHymn.set(hit.hymn.id, [hit]);
       else if (bucket.length < 2) bucket.push(hit);
     }
-    return [...perHymn.values()].flat().slice(0, 60);
+    return {
+      lyricMatches: [...perHymn.values()].flat().slice(0, 60),
+      extraTitleMatches: extra,
+    };
   }, [wantsLyrics, lyricsReady, trimmed, titleMatches, topic, activeBook]);
+
+  const allTitleMatches = useMemo(
+    () => [...titleMatches, ...extraTitleMatches],
+    [titleMatches, extraTitleMatches],
+  );
 
   const sections = useMemo<{ key: string; label: string; data: LibraryRow[] }[]>(() => {
     if (trimmed) {
       const rows: { key: string; label: string; data: LibraryRow[] }[] = [];
-      if (titleMatches.length > 0) {
+      if (allTitleMatches.length > 0) {
         rows.push({
           key: 'titles',
           label: isNumberQuery
-            ? `${titleMatches.length} ${t('search.resultCount')}`
-            : `${t('search.inTitles')} · ${titleMatches.length}`,
-          data: titleMatches.map((hymn) => ({ hymn })),
+            ? `${allTitleMatches.length} ${t('search.resultCount')}`
+            : `${t('search.inTitles')} · ${allTitleMatches.length}`,
+          data: allTitleMatches.map((hymn) => ({ hymn })),
         });
       }
       if (lyricMatches.length > 0) {
@@ -218,7 +238,7 @@ export default function LibraryScreen() {
     }
 
     return [...buckets.entries()].map(([key, data]) => ({ key, label: key, data }));
-  }, [order, topic, topicFiltered, titleMatches, lyricMatches, isNumberQuery, trimmed, t, allBooks]);
+  }, [order, topic, topicFiltered, allTitleMatches, lyricMatches, isNumberQuery, trimmed, t, allBooks]);
 
   const listRef = useRef<SectionList<LibraryRow>>(null);
   /** Flat index of the row at the top edge; the ±50 buttons anchor to it. */

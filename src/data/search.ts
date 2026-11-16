@@ -11,9 +11,9 @@
  * Normalising every line on each keystroke is far too slow for 1000+ hymns, so
  * the flattened search index is built once per loaded corpus and memoised.
  */
-import { normalize, type Normalized } from './normalize';
+import { normalize, normalizeText, type Normalized } from './normalize';
 import { normalizeMeter } from './meter';
-import type { Hymn, HymnSummary, SearchMatch } from './types';
+import type { BookId, Hymn, HymnSummary, SearchMatch } from './types';
 
 /** One searchable line, with its normalised form precomputed. */
 interface IndexedLine {
@@ -21,7 +21,7 @@ interface IndexedLine {
   lineIndex: number;
   label: string;
   original: string;
-  normalized: Normalized;
+  text: string;
 }
 
 interface SearchDoc {
@@ -50,7 +50,7 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
         lineIndex,
         label: verse.label,
         original: line,
-        normalized: normalize(line),
+        text: normalizeText(line),
       })),
     );
     // Translated verses join the same index with their own originals, so
@@ -65,7 +65,7 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
             lineIndex,
             label: verse.label,
             original: line,
-            normalized: normalize(line),
+            text: normalizeText(line),
           });
         });
       });
@@ -97,17 +97,32 @@ export function invalidateSearchCache(): void {
 }
 
 /**
+ * Memoised normalised title for a summary, so filtering 1.8k titles on every
+ * keystroke does not re-normalise each title every time.
+ */
+const titleCache = new Map<string, { title: string; norm: string }>();
+
+export function titleKey(s: { id: string; title: string }): string {
+  const hit = titleCache.get(s.id);
+  if (hit && hit.title === s.title) return hit.norm;
+  const norm = normalizeText(s.title);
+  titleCache.set(s.id, { title: s.title, norm });
+  return norm;
+}
+
+/**
  * Find every line in the corpus containing `query`.
  *
  * Title matches are reported as a single synthetic hit so a hymn is reachable
  * by name, and titles are also scanned per line so a query spanning the title
  * and the first line still reports the line hit.
  */
-export function searchHymns(hymns: Hymn[], query: string, limit = 200): SearchMatch[] {
+export function searchHymns(hymns: Hymn[], query: string, limit = 200, book?: BookId): SearchMatch[] {
   const needle = normalize(query).text;
   if (needle.length === 0) return [];
 
   const docs = buildDocs(hymns, `${hymns.length}:${hymns[0]?.id ?? ''}:${hymns.at(-1)?.id ?? ''}`);
+  const scopedDocs = book ? docs.filter((d) => (d.summary.book ?? 'main') === book) : docs;
   const matches: SearchMatch[] = [];
 
   // A digit-only query is a hymn-number lookup: exact number first, then
@@ -117,7 +132,7 @@ export function searchHymns(hymns: Hymn[], query: string, limit = 200): SearchMa
     const digits = needle.replace(/^0+(?=\d)/, '');
     const exact: SearchDoc[] = [];
     const prefixed: SearchDoc[] = [];
-    for (const doc of docs) {
+    for (const doc of scopedDocs) {
       const num = String(doc.summary.number);
       if (num === digits) exact.push(doc);
       else if (num.startsWith(digits)) prefixed.push(doc);
@@ -138,7 +153,7 @@ export function searchHymns(hymns: Hymn[], query: string, limit = 200): SearchMa
     }
   }
 
-  for (const doc of docs) {
+  for (const doc of scopedDocs) {
     if (matches.length >= limit) break;
 
     for (const title of doc.titles) {
@@ -161,18 +176,19 @@ export function searchHymns(hymns: Hymn[], query: string, limit = 200): SearchMa
     for (const line of doc.lines) {
       if (matches.length >= limit) break;
 
-      const at = line.normalized.text.indexOf(needle);
+      const at = line.text.indexOf(needle);
       if (at === -1) continue;
 
       const end = at + needle.length;
+      const norm = normalize(line.original);
       matches.push({
         hymn: doc.summary,
         verseIndex: line.verseIndex,
         lineIndex: line.lineIndex,
         label: line.label,
         line: line.original,
-        start: line.normalized.origin[at],
-        end: (line.normalized.origin[end - 1] ?? at) + 1,
+        start: norm.origin[at],
+        end: (norm.origin[end - 1] ?? at) + 1,
       });
     }
   }

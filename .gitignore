@@ -11,13 +11,14 @@
 # One-off local helper scripts (git add/commit/push wrappers, etc.)
 push_fix*.js
 
-# Local scratch artifacts (never commit)
+# Local scratch artifacts & AI audit files (never commit)
 msg.txt
 content/hebrew-draft/
 scripts/poc-hebrew*.mjs
 HANDOFF-TO-NEXT-AI.md
-{const
-{
+ENHANCEMENTS.md
+WORKPLAN.md
+codebase-for-ai.xml
 translation-debug-*.txt
 translation-run.log
 content/**/*.bak
@@ -105,7 +106,6 @@ temp_bot.png
 temp_oval.png
 temp_slice.png
 temp_top.png
-{
 
 # Raw PDF scans (large binary assets)
 assets/1-401.pdf

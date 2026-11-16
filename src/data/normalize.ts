@@ -89,7 +89,7 @@ function normalizeCore(input: string, withOrigin: boolean): Normalized {
     if (DROPPED.test(char)) continue;
     if (STRIPPED_PUNCT.test(char)) continue;
 
-    const folded = FOLDS[char] ?? char;
+    const folded = FOLDS[char] ?? char.toLowerCase();
     if (!withOrigin) {
       chars.push(folded);
       continue;
