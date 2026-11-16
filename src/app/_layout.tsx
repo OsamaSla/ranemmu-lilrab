@@ -16,6 +16,7 @@ import { DEFAULT_LOCALE, isRTL } from '../i18n';
 import { useAppFonts } from '../theme/fonts';
 import { flushPendingUploads, startLiveSync } from '../data/liveSync';
 import { useSession } from '../store/session';
+import { useSettings } from '../store/settings';
 
 // Prevent the auto-hide from racing the font load in the effect below.
 SplashScreen.preventAutoHideAsync().catch(() => {
@@ -23,7 +24,8 @@ SplashScreen.preventAutoHideAsync().catch(() => {
 });
 
 export default function RootLayout() {
-  const fontsReady = useAppFonts();
+  const fontId = useSettings((s) => s.fontFamily);
+  const fontsReady = useAppFonts(fontId);
   const { colors, isDark } = useTheme();
   const sessionUser = useSession((s) => s.user);
 

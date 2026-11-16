@@ -354,6 +354,8 @@ export default function ReaderScreen() {
   // without this the rail would keep the previous hymn's dot highlighted
   // until the first scroll event recomputed it.
   useEffect(() => {
+    // Reset the rail highlight for the new hymn (component instance is reused).
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveVerseIndex(null);
   }, [id]);
 

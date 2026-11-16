@@ -75,7 +75,31 @@ export default function Root({ children }: PropsWithChildren) {
 
         <ScrollViewStyleReset />
       </head>
-      <body>{children}</body>
+      <body>
+        <div
+          id="boot-indicator"
+          style={{
+            position: 'fixed',
+            inset: 0,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            background: '#F6F1E7',
+            color: '#184D55',
+            fontFamily: 'system-ui, sans-serif',
+            fontSize: '18px',
+            zIndex: 9999,
+          }}>
+          <span>جاري التحميل…</span>
+        </div>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "(function(){var b=document.getElementById('boot-indicator');if(!b)return;var hide=function(){if(b&&b.parentNode)b.parentNode.removeChild(b);};if(document.readyState==='complete')hide();else window.addEventListener('load',hide,{once:true});setTimeout(hide,8000);})();",
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }

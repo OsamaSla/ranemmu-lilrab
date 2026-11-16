@@ -7,7 +7,9 @@
  * static 400/700 there because React Native on Android selects weight by family
  * name rather than by axis.
  */
-import { useFonts } from 'expo-font';
+import { useEffect, useState } from 'react';
+
+import { loadAsync, isLoaded } from 'expo-font';
 
 export interface FontFamily {
   /** Key used in settings and persisted in storage. */
@@ -53,24 +55,88 @@ export function fontFamilyFor(id: string, bold = false): string {
  * React Native picks between them via `fontFamily` + `fontWeight: '700'`, so
  * both the family name and the weight must be set.
  */
-const FONT_MAP = {
-  Cairo: require('../../assets/fonts/Cairo-Regular.ttf'),
-  'Cairo-Bold': require('../../assets/fonts/Cairo-Bold.ttf'),
-  Amiri: require('../../assets/fonts/Amiri-Regular.ttf'),
-  'Amiri-Bold': require('../../assets/fonts/Amiri-Bold.ttf'),
-  ScheherazadeNew: require('../../assets/fonts/ScheherazadeNew-Regular.ttf'),
-  'ScheherazadeNew-Bold': require('../../assets/fonts/ScheherazadeNew-Bold.ttf'),
-  Marhey: require('../../assets/fonts/Marhey-Regular.ttf'),
-  'Marhey-Bold': require('../../assets/fonts/Marhey-Bold.ttf'),
-  Katibeh: require('../../assets/fonts/Katibeh-Regular.ttf'),
-  Rakkas: require('../../assets/fonts/Rakkas-Regular.ttf'),
-} as const;
+/**
+ * Per-family font file maps. Only the active family is loaded up front; the
+ * rest are pulled in on demand via `ensureFontFamily()` / `Font.loadAsync`,
+ * so the first paint no longer waits on all ten TTFs.
+ */
+export const FONT_FILES_BY_ID: Record<string, Record<string, any>> = {
+  cairo: {
+    Cairo: require('../../assets/fonts/Cairo-Regular.ttf'),
+    'Cairo-Bold': require('../../assets/fonts/Cairo-Bold.ttf'),
+  },
+  amiri: {
+    Amiri: require('../../assets/fonts/Amiri-Regular.ttf'),
+    'Amiri-Bold': require('../../assets/fonts/Amiri-Bold.ttf'),
+  },
+  scheherazade: {
+    ScheherazadeNew: require('../../assets/fonts/ScheherazadeNew-Regular.ttf'),
+    'ScheherazadeNew-Bold': require('../../assets/fonts/ScheherazadeNew-Bold.ttf'),
+  },
+  marhey: {
+    Marhey: require('../../assets/fonts/Marhey-Regular.ttf'),
+    'Marhey-Bold': require('../../assets/fonts/Marhey-Bold.ttf'),
+  },
+  katibeh: {
+    Katibeh: require('../../assets/fonts/Katibeh-Regular.ttf'),
+  },
+  rakkas: {
+    Rakkas: require('../../assets/fonts/Rakkas-Regular.ttf'),
+  },
+};
 
-/** Loads the bundled fonts. Returns null once loading has begun. */
-export function useAppFonts() {
-  const [loaded, error] = useFonts(FONT_MAP);
-  if (!loaded && !error) return null;
-  if (error) throw error;
+const loadPromises = new Map<string, Promise<void>>();
+
+/** True once every registered name for `id` has finished loading. */
+export function isFontFamilyLoaded(id: string): boolean {
+  const files = FONT_FILES_BY_ID[id];
+  if (!files) return true;
+  return Object.keys(files).every((name) => isLoaded(name));
+}
+
+/**
+ * Load (and cache) a single font family on demand. Safe to call repeatedly;
+ * concurrent calls share one promise. Never throws — failures are logged and
+ * the promise resolves so callers can keep rendering with a fallback.
+ */
+export function ensureFontFamily(id: string): Promise<void> {
+  const existing = loadPromises.get(id);
+  if (existing) return existing;
+  const files = FONT_FILES_BY_ID[id];
+  if (!files || isFontFamilyLoaded(id)) {
+    const resolved = Promise.resolve();
+    loadPromises.set(id, resolved);
+    return resolved;
+  }
+  const promise = loadAsync(files)
+    .catch((err) => {
+      console.warn('[fonts] failed to load family', id, err);
+    })
+    .then(() => undefined);
+  loadPromises.set(id, promise);
+  return promise;
+}
+
+/**
+ * Loads only the active family up front. Returns `null` while it is loading
+ * (splash stays up) and `true` once it is ready. Other families are loaded
+ * on demand via `ensureFontFamily()`.
+ */
+export function useAppFonts(activeId?: string) {
+  const fontId = activeId ?? DEFAULT_FONT_ID;
+  const [ready, setReady] = useState<boolean>(() => isFontFamilyLoaded(fontId));
+
+  useEffect(() => {
+    let cancelled = false;
+    void ensureFontFamily(fontId).then(() => {
+      if (!cancelled) setReady(true);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [fontId]);
+
+  if (!ready) return null;
   return true;
 }
 

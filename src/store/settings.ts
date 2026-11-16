@@ -9,7 +9,7 @@ import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
 import { DEFAULT_LOCALE, type LocaleCode } from '../i18n';
-import { DEFAULT_FONT_ID } from '../theme/fonts';
+import { DEFAULT_FONT_ID, ensureFontFamily } from '../theme/fonts';
 import type { ThemeName } from '../theme/tokens';
 import type { BookId } from '../data/types';
 
@@ -66,7 +66,10 @@ export const useSettings = create<SettingsState>()(
       book: 'main',
 
       setTheme: (theme) => set({ theme }),
-      setFontFamily: (fontFamily) => set({ fontFamily }),
+      setFontFamily: (fontFamily) => {
+        void ensureFontFamily(fontFamily);
+        set({ fontFamily });
+      },
       setAdminPin: (adminPin) => set({ adminPin }),
       setBook: (book) => set({ book }),
 

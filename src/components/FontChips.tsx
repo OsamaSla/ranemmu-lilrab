@@ -10,7 +10,9 @@ import { Pressable, ScrollView, View } from 'react-native';
 import { AppText } from './AppText';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
-import { FONT_FAMILIES } from '../theme/fonts';
+import { useEffect } from 'react';
+
+import { FONT_FAMILIES, ensureFontFamily } from '../theme/fonts';
 import { radius, spacing } from '../theme/tokens';
 
 interface FontChipsProps {
@@ -27,6 +29,13 @@ interface FontChipsProps {
 export function FontChips({ value, onChange, scroll = false }: FontChipsProps) {
   const { colors } = useTheme();
   const { direction } = useT();
+
+  // Preload every family so the preview chips render in their own face.
+  useEffect(() => {
+    FONT_FAMILIES.forEach((family) => {
+      void ensureFontFamily(family.id);
+    });
+  }, []);
 
   const chips = FONT_FAMILIES.map((family) => {
     const selected = family.id === value;
