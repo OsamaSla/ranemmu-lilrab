@@ -20,7 +20,7 @@ import { HymnRow } from './HymnRow';
 import { areAllChunksLoaded, ensureAllChunks } from '../data/chunks';
 import { getBooks, getCorpus, getSummaries } from '../data/loader';
 import { normalizeText } from '../data/normalize';
-import { searchHymns, titleKey } from '../data/search';
+import { ensureSearchIndex, isSearchIndexReady, searchHymns, titleKey } from '../data/search';
 import type { BookId, HymnSummary } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -76,7 +76,7 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
   useEffect(() => {
     if (!wantsLyrics) return;
     let active = true;
-    ensureAllChunks()
+    Promise.all([ensureAllChunks(), ensureSearchIndex()])
       .then(() => {
         if (active) setChunkVersion((n) => n + 1);
       })
@@ -88,7 +88,7 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
     };
   }, [wantsLyrics]);
 
-  const lyricsReady = areAllChunksLoaded();
+  const lyricsReady = areAllChunksLoaded() && isSearchIndexReady();
   const lyricsLoading = wantsLyrics && !lyricsReady;
 
   const results = useMemo<HymnSummary[]>(() => {

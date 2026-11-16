@@ -6,6 +6,7 @@
  * Inputs   content/*.json  — each file holds { hymns: Hymn[] }
  * Outputs  assets/hymns/index.json     light summaries for lists/grouping
  *          assets/hymns/full/NNN.json  chunks of full records, lazily loaded
+ *          assets/hymns/search-ar.json  pre-normalised full-text search index
  *          src/data/generated-chunks.ts  dynamic import() map (see below)
  *
  * Metro resolves `import()` arguments at build time, so every chunk is listed
@@ -19,11 +20,13 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateCorpus, formatIssues } from './lib/validate.mjs';
 import { crossBookGroups, lineCompatible, reflowHebrew } from './lib/duplicates.mjs';
+import { normalizeText } from './lib/normalize.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT_DIR = join(ROOT, 'content');
 const ASSET_DIR = join(ROOT, 'assets', 'hymns');
 const FULL_DIR = join(ASSET_DIR, 'full');
+const SEARCH_FILE = join(ASSET_DIR, 'search-ar.json');
 const CHUNKS_FILE = join(ROOT, 'src', 'data', 'generated-chunks.ts');
 
 /** Hymns per chunk. 100 keeps each file ~400 KB, so search loads ~5 MB total. */
@@ -68,6 +71,48 @@ function toSummary(hymn) {
     ...(hymn.primaryTopic ? { primaryTopic: hymn.primaryTopic } : {}),
     ...(Array.isArray(hymn.topics) && hymn.topics.length > 0 ? { topics: hymn.topics } : {}),
   };
+}
+
+/** FNV-1a over the raw text of one hymn; shared with src/data/search.ts. */
+function searchFingerprint(hymn) {
+  const parts = [
+    hymn.title, hymn.title_en ?? '', hymn.title_de ?? '', hymn.title_he ?? '',
+  ];
+  for (const key of ['verses', 'verses_en', 'verses_de', 'verses_he']) {
+    for (const verse of hymn[key] ?? []) parts.push(verse.label ?? '', ...verse.lines);
+  }
+  let hash = 0x811c9dc5;
+  const text = parts.join('\u0000');
+  for (let i = 0; i < text.length; i += 1) {
+    hash = Math.imul(hash ^ text.charCodeAt(i), 0x01000193);
+  }
+  return hash >>> 0;
+}
+
+/**
+ * One hymn's pre-normalised search entries: plain strings in the same order
+ * src/data/search.ts builds them (titles ar/en/de/he, then each language's
+ * printed lines). `f` fingerprints the *raw* text: when an admin edits a hymn
+ * at runtime the fingerprint no longer matches and only that hymn falls back
+ * to on-device normalisation, instead of trusting a stale index entry.
+ */
+function searchEntry(hymn) {
+  const lines = {};
+  const addLines = (lang, verses) => {
+    if (!verses?.length) return;
+    lines[lang] = verses.flatMap((verse) => verse.lines.map(normalizeText));
+  };
+  addLines('ar', hymn.verses);
+  addLines('en', hymn.verses_en);
+  addLines('de', hymn.verses_de);
+  addLines('he', hymn.verses_he);
+
+  const titles = [normalizeText(hymn.title)];
+  for (const key of ['title_en', 'title_de', 'title_he']) {
+    if (hymn[key]) titles.push(normalizeText(hymn[key]));
+  }
+
+  return { f: searchFingerprint(hymn), titles, lines };
 }
 
 function generateChunksModule(chunks) {
@@ -188,6 +233,14 @@ async function main() {
 
   const summaries = hymns.map(toSummary);
   await writeFile(join(ASSET_DIR, 'index.json'), JSON.stringify(summaries, null, 1) + '\n');
+
+  // Full-text search used to normalise every line on the main thread on the
+  // first keystroke. Emit the same folds here so the client only has to run
+  // indexOf against pre-normalised strings (see src/data/search.ts).
+  const searchIndex = { version: 1, hymns: {} };
+  for (const hymn of hymns) searchIndex.hymns[hymn.id] = searchEntry(hymn);
+  await writeFile(SEARCH_FILE, JSON.stringify(searchIndex));
+
   const chunks = [];
   for (let i = 0; i < hymns.length; i += CHUNK_SIZE) {
     const index = chunks.length;
@@ -206,6 +259,9 @@ async function main() {
       `full ~${(bytes / 1024 / 1024).toFixed(2)} MB`,
   );
   console.log('wrote assets/hymns/ and src/data/generated-chunks.ts');
+  console.log(
+    `search index ${(JSON.stringify(searchIndex).length / 1024 / 1024).toFixed(2)} MB`,
+  );
   console.log(
     `${groups.length} hymn(s) printed in more than one book · ` +
       `${borrowed.length} lent a sibling's Hebrew` +

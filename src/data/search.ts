@@ -11,7 +11,7 @@
  * Normalising every line on each keystroke is far too slow for 1000+ hymns, so
  * the flattened search index is built once per loaded corpus and memoised.
  */
-import { normalize, normalizeText, type Normalized } from './normalize';
+import { normalize, normalizeText } from './normalize';
 import { normalizeMeter } from './meter';
 import type { BookId, Hymn, HymnSummary, SearchMatch } from './types';
 
@@ -24,10 +24,74 @@ interface IndexedLine {
   text: string;
 }
 
+interface IndexedTitle {
+  original: string;
+  text: string;
+}
+
 interface SearchDoc {
   summary: HymnSummary;
-  titles: { normalized: Normalized; original: string }[];
+  titles: IndexedTitle[];
   lines: IndexedLine[];
+}
+
+/** Shape emitted by scripts/build-corpus.mjs into assets/hymns/search-ar.json. */
+interface PrebuiltHymn {
+  /** FNV-1a of the raw title + verse text, to detect admin edits at runtime. */
+  f: number;
+  titles: string[];
+  lines: Record<string, string[]>;
+}
+interface PrebuiltIndex {
+  version: number;
+  hymns: Record<string, PrebuiltHymn>;
+}
+
+/**
+ * The prebuilt index is language-complete, so search no longer normalises
+ * 30k+ lines on the main thread on the first keystroke. It is imported lazily
+ * (the 4 MB JSON has no place in the entry bundle) and kept for the session.
+ */
+let prebuilt: PrebuiltIndex | null = null;
+let indexPromise: Promise<void> | null = null;
+let indexReady = false;
+
+export function ensureSearchIndex(): Promise<void> {
+  if (!indexPromise) {
+    indexPromise = import('../../assets/hymns/search-ar.json')
+      .then((mod) => {
+        prebuilt = ((mod as { default?: PrebuiltIndex }).default ?? mod) as PrebuiltIndex;
+      })
+      .catch(() => {
+        // A missing/corrupt index is not fatal: buildDocs falls back to
+        // normalising on the device, as it did before the index existed.
+      })
+      .finally(() => {
+        indexReady = true;
+      });
+  }
+  return indexPromise;
+}
+
+/** True once the index has loaded (or failed and the fallback took over). */
+export function isSearchIndexReady(): boolean {
+  return indexReady;
+}
+
+/** Same function/field order as scripts/build-corpus.mjs — keep them in sync. */
+function searchFingerprint(hymn: Hymn): number {
+  const parts = [
+    hymn.title, hymn.title_en ?? '', hymn.title_de ?? '', hymn.title_he ?? '',
+  ];
+  for (const key of ['verses', 'verses_en', 'verses_de', 'verses_he'] as const) {
+    for (const verse of hymn[key] ?? []) parts.push(verse.label ?? '', ...verse.lines);
+  }
+  let hash = 0x811c9dc5;
+  const text = parts.join('\u0000');
+  for (let i = 0; i < text.length; i += 1) {
+    hash = Math.imul(hash ^ text.charCodeAt(i), 0x01000193);
+  }
+  return hash >>> 0;
 }
 
 /** Cache keyed by the corpus identity, so a rebuild is only paid once. */
@@ -37,26 +101,42 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
   if (cache?.key === key) return cache.docs;
 
   const docs = hymns.map((hymn) => {
-    const titles = [{ normalized: normalize(hymn.title), original: hymn.title }];
+    // Only trust the prebuilt strings when the raw text still matches what
+    // was bundled. An admin edit changes the fingerprint, so just that hymn
+    // takes the slow path instead of poisoning the whole index.
+    const candidate = prebuilt?.hymns[hymn.id];
+    const pre = candidate && candidate.f === searchFingerprint(hymn) ? candidate : undefined;
+
+    let titleIndex = 0;
+    const normalizedTitle = (text: string) =>
+      pre?.titles[titleIndex++] ?? normalizeText(text);
+    const titles: IndexedTitle[] = [
+      { original: hymn.title, text: normalizedTitle(hymn.title) },
+    ];
     // Translated titles are searchable too, so search works in every UI
     // language (each reports its own title as the hit line).
-    if (hymn.title_en) titles.push({ normalized: normalize(hymn.title_en), original: hymn.title_en });
-    if (hymn.title_de) titles.push({ normalized: normalize(hymn.title_de), original: hymn.title_de });
-    if (hymn.title_he) titles.push({ normalized: normalize(hymn.title_he), original: hymn.title_he });
+    if (hymn.title_en) titles.push({ original: hymn.title_en, text: normalizedTitle(hymn.title_en) });
+    if (hymn.title_de) titles.push({ original: hymn.title_de, text: normalizedTitle(hymn.title_de) });
+    if (hymn.title_he) titles.push({ original: hymn.title_he, text: normalizedTitle(hymn.title_he) });
 
+    const offsets = { ar: 0, en: 0, de: 0, he: 0 };
+    const normalizedLine = (lang: keyof typeof offsets, text: string) =>
+      pre?.lines[lang]?.[offsets[lang]++] ?? normalizeText(text);
     const lines = hymn.verses.flatMap((verse, verseIndex) =>
       verse.lines.map((line, lineIndex) => ({
         verseIndex,
         lineIndex,
         label: verse.label,
         original: line,
-        text: normalizeText(line),
+        text: normalizedLine('ar', line),
       })),
     );
     // Translated verses join the same index with their own originals, so
     // highlighting maps back into the translated line, not the Arabic one.
-    for (const key of ['verses_en', 'verses_de', 'verses_he'] as const) {
-      const translated = hymn[key];
+    for (const [lang, field] of [
+      ['en', 'verses_en'], ['de', 'verses_de'], ['he', 'verses_he'],
+    ] as const) {
+      const translated = hymn[field];
       if (!translated) continue;
       translated.forEach((verse, verseIndex) => {
         verse.lines.forEach((line, lineIndex) => {
@@ -65,7 +145,7 @@ function buildDocs(hymns: Hymn[], key: string): SearchDoc[] {
             lineIndex,
             label: verse.label,
             original: line,
-            text: normalizeText(line),
+            text: normalizedLine(lang, line),
           });
         });
       });
@@ -157,17 +237,20 @@ export function searchHymns(hymns: Hymn[], query: string, limit = 200, book?: Bo
     if (matches.length >= limit) break;
 
     for (const title of doc.titles) {
-      const titleAt = title.normalized.text.indexOf(needle);
+      const titleAt = title.text.indexOf(needle);
       if (titleAt === -1) continue;
       const end = titleAt + needle.length;
+      // Origin maps are only needed for the few lines that actually match,
+      // so they are computed here rather than stored for every title.
+      const origin = normalize(title.original).origin;
       matches.push({
         hymn: doc.summary,
         verseIndex: -1,
         lineIndex: -1,
         label: '',
         line: title.original,
-        start: title.normalized.origin[titleAt],
-        end: (title.normalized.origin[end - 1] ?? 0) + 1,
+        start: origin[titleAt],
+        end: (origin[end - 1] ?? 0) + 1,
         inTitle: true,
       });
       break;

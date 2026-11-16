@@ -32,7 +32,7 @@ import {
   getTopicCounts,
 } from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
-import { searchHymns, titleKey } from '../../data/search';
+import { ensureSearchIndex, isSearchIndexReady, searchHymns, titleKey } from '../../data/search';
 import { isTopicId, matchesTopic, TOPIC_COLORS, TOPIC_IDS, type TopicId } from '../../data/topics';
 import type { BookId, HymnSummary, SearchMatch } from '../../data/types';
 import { useT } from '../../hooks/useT';
@@ -54,6 +54,32 @@ function firstLetter(text: string): string {
 interface LibraryRow {
   hymn: HymnSummary;
   match?: SearchMatch;
+}
+
+interface MeasuredSection {
+  key: string;
+  header: number;
+  rowHeights: number[];
+  /** Cumulative offsets from the section start; length = rows + 1. */
+  rowOffsets: number[];
+  total: number;
+  start: number;
+}
+
+/**
+ * Only used until the first row reports its real height. Virtualization needs
+ * a layout before anything has been rendered, but unlike the old fixed
+ * ROW_HEIGHT/HEADER_HEIGHT these stop being consulted as soon as measurement
+ * data exists (see measuredLayout below).
+ */
+const BOOTSTRAP_ROW_HEIGHT = 88;
+const BOOTSTRAP_HEADER_HEIGHT = 40;
+
+/** Matches the keyExtractor below, so measured heights survive re-renders. */
+function libraryRowKey(row: LibraryRow): string {
+  return row.match
+    ? `${row.hymn.id}:${row.match.verseIndex}:${row.match.lineIndex}:${row.match.line}`
+    : row.hymn.id;
 }
 
 export default function LibraryScreen() {
@@ -141,7 +167,7 @@ export default function LibraryScreen() {
   useEffect(() => {
     if (!wantsLyrics) return;
     let active = true;
-    ensureAllChunks()
+    Promise.all([ensureAllChunks(), ensureSearchIndex()])
       .then(() => {
         if (active) setChunksVersion((n) => n + 1);
       })
@@ -153,7 +179,10 @@ export default function LibraryScreen() {
     };
   }, [wantsLyrics]);
 
-  const lyricsReady = areAllChunksLoaded();
+  // Both the hymn bodies (for the originals and highlights) and the
+  // pre-normalised index must be in memory before the first lyric search,
+  // otherwise that first keystroke would pay the normalisation cost itself.
+  const lyricsReady = areAllChunksLoaded() && isSearchIndexReady();
   const lyricsLoading = wantsLyrics && !lyricsReady;
 
   // Lyrics hits, capped at two lines per hymn so one hymn cannot flood the
@@ -276,58 +305,105 @@ export default function LibraryScreen() {
   // data through refs instead of closing over it.
   const flatRowsRef = useRef<typeof flatRows>([]);
   const sectionOffsetsRef = useRef<Map<string, number>>(new Map());
-  const sectionsRef = useRef<{ key: string; label: string; data: LibraryRow[] }[]>([]);
 
-  // Sync refs after render
+  /** Rendered heights, keyed the same way as the rows and section headers. */
+  const rowHeightsRef = useRef<Map<string, number>>(new Map());
+  const headerHeightsRef = useRef<Map<string, number>>(new Map());
+  const rowHeightSumRef = useRef(0);
+  const rowHeightCountRef = useRef(0);
+  const layoutCacheRef = useRef<MeasuredSection[] | null>(null);
+
   useEffect(() => {
     flatRowsRef.current = flatRows;
   }, [flatRows]);
 
   useEffect(() => {
     sectionOffsetsRef.current = sectionOffsets;
-  }, [sectionOffsets]);
+    // Heights are keyed by row, so a new data set needs fresh offsets.
+    layoutCacheRef.current = null;
+  }, [sectionOffsets, sections]);
 
-  useEffect(() => {
-    sectionsRef.current = sections;
-  }, [sections]);
+  const recordHeight = useCallback((key: string, height: number) => {
+    if (height <= 0) return;
+    const heights = rowHeightsRef.current;
+    const previous = heights.get(key);
+    if (previous === height) return;
+    if (previous === undefined) {
+      rowHeightSumRef.current += height;
+      rowHeightCountRef.current += 1;
+    } else {
+      rowHeightSumRef.current += height - previous;
+    }
+    heights.set(key, height);
+    layoutCacheRef.current = null;
+  }, []);
+
+  const recordHeaderHeight = useCallback((key: string, height: number) => {
+    if (height <= 0 || headerHeightsRef.current.get(key) === height) return;
+    headerHeightsRef.current.set(key, height);
+    layoutCacheRef.current = null;
+  }, []);
+
+  const rowHeight = (row: LibraryRow): number =>
+    rowHeightsRef.current.get(libraryRowKey(row)) ??
+    (rowHeightCountRef.current
+      ? rowHeightSumRef.current / rowHeightCountRef.current
+      : BOOTSTRAP_ROW_HEIGHT);
+  const averageRowHeight = () =>
+    rowHeightCountRef.current
+      ? rowHeightSumRef.current / rowHeightCountRef.current
+      : BOOTSTRAP_ROW_HEIGHT;
 
   /**
-   * Cell heights for `getItemLayout`.
-   *
-   * Without a layout the list refuses to scroll past the rows it has already
-   * measured (it throws "scrollToIndex should be used in conjunction with
-   * getItemLayout or onScrollToIndexFailed"), which is why the ±50 buttons did
-   * nothing on a phone: 50 rows are always outside the rendered window. Titles
-   * wrap to one or two lines, so these are averages rather than exact heights —
-   * a jump can land a few rows off, and the viewability tracking below keeps the
-   * next tap anchored to whatever is actually on screen.
+   * Cumulative offsets from measured (or not-yet-measured bootstrap) sizes,
+   * rebuilt only when a measurement arrives or the data changes. A layout is
+   * essential: without one VirtualizedList clamps its tail spacer to the
+   * measured cells, so a 50-row jump can never reach an unmeasured row. The
+   * old fixed 90 px guess is now only a bootstrap, replaced by the real
+   * heights the rows report through onLayout — important for wrapped titles
+   * and large appScale, where a constant guess causes jumpy/blank scrolling.
    */
-  const ROW_HEIGHT = 90; // hymn card + its 8px bottom margin
-  const HEADER_HEIGHT = 41; // section label + the 4px section separator
+  const measuredLayout = (): MeasuredSection[] => {
+    if (layoutCacheRef.current) return layoutCacheRef.current;
+    let start = 0;
+    const layout = sections.map((section) => {
+      const header = headerHeightsRef.current.get(section.key) ?? BOOTSTRAP_HEADER_HEIGHT;
+      const rowHeights = section.data.map(rowHeight);
+      const rowOffsets = [0];
+      for (const height of rowHeights) {
+        rowOffsets.push(rowOffsets[rowOffsets.length - 1] + height);
+      }
+      const total = header + rowOffsets[rowOffsets.length - 1];
+      const measured = { key: section.key, header, rowHeights, rowOffsets, total, start };
+      start += total;
+      return measured;
+    });
+    layoutCacheRef.current = layout;
+    return layout;
+  };
 
   const getItemLayout = (_data: unknown, cellIndex: number) => {
-    let offset = 0;
     let cell = 0;
-    for (const section of sectionsRef.current) {
-      const count = section.data.length;
+    for (const section of measuredLayout()) {
+      const count = section.rowHeights.length;
       if (cellIndex < cell + count + 2) {
         const inSection = cellIndex - cell;
         if (inSection === 0) {
-          return { index: cellIndex, offset, length: HEADER_HEIGHT };
+          return { index: cellIndex, offset: section.start, length: section.header };
         }
         if (inSection <= count) {
           return {
             index: cellIndex,
-            offset: offset + HEADER_HEIGHT + (inSection - 1) * ROW_HEIGHT,
-            length: ROW_HEIGHT,
+            offset: section.start + section.header + section.rowOffsets[inSection - 1],
+            length: section.rowHeights[inSection - 1],
           };
         }
-        return { index: cellIndex, offset: offset + HEADER_HEIGHT + count * ROW_HEIGHT, length: 0 };
+        // SectionList reserves an empty footer slot after each section.
+        return { index: cellIndex, offset: section.start + section.total, length: 0 };
       }
-      offset += HEADER_HEIGHT + count * ROW_HEIGHT;
       cell += count + 2;
     }
-    return { index: cellIndex, offset, length: ROW_HEIGHT };
+    return { index: cellIndex, offset: 0, length: averageRowHeight() };
   };
 
   /**
@@ -582,9 +658,7 @@ export default function LibraryScreen() {
           if (!item?.hymn) {
             return `section:${(item as unknown as { key?: string })?.key ?? 'unknown'}`;
           }
-          return item.match
-            ? `${item.hymn.id}:${item.match.verseIndex}:${item.match.lineIndex}:${item.match.line}`
-            : item.hymn.id;
+          return libraryRowKey(item);
         }}
         stickySectionHeadersEnabled={order === 'alpha' && !trimmed}
         keyboardShouldPersistTaps="handled"
@@ -621,6 +695,7 @@ export default function LibraryScreen() {
         }
         renderSectionHeader={({ section }) => (
           <View
+            onLayout={(event) => recordHeaderHeight(section.key ?? 'section', event.nativeEvent.layout.height)}
             style={{
               paddingVertical: spacing.sm,
               paddingHorizontal: spacing.sm,
@@ -651,6 +726,7 @@ export default function LibraryScreen() {
             <HymnRow
               hymn={hymn}
               highlight={trimmed || undefined}
+              onMeasured={recordHeight}
               subtitle={
                 allBooks
                   ? t(`book.${hymn.book ?? 'main'}` as const)

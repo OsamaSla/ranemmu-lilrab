@@ -5,6 +5,7 @@
  * because it has to match the number printed in the book the reader is holding.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { memo } from 'react';
 import { Pressable, Text, View } from 'react-native';
 
 import { AppText } from './AppText';
@@ -25,15 +26,22 @@ interface HymnRowProps {
   highlight?: string;
   showStar?: boolean;
   onToggleFavorite?: () => void;
+  /**
+   * Reports the rendered height for the library's measured list layout.
+   * The callback is expected to be stable (the library passes a ref-based
+   * one) so memoisation of the row is not defeated.
+   */
+  onMeasured?: (id: string, height: number) => void;
 }
 
-export function HymnRow({
+export const HymnRow = memo(function HymnRow({
   hymn,
   onPress,
   subtitle,
   highlight,
   showStar = true,
   onToggleFavorite,
+  onMeasured,
 }: HymnRowProps) {
   const { colors } = useTheme();
   const { direction } = useT();
@@ -45,7 +53,10 @@ export function HymnRow({
   const numberBg = !hymn.book ? colors.primary : hymn.book === 'taranim' ? '#8A9A87' : hymn.book === 'book3' ? '#65AAC5' : colors.primary;
 
   return (
-    <Card padded={false} style={{ marginBottom: spacing.sm }}>
+    <Card
+      padded={false}
+      style={{ marginBottom: spacing.sm }}
+      onLayout={(event) => onMeasured?.(hymn.id, event.nativeEvent.layout.height)}>
       <View
         style={{
           flexDirection: direction.row,
@@ -118,4 +129,4 @@ export function HymnRow({
       </View>
     </Card>
   );
-}
+});
