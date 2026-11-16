@@ -1222,9 +1222,14 @@ export default function ReaderScreen() {
     </>
   );
 
-  if (fullscreen) {
-    return (
-      <Animated.View style={{ flex: 1, backgroundColor: palette.readerBg, opacity: fadeAnim }}>
+  return (
+    <Animated.View
+      style={{
+        flex: 1,
+        backgroundColor: fullscreen ? palette.readerBg : colors.canvas,
+        opacity: fullscreen ? fadeAnim : 1,
+      }}>
+      {fullscreen ? (
         <View
           style={{
             paddingTop: insets.top + spacing.sm,
@@ -1254,142 +1259,99 @@ export default function ReaderScreen() {
             </View>
           </View>
         </View>
-        {/* Body row: text scrolls on the left, stanza rail docks on the
-            physical right in its own column — never over the text. */}
-        <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
-          {/* Keyed by hymn: next/prev remounts, so every verse re-measures
-              for the rail and the new hymn opens at the top. */}
-          <ScrollView
-            key={`fs-${hymn.id}`}
-            ref={scrollRef}
-            onScroll={onReaderScroll}
-            scrollEventThrottle={16}
-            style={{ flex: 1 }}
-            contentContainerStyle={{
-              paddingHorizontal: spacing.xl,
-              paddingBottom: insets.bottom + spacing.xxl,
-              maxWidth: READER_MAX_WIDTH,
-              width: '100%',
-              alignSelf: 'center',
-            }}>
-            {versesView}
-          </ScrollView>
-          {stanzaRail(true)}
-        </View>
-        {searchOpen ? (
-          <ReaderSearchOverlay
-            onClose={() => setSearchOpen(false)}
-            onSelect={(nextId) => {
-              setSearchOpen(false);
-              router.push(`/hymn/${nextId}`);
-            }}
-            currentBook={hymn.book ?? 'main'}
-          />
-        ) : null}
-        <HymnInfoSheet hymn={infoHymn ? hymn : null} onClose={() => setInfoHymn(false)} />
-        <ReaderSettingsModal
-          visible={settingsOpen}
-          onClose={() => setSettingsOpen(false)}
-          hymn={hymn}
-        />
-        {fixOverlays}
-      </Animated.View>
-    );
-  }
-
-  return (
-    <View style={{ flex: 1, backgroundColor: colors.canvas }}>
-      {/* Header: back button (left), title + language chips (center/right), icon toolbar (right) */}
-      <View
-        style={{
-          paddingTop: insets.top + spacing.sm,
-          paddingBottom: spacing.sm,
-          paddingHorizontal: spacing.sm,
-          backgroundColor: colors.primaryDeep,
-        }}>
-        {/* Author credit, top corner — only when known. */}
-        {hymn.author || hymn.authorOriginal ? (
-          <AppText
-            variant="caption"
-            numberOfLines={1}
-            color={colors.onPrimary}
-            style={{ opacity: 0.75, fontSize: 11, textAlign: direction.textAlign, paddingHorizontal: spacing.sm }}>
-            {hymn.author ?? ''}
-            {hymn.author && hymn.authorOriginal ? ' · ' : ''}
-            {hymn.authorOriginal ?? ''}
-          </AppText>
-        ) : null}
-        <View style={{ flexDirection: direction.row, alignItems: 'flex-start' }}>
-          <IconButton
-            name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
-            label={t('common.back')}
-            color={colors.onPrimary}
-            onPress={goBack}
-          />
-          <View style={{ flex: 1, paddingHorizontal: spacing.xs }}>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center' }}>
-              <AppText
-                variant="heading"
-                numberOfLines={1}
-                color={colors.onPrimary}
-                style={{ fontWeight: '700', marginEnd: spacing.md, flexShrink: 1 }}>
-                {t('common.hymnNumber')} {hymn.number}
-              </AppText>
-              {languageChips(false)}
-            </View>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
-              {iconToolbar(false)}
-            </View>
-            {/* Topics under the title when classified. Tapping opens the
-                library filtered to the primary topic. */}
-            {allTopicsOf(hymn).length > 0 ? (
-              <Pressable
-                onPress={() => {
-                  const target = hymn.primaryTopic ?? allTopicsOf(hymn)[0];
-                  if (target) router.push(`/library?topic=${target}`);
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={t('info.topics')}
-                android_ripple={{ color: 'rgba(255,255,255,0.3)' }}>
+      ) : (
+        <View
+          style={{
+            paddingTop: insets.top + spacing.sm,
+            paddingBottom: spacing.sm,
+            paddingHorizontal: spacing.sm,
+            backgroundColor: colors.primaryDeep,
+          }}>
+          {hymn.author || hymn.authorOriginal ? (
+            <AppText
+              variant="caption"
+              numberOfLines={1}
+              color={colors.onPrimary}
+              style={{ opacity: 0.75, fontSize: 11, textAlign: direction.textAlign, paddingHorizontal: spacing.sm }}>
+              {hymn.author ?? ''}
+              {hymn.author && hymn.authorOriginal ? ' · ' : ''}
+              {hymn.authorOriginal ?? ''}
+            </AppText>
+          ) : null}
+          <View style={{ flexDirection: direction.row, alignItems: 'flex-start' }}>
+            <IconButton
+              name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
+              label={t('common.back')}
+              color={colors.onPrimary}
+              onPress={goBack}
+            />
+            <View style={{ flex: 1, paddingHorizontal: spacing.xs }}>
+              <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center' }}>
                 <AppText
-                  variant="caption"
+                  variant="heading"
                   numberOfLines={1}
                   color={colors.onPrimary}
-                  style={{ opacity: 0.85, textAlign: 'right', direction: 'rtl' }}>
-                  {t('info.topics')}:{' '}
-                  {allTopicsOf(hymn)
-                    .map((id) => t(`topic.${id}` as const))
-                    .join(' · ')}
+                  style={{ fontWeight: '700', marginEnd: spacing.md, flexShrink: 1 }}>
+                  {t('common.hymnNumber')} {hymn.number}
                 </AppText>
-              </Pressable>
-            ) : null}
+                {languageChips(false)}
+              </View>
+              <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
+                {iconToolbar(false)}
+              </View>
+              {allTopicsOf(hymn).length > 0 ? (
+                <Pressable
+                  onPress={() => {
+                    const target = hymn.primaryTopic ?? allTopicsOf(hymn)[0];
+                    if (target) router.push(`/library?topic=${target}`);
+                  }}
+                  accessibilityRole="button"
+                  accessibilityLabel={t('info.topics')}
+                  android_ripple={{ color: 'rgba(255,255,255,0.3)' }}>
+                  <AppText
+                    variant="caption"
+                    numberOfLines={1}
+                    color={colors.onPrimary}
+                    style={{ opacity: 0.85, textAlign: 'right', direction: 'rtl' }}>
+                    {t('info.topics')}:{' '}
+                    {allTopicsOf(hymn)
+                      .map((id) => t(`topic.${id}` as const))
+                      .join(' · ')}
+                  </AppText>
+                </Pressable>
+              ) : null}
+            </View>
           </View>
         </View>
-      </View>
-
-      {/* Body row: text keeps flex:1 on the left, the slim stanza rail
-          docks on the physical right in its own column — never over text. */}
+      )}
 
       <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
-        {/* Keyed by hymn: next/prev remounts, so every verse re-measures
-            for the rail and the new hymn opens at the top. */}
         <ScrollView
           key={hymn.id}
           ref={scrollRef}
           onScroll={onReaderScroll}
           scrollEventThrottle={16}
           style={{ flex: 1 }}
-          contentContainerStyle={{
-            flexGrow: 1,
-            padding: spacing.lg,
-            paddingBottom: insets.bottom + spacing.xxl,
-            maxWidth: READER_MAX_WIDTH,
-            width: '100%',
-            alignSelf: 'center',
-          }}>
+          contentContainerStyle={
+            fullscreen
+              ? {
+                  paddingHorizontal: spacing.xl,
+                  paddingBottom: insets.bottom + spacing.xxl,
+                  maxWidth: READER_MAX_WIDTH,
+                  width: '100%',
+                  alignSelf: 'center',
+                }
+              : {
+                  flexGrow: 1,
+                  padding: spacing.lg,
+                  paddingBottom: insets.bottom + spacing.xxl,
+                  maxWidth: READER_MAX_WIDTH,
+                  width: '100%',
+                  alignSelf: 'center',
+                }
+          }>
           {versesView}
-
-          {linked.length > 0 ? (
+          {!fullscreen && linked.length > 0 ? (
             <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
               <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
                 {t('reader.alsoIn')}
@@ -1405,8 +1367,7 @@ export default function ReaderScreen() {
               ))}
             </Card>
           ) : null}
-
-          {similar.length > 0 ? (
+          {!fullscreen && similar.length > 0 ? (
             <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
               <AppText variant="body" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
                 {t('reader.similar')}
@@ -1417,7 +1378,7 @@ export default function ReaderScreen() {
             </Card>
           ) : null}
         </ScrollView>
-        {stanzaRail(false)}
+        {stanzaRail(fullscreen)}
       </View>
 
       {searchOpen ? (
@@ -1437,6 +1398,6 @@ export default function ReaderScreen() {
         hymn={hymn}
       />
       {fixOverlays}
-    </View>
+    </Animated.View>
   );
 }

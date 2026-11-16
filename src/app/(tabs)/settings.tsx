@@ -4,7 +4,7 @@
  * Every control writes straight into the persisted stores, so there is no save
  * step to forget and leaving the screen never loses a change.
  */
-import { Alert, Pressable, ScrollView, View } from 'react-native';
+import { Pressable, ScrollView, View } from 'react-native';
 import Constants from 'expo-constants';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps, ReactNode } from 'react';
@@ -29,6 +29,7 @@ import {
   type ThemePreference,
 } from '../../store/settings';
 import { spacing } from '../../theme/tokens';
+import { confirmAction } from '../../utils/confirm';
 
 const APP_VERSION = Constants.expoConfig?.version ?? '1.0.0';
 
@@ -46,11 +47,14 @@ export default function SettingsScreen() {
   const setReaderSize = useSettings((s) => s.setReaderSize);
   const clearRecents = useLibrary((s) => s.clearRecents);
 
-  const confirmClearRecents = () =>
-    Alert.alert(t('recents.clear'), t('recents.emptyHint'), [
-      { text: t('common.cancel'), style: 'cancel' },
-      { text: t('common.ok'), style: 'destructive', onPress: clearRecents },
-    ]);
+  const confirmClearRecents = async () => {
+    const ok = await confirmAction(t('recents.clear'), t('recents.emptyHint'), {
+      confirmLabel: t('common.ok'),
+      cancelLabel: t('common.cancel'),
+      destructive: true,
+    });
+    if (ok) clearRecents();
+  };
 
   // Translations live per hymn in the reader now; the chrome stays Arabic.
   const percent = '٪';

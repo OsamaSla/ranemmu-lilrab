@@ -7,7 +7,7 @@
  * proofreading.
  */
 import { useState } from 'react';
-import { Alert, ScrollView, TextInput } from 'react-native';
+import { ScrollView, TextInput } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AdminButton } from '../../components/admin/AdminButton';
@@ -21,6 +21,7 @@ import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useOverrides } from '../../store/overrides';
 import { radius, spacing } from '../../theme/tokens';
+import { confirmAction } from '../../utils/confirm';
 
 function toNumber(raw: string): number | null {
   const digits = normalizeText(raw.trim());
@@ -52,26 +53,23 @@ export default function AdminHymnsScreen() {
     textAlign: direction.textAlign,
   } as const;
 
-  const doDelete = () => {
+  const doDelete = async () => {
     const n = toNumber(num);
     const target = n === null ? undefined : getSummaries().find((s) => s.number === n);
     if (!target) {
       setMsg(t('admin.notFound'));
       return;
     }
-    Alert.alert(t('admin.deleteConfirmTitle'), `${target.number}. ${target.title}`, [
-      { text: t('common.cancel'), style: 'cancel' },
-      {
-        text: t('admin.deleteHymn'),
-        style: 'destructive',
-        onPress: () => {
-          markDeleted(target.id);
-          void deleteHymnFromCloud(target.id);
-          setNum('');
-          setMsg(t('admin.deleted'));
-        },
-      },
-    ]);
+    const ok = await confirmAction(t('admin.deleteConfirmTitle'), `${target.number}. ${target.title}`, {
+      confirmLabel: t('admin.deleteHymn'),
+      cancelLabel: t('common.cancel'),
+      destructive: true,
+    });
+    if (!ok) return;
+    markDeleted(target.id);
+    void deleteHymnFromCloud(target.id);
+    setNum('');
+    setMsg(t('admin.deleted'));
   };
 
   return (

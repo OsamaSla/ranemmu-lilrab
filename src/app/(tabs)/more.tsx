@@ -8,7 +8,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps } from 'react';
 import { useMemo, useState } from 'react';
-import { Alert, Linking, Platform, Pressable, ScrollView, Share, View } from 'react-native';
+import { Linking, Platform, Pressable, ScrollView, Share, View } from 'react-native';
 import { useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
@@ -23,6 +23,7 @@ import { useOverrides } from '../../store/overrides';
 import { useRemote } from '../../store/remote';
 import type { TranslationKey } from '../../i18n';
 import { spacing } from '../../theme/tokens';
+import { notify } from '../../utils/confirm';
 
 type IconName = ComponentProps<typeof MaterialCommunityIcons>['name'];
 
@@ -44,7 +45,7 @@ export default function MoreScreen() {
 
   const [feedbackVisible, setFeedbackVisible] = useState(false);
 
-  const notConfigured = () => Alert.alert(t('more.title'), t('more.notConfigured'));
+  const notConfigured = () => notify(t('more.title'), t('more.notConfigured'));
 
   const corpusVersion = useOverrides((s) => s.updatedAt);
   const remoteVersion = useRemote((s) => s.updatedAt);
