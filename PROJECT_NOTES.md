@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit 049df18c (Session 11: prebuilt normalized search index + measured library row layout)
+Last verified: 2026-11-17, commit 3aec3d45 (Session 12: worship setlists shareable via ?ids= with in-set navigation)
 
 ## 1. What this is
 
@@ -1259,6 +1259,55 @@ writes nothing; a chip switch keeps the other draft.
 
 `tsc --noEmit` clean; `eslint` still reports only the pre-existing
 `react-hooks/set-state-in-effect` (§9).
+
+## 24. Worship setlists — `?ids=` (2026-11-17, Session 12)
+
+A setlist is just an **ordered row of hymn ids**; no backend, no schema. Two
+pieces of state, deliberately separate:
+
+- `src/store/setlist.ts` — persisted zustand store (`helmenarnam.setlist`) with
+  `ids`, `add` (returns false for a duplicate), `remove`, `move(index, ±1)`,
+  `set`, `clear`. Ids only, like favourites/recents, so a corpus rebuild cannot
+  invalidate it.
+- `src/data/setlist.ts` — pure helpers: `parseSetIds` (accepts a string or an
+  array from expo-router, splits on commas, drops non-slug/duplicate ids),
+  `encodeSetIds`, `setNeighbours` (resolves neighbour ids to summaries via
+  `getSummaries()`; `index === -1` means the hymn is not in the set).
+
+`src/app/(tabs)/setlist.tsx` (hidden tab route, reached from More →
+`more.setlist`) builds the list: search by number/title (instant from summaries)
+or lyrics (gated on `ensureAllChunks()` + `ensureSearchIndex()`, same as the
+reader overlay), add, up/down reorder, remove, clear (confirm), Share, and
+"read in order". Share composes `https://ranemmu-lilrab.web.app/setlist?ids=…`
+(the Firebase origin, as `more.tsx` does) and uses the clipboard fallback on
+desktop. Opening a shared link runs an effect keyed on the `ids` param that
+calls `set()` — the link wins on open, later local edits win after that.
+
+Reader integration (`src/app/(tabs)/hymn/[id].tsx`): reads `ids`, and when the
+current hymn is in the set, **replaces** `getNeighbours()` with
+`setNeighbours()`. prev/next buttons, `ArrowLeft/ArrowRight` and the swipe
+gestures all go through one `goToHymn()` that calls `router.replace` with
+`?ids=…` preserved (so a whole session stays in the set); a hymn reached by
+search/similar has no set param and falls back to book neighbours. A small
+`n/m` badge sits between the prev/next icons only while in a set. The overflow
+menu gained `playlist-plus` → "add current hymn to setlist".
+
+Gotchas verified in the browser on :8081 (0 console errors):
+
+- Expo Router URL-encodes the comma (`?ids=tr0001%2Cb30249`); the param still
+  arrives decoded, so splitting on `,` works. Do not "simplify" by scanning the
+  raw URL.
+- Adding a new route makes `npm run typecheck` fail with `"/setlist" is not
+  assignable to Href` until `.expo/types/router.d.ts` is regenerated. Start the
+  dev server once (`node node_modules/expo/bin/cli start --port 8081`) — the
+  generated file is gitignored and CI rebuilds it from the route files, so no
+  type file is committed.
+- Browser check: search "249" → 3 book results, add two, reorder swaps rows,
+  Start → `/hymn/tr0001?ids=…` with a `1/2` badge, next → `/hymn/b30249?ids=…`
+  badge `2/2`, prev back to `1/2`, a fresh `/setlist?ids=h0042,tr0005,h0100`
+  tab loads exactly those 3 hymns, reader overflow adds `tr0010` to the store.
+- `t()` takes **only a key** (`useT.ts`) — no interpolation; the count subtitle
+  is built as `` `${t('setlist.count')}: ${ids.length}` ``.
 
 
 
