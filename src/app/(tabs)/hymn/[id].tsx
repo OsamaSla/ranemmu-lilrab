@@ -36,6 +36,7 @@ import type { SegmentOption } from '../../../components/SegmentedControl';
 import { Toast } from '../../../components/Toast';
 import { ensureHymn, getHymn, getLinks, getNeighbours, getSummaries, isHymnPending } from '../../../data/loader';
 import { formatScriptureLine } from '../../../data/scriptures';
+import { encodeSetIds, parseSetIds, setNeighbours } from '../../../data/setlist';
 import { allTopicsOf } from '../../../data/topics';
 import { findSimilar } from '../../../data/search';
 import { bookLabelKey } from '../../../i18n';
@@ -43,6 +44,7 @@ import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
 import { useLibrary } from '../../../store/library';
 import { useOverrides } from '../../../store/overrides';
+import { useSetlist } from '../../../store/setlist';
 import { useRemote } from '../../../store/remote';
 import { useSettings } from '../../../store/settings';
 import { useGoBack } from '../../../hooks/useGoBack';
@@ -149,7 +151,7 @@ export function generateStaticParams(): { id: string }[] {
 export default function ReaderScreen() {
   const router = useRouter();
   const navigation = useNavigation();
-  const { id, verse } = useLocalSearchParams<{ id: string; verse?: string }>();
+  const { id, verse, ids: idsParam } = useLocalSearchParams<{ id: string; verse?: string; ids?: string }>();
   const { t, direction } = useT();
   const { colors, isDark } = useTheme();
   const insets = useSafeAreaInsets();
@@ -162,6 +164,8 @@ export default function ReaderScreen() {
 
   const [searchOpen, setSearchOpen] = useState(false);
   const [shareToast, setShareToast] = useState(false);
+  const [setlistToast, setSetlistToast] = useState<string | null>(null);
+  const dismissSetlistToast = useCallback(() => setSetlistToast(null), []);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
@@ -214,9 +218,35 @@ export default function ReaderScreen() {
   const corpusVersion = useOverrides((s) => s.updatedAt);
   // Re-renders when cloud edits stream in (getHymn above re-merges).
   const remoteVersion = useRemote((s) => s.updatedAt);
+  // A shared setlist rides in the `ids` query param. When the hymn belongs to
+  // that set, prev/next walk the set order instead of the printed book order;
+  // a single-hymn link (or a jump from search) simply has no set here.
+  const addToSetlist = useSetlist((s) => s.add);
+  const setIds = useMemo(() => parseSetIds(idsParam), [idsParam]);
+  const inSet = setIds.length > 0;
   // corpusVersion only retriggers these after admin edits land.
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const neighbours = useMemo(() => (id ? getNeighbours(id) : {}), [id, corpusVersion, remoteVersion]);
+  const corpusNeighbours = useMemo(() => (id ? getNeighbours(id) : {}), [id, corpusVersion, remoteVersion]);
+  const setNav = useMemo(
+    () => (id ? setNeighbours(setIds, id) : { index: -1, total: 0 }),
+    // corpusVersion/remoteVersion carry admin renames of the set's hymns.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [setIds, id, corpusVersion, remoteVersion],
+  );
+  const neighbours =
+    inSet && setNav.index >= 0
+      ? { previous: setNav.previous, next: setNav.next }
+      : corpusNeighbours;
+
+  /** Prev/next keep the setlist context on the URL so the sequence survives. */
+  const goToHymn = useCallback(
+    (targetId: string) => {
+      const query = inSet ? `?ids=${encodeSetIds(setIds)}` : '';
+      router.replace(`/hymn/${targetId}${query}`);
+    },
+    [inSet, setIds, router],
+  );
+
   const similar = useMemo(
     () =>
       hymn
@@ -249,11 +279,11 @@ export default function ReaderScreen() {
       switch (event.key) {
         case 'ArrowLeft':
           event.preventDefault();
-          if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+          if (neighbours.previous) goToHymn(neighbours.previous.id);
           break;
         case 'ArrowRight':
           event.preventDefault();
-          if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+          if (neighbours.next) goToHymn(neighbours.next.id);
           break;
         case '/':
           event.preventDefault();
@@ -287,7 +317,7 @@ export default function ReaderScreen() {
     };
     window.addEventListener('keydown', handler);
     return () => window.removeEventListener('keydown', handler);
-  }, [neighbours.previous, neighbours.next, searchOpen, overflowOpen, fullscreen, settingsOpen, infoHymn, router]);
+  }, [neighbours.previous, neighbours.next, goToHymn, searchOpen, overflowOpen, fullscreen, settingsOpen, infoHymn]);
 
   // The hymn body lives in a lazily imported chunk: show a loading shell
   // until it lands, then bump state so getHymn() sees the new chunk. This
@@ -597,12 +627,12 @@ export default function ReaderScreen() {
   const swipeLeft = Gesture.Fling()
     .direction(Directions.LEFT)
     .onEnd(() => {
-      if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+      if (neighbours.next) goToHymn(neighbours.next.id);
     });
   const swipeRight = Gesture.Fling()
     .direction(Directions.RIGHT)
     .onEnd(() => {
-      if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+      if (neighbours.previous) goToHymn(neighbours.previous.id);
     });
   const swipeGesture = Gesture.Race(swipeLeft, swipeRight);
 
@@ -724,10 +754,10 @@ export default function ReaderScreen() {
   const iconToolbar = (dark: boolean) => {
     const ink = dark ? palette.readerText : colors.onPrimary;
     const goPrev = () => {
-      if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+      if (neighbours.previous) goToHymn(neighbours.previous.id);
     };
     const goNext = () => {
-      if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+      if (neighbours.next) goToHymn(neighbours.next.id);
     };
     return (
       <View
@@ -747,6 +777,15 @@ export default function ReaderScreen() {
           dark,
           box: 36,
         })}
+        {inSet && setNav.index >= 0 ? (
+          <AppText
+            variant="label"
+            color={ink}
+            useAppFont={false}
+            style={{ minWidth: 38, textAlign: 'center', fontSize: 12, opacity: 0.85 }}>
+            {`${setNav.index + 1}/${setNav.total}`}
+          </AppText>
+        ) : null}
         {headerIcon({
           name: direction.isRTL ? 'chevron-left' : 'chevron-right',
           label: t('reader.next'),
@@ -1492,6 +1531,10 @@ export default function ReaderScreen() {
               { icon: 'information-outline', label: t('reader.info'), onPress: () => { setOverflowOpen(false); setInfoHymn(true); } },
               { icon: 'cog-outline', label: t('reader.settings'), onPress: () => { setOverflowOpen(false); setSettingsOpen(true); } },
               { icon: 'share-variant', label: t('reader.share'), onPress: () => { setOverflowOpen(false); shareHymn(); } },
+              { icon: 'playlist-plus', label: t('setlist.addCurrent'), onPress: () => {
+                setOverflowOpen(false);
+                setSetlistToast(addToSetlist(hymn.id) ? t('setlist.added') : t('setlist.alreadyAdded'));
+              } },
             ].map((item, idx) => (
               <Pressable
                 key={item.icon}
@@ -1521,6 +1564,13 @@ export default function ReaderScreen() {
         <Toast
           message={t('reader.copied')}
           onDismiss={() => setShareToast(false)}
+          bottom={insets.bottom + spacing.lg}
+        />
+      ) : null}
+      {setlistToast ? (
+        <Toast
+          message={setlistToast}
+          onDismiss={dismissSetlistToast}
           bottom={insets.bottom + spacing.lg}
         />
       ) : null}

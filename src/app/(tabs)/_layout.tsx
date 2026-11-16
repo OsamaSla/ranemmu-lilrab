@@ -97,6 +97,7 @@ export default function TabsLayout() {
       <Tabs.Screen name="library" options={{ href: null, title: t('library.title') }} />
       <Tabs.Screen name="structure" options={{ href: null, title: t('structure.title') }} />
       <Tabs.Screen name="favorites" options={{ href: null, title: t('favorites.title') }} />
+      <Tabs.Screen name="setlist" options={{ href: null, title: t('setlist.title') }} />
       <Tabs.Screen name="settings" options={{ href: null, title: t('settings.title') }} />
       <Tabs.Screen name="hymn/[id]" options={{ href: null, title: t('common.hymnNumber') }} />
       <Tabs.Screen name="admin" options={{ href: null, title: t('admin.title') }} />

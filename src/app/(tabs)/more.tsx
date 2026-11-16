@@ -81,6 +81,7 @@ export default function MoreScreen() {
   }[] = [
     { icon: 'chart-bar', label: 'more.structure', onPress: () => router.push('/structure') },
     { icon: 'star-outline', label: 'more.favorites', onPress: () => router.push('/favorites') },
+    { icon: 'playlist-play', label: 'more.setlist', onPress: () => router.push('/setlist') },
     {
       icon: 'cog-outline',
       label: 'more.settings',
