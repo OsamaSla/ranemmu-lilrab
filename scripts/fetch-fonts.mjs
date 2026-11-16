@@ -34,6 +34,17 @@ const FAMILIES = [
   { dir: 'marhey', slug: 'Marhey', label: 'Marhey', wanted: ['Marhey-Regular.ttf', 'Marhey-Bold.ttf'] },
   { dir: 'katibeh', slug: 'Katibeh', label: 'Katibeh', wanted: ['Katibeh-Regular.ttf'] },
   { dir: 'rakkas', slug: 'Rakkas', label: 'Rakkas', wanted: ['Rakkas-Regular.ttf'] },
+  {
+    // OFL Hebrew liturgical face with full GPOS niqqud positioning. The source
+    // is a variable font (wdth + wght); instance both axes to static weights and
+    // subset to the Hebrew block + marks so the shipped face stays tiny.
+    dir: 'notosanshebrew',
+    slug: 'NotoSansHebrew',
+    label: 'NotoSansHebrew',
+    wanted: ['NotoSansHebrew-Regular.ttf', 'NotoSansHebrew-Bold.ttf'],
+    subsetUnicodes: 'U+0020-007E,U+0590-05FF,U+FB1D-FB4F',
+    instanceAxes: (weight) => `wdth=100 ${weight}`,
+  },
 ];
 
 /** Maps our `-Regular` / `-Bold` output names onto an instancer weight. */
@@ -63,12 +74,14 @@ async function download(url) {
   return bytes;
 }
 
-/** Bake a single weight out of a variable font using fontTools. */
-function instance(vfPath, outPath, weight) {
+/** Bake static instances out of a variable font using fontTools. Axes are
+ *  pinned at their default width (wdth=100) plus a weight, e.g. "wdth=100 wght=400". */
+function instance(vfPath, outPath, axes) {
+  const axisArgs = axes.split(' ').map((a) => `${a}`);
   try {
     execFileSync(
       'python',
-      ['-m', 'fontTools.varLib.instancer', vfPath, `wght=${weight}`, '-o', outPath],
+      ['-m', 'fontTools.varLib.instancer', vfPath, ...axisArgs, '-o', outPath],
       { stdio: 'pipe' },
     );
   } catch (err) {
@@ -76,6 +89,23 @@ function instance(vfPath, outPath, weight) {
     throw new Error(`fontTools instancing failed for ${outPath}:\n${detail}`);
   }
 }
+
+/**
+ * Subset a font down to the ranges the app actually types: Hebrew (U+0590–
+ * U+05FF plus the Hebrew presentation forms used by niqqud marks) and basic
+ * Latin. Everything else is dropped; GPOS is kept (`*` keeps ligatures and
+ * mark positioning) so the vocalised points stay on the letters.
+ */
+function subset(vfPath, outPath, unicodes) {
+  execFileSync(
+    'python',
+    ['-m', 'fontTools.subset', vfPath, `--unicodes=${unicodes}`, '--layout-features=*', '--no-hinting', '--output-file', outPath],
+    { stdio: 'pipe' },
+  );
+}
+
+/** The Unicode ranges the subsetter keeps: Hebrew block, marks, direction/punct marks. */
+const HEBREW_UNICODES = 'U+0020-007E,U+0590-05FF,U+FB1D-FB4F';
 
 async function main() {
   await rm(TMP_DIR, { recursive: true, force: true });
@@ -101,12 +131,15 @@ async function main() {
         const bytes = await download(RAW(family.dir, hasStatic && !rootFiles.includes(direct) ? `static/${direct}` : direct));
         await writeFile(outPath, bytes);
       } else if (variable) {
-        // Variable-only family: download once, then instance each weight.
+        // Variable-only family: download once, then instance each weight and
+        // subset to the ranges this app actually types.
         const vfPath = join(TMP_DIR, variable.replace(/[^\w.-]/g, '_'));
         if (!(await readdir(TMP_DIR)).includes(vfPath.split(/[\\/]/).pop())) {
           await writeFile(vfPath, await download(RAW(family.dir, variable)));
         }
-        instance(vfPath, outPath, WEIGHT_OF[/-Bold\.ttf$/.test(name) ? 'Bold' : 'Regular']);
+        const weight = WEIGHT_OF[/-Bold\.ttf$/.test(name) ? 'Bold' : 'Regular'];
+        instance(vfPath, outPath, family.instanceAxes ? family.instanceAxes(weight) : `wght=${weight}`);
+        subset(vfPath, outPath, family.subsetUnicodes ?? 'U+0020-007E');
       } else {
         throw new Error(`${family.slug}: no static file named ${name} and no variable font to instance`);
       }

@@ -48,5 +48,15 @@
     "file": "Rakkas-Regular.ttf",
     "family": "Rakkas",
     "slug": "Rakkas"
+  },
+  {
+    "file": "NotoSansHebrew-Regular.ttf",
+    "family": "NotoSansHebrew",
+    "slug": "NotoSansHebrew"
+  },
+  {
+    "file": "NotoSansHebrew-Bold.ttf",
+    "family": "NotoSansHebrew",
+    "slug": "NotoSansHebrew"
   }
 ]
