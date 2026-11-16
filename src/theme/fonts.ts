@@ -18,6 +18,8 @@ export interface FontFamily {
   regular: string;
   /** Registered family name for bold text, or null when only one weight exists. */
   bold: string | null;
+  /** Line-height ratio (leading) for this family. */
+  lineRatio: number;
 }
 
 /**
@@ -25,17 +27,17 @@ export interface FontFamily {
  * Latin script, and matching it keeps the chips recognisable across locales.
  */
 export const FONT_FAMILIES: FontFamily[] = [
-  { id: 'cairo', label: 'Cairo', regular: 'Cairo', bold: 'Cairo-Bold' },
-  { id: 'amiri', label: 'Amiri', regular: 'Amiri', bold: 'Amiri-Bold' },
-  { id: 'scheherazade', label: 'Scheherazade', regular: 'ScheherazadeNew', bold: 'ScheherazadeNew-Bold' },
-  { id: 'marhey', label: 'Marhey', regular: 'Marhey', bold: 'Marhey-Bold' },
-  { id: 'katibeh', label: 'Katibeh', regular: 'Katibeh', bold: null },
-  { id: 'rakkas', label: 'Rakkas', regular: 'Rakkas', bold: null },
+  { id: 'cairo', label: 'Cairo', regular: 'Cairo', bold: 'Cairo-Bold', lineRatio: 1.6 },
+  { id: 'amiri', label: 'Amiri', regular: 'Amiri', bold: 'Amiri-Bold', lineRatio: 1.8 },
+  { id: 'scheherazade', label: 'Scheherazade', regular: 'ScheherazadeNew', bold: 'ScheherazadeNew-Bold', lineRatio: 2.0 },
+  { id: 'marhey', label: 'Marhey', regular: 'Marhey', bold: 'Marhey-Bold', lineRatio: 1.6 },
+  { id: 'katibeh', label: 'Katibeh', regular: 'Katibeh', bold: null, lineRatio: 1.6 },
+  { id: 'rakkas', label: 'Rakkas', regular: 'Rakkas', bold: null, lineRatio: 1.6 },
 ];
 
 export const DEFAULT_FONT_ID = 'cairo';
 
-function getFontFamily(id: string): FontFamily {
+export function getFontFamily(id: string): FontFamily {
   return FONT_FAMILIES.find((f) => f.id === id) ?? FONT_FAMILIES[0];
 }
 

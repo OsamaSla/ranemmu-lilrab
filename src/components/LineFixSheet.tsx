@@ -356,7 +356,7 @@ export function LineFixSheet({
                         // positioning, so Hebrew stays on the platform font and
                         // gets the taller leading the editor uses.
                         fontSize: translationSize + 2,
-                        lineHeight: 26,
+                        lineHeight: Math.round((translationSize + 2) * 1.7),
                         textAlign: 'right' as const,
                         writingDirection: 'rtl' as const,
                       }

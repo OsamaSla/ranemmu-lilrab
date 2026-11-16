@@ -5,7 +5,7 @@ import { useColorScheme } from 'react-native';
 import { useMemo } from 'react';
 
 import { useSettings } from '../store/settings';
-import { fontFamilyFor, type as typeScale } from '../theme/fonts';
+import { fontFamilyFor, getFontFamily, type as typeScale } from '../theme/fonts';
 import { themes, type ThemeColors } from '../theme/tokens';
 
 export interface AppTheme {
@@ -21,6 +21,8 @@ export interface AppTheme {
   fontFamily: string;
   /** Font family name for bold chrome text. */
   fontFamilyBold: string;
+  /** Line-height ratio for the selected font family. */
+  lineRatio: number;
 }
 
 export function useTheme(): AppTheme {
@@ -40,6 +42,7 @@ export function useTheme(): AppTheme {
       ) as typeof typeScale,
       fontFamily: fontFamilyFor(fontId, false),
       fontFamilyBold: fontFamilyFor(fontId, true),
+      lineRatio: getFontFamily(fontId).lineRatio,
     };
   }, [scheme, themePreference, appScale, fontId]);
 }

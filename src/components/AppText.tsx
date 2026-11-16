@@ -29,14 +29,14 @@ export function AppText({
   style,
   ...rest
 }: AppTextProps) {
-  const { colors, type, fontFamily, fontFamilyBold } = useTheme();
+  const { colors, type, fontFamily, fontFamilyBold, lineRatio } = useTheme();
   const { direction } = useT();
 
   const weight: TextStyle['fontWeight'] = variant === 'display' || variant === 'title' ? '700' : '400';
 
   const composed: TextStyle = {
     fontSize: type[variant],
-    lineHeight: Math.round(type[variant] * 1.5),
+    lineHeight: Math.round(type[variant] * lineRatio),
     color: color ?? colors.text,
     textAlign: center ? 'center' : direction.textAlign,
     writingDirection: direction.dir,

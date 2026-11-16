@@ -21,6 +21,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
 import { Animated, Pressable, ScrollView, Share, Text as RNText, View, useWindowDimensions, type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
+import { useKeepAwake } from 'expo-keep-awake';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../../components/AppText';
@@ -157,6 +158,7 @@ export default function ReaderScreen() {
   // same gate the admin editor and the settings sheet's edit button use.
   const canEdit = useCanEdit();
   const { height: windowHeight } = useWindowDimensions();
+  useKeepAwake('reader');
 
   const [searchOpen, setSearchOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
@@ -929,9 +931,9 @@ export default function ReaderScreen() {
                 // so the refrain is set heavier than the stanza numbers.
                 fontWeight: verseBlock.chorus ? '700' : undefined,
                 fontSize: headingSize,
-                // Only the refrain needs its own leading: it is larger than the
-                // numbers, and the label's line box would clip it on Android.
-                lineHeight: verseBlock.chorus ? Math.round(headingSize * 1.4) : undefined,
+                // Scale leading with the font so diacritics are never clipped,
+                // whether the heading is a stanza number or a refrain.
+                lineHeight: Math.round(headingSize * (verseBlock.chorus ? 1.4 : 1.5)),
                 marginBottom: spacing.xs,
                 opacity: fullscreen ? 0.85 : 1,
                 ...(verseBlock.chorus
