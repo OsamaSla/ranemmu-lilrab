@@ -558,6 +558,17 @@ and keep committing per step.
   `hasHe` on `HymnSummary` (emitted by `scripts/build-corpus.mjs`). Any content
   change needs `npm run build:corpus`; `validate.mjs` checks that `verses_he`
   mirrors the Arabic stanza/line grid one-to-one.
+- Reader disclaimer (2026-11-16): the Hebrew view prints
+  «התרגום העברי הזה נעשה על ידי בינה מלאכותית ואינו אמין ב־100% — הוא נותן רק את
+  הרעיון המרכזי של המזמור» above stanza 1, next to the scripture line.
+  `TRANSLATION_NOTES` in `src/app/(tabs)/hymn/[id].tsx` holds one note per viewed
+  language; the Hebrew one is **always** shown, while EN/DE are gated on
+  `translationStatus === 'AI_DRAFT'` and come with a badge. Why: that status is
+  one flag per record (set by the EN/DE review), so a "Verified" badge over the
+  Hebrew would claim a review the Hebrew never had — the note is the honest
+  thing to print. The note mixes Hebrew with "AI" and "100%", so it needs
+  `writingDirection: 'rtl'`; with the default LTR base the digits and the dash
+  land on the wrong side (checked via Range rects: first char x 260 > last 40).
 - Authoring lives in `content/hebrew/taranim/NNNN.json`
   (`{book, number, title_he, verses_he, chorus_he?, review[]}`), **not** in the
   corpus. `scripts/hebrew-apply.mjs` validates (book, stanza count, labels,

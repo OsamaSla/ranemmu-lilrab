@@ -72,12 +72,17 @@ type ReaderLang = 'ar' | 'en' | 'de' | 'he';
 /**
  * AI-translation disclaimer, always in the language being viewed (not the
  * UI language): English readers get the English note, German readers the
- * German one. Arabic needs none — it is the original text — and Hebrew needs
- * none either, because it is a human translation, not an AI draft.
+ * German one, Hebrew readers the Hebrew one. Arabic needs none — it is the
+ * original text.
+ *
+ * Hebrew has no per-language status (`translationStatus` is one flag for the
+ * whole record and is set by the EN/DE review), so its note is not gated on
+ * that flag: it always shows, and no badge accompanies it.
  */
 const TRANSLATION_NOTES = {
   en: 'This English translation was made by AI and is not 100% reliable — it only gives the main idea of the hymn.',
   de: 'Diese deutsche Übersetzung wurde von einer KI erstellt und ist nicht zu 100 % zuverlässig — sie gibt nur die Hauptidee des Liedes wieder.',
+  he: 'התרגום העברי הזה נעשה על ידי בינה מלאכותית ואינו אמין ב־100% — הוא נותן רק את הרעיון המרכזי של המזמור.',
 } as const;
 
 /**
@@ -661,8 +666,10 @@ export default function ReaderScreen() {
 
   const versesView = (
     <>
-      {/* The AI badge only applies to the machine-made en/de drafts. Hebrew is
-          human-authored, so it renders with no badge and no disclaimer. */}
+      {/* The AI badge only applies to the machine-made en/de drafts: its text
+          comes from `translationStatus`, which is one flag for the whole
+          record, so printing it over the Hebrew would claim a review the
+          Hebrew never had. Hebrew gets the disclaimer alone. */}
       {parallel === 'en' || parallel === 'de' ? (
         <View style={{ alignItems: 'center', marginBottom: spacing.md }}>
           <View
@@ -717,6 +724,24 @@ export default function ReaderScreen() {
             </AppText>
           ) : null}
         </View>
+      ) : parallel === 'he' ? (
+        /* Hebrew disclaimer, in Hebrew and set right-to-left: the note mixes
+           Hebrew with "AI" and "100%", and without an RTL base direction the
+           numbers and the dash land on the wrong side of the sentence. */
+        <AppText
+          variant="caption"
+          center
+          color={fullscreen ? palette.readerText : colors.textMuted}
+          style={{
+            opacity: fullscreen ? 0.75 : 1,
+            marginBottom: spacing.md,
+            paddingHorizontal: spacing.md,
+            writingDirection: 'rtl',
+            textAlign: 'center',
+            lineHeight: 20,
+          }}>
+          {TRANSLATION_NOTES.he}
+        </AppText>
       ) : null}
       {/* Where the hymn is founded in scripture: one small centred line above
           the first stanza, in Arabic whatever the UI language. Deliberately
