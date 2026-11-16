@@ -9,7 +9,7 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { getApps, initializeApp, type FirebaseApp } from 'firebase/app';
 import * as FirebaseAuth from 'firebase/auth';
-import { getFirestore, type Firestore } from 'firebase/firestore';
+import { getFirestore, initializeFirestore, persistentLocalCache, persistentMultipleTabManager, type Firestore } from 'firebase/firestore';
 import { Platform } from 'react-native';
 
 const firebaseConfig = {
@@ -88,6 +88,18 @@ export function getFirebaseAuth(): FirebaseAuth.Auth | null {
 export function getFirebaseDb(): Firestore | null {
   const a = getApp();
   if (!a) return null;
-  if (!db) db = getFirestore(a);
+  if (!db) {
+    if (Platform.OS === 'web') {
+      try {
+        db = initializeFirestore(a, {
+          localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
+        });
+      } catch {
+        db = getFirestore(a);
+      }
+    } else {
+      db = getFirestore(a);
+    }
+  }
   return db;
 }

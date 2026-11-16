@@ -17,6 +17,7 @@ import { IconButton } from '../../components/IconButton';
 import { SegmentedControl } from '../../components/SegmentedControl';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { ensureAllChunks } from '../../data/loader';
 import { useLibrary } from '../../store/library';
 import {
   APP_SCALE_MAX,
@@ -29,7 +30,7 @@ import {
   type ThemePreference,
 } from '../../store/settings';
 import { spacing } from '../../theme/tokens';
-import { confirmAction } from '../../utils/confirm';
+import { confirmAction, notify } from '../../utils/confirm';
 
 const APP_VERSION = Constants.expoConfig?.version ?? '1.0.0';
 
@@ -111,6 +112,15 @@ export default function SettingsScreen() {
             label={t('recents.clear')}
             destructive
             onPress={confirmClearRecents}
+          />
+          <IconRowButton
+            icon="download"
+            label="Download for offline use"
+            onPress={() => {
+              void ensureAllChunks()
+                .then(() => notify('Offline', 'All hymns downloaded.'))
+                .catch(() => notify('Offline', 'Download failed.'));
+            }}
           />
         </Section>
 

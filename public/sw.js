@@ -1,28 +1,54 @@
-/* Inert service worker — no fetch handler, no caching.
- *
- * Up to v3 this file was an offline worker that answered navigation requests
- * from `ranemmu-pages-v3` and static assets from `ranemmu-static-v3`. A cached
- * app shell could then hydrate against a newer JS bundle, which React reports
- * as error #418 ("server rendered HTML didn't match the client") and silently
- * throws away: exactly the kind of one-off error seen right after a deploy.
- *
- * This version clears those legacy caches once and then stays idle. The
- * registration in src/app/+html.tsx is kept so browsers pick this file up as
- * an update; new visitors install it, find no caches, and nothing runs.
- */
-self.addEventListener('install', () => {
-  self.skipWaiting();
-});
+/* public/sw.js — v4: network-first pages, cache-first hashed assets */
+const VERSION = 'v4';
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil(
+const STATIC = `ranemmu-static-${VERSION}`;
+const PAGES = `ranemmu-pages-${VERSION}`;
+const SCOPE = self.registration.scope;
+
+self.addEventListener('install', () => self.skipWaiting());
+
+self.addEventListener('activate', (e) =>
+  e.waitUntil(
     caches
       .keys()
       .then((keys) =>
         Promise.all(
-          keys.filter((key) => key.startsWith('ranemmu-')).map((key) => caches.delete(key)),
+          keys
+            .filter((k) => k.startsWith('ranemmu-') && k !== STATIC && k !== PAGES)
+            .map((k) => caches.delete(k)),
         ),
       )
       .then(() => self.clients.claim()),
-  );
+  ),
+);
+
+async function networkFirst(req) {
+  const cache = await caches.open(PAGES);
+  try {
+    const res = await Promise.race([
+      fetch(req),
+      new Promise((_, rej) => setTimeout(rej, 4000)),
+    ]);
+    if (res.ok) cache.put(req, res.clone());
+    return res;
+  } catch {
+    return (await cache.match(req)) || (await cache.match(SCOPE)) || Response.error();
+  }
+}
+
+async function cacheFirst(req) {
+  const cache = await caches.open(STATIC);
+  const hit = await cache.match(req);
+  if (hit) return hit;
+  const res = await fetch(req);
+  if (res.ok) cache.put(req, res.clone());
+  return res;
+}
+
+self.addEventListener('fetch', (e) => {
+  const { request: req } = e;
+  if (req.method !== 'GET' || !req.url.startsWith(SCOPE)) return;
+  if (req.mode === 'navigate') return e.respondWith(networkFirst(req));
+  const path = new URL(req.url).pathname;
+  if (path.includes('/_expo/static/') || path.includes('/assets/')) e.respondWith(cacheFirst(req));
 });
