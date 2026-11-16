@@ -1,0 +1,24 @@
+{
+  "book": "book3",
+  "number": 36,
+  "title_he": "אָשִׁירָה לְךָ, פּוֹדִי הֶחָבִיב",
+  "verses_he": [
+    {
+      "label": "١",
+      "lines": [
+        "אָשִׁירָה לְךָ, פּוֹדִי הֶחָבִיב · אֶעֶבְדְּךָ כָּל יְמֵי חַיַּי",
+        "אַתָּה אֱלֹהַי, אַתָּה אֲדֹנִי · יְשׁוּעָתִי וּמַחֲסֶה נֶאֱמָן",
+        "בְּךָ רֶוַח וְנִצָּחוֹן בָּרוּר",
+        "בְּךָ שִׂמְחָתִי וּבְרִיתִי הַיְחִידָה",
+        "בְּךָ שְׁלוֹמִי וּמִבְצָרִי הֶחָזָק",
+        "אָשִׁירָה לְךָ, פּוֹדִי הֶחָבִיב · אֶעֶבְדְּךָ כָּל יְמֵי חַיַּי",
+        "אַתָּה אֱלֹהַי, אַתָּה אֲדֹנִי · יְשׁוּעָתִי וּמַחֲסֶה נֶאֱמָן"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–7 the print repeats the first two lines at the close (lines 6–7); the Hebrew keeps the repetition as a seal, which is the hymn's own shape.",
+    "1:3–5 בְּךָ רֶוַח וְנִצָּחוֹן בָּרוּר / בְּךָ שִׂמְחָתִי וּבְרִיתִי הַיְחִידָה / בְּךָ שְׁלוֹמִי וּמִבְצָרִי הֶחָזָק — the Arabic has four short 'in Thee' lines (profit/certain victory, joy/purest fount, peace/strong defense); Hebrew compresses to three short lines, dropping the 'fount' image to keep the metre.",
+    "1:2 מַחֲסֶה נֶאֱמָן — the Arabic ستري الوطيد ('firm abode') is rendered with the biblical מַחֲסֶה (refuge, as in Ps 46:2) and נֶאֱמָן (faithful)."
+  ]
+}
