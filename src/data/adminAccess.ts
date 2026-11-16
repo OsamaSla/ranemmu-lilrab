@@ -10,7 +10,12 @@
  * Configure with `EXPO_PUBLIC_ADMIN_EMAILS` (comma-separated). The fallback is
  * the owner account so a build without the variable still works as before.
  */
-const RAW = process.env.EXPO_PUBLIC_ADMIN_EMAILS ?? 'osama.sla@gmail.com';
+// The EXPO_PUBLIC_* ambient types come from expo-env.d.ts, which Expo generates
+// locally but is gitignored — CI's typecheck step runs before any export has
+// regenerated it, so process.env.X is `any` there. Cast explicitly so the
+// callback below stays typed in both environments.
+const RAW: string =
+  (process.env.EXPO_PUBLIC_ADMIN_EMAILS as string | undefined) ?? 'osama.sla@gmail.com';
 
 /** Lower-cased admin addresses; Firebase stores e-mail addresses lower-cased. */
 const ADMIN_EMAILS: string[] = RAW.split(',')

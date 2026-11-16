@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit 380e73f3 (Session 13 + admin Hebrew review queue fix)
+Last verified: 2026-11-17, CI typecheck fix for the gitignored `expo-env.d.ts`
 
 ## 1. What this is
 
@@ -197,10 +197,15 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 
 ## 8. Verified gotchas
 
-- `npx tsc --noEmit` is clean with the restored `tsconfig.json`. An earlier run
-  with an ad-hoc `tsconfig.tmpcheck.json` reported an implicit `any` at
-  `src/data/adminAccess.ts:17`; it does not reproduce with the restored config,
-  so do not chase it.
+- `npx tsc --noEmit` is clean locally **because `expo-env.d.ts` exists locally**.
+  That file is gitignored (Expo generates it on `start`/`export`), and
+  `build:web` runs `typecheck` first — so on a fresh CI clone
+  `process.env.EXPO_PUBLIC_*` is `any` and `adminAccess.ts` used to fail with
+  `TS7006: Parameter 'value' implicitly has an 'any' type` (line 17). Fixed at
+  source: the env read is cast to `string | undefined` with an explicit local
+  annotation. Verified with `expo-env.d.ts` temporarily renamed away, which
+  reproduces the old error and passes after the fix. Any new
+  `process.env.EXPO_PUBLIC_*` read that feeds a callback needs the same cast.
 - `git log --all` contains an unrelated branch commit `33c8011` that deleted
   most of the repo including `tsconfig.json` — do not use it as a baseline.
 - `HymnRow` height varies (1 or 2 title lines), so `getItemLayout` is an
