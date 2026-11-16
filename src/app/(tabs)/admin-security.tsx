@@ -15,7 +15,7 @@ import { AdminButton } from '../../components/admin/AdminButton';
 import { AdminScreenShell } from '../../components/admin/AdminScreenShell';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
-import { isFirebaseConfigured } from '../../data/firebase';
+import { isFirebaseConfigured } from '../../data/firebaseConfig';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useSettings } from '../../store/settings';

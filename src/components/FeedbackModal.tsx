@@ -13,7 +13,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { AppBar } from './AppBar';
 import { AppText } from './AppText';
 import { Card } from './Card';
-import { submitFeedback, type FeedbackError } from '../data/feedback';
+import type { FeedbackError } from '../data/feedback';
 import type { TranslationKey } from '../i18n';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -77,8 +77,9 @@ export function FeedbackModal({ visible, onClose }: { visible: boolean; onClose:
   const submit = async () => {
     if (rating < 1 || phase === 'sending' || phase === 'success') return;
     setPhase('sending');
-    let result: Awaited<ReturnType<typeof submitFeedback>>;
+    let result: Awaited<ReturnType<typeof import('../data/feedback').submitFeedback>>;
     try {
+      const { submitFeedback } = await import('../data/feedback');
       result = await submitFeedback({ rating, category, comment: comment.trim() });
     } catch {
       // getFirebaseDb() itself can throw on a broken Firebase config.

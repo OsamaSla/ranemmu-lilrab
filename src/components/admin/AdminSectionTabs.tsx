@@ -15,7 +15,7 @@ import { Pressable, ScrollView, View } from 'react-native';
 import { useRouter, type Href } from 'expo-router';
 
 import { AppText } from '../AppText';
-import { isFirebaseConfigured } from '../../data/firebase';
+import { isFirebaseConfigured } from '../../data/firebaseConfig';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { radius, spacing } from '../../theme/tokens';

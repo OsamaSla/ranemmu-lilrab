@@ -30,8 +30,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from './AppText';
 import { IconButton } from './IconButton';
-import { getFirebaseAuth, isFirebaseConfigured } from '../data/firebase';
-import { syncHymnToCloud } from '../data/liveSync';
+import { isFirebaseConfigured } from '../data/firebaseConfig';
 import type { Hymn } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
@@ -190,15 +189,17 @@ export function LineFixSheet({
     // Local save is the source of truth in a live setting; the upload is
     // reported afterwards, never awaited before closing the sheet.
     const sync = (async (): Promise<FixSyncState> => {
+      const { syncHymnToCloud } = await import('../data/liveSync');
       const uploaded = await syncHymnToCloud(hymn.id, patch);
       if (!isFirebaseConfigured) return 'local';
       if (uploaded) return 'uploaded';
+      const { getFirebaseAuth } = await import('../data/firebase');
       return getFirebaseAuth()?.currentUser ? 'failed' : 'noauth';
     })();
     onSaved({
       undo: () => {
         setOverride(hymn.id, before);
-        void syncHymnToCloud(hymn.id, before);
+        void import('../data/liveSync').then(({ syncHymnToCloud }) => syncHymnToCloud(hymn.id, before));
       },
       sync,
     });

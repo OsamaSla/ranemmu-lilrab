@@ -15,7 +15,7 @@
  * this hook so the gates cannot drift apart again.
  */
 import { isAdminEmail } from '../data/adminAccess';
-import { isFirebaseConfigured } from '../data/firebase';
+import { isFirebaseConfigured } from '../data/firebaseConfig';
 import { useAdminGate } from '../store/adminGate';
 import { useSession } from '../store/session';
 

@@ -14,7 +14,6 @@ import { useAppUpdateCheck } from '../hooks/useAppUpdateCheck';
 import { useTheme } from '../hooks/useTheme';
 import { DEFAULT_LOCALE, isRTL } from '../i18n';
 import { useAppFonts } from '../theme/fonts';
-import { flushPendingUploads, startLiveSync } from '../data/liveSync';
 import { useSession } from '../store/session';
 import { useSettings } from '../store/settings';
 
@@ -44,16 +43,28 @@ export default function RootLayout() {
   }, [fontsReady]);
 
   // Firebase admin session + live hymn sync. Both no-op offline or before
-  // the owner configures Firebase — the bundled corpus carries the app.
+  // the owner configures Firebase — the bundled corpus carries the app. The
+  // Firestore SDK and the publish/feedback code behind liveSync are imported
+  // only here, so a reader's entry bundle does not download them up front.
   useEffect(() => {
     const stopSession = useSession.getState().init();
-    const stopSync = startLiveSync();
-    // Push anything that never reached the cloud (a save while offline or
-    // signed out). Verified server-side, so a success here is a real success.
-    void flushPendingUploads();
+    let cancelled = false;
+    let stopSync: (() => void) | undefined;
+    void import('../data/liveSync')
+      .then(({ startLiveSync, flushPendingUploads }) => {
+        if (cancelled) return;
+        stopSync = startLiveSync();
+        // Push anything that never reached the cloud (a save while offline or
+        // signed out). Verified server-side, so a success here is a real one.
+        void flushPendingUploads();
+      })
+      .catch(() => {
+        /* Offline builds run entirely on the bundled corpus. */
+      });
     return () => {
+      cancelled = true;
       stopSession();
-      stopSync();
+      stopSync?.();
     };
   }, []);
 
@@ -61,7 +72,10 @@ export default function RootLayout() {
   // soon as one exists (startup already ran, possibly before the session was
   // restored).
   useEffect(() => {
-    if (sessionUser) void flushPendingUploads();
+    if (!sessionUser) return;
+    void import('../data/liveSync')
+      .then(({ flushPendingUploads }) => flushPendingUploads())
+      .catch(() => {});
   }, [sessionUser]);
 
   if (!fontsReady) return null;

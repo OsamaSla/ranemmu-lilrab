@@ -18,7 +18,7 @@ import { ScrollView, TextInput, View } from 'react-native';
 import { AdminButton } from './AdminButton';
 import { AppText } from '../AppText';
 import { Card } from '../Card';
-import { isFirebaseConfigured } from '../../data/firebase';
+import { isFirebaseConfigured } from '../../data/firebaseConfig';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useAdminGate } from '../../store/adminGate';

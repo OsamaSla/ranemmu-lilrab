@@ -4,11 +4,29 @@
  * Not persisted by us — Firebase Auth persists the session itself
  * (AsyncStorage on native, localStorage on web). This store just mirrors
  * the current user so screens can gate editing and show who is signed in.
+ *
+ * The Auth SDK (and the Firebase bootstrap it needs) is imported dynamically.
+ * `useCanEdit` subscribes to this store on every screen, including the reader,
+ * so a static `firebase/auth` import here would put the whole SDK in every
+ * visitor's entry bundle. The dynamism is hidden behind `loadAuth()`.
  */
-import { onAuthStateChanged, signInWithEmailAndPassword, signOut, type User } from 'firebase/auth';
 import { create } from 'zustand';
+import type { User } from 'firebase/auth';
 
-import { getFirebaseAuth, isFirebaseConfigured } from '../data/firebase';
+import { isFirebaseConfigured } from '../data/firebaseConfig';
+
+type AuthSdk = typeof import('firebase/auth');
+type FirebaseModule = typeof import('../data/firebase');
+
+let sdkPromise: Promise<[AuthSdk, FirebaseModule]> | null = null;
+
+/** Loads the Auth SDK once, on the first cloud auth operation. */
+function loadAuth(): Promise<[AuthSdk, FirebaseModule]> {
+  if (!sdkPromise) {
+    sdkPromise = Promise.all([import('firebase/auth'), import('../data/firebase')]);
+  }
+  return sdkPromise;
+}
 
 interface SessionState {
   user: User | null;
@@ -27,14 +45,19 @@ export const useSession = create<SessionState>()((set) => ({
   error: null,
 
   signIn: async (email, password) => {
-    const auth = getFirebaseAuth();
-    if (!auth) {
+    if (!isFirebaseConfigured) {
       set({ error: 'setup' });
       return false;
     }
     set({ error: null });
     try {
-      await signInWithEmailAndPassword(auth, email.trim(), password);
+      const [authSdk, firebase] = await loadAuth();
+      const auth = firebase.getFirebaseAuth();
+      if (!auth) {
+        set({ error: 'setup' });
+        return false;
+      }
+      await authSdk.signInWithEmailAndPassword(auth, email.trim(), password);
       return true;
     } catch {
       set({ error: 'auth' });
@@ -43,19 +66,41 @@ export const useSession = create<SessionState>()((set) => ({
   },
 
   signOut: async () => {
-    const auth = getFirebaseAuth();
-    if (auth) await signOut(auth).catch(() => {});
+    if (isFirebaseConfigured) {
+      try {
+        const [authSdk, firebase] = await loadAuth();
+        const auth = firebase.getFirebaseAuth();
+        if (auth) await authSdk.signOut(auth).catch(() => {});
+      } catch {
+        /* Offline sign-out still clears the mirrored user below. */
+      }
+    }
     set({ user: null });
   },
 
   init: () => {
-    const auth = getFirebaseAuth();
-    if (!auth) {
+    if (!isFirebaseConfigured) {
       set({ ready: true });
       return () => {};
     }
-    return onAuthStateChanged(auth, (user) => {
-      set({ user, ready: true, error: null });
-    });
+    let cancelled = false;
+    let unsubscribe: (() => void) | undefined;
+    void loadAuth()
+      .then(([authSdk, firebase]) => {
+        if (cancelled) return;
+        const auth = firebase.getFirebaseAuth();
+        if (!auth) {
+          set({ ready: true });
+          return;
+        }
+        unsubscribe = authSdk.onAuthStateChanged(auth, (user) => {
+          set({ user, ready: true, error: null });
+        });
+      })
+      .catch(() => set({ ready: true }));
+    return () => {
+      cancelled = true;
+      unsubscribe?.();
+    };
   },
 }));

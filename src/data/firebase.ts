@@ -12,25 +12,11 @@ import * as FirebaseAuth from 'firebase/auth';
 import { getFirestore, initializeFirestore, persistentLocalCache, persistentMultipleTabManager, type Firestore } from 'firebase/firestore';
 import { Platform } from 'react-native';
 
-const firebaseConfig = {
-  apiKey: process.env.EXPO_PUBLIC_FIREBASE_API_KEY ?? '',
-  authDomain: process.env.EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN ?? '',
-  projectId: process.env.EXPO_PUBLIC_FIREBASE_PROJECT_ID ?? '',
-  storageBucket: process.env.EXPO_PUBLIC_FIREBASE_STORAGE_BUCKET ?? '',
-  messagingSenderId: process.env.EXPO_PUBLIC_FIREBASE_MESSAGING_SENDER_ID ?? '',
-  appId: process.env.EXPO_PUBLIC_FIREBASE_APP_ID ?? '',
-};
+import { firebaseConfig, isFirebaseConfigured } from './firebaseConfig';
 
-/** True once the owner has filled in the env config (see FIREBASE_SETUP.md). */
-export const isFirebaseConfigured = Boolean(
-  firebaseConfig.apiKey && firebaseConfig.projectId && firebaseConfig.appId,
-);
-
-/** Firestore collection holding one document per hymn, keyed by hymn id. */
-export const HYMNS_COLLECTION = 'hymns';
-
-/** Firestore document carrying the shared tombstone set. */
-export const DELETED_DOC = 'deleted';
+// Re-exported so existing admin callers keep working; readers import the
+// boolean from ./firebaseConfig directly and never load this SDK module.
+export { isFirebaseConfigured, HYMNS_COLLECTION, DELETED_DOC } from './firebaseConfig';
 
 let app: FirebaseApp | null = null;
 let auth: FirebaseAuth.Auth | null = null;
