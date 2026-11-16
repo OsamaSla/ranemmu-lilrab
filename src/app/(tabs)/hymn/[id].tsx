@@ -642,7 +642,7 @@ export default function ReaderScreen() {
                   fontSize: 18,
                   lineHeight: 21,
                   fontFamily: 'Amiri',
-                  color: selected ? '#FFFFFF' : '#1A1A1A',
+                  color: selected ? (option.value === 'ar' ? '#1A1A1A' : '#FFFFFF') : '#1A1A1A',
                   textAlign: 'right',
                   direction: 'rtl',
                 }}>

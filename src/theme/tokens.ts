@@ -108,6 +108,8 @@ export interface ThemeColors {
   textMuted: string;
   primary: string;
   primaryDeep: string;
+  /** WCAG AA-compliant link colour (text-safe gold). */
+  link: string;
   accent: string;
   onPrimary: string;
   favorite: string;
@@ -125,6 +127,7 @@ export const themes: Record<ThemeName, ThemeColors> = {
     textMuted: '#6B635D',
     primary: '#C8A84D',
     primaryDeep: '#A8842E',
+    link: '#7A5F14',
     accent: '#8A9A87',
     onPrimary: '#0A1A14',
     favorite: '#C8A84D',
@@ -140,6 +143,7 @@ export const themes: Record<ThemeName, ThemeColors> = {
     textMuted: '#B8B0A8',
     primary: '#C8A84D',
     primaryDeep: '#A8842E',
+    link: '#E0C36E',
     accent: '#8A9A87',
     onPrimary: '#0A1A14',
     favorite: '#C8A84D',

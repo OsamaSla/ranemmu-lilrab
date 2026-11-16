@@ -131,7 +131,7 @@ export default function MoreScreen() {
           accessibilityRole="link"
           accessibilityLabel={t('more.officialSite')}
           style={{ marginTop: spacing.xs }}>
-          <AppText variant="caption" color={colors.primary} center>
+          <AppText variant="caption" color={colors.link} center>
             {t('more.officialSite')}
           </AppText>
         </Pressable>

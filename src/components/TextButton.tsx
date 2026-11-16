@@ -33,7 +33,7 @@ export function TextButton({ label, variant = 'label', color, ...rest }: TextBut
         paddingHorizontal: 8,
         opacity: pressed ? 0.6 : 1,
       })}>
-      <AppText variant={variant} color={color ?? colors.accent} style={{ fontWeight: '700' }}>
+      <AppText variant={variant} color={color ?? colors.link} style={{ fontWeight: '700' }}>
         {label}
       </AppText>
     </Pressable>

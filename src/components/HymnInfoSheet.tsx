@@ -148,7 +148,7 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
                     paddingVertical: spacing.xs,
                     opacity: pressed ? 0.7 : 1,
                   })}>
-                  <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
+                  <AppText variant="label" color={colors.link} style={{ fontWeight: '700' }}>
                     {t(bookLabelKey(sibling.book))} {sibling.number}
                   </AppText>
                   <AppText

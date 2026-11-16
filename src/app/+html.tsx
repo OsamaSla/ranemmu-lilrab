@@ -74,6 +74,11 @@ export default function Root({ children }: PropsWithChildren) {
         />
 
         <ScrollViewStyleReset />
+        <style
+          dangerouslySetInnerHTML={{
+            __html: ':focus-visible { outline: 2px solid #A8842E !important; outline-offset: 2px; }',
+          }}
+        />
       </head>
       <body>
         <div
