@@ -90,6 +90,7 @@ export const de: PartialDictionary = {
   'reader.fixSavedLocal': 'Korrektur nur auf diesem Gerät gespeichert',
   'reader.fixSyncFailed': 'Auf dem Gerät gespeichert — Upload in die Cloud fehlgeschlagen',
   'reader.fixSyncNoAuth': 'Nur auf dem Gerät gespeichert — zum Hochladen anmelden',
+  'reader.copied': 'In die Zwischenablage kopiert',
 
   'info.meter': 'Metrum',
   'info.missing': 'Nicht verfügbar',

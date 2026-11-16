@@ -44,7 +44,10 @@ import { noFocusRing, radius, spacing } from '../../theme/tokens';
 
 /** Letter of the alphabet used to bucket the alphabetical sort. */
 function firstLetter(text: string): string {
-  return (text.trim().charAt(0) || '•').toUpperCase();
+  const ch = text.trim().charAt(0) || '•';
+  // Fold alef variants (أ إ آ ا ٱ) into a single bucket.
+  const folded = 'أإآٱا'.includes(ch) ? 'ا' : ch;
+  return folded.toUpperCase();
 }
 
 /** One list row: a plain hymn, or a hymn reached through a lyric hit. */
@@ -494,6 +497,15 @@ export default function LibraryScreen() {
             placeholderTextColor={colors.textMuted}
             keyboardType="default"
             returnKeyType="search"
+            onSubmitEditing={() => {
+              if (!isNumberQuery) return;
+              const digits = needle.replace(/^0+(?=\d)/, '');
+              const match = summaries.find((s) => String(s.number) === digits);
+              if (match) {
+                setQuery('');
+                router.push(`/hymn/${match.id}`);
+              }
+            }}
             underlineColorAndroid="transparent"
             style={{
               flex: 1,

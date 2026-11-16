@@ -16,6 +16,7 @@ import {
   Platform,
   Pressable,
   ScrollView,
+  TextInput,
   useWindowDimensions,
   View,
 } from 'react-native';
@@ -227,7 +228,7 @@ function BookCard({ id, name, count, unit, languages, selected, width, onPress }
 export default function HomeScreen() {
   const router = useRouter();
   const { t, direction } = useT();
-  const { colors } = useTheme();
+  const { colors, fontFamily } = useTheme();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
   const corpusVersion = useOverrides((s) => s.updatedAt);
@@ -239,6 +240,7 @@ export default function HomeScreen() {
   const books = useMemo(() => getBooks(), [corpusVersion, remoteVersion]);
 
   const total = books.reduce((sum, b) => sum + b.count, 0);
+  const [goNumber, setGoNumber] = useState('');
 
   // 3 columns on desktop, 2 on phones (where a single cover would be huge),
   // 1 only on very narrow screens.
@@ -348,6 +350,61 @@ export default function HomeScreen() {
               marginBottom: spacing.xl,
             }}
           />
+
+          <View
+            style={{
+              flexDirection: direction.row,
+              alignItems: 'center',
+              gap: spacing.sm,
+              marginBottom: spacing.lg,
+              width: '100%',
+              maxWidth: 320,
+              alignSelf: 'center',
+            }}>
+            <View
+              style={{
+                flex: 1,
+                flexDirection: direction.row,
+                alignItems: 'center',
+                backgroundColor: colors.surfaceMuted,
+                borderRadius: radius.pill,
+                borderWidth: 1,
+                borderColor: colors.border,
+                paddingHorizontal: spacing.md,
+                height: 44,
+              }}>
+              <MaterialCommunityIcons name="magnify" size={18} color={colors.textMuted} />
+              <TextInput
+                value={goNumber}
+                onChangeText={(text) => {
+                  const converted = text.replace(/[\u0660-\u0669\u06F0-\u06F9]/g, (ch) =>
+                    String.fromCharCode(ch.charCodeAt(0) - 0x0660 + 48),
+                  );
+                  setGoNumber(converted);
+                }}
+                placeholder={t('search.placeholder')}
+                placeholderTextColor={colors.textMuted}
+                keyboardType="numeric"
+                returnKeyType="go"
+                onSubmitEditing={() => {
+                  const digits = goNumber.trim();
+                  if (!digits) return;
+                  setGoNumber('');
+                  router.push(`/library?q=${encodeURIComponent(digits)}`);
+                }}
+                underlineColorAndroid="transparent"
+                style={{
+                  flex: 1,
+                  marginHorizontal: spacing.sm,
+                  color: colors.text,
+                  fontFamily,
+                  fontSize: 16,
+                  writingDirection: direction.dir,
+                  textAlign: direction.textAlign,
+                }}
+              />
+            </View>
+          </View>
 
           <View
             style={{

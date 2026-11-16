@@ -85,6 +85,7 @@ export const en: PartialDictionary = {
   'reader.fixSavedLocal': 'Correction saved on this device only',
   'reader.fixSyncFailed': 'Saved on this device — cloud upload failed',
   'reader.fixSyncNoAuth': 'Saved on this device only — sign in to upload it',
+  'reader.copied': 'Copied to clipboard',
 
   'info.meter': 'Metre',
   'info.missing': 'Not available',

@@ -20,7 +20,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
-import { Animated, Pressable, ScrollView, Share, Text as RNText, View, useWindowDimensions, type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
+import { Animated, Platform, Pressable, ScrollView, Share, Text as RNText, View, useWindowDimensions, type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
 import { useKeepAwake } from 'expo-keep-awake';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -49,6 +49,7 @@ import { useSettings } from '../../../store/settings';
 import { useGoBack } from '../../../hooks/useGoBack';
 import { useCanEdit } from '../../../hooks/useCanEdit';
 import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
+import { notify } from '../../../utils/confirm';
 import { palette, radius, spacing, HIT_SLOP } from '../../../theme/tokens';
 
 /** Height of the slim compact toolbar row inside the header. */
@@ -161,6 +162,7 @@ export default function ReaderScreen() {
   useKeepAwake('reader');
 
   const [searchOpen, setSearchOpen] = useState(false);
+  const [shareToast, setShareToast] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
@@ -518,8 +520,25 @@ export default function ReaderScreen() {
       `— ${t('appName')}`,
     ].join('\n');
 
+    const tryClipboard = async () => {
+      if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
+        try {
+          await navigator.clipboard.writeText(body);
+          setShareToast(true);
+          return;
+        } catch {
+          /* Fall through to notify. */
+        }
+      }
+      notify(t('more.title'), body);
+    };
+
+    if (Platform.OS === 'web' && typeof navigator !== 'undefined' && !navigator.share) {
+      void tryClipboard();
+      return;
+    }
     Share.share({ message: body }).catch(() => {
-      /* Dismissed share sheet is not an error worth surfacing. */
+      void tryClipboard();
     });
   };
 
@@ -1398,6 +1417,13 @@ export default function ReaderScreen() {
         hymn={hymn}
       />
       {fixOverlays}
+      {shareToast ? (
+        <Toast
+          message={t('reader.copied')}
+          onDismiss={() => setShareToast(false)}
+          bottom={insets.bottom + spacing.lg}
+        />
+      ) : null}
     </Animated.View>
   );
 }
