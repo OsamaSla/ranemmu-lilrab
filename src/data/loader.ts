@@ -16,6 +16,7 @@ import type { BookId, Hymn, HymnSummary } from './types';
 import { type TopicId } from './topics';
 import { alignTranslation } from './translationAlign';
 import { getRemoteFullDocs, getRemoteSummaries, isFullDoc, useRemote } from '../store/remote';
+import { bumpCorpusVersion } from '../store/corpus';
 import { invalidateSearchCache } from './search';
 
 export { areAllChunksLoaded, ensureAllChunks, ensureHymn, isHymnPending } from './chunks';
@@ -58,6 +59,7 @@ export function refreshOverlaidCorpus(): void {
   byId.clear();
   summaryCache = null;
   invalidateSearchCache();
+  bumpCorpusVersion();
 }
 
 /** A freshly imported chunk invalidates the merged views and search index. */

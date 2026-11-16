@@ -9,8 +9,7 @@ import type { Hymn } from '../../data/types';
 import { useCanEdit } from '../../hooks/useCanEdit';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
-import { useOverrides } from '../../store/overrides';
-import { useRemote } from '../../store/remote';
+import { useCorpusVersion } from '../../store/corpus';
 import { radius, spacing } from '../../theme/tokens';
 import type { TranslationKey } from '../../i18n';
 
@@ -24,23 +23,20 @@ export default function AdminReviewScreen() {
   const { t, direction } = useT();
   const { colors } = useTheme();
   const canEdit = useCanEdit();
-  const overrides = useOverrides((s) => s.overrides);
-  const remoteVersion = useRemote((s) => s.updatedAt);
+  const corpusVersion = useCorpusVersion();
 
   const [reviewLang, setReviewLang] = useState<'en' | 'de'>('en');
   const [reviewFilter, setReviewFilter] = useState<'all' | 'AI_DRAFT' | 'VERIFIED'>('AI_DRAFT');
   const [reviewBook, setReviewBook] = useState<'all' | 'main' | 'taranim'>('all');
   const [searchQuery, setSearchQuery] = useState('');
-  const [chunksVersion, setChunksVersion] = useState(0);
 
   useEffect(() => {
-    if (!canEdit) return;
-    let active = true;
-    ensureAllChunks().then(() => { if (active) setChunksVersion((n) => n + 1); }).catch(() => {});
-    return () => { active = false; };
+    if (canEdit) void ensureAllChunks().catch(() => {});
   }, [canEdit]);
 
   const review = useMemo(() => {
+    // getCorpus() reads a mutable cache; the version is the re-run trigger.
+    void corpusVersion;
     const statusOf = (h: Hymn) => h.translationStatus ?? 'AI_DRAFT';
     const bookOf = (h: Hymn) => h.book ?? 'main';
     const q = searchQuery.trim().toLowerCase();
@@ -55,10 +51,7 @@ export default function AdminReviewScreen() {
       .slice().sort((a, b) => a.number - b.number)
       .map((h) => ({ id: h.id, number: h.number, title: h.title, book: bookOf(h), status: statusOf(h) as keyof typeof STATUS_LABELS }));
     return { items, total: all.length, verified };
-    // `overrides`, `remoteVersion` and `chunksVersion` are deliberate re-run
-    // triggers: getCorpus() is a mutable read, not a value React can track.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [overrides, remoteVersion, reviewLang, reviewFilter, reviewBook, searchQuery, chunksVersion]);
+  }, [corpusVersion, reviewLang, reviewFilter, reviewBook, searchQuery]);
 
   const filters = [
     { value: 'all' as const, labelKey: 'admin.filterAll' as TranslationKey },

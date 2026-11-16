@@ -25,8 +25,7 @@ import { ensureSearchIndex, isSearchIndexReady, searchHymns, titleKey } from '..
 import type { HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
-import { useOverrides } from '../../store/overrides';
-import { useRemote } from '../../store/remote';
+import { useCorpusVersion } from '../../store/corpus';
 import { useSetlist } from '../../store/setlist';
 import { confirmAction } from '../../utils/confirm';
 import { noFocusRing, radius, spacing } from '../../theme/tokens';
@@ -56,11 +55,9 @@ export default function SetlistScreen() {
   const loadSet = useSetlist((s) => s.set);
   const clearSet = useSetlist((s) => s.clear);
 
-  const corpusVersion = useOverrides((s) => s.updatedAt);
-  const remoteVersion = useRemote((s) => s.updatedAt);
+  const corpusVersion = useCorpusVersion();
 
   const [query, setQuery] = useState('');
-  const [chunkVersion, setChunkVersion] = useState(0);
   const [toast, setToast] = useState<string | null>(null);
   const dismissToast = useCallback(() => setToast(null), []);
 
@@ -71,8 +68,11 @@ export default function SetlistScreen() {
   }, [idsParam, loadSet]);
 
   // Titles are instant from the summaries; lyrics come from the lazy chunks.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const summaries = useMemo(() => getSummaries(), [corpusVersion, remoteVersion, chunkVersion]);
+  // Chunk loads and search-index readiness bump the corpus version.
+  const summaries = useMemo(() => {
+    void corpusVersion;
+    return getSummaries();
+  }, [corpusVersion]);
   const deferredQuery = useDeferredValue(query);
   const needle = normalizeText(westernDigits(deferredQuery.trim()));
   const isNumberQuery = /^\d+$/.test(needle);
@@ -80,17 +80,9 @@ export default function SetlistScreen() {
 
   useEffect(() => {
     if (!wantsLyrics) return;
-    let active = true;
-    Promise.all([ensureAllChunks(), ensureSearchIndex()])
-      .then(() => {
-        if (active) setChunkVersion((n) => n + 1);
-      })
-      .catch(() => {
-        /* Title results stay usable if a chunk fails to load. */
-      });
-    return () => {
-      active = false;
-    };
+    void Promise.all([ensureAllChunks(), ensureSearchIndex()]).catch(() => {
+      /* Title results stay usable if a chunk fails to load. */
+    });
   }, [wantsLyrics]);
 
   const titleMatches = useMemo(() => {

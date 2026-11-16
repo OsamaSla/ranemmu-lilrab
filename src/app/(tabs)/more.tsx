@@ -19,8 +19,7 @@ import { useCanEdit } from '../../hooks/useCanEdit';
 import { useT } from '../../hooks/useT';
 import { FeedbackModal } from '../../components/FeedbackModal';
 import { useTheme } from '../../hooks/useTheme';
-import { useOverrides } from '../../store/overrides';
-import { useRemote } from '../../store/remote';
+import { useCorpusVersion } from '../../store/corpus';
 import type { TranslationKey } from '../../i18n';
 import { spacing } from '../../theme/tokens';
 import { notify } from '../../utils/confirm';
@@ -47,11 +46,11 @@ export default function MoreScreen() {
 
   const notConfigured = () => notify(t('more.title'), t('more.notConfigured'));
 
-  const corpusVersion = useOverrides((s) => s.updatedAt);
-  const remoteVersion = useRemote((s) => s.updatedAt);
-  // corpusVersion only retriggers this after admin edits land.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const hasMeter = useMemo(() => getSummaries().some((s) => s.meter?.trim()), [corpusVersion, remoteVersion]);
+  const corpusVersion = useCorpusVersion();
+  const hasMeter = useMemo(() => {
+    void corpusVersion; // getSummaries() reads a mutable cache.
+    return getSummaries().some((s) => s.meter?.trim());
+  }, [corpusVersion]);
 
   const shareApp = () => {
     const text = t('more.shareAppMessage');

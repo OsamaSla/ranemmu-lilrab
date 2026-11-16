@@ -15,9 +15,8 @@ import { getSummaries } from '../../data/loader';
 import type { HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { useCorpusVersion } from '../../store/corpus';
 import { useLibrary } from '../../store/library';
-import { useOverrides } from '../../store/overrides';
-import { useRemote } from '../../store/remote';
 import { spacing } from '../../theme/tokens';
 
 export default function FavoritesScreen() {
@@ -25,10 +24,10 @@ export default function FavoritesScreen() {
   const { t } = useT();
   const { colors } = useTheme();
   const favorites = useLibrary((s) => s.favorites);
-  const corpusVersion = useOverrides((s) => s.updatedAt);
-  const remoteVersion = useRemote((s) => s.updatedAt);
+  const corpusVersion = useCorpusVersion();
 
   const rows = useMemo(() => {
+    void corpusVersion; // getSummaries() reads a mutable cache.
     const byId = new Map(getSummaries().map((s) => [s.id, s]));
     const resolved: HymnSummary[] = [];
     for (const id of favorites) {
@@ -36,9 +35,7 @@ export default function FavoritesScreen() {
       if (summary) resolved.push(summary);
     }
     return resolved;
-    // corpusVersion only retriggers this after admin edits land.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [favorites, corpusVersion, remoteVersion]);
+  }, [favorites, corpusVersion]);
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>

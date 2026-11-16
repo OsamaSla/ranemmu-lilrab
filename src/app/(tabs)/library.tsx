@@ -37,8 +37,7 @@ import { isTopicId, matchesTopic, TOPIC_COLORS, TOPIC_IDS, type TopicId } from '
 import type { BookId, HymnSummary, SearchMatch } from '../../data/types';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
-import { useOverrides } from '../../store/overrides';
-import { useRemote } from '../../store/remote';
+import { useCorpusVersion } from '../../store/corpus';
 import { useSettings } from '../../store/settings';
 import { noFocusRing, radius, spacing } from '../../theme/tokens';
 
@@ -99,12 +98,12 @@ export default function LibraryScreen() {
   if (bookScope.source !== book) setBookScope({ source: book, all: false });
   const allBooks = bookScope.all;
   const activeBook: BookId | undefined = allBooks ? undefined : book;
-  // Re-reads the merged corpus whenever an admin override lands.
-  const corpusVersion = useOverrides((s) => s.updatedAt);
-  // Re-runs the queries below when cloud edits stream in.
-  const remoteVersion = useRemote((s) => s.updatedAt);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const books = useMemo(() => getBooks(), [corpusVersion, remoteVersion]);
+  // Re-reads the merged corpus whenever a chunk, override or cloud patch lands.
+  const corpusVersion = useCorpusVersion();
+  const books = useMemo(() => {
+    void corpusVersion; // getBooks() reads a mutable cache.
+    return getBooks();
+  }, [corpusVersion]);
 
   // Prefilled when arriving from the reader's jump bar with free text,
   // or from a topic link (`?topic=worship`) in the reader info sheet.
@@ -127,11 +126,14 @@ export default function LibraryScreen() {
   const setTopic = (next: TopicId | null) =>
     setTopicState((s) => ({ param: s.param, topic: next }));
 
-  // corpusVersion only retriggers this after admin edits land.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const summaries = useMemo(() => getSummaries(activeBook), [corpusVersion, remoteVersion, activeBook]);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const topicCounts = useMemo(() => getTopicCounts(activeBook), [corpusVersion, remoteVersion, activeBook]);
+  const summaries = useMemo(() => {
+    void corpusVersion;
+    return getSummaries(activeBook);
+  }, [corpusVersion, activeBook]);
+  const topicCounts = useMemo(() => {
+    void corpusVersion;
+    return getTopicCounts(activeBook);
+  }, [corpusVersion, activeBook]);
 
   // Topic filter first (primary or secondary tag), so book + topic combine
   // into one hybrid query and text search runs within the topic.
@@ -161,22 +163,14 @@ export default function LibraryScreen() {
   }, [topicFiltered, needle, isNumberQuery]);
 
   // Hymn bodies are lazily imported, so the first text query pulls every
-  // chunk (full-text search needs them all) and re-renders when they land —
-  // `lyricsReady` flipping to true is what recomputes the results below.
-  const [, setChunksVersion] = useState(0);
+  // chunk (full-text search needs them all). Each chunk and the search index
+  // bump the corpus version, which re-renders this screen and recomputes
+  // `lyricsReady` below — no local version state needed.
   useEffect(() => {
     if (!wantsLyrics) return;
-    let active = true;
-    Promise.all([ensureAllChunks(), ensureSearchIndex()])
-      .then(() => {
-        if (active) setChunksVersion((n) => n + 1);
-      })
-      .catch(() => {
-        /* Leave the title results in place if a chunk fails to load. */
-      });
-    return () => {
-      active = false;
-    };
+    void Promise.all([ensureAllChunks(), ensureSearchIndex()]).catch(() => {
+      /* Leave the title results in place if a chunk fails to load. */
+    });
   }, [wantsLyrics]);
 
   // Both the hymn bodies (for the originals and highlights) and the

@@ -13,6 +13,7 @@
  */
 import { normalize, normalizeText } from './normalize';
 import { normalizeMeter } from './meter';
+import { bumpCorpusVersion } from '../store/corpus';
 import type { BookId, Hymn, HymnSummary, SearchMatch } from './types';
 
 /** One searchable line, with its normalised form precomputed. */
@@ -68,6 +69,9 @@ export function ensureSearchIndex(): Promise<void> {
       })
       .finally(() => {
         indexReady = true;
+        // Lyrics search is gated on isSearchIndexReady(); screens waiting on it
+        // need a render when the index lands, not just when chunks land.
+        bumpCorpusVersion();
       });
   }
   return indexPromise;

@@ -27,8 +27,7 @@ import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { getBooks } from '../../data/loader';
 import type { BookId } from '../../data/types';
-import { useOverrides } from '../../store/overrides';
-import { useRemote } from '../../store/remote';
+import { useCorpusVersion } from '../../store/corpus';
 import { useSettings } from '../../store/settings';
 import { radius, shadow, spacing } from '../../theme/tokens';
 
@@ -231,13 +230,13 @@ export default function HomeScreen() {
   const { colors, fontFamily } = useTheme();
   const insets = useSafeAreaInsets();
   const { width } = useWindowDimensions();
-  const corpusVersion = useOverrides((s) => s.updatedAt);
-  const remoteVersion = useRemote((s) => s.updatedAt);
+  const corpusVersion = useCorpusVersion();
   const book = useSettings((s) => s.book);
   const setBook = useSettings((s) => s.setBook);
-  // corpusVersion only retriggers this after admin edits land.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const books = useMemo(() => getBooks(), [corpusVersion, remoteVersion]);
+  const books = useMemo(() => {
+    void corpusVersion; // getBooks() reads a mutable cache.
+    return getBooks();
+  }, [corpusVersion]);
 
   const total = books.reduce((sum, b) => sum + b.count, 0);
   const [goNumber, setGoNumber] = useState('');

@@ -42,10 +42,9 @@ import { findSimilar } from '../../../data/search';
 import { bookLabelKey } from '../../../i18n';
 import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
+import { useCorpusVersion } from '../../../store/corpus';
 import { useLibrary } from '../../../store/library';
-import { useOverrides } from '../../../store/overrides';
 import { useSetlist } from '../../../store/setlist';
-import { useRemote } from '../../../store/remote';
 import { useSettings } from '../../../store/settings';
 import { useGoBack } from '../../../hooks/useGoBack';
 import { useCanEdit } from '../../../hooks/useCanEdit';
@@ -214,25 +213,22 @@ export default function ReaderScreen() {
   }, [fullscreen, navigation, colors.surface, colors.border]);
 
   const hymn = id ? getHymn(id) : undefined;
-  // Re-reads the merged corpus whenever an admin override lands.
-  const corpusVersion = useOverrides((s) => s.updatedAt);
-  // Re-renders when cloud edits stream in (getHymn above re-merges).
-  const remoteVersion = useRemote((s) => s.updatedAt);
+  // Re-reads the merged corpus on chunk load, override write or cloud patch.
+  const corpusVersion = useCorpusVersion();
   // A shared setlist rides in the `ids` query param. When the hymn belongs to
   // that set, prev/next walk the set order instead of the printed book order;
   // a single-hymn link (or a jump from search) simply has no set here.
   const addToSetlist = useSetlist((s) => s.add);
   const setIds = useMemo(() => parseSetIds(idsParam), [idsParam]);
   const inSet = setIds.length > 0;
-  // corpusVersion only retriggers these after admin edits land.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const corpusNeighbours = useMemo(() => (id ? getNeighbours(id) : {}), [id, corpusVersion, remoteVersion]);
-  const setNav = useMemo(
-    () => (id ? setNeighbours(setIds, id) : { index: -1, total: 0 }),
-    // corpusVersion/remoteVersion carry admin renames of the set's hymns.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [setIds, id, corpusVersion, remoteVersion],
-  );
+  const corpusNeighbours = useMemo(() => {
+    void corpusVersion;
+    return id ? getNeighbours(id) : {};
+  }, [id, corpusVersion]);
+  const setNav = useMemo(() => {
+    void corpusVersion;
+    return id ? setNeighbours(setIds, id) : { index: -1, total: 0 };
+  }, [setIds, id, corpusVersion]);
   const neighbours =
     inSet && setNav.index >= 0
       ? { previous: setNav.previous, next: setNav.next }
@@ -261,12 +257,10 @@ export default function ReaderScreen() {
   // The same hymn as printed by another book (61 hymns appear in two books or
   // more). Its siblings are a link, not a similarity: the text is identical, so
   // the reader only needs to point at them.
-  const linked = useMemo(
-    () => (id ? getLinks(id) : []),
-    // corpusVersion/remoteVersion carry admin renames and tombstoned copies.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [id, corpusVersion, remoteVersion],
-  );
+  const linked = useMemo(() => {
+    void corpusVersion; // carries admin renames and tombstoned copies.
+    return id ? getLinks(id) : [];
+  }, [id, corpusVersion]);
 
   // Web keyboard shortcuts for the reader.
   useEffect(() => {
@@ -324,20 +318,11 @@ export default function ReaderScreen() {
   // shell is also what the pre-rendered page contains, and the client renders
   // the app from scratch (no hydration), so the two never have to agree.
   const pendingChunk = id !== undefined && isHymnPending(id);
-  const [, setChunkVersion] = useState(0);
   useEffect(() => {
     if (!id) return;
-    let active = true;
-    ensureHymn(id)
-      .then(() => {
-        if (active) setChunkVersion((n) => n + 1);
-      })
-      .catch(() => {
-        /* Falls through to the not-found state below. */
-      });
-    return () => {
-      active = false;
-    };
+    void ensureHymn(id).catch(() => {
+      /* Falls through to the not-found state below. */
+    });
   }, [id]);
 
   // Per-hymn translation view. Arabic is always the master text; a

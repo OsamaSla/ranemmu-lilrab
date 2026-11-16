@@ -22,8 +22,8 @@ import type { TopicId } from '../../data/topics';
 import { useCanEdit } from '../../hooks/useCanEdit';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { useCorpusVersion } from '../../store/corpus';
 import { useOverrides } from '../../store/overrides';
-import { useRemote } from '../../store/remote';
 import { useSettings } from '../../store/settings';
 import { radius, spacing } from '../../theme/tokens';
 
@@ -56,7 +56,7 @@ export default function AdminAddScreen() {
 
   const setOverride = useOverrides((s) => s.setOverride);
   // Re-reads the list when cloud hymns stream in (number-taken check below).
-  useRemote((s) => s.updatedAt);
+  useCorpusVersion();
   const book = useSettings((s) => s.book);
   const summaries = getSummaries();
 

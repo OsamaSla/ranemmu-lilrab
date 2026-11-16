@@ -28,6 +28,7 @@ import { useT } from '../../hooks/useT';
 import { useCanEdit } from '../../hooks/useCanEdit';
 import { useTheme } from '../../hooks/useTheme';
 import { bookLabelKey } from '../../i18n';
+import { useCorpusVersion } from '../../store/corpus';
 import { useOverrides } from '../../store/overrides';
 import { radius, spacing } from '../../theme/tokens';
 import { HEBREW_FONT_FAMILY } from '../../theme/fonts';
@@ -170,23 +171,15 @@ export default function AdminEditScreen() {
   const [langChoice, setLangChoice] = useState<Partial<
     Record<'ar' | 'en' | 'de' | 'he', boolean>
   > | null>(null);
-  // The hymn body is imported on demand; bump this once it lands so the form
-  // (and the not-found fallback) re-reads getHymn().
-  const [, setChunkVersion] = useState(0);
+  // The hymn body is imported on demand; the chunk load bumps the corpus
+  // version, so subscribing re-reads getHymn() (and the not-found fallback).
+  useCorpusVersion();
   const pendingChunk = typeof id === 'string' && isHymnPending(id);
   useEffect(() => {
     if (!canEdit || typeof id !== 'string') return;
-    let active = true;
-    ensureHymn(id)
-      .then(() => {
-        if (active) setChunkVersion((n) => n + 1);
-      })
-      .catch(() => {
-        /* Falls through to the not-found state below. */
-      });
-    return () => {
-      active = false;
-    };
+    void ensureHymn(id).catch(() => {
+      /* Falls through to the not-found state below. */
+    });
   }, [canEdit, id]);
 
   // Re-seed when the hymn changes under a *clean* form: an edit in progress

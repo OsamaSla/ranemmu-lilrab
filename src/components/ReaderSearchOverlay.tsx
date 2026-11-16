@@ -24,6 +24,7 @@ import { ensureSearchIndex, isSearchIndexReady, searchHymns, titleKey } from '..
 import type { BookId, HymnSummary } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
+import { useCorpusVersion } from '../store/corpus';
 import { radius, spacing } from '../theme/tokens';
 
 interface ReaderSearchOverlayProps {
@@ -48,13 +49,15 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
 
   const [query, setQuery] = useState('');
   const [scope, setScope] = useState<BookId | 'all'>(currentBook);
-  const [chunkVersion, setChunkVersion] = useState(0);
+  const corpusVersion = useCorpusVersion();
 
   const books = useMemo(() => getBooks(), []);
   const activeBook = scope === 'all' ? undefined : scope;
-  // chunkVersion retriggers this after the lyrics finish loading.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const summaries = useMemo(() => getSummaries(activeBook), [activeBook, chunkVersion]);
+  // Corpus version changes when chunks or the search index finish loading.
+  const summaries = useMemo(() => {
+    void corpusVersion;
+    return getSummaries(activeBook);
+  }, [activeBook, corpusVersion]);
 
   const deferredQuery = useDeferredValue(query);
   const trimmed = deferredQuery.trim();
@@ -75,17 +78,9 @@ export function ReaderSearchOverlay({ onClose, onSelect, currentBook }: ReaderSe
 
   useEffect(() => {
     if (!wantsLyrics) return;
-    let active = true;
-    Promise.all([ensureAllChunks(), ensureSearchIndex()])
-      .then(() => {
-        if (active) setChunkVersion((n) => n + 1);
-      })
-      .catch(() => {
-        /* Title results stay usable if a chunk fails to load. */
-      });
-    return () => {
-      active = false;
-    };
+    void Promise.all([ensureAllChunks(), ensureSearchIndex()]).catch(() => {
+      /* Title results stay usable if a chunk fails to load. */
+    });
   }, [wantsLyrics]);
 
   const lyricsReady = areAllChunksLoaded() && isSearchIndexReady();

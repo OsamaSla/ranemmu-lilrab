@@ -23,8 +23,7 @@ import { METER_FAMILIES } from '../../data/meterFamilies';
 import { groupByStructure } from '../../data/search';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
-import { useOverrides } from '../../store/overrides';
-import { useRemote } from '../../store/remote';
+import { useCorpusVersion } from '../../store/corpus';
 import { useSettings } from '../../store/settings';
 import { type as typeScale } from '../../theme/fonts';
 import { spacing } from '../../theme/tokens';
@@ -35,13 +34,13 @@ export default function StructureScreen() {
   const { colors } = useTheme();
   const [open, setOpen] = useState<Set<string>>(new Set());
   const [selected, setSelected] = useState<string | null>(null);
-  const corpusVersion = useOverrides((s) => s.updatedAt);
-  const remoteVersion = useRemote((s) => s.updatedAt);
+  const corpusVersion = useCorpusVersion();
   const book = useSettings((s) => s.book);
 
-  // corpusVersion only retriggers this after admin edits land.
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const summaries = useMemo(() => getSummaries(book), [corpusVersion, remoteVersion, book]);
+  const summaries = useMemo(() => {
+    void corpusVersion; // getSummaries() reads a mutable cache.
+    return getSummaries(book);
+  }, [corpusVersion, book]);
 
   const byId = useMemo(() => new Map(summaries.map((s) => [s.id, s])), [summaries]);
 
