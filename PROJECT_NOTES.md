@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-16, commit 7c5a38c5 (Session 9: bundled Noto Sans Hebrew with niqqud for Hebrew rendering)
+Last verified: 2026-11-17, commit 6d0ea012 (Session 10: unified `npm run build:web` with quality gates + CI caching; export step env-broken locally)
 
 ## 1. What this is
 
@@ -80,6 +80,13 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
   `content/scriptures/README.md` first; details in §19.
 - `npm run typecheck` (`npx tsc --noEmit`) — works on this machine; exit 0 with
   no output (needs the restored untracked `tsconfig.json`, see §2).
+- `npm run build:web` — the single web build (2026-11-16, Session 10): typecheck →
+  lint → check:hymns → hebrew:check → scripture:check → build:corpus →
+  `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts` →
+  `npx expo export -p web` → post steps (node `rmSync` for the `dist/(tabs)`
+  duplicate tree, pages-fallback, pwa-head, canonical, copy-pwa-assets).
+  `preview:build` and `predeploy` now just delegate to it; both deploy workflows
+  run it (Pages with `DEPLOY: '1'`, Firebase without) instead of exporting inline.
 - Web build: `npx expo export --platform web` produces the real app in `dist/`
   (domain-root base; used by Firebase and Netlify). GitHub Pages uses
   `DEPLOY=1 npx expo export --platform web` (base `/ranemmu-lilrab`). See §12.
@@ -229,6 +236,18 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   readerFontBold` alone leaves weight 400, which web renders as regular. Verified
   computed styles in the browser: 18px/700 vs 14px/400 at the default 20px reader
   size, both themes and fullscreen.
+- Session 10 (2026-11-16, CI/build unification): `npm run lint` → `expo lint` is
+  **not** a real expo command in the legacy `expo-cli` 6.x installed here (it prints
+  `"lint" is not an expo command` and exits 0), so the `build:web` lint gate is
+  currently vacuous. Real debt only shows via `npx eslint .` (16 errors in legacy
+  scripts, e.g. `__filename`/`Buffer` `no-undef` in ESM scripts, dynamic env access).
+- Session 10 (2026-11-16): `npx expo export -p web` now fails locally with
+  `--public-url must be a valid HTTPS URL` (needs `--public-url <https-url>`, else
+  `Missing required option: --public-url`), and with an explicit `--public-url` it
+  next fails on `Missing package "metro/src/Server" ... react-native is not
+  installed` (legacy CLI + local Node v24; CI pins Node 22 and evidently got past
+  this). The unified `npm run build:web` therefore cannot run to completion in this
+  sandbox — pre-existing, the export command itself was not changed in Session 10.
 
 ## 9. Known issues / cleanup candidates
 
