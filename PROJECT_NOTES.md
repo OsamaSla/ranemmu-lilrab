@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-16, commit 5e59bf07 (Session 8: reader toolbar ergonomics + keyboard shortcuts)
+Last verified: 2026-11-16, commit 57e4ce98 (Session 9: bundled Noto Sans Hebrew with niqqud for Hebrew rendering)
 
 ## 1. What this is
 
@@ -592,10 +592,20 @@ and keep committing per step.
   Add new settled words there in the same commit as the hymn.
 - Reader (`src/app/(tabs)/hymn/[id].tsx`): fourth chip `HE`, indigo
   `#5E35B1`/`#EDE7F6` (`CHIP_COLORS`), Hebrew under each Arabic line,
-  RTL/right-aligned, **no bundled `fontFamily`** (none of the six families has
-  Hebrew glyphs, so the platform font is the only one with niqqud positioning)
-  and `lineHeight` 1.9× so points are not clipped. The AI badge/disclaimer block
+  RTL/right-aligned, **now typeset in the bundled Hebrew face**
+  (`NotoSansHebrew`, `HEBREW_FONT_FAMILY` in `src/theme/fonts.ts` — a subsetted
+  OFL Noto Sans Hebrew with full GPOS niqqud/cantillation, instanced to static
+  400/700 from the variable source, bundled at `assets/fonts/NotoSansHebrew-*.ttf`,
+  ~14 KB each) and `lineHeight` 1.9× so points are not clipped. The AI badge/disclaimer block
   is gated to `en`/`de`: the Hebrew is human-authored, not an Aya draft.
+- Hebrew field wiring (2026-11-16, Session 9): the quick-fix sheet's Hebrew input
+  (`src/components/LineFixSheet.tsx`) and the admin editor's Hebrew fields
+  (`src/app/(tabs)/admin-edit.tsx`) now set `fontFamily: HEBREW_FONT_FAMILY` on the
+  Hebrew text instead of relying on the platform font; the Hebrew branch keeps the
+  taller leading (`Math.round((translationSize + 2) * 1.7)`). The boot loader
+  (`useAppFonts` in `src/theme/fonts.ts`) also loads the Hebrew face alongside the
+  active Arabic family, so a Hebrew line never flashes the fallback before the font
+  lands.
 - Search: `verses_he` and `title_he` join the index; `src/data/normalize.ts`
   now drops Hebrew niqqud/cantillation (`\u0591-\u05BD`, `\u05BF`,
   `\u05C1-\u05C2`, `\u05C4-\u05C5`, `\u05C7`) and folds maqaf to a space, so a

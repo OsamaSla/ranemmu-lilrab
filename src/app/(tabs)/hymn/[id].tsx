@@ -47,7 +47,7 @@ import { useRemote } from '../../../store/remote';
 import { useSettings } from '../../../store/settings';
 import { useGoBack } from '../../../hooks/useGoBack';
 import { useCanEdit } from '../../../hooks/useCanEdit';
-import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
+import { fontFamilyFor, HEBREW_FONT_FAMILY, READER_MAX_WIDTH } from '../../../theme/fonts';
 import { notify } from '../../../utils/confirm';
 import { palette, radius, spacing, HIT_SLOP } from '../../../theme/tokens';
 
@@ -801,16 +801,18 @@ export default function ReaderScreen() {
 
   /**
    * One translated line under its Arabic original. en/de use the reader's
-   * Arabic font — they are Latin text inside an Arabic-typeset app. Hebrew
-   * must not: none of the six bundled families carry Hebrew glyphs, so the
-   * platform font is the only one with both the letters and the niqqud mark
-   * positioning. Hebrew also reads right-to-left and needs extra leading so
-   * the points above and below the letters are not clipped.
+   * Arabic font — they are Latin text inside an Arabic-typeset app. Hebrew is
+   * typeset in the bundled Hebrew liturgical face (`NotoSansHebrew`), which is
+   * the only registered font that carries Hebrew glyphs *and* the GPOS niqqud
+   * mark positioning; the platform font is only the fallback. Hebrew also reads
+   * right-to-left and needs extra leading so the points above and below the
+   * letters are not clipped.
    */
   const translationText = (body: string) =>
     parallel === 'he' ? (
       <RNText
         style={{
+          fontFamily: HEBREW_FONT_FAMILY,
           fontSize: Math.round(readerSize * 0.9),
           lineHeight: Math.round(readerSize * 1.9),
           color: fullscreen ? palette.readerText : colors.textMuted,
@@ -910,6 +912,8 @@ export default function ReaderScreen() {
             writingDirection: 'rtl',
             textAlign: 'center',
             lineHeight: 20,
+            // Hebrew note: the bundled Hebrew face carries the pointed glyphs.
+            fontFamily: HEBREW_FONT_FAMILY,
           }}>
           {TRANSLATION_NOTES.he}
         </AppText>
@@ -989,7 +993,8 @@ export default function ReaderScreen() {
                     : colors.primary
               }
               style={{
-                fontFamily: readerFontBold,
+                fontFamily:
+                  verseBlock.chorus && parallel === 'he' ? HEBREW_FONT_FAMILY : readerFontBold,
                 // The family alone selects the bold face but leaves the weight at
                 // 400, which web renders as regular; theme/fonts.ts requires both,
                 // so the refrain is set heavier than the stanza numbers.

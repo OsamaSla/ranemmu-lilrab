@@ -6,6 +6,12 @@
  * `npm run fonts`; the variable-font families (Cairo, Marhey) are instanced to
  * static 400/700 there because React Native on Android selects weight by family
  * name rather than by axis.
+ *
+ * On top of those sit the bundled Hebrew liturgical face (`NotoSansHebrew`, a
+ * subsetted OFL font with full GPOS niqqud/cantillation positioning; instanced
+ * to static 400/700 from the variable source). No Arabic family carries Hebrew
+ * glyphs, so Hebrew needs its own registration even though it is not a
+ * user-selectable font.
  */
 import { useEffect, useState } from 'react';
 
@@ -36,6 +42,14 @@ export const FONT_FAMILIES: FontFamily[] = [
   { id: 'katibeh', label: 'Katibeh', regular: 'Katibeh', bold: null, lineRatio: 1.6 },
   { id: 'rakkas', label: 'Rakkas', regular: 'Rakkas', bold: null, lineRatio: 1.6 },
 ];
+
+/**
+ * The bundled Hebrew face. It is not user-selectable (it is a liturgical face,
+ * not an Arabic one), but every fully-vocalised Hebrew line and title renders in
+ * it, so it gets its own registry id and font-family name.
+ */
+export const HEBREW_FONT_ID = 'hebrew';
+export const HEBREW_FONT_FAMILY = 'NotoSansHebrew';
 
 export const DEFAULT_FONT_ID = 'cairo';
 
@@ -83,6 +97,10 @@ export const FONT_FILES_BY_ID: Record<string, Record<string, any>> = {
   rakkas: {
     Rakkas: require('../../assets/fonts/Rakkas-Regular.ttf'),
   },
+  hebrew: {
+    NotoSansHebrew: require('../../assets/fonts/NotoSansHebrew-Regular.ttf'),
+    'NotoSansHebrew-Bold': require('../../assets/fonts/NotoSansHebrew-Bold.ttf'),
+  },
 };
 
 const loadPromises = new Map<string, Promise<void>>();
@@ -118,9 +136,13 @@ export function ensureFontFamily(id: string): Promise<void> {
 }
 
 /**
- * Loads only the active family up front. Returns `null` while it is loading
- * (splash stays up) and `true` once it is ready. Other families are loaded
- * on demand via `ensureFontFamily()`.
+ * Loads the active family plus the bundled Hebrew liturgical face. The Hebrew
+ * face is not user-selectable, but it is needed for every pointed-Hebrew line,
+ * so the boot loader pulls it in alongside the selected Arabic family to keep
+ * the splash gate honest (a Hebrew line rendered before its font lands would
+ * flash a fallback face with niqqud falling off the glyphs). Returns `null`
+ * while loading (splash stays up) and `true` once it is ready. Other families
+ * are loaded on demand via `ensureFontFamily()`.
  */
 export function useAppFonts(activeId?: string) {
   const fontId = activeId ?? DEFAULT_FONT_ID;
@@ -128,7 +150,10 @@ export function useAppFonts(activeId?: string) {
 
   useEffect(() => {
     let cancelled = false;
-    void ensureFontFamily(fontId).then(() => {
+    void (async () => {
+      await ensureFontFamily(fontId);
+      await ensureFontFamily(HEBREW_FONT_ID);
+    })().then(() => {
       if (!cancelled) setReady(true);
     });
     return () => {

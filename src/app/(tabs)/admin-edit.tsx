@@ -30,6 +30,7 @@ import { useTheme } from '../../hooks/useTheme';
 import { bookLabelKey } from '../../i18n';
 import { useOverrides } from '../../store/overrides';
 import { radius, spacing } from '../../theme/tokens';
+import { HEBREW_FONT_FAMILY } from '../../theme/fonts';
 
 /**
  * Printed word for a refrain stanza. The hymn-level `chorus` field carries the
@@ -270,15 +271,16 @@ export default function AdminEditScreen() {
   } as const;
 
   /**
-   * Hebrew text inside the editor. It must not inherit `fontFamily`: none of
-   * the six bundled families carry Hebrew glyphs, so Cairo would render tofu,
-   * and the platform font is the only one with both the letters and the niqqud
-   * positioning — the same reason the reader uses it. Direction and alignment
-   * are per field because the app itself is RTL Arabic. The line box is taller
-   * than the Latin one: the points above and below the letters are clipped by a
-   * 40px field.
+   * Hebrew text inside the editor. It is set in the bundled Hebrew liturgical
+   * face (`NotoSansHebrew`), the only registered font that carries Hebrew
+   * glyphs *and* the GPOS niqqud mark positioning; the Arabic families do not,
+   * so inheriting the Arabic `fontFamily` would render tofu. Direction and
+   * alignment are per field because the app itself is RTL Arabic. The line box
+   * is taller than the Latin one: the points above and below the letters are
+   * clipped by a 40px field.
    */
   const hebrewText = {
+    fontFamily: HEBREW_FONT_FAMILY,
     writingDirection: 'rtl',
     textAlign: 'right',
   } as const;

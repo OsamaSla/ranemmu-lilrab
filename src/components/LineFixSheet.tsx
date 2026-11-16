@@ -36,7 +36,7 @@ import type { Hymn } from '../data/types';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
 import { useOverrides } from '../store/overrides';
-import { fontFamilyFor } from '../theme/fonts';
+import { fontFamilyFor, HEBREW_FONT_FAMILY } from '../theme/fonts';
 import { radius, spacing } from '../theme/tokens';
 
 /** Languages a hymn can carry a line-by-line translation in. */
@@ -352,9 +352,10 @@ export function LineFixSheet({
                   minHeight: active === 'he' ? 52 : 44,
                   ...(active === 'he'
                     ? {
-                        // No bundled family carries Hebrew glyphs or niqqud
-                        // positioning, so Hebrew stays on the platform font and
-                        // gets the taller leading the editor uses.
+                        // The bundled Hebrew face carries the pointed glyphs, so
+                        // Hebrew edits type in it (not the Arabic family) and get
+                        // the taller leading the niqqud needs.
+                        fontFamily: HEBREW_FONT_FAMILY,
                         fontSize: translationSize + 2,
                         lineHeight: Math.round((translationSize + 2) * 1.7),
                         textAlign: 'right' as const,
