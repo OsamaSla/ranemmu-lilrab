@@ -20,8 +20,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
-import { Animated, Platform, Pressable, ScrollView, Share, Text as RNText, View, useWindowDimensions, type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
-import { useKeepAwake } from 'expo-keep-awake';
+import { Animated, Modal, Platform, Pressable, ScrollView, Share, Text as RNText, View, useWindowDimensions, type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';import { Gesture, GestureDetector, Directions, GestureHandlerRootView } from 'react-native-gesture-handler';import { useKeepAwake } from 'expo-keep-awake';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../../components/AppText';
@@ -166,7 +165,7 @@ export default function ReaderScreen() {
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
-  // Line being corrected in the quick-fix sheet, and the confirmation toast
+  const [overflowOpen, setOverflowOpen] = useState(false);  // Line being corrected in the quick-fix sheet, and the confirmation toast
   // that follows a save. Both are tagged with the hymn they belong to and read
   // through a guard: the screen component survives next/prev navigation, so an
   // untagged sheet would reopen on the new hymn (render-time reset, the same
@@ -238,6 +237,57 @@ export default function ReaderScreen() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [id, corpusVersion, remoteVersion],
   );
+
+  // Web keyboard shortcuts for the reader.
+  useEffect(() => {
+    if (Platform.OS !== 'web' || typeof window === 'undefined') return;
+    const handler = (event: KeyboardEvent) => {
+      const target = event.target as HTMLElement | null;
+      const tag = target?.tagName?.toLowerCase();
+      if (tag === 'input' || tag === 'textarea' || target?.isContentEditable) return;
+      if (event.metaKey || event.ctrlKey || event.altKey) return;
+      switch (event.key) {
+        case 'ArrowLeft':
+          event.preventDefault();
+          if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+          break;
+        case 'ArrowRight':
+          event.preventDefault();
+          if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+          break;
+        case '/':
+          event.preventDefault();
+          setSearchOpen(true);
+          break;
+        case 'Escape':
+          if (searchOpen) setSearchOpen(false);
+          else if (overflowOpen) setOverflowOpen(false);
+          else if (fullscreen) setFullscreen(false);
+          else if (settingsOpen) setSettingsOpen(false);
+          else if (infoHymn) setInfoHymn(false);
+          break;
+        case '+':
+        case '=':
+          event.preventDefault();
+          useSettings.getState().increaseReaderSize();
+          break;
+        case '-':
+          event.preventDefault();
+          useSettings.getState().decreaseReaderSize();
+          break;
+        case 'f':
+        case 'F':
+          event.preventDefault();
+          if (fullscreen) setFullscreen(false);
+          else setFullscreen(true);
+          break;
+        default:
+          break;
+      }
+    };
+    window.addEventListener('keydown', handler);
+    return () => window.removeEventListener('keydown', handler);
+  }, [neighbours.previous, neighbours.next, searchOpen, overflowOpen, fullscreen, settingsOpen, infoHymn, router]);
 
   // The hymn body lives in a lazily imported chunk: show a loading shell
   // until it lands, then bump state so getHymn() sees the new chunk. This
@@ -544,6 +594,18 @@ export default function ReaderScreen() {
     });
   };
 
+  const swipeLeft = Gesture.Fling()
+    .direction(Directions.LEFT)
+    .onEnd(() => {
+      if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+    });
+  const swipeRight = Gesture.Fling()
+    .direction(Directions.RIGHT)
+    .onEnd(() => {
+      if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+    });
+  const swipeGesture = Gesture.Race(swipeLeft, swipeRight);
+
   const readerFont = fontFamilyFor(fontId, false);
   const readerFontBold = fontFamilyFor(fontId, true);
 
@@ -661,47 +723,38 @@ export default function ReaderScreen() {
    */
   const iconToolbar = (dark: boolean) => {
     const ink = dark ? palette.readerText : colors.onPrimary;
+    const goPrev = () => {
+      if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
+    };
+    const goNext = () => {
+      if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
+    };
     return (
-      <ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={{
+      <View
+        style={{
           flexDirection: direction.row,
           alignItems: 'center',
-          // 34 px pitch, no gap: eight icons then measure 272 px, which fits
-          // the 288 px the header leaves at 360 px wide — so the row can be
-          // centered under the hymn number instead of running off the edge.
-          // Below that width it degrades to a plain scrolling row; the content
-          // container still grows past the viewport, so nothing is clipped.
-          paddingHorizontal: spacing.xs,
-          gap: 0,
-          minHeight: TOOLBAR_HEIGHT,
-          flexGrow: 1,
           justifyContent: 'center',
-        }}
-        style={{ flex: 1 }}>
-        <View style={{ flexDirection: direction.row, alignItems: 'center', gap: 0 }}>
-          {headerIcon({
-            name: direction.isRTL ? 'chevron-right' : 'chevron-left',
-            label: t('reader.previous'),
-            disabled: !neighbours.previous,
-            onPress: () => {
-              if (neighbours.previous) router.replace(`/hymn/${neighbours.previous.id}`);
-            },
-            dark,
-            box: 34,
-          })}
-          {headerIcon({
-            name: direction.isRTL ? 'chevron-left' : 'chevron-right',
-            label: t('reader.next'),
-            disabled: !neighbours.next,
-            onPress: () => {
-              if (neighbours.next) router.replace(`/hymn/${neighbours.next.id}`);
-            },
-            dark,
-            box: 34,
-          })}
-        </View>
+          gap: 2,
+          minHeight: TOOLBAR_HEIGHT,
+          flex: 1,
+        }}>
+        {headerIcon({
+          name: direction.isRTL ? 'chevron-right' : 'chevron-left',
+          label: t('reader.previous'),
+          disabled: !neighbours.previous,
+          onPress: goPrev,
+          dark,
+          box: 36,
+        })}
+        {headerIcon({
+          name: direction.isRTL ? 'chevron-left' : 'chevron-right',
+          label: t('reader.next'),
+          disabled: !neighbours.next,
+          onPress: goNext,
+          dark,
+          box: 36,
+        })}
         {headerIcon({
           name: fullscreen ? 'fullscreen-exit' : 'fullscreen',
           label: fullscreen ? t('reader.exitFullscreen') : t('reader.fullscreen'),
@@ -710,34 +763,24 @@ export default function ReaderScreen() {
             else setFullscreen(true);
           },
           dark,
+          box: 36,
         })}
-        {headerIcon({
-          name: 'magnify',
-          label: t('search.placeholder'),
-          onPress: () => setSearchOpen(true),
-          dark,
-        })}
-        {headerIcon({
-          name: 'information-outline',
-          label: t('reader.info'),
-          onPress: () => setInfoHymn(true),
-          dark,
-        })}
-        {headerIcon({
-          name: 'cog-outline',
-          label: t('reader.settings'),
-          onPress: () => setSettingsOpen(true),
-          dark,
-        })}
-        {headerIcon({ name: 'share-variant', label: t('reader.share'), onPress: shareHymn, dark })}
         {headerIcon({
           name: isFavorite ? 'star' : 'star-outline',
           label: t('favorites.title'),
           onPress: () => toggleFavorite(hymn.id),
           color: isFavorite ? colors.favorite : ink,
           dark,
+          box: 36,
         })}
-      </ScrollView>
+        {headerIcon({
+          name: 'dots-vertical',
+          label: t('reader.more'),
+          onPress: () => setOverflowOpen(true),
+          dark,
+          box: 36,
+        })}
+      </View>
     );
   };
 
@@ -1244,6 +1287,7 @@ export default function ReaderScreen() {
   );
 
   return (
+    <GestureHandlerRootView style={{ flex: 1 }}>
     <Animated.View
       style={{
         flex: 1,
@@ -1347,6 +1391,7 @@ export default function ReaderScreen() {
       )}
 
       <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
+        <GestureDetector gesture={swipeGesture}>
         <ScrollView
           key={hymn.id}
           ref={scrollRef}
@@ -1399,6 +1444,7 @@ export default function ReaderScreen() {
             </Card>
           ) : null}
         </ScrollView>
+        </GestureDetector>
         {stanzaRail(fullscreen)}
       </View>
 
@@ -1418,7 +1464,54 @@ export default function ReaderScreen() {
         onClose={() => setSettingsOpen(false)}
         hymn={hymn}
       />
-      {fixOverlays}
+      <Modal
+        visible={overflowOpen}
+        transparent
+        animationType="fade"
+        onRequestClose={() => setOverflowOpen(false)}>
+        <Pressable
+          onPress={() => setOverflowOpen(false)}
+          style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-start', alignItems: direction.isRTL ? 'flex-start' : 'flex-end', paddingTop: insets.top + TOOLBAR_HEIGHT + spacing.sm, paddingHorizontal: spacing.sm }}>
+          <View
+            onTouchStart={(e) => e.stopPropagation()}
+            style={{
+              backgroundColor: colors.surface,
+              borderRadius: radius.lg,
+              borderWidth: 1,
+              borderColor: colors.border,
+              minWidth: 200,
+              overflow: 'hidden',
+            }}>
+            {[
+              { icon: 'magnify', label: t('search.placeholder'), onPress: () => { setOverflowOpen(false); setSearchOpen(true); } },
+              { icon: 'information-outline', label: t('reader.info'), onPress: () => { setOverflowOpen(false); setInfoHymn(true); } },
+              { icon: 'cog-outline', label: t('reader.settings'), onPress: () => { setOverflowOpen(false); setSettingsOpen(true); } },
+              { icon: 'share-variant', label: t('reader.share'), onPress: () => { setOverflowOpen(false); shareHymn(); } },
+            ].map((item, idx) => (
+              <Pressable
+                key={item.icon}
+                onPress={item.onPress}
+                android_ripple={{ color: colors.border }}
+                style={({ pressed }) => ({
+                  flexDirection: direction.row,
+                  alignItems: 'center',
+                  gap: spacing.sm,
+                  paddingHorizontal: spacing.md,
+                  paddingVertical: spacing.md,
+                  borderTopWidth: idx === 0 ? 0 : 1,
+                  borderTopColor: colors.border,
+                  opacity: pressed ? 0.7 : 1,
+                })}>
+                <MaterialCommunityIcons name={item.icon as any} size={20} color={colors.text} />
+                <AppText variant="body" style={{ fontWeight: '500' }}>
+                  {item.label}
+                </AppText>
+              </Pressable>
+            ))}
+          </View>
+        </Pressable>
+      </Modal>
+{fixOverlays}
       {shareToast ? (
         <Toast
           message={t('reader.copied')}
@@ -1427,5 +1520,6 @@ export default function ReaderScreen() {
         />
       ) : null}
     </Animated.View>
+    </GestureHandlerRootView>
   );
 }

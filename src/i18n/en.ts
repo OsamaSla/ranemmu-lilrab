@@ -54,6 +54,7 @@ export const en: PartialDictionary = {
   'reader.alsoIn': 'Also in',
   'reader.alsoInShort': 'Also in',
   'reader.share': 'Share',
+  'reader.more': 'More',
   'reader.fullscreen': 'Fullscreen',
   'reader.exitFullscreen': 'Exit fullscreen',
   'reader.previous': 'Previous hymn',

@@ -59,6 +59,7 @@ export const de: PartialDictionary = {
   'reader.alsoIn': 'Auch in',
   'reader.alsoInShort': 'Auch in',
   'reader.share': 'Teilen',
+  'reader.more': 'Mehr',
   'reader.fullscreen': 'Vollbild',
   'reader.exitFullscreen': 'Vollbild beenden',
   'reader.previous': 'Vorheriges Lied',
