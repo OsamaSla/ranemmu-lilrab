@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-16, commit b0816397 (§23 quick fix; §16 Book 3 batch 1)
+Last verified: 2026-11-16, commit e25a9356 (§23 quick fix + §16 Book 3 batch 1)
 
 ## 1. What this is
 
