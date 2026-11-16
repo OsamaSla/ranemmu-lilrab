@@ -1,0 +1,46 @@
+{
+  "book": "book3",
+  "number": 11,
+  "title_he": "בַּצְּלָב, אֱלֹהַי",
+  "verses_he": [
+    {
+      "label": "١",
+      "lines": [
+        "בַּצְּלָב, אֱלֹהַי · רָאִיתִי אַהֲבָתְךָ",
+        "תִּפְדֶּה כָּל אָשָׁם · בְּדַם בִּנְךָ"
+      ]
+    },
+    {
+      "label": "٢",
+      "lines": [
+        "בַּצְּלָב, אֱלֹהַי · אָעִיד מִשְׁפַּט צֶדֶק",
+        "שָׁם אִיחַדְתָּ · טֹהַר וְאַהֲבָה עֲמוּקָה"
+      ]
+    },
+    {
+      "label": "٣",
+      "lines": [
+        "בַּצְּלָב, אֱלֹהַי · טָהֳרָךְ נִגְלָה",
+        "כִּי בוֹ קָרְבוּ הַחֲטָאִים · אַתָּה יְהוָה עֶלְיוֹן"
+      ]
+    },
+    {
+      "label": "٤",
+      "lines": [
+        "בַּצְּלָב, אֱלֹהַי · צְלָב הָעוֹלָם לִי",
+        "וַאֲנִי נִצְלַבְתִּי עִמּוֹ · בּוֹ יָרוּם גְּאוֹנִי"
+      ]
+    },
+    {
+      "label": "٥",
+      "lines": [
+        "בַּצְּלָב, אֱלֹהַי · מֹטִיב לִי בַּחַיִּים",
+        "אֶקְרָא בִּגְאֻלָּתוֹ · נוֹשֵׂא תָּמִיד דִּגְלוֹ"
+      ]
+    }
+  ],
+  "review": [
+    "All five stanzas open with the same refrain 'בַּצְּלָב, אֱלֹהַי' (في الصليب يا إلهى), which is the print's deliberate anaphora; hebrew-meter flags line position 1 as a constant across stanzas rather than a mismatch.",
+    "3:2 אַתָּה יְהוָה עֶלְיוֹן — the Arabic أيها الرب العلى is rendered with the divine name, since the line's argument is 'You, the Lord on high'."
+  ]
+}

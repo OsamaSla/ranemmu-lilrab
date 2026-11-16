@@ -1,0 +1,32 @@
+{
+  "book": "book3",
+  "number": 19,
+  "title_he": "חֶלְקִי יְהוָה",
+  "verses_he": [
+    {
+      "label": "القرار",
+      "lines": [
+        "חֶלְקִי יְהוָה · כֵּן אָמְרָה נַפְשִׁי"
+      ]
+    },
+    {
+      "label": "١",
+      "lines": [
+        "מִי לִי בַּשָּׁמַיִם · וְעִמּוֹ גַּם לֹא אֶחְפֹּץ",
+        "כִּי הוּא מַדַּיִי · וְאוֹצָרִי וְיֶתֶר"
+      ]
+    },
+    {
+      "label": "٢",
+      "lines": [
+        "בַּעֲבוּרוֹ אֶשְׁפֹּךְ תְּבוּאָתִי · עַל עֲפַר הָאֲפִיקִים",
+        "כִּי יְהוָה הָיָה לִי כֹּפֶר · חֶלְקִי הַיְקָר"
+      ]
+    }
+  ],
+  "review": [
+    "1:2 כִּי הוּא מַדַּיִי — the Arabic شيئاً فهو كفايتى ('whatever He gives is sufficient') is compressed to 'He is my sufficiency', keeping the Ps 73:25 sense.",
+    "2:1 אֶשְׁפֹּךְ תְּבוּאָתִי · עַל עֲפַר הָאֲפִיקִים — the Arabic أُلقى تبرى على تراب الأودية ('I cast my treasure on the sand of valleys') is rendered with the biblical שָׁפַךְ (pour out) and עָפָר (dust).",
+    "2:2 כֹּפֶר — 'ransom'; the Arabic تبرا ('treasure/gold') is read as 'ransom', since the line's argument is that the Lord Himself has become the singer's portion and price."
+  ]
+}

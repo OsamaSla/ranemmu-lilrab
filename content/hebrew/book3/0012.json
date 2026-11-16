@@ -1,0 +1,20 @@
+{
+  "book": "book3",
+  "number": 12,
+  "title_he": "מִי אָנֹכִי יָהּ, כִּי תִשָּׂא עֲלַי צְלָב",
+  "verses_he": [
+    {
+      "label": "١",
+      "lines": [
+        "מִי אָנֹכִי יָהּ, כִּי תִשָּׂא עֲלַי צְלָב",
+        "מִי אָנֹכִי, כִּי תִהְיֶה תְּמוּרָתִי, יָדִיד",
+        "תִּהְיֶה הַמֻּרְשָׁע וַאֲנִי הַזַּךְ",
+        "כִּי פָּדִיתָ נַפְשִׁי, אֲדֹנִי, בְּמוֹתְךָ הַנִּפְלָא"
+      ]
+    }
+  ],
+  "review": [
+    "1:1–2 the Arabic repeats من أنا ('who am I') four times; Hebrew keeps the anaphora with מִי אָנֹכִי … כִּי, which is the natural biblical idiom.",
+    "1:4 בְּמוֹתְךָ הַנִּפְלָא — the Arabic عجيب ('amazing') is rendered נִפְלָא, consistent with the glossary's נִפְלָא for 'wondrous'."
+  ]
+}
