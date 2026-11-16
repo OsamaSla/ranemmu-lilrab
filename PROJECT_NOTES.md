@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit 3aec3d45 (Session 12: worship setlists shareable via ?ids= with in-set navigation)
+Last verified: 2026-11-17, commit d49ce35a (Session 13: corpus version store, reader split, lazy Firebase/admin)
 
 ## 1. What this is
 
@@ -1308,6 +1308,58 @@ Gotchas verified in the browser on :8081 (0 console errors):
   tab loads exactly those 3 hymns, reader overflow adds `tr0010` to the store.
 - `t()` takes **only a key** (`useT.ts`) — no interpolation; the count subtitle
   is built as `` `${t('setlist.count')}: ${ids.length}` ``.
+
+## 25. Architecture refactor — corpus store, reader split, lazy Firebase (2026-11-17, Session 13)
+
+Three commits: `4842bdd0` (#15), `e02a61db` (#16), `d49ce35a` (#20).
+
+**Corpus version (#15).** `src/store/corpus.ts` is a dependency-free
+`useSyncExternalStore` counter. `bumpCorpusVersion()` is called from
+`refreshOverlaidCorpus()` — the single funnel for chunk loads, override writes
+and remote patches — and from `ensureSearchIndex().finally()` (the index is
+part of the derived search corpus). All 12 screens now call `useCorpusVersion()`
+instead of `useOverrides(s=>s.updatedAt)` + `useRemote(s=>s.updatedAt)`, and the
+local `setChunksVersion`/`chunkVersion` state is gone. ESLint then complains the
+version is an *unnecessary* memo dep (the reads are inside `getSummaries()` etc.),
+so each memo explicitly reads it with `void corpusVersion;` — that keeps the
+dependency honest without a per-screen `eslint-disable`. Net: ~10 suppressions
+and all local chunk-version hacks removed.
+
+**Reader split (#16).** `hymn/[id].tsx` 1,565 → 818 lines. New modules under
+`src/components/reader/`: `ReaderToolbar` (language chips + icon row + set
+badge), `StanzaRail`, `VerseBlock` (memoised), `TranslationNotice`,
+`ReaderIconButton`, plus shared `readerText.ts` (chips, disclaimers,
+`refrainHeading`). `src/hooks/useVerseScroll.ts` owns the rail measurement,
+`onReaderScroll`, `?verse` deep link and quick-fix line offsets. The normal and
+fullscreen branches already shared one `versesView`/rail/overlay tree; they now
+share component instances too, which removes the last of the fullscreen
+duplication. Verified in the browser: set badge, next/prev with `?ids=`
+preserved, HE disclaimer + pointed text, fullscreen toggle both ways, rail dots,
+0 console errors.
+
+**Lazy cloud/admin (#20).** `src/data/firebaseConfig.ts` holds the env config,
+`isFirebaseConfigured` and collection names with **no SDK imports**; ~9 callers
+that only need the boolean now import it there. `firebase.ts` re-exports them
+and keeps the SDK behind dynamic imports: `session.ts` (`firebase/auth`),
+`_layout.tsx` (`liveSync`), `LineFixSheet` (cloud sync) and `FeedbackModal`
+(feedback) all `import()` on first use. `app.config.js` sets
+`EXPO_ROUTER_IMPORT_MODE=lazy` so Expo Router wraps routes in `React.lazy`.
+
+- Verified: `node node_modules/expo/bin/cli export -p web` completes with lazy
+  mode (all 1,825 hymn pages + admin routes). Dev navigation works on `/`,
+  `/library`, `/hymn/*?ids=`, `/setlist`, `/admin`; a dummy admin sign-in
+  reaches Firebase and returns "بيانات الدخول غير صحيحة" — i.e. the dynamic
+  Auth import loads, with no module-resolution errors.
+- Caveat: the local web export still listed only the entry + 19 corpus chunks +
+  search index, and the entry contained firebase strings. So the *runtime*
+  loading is deferred, but do not claim a measured smaller web entry bundle
+  from this machine; verify chunk sizes on CI before advertising a number.
+
+Gotcha from a mid-edit hot reload: Metro transiently reported `Duplicate
+declaration "TOOLBAR_HEIGHT"`, `isFirebaseConfigured is not defined` and
+`startLiveSync is not defined`. All three were stale HMR states caught while
+splicing files — a fresh `start --clear` was clean. Do not chase them if they
+appear during a large refactor; check `tsc --noEmit` first.
 
 
 
