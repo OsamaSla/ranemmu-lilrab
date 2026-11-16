@@ -99,61 +99,62 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
             <IconButton name="close" label={t('common.close')} onPress={onClose} />
           </View>
 
-          {/* Font size: the stepper the reference app shows as A+ / A- */}
-          <View style={{ marginBottom: spacing.lg }}>
-            <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
+          {/* Font size: the stepper the reference app shows as A+ / A-.
+              The label sits on the same row — on a 360 px screen a separate
+              label line costs 26 px of the sheet's height for nothing. */}
+          <View
+            style={{
+              flexDirection: direction.row,
+              alignItems: 'center',
+              marginBottom: spacing.md,
+            }}>
+            <AppText
+              variant="label"
+              color={colors.textMuted}
+              numberOfLines={1}
+              style={{ marginEnd: spacing.sm }}>
               {t('reader.fontSize')} ({readerSize})
             </AppText>
+            <IconButton
+              name="format-font-size-decrease"
+              label={t('reader.decreaseFont')}
+              onPress={decreaseReaderSize}
+              disabled={readerSize <= READER_SIZE_MIN}
+            />
             <View
               style={{
-                flexDirection: direction.row,
-                alignItems: 'center',
+                flex: 1,
+                height: 4,
+                backgroundColor: colors.border,
+                marginHorizontal: spacing.md,
+                borderRadius: 2,
+                overflow: 'hidden',
               }}>
-              <IconButton
-                name="format-font-size-decrease"
-                label={t('reader.decreaseFont')}
-                onPress={decreaseReaderSize}
-                disabled={readerSize <= READER_SIZE_MIN}
-              />
               <View
                 style={{
-                  flex: 1,
+                  width: `${Math.round(progress * 100)}%`,
                   height: 4,
-                  backgroundColor: colors.border,
-                  marginHorizontal: spacing.md,
+                  backgroundColor: colors.accent,
                   borderRadius: 2,
-                  overflow: 'hidden',
-                }}>
-                <View
-                  style={{
-                    width: `${Math.round(progress * 100)}%`,
-                    height: 4,
-                    backgroundColor: colors.accent,
-                    borderRadius: 2,
-                  }}
-                />
-              </View>
-              <IconButton
-                name="format-font-size-increase"
-                label={t('reader.increaseFont')}
-                onPress={increaseReaderSize}
-                disabled={readerSize >= READER_SIZE_MAX}
+                }}
               />
             </View>
+            <IconButton
+              name="format-font-size-increase"
+              label={t('reader.increaseFont')}
+              onPress={increaseReaderSize}
+              disabled={readerSize >= READER_SIZE_MAX}
+            />
           </View>
 
-          {/* Font family chips */}
-          <View style={{ marginBottom: spacing.lg }}>
-            <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
-              {t('reader.fontFamily')}
-            </AppText>
-            <FontChips value={fontFamily} onChange={setFontFamily} />
+          {/* Font family chips: one scrolling row, not a wrapping block. Each
+              chip previews its own family name, so the section needs no
+              heading; the clipped chip at the edge is the scroll affordance. */}
+          <View style={{ marginBottom: spacing.md }}>
+            <FontChips value={fontFamily} onChange={setFontFamily} scroll />
           </View>
 
-          <View>
-            <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
-              {t('settings.theme')}
-            </AppText>
+          <View style={{ marginBottom: spacing.md }}>
             <SegmentedControl
               value={theme}
               onChange={(value) => setTheme(value as ThemePreference)}
@@ -165,8 +166,11 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
             />
           </View>
 
+          {/* Both listen actions share one row: two stacked pills cost 56 px of
+              sheet height, and the short labels fit a half-width pill while
+              the full wording stays on the accessibility label. */}
           {media ? (
-            <>
+            <View style={{ flexDirection: direction.row, gap: spacing.sm, marginTop: spacing.md }}>
               {media.curated ? (
                 <Pressable
                   onPress={() => {
@@ -176,20 +180,20 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
                   accessibilityLabel={t('reader.listen')}
                   android_ripple={{ color: colors.border }}
                   style={({ pressed }) => ({
+                    flex: 1,
                     flexDirection: direction.row,
                     alignItems: 'center',
                     justifyContent: 'center',
                     gap: spacing.sm,
-                    marginTop: spacing.lg,
                     paddingVertical: spacing.md,
-                    paddingHorizontal: spacing.md,
+                    paddingHorizontal: spacing.sm,
                     borderRadius: radius.pill,
                     backgroundColor: colors.primary,
                     opacity: pressed ? 0.8 : 1,
                   })}>
                   <MaterialCommunityIcons name="play-circle-outline" size={22} color={colors.onPrimary} />
                   <AppText variant="label" color={colors.onPrimary} style={{ fontWeight: '700' }}>
-                    {t('reader.listen')}
+                    {t('reader.listenShort')}
                   </AppText>
                 </Pressable>
               ) : null}
@@ -201,13 +205,13 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
                 accessibilityLabel={t('reader.listenSearch')}
                 android_ripple={{ color: colors.border }}
                 style={({ pressed }) => ({
+                  flex: 1,
                   flexDirection: direction.row,
                   alignItems: 'center',
                   justifyContent: 'center',
                   gap: spacing.sm,
-                  marginTop: spacing.sm,
                   paddingVertical: spacing.md,
-                  paddingHorizontal: spacing.md,
+                  paddingHorizontal: spacing.sm,
                   borderRadius: radius.pill,
                   borderWidth: 1,
                   borderColor: colors.primary,
@@ -216,10 +220,10 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
                 })}>
                 <MaterialCommunityIcons name="youtube" size={22} color={colors.primary} />
                 <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
-                  {t('reader.listenSearch')}
+                  {t('reader.listenSearchShort')}
                 </AppText>
               </Pressable>
-            </>
+            </View>
           ) : null}
 
           {hymn && canEdit ? (

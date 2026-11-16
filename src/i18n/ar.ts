@@ -86,6 +86,10 @@ export const ar = {
     stanzas: 'انتقال إلى مقطع',
     listen: 'استمع إلى اللحن',
     listenSearch: 'ابحث عن اللحن على يوتيوب',
+    // Short labels for the half-width pills in the settings sheet; the full
+    // wording above stays as the accessibility label.
+    listenShort: 'استمع',
+    listenSearchShort: 'يوتيوب',
   },
 
   info: {

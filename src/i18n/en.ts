@@ -71,6 +71,8 @@ export const en: PartialDictionary = {
   'reader.stanzas': 'Go to stanza',
   'reader.listen': 'Listen to the melody',
   'reader.listenSearch': 'Search for the melody on YouTube',
+  'reader.listenShort': 'Listen',
+  'reader.listenSearchShort': 'YouTube',
 
   'info.meter': 'Metre',
   'info.missing': 'Not available',

@@ -76,6 +76,8 @@ export const de: PartialDictionary = {
   'reader.stanzas': 'Zur Strophe springen',
   'reader.listen': 'Melodie anhören',
   'reader.listenSearch': 'Melodie auf YouTube suchen',
+  'reader.listenShort': 'Anhören',
+  'reader.listenSearchShort': 'YouTube',
 
   'info.meter': 'Metrum',
   'info.missing': 'Nicht verfügbar',

@@ -441,7 +441,7 @@ export default function ReaderScreen() {
     disabled?: boolean;
     box?: number;
   }) => {
-    const box = props.box ?? 40;
+    const box = props.box ?? 34;
     return (
       <IconButton
         name={props.name}
@@ -547,9 +547,16 @@ export default function ReaderScreen() {
         contentContainerStyle={{
           flexDirection: direction.row,
           alignItems: 'center',
-          paddingHorizontal: spacing.sm,
-          gap: 2,
+          // 34 px pitch, no gap: eight icons then measure 272 px, which fits
+          // the 288 px the header leaves at 360 px wide — so the row can be
+          // centered under the hymn number instead of running off the edge.
+          // Below that width it degrades to a plain scrolling row; the content
+          // container still grows past the viewport, so nothing is clipped.
+          paddingHorizontal: spacing.xs,
+          gap: 0,
           minHeight: TOOLBAR_HEIGHT,
+          flexGrow: 1,
+          justifyContent: 'center',
         }}
         style={{ flex: 1 }}>
         <View style={{ flexDirection: direction.row, alignItems: 'center', gap: 0 }}>
@@ -1069,7 +1076,7 @@ export default function ReaderScreen() {
             onPress: goBack,
             dark: true,
           })}
-          <View style={{ flex: 1, paddingHorizontal: spacing.sm }}>
+          <View style={{ flex: 1, paddingHorizontal: spacing.xs }}>
             <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center' }}>
               <AppText
                 variant="heading"
@@ -1080,7 +1087,7 @@ export default function ReaderScreen() {
               </AppText>
               {languageChips(true)}
             </View>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start', marginTop: 2 }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
               {iconToolbar(true)}
             </View>
           </View>
@@ -1156,7 +1163,7 @@ export default function ReaderScreen() {
             color={colors.onPrimary}
             onPress={goBack}
           />
-          <View style={{ flex: 1, paddingHorizontal: spacing.sm }}>
+          <View style={{ flex: 1, paddingHorizontal: spacing.xs }}>
             <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center' }}>
               <AppText
                 variant="heading"
@@ -1167,7 +1174,7 @@ export default function ReaderScreen() {
               </AppText>
               {languageChips(false)}
             </View>
-            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'flex-start', marginTop: 2 }}>
+            <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
               {iconToolbar(false)}
             </View>
             {/* Topics under the title when classified. Tapping opens the
