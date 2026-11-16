@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit 6d0ea012 (Session 10: unified `npm run build:web` with quality gates + CI caching; export step env-broken locally)
+Last verified: 2026-11-17, commit 049df18c (Session 11: prebuilt normalized search index + measured library row layout)
 
 ## 1. What this is
 
@@ -31,6 +31,14 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
   longer re-merge 1.8k records per mount; callers get a copy they can sort.
 - Search normalisation (`src/data/normalize.ts`) has a text-only path that skips
   building the highlight origin map, used by title filtering on every keystroke.
+- Full-text search now runs on a **build-time index** (`assets/hymns/search-ar.json`,
+  Session 11): `scripts/build-corpus.mjs` writes pre-normalised titles + lines for
+  every language (4.18 MB on disk), loaded once via a dynamic import from
+  `src/data/search.ts`. `scripts/lib/normalize.mjs` mirrors `src/data/normalize.ts`
+  for plain Node — keep both in sync or hits silently disappear. Each hymn stores
+  an FNV-1a fingerprint of its raw text; an admin edit changes it, so only that
+  hymn falls back to on-device normalisation. Origin maps are computed on a
+  match, not stored for every line.
 
 ## 3. Repo map (where the logic lives)
 
@@ -93,6 +101,10 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
   Add `--clear` the first time `.env.local` is created or changed: Metro caches
   the Babel env inlining, so a cached build silently ships an app with
   `isFirebaseConfigured() === false` (no admin, no live sync).
+- `npm run build:corpus` also regenerates `assets/hymns/search-ar.json` (it is
+  part of the `build:web` drift pathspec). Re-running with no content change is
+  byte-identical; the index is deterministic. It is imported lazily only when a
+  lyrics search is requested, so it stays out of the entry bundle.
 - Syntax/transpile check for a single file:
   `babel.transformSync(src, {presets: [require.resolve('babel-preset-expo')]})`.
 
@@ -118,6 +130,8 @@ alphabet buckets, or search results) with two ±50 buttons above it.
   is allowed for any cell.
 - `getItemLayout` also fixes the initial render: without it the web list was
   ~800 px tall (only a couple of rows); with it the content is the full model.
+  (Session 11: the layout is still required — do not "simplify" to
+  `onScrollToIndexFailed` alone; see §8.)
 - Current row index is tracked from `onViewableItemsChanged`
   (`viewabilityConfig: {itemVisiblePercentThreshold: 0}`): SectionList view
   tokens carry a **per-section** `index` and a `section` object, and
@@ -248,6 +262,33 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   installed` (legacy CLI + local Node v24; CI pins Node 22 and evidently got past
   this). The unified `npm run build:web` therefore cannot run to completion in this
   sandbox — pre-existing, the export command itself was not changed in Session 10.
+
+- Session 11 (2026-11-17, search index): the 4.18 MB `search-ar.json` is a
+  dynamic import; `library.tsx` and `ReaderSearchOverlay.tsx` gate lyric search
+  on `areAllChunksLoaded() && isSearchIndexReady()` so the first query never
+  normalises the corpus itself. Verified in the dev server on :8081: typing
+  "نرنم" produced 3 title hits + 16 lyric hits from the prebuilt strings. The
+  build-side JSON was cross-checked against all 1,824 chunk records: 0
+  fingerprint/title/line mismatches. Plain Node cannot import the TS
+  normaliser, hence the mirrored `scripts/lib/normalize.mjs`; edit both files
+  together.
+- Session 11 (2026-11-17, list layout): do NOT remove `getItemLayout` from the
+  library's `SectionList`. Re-reading `VirtualizedList.js:1010-1021` confirmed
+  the tail spacer is clamped to measured cells without it, so a 50-row jump
+  can never reach an unmeasured row. The fixed `ROW_HEIGHT = 90` was replaced
+  by **measured** heights: `HymnRow` reports its card height through `onLayout`
+  (`onMeasured`), section headers through another `onLayout`, and
+  `getItemLayout` sums those into a cached prefix layout (bootstrap 88/40 only
+  until the first measurement). `getItemLayout` must close over the render's
+  `sections` array, not a ref synced in an effect: on the first render the ref
+  is still empty, so the list computed a ~1.9k px content box instead of the
+  full ~92k px model (caught in the browser). ESLint's `react-hooks/refs` rule
+  forbids assigning refs during render, which is why the callback closes over
+  the value instead. `HymnRow` is now `memo()`-wrapped; keep `onMeasured`
+  stable. Browser check: the ±50 press did call `scrollToIndex` (confirmed via
+  the getItemLayout call for cell 50), but headless Chromium ignored both
+  `scrollTo({behavior:'smooth'})` and `'instant'`, so visual scrolling could
+  not be verified there — a browser-environment limitation, not app code.
 
 ## 9. Known issues / cleanup candidates
 
