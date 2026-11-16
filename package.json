@@ -50,7 +50,7 @@
     "start": "expo start --port 8081",
     "dev": "expo start --port 8081",
     "preview": "expo serve --port 8083",
-    "preview:build": "npm run check:hymns && npm run build:corpus && npx expo export --platform web && expo serve --port 8083",
+    "preview:build": "npm run build:web && expo serve --port 8083",
     "warm": "node scripts/warm-metro.mjs --port 8081",
     "android": "expo start --android",
     "ios": "expo start --ios",
@@ -87,8 +87,9 @@
     "tutorial:timeline": "python scripts/tutorial/timeline.py",
     "tutorial:publish": "node --env-file=.env.local scripts/tutorial/publish_video.mjs",
     "tutorial:youtube": "python scripts/tutorial/upload_youtube.py",
-    "predeploy": "expo export -p web && node scripts/pages-fallback.mjs && node scripts/pwa-head.mjs && node scripts/canonical.mjs && node scripts/copy-pwa-assets.mjs",
-    "deploy": "gh-pages --nojekyll -d dist"
+    "predeploy": "npm run build:web",
+    "deploy": "gh-pages --nojekyll -d dist",
+    "build:web": "npm run typecheck && npm run lint && npm run check:hymns && npm run hebrew:check && npm run scripture:check && npm run build:corpus && git diff --exit-code -- assets/hymns src/data/generated-chunks.ts && npx expo export -p web && node -e \"require('fs').rmSync('dist/(tabs)',{recursive:true,force:true})\" && node scripts/pages-fallback.mjs && node scripts/pwa-head.mjs && node scripts/canonical.mjs && node scripts/copy-pwa-assets.mjs"
   },
   "private": true
 }
