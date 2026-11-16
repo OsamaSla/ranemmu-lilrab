@@ -90,6 +90,19 @@ export const ar = {
     // wording above stays as the accessibility label.
     listenShort: 'استمع',
     listenSearchShort: 'يوتيوب',
+    // Quick fix: hold a line in the reader to correct it in place.
+    fixTitle: 'تصحيح سطر',
+    fixHint: 'اضغط مطولًا على أي سطر لتصحيحه',
+    fixStanza: 'المقطع',
+    fixLine: 'السطر',
+    fixSave: 'حفظ',
+    fixUndo: 'تراجع',
+    fixEmpty: 'لا يمكن ترك السطر فارغًا',
+    fixSaved: 'تم حفظ التصحيح',
+    fixSavedCloud: 'تم حفظ التصحيح — تم الرفع للسحابة',
+    fixSavedLocal: 'تم حفظ التصحيح على هذا الجهاز فقط',
+    fixSyncFailed: 'تم الحفظ على الجهاز — تعذّر الرفع للسحابة',
+    fixSyncNoAuth: 'تم الحفظ على الجهاز فقط — سجّل الدخول ليرتفع التعديل',
   },
 
   info: {

@@ -227,33 +227,44 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
           ) : null}
 
           {hymn && canEdit ? (
-            <Pressable
-              onPress={() => {
-                onClose();
-                router.push({ pathname: '/admin-edit', params: { id: hymn.id } });
-              }}
-              accessibilityRole="button"
-              accessibilityLabel={t('admin.editHymn')}
-              android_ripple={{ color: colors.border }}
-              style={({ pressed }) => ({
-                flexDirection: direction.row,
-                alignItems: 'center',
-                justifyContent: 'center',
-                gap: spacing.sm,
-                marginTop: spacing.sm,
-                paddingVertical: spacing.md,
-                paddingHorizontal: spacing.md,
-                borderRadius: radius.pill,
-                borderWidth: 1,
-                borderColor: colors.primary,
-                backgroundColor: 'transparent',
-                opacity: pressed ? 0.7 : 1,
-              })}>
-              <MaterialCommunityIcons name="pencil-outline" size={20} color={colors.primary} />
-              <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
-                {t('admin.editHymn')}
+            <>
+              <Pressable
+                onPress={() => {
+                  onClose();
+                  router.push({ pathname: '/admin-edit', params: { id: hymn.id } });
+                }}
+                accessibilityRole="button"
+                accessibilityLabel={t('admin.editHymn')}
+                android_ripple={{ color: colors.border }}
+                style={({ pressed }) => ({
+                  flexDirection: direction.row,
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  gap: spacing.sm,
+                  marginTop: spacing.sm,
+                  paddingVertical: spacing.md,
+                  paddingHorizontal: spacing.md,
+                  borderRadius: radius.pill,
+                  borderWidth: 1,
+                  borderColor: colors.primary,
+                  backgroundColor: 'transparent',
+                  opacity: pressed ? 0.7 : 1,
+                })}>
+                <MaterialCommunityIcons name="pencil-outline" size={20} color={colors.primary} />
+                <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
+                  {t('admin.editHymn')}
+                </AppText>
+              </Pressable>
+              {/* The quick fix has no visible button by design (holding a line
+                  is the gesture), so the sheet is where an editor learns it. */}
+              <AppText
+                variant="caption"
+                color={colors.textMuted}
+                center
+                style={{ marginTop: spacing.sm }}>
+                {t('reader.fixHint')}
               </AppText>
-            </Pressable>
+            </>
           ) : null}
         </View>
       </View>

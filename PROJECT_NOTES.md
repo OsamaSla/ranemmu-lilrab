@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-16, commit 7742eb07 (reader sheet + header; see §22)
+Last verified: 2026-11-16, commit d9a2b0f7 (§22 reader chrome; §23 quick fix)
 
 ## 1. What this is
 
@@ -1115,6 +1115,68 @@ with nothing clipped. `IconButton`'s `hitSlop` keeps the 34 px boxes tappable.
 Checks: `tsc --noEmit` clean, 0 console errors, font stepper 20 → 22 works.
 `eslint` reports one pre-existing `react-hooks/set-state-in-effect` at
 `[id].tsx:320` — it is on HEAD too, not from this change.
+
+## 23. Quick fix: hold a line to correct it (2026-11-16)
+
+Fixing one wrong word used to be: open settings sheet → admin editor → scroll the
+whole hymn. Now an **editor holds any line in the reader for 350 ms** and a sheet
+(`src/components/LineFixSheet.tsx`) opens pre-filled with that exact line.
+No new header button — the 8-icon row already fills 272 of 288 px (§22).
+
+Wiring (`src/app/(tabs)/hymn/[id].tsx`):
+
+- gate is `useCanEdit()` (Firebase admin email **or** on-device PIN); a visitor's
+  lines are plain `View`s, so there is no hold affordance and no a11y noise;
+- per-line `onLayout` stores `id:verse:line → y` in `lineOffsets` (a ref, kept
+  separate from `verseOffsets` so the rail's reset-on-first-layout contract is
+  untouched); `scrollY` is captured in `onReaderScroll`;
+- `openLineFix` scrolls the held line to ~20 % from the top before opening the
+  sheet — keyboard + sheet cover the bottom, and editing a line you cannot see
+  beside its stanza is how the wrong word gets pasted over a right one;
+- sheet state is **tagged with the hymn id** and read through a guard
+  (`fixState.hymnId === id`), not reset by an effect: the screen survives
+  next/prev navigation and the existing `setActiveVerseIndex(null)` effect
+  already trips `react-hooks/set-state-in-effect`.
+
+Editing model: one Arabic line + **one translation language at a time** (EN/DE/HE
+chips, only languages that actually have a line at that index). Drafts for every
+available language persist while the sheet is open, so switching chips cannot
+lose an edit. Save is disabled until something changed; an emptied line is
+refused with the language named (`reader.fixEmpty` + `AR`/`English`/…).
+
+Patch building copies `label` and `chorus` verbatim and replaces **only** the
+one line inside `verses` and the changed `verses_<lang>` arrays. Consequences:
+
+- it cannot renumber a stanza or re-flag a refrain;
+- it sidesteps the admin editor's deferred label bug (§9) where `toForm` turns a
+  chorus stanza's stored `"1"` into `"القرار"` and every save rewrites
+  `verses`/`verses_en`/`verses_de`;
+- `translationStatus` is never touched — an edited translation is not marked
+  verified, deliberately.
+
+Save semantics: `setOverride(id, patch)` first (local is the source of truth in a
+live setting), sheet closes instantly, then a best-effort
+`syncHymnToCloud(id, patch)`. A `Toast` (`src/components/Toast.tsx`) reports
+`uploaded | local | failed | noauth` via `reader.fixSavedCloud/Local/SyncFailed/
+SyncNoAuth` and offers **تراجع** for 5 s; undo re-applies the arrays captured
+before the write (only the keys actually replaced — an `undefined` key would
+erase a field) and re-uploads them.
+
+Discovery: the settings sheet shows «اضغط مطولًا على أي سطر لتصحيحه»
+(`reader.fixHint`) under the full-editor button, editors only.
+
+Verified with Playwright at 360×640 and 412×800, 0 console errors:
+visitor has 0 fix targets; PIN `1234` → 12 targets on `h0107` (3 stanzas × 4);
+sheet pre-filled with the held line; position line + 3 chips; save
+disabled→enabled; in-place update; toast + undo restores; correction persists in
+`helmenarnam.overrides` across reload; EN edit renders in the parallel view;
+empty line refused; DE/EN/HE chips on `h0107`; `b30279` (no translations) shows
+one field and no chips; fullscreen keeps sheet + toast + in-place update; cancel
+writes nothing; a chip switch keeps the other draft.
+
+`tsc --noEmit` clean; `eslint` still reports only the pre-existing
+`react-hooks/set-state-in-effect` (§9).
+
 
 
 

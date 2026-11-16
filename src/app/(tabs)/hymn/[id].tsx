@@ -20,18 +20,20 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useRef, useState, type ComponentProps } from 'react';
-import { Animated, Pressable, ScrollView, Share, Text as RNText, View, type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
+import { Animated, Pressable, ScrollView, Share, Text as RNText, View, useWindowDimensions, type LayoutChangeEvent, type NativeScrollEvent, type NativeSyntheticEvent } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../../components/AppText';
 import { Card } from '../../../components/Card';
 import { EmptyState } from '../../../components/EmptyState';
 import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
+import { LineFixSheet, type FixSavedPayload, type FixTarget } from '../../../components/LineFixSheet';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
 import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
 import { ReaderSearchOverlay } from '../../../components/ReaderSearchOverlay';
 import type { SegmentOption } from '../../../components/SegmentedControl';
+import { Toast } from '../../../components/Toast';
 import { ensureHymn, getHymn, getLinks, getNeighbours, getSummaries, isHymnPending } from '../../../data/loader';
 import { formatScriptureLine } from '../../../data/scriptures';
 import { allTopicsOf } from '../../../data/topics';
@@ -44,6 +46,7 @@ import { useOverrides } from '../../../store/overrides';
 import { useRemote } from '../../../store/remote';
 import { useSettings } from '../../../store/settings';
 import { useGoBack } from '../../../hooks/useGoBack';
+import { useCanEdit } from '../../../hooks/useCanEdit';
 import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
 import { palette, radius, spacing, HIT_SLOP } from '../../../theme/tokens';
 
@@ -150,11 +153,31 @@ export default function ReaderScreen() {
   const { colors, isDark } = useTheme();
   const insets = useSafeAreaInsets();
   const goBack = useGoBack();
+  // Editing is admin-only: the long-press below only exists for editors, the
+  // same gate the admin editor and the settings sheet's edit button use.
+  const canEdit = useCanEdit();
+  const { height: windowHeight } = useWindowDimensions();
 
   const [searchOpen, setSearchOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
+  // Line being corrected in the quick-fix sheet, and the confirmation toast
+  // that follows a save. Both are tagged with the hymn they belong to and read
+  // through a guard: the screen component survives next/prev navigation, so an
+  // untagged sheet would reopen on the new hymn (render-time reset, the same
+  // pattern as the translation view below).
+  const [fixState, setFixState] = useState<{
+    hymnId: string | undefined;
+    target: FixTarget | null;
+    toast: { message: string; actionLabel?: string; onAction?: () => void } | null;
+  }>({ hymnId: id, target: null, toast: null });
+  const fixTarget = fixState.hymnId === id ? fixState.target : null;
+  const toast = fixState.hymnId === id ? fixState.toast : null;
+  const dismissToast = useCallback(
+    () => setFixState((state) => ({ ...state, toast: null })),
+    [],
+  );
 
   const readerSize = useSettings((s) => s.readerSize);
   const fontId = useSettings((s) => s.fontFamily);
@@ -310,6 +333,16 @@ export default function ReaderScreen() {
     offsets: new Map(),
   });
 
+  /**
+   * Line offsets for the quick fix (per hymn, stanza and line). Kept separate
+   * from the rail's store: it is only read when a line is held, so an
+   * approximate measurement is harmless and it must not disturb the rail's
+   * reset-on-first-layout contract.
+   */
+  const lineOffsets = useRef(new Map<string, number>());
+  /** Last scroll offset, so a held line can be judged against the viewport. */
+  const scrollY = useRef(0);
+
   const [activeVerseIndex, setActiveVerseIndex] = useState<number | null>(null);
 
   // A new hymn starts with no active verse. The screen component survives a
@@ -326,10 +359,11 @@ export default function ReaderScreen() {
   // page. A plain onScroll prop works on native and web alike.
   const onReaderScroll = useCallback(
     (event: NativeSyntheticEvent<NativeScrollEvent>) => {
+      const yOffset = event.nativeEvent.contentOffset.y;
+      scrollY.current = yOffset;
       if (!hymn) return;
       const store = verseOffsets.current;
       if (store.hymnId !== id) return;
-      const yOffset = event.nativeEvent.contentOffset.y;
       let closestIndex = 0;
       let minDiff = Infinity;
 
@@ -368,6 +402,70 @@ export default function ReaderScreen() {
       store.offsets = new Map();
     }
     store.offsets.set(verseIndex, event.nativeEvent.layout.y);
+  };
+
+  const onLineLayout = (verseIndex: number, lineIndex: number) => (event: LayoutChangeEvent) => {
+    lineOffsets.current.set(`${id}:${verseIndex}:${lineIndex}`, event.nativeEvent.layout.y);
+  };
+
+  /**
+   * Opens the quick fix on one line. The line is brought into the upper part
+   * of the screen first: the sheet and the keyboard cover the bottom half, and
+   * a correction made without seeing the surrounding stanza is how wrong words
+   * get pasted over right ones.
+   */
+  const openLineFix = (verseIndex: number, lineIndex: number, stanzaLabel: string) => {
+    if (!canEdit) return;
+    const store = verseOffsets.current;
+    const stanzaY = store.hymnId === id ? store.offsets.get(verseIndex) : undefined;
+    const lineY = lineOffsets.current.get(`${id}:${verseIndex}:${lineIndex}`);
+    if (stanzaY !== undefined && lineY !== undefined) {
+      // + padding: the line is measured inside the stanza's padded box.
+      const absolute = stanzaY + lineY + spacing.md;
+      const onScreen = absolute - scrollY.current;
+      if (onScreen < 0 || onScreen > windowHeight * 0.3) {
+        scrollRef.current?.scrollTo({
+          y: Math.max(0, absolute - windowHeight * 0.2),
+          animated: true,
+        });
+      }
+    }
+    setFixState({ hymnId: id, target: { verseIndex, lineIndex, stanzaLabel }, toast: null });
+  };
+
+  /**
+   * Closes the sheet immediately (the local save has already happened) and
+   * reports the cloud result when it lands. Undo re-applies the arrays
+   * captured before the write; it is deliberately one tap, because a typo
+   * pasted during singing must be reversible without opening anything.
+   */
+  const onFixSaved = ({ undo, sync }: FixSavedPayload) => {
+    const runUndo = () => {
+      undo();
+      setFixState((state) => ({ ...state, toast: null }));
+    };
+    setFixState({
+      hymnId: id,
+      target: null,
+      toast: {
+        message: t('reader.fixSaved'),
+        actionLabel: t('reader.fixUndo'),
+        onAction: runUndo,
+      },
+    });
+    void sync.then((state) => {
+      const key =
+        state === 'uploaded'
+          ? 'reader.fixSavedCloud'
+          : state === 'local'
+            ? 'reader.fixSavedLocal'
+            : state === 'noauth'
+              ? 'reader.fixSyncNoAuth'
+              : 'reader.fixSyncFailed';
+      setFixState((current) =>
+        current.toast ? { ...current, toast: { ...current.toast, message: t(key) } } : current,
+      );
+    });
   };
 
   useEffect(() => {
@@ -789,6 +887,12 @@ export default function ReaderScreen() {
       {hymn.verses.map((verseBlock, verseIndex) => {
         const onDark = fullscreen || isDark;
         const headingSize = Math.round(readerSize * (verseBlock.chorus ? 0.9 : 0.7));
+        // The sheet names the stanza the same way the reader does, so the
+        // position line reads "المقطع القرار · السطر ٢" for a refrain.
+        const stanzaLabel = verseBlock.chorus
+          ? refrainHeading(hymn.chorus, transChorus, verseBlock.label)
+          : verseBlock.label;
+        const heading = verseBlock.chorus ? stanzaLabel : `(${stanzaLabel})`;
         return (
           <View
             key={`${verseIndex}-${verseBlock.label}`}
@@ -841,18 +945,46 @@ export default function ReaderScreen() {
                     }
                   : null),
               }}>
-              {verseBlock.chorus
-                ? refrainHeading(hymn.chorus, transChorus, verseBlock.label)
-                : `(${verseBlock.label})`}
+              {heading}
             </AppText>
             {verseBlock.lines.map((line, lineIndex) => {
               const translated = transVerses?.[verseIndex]?.lines[lineIndex];
-              return (
-                <View
-                  key={lineIndex}
-                  style={{ marginBottom: lineIndex < verseBlock.lines.length - 1 ? spacing.sm : 0 }}>
+              const marginBottom =
+                lineIndex < verseBlock.lines.length - 1 ? spacing.sm : 0;
+              const body = (
+                <>
                   {stanzaText(line)}
-                  {translated ? <View style={{ marginTop: 2 }}>{translationText(translated)}</View> : null}
+                  {translated ? (
+                    <View style={{ marginTop: 2 }}>{translationText(translated)}</View>
+                  ) : null}
+                </>
+              );
+              // Readers get plain text. Editors get a hold-to-fix target on
+              // each line; a normal tap and a scroll still do nothing, so the
+              // reading experience is unchanged.
+              return canEdit ? (
+                <Pressable
+                  key={lineIndex}
+                  onLongPress={() => openLineFix(verseIndex, lineIndex, stanzaLabel)}
+                  delayLongPress={350}
+                  onLayout={onLineLayout(verseIndex, lineIndex)}
+                  accessibilityRole="button"
+                  accessibilityLabel={`${t('reader.fixTitle')} — ${t('reader.verseOf')} ${stanzaLabel} · ${t('reader.fixLine')} ${lineIndex + 1}`}
+                  accessibilityHint={t('reader.fixHint')}
+                  android_ripple={{ color: colors.border }}
+                  style={({ pressed }) => ({
+                    marginBottom,
+                    borderRadius: radius.sm,
+                    backgroundColor: pressed ? colors.surfaceMuted : 'transparent',
+                    // Web: a long press on text opens the browser's own
+                    // selection callout and swallows the gesture.
+                    userSelect: 'none',
+                  })}>
+                  {body}
+                </Pressable>
+              ) : (
+                <View key={lineIndex} style={{ marginBottom }}>
+                  {body}
                 </View>
               );
             })}
@@ -1058,7 +1190,35 @@ export default function ReaderScreen() {
     );
   };
 
-  
+  /**
+   * Quick fix + its confirmation toast. Shared by the reading and fullscreen
+   * branches: holding a line must work in whichever mode the app is actually
+   * being used in during an assembly.
+   */
+  const fixOverlays = (
+    <>
+      {toast ? (
+        <Toast
+          message={toast.message}
+          actionLabel={toast.actionLabel}
+          onAction={toast.onAction}
+          onDismiss={dismissToast}
+          bottom={insets.bottom + spacing.lg}
+        />
+      ) : null}
+      {fixTarget ? (
+        <LineFixSheet
+          hymn={hymn}
+          target={fixTarget}
+          preferredLang={parallel === 'ar' ? null : parallel}
+          readerSize={readerSize}
+          fontId={fontId}
+          onClose={() => setFixState((state) => ({ ...state, target: null }))}
+          onSaved={onFixSaved}
+        />
+      ) : null}
+    </>
+  );
 
   if (fullscreen) {
     return (
@@ -1130,6 +1290,7 @@ export default function ReaderScreen() {
           onClose={() => setSettingsOpen(false)}
           hymn={hymn}
         />
+        {fixOverlays}
       </Animated.View>
     );
   }
@@ -1273,6 +1434,7 @@ export default function ReaderScreen() {
         onClose={() => setSettingsOpen(false)}
         hymn={hymn}
       />
+      {fixOverlays}
     </View>
   );
 }
