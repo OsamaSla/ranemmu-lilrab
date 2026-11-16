@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-16, commit 57e4ce98 (Session 9: bundled Noto Sans Hebrew with niqqud for Hebrew rendering)
+Last verified: 2026-11-16, commit 7c5a38c5 (Session 9: bundled Noto Sans Hebrew with niqqud for Hebrew rendering)
 
 ## 1. What this is
 
