@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit d49ce35a (Session 13: corpus version store, reader split, lazy Firebase/admin)
+Last verified: 2026-11-17, commit 380e73f3 (Session 13 + admin Hebrew review queue fix)
 
 ## 1. What this is
 
@@ -1360,6 +1360,28 @@ declaration "TOOLBAR_HEIGHT"`, `isFirebaseConfigured is not defined` and
 `startLiveSync is not defined`. All three were stale HMR states caught while
 splicing files — a fresh `start --clear` was clean. Do not chase them if they
 appear during a large refactor; check `tsc --noEmit` first.
+
+## 26. Hebrew in the review queue (2026-11-17, follow-up `380e73f3`)
+
+`admin.tsx` review queue only offered EN/DE — Hebrew translations were
+authorable in `admin-edit` but not reachable through the review flow. Now the
+language toggle has EN/DE/HE, `reviewLang` is `'en'|'de'|'he'`, and the filter
+picks `verses_en`/`verses_de`/`verses_he`. Tapping a row pushes
+`lang: reviewLang`, so HE opens the editor on the Hebrew fields (verified:
+`/admin-edit?id=tr0001&lang=he` loaded 25 pointed-Hebrew field values).
+
+Book filter gained `book3` (Hebrew exists there too), and row subtitles use
+`bookLabelKey(book)` instead of a two-way ternary.
+
+**Hebrew has no review flag of its own** — `translationStatus` is the EN/DE
+review result (§15) — so in HE mode the queue ignores the draft/reviewed
+filter, hides those chips, shows `—` instead of a status badge, and prints only
+the total count up top. Do not "restore" the draft/reviewed filter for Hebrew;
+it would claim a review the Hebrew never had.
+
+Verified in the PIN-gated build (`.env.local` temporarily set aside, then
+restored): HE chip → 439 hymns, neutral `—` badges, tap → editor with Hebrew
+fields. `tsc --noEmit` + ESLint clean.
 
 
 
