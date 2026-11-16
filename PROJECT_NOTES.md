@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-15, commit e0087f00 (scripture references; see §19)
+Last verified: 2026-11-16, commit adae2beb (repo size cleanup; see §20)
 
 ## 1. What this is
 
@@ -337,10 +337,10 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   page, while in the export the route's own HTML always won, so the landing was
   unreachable in production. Now dev and production agree (app at `/`, landing
   at `/landing.html`).
-- `dist/` is **tracked in git** even though CI rebuilds it. Never commit a local
-  `expo export`: without `DEPLOY=1` the bundle uses `publicPath "/"` instead of
-  `/ranemmu-lilrab/` and would break the Pages deploy. `git checkout -- dist`
-  after local experiments.
+- `dist/` is **not tracked** (untracked 2026-11-16, `adae2beb`; CI builds it on
+  every push). Never commit a local `expo export`: without `DEPLOY=1` the bundle
+  uses `publicPath "/"` instead of `/ranemmu-lilrab/` and would break the Pages
+  deploy.
 - **Reader web crash fixed 2026-11-07**: `src/app/(tabs)/hymn/[id].tsx` called
   `scrollRef.current.addListener(...)` (native-only). On web this threw
   `TypeError: e.addListener is not a function` and unmounted the reader to a
@@ -416,8 +416,9 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 - Gotcha: GitHub Pages was not enabled at first (`GET /repos/.../pages` → 404)
   even though both old workflows reported success; it is now enabled and
   deploying from Actions. Only `pages.yml` exists (`deploy.yml` removed).
-- Gotcha: `dist/` is committed, and `.gitignore` previously ignored it, so new
-  export files needed `git add -f`. The ignore rule was removed on 2026-11-07.
+- Gotcha (fixed 2026-11-16): `dist/` used to be committed — 3,729 regenerated
+  files per deploy, and most of the repository's history. Both workflows build
+  it from source, so it is now in `.gitignore` and out of the index.
 - **Installed web app (PWA) auto-refresh (2026-11-08)**: the home-screen web
   app used to keep the bundle it booted with while the window stayed alive.
   `src/hooks/useAppUpdateCheck.ts` (called from `src/app/_layout.tsx`) fetches
@@ -994,6 +995,47 @@ Present in fullscreen too.
   Worth fixing separately; do not "fix" it inside a scripture change.
 - Not done (deliberate): per-stanza citations; clearing `review` flags (a human
   must actually read the verse first); any Bible-text display.
+
+## 20. Repository size — where 3.1 GB went, and the rule that prevents it (2026-11-16)
+
+The working folder reached **3.13 GB** for a project whose own code is ~30 MB of
+text. Measured breakdown before cleaning:
+
+| item | size | cause |
+|---|---|---|
+| `node_modules/` | 971 MB | Expo/RN toolchain, 81k files — normal, rebuildable |
+| `.git/` | 917 MB | **840 MB of it was local-only dead objects** (18,709 unreachable: abandoned branches, intermediate exports). Real history was 68 MB |
+| `assets/book3/` | 737 MB | 457 page scans + OCR slices PNG-rasterised from `assets/1-401.pdf` |
+| `scratch_crops/`, `scratch_index/` | 372 MB | debug crops cut during the Book 3 transcription |
+| `dist/` | 134 MB | static export, **tracked** (3,729 files rewritten every deploy) |
+
+What actually grew the history: `dist/` (11,303 blob versions, 332 MB), the
+corpus JSONs (2,346 versions, 218 MB — `main.json` alone is 3.3 MB per version),
+and `RAS/` (two 39 MB Access `.mdb` files + a 7.9 MB screen recording, 78 MB,
+committed and later deleted).
+
+Done 2026-11-16 (`adae2beb`): `git rm -r --cached dist` + `/dist/` in
+`.gitignore`; deleted `dist/`, `scratch_crops/`, `scratch_index/` and
+`assets/book3/{pages,split}` (the PDFs `assets/1-401.pdf` and
+`assets/1-402-index.pdf` stay — they are the source the PNGs were rasterised
+from); `git reflog expire --expire=now --all && git gc --prune=now`, which took
+`.git` from **909 MB to 63 MB** without rewriting history or force-pushing.
+
+Result: **3.13 GB → 1.08 GB**, and 971 MB of that is `node_modules`.
+
+- Rule: **`dist/` is generated, never committed.** Both `pages.yml` and
+  `firebase.yml` run `expo export` themselves; the committed copy only made
+  history noise.
+- Rule: the book scans and OCR scratch stay out of git (`assets/book3/`,
+  `scratch_crops/`) and can be deleted at will — the transcriptions live in
+  `content/`, and the page images can be rasterised again from the PDFs.
+- The one thing to preserve before a `gc --prune=now` is the stash: it was
+  archived to the branch `archive/stash-566-590` first, because expiring the
+  reflog drops stash entries.
+- Do not expect `git gc` to help again on its own: it was the *unreachable*
+  objects that made the pack large, and those only accumulate when branches are
+  abandoned or a rewrite is abandoned midway.
+
 
 
 
