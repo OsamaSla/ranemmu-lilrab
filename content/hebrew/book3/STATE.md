@@ -1,12 +1,12 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 16 (b30201–b30215), S3 started (1/5 batches)
+Last updated: 2026-11-17 · after batch 17 (b30216–b30230), S3 at 2/5 batches
 
-- Progress: **215 / 402** hymns, 2058 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 440 line flags for b30001–b30215, all reviewed and
-  accepted; `hebrew:progress` shows 186, which is the `review[]` note count
-  (178 through batch 15 plus 8 in batch 16), not the meter count.
-- Next range: **b30216–b30230** (batch 17, second of S3).
+- Progress: **230 / 402** hymns, 2195 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 465 line flags for b30001–b30230, all reviewed and
+  accepted; `hebrew:progress` shows 193, which is the `review[]` note count
+  (178 through batch 15, 8 in batch 16, 7 in batch 17), not the meter count.
+- Next range: **b30231–b30245** (batch 18, third of S3).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -167,6 +167,19 @@ Last updated: 2026-11-17 · after batch 16 (b30201–b30215), S3 started (1/5 ba
     (Rom 8:35–36 / Ps 44:22), b30205 (1 Thess 4:17 / Rev 19:9), b30206
     (Isa 53:12 for the intercessor), b30212 (Ps 115:1), b30213 (Joel 2:25),
     b30214 (1 Cor 2:8 / Isa 49:22).
+- Book 3 batch 17 (b30216–b30230): 25 line flags after review, all accepted;
+  no missing or extra words, every stanza count matches the print:
+  - shape flags are the print's: b30224 2/3/2/2 (a three-line stanza 2).
+  - short lines that are short in the Arabic: b30217 2:1, b30220 1:1, b30222
+    1:2/3:1, b30223 1:2/2:1, b30224 2:1 (the bare "I leave all" couplet),
+    b30227 1:1/4:1, b30230 3:1.
+  - long lines that are long in the Arabic: b30216 5:2, b30217 1:2/5:2,
+    b30218 2:2, b30219 2:1, b30220 1:2/2:1, b30222 4:2, b30224 1:1,
+    b30227 2:1/3:1, b30230 2:1 (the threefold "I follow You" refrain).
+  - quoted verses carry the only seven `R:` notes: b30216 (Matt 28:20),
+    b30217 (John 6:68), b30219 (John 19:28's צָמֵא אֲנִי), b30220
+    (Rev 4:10's crowns), b30222 (Mary's alabaster jar), b30229 (Ps 86:11),
+    b30230 (Rev 2:10's crown of life).
 
 **CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
 `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch
