@@ -918,6 +918,19 @@ base, so a batch can start on either without touching code.
   (b30056 2:2, b30057 2:2, b30058 2:2). Lesson recorded in `STATE.md`: the
   printed line is the unit — pad a short Arabic half-phrase and the tune
   stumbles. Next: b30066–b30080.
+- Batch 7 (2026-11-17, S1): b30066–b30080, 15 hymns / 132 lines, state
+  **80/402** (746 lines, all pointed, 153 `review[]` notes). Same loop; meter
+  found 23 flags and none needed a rewrite — every one is a shape the print
+  itself sets (b30066 1/5/1/1/1 with a five-line refrain stanza, b30074 5/5/5/5
+  with its refrain tags) or a line that is short/long in the Arabic. The one
+  wording fix was b30080 2:3 (`מִכָּל־` for the Arabic's superlative `أحلى`).
+  Three `R:` notes only, all quote-driven: b30070 = Ps 16:1–2, b30073 = 2 Cor
+  12:9, b30078 = Gen 32:27. Gates: apply ✓ 454, `hebrew:align` ✓ 455,
+  `build:corpus` 1824 hymns / 19 chunks, `check:hymns` 30,898 lines 100 %
+  vocalised. Next: b30081–b30095.
+  Gotcha: on Windows PowerShell `node scripts/hebrew-digest.mjs book3 66 80
+  --pack > file` writes UTF-16LE-with-BOM and the file reads as *binary*;
+  redirect through `cmd /c "… > file"` instead.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 
