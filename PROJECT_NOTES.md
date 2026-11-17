@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit 96219b1c, Hebrew Book 3 batch 25 (b30336–b30350), S4 complete at 350/402
+Last verified: 2026-11-17, commit d4ba72cc, Hebrew Book 3 complete at 402/402 (S5 done), 777 translated hymns; remaining tail Book 1
 
 ## 1. What this is
 
@@ -1103,6 +1103,7 @@ base, so a batch can start on either without touching code.
   The headless driver stopped on a Gemini free-tier quota error after the
   batch commit but before the plan marker/docs update; those were completed
   manually. Next: batch 26, b30351-b30365, first of S5.
+- Batches 26-29 (2026-11-17, S5 complete, commits `d186fb67`/`038ac3e5`/`dbb9b2bd`/`d4ba72cc`): b30351-b30402, 52 hymns / 409 lines, state **402/402** (3827 verse lines, 100 % pointed, 320 `review[]`, 854 meter flags for b30001-b30402, all reviewed and accepted). 26 + 33 + 37 + 14 flags, none structural — print shapes and relative length only; no missing or extra words in any batch. Sung `..`/`...` pauses and repeated refrain tags kept verbatim. `R:` notes for quoted verses/glossary in every hymn (1 Tim 6:11, Rom 8:35-39, John 6:68, Matt 28:20, Ps 23/40/71/92/119, Exod 15:11, 1 Thess 4:17, etc.). Gates: `hebrew:check` no drift, `hebrew:align` ✓ 777 translated hymns (375 taranim + 402 book3), `build:corpus` 1824 hymns / 19 chunks / 18 loans (no new loans), `check:hymns` 1824 / 30,898 lines, `typecheck` clean, diff gate clean with rebuilt `assets/hymns` staged. **Book 3 is complete.** Remaining tail: Book 1 (`main`, 1047 hymns, 0 done, with `chorus_he` on 694 hymns) — new session should start at h0001.
 - Search-bar focus frame (2026-11-17): the WCAG rule in `src/app/+html.tsx`
   used `:focus-visible { outline: 2px solid #A8842E !important }`; Chromium
   treats a mouse click into a text input as `:focus-visible`, and `!important`

@@ -1,15 +1,19 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 28 (b30381–b30395), S5 3/4
+Last updated: 2026-11-17 · after batch 29 (b30396–b30402), S5 complete (4/4), Book 3 complete (402/402)
 
-- Progress: **395 / 402** hymns, 3778 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 840 line flags for b30001–b30395, all reviewed and
-  accepted; `hebrew:progress` shows 313, which is the `review[]` note count
+- Progress: **402 / 402** hymns, 3827 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 854 line flags for b30001–b30402, all reviewed and
+  accepted; `hebrew:progress` shows 320, which is the `review[]` note count
   (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18, 8 in
   batch 19, 8 in batch 20, 10 in batch 21, 14 in batch 22, 14 in batch 23,
   13 in batch 24, 0 in batch 25, 15 in batch 26, 15 in batch 27, 15 in
-  batch 28), not the meter count.
-- Next range: **b30396–b30402** (batch 29, last of S5, 7 hymns).
+  batch 28, 7 in batch 29), not the meter count.
+- Next range: **none** — Book 3 is complete. The remaining tail is Book 1
+  (`main`, 1047 hymns, 0 done, with `chorus_he` on 694 hymns).
+- Gates: `hebrew:check` clean, `hebrew:align` ✓ 777 translated hymns (375
+  taranim + 402 book3), `check:hymns` 1824 pass / 100 % vocalised,
+  `typecheck` clean, `git diff --exit-code -- assets/hymns …` 0.
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -414,6 +418,21 @@ Last updated: 2026-11-17 · after batch 28 (b30381–b30395), S5 3/4
       - b384's walking refrain is repeated verbatim in b385 2:1–2:2 (the same
         hymn form); b391's חֲזֹר אֶל נַפְשְׁךָ refrain is written out in all three
         stanzas; b394's tag זֶה הוּא הַמָּשִׁיחַ repeats after every miracle.
+      - `build:corpus` still reports 18 lent Hebrew hymns - no new loans in this
+        batch.
+
+  - Book 3 batch 29 (b30396–b30402, S5 4/4 — Book 3 complete): 14 line flags
+    after review, all accepted; no missing or extra words, every stanza count
+    matches the print. Seven `R:` notes were needed (one per hymn), all quote
+    or glossary driven.
+      - shape flags are the print's: b30396 2/1/2/2/2, b30398 2/4/2/2,
+        b30400 2/2/4, b30402 2/4/2/2.
+      - short lines that are short in the Arabic: b30396 2:1/3:2, b30398 2:1/
+        2:2, b30400 2:1, b30402 2:1/2:2.
+      - long lines that are long in the Arabic: b30396 1:2/3:1, b30402 3:1.
+      - b30396 4:1–5:2 reuse b30373's settled wording (the same hymn's
+        stanzas); b397 quotes Ps 119:18, b398 Ps 23, b399 Exod 15/Ps 71,
+        b401 Ps 92, b402 Ps 40 + John 19:34's spear.
       - `build:corpus` still reports 18 lent Hebrew hymns - no new loans in this
         batch.
 
