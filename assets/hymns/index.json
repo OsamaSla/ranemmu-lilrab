@@ -823,6 +823,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
@@ -835,7 +836,8 @@
   "title": "فى وقته فى وقته يصنع عجباً فى وقته",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "b30068",
@@ -845,6 +847,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship",
@@ -859,6 +862,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -868,7 +872,8 @@
   "title": "احفظنى يا الله لأنى عليك توكلت",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "b30071",
@@ -878,6 +883,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "word",
   "topics": [
    "comfort",
@@ -892,6 +898,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross",
@@ -906,6 +913,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -916,6 +924,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -926,6 +935,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -936,6 +946,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -946,6 +957,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "warfare",
   "topics": [
    "cross",
@@ -961,6 +973,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -971,6 +984,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -981,6 +995,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
