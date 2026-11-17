@@ -1,13 +1,13 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 18 (b30231–b30245), S3 at 3/5 batches
+Last updated: 2026-11-17 · after batch 19 (b30246–b30260), S3 at 4/5 batches
 
-- Progress: **245 / 402** hymns, 2350 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 503 line flags for b30001–b30245, all reviewed and
-  accepted; `hebrew:progress` shows 201, which is the `review[]` note count
-  (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18), not the
-  meter count.
-- Next range: **b30246–b30260** (batch 19, fourth of S3).
+- Progress: **260 / 402** hymns, 2489 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 534 line flags for b30001–b30260, all reviewed and
+  accepted; `hebrew:progress` shows 209, which is the `review[]` note count
+  (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18, 8 in
+  batch 19), not the meter count.
+- Next range: **b30261–b30275** (batch 20, fifth of S3).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -203,6 +203,27 @@ Last updated: 2026-11-17 · after batch 18 (b30231–b30245), S3 at 3/5 batches
      b30241 (מַטָּרָה for قصد), b30243 (Isa 6:6-7's burning coal on the lips),
      b30244 (Golgotha not Gethsemane; כֹּפֶר for فدية), b30245 (John 4:35's
      whitened fields).
+
+- Book 3 batch 19 (b30246–b30260): 31 line flags after review, all accepted;
+  no missing or extra words, every stanza count matches the print:
+   - shape flags are the print's: b30246 2/3/2/2/2, b30253 3/2/3/3, b30258
+     2/1/2, b30260 4/5.
+   - short lines that are short in the Arabic: b30246 2:2 (the bare "here I am"
+     couplet), b30256 2:2, b30259 2:3/4:1, b30260 1:2/1:3 (the short
+     new-creation lines).
+   - long lines that are long in the Arabic: b30246 1:2/4:2, b30247 1:2,
+     b30248 1:1, b30249 3:2, b30250 1:4/4:1, b30251 2:1, b30253 1:1/4:2/4:3,
+     b30257 2:1, b30258 2:1 (the threefold "He paid my debts"), b30259 3:4/4:3,
+     b30260 2:2/2:3 (the "beware the shut door" warning).
+   - b30260's stanza 2 is an invitation whose "regret" is rendered as missing
+     the chance to be in Christ; b30257 2:2's (فى وسطكم)٢ is a sung repeat
+     count, written once.
+   - quoted verses and glossary choices carry the only eight `R:` notes:
+     b30248 (the וזן talent/weight wordplay), b30251 (1 Pet 5:7's cast cares /
+     Heb 13:5's לֹא תַּעַזְבֵנִי), b30253 (פִּקָּדוֹן for أمانة; Matt 16:24's
+     deny self), b30254 (John 3:17 not to condemn), b30256 (Rev 22:1's water
+     of life), b30257 (repeat count + רֶגֶשׁ for عواطف), b30258 (سفير as
+     envoy שָׁלִיחַ), b30260 (2 Cor 5:17's new creation).
 
 **CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
 `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch
