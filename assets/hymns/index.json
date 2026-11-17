@@ -3236,6 +3236,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -3246,6 +3247,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
@@ -3258,7 +3260,8 @@
   "title": "والقادر أن يفعل فوق كل شيء",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "b30264",
@@ -3267,7 +3270,8 @@
   "title": "سر أمامى وكن كاملا سر أمامى وكن كاملا",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "b30265",
@@ -3277,6 +3281,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "church"
@@ -3290,6 +3295,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "repentance"
@@ -3303,6 +3309,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort"
@@ -3316,6 +3323,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort",
@@ -3331,6 +3339,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -3341,6 +3350,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship"
@@ -3353,7 +3363,8 @@
   "title": "لنقم نبنى معا لا نرتخى ولنشدد الأيادى واثقين",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "b30272",
@@ -3363,6 +3374,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -3373,6 +3385,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -3383,6 +3396,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
@@ -3393,6 +3407,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
@@ -9011,6 +9026,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -9965,6 +9981,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "church"
