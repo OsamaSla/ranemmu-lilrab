@@ -1,13 +1,14 @@
 # Book 1 Hebrew — live state (subagent rotation driver)
 
-Last updated: 2026-11-17 · after batch h0059-h0065
+Last updated: 2026-11-17 · after batch h0066-h0071
 
-- Progress: **65 / 1047** hymns, 1184 verse lines, 100 % pointed. `hebrew:progress`
-  reports 53 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
+- Progress: **71 / 1047** hymns, 1310 verse lines, 100 % pointed. `hebrew:progress`
+  reports 59 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
   flags for h0001-h0007, 18 for h0008-h0015, 13 for h0016-h0023, 17 for
   h0024-h0031, 15 for h0032-h0038, 32 for h0039-h0045, 11 for h0046-h0052,
-  18 for h0053-h0058 and 18 for h0059-h0065, all reviewed and accepted.
-- Next batch: **h0066–h0071** (6 hymns, 126 lines) — recompute with
+  18 for h0053-h0058, 18 for h0059-h0065 and 15 for h0066-h0071, all reviewed
+  and accepted.
+- Next batch: **h0072–h0078** (7 hymns, 137 lines) — recompute with
   `node scripts/book1/next-batch.mjs` before every spawn.
 - Plan: `content/hebrew/main/PLAN.md` (rotation order, child prompt, gates).
 - Remaining tail after this book: none — Book 1 is the last book.
@@ -21,7 +22,7 @@ Last updated: 2026-11-17 · after batch h0059-h0065
 - `models_used_so_far`:
   - `opencode/hy4-flash-free` — h0001-h0007 (pilot), h0008-h0015, h0016-h0023,
     h0024-h0031, h0032-h0038, h0039-h0045, h0046-h0052, h0053-h0058,
-    h0059-h0065 (all gates green)
+    h0059-h0065, h0066-h0071 (all gates green)
 - Reset `exhausted_today` at the next local day boundary. On a quota response
   from a child, add that model here and advance `active_index` before retrying
   the same range.
@@ -85,6 +86,10 @@ Last updated: 2026-11-17 · after batch h0059-h0065
   4/4/4 (h59, h60, h64), 4/4/4/4/4 (h61), 4/4/4/4 (h62), 8/4/8/8 (h63),
   9/9/9 (h65); short refrains drag the medians in h61/h65, long Arabic lines
   kept in h59/h63/h65.
+- h0066-h0071: 15 flags, all Arabic-driven — no missing or extra words. Shapes
+  4/4/4/4 (h66, h67), 7/5/5/5/5 (h68), 5/8/5/5 (h69), 4×6 (h70), 4×5 (h71);
+  short vocative/parenthetical lines and long two-half-phrase lines kept.
+  Choruses: h67-h68 v1, h69-h71 v2; h66 none.
 - Tooling fix (commit `71522d3a`): `hebrew-meter.mjs` now falls back to the corpus
   file name when a hymn has no `book` key, so `--book main` sees hymns 1-1000.
 
