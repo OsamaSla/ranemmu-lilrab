@@ -1,13 +1,13 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 19 (b30246–b30260), S3 at 4/5 batches
+Last updated: 2026-11-17 · after batch 20 (b30261–b30275), S3 complete (5/5)
 
-- Progress: **260 / 402** hymns, 2489 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 534 line flags for b30001–b30260, all reviewed and
-  accepted; `hebrew:progress` shows 209, which is the `review[]` note count
+- Progress: **275 / 402** hymns, 2638 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 555 line flags for b30001–b30275, all reviewed and
+  accepted; `hebrew:progress` shows 217, which is the `review[]` note count
   (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18, 8 in
-  batch 19), not the meter count.
-- Next range: **b30261–b30275** (batch 20, fifth of S3).
+  batch 19, 8 in batch 20), not the meter count.
+- Next range: **b30276–b30290** (batch 21, first of S4).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -224,6 +224,26 @@ Last updated: 2026-11-17 · after batch 19 (b30246–b30260), S3 at 4/5 batches
      deny self), b30254 (John 3:17 not to condemn), b30256 (Rev 22:1's water
      of life), b30257 (repeat count + רֶגֶשׁ for عواطف), b30258 (سفير as
      envoy שָׁלִיחַ), b30260 (2 Cor 5:17's new creation).
+
+- Book 3 batch 20 (b30261–b30275, S3 complete): 21 line flags after review, all
+  accepted; no missing or extra words, every stanza count matches the print:
+   - shape flags are the print's: b30266 3/2/3/3 (a two-line couplet as stanza
+     2), b30274 4/2/4, b30275 4/1/4 (one-line القرار stanza).
+   - relative length only: short lines b30261 1:2/5:2, b30266 4:2, b30268 4:3,
+     b30270 1:1, b30273 3:2; long lines b30261 1:1/2:2/4:1, b30266 3:2,
+     b30270 2:1/6:1 (the repeated second-person refrain), b30273 1:2/2:1/
+     3:1/5:2, b30275 3:1.
+   - sung repetitions are written out: b30265's `..` pauses (1:3/2:3),
+     b30271's `..` pauses, b30275 2:1's `לֹא לֹא לֹא`; the `..` are kept as in
+     the print and not counted as faults.
+   - quoted verses and glossary choices carry the only eight `R:` notes:
+     b30261 (Christ's pierced side, John 19:34; سفير = שָׁלִיחַ), b30263
+     (Eph 3:20), b30264 (Gen 17:1 + Matt 16:24), b30266 (הֵד for صدى;
+     الفتور = רְפִיָּה), b30269 (Acts 10:38), b30270 (John 3:30; divine Rock
+     is צוּר not סֶלַע), b30273 (Col 1:18; نعمة = חֶסֶד), b30275 (1 Pet 2:11
+     גֵּר + 1 Pet 5:7; מוֹלֶדֶת homeland).
+   - `build:corpus` now reports 17 lent Hebrew hymns (was 15); b30272 lends to
+     h0349 (the hymn appears in both books). This is automatic, not a fault.
 
 **CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
 `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch

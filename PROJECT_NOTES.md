@@ -1027,6 +1027,18 @@ base, so a batch can start on either without touching code.
   `build:corpus` 1824 hymns / 15 loans, `check:hymns` 1824, `typecheck` clean,
   diff gate clean with rebuilt `assets/hymns` staged. Next: batch 20,
   b30261-b30275.
+- Batch 20 (2026-11-17, S3 closed): b30261-b30275, 15 hymns / 149 lines, state
+  **275/402** (2638 lines, 100 % pointed, 217 `review[]`, 555 meter flags for
+  b30001-b30275). 21 flags, none structural — print shapes (b30266 3/2/3/3,
+  b30274 4/2/4, b30275 4/1/4), short acclamations and long lines already in
+  the Arabic; sung `..` pauses and b30275's `לֹא לֹא לֹא` written out.
+  Eight `R:` notes for quoted verses/glossary (John 19:34 pierced side,
+  Eph 3:20, Gen 17:1 + Matt 16:24, הֵד / רְפִיָּה, Acts 10:38, John 3:30 +
+  צוּר, Col 1:18 + חֶסֶד, 1 Pet 2:11 / 5:7 + מוֹלֶדֶת). Gates:
+  `hebrew:apply --check` no drift, `hebrew:align` ✓ 650, `check:hymns` 1824 /
+  30,898 lines, `typecheck` clean, diff gate clean with rebuilt `assets/hymns`
+  staged. `build:corpus` reports 17 loans (b30272 lends to h0349). Next
+  session: S4, b30276-b30290.
 - Search-bar focus frame (2026-11-17): the WCAG rule in `src/app/+html.tsx`
   used `:focus-visible { outline: 2px solid #A8842E !important }`; Chromium
   treats a mouse click into a text input as `:focus-visible`, and `!important`
