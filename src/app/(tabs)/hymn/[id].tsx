@@ -663,7 +663,22 @@ export default function ReaderScreen() {
       )}
 
       <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
-        <GestureDetector gesture={swipeGesture}>
+        <StanzaRail
+          dark={fullscreen}
+          verses={hymn.verses}
+          linked={linked}
+          chorusWord={hymn.chorus}
+          transChorus={transChorus}
+          activeVerseIndex={activeVerseIndex}
+          onVerseSelect={scrollToVerse}
+          readerFont={readerFont}
+          readerFontBold={readerFontBold}
+        />
+        {/* RNGH defaults to `touch-action: none` on web, which also stopped the
+            wrapped scroller from taking touch pans — on a phone the stanza dots
+            were the only way down a long hymn. `pan-y` hands vertical pans back
+            to the browser and leaves horizontal ones for the fling. */}
+        <GestureDetector gesture={swipeGesture} touchAction="pan-y">
         <ScrollView
           key={hymn.id}
           ref={scrollRef}
@@ -717,17 +732,6 @@ export default function ReaderScreen() {
           ) : null}
         </ScrollView>
         </GestureDetector>
-        <StanzaRail
-          dark={fullscreen}
-          verses={hymn.verses}
-          linked={linked}
-          chorusWord={hymn.chorus}
-          transChorus={transChorus}
-          activeVerseIndex={activeVerseIndex}
-          onVerseSelect={scrollToVerse}
-          readerFont={readerFont}
-          readerFontBold={readerFontBold}
-        />
       </View>
 
       {searchOpen ? (

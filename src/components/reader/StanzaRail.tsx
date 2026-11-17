@@ -1,10 +1,14 @@
 /**
- * Slim vertical stanza rail ("انتقال إلى مقطع") docked on the physical right
+ * Slim vertical stanza rail ("انتقال إلى مقطع") docked on the physical left
  * side of the hymn text. It is an in-flow column with its own reserved width,
  * so it can never cover the text. Dots are inset from the screen edge by at
  * least spacing.sm (plus the notch safe-area) and use HIT_SLOP on native, so
  * they stay tappable on small phones. Hidden for single-stanza hymns with no
  * linked copies.
+ *
+ * The edge props are physical (`paddingLeft`, `borderRightWidth`): the app is
+ * RTL, so `paddingStart` here would resolve to the right-hand side and put the
+ * safe-area gap on the text edge instead of against the screen.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -59,10 +63,10 @@ export function StanzaRail({
       accessibilityLabel={t('reader.stanzas')}
       style={{
         width: RAIL_WIDTH,
-        paddingStart: spacing.sm,
-        paddingEnd: Math.max(insets.right, spacing.sm),
-        borderLeftWidth: 1,
-        borderLeftColor: dark ? 'rgba(255,255,255,0.22)' : colors.border,
+        paddingLeft: Math.max(insets.left, spacing.sm),
+        paddingRight: spacing.sm,
+        borderRightWidth: 1,
+        borderRightColor: dark ? 'rgba(255,255,255,0.22)' : colors.border,
         backgroundColor: 'transparent',
       }}>
       <ScrollView
