@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit e3ac2247, Hebrew Book 3 batch 17 (b30216–b30230), S3 at 230/402
+Last verified: 2026-11-17, commit d0f5bd76, Hebrew Book 3 batch 18 (b30231–b30245), S3 at 245/402
 
 ## 1. What this is
 
@@ -1003,6 +1003,19 @@ base, so a batch can start on either without touching code.
   Ps 86:11, Rev 2:10. Gates per batch: `hebrew:apply --check` clean,
   `hebrew:align` ✓ 605, `check:hymns` 1824, `typecheck` clean, diff gate clean
   with rebuilt `assets/hymns` staged. Next: batch 18, b30231-b30245.
+- Batch 18 (2026-11-17, S3 third batch, commit `d0f5bd76`): b30231-b30245, 15
+  hymns / 155 lines, state **245/402** (2350 lines, 100 % pointed, 201
+  `review[]`, 503 meter flags for b30001-b30245). 38 flags, none structural —
+  print shapes (b30231 4/2/4/4, b30232 1/2/2/2, b30233 4/3/4, b30234 2/1/2,
+  b30236 2/1/2/2/2, b30239 4/2/4, b30244 4/1/4/4/1, b30245 4/2/4/4), short
+  acclamations and long lines already in the Arabic. One real fix: b30231 4:4
+  restored `אֵצֶל מִדְרַךְ רַגְלָיו` so the −6 flag cleared (the print's
+  `موطئ قدميه` had been dropped). Eight `R:` notes for glossary/verse choices
+  (קִנְיָן, נַחֲלָה, קָנָה, חֻלְשָׁתִי/מַפְגִּיעַ, מַטָּרָה, Isa 6:6-7,
+  Golgotha/כֹּפֶר, John 4:35). Gates: `hebrew:align` ✓ 620,
+  `build:corpus` 1824 hymns, `hebrew:check` no drift, `check:hymns` 1824,
+  `typecheck` clean, diff gate clean with rebuilt `assets/hymns` staged.
+  Next: batch 19, b30246-b30260.
 - Search-bar focus frame (2026-11-17): the WCAG rule in `src/app/+html.tsx`
   used `:focus-visible { outline: 2px solid #A8842E !important }`; Chromium
   treats a mouse click into a text input as `:focus-visible`, and `!important`

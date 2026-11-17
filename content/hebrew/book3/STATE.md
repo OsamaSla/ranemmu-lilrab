@@ -1,12 +1,13 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 17 (b30216–b30230), S3 at 2/5 batches
+Last updated: 2026-11-17 · after batch 18 (b30231–b30245), S3 at 3/5 batches
 
-- Progress: **230 / 402** hymns, 2195 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 465 line flags for b30001–b30230, all reviewed and
-  accepted; `hebrew:progress` shows 193, which is the `review[]` note count
-  (178 through batch 15, 8 in batch 16, 7 in batch 17), not the meter count.
-- Next range: **b30231–b30245** (batch 18, third of S3).
+- Progress: **245 / 402** hymns, 2350 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 503 line flags for b30001–b30245, all reviewed and
+  accepted; `hebrew:progress` shows 201, which is the `review[]` note count
+  (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18), not the
+  meter count.
+- Next range: **b30246–b30260** (batch 19, fourth of S3).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -180,6 +181,28 @@ Last updated: 2026-11-17 · after batch 17 (b30216–b30230), S3 at 2/5 batches
     b30217 (John 6:68), b30219 (John 19:28's צָמֵא אֲנִי), b30220
     (Rev 4:10's crowns), b30222 (Mary's alabaster jar), b30229 (Ps 86:11),
     b30230 (Rev 2:10's crown of life).
+
+- Book 3 batch 18 (b30231–b30245): 38 line flags after one clarifying edit,
+  all accepted; no missing or extra words, every stanza count matches the print:
+   - shape flags are the print's: b30231 4/2/4/4, b30232 1/2/2/2,
+     b30233 4/3/4, b30234 2/1/2, b30236 2/1/2/2/2, b30239 4/2/4,
+     b30244 4/1/4/4/1 (one-line القرار stanzas), b30245 4/2/4/4.
+   - short lines that are short in the Arabic: b30231 3:1, b30233 1:1,
+     b30234 3:2, b30239 3:2, b30241 2:2, b30242 2:1/2:2/2:3 (the three-line
+     refrain), b30243 1:2/4:2, b30244 2:1 (the bare "come to Jesus" couplet).
+   - long lines that are long in the Arabic: b30231 2:2 (the "my possession,
+     my servant" acclamation), b30232 2:2, b30234 1:2, b30235 1:1/2:3,
+     b30236 5:1/5:2, b30237 3:1, b30240 2:1, b30242 3:1, b30243 4:3,
+     b30245 4:1.
+   - one real fault fixed: b30231 4:4 was −6 because `לְרַגְלָיו` dropped the
+     Arabic's `موطئ قدميه` (the place of His feet); restored as
+     `אֵצֶל מִדְרַךְ רַגְלָיו`, the flag cleared.
+   - quoted verses and glossary choices carry the only eight `R:` notes:
+     b30231 (קִנְיָן for ملكه), b30232 (נַחֲלָה for نصيب),
+     b30233 (קָנָה for اشترى), b30237 (חֻלְשָׁתִי / מַפְגִּיעַ),
+     b30241 (מַטָּרָה for قصد), b30243 (Isa 6:6-7's burning coal on the lips),
+     b30244 (Golgotha not Gethsemane; כֹּפֶר for فدية), b30245 (John 4:35's
+     whitened fields).
 
 **CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
 `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch
