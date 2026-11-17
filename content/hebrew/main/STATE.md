@@ -1,12 +1,12 @@
 # Book 1 Hebrew — live state (subagent rotation driver)
 
-Last updated: 2026-11-17 · after batch h0016-h0023
+Last updated: 2026-11-17 · after batch h0024-h0031
 
-- Progress: **23 / 1047** hymns, 393 verse lines, 100 % pointed. `hebrew:progress`
-  reports 11 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
-  flags for h0001-h0007, 18 for h0008-h0015, and 13 for h0016-h0023, all
-  reviewed and accepted.
-- Next batch: **h0024–h0031** (8 hymns, 138 lines) — recompute with
+- Progress: **31 / 1047** hymns, 531 verse lines, 100 % pointed. `hebrew:progress`
+  reports 19 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
+  flags for h0001-h0007, 18 for h0008-h0015, 13 for h0016-h0023 and 17 for
+  h0024-h0031, all reviewed and accepted.
+- Next batch: **h0032–h0038** (7 hymns, 133 lines) — recompute with
   `node scripts/book1/next-batch.mjs` before every spawn.
 - Plan: `content/hebrew/main/PLAN.md` (rotation order, child prompt, gates).
 - Remaining tail after this book: none — Book 1 is the last book.
@@ -18,8 +18,8 @@ Last updated: 2026-11-17 · after batch h0016-h0023
 - `exhausted_today`:
   - `opencode/deepseek-v4.1-flash-free` — reported quota-limited by user, 2026-11-17
 - `models_used_so_far`:
-  - `opencode/hy4-flash-free` — h0001-h0007 (pilot), h0008-h0015, h0016-h0023
-    (all gates green)
+  - `opencode/hy4-flash-free` — h0001-h0007 (pilot), h0008-h0015, h0016-h0023,
+    h0024-h0031 (all gates green)
 - Reset `exhausted_today` at the next local day boundary. On a quota response
   from a child, add that model here and advance `active_index` before retrying
   the same range.
@@ -55,6 +55,10 @@ Last updated: 2026-11-17 · after batch h0016-h0023
   shapes 4/2/4/4 (h17), 4/5/4/4 (h19), short Arabic lines (h16 1:1/1:3, h19 3:2,
   h20 3:1, h22 5:4, h23 1:4) and long ones (h16 2:2, h17 2:2, h18 4:3, h20 1:3,
   h22 4:1). No words lost.
+- h0024-h0031: 1 real omission fixed during review (h30 3:2 dropped "المُعيب",
+  restored `הַמְּגוּנָה`); remaining 17 flags deliberate — shapes 4/6/4/4/4
+  (h24), 9/9 (h26), 4/2/4/4/4 (h28), short/long Arabic parallels (h24 1:1/4:1/
+  5:4, h25 3:2, h26 1:3/2:3, h28 1:1, h29 1:1/4:2, h30 2:1-2:4/4:1/4:3).
 - Tooling fix (commit `71522d3a`): `hebrew-meter.mjs` now falls back to the corpus
   file name when a hymn has no `book` key, so `--book main` sees hymns 1-1000.
 
