@@ -1,15 +1,15 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 27 (b30366–b30380), S5 2/4
+Last updated: 2026-11-17 · after batch 28 (b30381–b30395), S5 3/4
 
-- Progress: **380 / 402** hymns, 3661 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 803 line flags for b30001–b30380, all reviewed and
-  accepted; `hebrew:progress` shows 298, which is the `review[]` note count
+- Progress: **395 / 402** hymns, 3778 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 840 line flags for b30001–b30395, all reviewed and
+  accepted; `hebrew:progress` shows 313, which is the `review[]` note count
   (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18, 8 in
   batch 19, 8 in batch 20, 10 in batch 21, 14 in batch 22, 14 in batch 23,
-  13 in batch 24, 0 in batch 25, 15 in batch 26, 15 in batch 27), not the
-  meter count.
-- Next range: **b30381–b30395** (batch 28, third of S5).
+  13 in batch 24, 0 in batch 25, 15 in batch 26, 15 in batch 27, 15 in
+  batch 28), not the meter count.
+- Next range: **b30396–b30402** (batch 29, last of S5, 7 hymns).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -397,6 +397,23 @@ Last updated: 2026-11-17 · after batch 27 (b30366–b30380), S5 2/4
         verbatim; b366 doubles הֶבֶל for سراب سراب, b373's repeated
         בָּא אֲנִי אֵלֶיךָ is the print's refrain, and b380 drops the print's
         «» around the Matt 28:20 quote, keeping the colon.
+      - `build:corpus` still reports 18 lent Hebrew hymns - no new loans in this
+        batch.
+
+  - Book 3 batch 28 (b30381–b30395, S5 3/4): 37 line flags after review, all
+    accepted; no missing or extra words, every stanza count matches the print.
+    Fifteen `R:` notes were needed (one per hymn), all quote or glossary driven.
+      - shape flags are the print's: b30387 2/3/2/2/2, b30388 1/2/2, b30393
+        1/4/2/2, b30394 1/2/2/2/2/2/2.
+      - short lines that are short in the Arabic: b30381 1:2/2:1, b30385 2:1,
+        b30387 2:2/5:2, b30388 1:1, b30389 2:1/2:2/5:2, b30390 5:1,
+        b30391 1:1/3:3/3:4, b30393 2:1/4:2, b30394 1:1/2:2.
+      - long lines that are long in the Arabic: b30381 1:1/2:2, b30384 1:1/
+        1:2/3:1, b30385 3:2, b30387 4:2, b30389 1:1, b30391 2:2,
+        b30393 1:1/2:2, b30394 4:1/4:2/5:1/7:2.
+      - b384's walking refrain is repeated verbatim in b385 2:1–2:2 (the same
+        hymn form); b391's חֲזֹר אֶל נַפְשְׁךָ refrain is written out in all three
+        stanzas; b394's tag זֶה הוּא הַמָּשִׁיחַ repeats after every miracle.
       - `build:corpus` still reports 18 lent Hebrew hymns - no new loans in this
         batch.
 
