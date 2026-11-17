@@ -1,12 +1,12 @@
 # Book 1 Hebrew — live state (subagent rotation driver)
 
-Last updated: 2026-11-17 · after batch h0024-h0031
+Last updated: 2026-11-17 · after batch h0032-h0038
 
-- Progress: **31 / 1047** hymns, 531 verse lines, 100 % pointed. `hebrew:progress`
-  reports 19 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
-  flags for h0001-h0007, 18 for h0008-h0015, 13 for h0016-h0023 and 17 for
-  h0024-h0031, all reviewed and accepted.
-- Next batch: **h0032–h0038** (7 hymns, 133 lines) — recompute with
+- Progress: **38 / 1047** hymns, 664 verse lines, 100 % pointed. `hebrew:progress`
+  reports 26 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
+  flags for h0001-h0007, 18 for h0008-h0015, 13 for h0016-h0023, 17 for
+  h0024-h0031 and 15 for h0032-h0038, all reviewed and accepted.
+- Next batch: **h0039–h0045** (7 hymns, 131 lines) — recompute with
   `node scripts/book1/next-batch.mjs` before every spawn.
 - Plan: `content/hebrew/main/PLAN.md` (rotation order, child prompt, gates).
 - Remaining tail after this book: none — Book 1 is the last book.
@@ -19,7 +19,7 @@ Last updated: 2026-11-17 · after batch h0024-h0031
   - `opencode/deepseek-v4.1-flash-free` — reported quota-limited by user, 2026-11-17
 - `models_used_so_far`:
   - `opencode/hy4-flash-free` — h0001-h0007 (pilot), h0008-h0015, h0016-h0023,
-    h0024-h0031 (all gates green)
+    h0024-h0031, h0032-h0038 (all gates green)
 - Reset `exhausted_today` at the next local day boundary. On a quota response
   from a child, add that model here and advance `active_index` before retrying
   the same range.
@@ -59,6 +59,11 @@ Last updated: 2026-11-17 · after batch h0024-h0031
   restored `הַמְּגוּנָה`); remaining 17 flags deliberate — shapes 4/6/4/4/4
   (h24), 9/9 (h26), 4/2/4/4/4 (h28), short/long Arabic parallels (h24 1:1/4:1/
   5:4, h25 3:2, h26 1:3/2:3, h28 1:1, h29 1:1/4:2, h30 2:1-2:4/4:1/4:3).
+- h0032-h0038: 15 flags, all Arabic-driven shape/length asymmetries — no missing or
+  extra words. Print shapes 4/5/4/4 (h32), 4/6/4/4 (h33), 4/4/4/4 (h34),
+  2×7 (h35), 4/4/4/4/4 (h36), 4/4/4 (h37), 12/12/12 (h38); short lines
+  (h33 2:4/4:1, h35 7:1/7:2, h36 1:3/1:4, h37 2:1) and long ones
+  (h33 4:3/4:4, h34 4:2, h35 3:1/3:2, h38 1:7). h35 3:2 at +4 was re-read and kept.
 - Tooling fix (commit `71522d3a`): `hebrew-meter.mjs` now falls back to the corpus
   file name when a hymn has no `book` key, so `--book main` sees hymns 1-1000.
 
