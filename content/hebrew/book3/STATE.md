@@ -1,12 +1,12 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 8 (b30081–b30095)
+Last updated: 2026-11-17 · after batch 9 (b30096–b30110)
 
-- Progress: **95 / 402** hymns, 874 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 186 line flags for b30001–b30095, all reviewed and
-  accepted; `hebrew:progress` shows 156, which is the `review[]` note count
-  (153 from batches 1–7 plus 3 here), not the meter count.
-- Next range: **b30096–b30110** (batch 9, fourth batch of session S1).
+- Progress: **110 / 402** hymns, 1021 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 214 line flags for b30001–b30110, all reviewed and
+  accepted; `hebrew:progress` shows 158, which is the `review[]` note count
+  (156 from batches 1–8 plus 2 here), not the meter count.
+- Next range: **b30111–b30125** (batch 10, fifth batch of session S1).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -63,6 +63,19 @@ Last updated: 2026-11-17 · after batch 8 (b30081–b30095)
     b30088 1:4, b30089 4:2/5:1, b30093 2:2, b30094 1:1.
   - b30094 2:1 is Ps 119:105 verbatim; b30081 2:1 is Ps 107:9 with the print's
     `لخبز` ending (`מִלֵּא לֶחֶם`) instead of the psalm's `מִלֵּא־טוֹב`.
+- Book 3 batch 9 (b30096–b30110): 28 line flags after review, all accepted:
+  - shape flags that are the print's: b30100 2/4/4, b30101 2/1/2/2/2 (stanza 2
+    is the one-line acclamation `إلهى زدنى نعمة`), b30103 3/2/3/3 (stanza 2 is
+    the two-line `القرار`), b30104 2/3/2/2, b30106 4/2/4/4/4, b30109 4/1/4/4.
+  - short lines that are short in the Arabic: b30098 2:1/2:2 (the print's
+    second stanza is two bare lines against four long ones), b30101 4:1,
+    b30105 1:2, b30107 1:1/1:3 (the split refrain), b30108 3:1/4:1,
+    b30109 3:3.
+  - long lines that are long in the Arabic: b30096 3:3, b30097 1:2,
+    b30098 1:1/1:2, b30103 4:1/4:2, b30104 1:1/4:2, b30107 3:4, b30109 2:1.
+  - b30103's refrain is 2 Cor 12:9's own wording (`דַּיְּךָ חַסְדִּי`), the verse
+    the hymn expands; b30107 renders `راضٍ وشاكر` as `שָׁלֵו וּמוֹדֶה` because
+    `רָצוּי` would read "acceptable". Each carries the one `R:` note.
 
 ## Per-batch loop
 
