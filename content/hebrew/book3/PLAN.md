@@ -1,17 +1,9 @@
 # Book 3 Hebrew — session plan (52 hymns to go)
 
-Status: 350 / 402 done (b30001–b30350). S1–S4 complete; S5 pending
-(b30351–b30402, 4 batches). Next: batch 26, b30351–b30365 (first of S5).
-The `status` column in §3 is the machine-readable completion marker used by
-`run_plan.sh`: set a finished session's row to exactly `complete`.
-
-**Unattended execution (important):** these sessions are run in headless
-`opencode run` processes by `run_plan.sh`. The `question` tool is denied — do
-not stop to ask for clarification. Decide from this file, `STATE.md` and
-`content/hebrew/glossary.md`, then continue. Mark a session `complete` ONLY
-after every batch in it is authored, packed, applied, built, committed, and
-`node scripts/hebrew-progress.mjs` shows the expected new count. The driver
-verifies that count itself and rejects a marker written without the work.
+Status: 350 / 402 done (b30001-b30350, 3418 lines, 744 meter line flags, 268
+review notes). Sessions S1–S4 complete (5 batches each). Remaining:
+**52 hymns** (b30351–b30402) in **4 batches of 15** (last one 7), grouped
+into S5. Next: batch 26, b30351–b30365 (first of S5).
 
 Read order for a new session: this file → `STATE.md` → `content/hebrew/glossary.md`.
 Do **not** read all of `PROJECT_NOTES.md`; §15/§16 is the only relevant part and
@@ -36,8 +28,7 @@ Hard rule: one batch = one commit; one push at the end of a session.
 
 ```
 node scripts/hebrew-digest.mjs book3 51 65 --pack > content/.cache/hebrew/51-65.digest.txt
-#   AUTHOR (you, the agent) → content/.cache/hebrew/51-65.he.txt
-node scripts/hebrew-pack.mjs content/.cache/hebrew/51-65.he.txt --book book3 --dry-run
+#   author content/.cache/hebrew/51-65.he.txt  (same block, Arabic replaced by Hebrew)
 node scripts/hebrew-pack.mjs content/.cache/hebrew/51-65.he.txt --book book3
 npm run hebrew:apply
 npm run hebrew:check
@@ -62,25 +53,6 @@ R: <optional, one line, why a word was chosen>   (at most one per hymn)
 Both halves of a printed line stay in one string, joined by ` · `.
 Full niqqud on every word. Hebrew letters only. Never retype stanza labels.
 
-**What "AUTHOR" means (no script does this):** it is the translation task you,
-the agent, perform yourself — there is no generator and no placeholder file to
-fill in. Copy the digest to the `.he.txt` path and edit it line by line so no
-stanza or line is lost:
-
-- keep every `#NN` block, the `S:L` prefixes, the stanza order and the ` · `
-  caesura exactly as printed; drop Arabic stanza-number prefixes like `١ - `;
-- `T:` = the Arabic title rendered in fully vocalised Hebrew;
-- each `S:L <Arabic line>` → `S:L <Hebrew translation>` at the same position;
-- `R:` = at most one terse note per hymn (a quoted verse, a glossary choice,
-  or a sung repeat/pause kept verbatim);
-- elevated biblical/liturgical register, full niqqud on every word, Hebrew
-  letters only, fixed renderings from `content/hebrew/glossary.md`.
-
-Before writing payloads, `node scripts/hebrew-pack.mjs <file> --book book3
---dry-run` must report the expected payload/line counts with no problems.
-Meter flags are prompts to re-read, not automatic errors: fix only missing or
-extra words and lines that stopped carrying the Arabic.
-
 ## 2. Session S0 — tooling (no translation)
 
 | step | file | change |
@@ -100,17 +72,13 @@ touched scripts clean; one `chore(hebrew)` commit.
 
 ## 3. Translation sessions
 
-| session | batches | hymns | range | status |
-|---|---|---|---|---|
-| S1 | 5 | 75 | b30051–b30125 | complete |
-| S2 | 5 | 75 | b30126–b30200 | complete |
-| S3 | 5 | 75 | b30201–b30275 | complete |
-| S4 | 5 | 75 | b30276–b30350 | complete |
-| S5 | 4 | 52 | b30351–b30402 | pending |
-
-`run_plan.sh` reads this table and runs one `opencode run` per row whose
-status is not `complete`. When a session finishes, set its status cell to
-`complete` — that is the only signal the driver uses to decide what is left.
+| session | batches | hymns | range |
+|---|---|---|---|
+| S1 | 5 | 75 | b30051–b30125 |
+| S2 | 5 | 75 | b30126–b30200 |
+| S3 | 5 | 75 | b30201–b30275 |
+| S4 | 5 | 75 | b30276–b30350 |
+| S5 | 4 | 52 | b30351–b30402 |
 
 Batch ranges inside a session (15 each, last one shorter):
 
