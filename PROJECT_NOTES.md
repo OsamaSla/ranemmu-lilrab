@@ -956,6 +956,23 @@ base, so a batch can start on either without touching code.
   number in words because Hebrew letters only are allowed. S1 gate:
   `hebrew:align` ✓ 500, `check:hymns` 1824 / 30,898 lines, `typecheck` clean.
   Next session: S2, b30126–b30140.
+- Batches 11 and 12 (2026-11-17, S2 paused after two batches by hand-off):
+  b30126–b30155, 30 hymns / 315 lines, state **155/402** (1492 lines, 100 %
+  pointed, 166 `review[]`, 316 meter flags for b30001–b30155). 38 + 40 flags,
+  none structural — print shapes and relative length; b30143's parenthesised
+  refrain tag is written plainly, repeat counts inside lines stay a singing
+  instruction. `R:` notes for quoted verses: b30129 (1 Sam 7:12), b30131
+  (Ps 91), b30136 (Ps 57:8), b30138 (Ps 34:11), b30149 (2 Sam 22/Ps 18),
+  b30154 (Phil 4:6–7).
+- **Workflow fix (same hand-off):** PR-style CI failed on the S1 docs commit
+  (#281, both pages.yml and firebase-hosting-merge.yml) at
+  `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts` inside
+  `build:web`: batch 10's Hebrew payloads were committed without the rebuilt
+  corpus assets. Regenerated `assets/hymns` (commit `fix(build): regenerate
+  corpus assets for batch 10 Hebrew`) and verified the diff gate is now clean;
+  every later batch commit stages `assets/hymns` with the payloads. Verify
+  locally with `npm run build:corpus && git diff --exit-code -- assets/hymns
+  src/data/generated-chunks.ts` before pushing.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 

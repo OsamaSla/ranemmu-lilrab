@@ -1,12 +1,13 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 10 (b30111–b30125), ends session S1
+Last updated: 2026-11-17 · after batch 12 (b30141–b30155), S2 paused by
+hand-off after two of five batches
 
-- Progress: **125 / 402** hymns, 1177 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 238 line flags for b30001–b30125, all reviewed and
-  accepted; `hebrew:progress` shows 158, which is the `review[]` note count
-  (156 from batches 1–8 plus 2 in batch 9), not the meter count.
-- Next range: **b30126–b30140** (batch 11, first batch of session S2).
+- Progress: **155 / 402** hymns, 1492 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 316 line flags for b30001–b30155, all reviewed and
+  accepted; `hebrew:progress` shows 166, which is the `review[]` note count
+  (158 through S1 plus 5 in batch 11 and 3 in batch 12), not the meter count.
+- Next range: **b30156–b30170** (batch 13, resume S2).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -90,6 +91,39 @@ Last updated: 2026-11-17 · after batch 10 (b30111–b30125), ends session S1
   - b30120 2:1–2:2 are Exod 33:14 (`פָּנַי יֵלֵכוּ וְהִנַּחְתִּי לָךְ`) and
     Josh 1:9 (`חֲזַק וֶאֱמָץ`), the verses the print quotes; b30123 builds its
     last line of every stanza on Ps 23, b30118 on Ps 27:14 and 34:6.
+- Book 3 batch 11 (b30126–b30140): 38 line flags after two clarifying edits,
+  all accepted; every stanza count matches the print:
+  - shape flags are the print's: b30128 2/1/2 (one-line refrain), b30129
+    3/5/5/5, b30132 4/3/4/4, b30134 2/3/2/2/5, b30136 2/1/2/2, b30137
+    2/4/2/2/2, b30140 2/3/2/2/2/2/2.
+  - relative length only: short lines b30126 2:5/5:3, b30129 4:5, b30131
+    2:4 (was −5, expanded with `וְתַבִּיט` and `בְּצֶדֶק`), b30136 1:2 (was
+    −5, added `לו`), b30139 1:3; long lines b30126 4:4/5:5, b30129 1:1/
+    1:3/3:2/4:4, b30130 3:1, b30131 4:3, b30134 3:1, b30140 6:2.
+  - b30129's refrain is 1 Sam 7:12's own `עַד־הֵנָּה עֲזָרָנוּ`, b30131 is a
+    close rendering of Ps 91 and b30136's repeated line is Ps 57:8's
+    `נָכוֹן לִבִּי`; each carries the one `R:` note.
+- Book 3 batch 12 (b30141–b30155): 40 line flags after review, all accepted,
+  none structural:
+  - shape flags are the print's: b30143 4/2/4/4 (a two-line refrain), b30149
+    2/3/2/2, b30150 2/1/2/2, b30151 2/2/2/3, b30154 3/2/2/3.
+  - lines short in the Arabic: b30142 2:2 (`أو فى ضيق`), b30148 2:1/2:3
+    (the bare `تستطيع كل شيء` tag), b30150 2:1, b30151 4:3
+    (`יֵשׁוּעַ עַתָּה לִי`), b30152 3:3, b30154 2:1.
+  - long lines that are long in the Arabic: b30142 2:1/4:2, b30144 2:1/3:2,
+    b30147 2:1/2:2/4:4, b30148 3:2/3:3/5:1, b30149 1:1, b30150 1:1,
+    b30151 1:1/4:2, b30152 2:4.
+  - b30143's parenthesised refrain tag is written plainly, like its other
+    occurrences; b30149 follows 2 Sam 22/Ps 18, b30154 closes on Phil 4:6–7.
+  - `b30146` now lends its Hebrew to `h0296` (corpus build reports 15 such
+    loans), an automatic consequence of the same hymn appearing in two books.
+
+**CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
+`git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch
+commit that adds Hebrew payloads but omits the regenerated `assets/hymns/`
+fails that gate in CI — this is what broke the S1 docs push (#281). Always
+`npm run build:corpus` and stage `assets/hymns` in the same commit as the
+payloads; locally `git diff --exit-code -- assets/hymns ...` must return 0.
 
 ## Per-batch loop
 
