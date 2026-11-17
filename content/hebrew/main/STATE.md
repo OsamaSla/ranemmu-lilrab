@@ -1,13 +1,13 @@
 # Book 1 Hebrew — live state (subagent rotation driver)
 
-Last updated: 2026-11-17 · after batch h0039-h0045
+Last updated: 2026-11-17 · after batch h0046-h0052
 
-- Progress: **45 / 1047** hymns, 795 verse lines, 100 % pointed. `hebrew:progress`
-  reports 33 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
+- Progress: **52 / 1047** hymns, 927 verse lines, 100 % pointed. `hebrew:progress`
+  reports 40 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
   flags for h0001-h0007, 18 for h0008-h0015, 13 for h0016-h0023, 17 for
-  h0024-h0031, 15 for h0032-h0038 and 32 for h0039-h0045, all reviewed and
-  accepted.
-- Next batch: **h0046–h0052** (7 hymns, 132 lines) — recompute with
+  h0024-h0031, 15 for h0032-h0038, 32 for h0039-h0045 and 11 for
+  h0046-h0052, all reviewed and accepted.
+- Next batch: **h0053–h0058** (6 hymns, 130 lines) — recompute with
   `node scripts/book1/next-batch.mjs` before every spawn.
 - Plan: `content/hebrew/main/PLAN.md` (rotation order, child prompt, gates).
 - Remaining tail after this book: none — Book 1 is the last book.
@@ -20,7 +20,7 @@ Last updated: 2026-11-17 · after batch h0039-h0045
   - `opencode/deepseek-v4.1-flash-free` — reported quota-limited by user, 2026-11-17
 - `models_used_so_far`:
   - `opencode/hy4-flash-free` — h0001-h0007 (pilot), h0008-h0015, h0016-h0023,
-    h0024-h0031, h0032-h0038, h0039-h0045 (all gates green)
+    h0024-h0031, h0032-h0038, h0039-h0045, h0046-h0052 (all gates green)
 - Reset `exhausted_today` at the next local day boundary. On a quota response
   from a child, add that model here and advance `active_index` before retrying
   the same range.
@@ -72,6 +72,10 @@ Last updated: 2026-11-17 · after batch h0039-h0045
   half-phrases per line, +6…+10) and `chorus_he` repeats 2:1-2:4 verbatim —
   verified against the digest, not padding; h45's medians are skewed by a
   16/14-syllable pair (2:3 -8, 2:4 -6). h44 had no flags.
+- h0046-h0052: 11 flags, all Arabic-driven — no missing or extra words. Shapes
+  4/4/4/4/4 (h46-h48), 4/4/4/4/4/4 (h49), 2/8/6 (h52); h50-h51 clean. h52's
+  2/8/6 irregularity and h49's long "الكيان/المحبة" parallels are in the Arabic.
+  Choruses: v2 for h46-h50, v1 for h51-h52.
 - Tooling fix (commit `71522d3a`): `hebrew-meter.mjs` now falls back to the corpus
   file name when a hymn has no `book` key, so `--book main` sees hymns 1-1000.
 
