@@ -1,11 +1,11 @@
 # Book 1 Hebrew — live state (subagent rotation driver)
 
-Last updated: 2026-11-17 · after pilot batch h0001-h0007
+Last updated: 2026-11-17 · after batch h0008-h0015
 
-- Progress: **7 / 1047** hymns, 124 verse lines, 100 % pointed. `hebrew:progress`
-  reports 4 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
-  line flags for h0001-h0007, all reviewed and accepted.
-- Next batch: **h0008–h0015** (8 hymns, 138 lines) — recompute with
+- Progress: **15 / 1047** hymns, 262 verse lines, 100 % pointed. `hebrew:progress`
+  reports 7 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
+  flags for h0001-h0007 and 18 for h0008-h0015, all reviewed and accepted.
+- Next batch: **h0016–h0023** (8 hymns, 131 lines) — recompute with
   `node scripts/book1/next-batch.mjs` before every spawn.
 - Plan: `content/hebrew/main/PLAN.md` (rotation order, child prompt, gates).
 - Remaining tail after this book: none — Book 1 is the last book.
@@ -17,7 +17,7 @@ Last updated: 2026-11-17 · after pilot batch h0001-h0007
 - `exhausted_today`:
   - `opencode/deepseek-v4.1-flash-free` — reported quota-limited by user, 2026-11-17
 - `models_used_so_far`:
-  - `opencode/hy4-flash-free` — h0001-h0007 (pilot, all gates green)
+  - `opencode/hy4-flash-free` — h0001-h0007 (pilot), h0008-h0015 (all gates green)
 - Reset `exhausted_today` at the next local day boundary. On a quota response
   from a child, add that model here and advance `active_index` before retrying
   the same range.
@@ -44,6 +44,10 @@ Last updated: 2026-11-17 · after pilot batch h0001-h0007
   extra words. h0001 6/4/6/6 and h0007 4/2/4/4 (short chorus verse); h0003,
   h0004, h0005 short/long chorus lines and shorter parallels where the Arabic
   is shorter. h0003 1:4 and h0004 2:1/2:4 are long in the Arabic.
+- h0008-h0015: 18 flags, all deliberate — print shapes 4/2/4/4 (h0009), 8/4/8
+  (h0010), 4/2/4 (h0012), 6/8/8 (h0013), 8/4/8/8 (h0015); short Arabic lines
+  (h0008 2:4/3:4, h0011 2:2, h0013 3:2/3:4, h0015 4:3) and long ones (h0008
+  2:3, h0009 1:2, h0011 3:3, h0013 1:6, h0015 2:1/2:2/2:4). No words lost.
 - Tooling fix (commit `71522d3a`): `hebrew-meter.mjs` now falls back to the corpus
   file name when a hymn has no `book` key, so `--book main` sees hymns 1-1000.
 
