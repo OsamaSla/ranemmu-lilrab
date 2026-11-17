@@ -1,0 +1,27 @@
+{
+  "book": "main",
+  "number": 123,
+  "title_he": "אֲחָזְךָ הָאַהֲבָה, יָדִיד",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲחָזְךָ הָאַהֲבָה, יָדִיד",
+        "אֲחָזְךָ עַד הַצְּלָב",
+        "וִידֵי בָשָׂר מָסְרוּךָ",
+        "וְהִכּוּךָ וְהִכְלִימוּךָ, יָדִיד",
+        "עַל הַצְּלָב",
+        "נִדְקְרוּ יָדֶיךָ, יָדִיד",
+        "אֵיךְ נִדְקְרוּ יָדֶיךָ",
+        "לָמָּה נִמְסְרוּ יָדֶיךָ",
+        "לִהְיוֹת לִי חֵלֶק",
+        "עִמְּךָ בַּכָּבוֹד שָׁם",
+        "בְּעוֹלָם הַנֶּצַח",
+        "בִּשְׁמֵי מְעוֹנֶךָ"
+      ]
+    }
+  ],
+  "review": [
+    "No chorus field; single 12-line stanza. This hymn duplicates book3/6 (أخذتك المحبة يا حبيب), whose rendering is reused verbatim, split back into the main's 12 printed lines (book3 prints six lines of two half-phrases each). نִדְקְרוּ for سُمِّرت and נִמְסְרוּ for the Arabic's own سُلِّمت pair follow book3/6's review note; מָסְרוּךָ for وسلمتك, יָדִيد for يا حبيب, צְלָב for الصليب. The final book3 line בְּעוֹלָם הַנֶּצַח בִּשְׁמֵי מְעוֹנֶךָ is split into 1:11 and 1:12 to match the main print."
+  ]
+}
