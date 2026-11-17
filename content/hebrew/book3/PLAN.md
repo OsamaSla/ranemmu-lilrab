@@ -1,9 +1,9 @@
-# Book 3 Hebrew — session plan (202 hymns to go)
+# Book 3 Hebrew — session plan (67 hymns to go)
 
-Status: 200 / 402 done (b30001-b30200, 1917 lines, 414 meter line flags, 178
-review notes). Sessions S1 and S2 complete (5 batches each). Remaining:
-**202 hymns** (b30201–b30402) in **14 batches of 15** (last one 7), grouped
-into S3–S5. Next: batch 16, b30201–b30215 (first of S3).
+Status: 335 / 402 done (b30001–b30335). S1–S3 complete; S4 at 4/5 (batch 25 =
+b30336–b30350 is the only work left in S4); S5 pending (b30351–b30402).
+The `status` column in §3 is the machine-readable completion marker used by
+`run_plan.sh`: set a finished session's row to exactly `complete`.
 
 Read order for a new session: this file → `STATE.md` → `content/hebrew/glossary.md`.
 Do **not** read all of `PROJECT_NOTES.md`; §15/§16 is the only relevant part and
@@ -72,13 +72,17 @@ touched scripts clean; one `chore(hebrew)` commit.
 
 ## 3. Translation sessions
 
-| session | batches | hymns | range |
-|---|---|---|---|
-| S1 | 5 | 75 | b30051–b30125 |
-| S2 | 5 | 75 | b30126–b30200 |
-| S3 | 5 | 75 | b30201–b30275 |
-| S4 | 5 | 75 | b30276–b30350 |
-| S5 | 4 | 52 | b30351–b30402 |
+| session | batches | hymns | range | status |
+|---|---|---|---|---|
+| S1 | 5 | 75 | b30051–b30125 | complete |
+| S2 | 5 | 75 | b30126–b30200 | complete |
+| S3 | 5 | 75 | b30201–b30275 | complete |
+| S4 | 5 | 75 | b30276–b30350 | in-progress |
+| S5 | 4 | 52 | b30351–b30402 | pending |
+
+`run_plan.sh` reads this table and runs one `opencode run` per row whose
+status is not `complete`. When a session finishes, set its status cell to
+`complete` — that is the only signal the driver uses to decide what is left.
 
 Batch ranges inside a session (15 each, last one shorter):
 
