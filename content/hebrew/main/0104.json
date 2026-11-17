@@ -1,0 +1,36 @@
+{
+  "book": "main",
+  "number": 104,
+  "title_he": "בֹּא אֶל־הַפּוֹדֶה הָרַחֲמָן",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בֹּא אֶל־הַפּוֹדֶה הָרַחֲמָן",
+        "בֹּא עַתָּה",
+        "יְמַלֵּאךָ שָׁלוֹם וּבִטָּחוֹן",
+        "בֹּא עַתָּה",
+        "הִנְנִי מַפְקִיד בְּיָדוֹ אֶת־דְּבָרִי",
+        "כָּל־אֲשֶׁר לִי לִבִּי וְחַיַּי",
+        "וְלִי בְּיֵשׁוּעַ עֵרָבוֹן",
+        "בֹּא עַתָּה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֲאַתָּה שָׁלֵו עִם־עַצְמְךָ?",
+        "עַד עַתָּה?",
+        "הֲאַתָּה מְכַוֵּן לְהַנִּיחַ יִאוּשְׁךָ?",
+        "וְאֶת־הַיְגוֹנִים?",
+        "אִם תִּרְצֶה בַּחֵרוּת",
+        "מִכָּל־אֲזִקִּים וַחֲטָאִים",
+        "בְּטַח! לְךָ מָקוֹם עִם־יֵשׁוּעַ",
+        "בֹּא עַתָּה"
+      ]
+    }
+  ],
+  "review": [
+    "No chorus field (the fourfold \"come now\" is a printed line, not a chorus_he). \"Come to the compassionate Redeemer\" invitation. al-Fadi → הַפּוֹדֶה, Yeshua → יֵשׁוּעַ per glossary. 2:6 \"wa-khatayyah\" rendered with a neutral \"and sins\" since the addressee is second-person while the Arabic suffix is third-person; kept rather than dropped."
+  ]
+}
