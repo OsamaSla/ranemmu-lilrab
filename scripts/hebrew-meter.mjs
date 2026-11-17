@@ -4,6 +4,9 @@
  * Run with:  node scripts/hebrew-meter.mjs            (report)
  *            node scripts/hebrew-meter.mjs --strict   (exit 1 on any flag)
  *            node scripts/hebrew-meter.mjs --lines    (print every line count)
+ *            node scripts/hebrew-meter.mjs --book book3 --from 51 --to 65
+ *                                                     (one batch only)
+ *            --flags-only                             (hide passing hymns)
  *
  * This does NOT try to prove the printed metre. Hebrew syllable counting from
  * unvocalised-cum-pointed text is approximate (shva na' vs shva nah is not
@@ -25,11 +28,25 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
 const TOLERANCE = 2;
 
-const args = new Set(process.argv.slice(2));
-const STRICT = args.has('--strict');
-const SHOW_LINES = args.has('--lines');
+const argv = process.argv.slice(2);
+const STRICT = argv.includes('--strict');
+const SHOW_LINES = argv.includes('--lines');
+const FLAGS_ONLY = argv.includes('--flags-only');
 
-const VOWEL = /[\u05B1-\u05BB\u05C7]/; // hatafs + full points + qamats qatan
+/** Reads `--name value`; returns undefined when the flag is absent. */
+function option(name) {
+  const index = argv.indexOf(name);
+  return index >= 0 ? argv[index + 1] : undefined;
+}
+
+const BOOK = option('--book');
+const FROM = option('--from') === undefined ? null : Number(option('--from'));
+const TO = option('--to') === undefined ? null : Number(option('--to'));
+if ((FROM !== null && !Number.isFinite(FROM)) || (TO !== null && !Number.isFinite(TO))) {
+  console.error('usage: node scripts/hebrew-meter.mjs [--book <id>] [--from <n>] [--to <n>] [--flags-only] [--strict] [--lines]');
+  process.exit(2);
+}
+
 const SHURUQ = /\u05D5\u05BC(?![\u05B0-\u05BB\u05C7])/g;
 
 /** Rough syllable estimate for one pointed Hebrew line. */
@@ -62,6 +79,18 @@ if (translated.length === 0) {
   process.exit(0);
 }
 
+const selected = translated.filter(
+  (h) =>
+    (!BOOK || h.book === BOOK) &&
+    (FROM === null || h.number >= FROM) &&
+    (TO === null || h.number <= TO),
+);
+
+if (selected.length === 0) {
+  console.log('No translated hymns in that range.');
+  process.exit(0);
+}
+
 /** `tr0001` style id, built the same way build-corpus does. */
 function hymnId(h) {
   const prefix = h.book === 'taranim' ? 'tr' : h.book === 'book3' ? 'b3' : 'h';
@@ -71,7 +100,7 @@ function hymnId(h) {
 let flagged = 0;
 let checked = 0;
 
-for (const hymn of translated) {
+for (const hymn of selected) {
   const counts = hymn.verses_he.map((verse) => verse.lines.map(syllables));
   // Group by line index inside the stanza; medians are computed per position.
   const byPosition = [];
@@ -107,6 +136,7 @@ for (const hymn of translated) {
 
   checked += 1;
   flagged += flags.length;
+  if (FLAGS_ONLY && flags.length === 0) continue;
   const status = flags.length ? '!' : '✓';
   console.log(`${hymnId(hymn)}  ${String(hymn.meter ?? '—').padEnd(10)} shape ${shape.padEnd(9)} median ${med.padEnd(10)} spread ${spread}  ${status}`);
   for (const flag of flags) console.log(`    ${flag}`);
@@ -115,7 +145,11 @@ for (const hymn of translated) {
   }
 }
 
-console.log(`\n${checked} hymn(s) checked · ${flagged} line(s) outside ±${TOLERANCE} syllables`);
+const scope =
+  BOOK || FROM !== null || TO !== null
+    ? ` (${BOOK ?? 'all books'} ${FROM ?? '…'}–${TO ?? '…'})`
+    : '';
+console.log(`\n${checked} hymn(s) checked${scope} · ${flagged} line(s) outside ±${TOLERANCE} syllables`);
 
 if (flagged > 0) {
   console.log('A flag is a prompt to re-read the line, not automatically an error: the tune may still sit.');

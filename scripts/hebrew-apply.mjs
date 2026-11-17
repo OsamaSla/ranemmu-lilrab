@@ -23,15 +23,10 @@ import { readdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { HEBREW, POINT, checkLine } from './lib/hebrew-text.mjs';
+
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const HEBREW_DIR = join(ROOT, 'content', 'hebrew');
-
-/** Diacritics that make a line "vocalised": points, cantillation, dagesh. */
-const POINT = /[\u0591-\u05BD\u05BF\u05C1-\u05C2\u05C4-\u05C5\u05C7]/;
-/** Any Hebrew letter. */
-const HEBREW = /[\u05D0-\u05EA]/;
-/** Latin, Arabic, Cyrillic, CJK — anything that must never leak into `*_he`. */
-const FOREIGN = /[A-Za-z\u0600-\u06FF\u0750-\u077F\u0400-\u04FF\u3040-\u30FF\u4E00-\u9FFF]/;
 
 const HE_KEYS = ['title_he', 'verses_he', 'chorus_he'];
 const ALLOWED_KEYS = new Set(['book', 'number', ...HE_KEYS, 'review']);
@@ -137,15 +132,15 @@ function inspect(payload, hymn, file, bookId) {
     }
     lines.forEach((line, l) => {
       const lat = `${vat}:${l + 1}`;
-      if (typeof line !== 'string' || !line.trim()) {
-        issues.push(`${lat}: empty line`);
-        return;
-      }
-      if (FOREIGN.test(line)) {
+      const fault = checkLine(line);
+      if (fault === 'empty') issues.push(`${lat}: empty line`);
+      else if (fault === 'foreign') {
         issues.push(`${lat}: non-Hebrew character in ${JSON.stringify(line)}`);
+      } else if (fault === 'no-hebrew') {
+        issues.push(`${lat}: no Hebrew letters in ${JSON.stringify(line)}`);
+      } else if (fault === 'unpointed') {
+        issues.push(`${lat}: unpointed line ${JSON.stringify(line)}`);
       }
-      if (!HEBREW.test(line)) issues.push(`${lat}: no Hebrew letters in ${JSON.stringify(line)}`);
-      if (!POINT.test(line)) issues.push(`${lat}: unpointed line ${JSON.stringify(line)}`);
     });
   });
 

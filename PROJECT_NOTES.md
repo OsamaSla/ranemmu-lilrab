@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, reader rail moved left + web touch scrolling fix
+Last verified: 2026-11-17, reader rail moved left + Hebrew batch tooling (S0)
 
 ## 1. What this is
 
@@ -70,7 +70,8 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 - `npm run hebrew:apply` / `hebrew:check` / `hebrew:meter` — merge the
   hand-authored Hebrew payloads from `content/hebrew/<book>/*.json` into the
   corpus (shape + pointing checks, `--check` = drift gate), and the relative
-  line-balance report. Details in §15. After any corpus rebuild the dev server
+  line-balance report. Details in §15. `hebrew:digest --pack` + `hebrew:pack`
+  are the lean authoring loop (see §16). After any corpus rebuild the dev server
   must be restarted with `--clear`: Metro caches the JSON chunks (verified
   2026-11-14, `hasHe` stayed stale until restart).
 - `node scripts/refrain-batch.mjs 315:move 318:keep …` — mark stanza 1 of the
@@ -887,6 +888,25 @@ base, so a batch can start on either without touching code.
   (`יֵשׁוּעַ`, `שַׂר שָׁלוֹם`, `שַׁעֲשׁוּעַי`), each printed line keeps the
   Arabic's two half-phrases joined by ` · ` so the grid matches one-to-one.
   Next batch: `node scripts/hebrew-digest.mjs book3 51 60`.
+
+- Batches 2–5 landed the same evening (2026-11-16, 21:15–21:27, commits
+  `e25a9356`/`da51b528`/`df6c1954`/`0bade5c5`/`3d91c63e`): b30011–b30050, ten
+  hymns per commit, one continuous run. State is **50/402** (465 lines, 100 %
+  pointed). Note `hebrew:progress` counts `review[]` notes (150), not meter
+  flags: `hebrew:meter --book book3 --from 1 --to 50` reports 96 lines outside
+  ±2, reviewed and accepted 2026-11-17.
+- Lean batch tooling (2026-11-17, S0): `hebrew-digest --pack` prints the
+  `hebrew-pack` template (no EN gloss — it was 53 % of the digest bytes — and no
+  topics), `--no-en` covers the long format; `scripts/hebrew-pack.mjs`
+  (`npm run hebrew:pack`) shape/pointing-gates a batch file and writes the
+  payloads; the shared checks live in `scripts/lib/hebrew-text.mjs` and are
+  imported by apply + pack; `hebrew-meter` takes `--book/--from/--to` and
+  `--flags-only`. Round-trip proof: b30041–b30050 → pack text →
+  `hebrew-pack --force` reproduced every title, label and line byte-for-byte;
+  the only difference is that the regenerated payloads now carry the `chorus`
+  flag that `hebrew-apply` always mirrored from the Arabic anyway. Session plan
+  `content/hebrew/book3/PLAN.md`, live checkpoint
+  `content/hebrew/book3/STATE.md`.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 

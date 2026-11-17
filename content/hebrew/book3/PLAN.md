@@ -1,6 +1,6 @@
 # Book 3 Hebrew — session plan (352 hymns to go)
 
-Status: 50 / 402 done (b30001–b30050, 465 lines, 150 meter flags).
+Status: 50 / 402 done (b30001–b30050, 465 lines, 96 meter flags, 150 review notes).
 Remaining: **352 hymns** (b30051–b30402) in **24 batches of 15**, grouped into
 **5 working sessions** plus one tooling session (S0).
 
@@ -66,7 +66,7 @@ Full niqqud on every word. Hebrew letters only. Never retype stanza labels.
 
 Exit criteria: round-trip of b30041–b30050 through `hebrew:pack --dry-run`
 deep-equals the committed payloads (ignoring `review[]`); `hebrew:check` clean;
-`hebrew:meter --from 1 --to 50 --flags-only` still 150 flags; `eslint` on the
+`hebrew:meter --from 1 --to 50 --flags-only` still 96 flags; `eslint` on the
 touched scripts clean; one `chore(hebrew)` commit.
 
 ## 3. Translation sessions

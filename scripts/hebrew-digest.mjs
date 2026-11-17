@@ -2,7 +2,10 @@
  * Dumps a translation digest for a range of hymns: Arabic lines, the English
  * gloss, the printed metre and the exact stanza/line shape.
  *
- * Run with:  node scripts/hebrew-digest.mjs <book> <from> <to> [outfile]
+ * Run with:  node scripts/hebrew-digest.mjs <book> <from> <to> [outfile] [flags]
+ *            --no-en   omit the English gloss (53% of the digest bytes)
+ *            --pack    print the `hebrew-pack.mjs` input template, Arabic kept
+ *                      as the reference line and `S:L` prefixes as anchors
  *
  * The blog uses it as the single input for authoring a batch: one read gives
  * everything the translator needs, so the corpus JSON never has to be opened
@@ -17,9 +20,15 @@ import { fileURLToPath } from 'node:url';
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = join(ROOT, 'content');
 
-const [bookArg, fromArg, toArg, outArg] = process.argv.slice(2);
+const rawArgs = process.argv.slice(2);
+const flags = new Set(rawArgs.filter((arg) => arg.startsWith('--')));
+const [bookArg, fromArg, toArg, outArg] = rawArgs.filter((arg) => !arg.startsWith('--'));
+const PACK = flags.has('--pack');
+const NO_EN = PACK || flags.has('--no-en');
 if (!bookArg || !fromArg || !toArg) {
-  console.error('usage: node scripts/hebrew-digest.mjs <book> <from> <to> [outfile]');
+  console.error(
+    'usage: node scripts/hebrew-digest.mjs <book> <from> <to> [outfile] [--no-en] [--pack]',
+  );
   process.exit(2);
 }
 
@@ -50,6 +59,19 @@ const lines = [];
 for (const hymn of range) {
   const shape = hymn.verses.map((v) => v.lines.length).join('/');
   const id = `${book === 'taranim' ? 'tr' : book === 'book3' ? 'b3' : 'h'}${String(hymn.number).padStart(4, '0')}`;
+  if (PACK) {
+    // The packer reads `#NN`, `T:` and `S:L`; everything after the first `|`
+    // is for the translator only. No English here: the Arabic is the authority
+    // and the gloss doubles the input for every batch.
+    lines.push(`#${hymn.number} | metre ${hymn.meter ?? '-'} | shape ${shape}`);
+    lines.push(`T: ${hymn.title}`);
+    hymn.verses.forEach((verse, v) => {
+      verse.lines.forEach((line, l) => lines.push(`${v + 1}:${l + 1} ${line}`));
+    });
+    if (hymn.chorus) lines.push('C: ');
+    lines.push('');
+    continue;
+  }
   lines.push(
     `=== ${hymn.number} | ${id} | metre ${hymn.meter ?? '-'} | chorus ${hymn.chorus ? 'yes' : '-'} | topics ${(hymn.topics ?? []).join(',')}`,
   );
@@ -61,7 +83,7 @@ for (const hymn of range) {
     verse.lines.forEach((line, l) => {
       lines.push(`  ${line}`);
       const en = hymn.verses_en?.[v]?.lines?.[l];
-      if (en) lines.push(`    ~ ${en}`);
+      if (en && !NO_EN) lines.push(`    ~ ${en}`);
     });
   });
   if (hymn.chorus) lines.push(`chorus: ${hymn.chorus}`);
