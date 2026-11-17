@@ -1382,6 +1382,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
@@ -1392,6 +1393,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
@@ -1405,6 +1407,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "eternity",
   "topics": [
    "worship",
@@ -1419,6 +1422,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -1429,6 +1433,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -1439,6 +1444,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -1449,6 +1455,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -1459,6 +1466,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "comfort",
@@ -1472,7 +1480,8 @@
   "title": "يا ابنى لا تنسى شريعتى",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "b30120",
@@ -1482,6 +1491,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -1491,7 +1501,8 @@
   "title": "تواضعى نفسى تحت يد الله",
   "hasChorus": true,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "b30122",
@@ -1501,6 +1512,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -1511,6 +1523,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship",
@@ -1525,6 +1538,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "eternity"
  },
  {
@@ -1535,6 +1549,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
