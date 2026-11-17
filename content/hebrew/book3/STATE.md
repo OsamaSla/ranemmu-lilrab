@@ -1,13 +1,12 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 14 (b30171–b30185), S2 paused by
-hand-off after four of five batches
+Last updated: 2026-11-17 · after batch 15 (b30186–b30200), S2 closed (5/5 batches)
 
-- Progress: **185 / 402** hymns, 1781 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 385 line flags for b30001–b30185, all reviewed and
-  accepted; `hebrew:progress` shows 171, which is the `review[]` note count
-  (166 through batch 12 plus 5 in batch 14), not the meter count.
-- Next range: **b30186–b30200** (batch 15, last batch of S2).
+- Progress: **200 / 402** hymns, 1917 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 414 line flags for b30001–b30200, all reviewed and
+  accepted; `hebrew:progress` shows 178, which is the `review[]` note count
+  (171 through batch 14 plus 7 in batch 15), not the meter count.
+- Next range: **b30201–b30215** (batch 16, first batch of S3).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -137,6 +136,22 @@ hand-off after four of five batches
     b30177 2:3/3:2/5:4, b30180 2:1/2:2/2:3, b30181 1:1/3:1/4:2, b30182
     1:2/2:2, b30183 1:2; long lines b30172 2:2/4:1, b30173 1:4/2:1/3:3,
     b30176 2:1, b30177 1:3/2:2, b30179 1:1, b30181 2:1, b30185 1:1.
+- Book 3 batch 15 (b30186–b30200): 29 line flags after review, all accepted;
+  no missing or extra words, every stanza count matches the print:
+  - shape flags are the print's: b30191 1/4/4/4 (a one-line theme stanza),
+    b30194 2/3/3/3, b30196 2/5/2/2, b30200 2/4/2/2.
+  - lines short in the Arabic: b30187 3:1, b30188 2:2, b30191 4:2 (the
+    child-in-the-bosom line), b30193 4:1, b30196 2:2, b30197 3:1/5:2,
+    b30198 1:1–1:3 (Ps 23's short lines), b30199 4:1.
+  - long lines that are long in the Arabic: b30188 1:1/1:3, b30190 1:2/2:1/
+    3:3/3:4, b30193 1:2, b30195 1:2, b30196 4:1, b30197 4:2, b30198 2:1–2:3,
+    b30200 1:2.
+  - printed repetitions are written out, not counted as faults: b30189's
+    `(كاملة)٣` is a repeat count (the phrase is written once), b30192's
+    `لا .. لا ..` and b30196's `لا .. لا` are sung repetitions.
+  - `R:` notes for quoted verses: b30188 (2 Cor 12:7–10), b30189 (Zech 4:10 /
+    2 Chr 16:9), b30191 (Ps 55:23 / Rom 8:32 / Isa 49:15), b30192 (Jer 32:27),
+    b30196 (Matt 6:26–28), b30198 (Ps 23), b30199 (Ps 27:6 / Rom 8:31).
 
 **CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
 `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch

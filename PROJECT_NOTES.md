@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, Hebrew Book 3 session S1 closed (b30051–b30125)
+Last verified: 2026-11-17, commit 9a7ece91, Hebrew Book 3 session S2 closed (b30126–b30200)
 
 ## 1. What this is
 
@@ -607,7 +607,7 @@ melody so people can hear how it is sung. Only source available: recordings
 
 Only `tr0001`–`tr0375` carry **authored** Hebrew so far (375 hymns, 7386 verse
 lines, all pointed; `verify-hebrew.mjs` prints 7761 because it counts each
-`title_he` as one extra line), plus Book 3 hymns 1–50 (§16). **Book 2 (taranim)
+`title_he` as one extra line), plus Book 3 hymns 1–200 (§16). **Book 2 (taranim)
 is now complete.** On top of
 that, `build:corpus` now lends Book 1/3 copies the Hebrew their Book 2 twin
 already has (14 hymns in the built corpus; see §18).
@@ -981,6 +981,17 @@ base, so a batch can start on either without touching code.
   `الميراث` are singing/text repetitions, written out rather than dropped.
   Gates: `hebrew:align` ✓ 560, `check:hymns` 1824, `typecheck` clean, diff gate
   clean. Next: batch 15, b30186–b30200 (last of S2).
+- Batch 15 (2026-11-17, S2 closed): b30186–b30200, 15 hymns / 136 lines, state
+  **200/402** (1917 lines, 100 % pointed, 178 `review[]`, 414 meter flags for
+  b30001–b30200). 29 flags, none structural — print shapes (b30191 1/4/4/4,
+  b30194 2/3/3/3, b30196 2/5/2/2, b30200 2/4/2/2) and relative length only.
+  Repeat counts inside lines stay singing instructions (b30189's `(كاملة)٣`,
+  b30192's repeated `لا`), written out once; quoted verses carry the only seven
+  `R:` notes (2 Cor 12, Zech 4 / 2 Chr 16, Ps 55 / Rom 8 / Isa 49, Jer 32,
+  Matt 6, Ps 23, Ps 27 / Rom 8). Gates: `hebrew:apply --check` clean,
+  `hebrew:align` ✓ 575, `check:hymns` 1824 / 30,898 lines, `typecheck` clean,
+  diff gate clean after staging the rebuilt `assets/hymns`. Next session: S3,
+  b30201–b30215.
 - Search-bar focus frame (2026-11-17): the WCAG rule in `src/app/+html.tsx`
   used `:focus-visible { outline: 2px solid #A8842E !important }`; Chromium
   treats a mouse click into a text input as `:focus-visible`, and `!important`

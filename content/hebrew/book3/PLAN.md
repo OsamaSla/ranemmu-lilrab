@@ -1,9 +1,9 @@
-# Book 3 Hebrew — session plan (352 hymns to go)
+# Book 3 Hebrew — session plan (202 hymns to go)
 
-Status: 185 / 402 done (b30001-b30185, 1781 lines, 385 meter line flags, 171
-review notes). Session S1 complete; S2 paused by hand-off after four of its five
-batches (b30126–b30185). Remaining: **217 hymns** (b30186–b30402) in **15
-batches of 15**, grouped into the rest of S2 plus S3–S5.
+Status: 200 / 402 done (b30001-b30200, 1917 lines, 414 meter line flags, 178
+review notes). Sessions S1 and S2 complete (5 batches each). Remaining:
+**202 hymns** (b30201–b30402) in **14 batches of 15** (last one 7), grouped
+into S3–S5. Next: batch 16, b30201–b30215 (first of S3).
 
 Read order for a new session: this file → `STATE.md` → `content/hebrew/glossary.md`.
 Do **not** read all of `PROJECT_NOTES.md`; §15/§16 is the only relevant part and
