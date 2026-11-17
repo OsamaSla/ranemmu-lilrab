@@ -1,12 +1,12 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 9 (b30096–b30110)
+Last updated: 2026-11-17 · after batch 10 (b30111–b30125), ends session S1
 
-- Progress: **110 / 402** hymns, 1021 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 214 line flags for b30001–b30110, all reviewed and
+- Progress: **125 / 402** hymns, 1177 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 238 line flags for b30001–b30125, all reviewed and
   accepted; `hebrew:progress` shows 158, which is the `review[]` note count
-  (156 from batches 1–8 plus 2 here), not the meter count.
-- Next range: **b30111–b30125** (batch 10, fifth batch of session S1).
+  (156 from batches 1–8 plus 2 in batch 9), not the meter count.
+- Next range: **b30126–b30140** (batch 11, first batch of session S2).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -76,6 +76,20 @@ Last updated: 2026-11-17 · after batch 9 (b30096–b30110)
   - b30103's refrain is 2 Cor 12:9's own wording (`דַּיְּךָ חַסְדִּי`), the verse
     the hymn expands; b30107 renders `راضٍ وشاكر` as `שָׁלֵו וּמוֹדֶה` because
     `רָצוּי` would read "acceptable". Each carries the one `R:` note.
+- Book 3 batch 10 (b30111–b30125): 24 line flags after review, all accepted,
+  none structural — every stanza count matches the print:
+  - short lines that are short in the Arabic: b30111 1:2/3:1, b30112 3:4,
+    b30115 3:1 (the print's third stanza starts on a bare two-word call),
+    b30117 2:4, b30118 2:1/3:1, b30120 3:1/5:1/6:2, b30123 1:3/3:2.
+  - long lines that are long in the Arabic: b30113 1:1, b30115 2:3,
+    b30117 1:3, b30118 4:1/5:1/6:2, b30120 2:1/6:1, b30121 3:2,
+    b30123 1:2/6:3/6:4.
+  - b30119 and b30125 print a repeat count inside the line
+    (`(يا ابنى لا تنسى)٣`); the count is a singing instruction, so the phrase is
+    written once and the line is not flagged.
+  - b30120 2:1–2:2 are Exod 33:14 (`פָּנַי יֵלֵכוּ וְהִנַּחְתִּי לָךְ`) and
+    Josh 1:9 (`חֲזַק וֶאֱמָץ`), the verses the print quotes; b30123 builds its
+    last line of every stanza on Ps 23, b30118 on Ps 27:14 and 34:6.
 
 ## Per-batch loop
 
