@@ -67,7 +67,12 @@ const files = (await readdir(CONTENT)).filter((f) => f.endsWith('.json') && f !=
 const hymns = [];
 for (const name of files) {
   const raw = JSON.parse(await readFile(join(CONTENT, name), 'utf8'));
-  hymns.push(...(Array.isArray(raw) ? raw : (raw.hymns ?? [])));
+  const fallback = name.replace(/\.json$/, '');
+  for (const hymn of Array.isArray(raw) ? raw : (raw.hymns ?? [])) {
+    // Book 1's first 1,000 hymns have no `book` key; the file name is the book,
+    // as in hebrew-digest/pack/apply. Without this, --book main matches nothing.
+    hymns.push({ ...hymn, book: hymn.book ?? fallback });
+  }
 }
 
 const translated = hymns
