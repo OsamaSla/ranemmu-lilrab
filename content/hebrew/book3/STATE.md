@@ -1,13 +1,13 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 12 (b30141–b30155), S2 paused by
-hand-off after two of five batches
+Last updated: 2026-11-17 · after batch 14 (b30171–b30185), S2 paused by
+hand-off after four of five batches
 
-- Progress: **155 / 402** hymns, 1492 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 316 line flags for b30001–b30155, all reviewed and
-  accepted; `hebrew:progress` shows 166, which is the `review[]` note count
-  (158 through S1 plus 5 in batch 11 and 3 in batch 12), not the meter count.
-- Next range: **b30156–b30170** (batch 13, resume S2).
+- Progress: **185 / 402** hymns, 1781 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 385 line flags for b30001–b30185, all reviewed and
+  accepted; `hebrew:progress` shows 171, which is the `review[]` note count
+  (166 through batch 12 plus 5 in batch 14), not the meter count.
+- Next range: **b30186–b30200** (batch 15, last batch of S2).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -117,6 +117,26 @@ hand-off after two of five batches
     occurrences; b30149 follows 2 Sam 22/Ps 18, b30154 closes on Phil 4:6–7.
   - `b30146` now lends its Hebrew to `h0296` (corpus build reports 15 such
     loans), an automatic consequence of the same hymn appearing in two books.
+- Book 3 batch 13 (b30156–b30170): 34 line flags after review, all accepted;
+  no missing or extra words, every stanza count matches the print:
+  - shape flags are the print's: b30157 2/1/2/2/2, b30165 2/1/2/2, b30166
+    3/2/3/3, b30167 3/2/2/2, b30170 2/1/2/2.
+  - short lines that are short in the Arabic: b30161 2:1, b30163 6:1, b30164
+    2:1, b30165 3:2, b30166 2:2, b30169's short acclamations.
+  - long lines that are long in the Arabic: b30156 1:1, b30157 5:1/5:2, b30158
+    1:1/1:2, b30160 6:2, b30161 1:2, b30164 4:1, b30165 2:1, b30169 1:1/
+    1:4/2:2/3:3, b30170 3:1.
+- Book 3 batch 14 (b30171–b30185): 35 line flags after review, all accepted:
+  - shape flags are the print's: b30176 2/4/2/2, b30177 4/3/4/4/4, b30180
+    4/3/4, b30181 2/1/2/2/2.
+  - `b30171` is the same hymn as `tr0375`; its settled wording is reused with
+    full pointing instead of being re-translated. `R:` notes also record
+    b30174's triple `הנחלה` (Ps 16:5–6), b30180's repeated `لا أخاف` (Ps 23),
+    b30182's Ps 57:8 refrain, and b30184's Isa 58:11 / 40:31 echoes.
+  - relative length only: short lines b30171 3:3, b30172 1:2, b30173 1:3/3:1,
+    b30177 2:3/3:2/5:4, b30180 2:1/2:2/2:3, b30181 1:1/3:1/4:2, b30182
+    1:2/2:2, b30183 1:2; long lines b30172 2:2/4:1, b30173 1:4/2:1/3:3,
+    b30176 2:1, b30177 1:3/2:2, b30179 1:1, b30181 2:1, b30185 1:1.
 
 **CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
 `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch

@@ -973,6 +973,23 @@ base, so a batch can start on either without touching code.
   every later batch commit stages `assets/hymns` with the payloads. Verify
   locally with `npm run build:corpus && git diff --exit-code -- assets/hymns
   src/data/generated-chunks.ts` before pushing.
+- Batches 13 and 14 (2026-11-17, S2 paused after four batches by hand-off):
+  b30156–b30185, 30 hymns / 289 lines, state **185/402** (1781 lines, 100 %
+  pointed, 171 `review[]`, 385 meter flags for b30001–b30185). 34 + 35 flags,
+  none structural. b30171 duplicates tr0375, so its already-settled wording is
+  reused with full pointing; b30172's repeat-count tags and b30174's triple
+  `الميراث` are singing/text repetitions, written out rather than dropped.
+  Gates: `hebrew:align` ✓ 560, `check:hymns` 1824, `typecheck` clean, diff gate
+  clean. Next: batch 15, b30186–b30200 (last of S2).
+- Search-bar focus frame (2026-11-17): the WCAG rule in `src/app/+html.tsx`
+  used `:focus-visible { outline: 2px solid #A8842E !important }`; Chromium
+  treats a mouse click into a text input as `:focus-visible`, and `!important`
+  beat the `noFocusRing` inline token, so the library search bar appeared
+  inside a gold rectangle. The rule now excludes `input`/`textarea`/`select`
+  and explicitly resets their outline; the ring remains for keyboard-focused
+  links and buttons. Verified by `npm run typecheck` (clean); local
+  `expo start --web` is broken in this workspace (legacy CLI + mismatched
+  expo deps), so visual confirmation needs CI or the user's dev server.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 
