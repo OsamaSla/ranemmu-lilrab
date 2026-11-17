@@ -1,15 +1,15 @@
 # Book 1 Hebrew — live state (subagent rotation driver)
 
-Last updated: 2026-11-17 · after batch h0087-h0093
+Last updated: 2026-11-17 · after batch h0094-h0100
 
-- Progress: **93 / 1047** hymns, 1717 verse lines, 100 % pointed. `hebrew:progress`
-  reports 81 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
+- Progress: **100 / 1047** hymns, 1844 verse lines, 100 % pointed. `hebrew:progress`
+  reports 88 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
   flags for h0001-h0007, 18 for h0008-h0015, 13 for h0016-h0023, 17 for
   h0024-h0031, 15 for h0032-h0038, 32 for h0039-h0045, 11 for h0046-h0052,
   18 for h0053-h0058, 18 for h0059-h0065, 15 for h0066-h0071, 13 for
-  h0072-h0078, 24 for h0079-h0086 and 13 for h0087-h0093, all reviewed and
-  accepted.
-- Next batch: **h0094–h0100** (7 hymns, 127 lines) — recompute with
+  h0072-h0078, 24 for h0079-h0086, 13 for h0087-h0093 and 23 for
+  h0094-h0100, all reviewed and accepted.
+- Next batch: **h0101–h0108** (8 hymns, 136 lines) — recompute with
   `node scripts/book1/next-batch.mjs` before every spawn.
 - Plan: `content/hebrew/main/PLAN.md` (rotation order, child prompt, gates).
 - Remaining tail after this book: none — Book 1 is the last book.
@@ -23,7 +23,8 @@ Last updated: 2026-11-17 · after batch h0087-h0093
 - `models_used_so_far`:
   - `opencode/hy4-flash-free` — h0001-h0007 (pilot), h0008-h0015, h0016-h0023,
     h0024-h0031, h0032-h0038, h0039-h0045, h0046-h0052, h0053-h0058,
-    h0059-h0065, h0066-h0071, h0072-h0078, h0079-h0086, h0087-h0093 (all gates green)
+    h0059-h0065, h0066-h0071, h0072-h0078, h0079-h0086, h0087-h0093,
+    h0094-h0100 (all gates green)
 - Reset `exhausted_today` at the next local day boundary. On a quota response
   from a child, add that model here and advance `active_index` before retrying
   the same range.
@@ -105,6 +106,12 @@ Last updated: 2026-11-17 · after batch h0087-h0093
   h89 clean. h92's spread 8 is a long 8th line in the Arabic. Two dropped
   pronouns `أنّي`/`أنا` restored in review then repacked. Choruses: h87-h91
   and h93 v2; h92 none.
+- h0094-h0100: 23 flags, all Arabic-driven — no missing or extra words. Shapes
+  4/4/4/4 (h94), 2/5/5/5 (h95), 4/4/4/4/4 (h96, h100), 4/4/4/4 (h98),
+  4/2/4/4/4 (h99); h97 clean. h100's printed leading verse numbers
+  (1/2/3/4 at 1:1, 3:1, 4:1, 5:1) are source numbering artifacts, not words —
+  omitted per the h0081 precedent (verified against the digest). Choruses:
+  h94/h95/h97 v1, h96/h98/h99/h100 v2.
 - Tooling fix (commit `71522d3a`): `hebrew-meter.mjs` now falls back to the corpus
   file name when a hymn has no `book` key, so `--book main` sees hymns 1-1000.
 
