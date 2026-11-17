@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, CI typecheck fix for the gitignored `expo-env.d.ts`
+Last verified: 2026-11-17, reader rail moved left + web touch scrolling fix
 
 ## 1. What this is
 
@@ -1387,6 +1387,38 @@ it would claim a review the Hebrew never had.
 Verified in the PIN-gated build (`.env.local` temporarily set aside, then
 restored): HE chip → 439 hymns, neutral `—` badges, tap → editor with Hebrew
 fields. `tsc --noEmit` + ESLint clean.
+
+## 27. Reader stanza rail: left side + web touch scrolling (2026-11-17)
+
+Two reader issues found after the Session 13 deploy, both in the rail/scroller
+row of `src/app/(tabs)/hymn/[id].tsx`.
+
+**Touch scrolling was dead on mobile web.** `GestureDetector` defaults to
+`touch-action: none` on its child; wrapping the text `ScrollView` in the
+swipe-to-next-hymn fling therefore blocked touch pans, leaving the stanza dots
+as the only way down a hymn. Fix: `touchAction="pan-y"` on the `GestureDetector`
+— vertical pans go back to the browser, horizontal ones still reach the fling.
+Symptom to recognise: wheel scrolling works on desktop but a phone cannot drag
+the text. (`touch-action: pan-y` also drops pinch-zoom on that element; the
+reader's own font-size control covers that.)
+
+Note this predates Session 13 — the deployed build at the time already had
+`touch-action: none`; it was only noticed after the push.
+
+**Rail moved to the physical left**, per the owner's request: it now renders
+before the `ScrollView` inside the `flexDirection: 'row'` container (that
+container pins `direction: 'ltr'`, so source order is physical order).
+`StanzaRail` uses physical `paddingLeft`/`paddingRight` and `borderRightWidth`
+instead of `paddingStart`/`paddingEnd`/`borderLeftWidth`, because the app is RTL
+and the logical props resolved to the wrong edge. Verified in an exported build:
+rail `x=0`, width 52, border on its right; dot tap scrolls and highlights.
+
+**Testing gotcha:** `onLayout` on web comes from `ResizeObserver`, which a
+background browser tab does not deliver. In a non-focused automation tab the
+rail's offset store stays empty — dots do nothing and the highlight never moves,
+which looks exactly like a code bug. Bring the tab to the front (or use a freshly
+opened tab) before diagnosing; a foreground production export measured all six
+stanzas and highlighted correctly.
 
 
 
