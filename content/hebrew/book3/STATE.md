@@ -1,12 +1,12 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 15 (b30186–b30200), S2 closed (5/5 batches)
+Last updated: 2026-11-17 · after batch 16 (b30201–b30215), S3 started (1/5 batches)
 
-- Progress: **200 / 402** hymns, 1917 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 414 line flags for b30001–b30200, all reviewed and
-  accepted; `hebrew:progress` shows 178, which is the `review[]` note count
-  (171 through batch 14 plus 7 in batch 15), not the meter count.
-- Next range: **b30201–b30215** (batch 16, first batch of S3).
+- Progress: **215 / 402** hymns, 2058 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 440 line flags for b30001–b30215, all reviewed and
+  accepted; `hebrew:progress` shows 186, which is the `review[]` note count
+  (178 through batch 15 plus 8 in batch 16), not the meter count.
+- Next range: **b30216–b30230** (batch 17, second of S3).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -152,6 +152,21 @@ Last updated: 2026-11-17 · after batch 15 (b30186–b30200), S2 closed (5/5 bat
   - `R:` notes for quoted verses: b30188 (2 Cor 12:7–10), b30189 (Zech 4:10 /
     2 Chr 16:9), b30191 (Ps 55:23 / Rom 8:32 / Isa 49:15), b30192 (Jer 32:27),
     b30196 (Matt 6:26–28), b30198 (Ps 23), b30199 (Ps 27:6 / Rom 8:31).
+- Book 3 batch 16 (b30201–b30215): 26 line flags after review, all accepted;
+  no missing or extra words, every stanza count matches the print:
+  - shape flags are the print's: b30201 2/1/2/2 and b30210 2/1/2 (a one-line
+    stanza 2), b30202 4/2/4/4 (a two-line stanza 2).
+  - lines short in the Arabic: b30202 1:2/1:4 (the short vocative acclamations),
+    b30206 2:2 (the terse "Your cross redeemed me" half), b30207 5:2, b30209
+    6:1 (the closing stanza drops the long "follow Jesus" refrain).
+  - long lines that are long in the Arabic: b30201 3:2, b30202 1:3, b30203 5:1,
+    b30205 2:1, b30206 1:4/4:2/4:3, b30207 1:1, b30208 3:2/5:1, b30210 1:2,
+    b30211 2:2, b30212 1:1–1:2, b30213 4:1.
+  - quoted verses carry the only eight `R:` notes: b30202 (2 Cor 12:9's own
+    `דַּיְּךָ חַסְדִּי`), b30203 (Ps 23:4 / the furnace youths of Dan 3), b30204
+    (Rom 8:35–36 / Ps 44:22), b30205 (1 Thess 4:17 / Rev 19:9), b30206
+    (Isa 53:12 for the intercessor), b30212 (Ps 115:1), b30213 (Joel 2:25),
+    b30214 (1 Cor 2:8 / Isa 49:22).
 
 **CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
 `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch
