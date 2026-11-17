@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit eea17b0d, Hebrew Book 3 batch 19 (b30246–b30260), S3 at 260/402
+Last verified: 2026-11-17, commit ff27c53e, Hebrew Book 3 batch 23 (b30306–b30320), S4 at 320/402
 
 ## 1. What this is
 
@@ -1066,6 +1066,19 @@ base, so a batch can start on either without touching code.
   Rev 3:20). Gates: `hebrew:check` no drift, `hebrew:align` ✓ 680,
   `build:corpus` 1824 hymns / 19 chunks / 17 loans (no new loans), diff gate
   clean with rebuilt `assets/hymns` staged. Next: batch 23, b30306-b30320.
+- Batch 23 (2026-11-17, S4 third batch, commit `ff27c53e`): b30306-b30320, 15
+  hymns / 141 lines, state **320/402** (3123 lines, 100 % pointed, 255
+  `review[]`, 668 meter flags for b30001-b30320). 35 flags, none structural —
+  print shapes (b30309 4/2/4, b30314 4/2/4/4, b30319 3/2/3/3) and short/long
+  lines already in the Arabic; b30306's and b30310's repeat counts written
+  once, b30307's `...` sung pauses kept verbatim. Fourteen `R:` notes for
+  quoted verses/glossary (John 10:28-29, بخار → הֶבֶל / 2 Cor 6:2,
+  "عنى" read as "عَيْنِي", Benedictus Luke 1:68-79, עֲטֶרֶת קוֹצִים,
+  the קנה root, Mal 3:10 / Isa 40:31, מוֹלַדְתִּי / הֲוָיָתִי).
+  Gates: `hebrew:check` no drift, `hebrew:align` ✓ 695, `build:corpus` 1824
+  hymns / 19 chunks / 18 loans (new loan h0354<-b30311), `check:hymns` 1824 /
+  30,898 lines, `typecheck` clean, diff gate clean with rebuilt `assets/hymns`
+  staged. Next: batch 24, b30321-b30335.
 - Search-bar focus frame (2026-11-17): the WCAG rule in `src/app/+html.tsx`
   used `:focus-visible { outline: 2px solid #A8842E !important }`; Chromium
   treats a mouse click into a text input as `:focus-visible`, and `!important`
