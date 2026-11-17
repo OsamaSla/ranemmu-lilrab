@@ -1,0 +1,22 @@
+{
+  "book": "main",
+  "number": 185,
+  "title_he": "בְּךָ רֶוַח וְנִצָּחוֹן בָּרוּר",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אָשִׁירָה לְךָ, פּוֹדִי הֶחָבִיב",
+        "אֶעֶבְדְּךָ כָּל יְמֵי חַיַּי",
+        "אַתָּה אֱלֹהַי, אַתָּה אֲדֹנִי",
+        "יְשׁוּעָתִי וּמַחֲסֶה נֶאֱמָן",
+        "בְּךָ רֶוַח וְנִצָּחוֹן בָּרוּר",
+        "בְּךָ שִׂמְחָתִי וּבְרִיתִי הַיְחִידָה",
+        "בְּךָ שְׁלוֹמִי וּמִבְצָרִי הֶחָזָק"
+      ]
+    }
+  ],
+  "review": [
+    "Settled book3/36 renderings reused; the main prints the twin's first stanza as seven single lines and omits the twin's repeated closing couplet. خلاصي→יְשׁוּעָה per the root-pun rule; ستري الوطيد→מַחֲסֶה נֶאֱמָן. Single stanza, so no cross-stanza meter flags."
+  ]
+}
