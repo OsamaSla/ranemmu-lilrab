@@ -1,14 +1,14 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 24 (b30321–b30335), S4 (4/5)
+Last updated: 2026-11-17 · after batch 25 (b30336–b30350), S4 complete (5/5)
 
-- Progress: **335 / 402** hymns, 3299 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 714 line flags for b30001–b30335, all reviewed and
+- Progress: **350 / 402** hymns, 3418 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 744 line flags for b30001–b30350, all reviewed and
   accepted; `hebrew:progress` shows 268, which is the `review[]` note count
   (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18, 8 in
   batch 19, 8 in batch 20, 10 in batch 21, 14 in batch 22, 14 in batch 23,
-  13 in batch 24), not the meter count.
-- Next range: **b30336–b30350** (batch 25, fifth and last of S4).
+  13 in batch 24, 0 in batch 25), not the meter count.
+- Next range: **b30351–b30365** (batch 26, first of S5).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -343,6 +343,21 @@ Last updated: 2026-11-17 · after batch 24 (b30321–b30335), S4 (4/5)
        b30331 (Mark 8:38 / מָדוֹר / wedding supper), b30332 (1 Thess 4:16
        shofar), b30333 (Heb 11:13 / Ps 84:7 / חֲטִיפָה), b30334 (1 Thess 4:17
        / גְּוִיּוֹת), b30335 (refrain repeats / חֲטִיפָה / שָׁקַד).
+     - `build:corpus` still reports 18 lent Hebrew hymns — no new loans in this
+       batch.
+
+ - Book 3 batch 25 (b30336–b30350, S4 complete): 30 line flags after review,
+   all accepted; no missing or extra words, every stanza count matches the
+   print. No `R:` notes were needed in this batch (268 `review[]` unchanged):
+     - shape flags are the print's: b30342 and b30343 are five one-line
+       stanzas (1/1/1/1/1); b30345 and b30347 are 2/3/2/2/2; b30350 is
+       2/1/2/2/2 (a one-line stanza 2).
+     - short lines that are short in the Arabic: b30336 3:1, b30338 2:4,
+       b30339 2:2, b30340 1:2, b30341 2:1, b30342 3:1, b30343 1:1, b30345
+       5:2, b30347 1:1/5:1/5:2, b30348 2:1, b30350 1:1/4:2.
+     - long lines that are long in the Arabic: b30336 1:1, b30338 1:2,
+       b30339 4:1/5:1/5:2, b30340 2:2, b30341 1:1/4:1, b30342 4:1, b30343
+       5:1, b30345 1:1/4:1, b30350 5:1.
      - `build:corpus` still reports 18 lent Hebrew hymns — no new loans in this
        batch.
 

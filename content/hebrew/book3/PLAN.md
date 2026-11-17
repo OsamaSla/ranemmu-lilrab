@@ -1,7 +1,7 @@
-# Book 3 Hebrew — session plan (67 hymns to go)
+# Book 3 Hebrew — session plan (52 hymns to go)
 
-Status: 335 / 402 done (b30001–b30335). S1–S3 complete; S4 at 4/5 (batch 25 =
-b30336–b30350 is the only work left in S4); S5 pending (b30351–b30402).
+Status: 350 / 402 done (b30001–b30350). S1–S4 complete; S5 pending
+(b30351–b30402, 4 batches). Next: batch 26, b30351–b30365 (first of S5).
 The `status` column in §3 is the machine-readable completion marker used by
 `run_plan.sh`: set a finished session's row to exactly `complete`.
 
@@ -105,7 +105,7 @@ touched scripts clean; one `chore(hebrew)` commit.
 | S1 | 5 | 75 | b30051–b30125 | complete |
 | S2 | 5 | 75 | b30126–b30200 | complete |
 | S3 | 5 | 75 | b30201–b30275 | complete |
-| S4 | 5 | 75 | b30276–b30350 | in-progress |
+| S4 | 5 | 75 | b30276–b30350 | complete |
 | S5 | 4 | 52 | b30351–b30402 | pending |
 
 `run_plan.sh` reads this table and runs one `opencode run` per row whose

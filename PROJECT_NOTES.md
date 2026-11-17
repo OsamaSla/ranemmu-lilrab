@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, commit caa1435f, Hebrew Book 3 batch 24 (b30321–b30335), S4 at 335/402
+Last verified: 2026-11-17, commit 96219b1c, Hebrew Book 3 batch 25 (b30336–b30350), S4 complete at 350/402
 
 ## 1. What this is
 
@@ -1092,6 +1092,17 @@ base, so a batch can start on either without touching code.
   `build:corpus` 1824 hymns / 19 chunks / 18 loans (no new loans),
   `check:hymns` 1824 / 30,898 lines, `typecheck` clean, diff gate clean with
   rebuilt `assets/hymns` staged. Next: batch 25, b30336-b30350.
+- Batch 25 (2026-11-17, S4 fifth/final batch, commit `96219b1c`): b30336-b30350,
+  15 hymns / 119 lines, state **350/402** (3418 lines, 100 % pointed, 268
+  `review[]`, 744 meter flags for b30001-b30350). 30 flags, none structural —
+  print shapes (b30342/b30343 1/1/1/1/1, b30345/b30347 2/3/2/2/2, b30350
+  2/1/2/2/2) and short/long lines already in the Arabic; no new `R:` notes.
+  Gates: `hebrew:check` no drift, `hebrew:align` ✓ 725, `build:corpus` 1824
+  hymns / 19 chunks / 18 loans (no new loans), `check:hymns` 1824 / 30,898
+  lines, `typecheck` clean, diff gate clean with rebuilt `assets/hymns` staged.
+  The headless driver stopped on a Gemini free-tier quota error after the
+  batch commit but before the plan marker/docs update; those were completed
+  manually. Next: batch 26, b30351-b30365, first of S5.
 - Search-bar focus frame (2026-11-17): the WCAG rule in `src/app/+html.tsx`
   used `:focus-visible { outline: 2px solid #A8842E !important }`; Chromium
   treats a mouse click into a text input as `:focus-visible`, and `!important`

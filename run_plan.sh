@@ -20,10 +20,11 @@ if ! command -v opencode >/dev/null 2>&1; then
 fi
 
 # The global config's default model (anthropic/claude-3-7-sonnet) no longer
-# exists, and the `opencode/*` models reject headless credentials on this
-# machine. Pin a model verified to work with `opencode run`; override with
+# exists, the `opencode/*` models reject headless credentials on this machine,
+# and google/gemini-2.5-flash exhausted its free-tier daily quota mid-S4.
+# Pin a model verified to work with `opencode run`; override with
 # OPENCODE_PLAN_MODEL if the account/credentials change.
-MODEL="${OPENCODE_PLAN_MODEL:-google/gemini-2.5-flash}"
+MODEL="${OPENCODE_PLAN_MODEL:-alibaba/qwen3.5-flash}"
 
 # A session counts as complete only when the status cell of its §3 table row
 # says `complete`, `done`, or `[x]`. Anything else (pending, in-progress, …)
