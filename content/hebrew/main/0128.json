@@ -1,0 +1,48 @@
+{
+  "book": "main",
+  "number": 128,
+  "title_he": "הֲיֵשׁ כָּזֹאת אַהֲבָה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֵל הָאַהֲבָה הוֹשִׁיעֵנִי",
+        "בְּמוֹת הַצְּלָב הֶחֱיָנִי",
+        "בְּרוּחַ קָדְשׁוֹ יַדְרִיכֵנִי",
+        "יְנַחֲמֵנִי וְיִרְעֵנִי"
+      ],
+      "chorus": true
+    },
+    {
+      "label": "1",
+      "lines": [
+        "הֲיֵשׁ כָּזֹאת אַהֲבָה",
+        "כְּמוֹת הָאַהֲבָה הַהִיא?",
+        "אַף בְּתוֹךְ הָרַע וְהָרִחוּק",
+        "בַּעֲדִי מֵת עַל־הַצְּלָב"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "עֲבָרִי נִכְסָה וְנֶעֱלָם",
+        "וְהָעָוֺן נִסְלַח",
+        "וַיָּפוּץ הַלֵּב בִּתְהִלָּה",
+        "וּבְרִנָּה וּבְהוֹדָיָה"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "בּוֹאוּ וּרְאוּ אֶת־הָאַהֲבָה",
+        "טַעֲמוּ וּרְאוּ אֶת־אֲדֹנָי",
+        "אֶל־הַחַיִּים הוּא קוֹרֵא לָכֶם",
+        "עֲנוּ וּפִתְחוּ אֶת־הַלֵּב"
+      ]
+    }
+  ],
+  "chorus_he": "אֵל הָאַהֲבָה הוֹשִׁיעֵנִי · בְּמוֹת הַצְּלָב הֶחֱיָנִי · בְּרוּחַ קָדְשׁוֹ יַדְרִיכֵנִי · יְנַחֲמֵנִי וְיִרְעֵנִי",
+  "review": [
+    "h0128 is a word-for-word duplicate of tr0318 (identical Arabic lines); reused that hymn's settled rendering verbatim. Title translated from h0128's own Arabic title (فهل يا قوم من حب) using tr0318's settled line rendering. Chorus-tagged verse is v1 (digest 1:x); C: repeats it verbatim per Book 2 convention. Pointing question mark kept from twin."
+  ]
+}
