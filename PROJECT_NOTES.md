@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-17, reader rail moved left + Hebrew batch tooling (S0)
+Last verified: 2026-11-17, Hebrew Book 3 session S1 closed (b30051–b30125)
 
 ## 1. What this is
 
@@ -941,6 +941,21 @@ base, so a batch can start on either without touching code.
   apply ✓ 469, `hebrew:align` ✓ 470, `build:corpus` 1824 hymns, search index
   3.34 MB. Session cost measured: ~12–15k tokens per batch, so PLAN §7 now says
   stop after two batches per session. Next: b30096–b30110.
+- Batch 9 (2026-11-17, S1): b30096–b30110, 15 hymns / 147 lines, state
+  **110/402** (1021 lines, 100 % pointed, 158 `review[]`). Meter: 28 flags, none
+  a missing/extra word — print shapes (b30100 2/4/4, b30101 2/1/2/2/2, b30103
+  3/2/3/3, b30104 2/3/2/2, b30106 4/2/4/4/4, b30109 4/1/4/4) plus relative
+  length. Two `R:` notes: b30103's refrain is 2 Cor 12:9's own `דַּיְּךָ חַסְדִּי`,
+  b30107 renders `راضٍ وشاكر` as `שָׁלֵו וּמוֹדֶה` (`רָצוּי` = "acceptable").
+- Batch 10 (2026-11-17, S1 closed): b30111–b30125, 15 hymns / 156 lines, state
+  **125/402** (1177 lines, 238 meter flags, 158 `review[]`). Same loop, no code
+  changes; 24 flags, all relative length, no structural fault. Decision worth
+  keeping: when the print puts a repeat count inside the line
+  (`(يا ابنى لا تنسى)٣`, b30119; b30125's `٣٦٥`), the count is a singing
+  instruction — write the phrase once and do not flag it; b30125 spells the
+  number in words because Hebrew letters only are allowed. S1 gate:
+  `hebrew:align` ✓ 500, `check:hymns` 1824 / 30,898 lines, `typecheck` clean.
+  Next session: S2, b30126–b30140.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 
