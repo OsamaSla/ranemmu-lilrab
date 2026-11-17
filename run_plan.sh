@@ -19,6 +19,12 @@ if ! command -v opencode >/dev/null 2>&1; then
   exit 1
 fi
 
+# The global config's default model (anthropic/claude-3-7-sonnet) no longer
+# exists, and the `opencode/*` models reject headless credentials on this
+# machine. Pin a model verified to work with `opencode run`; override with
+# OPENCODE_PLAN_MODEL if the account/credentials change.
+MODEL="${OPENCODE_PLAN_MODEL:-google/gemini-2.5-flash}"
+
 # A session counts as complete only when the status cell of its §3 table row
 # says `complete`, `done`, or `[x]`. Anything else (pending, in-progress, …)
 # is still outstanding.
@@ -52,7 +58,7 @@ for session in "${sessions[@]}"; do
   echo "============================================================"
 
   # Non-zero exit from any session stops the whole run immediately.
-  if ! opencode run "Read the plan file (content/hebrew/book3/PLAN.md) and execute ONLY Session $session, then mark it complete in the plan file by setting its status cell to 'complete'."; then
+  if ! opencode run -m "$MODEL" "Read the plan file (content/hebrew/book3/PLAN.md) and execute ONLY Session $session, then mark it complete in the plan file by setting its status cell to 'complete'."; then
     echo "ERROR: Session $session failed. Stopping; remaining sessions not started." >&2
     exit 1
   fi
