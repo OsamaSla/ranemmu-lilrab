@@ -1,14 +1,15 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 26 (b30351–b30365), S5 1/4
+Last updated: 2026-11-17 · after batch 27 (b30366–b30380), S5 2/4
 
-- Progress: **365 / 402** hymns, 3558 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 770 line flags for b30001–b30365, all reviewed and
-  accepted; `hebrew:progress` shows 283, which is the `review[]` note count
+- Progress: **380 / 402** hymns, 3661 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 803 line flags for b30001–b30380, all reviewed and
+  accepted; `hebrew:progress` shows 298, which is the `review[]` note count
   (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18, 8 in
   batch 19, 8 in batch 20, 10 in batch 21, 14 in batch 22, 14 in batch 23,
-  13 in batch 24, 0 in batch 25, 15 in batch 26), not the meter count.
-- Next range: **b30366–b30380** (batch 27, second of S5).
+  13 in batch 24, 0 in batch 25, 15 in batch 26, 15 in batch 27), not the
+  meter count.
+- Next range: **b30381–b30395** (batch 28, third of S5).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -375,6 +376,27 @@ Last updated: 2026-11-17 · after batch 26 (b30351–b30365), S5 1/4
       - b361's `..` pauses and b362's `.`/`...` pauses are kept verbatim;
         b352 uses `רַחֲמֵי אֵל` (not חֶסֶד here), b354 `הֶבֶל` for بخار, and
         b360 2:2–2:3 follows 1 Tim 6:11's virtue list.
+      - `build:corpus` still reports 18 lent Hebrew hymns - no new loans in this
+        batch.
+
+  - Book 3 batch 27 (b30366–b30380, S5 2/4): 33 line flags after review, all
+    accepted; no missing or extra words, every stanza count matches the print.
+    Fifteen `R:` notes were needed (one per hymn), all quote or glossary driven.
+      - shape flags are the print's: b30370 4/3/4, b30373 1/2/1/1/1, b30375
+        1/2/1/1, b30379 2/1/1/1.
+      - short lines that are short in the Arabic: b30367 4:1, b30368 5:2,
+        b30369 3:3, b30370 2:3, b30371 2:1, b30372 1:2, b30373 2:1 (the
+        short repeated refrain), b30374 2:1, b30375 1:1, b30376 4:1/5:1,
+        b30377 3:1; b30379 1:1 is −20 only because stanza 1 is a short
+        couplet against the long verses that follow.
+      - long lines that are long in the Arabic: b30366 1:1/1:3, b30367 3:2,
+        b30368 1:1/2:1/2:2/4:2, b30371 3:1, b30372 3:2, b30373 5:1,
+        b30374 3:1, b30375 4:1 (its third half-phrase), b30376 1:1/3:1,
+        b30377 1:1, b30379 2:1.
+      - b366's `..` pauses, b368's `..` pauses and b379's `..` pauses are kept
+        verbatim; b366 doubles הֶבֶל for سراب سراب, b373's repeated
+        בָּא אֲנִי אֵלֶיךָ is the print's refrain, and b380 drops the print's
+        «» around the Matt 28:20 quote, keeping the colon.
       - `build:corpus` still reports 18 lent Hebrew hymns - no new loans in this
         batch.
 
