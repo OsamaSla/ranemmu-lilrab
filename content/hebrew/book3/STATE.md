@@ -1,11 +1,12 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 6 (b30051–b30065)
+Last updated: 2026-11-17 · after batch 7 (b30066–b30080)
 
-- Progress: **65 / 402** hymns, 614 verse lines, 100 % pointed, 138 meter flags
-  (96 for b30001–b30050, 42 for b30051–b30065; plus 150 `review[]` notes from
-  the earlier batches — `hebrew:progress` counts those, not meter flags).
-- Next range: **b30066–b30080** (batch 7 of 24).
+- Progress: **80 / 402** hymns, 746 verse lines, 100 % pointed. `hebrew-meter`
+  reports 162 line flags for b30001–b30080, all reviewed and accepted;
+  `hebrew:progress` shows 153, which is the `review[]` note count (150 from
+  batches 1–6 plus 3 here), not the meter count.
+- Next range: **b30081–b30095** (batch 8, third batch of session S1).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -39,6 +40,19 @@ Last updated: 2026-11-17 · after batch 6 (b30051–b30065)
     b30058 2:2, b30059 2:1, b30063 2:1/5:1, b30065 1:1.
   - long acclamation lines that are long in the Arabic: b30053 4:1,
     b30054 2:1, b30061 7:1, b30062 1:1/6:2/6:3, b30063 5:2, b30065 1:2.
+- Book 3 batch 7 (b30066–b30080): 23 line flags after review, all accepted:
+  - shapes that are the print's: b30066 1/5/1/1/1 (stanza 2 is a five-line
+    refrain), b30074 5/5/5/5 with its 5-line refrain tags.
+  - short lines that are short in the Arabic: b30066 2:1, b30069 2:1/2:2,
+    b30072 1:1, b30074 3:3/4:2, b30077 3:1.
+  - long acclamation lines that are long in the Arabic: b30066 4:1/5:1,
+    b30069 3:1, b30071 4:2, b30074 4:1/4:3, b30075 2:1/3:1, b30077 2:3/4:1/4:3,
+    b30078 1:1/3:2, b30079 1:2, b30080 2:4.
+  - b30077 keeps `אֲדֹנִי שְׁטֹף אוֹתִי בְּאַהֲבָתְךָ הָעֶלְיוֹנָה` verbatim in
+    five places (the print's refrain tag closes every stanza), so the same line
+    is flagged five times; that is the hymn's form, not a metre fault.
+  - b30070 (Ps 16:1–2), b30073 (2 Cor 12:9) and b30078 (Gen 32:27) quote their
+    verses rather than paraphrasing them; each carries the one `R:` note.
 
 ## Per-batch loop
 
