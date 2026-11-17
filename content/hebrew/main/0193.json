@@ -1,0 +1,57 @@
+{
+  "book": "main",
+  "number": 193,
+  "title_he": "צָרְכִּי תָמִיד אֵלֶיךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "צָרְכִּי תָמִיד אֵלֶיךָ",
+        "מְנוּחָתִי בְּכַפֵּי יָדֶיךָ",
+        "כָּל־עִנְיָנִי בְיָדֶיךָ",
+        "דּוֹדִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "1",
+      "lines": [
+        "דּוֹדִי יֵשׁוּעַ",
+        "רֹפְאִי יֵשׁוּעַ",
+        "נַחֲלָתִי יֵשׁוּעַ",
+        "אַתָּה לְבַדְּךָ מְלֹא לִבִּי"
+      ],
+      "chorus": true
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אַהֲבָתְךָ אֲדֹנִי גְּדוֹלָה",
+        "וְהַדָּם הַזּוֹרֵם בְּשֶׁפַע",
+        "סְלִיחָתְךָ לִי רַבָּה",
+        "דּוֹדִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "אַתָּה רִבּוֹנִי, דּוֹדִי",
+        "אַתָּה חֶלְקִי הַטּוֹב",
+        "אַתָּה בָא בִּמְהֵרָה",
+        "דּוֹדִי יֵשׁוּעַ"
+      ]
+    },
+    {
+      "label": "4",
+      "lines": [
+        "אֵינִי צָרִיךְ זוּלָתְךָ",
+        "אָמַרְתָּ לִי הַרְחֵב פִּיךָ",
+        "אַתָּה מְמַלֵּא פִּי עַבְדֶּךָ",
+        "דּוֹדִי יֵשׁוּעַ"
+      ]
+    }
+  ],
+  "chorus_he": "דּוֹדִי יֵשׁוּעַ · רֹפְאִי יֵשׁוּעַ · נַחֲלָתִי יֵשׁוּעַ · אַתָּה לְבַדְּךָ מְלֹא לִבִּי",
+  "review": [
+    "Settled book3/92 renderings reused, re-split from the twin's two-half-phrase lines into the main's 4-line stanzas and reordered: main stanza 4 = twin's last verse (that twin's Arabic had a corrupted سهدى, so 4:1 is authored fresh for the main's سيدي = רִבּוֹנִי), main stanza 5 = twin's third verse. 3:1/3:3 follow the main's adjective swap (great love, much pardon) against the twin's (much love, great pardon); 3:2 fresh for والدم الجاري غزير. Chorus is verse 2 (main label 1); C: repeats its four lines."
+  ]
+}

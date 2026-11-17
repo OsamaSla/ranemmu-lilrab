@@ -1,0 +1,28 @@
+{
+  "book": "main",
+  "number": 189,
+  "title_he": "אַהֲבָתִי לְרִבּוֹנִי תִּרְבֶּה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אַהֲבָתִי לְרִבּוֹנִי תִּרְבֶּה",
+        "אַהֲבָתִי לְרִבּוֹנִי תִּרְבֶּה",
+        "כִּי עִמָּדִי הוּא, יַנְחֵנִי",
+        "אַהֲבָתִי לְרִבּוֹנִי תִּרְבֶּה"
+      ]
+    },
+    {
+      "label": "2",
+      "lines": [
+        "יַנְחֵנִי בְּכָל יוֹם",
+        "יַנְחֵנִי בְּכָל יוֹם",
+        "יָאִיר לִי כָּל דֶּרֶךְ",
+        "אַהֲבָתִי לְרִבּוֹנִי תִּרְבֶּה"
+      ]
+    }
+  ],
+  "review": [
+    "Identical to book3/49; settled refrain reused verbatim, re-split from the twin's 2 two-half-phrase lines per stanza into the main's 4-line stanzas. No chorus."
+  ]
+}
