@@ -1,7 +1,7 @@
 # Book 3 Hebrew — session plan (352 hymns to go)
 
-Status: 80 / 402 done (b30001-b30080, 746 lines, 162 meter line flags, 153
-review notes). Remaining: **322 hymns** (b30081–b30402) in **22 batches of 15**,
+Status: 95 / 402 done (b30001-b30095, 874 lines, 186 meter line flags, 156
+review notes). Remaining: **307 hymns** (b30096–b30402) in **21 batches of 15**,
 grouped into **5 working sessions** plus one tooling session (S0).
 
 Read order for a new session: this file → `STATE.md` → `content/hebrew/glossary.md`.
@@ -147,3 +147,23 @@ node scripts/hebrew-digest.mjs book3 <next> <next+14> --pack
 
 If `content/hebrew/book3/<next>.json` already exists, the batch was committed;
 continue from the next gap. Never re-author a committed payload.
+
+## 7. When to open a new session
+
+Measured on this machine: one 15-hymn batch costs ~12–15k tokens (digest ~4k,
+authoring ~6k, apply log + meter flags ~2k). Two batches per session leaves
+plenty of room; **three is the point to stop** — the third digest is written
+against a context already holding two finished batches that no longer matter.
+
+So: after **2 batches** finish the session cleanly (STATE + notes committed);
+start the next session with the paste-block below. Never push mid-session — one
+push at the end of the session group, and only after the S1 gate (§3) passes.
+
+Paste block for a new session:
+
+```
+read content/hebrew/book3/PLAN.md and STATE.md, continue at <batch>, <range>
+```
+
+Everything else (glossary, style card, loop commands, deliberate flags) is in
+those two files — do not paste them again.

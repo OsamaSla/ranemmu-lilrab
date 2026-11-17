@@ -931,6 +931,16 @@ base, so a batch can start on either without touching code.
   Gotcha: on Windows PowerShell `node scripts/hebrew-digest.mjs book3 66 80
   --pack > file` writes UTF-16LE-with-BOM and the file reads as *binary*;
   redirect through `cmd /c "… > file"` instead.
+- Batch 8 (2026-11-17, S1): b30081–b30095, 15 hymns / 128 lines, state
+  **95/402** (874 lines, 100 % pointed, 156 `review[]`). Same loop with no code
+  changes; meter found 24 flags and again none was a real fault — b30091 and
+  b30094 are the print's 2/1/2 and 2/1/2/2/2 shapes (a one-line `القرار`), the
+  rest are short acclamations or long lines in the Arabic. Two quoted psalms
+  carry the only `R:` notes: b30094 2:1 = Ps 119:105 verbatim, b30081 2:1 =
+  Ps 107:9 ending on `מִלֵּא לֶחֶם` as the print's `ملأ خبزاً` does. Gates:
+  apply ✓ 469, `hebrew:align` ✓ 470, `build:corpus` 1824 hymns, search index
+  3.34 MB. Session cost measured: ~12–15k tokens per batch, so PLAN §7 now says
+  stop after two batches per session. Next: b30096–b30110.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 

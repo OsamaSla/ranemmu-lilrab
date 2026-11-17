@@ -1,12 +1,12 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 7 (b30066–b30080)
+Last updated: 2026-11-17 · after batch 8 (b30081–b30095)
 
-- Progress: **80 / 402** hymns, 746 verse lines, 100 % pointed. `hebrew-meter`
-  reports 162 line flags for b30001–b30080, all reviewed and accepted;
-  `hebrew:progress` shows 153, which is the `review[]` note count (150 from
-  batches 1–6 plus 3 here), not the meter count.
-- Next range: **b30081–b30095** (batch 8, third batch of session S1).
+- Progress: **95 / 402** hymns, 874 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 186 line flags for b30001–b30095, all reviewed and
+  accepted; `hebrew:progress` shows 156, which is the `review[]` note count
+  (153 from batches 1–7 plus 3 here), not the meter count.
+- Next range: **b30096–b30110** (batch 9, fourth batch of session S1).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -53,6 +53,16 @@ Last updated: 2026-11-17 · after batch 7 (b30066–b30080)
     is flagged five times; that is the hymn's form, not a metre fault.
   - b30070 (Ps 16:1–2), b30073 (2 Cor 12:9) and b30078 (Gen 32:27) quote their
     verses rather than paraphrasing them; each carries the one `R:` note.
+- Book 3 batch 8 (b30081–b30095): 24 line flags after review, all accepted, none
+  a missing or extra word — they are relative length only:
+  - shape flags that are the print's: b30091 2/1/2 and b30094 2/1/2/2/2 (both
+    carry a one-line `القرار` acclamation), b30081 1/1/1.
+  - short acclamations: b30081 1:1, b30086 4:2, b30091 2:1 (the refrain line,
+    -16 against the long stanzas), b30092 2:1, b30093 1:1/1:2.
+  - long lines that are long in the Arabic: b30081 3:1, b30082 1:2,
+    b30088 1:4, b30089 4:2/5:1, b30093 2:2, b30094 1:1.
+  - b30094 2:1 is Ps 119:105 verbatim; b30081 2:1 is Ps 107:9 with the print's
+    `لخبز` ending (`מִלֵּא לֶחֶם`) instead of the psalm's `מִלֵּא־טוֹב`.
 
 ## Per-batch loop
 
