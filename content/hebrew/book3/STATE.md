@@ -1,13 +1,13 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · after batch 21 (b30276–b30290), S4 (1/5)
+Last updated: 2026-11-17 · after batch 22 (b30291–b30305), S4 (2/5)
 
-- Progress: **290 / 402** hymns, 2802 verse lines, 100 % pointed. `hebrew-meter
-  --flags-only` reports 594 line flags for b30001–b30290, all reviewed and
-  accepted; `hebrew:progress` shows 227, which is the `review[]` note count
+- Progress: **305 / 402** hymns, 2982 verse lines, 100 % pointed. `hebrew-meter
+  --flags-only` reports 633 line flags for b30001–b30305, all reviewed and
+  accepted; `hebrew:progress` shows 241, which is the `review[]` note count
   (178 through batch 15, 8 in batch 16, 7 in batch 17, 8 in batch 18, 8 in
-  batch 19, 8 in batch 20, 10 in batch 21), not the meter count.
-- Next range: **b30291–b30305** (batch 22, second of S4).
+  batch 19, 8 in batch 20, 10 in batch 21, 14 in batch 22), not the meter count.
+- Next range: **b30306–b30320** (batch 23, third of S4).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -267,6 +267,31 @@ Last updated: 2026-11-17 · after batch 21 (b30276–b30290), S4 (1/5)
      hostile troops), b30290 (pierced side, John 19:34–37; מָמוֹן Mammon).
    - `build:corpus` still reports 17 lent Hebrew hymns — no new loans in this
      batch.
+
+- Book 3 batch 22 (b30291–b30305): 39 line flags after review, all accepted;
+  no missing or extra words, every stanza count matches the print:
+    - shape flags are the print's: b30301 1/2/1/1 (a one-line stanza 1, then a
+      two-line stanza 2); b30295 2/2/2/2/2/2/2 carries the same short refrain
+      (שִׁחְרְרַנִי יֵשׁוּעַ) after every longer opening line.
+    - short lines that are short in the Arabic: b30291 1:3/4:2, b30293 1:2/4:1,
+      b30294 4:1, b30296 1:1/4:1, b30297 1:2/5:3, b30299 2:1, b30301 3:1,
+      b30302 2:3 (the bare אֲנִי בַּמָּשִׁיחַ refrain), b30303 1:1/2:2/4:1,
+      b30304 1:3, b30305 3:1.
+    - long lines that are long in the Arabic: b30292 4:2, b30293 2:2 (the
+      `.. הַלְּלוּיָה` acclamation), b30294 2:4, b30295 4:1/5:1/6:1/6:2,
+      b30297 1:3/2:2/5:2, b30298 2:1/2:2/4:1/4:2, b30299 3:2, b30301 1:1,
+      b30302 1:3/4:1, b30304 3:1, b30305 4:1.
+    - b30293's `..` sung pauses and b30300's `..` pauses + repeated calls are
+      kept verbatim.
+    - quoted verses and glossary choices carry the only fourteen `R:` notes:
+      b30291 (prodigal son, Eccl 1:14), b30292 (Rom 8:35, מְצוּלָה),
+      b30293 (sung pauses), b30294 (1 Thess 4:17, עֲטֶרֶת), b30295 (Rev 1:6),
+      b30296 (Ps 23:4 / Phil 3:14, בַּלָּהָה), b30297 (John 20:27 / Phil 3:8's
+      רֶוַח), b30298 (מַצְפּוּנִי / 1 Pet 1:8), b30299 (שְׁכִינָה for الحضرة),
+      b30300 (Ps 139:23–24), b30302 (נַחַת / הֲוָיָה), b30303 (Isa 53 / Heb
+      13:13), b30304 (Isa 53:5 / 40:31), b30305 (Rev 3:20's knock).
+    - `build:corpus` still reports 17 lent Hebrew hymns — no new loans in this
+      batch.
 
 **CI gotcha (fixed 2026-11-17):** `build:web` runs `build:corpus` then
 `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts`. A batch
