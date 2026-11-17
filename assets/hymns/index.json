@@ -6440,6 +6440,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
@@ -6453,6 +6454,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -6463,6 +6465,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "warfare"
  },
  {
@@ -6473,6 +6476,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -6483,6 +6487,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
@@ -6496,6 +6501,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "word",
   "topics": [
    "worship"
