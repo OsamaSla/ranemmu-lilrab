@@ -1375,11 +1375,12 @@ toolbar and absent from the open menu; no console errors.
 
 `HymnInfoSheet.tsx` now lists optional rows for the author (reusing
 `admin.author`, `author` + `authorOriginal` joined by ` · `) and the scripture
-reference (`admin.scriptures`) **with the hymn's own book name appended** via
-`bookLabelKey(hymn.book)`. Only the metre row uses `MeterText`: it converts
-`.`/`,`/`&` to a small «و», which would mangle author names (verified on
-`tr0001`, whose author value contains a comma). Verified at `/hymn/b30261`:
-«المرجع الكتابي — رومية ٨: ٣٧ · هلم نرنم».
+reference (`admin.scriptures`). The hymn's own book name leads the **header
+line** before «الترنيمة N — title» via `bookLabelKey(hymn.book)` — not the
+reference row. Only the metre row uses `MeterText`: it converts `.`/`,`/`&` to
+a small «و», which would mangle author names (verified on `tr0001`, whose author
+value contains a comma). Verified at `/hymn/b30261`:
+«هلم نرنم · الترنيمة 261 — …».
 
 ## 23. Quick fix: hold a line to correct it (2026-11-16)
 

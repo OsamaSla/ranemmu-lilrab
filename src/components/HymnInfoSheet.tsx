@@ -38,17 +38,15 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
     ? [hymn.author, hymn.authorOriginal].filter(Boolean).join(' · ')
     : '';
   const scripture = hymn ? formatScriptureLine(hymn.scriptures) : '';
-  // The reference also carries the hymn's own book, so the reader knows which
-  // of the three books this reference belongs to (61 hymns print in two books).
+  // The hymn's own book leads the header line, before the number and title.
   const bookName = hymn ? t(bookLabelKey(hymn.book)) : '';
-  const scriptureWithBook = scripture ? `${scripture} · ${bookName}` : '';
   // Only metre goes through MeterText (it turns ".", "&" and digits into the
   // metre's small "و" separator). Author names and references are plain text —
   // routing them through MeterText would mangle names containing "." or "&".
   const rows: { label: TranslationKey; value: string; meter?: boolean }[] = [];
   if (shownMeter) rows.push({ label: 'info.meter', value: shownMeter, meter: true });
   if (author) rows.push({ label: 'admin.author', value: author });
-  if (scriptureWithBook) rows.push({ label: 'admin.scriptures', value: scriptureWithBook });
+  if (scripture) rows.push({ label: 'admin.scriptures', value: scripture });
   const hymnTopics = hymn ? allTopicsOf(hymn) : [];
   // Other books that print this same hymn. Resolved here (not passed in) so the
   // list follows admin renames and drops copies deleted on this device.
@@ -106,7 +104,7 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
 
           {hymn ? (
             <AppText variant="body" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
-              {t('common.hymnNumber')} {hymn.number} — {hymn.title}
+              {bookName} · {t('common.hymnNumber')} {hymn.number} — {hymn.title}
             </AppText>
           ) : null}
 
