@@ -37243,6 +37243,86 @@
      ]
     }
    ],
+   "title_en": "My Heart Worships Your Glory Every Day",
+   "verses_en": [
+    {
+     "label": "١",
+     "lines": [
+      "My heart worships Your glory every day",
+      "And my tongue gives thanks for the life that is in Jesus",
+      "My peace and my victory are with You, and my love endures",
+      "What would I be today without Jesus?"
+     ]
+    },
+    {
+     "label": "القرار",
+     "chorus": true,
+     "lines": [
+      "O Jesus, You are the King of kings, the Lord of lords",
+      "In Your light all the mist is scattered",
+      "And You change the weakness that has dwelt there from of old",
+      "And give strength and victory over every hardship"
+     ]
+    },
+    {
+     "label": "٢",
+     "lines": [
+      "My victory is in Your presence, in truth and not in words",
+      "After the defeat that filled my heart with tears",
+      "You fill the heart with joy and peace",
+      "What would I be today without Jesus?"
+     ]
+    },
+    {
+     "label": "٣",
+     "lines": [
+      "O Lord, Your light shines in the midst of my darkness",
+      "And by Your word my life is satisfied after hunger",
+      "In my weakness You sustain me and give me confidence",
+      "What would I be today without Jesus?"
+     ]
+    }
+   ],
+   "title_de": "Mein Herz betet täglich Deine Herrlichkeit an",
+   "verses_de": [
+    {
+     "label": "١",
+     "lines": [
+      "Mein Herz betet Deine Herrlichkeit täglich an",
+      "Und meine Zunge dankt für das Leben, das in Jesus ist",
+      "Bei Dir ist mein Friede und mein Sieg, und meine Liebe bleibt bestehen",
+      "Was wäre ich heute ohne Jesus?"
+     ]
+    },
+    {
+     "label": "القرار",
+     "chorus": true,
+     "lines": [
+      "O Jesus, Du bist der König der Könige, der Herr der Herren",
+      "In Deinem Licht zerstreut sich aller Nebel",
+      "Und Du verwandelst die Schwachheit, die seit langem in mir wohnt",
+      "Und gibst Kraft und Sieg über alle Not"
+     ]
+    },
+    {
+     "label": "٢",
+     "lines": [
+      "Mein Sieg liegt in Dir, in Wahrheit und nicht in Worten",
+      "Nach der Niederlage, die mein Herz mit Tränen füllte",
+      "Du füllst das Herz mit Freude und Frieden",
+      "Was wäre ich heute ohne Jesus?"
+     ]
+    },
+    {
+     "label": "٣",
+     "lines": [
+      "O Herr, Dein Licht erscheint mitten in meiner Finsternis",
+      "Und durch Dein Wort wird mein Leben nach dem Hunger gesättigt",
+      "In meiner Schwachheit hältst Du mich und gibst mir Sicherheit",
+      "Was wäre ich heute ohne Jesus?"
+     ]
+    }
+   ],
    "title_he": "לִבִּי יִשְׁתַּחֲוֶה לִגְדוּלָתְךָ כָּל־יוֹם",
    "verses_he": [
     {
@@ -37283,6 +37363,7 @@
      ]
     }
    ],
+   "translationStatus": "AI_DRAFT",
    "primaryTopic": "worship"
   },
   {

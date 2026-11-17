@@ -3452,6 +3452,8 @@
   "number": 279,
   "title": "أنا قلبى يسجد لجلالك كل يوم",
   "hasChorus": true,
+  "hasEn": true,
+  "hasDe": true,
   "hasHe": true,
   "primaryTopic": "worship"
  },
