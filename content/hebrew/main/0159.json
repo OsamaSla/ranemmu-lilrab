@@ -1,0 +1,25 @@
+{
+  "book": "main",
+  "number": 159,
+  "title_he": "כָּל שִׂמְחָה לַנֶּפֶשׁ · כָּל חִיּוּךְ בַּלֵּב",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "כָּל שִׂמְחָה לַנֶּפֶשׁ",
+        "כָּל חִיּוּךְ בַּלֵּב",
+        "מְקוֹרָהּ קִרְבָתְךָ",
+        "אַהֲבָתִי אֵלֶיךָ",
+        "כָּל תְּהִלּוֹת הַלֵּב",
+        "יָהּ, חַיֵּי לִבִּי, רִבּוֹנִי",
+        "יָשִׁירוּ וְיָרִיעוּ לְךָ",
+        "אֹהַבְךָ",
+        "כָּל שִׂמְחֹתַי, רִבּוֹנִי, בְּךָ, לֹא זוּלָתְךָ",
+        "כָּל שְׁלוֹמִי וְהַנָּאתִי בִּרְצוֹנְךָ"
+      ]
+    }
+  ],
+  "review": [
+    "No chorus field; single 10-line stanza. Parallels book3/33, whose five printed lines each carry two half-phrases — the main print splits every one into a separate line, so the settled rendering is reused in that split form. نبعها وجودي قربك → מְקוֹרָהּ קִרְבָתְךָ (book3/33's reading 'its source is Your nearness'); حبي لك → אַהֲבָתִי אֵלֶיךָ; يا حياة قلبي سيدي → יָהּ, חַיֵּי לִבִּי, רִבּוֹנִי (יָהּ allowed in short liturgical lines per glossary); هناي → הַנָּאתִי; رضاك → רְצוֹנְךָ. 1:8 is the Arabic's one-word line אֹהַבְךָ, kept short."
+  ]
+}
