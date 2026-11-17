@@ -1365,6 +1365,22 @@ Checks: `tsc --noEmit` clean, 0 console errors, font stepper 20 → 22 works.
 `eslint` reports one pre-existing `react-hooks/set-state-in-effect` at
 `[id].tsx:320` — it is on HEAD too, not from this change.
 
+Reader action placement (2026-11-17): the **search magnifier is a toolbar button**
+(`ReaderToolbar.tsx`, `onSearch` prop → `setSearchOpen(true)`), not an overflow
+item — moved out of the 3-dots menu for one-tap reach. The 3-dots menu now holds
+info, text settings, share, add-to-setlist and, for editors, «تحرير ترنيمة»
+(`admin.editHymn` → `/admin-edit?id=…`), which was removed from the settings
+sheet. Verified in the browser at `/hymn/b30261`: search button present in the
+toolbar and absent from the open menu; no console errors.
+
+`HymnInfoSheet.tsx` now lists optional rows for the author (reusing
+`admin.author`, `author` + `authorOriginal` joined by ` · `) and the scripture
+reference (`admin.scriptures`) **with the hymn's own book name appended** via
+`bookLabelKey(hymn.book)`. Only the metre row uses `MeterText`: it converts
+`.`/`,`/`&` to a small «و», which would mangle author names (verified on
+`tr0001`, whose author value contains a comma). Verified at `/hymn/b30261`:
+«المرجع الكتابي — رومية ٨: ٣٧ · هلم نرنم».
+
 ## 23. Quick fix: hold a line to correct it (2026-11-16)
 
 Fixing one wrong word used to be: open settings sheet → admin editor → scroll the
@@ -1412,7 +1428,8 @@ before the write (only the keys actually replaced — an `undefined` key would
 erase a field) and re-uploads them.
 
 Discovery: the settings sheet shows «اضغط مطولًا على أي سطر لتصحيحه»
-(`reader.fixHint`) under the full-editor button, editors only.
+(`reader.fixHint`), editors only. It used to sit under the full-editor button;
+that button is now in the reader's 3-dots menu (§22), so the hint stands alone.
 
 Verified with Playwright at 360×640 and 412×800, 0 console errors:
 visitor has 0 fix targets; PIN `1234` → 12 targets on `h0107` (3 stanzas × 4);

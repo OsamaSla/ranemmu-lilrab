@@ -10,7 +10,6 @@
  * hymn number + title — so every hymn is listenable with zero data entry.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { useRouter } from 'expo-router';
 import { Modal, Pressable, View } from 'react-native';
 
 import { AppText } from './AppText';
@@ -40,8 +39,7 @@ interface ReaderSettingsModalProps {
 export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsModalProps) {
   const { t, direction } = useT();
   const { colors } = useTheme();
-  const router = useRouter();
-  // Editing is admin-only; the button used to show for every reader.
+  // Editing is admin-only; only the long-press fix hint remains here.
   const canEdit = useCanEdit();
 
   const readerSize = useSettings((s) => s.readerSize);
@@ -226,45 +224,17 @@ export function ReaderSettingsModal({ visible, onClose, hymn }: ReaderSettingsMo
             </View>
           ) : null}
 
+          {/* The quick fix has no visible button by design (holding a line is
+              the gesture), so the sheet is where an editor learns it. Editing
+              the whole hymn lives in the reader's 3-dots menu. */}
           {hymn && canEdit ? (
-            <>
-              <Pressable
-                onPress={() => {
-                  onClose();
-                  router.push({ pathname: '/admin-edit', params: { id: hymn.id } });
-                }}
-                accessibilityRole="button"
-                accessibilityLabel={t('admin.editHymn')}
-                android_ripple={{ color: colors.border }}
-                style={({ pressed }) => ({
-                  flexDirection: direction.row,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: spacing.sm,
-                  marginTop: spacing.sm,
-                  paddingVertical: spacing.md,
-                  paddingHorizontal: spacing.md,
-                  borderRadius: radius.pill,
-                  borderWidth: 1,
-                  borderColor: colors.primary,
-                  backgroundColor: 'transparent',
-                  opacity: pressed ? 0.7 : 1,
-                })}>
-                <MaterialCommunityIcons name="pencil-outline" size={20} color={colors.primary} />
-                <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
-                  {t('admin.editHymn')}
-                </AppText>
-              </Pressable>
-              {/* The quick fix has no visible button by design (holding a line
-                  is the gesture), so the sheet is where an editor learns it. */}
-              <AppText
-                variant="caption"
-                color={colors.textMuted}
-                center
-                style={{ marginTop: spacing.sm }}>
-                {t('reader.fixHint')}
-              </AppText>
-            </>
+            <AppText
+              variant="caption"
+              color={colors.textMuted}
+              center
+              style={{ marginTop: spacing.sm }}>
+              {t('reader.fixHint')}
+            </AppText>
           ) : null}
         </View>
       </View>

@@ -1,11 +1,13 @@
 /**
  * قارئ الترنيمة — the hymn reader.
  *
- * The hymn text owns the screen: frequent tools (favourite, share, search,
- * fullscreen, text settings, info, language chips, previous/next) live in
- * one slim compact icon row inside the header, so the bottom tab bar never
- * hides and no tall sheet covers the text. Home is intentionally absent
- * here — the tab bar already provides it. Font size lives inside the
+ * The hymn text owns the screen: frequent tools (search, favourite,
+ * fullscreen, previous/next and language chips) live in one slim compact
+ * icon row in the header — search sits outside the 3-dots menu for one-tap
+ * reach. Less frequent actions (info, text settings, share, add to setlist
+ * and, for editors, "edit hymn") live in the overflow menu. The bottom tab
+ * bar never hides and no tall sheet covers the text. Home is intentionally
+ * absent here — the tab bar already provides it. Font size lives inside the
  * text-settings sheet.
  * Stanza jumps ("انتقال إلى مقطع") live in a slim vertical rail docked on the physical
  * right side of the text: it reserves its own narrow column in the layout,
@@ -576,6 +578,7 @@ export default function ReaderScreen() {
     },
     isFavorite,
     onToggleFavorite: () => toggleFavorite(hymn.id),
+    onSearch: () => setSearchOpen(true),
     onOverflow: () => setOverflowOpen(true),
     translationOptions,
     parallel,
@@ -769,7 +772,6 @@ export default function ReaderScreen() {
               overflow: 'hidden',
             }}>
             {[
-              { icon: 'magnify', label: t('search.placeholder'), onPress: () => { setOverflowOpen(false); setSearchOpen(true); } },
               { icon: 'information-outline', label: t('reader.info'), onPress: () => { setOverflowOpen(false); setInfoHymn(true); } },
               { icon: 'cog-outline', label: t('reader.settings'), onPress: () => { setOverflowOpen(false); setSettingsOpen(true); } },
               { icon: 'share-variant', label: t('reader.share'), onPress: () => { setOverflowOpen(false); shareHymn(); } },
@@ -777,6 +779,12 @@ export default function ReaderScreen() {
                 setOverflowOpen(false);
                 setSetlistToast(addToSetlist(hymn.id) ? t('setlist.added') : t('setlist.alreadyAdded'));
               } },
+              ...(canEdit
+                ? [{ icon: 'pencil-outline', label: t('admin.editHymn'), onPress: () => {
+                    setOverflowOpen(false);
+                    router.push({ pathname: '/admin-edit', params: { id: hymn.id } });
+                  } }]
+                : []),
             ].map((item, idx) => (
               <Pressable
                 key={item.icon}

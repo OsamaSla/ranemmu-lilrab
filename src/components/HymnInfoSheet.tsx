@@ -1,8 +1,9 @@
 /**
  * معلومات الترنيمة — the credits bottom sheet.
  *
- * Shows the metre (مقياس الكلام) when the book provides it. No metre means no
- * rows — the sheet stays ready and fills in the moment a metre is entered.
+ * Shows the metre (مقياس الكلام) when the book provides it, plus the author and
+ * the scripture reference (المرجع الكتابي) when those are known. Every row is
+ * optional: the sheet stays ready and fills in the moment a field is entered.
  */
 import { Modal, Pressable, View } from 'react-native';
 import { useRouter } from 'expo-router';
@@ -12,6 +13,7 @@ import { IconButton } from './IconButton';
 import { MeterText } from './MeterText';
 import { getLinks } from '../data/loader';
 import { displayMeter } from '../data/meterFamilies';
+import { formatScriptureLine } from '../data/scriptures';
 import { TOPIC_COLORS, allTopicsOf } from '../data/topics';
 import type { Hymn } from '../data/types';
 import { bookLabelKey } from '../i18n';
@@ -32,9 +34,21 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
   const router = useRouter();
 
   const shownMeter = hymn ? displayMeter(hymn.id, hymn.meter) : '';
-  const rows: { label: TranslationKey; value: string }[] = shownMeter
-    ? [{ label: 'info.meter', value: shownMeter }]
-    : [];
+  const author = hymn
+    ? [hymn.author, hymn.authorOriginal].filter(Boolean).join(' · ')
+    : '';
+  const scripture = hymn ? formatScriptureLine(hymn.scriptures) : '';
+  // The reference also carries the hymn's own book, so the reader knows which
+  // of the three books this reference belongs to (61 hymns print in two books).
+  const bookName = hymn ? t(bookLabelKey(hymn.book)) : '';
+  const scriptureWithBook = scripture ? `${scripture} · ${bookName}` : '';
+  // Only metre goes through MeterText (it turns ".", "&" and digits into the
+  // metre's small "و" separator). Author names and references are plain text —
+  // routing them through MeterText would mangle names containing "." or "&".
+  const rows: { label: TranslationKey; value: string; meter?: boolean }[] = [];
+  if (shownMeter) rows.push({ label: 'info.meter', value: shownMeter, meter: true });
+  if (author) rows.push({ label: 'admin.author', value: author });
+  if (scriptureWithBook) rows.push({ label: 'admin.scriptures', value: scriptureWithBook });
   const hymnTopics = hymn ? allTopicsOf(hymn) : [];
   // Other books that print this same hymn. Resolved here (not passed in) so the
   // list follows admin renames and drops copies deleted on this device.
@@ -110,14 +124,24 @@ export function HymnInfoSheet({ hymn, onClose }: HymnInfoSheetProps) {
               <AppText variant="body" color={colors.textMuted}>
                 {t(row.label)}
               </AppText>
-              <MeterText
-                meter={row.value}
-                fontSize={typeScale.body}
-                color={colors.text}
-                bold
-                numberOfLines={2}
-                style={{ maxWidth: '60%' }}
-              />
+              {row.meter ? (
+                <MeterText
+                  meter={row.value}
+                  fontSize={typeScale.body}
+                  color={colors.text}
+                  bold
+                  numberOfLines={2}
+                  style={{ maxWidth: '60%' }}
+                />
+              ) : (
+                <AppText
+                  variant="body"
+                  numberOfLines={2}
+                  color={colors.text}
+                  style={{ maxWidth: '60%', fontWeight: '700' }}>
+                  {row.value}
+                </AppText>
+              )}
             </View>
           ))}
 

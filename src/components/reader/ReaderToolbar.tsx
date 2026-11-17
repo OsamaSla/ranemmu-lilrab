@@ -1,10 +1,10 @@
 /**
  * The reader's compact header row: language chips above a single icon toolbar.
  *
- * Prev/next, fullscreen, favourite and the overflow menu live here so the
- * bottom tab bar never hides and no tall sheet covers the hymn text. The
- * setlist position badge appears between prev/next only while reading inside a
- * shared `?ids=` set.
+ * Prev/next, fullscreen, favourite, search and the overflow menu live here so
+ * the bottom tab bar never hides and no tall sheet covers the hymn text. Search
+ * sits outside the overflow menu for one-tap reach. The setlist position badge
+ * appears between prev/next only while reading inside a shared `?ids=` set.
  */
 import { Pressable, View } from 'react-native';
 
@@ -36,6 +36,7 @@ interface ReaderToolbarProps {
   onFullscreen: () => void;
   isFavorite: boolean;
   onToggleFavorite: () => void;
+  onSearch: () => void;
   onOverflow: () => void;
   translationOptions: TranslationOption[];
   parallel: ReaderLang;
@@ -54,6 +55,7 @@ export function ReaderToolbar({
   onFullscreen,
   isFavorite,
   onToggleFavorite,
+  onSearch,
   onOverflow,
   translationOptions,
   parallel,
@@ -186,6 +188,13 @@ export function ReaderToolbar({
           label={t('favorites.title')}
           onPress={onToggleFavorite}
           color={isFavorite ? colors.favorite : ink}
+          dark={dark}
+          box={36}
+        />
+        <ReaderIconButton
+          name="magnify"
+          label={t('search.placeholder')}
+          onPress={onSearch}
           dark={dark}
           box={36}
         />
