@@ -1,6 +1,6 @@
 # Book 3 Hebrew — session plan (352 hymns to go)
 
-Status: 50 / 402 done (b30001–b30050, 465 lines, 96 meter flags, 150 review notes).
+Status: 65 / 402 done (b30001-b30065, 614 lines, 138 meter flags, 150 review notes).
 Remaining: **352 hymns** (b30051–b30402) in **24 batches of 15**, grouped into
 **5 working sessions** plus one tooling session (S0).
 

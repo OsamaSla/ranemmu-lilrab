@@ -907,6 +907,17 @@ base, so a batch can start on either without touching code.
   flag that `hebrew-apply` always mirrored from the Arabic anyway. Session plan
   `content/hebrew/book3/PLAN.md`, live checkpoint
   `content/hebrew/book3/STATE.md`.
+- Batch 6 (2026-11-17, S1): b30051–b30065, 15 hymns / 149 lines, state
+  **65/402** (614 lines, all pointed). Loop as documented: digest `--pack`
+  (8,504 chars for 15 hymns) → author → `hebrew-pack` → apply → check → meter
+  → align (✓ 440) → `build:corpus`. Meter found 52 flags; 16 lines tightened
+  (mostly over-long halves in b30054/56/57/58/61/62/64/65), leaving 42, all
+  accepted: shape flags mirror the print (b30053 2/3/2/2, b30057 2/3/2/2,
+  b30059 2/1/2/2, b30061 3/2/3/…, b30064 2/1/2/2/2/2 — b30061 stanza 2 is a
+  two-line refrain), and the short lines are short in the Arabic too
+  (b30056 2:2, b30057 2:2, b30058 2:2). Lesson recorded in `STATE.md`: the
+  printed line is the unit — pad a short Arabic half-phrase and the tune
+  stumbles. Next: b30066–b30080.
 
 ## 17. Hebrew stanzas follow the Arabic ones (2026-11-15)
 

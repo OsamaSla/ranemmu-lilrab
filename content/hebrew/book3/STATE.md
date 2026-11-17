@@ -1,10 +1,11 @@
 # Book 3 Hebrew — live state
 
-Last updated: 2026-11-17 · start of S0 (tooling done, no new hymns yet)
+Last updated: 2026-11-17 · after batch 6 (b30051–b30065)
 
-- Progress: **50 / 402** hymns, 465 verse lines, 100% pointed, 96 meter flags
-  (plus 150 `review[]` notes written by the earlier batches).
-- Next range: **b30051–b30065** (batch 6 of 24).
+- Progress: **65 / 402** hymns, 614 verse lines, 100 % pointed, 138 meter flags
+  (96 for b30001–b30050, 42 for b30051–b30065; plus 150 `review[]` notes from
+  the earlier batches — `hebrew:progress` counts those, not meter flags).
+- Next range: **b30066–b30080** (batch 7 of 24).
 - Plan: `content/hebrew/book3/PLAN.md` (sessions, batches, per-batch commands).
 - Do not re-read all of `PROJECT_NOTES.md`; §15 (Book 2 decisions) and §16
   (base + batch log) are the only relevant parts. This file is the checkpoint.
@@ -21,12 +22,23 @@ Last updated: 2026-11-17 · start of S0 (tooling done, no new hymns yet)
 - New settled word → add it to the glossary in the same commit as the hymn.
 - Meter flags are a prompt to re-read, not errors. Deliberate asymmetries stay
   and are listed below.
+- The printed line is the unit, not the sentence: when the Arabic half-phrase
+  is short, the Hebrew stays short too (b30056 2:2, b30057 2:2). Padding it to
+  the stanza median is a regression, not an improvement.
 
 ## Deliberate geometry (do not "fix")
 
 - Book 2 list: `PROJECT_NOTES.md` §15 (short refrains, long acclamations).
-- Book 3 so far: none recorded; batches 1–5 left 150 flags, all reviewed on
-  2026-11-17 and accepted (they are relative line-length warnings).
+- Book 3 batches 1–5: 150 flags reviewed 2026-11-17, all accepted (relative
+  line-length warnings, nothing structural).
+- Book 3 batch 6 (b30051–b30065): 42 flags after 16 line edits, accepted:
+  - stanza shape flags mirror the print: b30053 2/3/2/2, b30057 2/3/2/2,
+    b30059 2/1/2/2, b30061 3/2/3/3/3/3/3/3 (stanza 2 is a two-line refrain),
+    b30064 2/1/2/2/2/2.
+  - short lines that are short in the Arabic: b30056 2:2, b30057 2:2,
+    b30058 2:2, b30059 2:1, b30063 2:1/5:1, b30065 1:1.
+  - long acclamation lines that are long in the Arabic: b30053 4:1,
+    b30054 2:1, b30061 7:1, b30062 1:1/6:2/6:3, b30063 5:2, b30065 1:2.
 
 ## Per-batch loop
 
