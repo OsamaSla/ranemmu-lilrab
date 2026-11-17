@@ -74,9 +74,14 @@ export default function Root({ children }: PropsWithChildren) {
         />
 
         <ScrollViewStyleReset />
+        {/* Keep the WCAG ring for keyboard-focused links and buttons, but not
+            for text fields: Chromium treats a mouse click into an input as
+            :focus-visible, and this rule's !important used to override the
+            noFocusRing token and paint a gold frame around the search bar. */}
         <style
           dangerouslySetInnerHTML={{
-            __html: ':focus-visible { outline: 2px solid #A8842E !important; outline-offset: 2px; }',
+            __html: `:focus-visible:not(input):not(textarea):not(select) { outline: 2px solid #A8842E !important; outline-offset: 2px; }
+                     input:focus-visible, textarea:focus-visible, select:focus-visible { outline: none !important; }`,
           }}
         />
       </head>
