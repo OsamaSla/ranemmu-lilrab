@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-18, commit 3a404d6a (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-19, commit b4c71281 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + toolbar (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -203,6 +203,14 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 
 ## 8. Verified gotchas
 
+- The golden reader header was slimmed to **back + toolbar only**. The author /
+  authorOriginal and topics lines were removed because both are already in
+  «معلومات الترنيمة», whose topic rows still navigate to the filtered library —
+  no function lost. An accordion was rejected: the toolbar is the sole access
+  to back/search/settings/share/languages, so it must stay visible; fullscreen
+  already covers distraction-free reading. Measured at 360×740 with headless
+  Edge: header 136 px → **98 px** (≈180 → ≈143 px on a notched phone). Screenshot
+  shown in the Review pane for the owner's decision.
 - The reader's «مشاركة» now mirrors «مشاركة التطبيق»: the shared text ends with
   the canonical `https://ranemmu-lilrab.web.app/hymn/<id>` link, and on web
   without a native share sheet it copies **just that link** to the clipboard
