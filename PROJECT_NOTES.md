@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-18, commit 2c6d2451 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» now opens a mailto to the admin contact address; pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-18, commit b19eb17b (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -203,6 +203,11 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 
 ## 8. Verified gotchas
 
+- The metre index (`structure.tsx`) is **Book 2 only**: `METER_FAMILIES` and all
+  `meter` data belong to «ترنيمات روحية». The screen therefore calls
+  `getSummaries('taranim')` and ignores the global book selection; the menu and
+  page labels read «مقياس الكلام لكتاب ترنيمات روحية» (ar/en/de). Verified in the
+  browser with both the More row and the family grid.
 - `npx tsc --noEmit` is clean locally **because `expo-env.d.ts` exists locally**.
   That file is gitignored (Expo generates it on `start`/`export`), and
   `build:web` runs `typecheck` first — so on a fresh CI clone
