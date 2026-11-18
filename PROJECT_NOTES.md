@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-19, commit 5a11e6ee (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-19, commit 208fbd48 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -203,6 +203,15 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 
 ## 8. Verified gotchas
 
+- **CI lint is real.** The push of `fb179538` failed both pages.yml and
+  firebase.yml at "Build web app" (exit 1 in ~15 s). GitHub annotations named
+  two new warnings in `setlist.tsx` (unused `addCategory`, unstable `ids ?? []`
+  in a `useMemo` dependency); `npx eslint src` additionally found an **error**
+  in `SetlistCategoryPicker.tsx` (`react-hooks/set-state-in-effect`). Locally
+  `npm run lint` is vacuous (legacy `expo lint`), so always run
+  `npx eslint src` before pushing. Fixed in `208fbd48` — `npx eslint src` and
+  typecheck both clean. Logs need GitHub sign-in; the failing step and
+  annotations were read from the public Actions API.
 - Fullscreen is now text-only: `ReaderHeader` returns `null` for it. `StanzaRail`
   gains `fullscreen` / `onExitFullscreen` and shows an exit button at the **foot**
   of the rail; its also-in badges are hidden there, leaving language → stanza
