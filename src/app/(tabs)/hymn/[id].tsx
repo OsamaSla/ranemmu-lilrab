@@ -604,9 +604,6 @@ export default function ReaderScreen() {
     onToggleFavorite: () => toggleFavorite(hymn.id),
     onSearch: () => setSearchOpen(true),
     onOverflow: () => setOverflowOpen(true),
-    translationOptions,
-    parallel,
-    onChooseLang: chooseParallel,
   };
 
   const menuItems: ReaderMenuItem[] = [
@@ -659,6 +656,9 @@ export default function ReaderScreen() {
           onVerseSelect={scrollToVerse}
           readerFont={readerFont}
           readerFontBold={readerFontBold}
+          translationOptions={translationOptions}
+          parallel={parallel}
+          onChooseLang={chooseParallel}
         />
         {/* RNGH defaults to `touch-action: none` on web, which also stopped the
             wrapped scroller from taking touch pans — on a phone the stanza dots

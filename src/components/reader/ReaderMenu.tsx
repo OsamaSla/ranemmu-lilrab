@@ -16,6 +16,8 @@ export type ReaderMenuItem = {
   icon: ComponentProps<typeof MaterialCommunityIcons>['name'];
   label: string;
   onPress: () => void;
+  /** Marks the current choice when the menu is used as a picker. */
+  selected?: boolean;
 };
 
 type Props = {
@@ -24,9 +26,11 @@ type Props = {
   items: ReaderMenuItem[];
   /** Top padding so the menu drops below the header rather than covering it. */
   top: number;
+  /** Physical edge to anchor to; defaults to the UI direction's leading edge. */
+  align?: 'left' | 'right';
 };
 
-export function ReaderMenu({ visible, onClose, items, top }: Props) {
+export function ReaderMenu({ visible, onClose, items, top, align }: Props) {
   const { colors } = useTheme();
   const { direction } = useT();
   if (items.length === 0) return null;
@@ -39,7 +43,18 @@ export function ReaderMenu({ visible, onClose, items, top }: Props) {
           flex: 1,
           backgroundColor: colors.overlay,
           justifyContent: 'flex-start',
-          alignItems: direction.isRTL ? 'flex-start' : 'flex-end',
+          alignItems:
+            align === 'left'
+              ? direction.isRTL
+                ? 'flex-end'
+                : 'flex-start'
+              : align === 'right'
+                ? direction.isRTL
+                  ? 'flex-start'
+                  : 'flex-end'
+                : direction.isRTL
+                  ? 'flex-start'
+                  : 'flex-end',
           paddingTop: top,
           paddingHorizontal: spacing.sm,
         }}>
@@ -71,9 +86,12 @@ export function ReaderMenu({ visible, onClose, items, top }: Props) {
                 opacity: pressed ? 0.7 : 1,
               })}>
               <MaterialCommunityIcons name={item.icon} size={20} color={colors.text} />
-              <AppText variant="body" style={{ fontWeight: '500' }}>
+              <AppText variant="body" style={{ flex: 1, fontWeight: '500' }}>
                 {item.label}
               </AppText>
+              {item.selected ? (
+                <MaterialCommunityIcons name="check" size={18} color={colors.primary} />
+              ) : null}
             </Pressable>
           ))}
         </View>

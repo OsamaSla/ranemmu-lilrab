@@ -12,6 +12,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import { useState } from 'react';
 import { Pressable, ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -20,8 +21,9 @@ import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import type { HymnSummary, HymnVerse } from '../../data/types';
 import { bookLabelKey } from '../../i18n';
-import { HIT_SLOP, palette, spacing } from '../../theme/tokens';
-import { refrainHeading } from './readerText';
+import { HIT_SLOP, palette, radius, spacing } from '../../theme/tokens';
+import { ReaderMenu } from './ReaderMenu';
+import { CHIP_COLORS, refrainHeading, type ReaderLang } from './readerText';
 
 /** Width of the reserved rail column and the diameter of one jump dot. */
 export const RAIL_WIDTH = 52;
@@ -37,6 +39,9 @@ interface StanzaRailProps {
   onVerseSelect: (verseIndex: number) => void;
   readerFont: string;
   readerFontBold: string;
+  translationOptions: { value: ReaderLang; label: string }[];
+  parallel: ReaderLang;
+  onChooseLang: (lang: ReaderLang) => void;
 }
 
 export function StanzaRail({
@@ -49,13 +54,28 @@ export function StanzaRail({
   onVerseSelect,
   readerFont,
   readerFontBold,
+  translationOptions,
+  parallel,
+  onChooseLang,
 }: StanzaRailProps) {
   const router = useRouter();
   const insets = useSafeAreaInsets();
   const { colors } = useTheme();
   const { t } = useT();
+  const [langOpen, setLangOpen] = useState(false);
 
-  if (verses.length < 2 && linked.length === 0) return null;
+  // A translated single-stanza hymn still needs the rail for the language
+  // switcher, even though it has no stanza dots to jump to.
+  if (verses.length < 2 && linked.length === 0 && translationOptions.length <= 1) return null;
+
+  const shortLang = (lang: ReaderLang) =>
+    lang === 'ar'
+      ? t('common.arShort')
+      : lang === 'en'
+        ? t('common.enShort')
+        : lang === 'de'
+          ? t('common.deShort')
+          : t('common.heShort');
 
   return (
     <View
@@ -69,6 +89,38 @@ export function StanzaRail({
         borderRightColor: dark ? 'rgba(255,255,255,0.22)' : colors.border,
         backgroundColor: 'transparent',
       }}>
+      {/* Language picker above the stanza dots: the rail is the natural home
+          for "view settings" of the text column, and it frees the header for
+          a centred, untruncated hymn number. */}
+      {translationOptions.length > 1 ? (
+        <View style={{ alignItems: 'center', paddingTop: spacing.sm, paddingBottom: spacing.xs }}>
+          <Pressable
+            onPress={() => setLangOpen(true)}
+            accessibilityRole="button"
+            accessibilityLabel={t('reader.translation')}
+            hitSlop={HIT_SLOP}
+            style={({ pressed }) => ({
+              flexDirection: 'row',
+              alignItems: 'center',
+              justifyContent: 'center',
+              width: RAIL_DOT,
+              minHeight: 30,
+              borderRadius: radius.pill,
+              backgroundColor: CHIP_COLORS[parallel].tint,
+              borderWidth: 1,
+              borderColor: CHIP_COLORS[parallel].fill,
+              opacity: pressed ? 0.7 : 1,
+            })}>
+            <AppText
+              variant="label"
+              useAppFont={false}
+              style={{ fontFamily: readerFontBold, fontSize: 12, fontWeight: '700', color: '#1A1A1A' }}>
+              {shortLang(parallel)}
+            </AppText>
+            <MaterialCommunityIcons name="chevron-down" size={13} color="#1A1A1A" />
+          </Pressable>
+        </View>
+      ) : null}
       <ScrollView
         style={{ flex: 1 }}
         showsVerticalScrollIndicator={false}
@@ -228,6 +280,21 @@ export function StanzaRail({
           ))}
         </View>
       ) : null}
+      <ReaderMenu
+        visible={langOpen}
+        onClose={() => setLangOpen(false)}
+        top={insets.top + 64}
+        align="left"
+        items={translationOptions.map((option) => ({
+          icon: option.value === parallel ? 'check-circle' : 'circle-outline',
+          label: option.label,
+          selected: option.value === parallel,
+          onPress: () => {
+            onChooseLang(option.value);
+            setLangOpen(false);
+          },
+        }))}
+      />
     </View>
   );
 }
