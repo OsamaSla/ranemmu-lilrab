@@ -7,9 +7,9 @@
  * (offline, permission denied, unconfigured).
  *
  * The rating path never asks for a return address. The message path does, so
- * the admin can press Reply in Gmail and reach the sender; the address is
- * stored as `replyEmail` and used as the outgoing email's Reply-To by the
- * Cloud Function (see docs/FEEDBACK_NOTIFICATIONS.md).
+ * the admin can press Reply and reach the sender; the address is stored as
+ * `replyEmail` and sent as Web3Forms' `replyto` field on the notification
+ * (see docs/FEEDBACK_NOTIFICATIONS.md).
  */
 import { useEffect, useRef, useState } from 'react';
 import { Modal, Pressable, ScrollView, TextInput, View } from 'react-native';

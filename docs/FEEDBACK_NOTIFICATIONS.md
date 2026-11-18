@@ -1,92 +1,78 @@
-# Feedback email notifications (Cloud Functions)
+# Feedback email notifications (Web3Forms, no backend)
 
-One Firestore-triggered function, `notifyNewFeedback`, sends **one** email to the
-admin for every new document in `feedbacks`. The app-side writes are unauthenticated;
-this backend only reads the created snapshot and calls Resend.
+The project stays on Firebase's **Spark (free) plan**. There is no Cloud
+Function and no Resend key: the admin notification is a plain `POST` from the
+client to Web3Forms, issued immediately after the Firestore write succeeds.
+This works from static hosting (Firebase Hosting and GitHub Pages alike) with
+zero backend.
 
-## One-time setup
+## Flow
 
-1. **Upgrade the Firebase project to the Blaze (pay-as-you-go) plan.** Cloud
-   Functions for Firebase is not available on the Spark (free) plan. Billing is
-   enabled in the Firebase console, not in this repo.
-2. Install the function dependencies (no lockfile is committed):
-   ```sh
-   cd functions && npm install
-   ```
-3. Store the Resend key as a Firebase Secret (it is never committed):
-   ```sh
-   firebase functions:secrets:set RESEND_API_KEY
-   ```
-   The function declares `secrets: ['RESEND_API_KEY']`; without that declaration
-   `process.env.RESEND_API_KEY` is `undefined` even after the command above.
-   If the key is unset, the function logs a warning and sends nothing.
-4. Set the admin notification address (defaults to `osama.sla@gmail.com`):
-   ```sh
-   # runtime environment variable (recommended)
-   firebase functions:env:set ADMIN_NOTIFY_EMAIL=you@example.com
-   ```
-   It can also be stored as a secret via
-   `firebase functions:secrets:set ADMIN_NOTIFY_EMAIL`; in that case add
-   `'ADMIN_NOTIFY_EMAIL'` to the `secrets` array in `functions/index.js` before
-   deploying (a declared-but-missing secret fails the deploy).
-5. **Runtime** — `firebase.json` already declares
-   `"functions": { "source": "functions", "runtime": "nodejs20" }`. v1
-   `runWith()` has no `runtime` field, so this is where Node is pinned; change it
-   there if you move to Node 22.
+1. `src/components/FeedbackModal.tsx` writes the document to `feedbacks` in
+   Firestore exactly as before — that collection remains the source of truth
+   for ratings/messages and for the admin list.
+2. `src/data/web3forms.ts` POSTs to `https://api.web3forms.com/submit` with:
+   - `access_key` — the build-time env value below;
+   - `subject` — `[TarneemAPP] تقييم جديد` or `[TarneemAPP] رسالة جديدة`;
+   - `message` — kind, rating, category, comment, replyEmail (when present),
+     documentId;
+   - `from_name` — `TarneemAPP`;
+   - `replyto` — the sender's validated email, **only** for `kind: 'message'`.
+     Ratings are anonymous and never get one.
+3. The POST is fire-and-forget: it is fired as soon as the Firestore write
+   returns, and its failures are logged but never shown to the user. A
+   Web3Forms outage cannot turn a successfully saved rating into a red error.
 
-## Deploy
+## Access key — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`
 
-From the repo root (`.firebaserc` already points at `ranemmu-lilrab`):
+Gemini's original suggestion called this `VITE_WEB3FORMS_ACCESS_KEY`. **Vite's
+prefix does not work here**: this is an Expo/Metro app, and only `EXPO_PUBLIC_*`
+variables are inlined into the static bundle. A `VITE_*` value would be
+`undefined` at runtime and notifications would silently never send. The single
+source of truth is `process.env.EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY` in
+`src/data/web3forms.ts` (cast explicitly because CI typechecks before Expo
+regenerates the gitignored `expo-env.d.ts`).
 
-```sh
-firebase deploy --only functions
-```
+- Local builds: add `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY=<key>` to the gitignored
+  `.env.local`, then rebuild with `--clear` — Metro caches inlined env values.
+- CI builds: both `.github/workflows/pages.yml` and
+  `.github/workflows/firebase.yml` pass it from the repository secret
+  `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`. **The owner must add that secret in
+  GitHub** (Settings → Secrets and variables → Actions) before a deployed build
+  can send mail. An unset secret resolves to an empty string, so the app
+  quietly skips notifications instead of failing the build.
 
-**The GitHub workflows do not deploy functions.** `firebase.yml` uses
-`FirebaseExtended/action-hosting-deploy@v0` (hosting only) and `pages.yml`
-publishes the GitHub Pages mirror, so functions must be deployed manually after
-every change to `functions/index.js` or `functions/package.json`.
-
-Verify with `firebase functions:log` and by creating one feedback document from
-the app. No emails are sent for pre-existing documents (onCreate trigger only).
+The Web3Forms key is public by design (on ordinary static sites it lives in a
+hidden form field), so committing it would not make it secret. We still keep it
+in env so it can be rotated without editing source; abuse protection is
+Web3Forms' rate limiting, not secrecy.
 
 ## Sender, recipients and replies
 
-- The email is **From: `TarneemAPP <onboarding@resend.dev>`**. This is Resend's
-  test sender and can only deliver to the verified email address of the Resend
-  account owner — which is the admin notification case here, hence no domain
-  verification is needed for this single recipient.
-- Subject: `[TarneemAPP] رسالة جديدة` for a message, `[TarneemAPP] تقييم جديد`
-  for a rating. The plain-text body contains kind, rating, category, comment,
-  replyEmail (when present), createdAt and the document id.
-- For `kind: 'message'`, a validated `replyEmail` is sent as the `Reply-To`
-  header (the Resend SDK calls it `reply_to`). The admin presses **Reply** in
-  their own Gmail and the answer goes straight to the sender. Ratings are
-  anonymous and get no Reply-To.
-- There is deliberately **no second function** to receive replies: `onboarding@resend.dev`
-  cannot receive mail, and arbitrary end users cannot be delivered to by the
-  test sender. The admin's own mailbox handles the reply instead.
+- Web3Forms sends the mail on behalf of `TarneemAPP`; the access key determines
+  which Web3Forms mailbox receives it.
+- `replyto` is set only for messages with a validated `replyEmail`, so pressing
+  Reply answers the sender directly. Ratings carry no `replyto`.
+- There is no inbound/reply function: the admin answers from their own mailbox.
 
 ## Firestore rules
 
 Firestore Security Rules are managed in the Firebase console in this project —
-they are not stored in the repo and are not part of this change. If the new
-`kind` / `replyEmail` fields need different write validation, updating and
-publishing the rules is a **manual** console step. The function itself runs with
-Admin SDK privileges and is not affected by client rules.
+they are not stored in the repo. The `feedbacks` writes are unchanged, so no
+rule update is needed for this change. The old function used Admin SDK
+privileges and bypassed client rules; nothing does now.
 
-## Exact `feedbacks` document fields
+## What was removed
 
-| Field | Type | Notes |
-| --- | --- | --- |
-| `rating` | number | 1–5 for ratings; `0` for messages |
-| `category` | string | `missing_hymn` \| `translation` \| `bug` \| `other`; `message` for messages |
-| `comment` | string | free text (rating ≤500 chars, message ≤1000) |
-| `status` | string | `pending` |
-| `adminNotes` | string | `''` initially |
-| `createdAt` | serverTimestamp | resolved to a Firestore Timestamp on read |
-| `kind` | string | `rating` (default, anonymous, no email) or `message` |
-| `replyEmail` | string | only for `kind: 'message'`; validated before use as Reply-To |
+- `functions/` (`index.js`, `package.json`, `.gitignore`) — the
+  `notifyNewFeedback` Firestore `onCreate` trigger and its `resend` dependency.
+- The `functions` block in `firebase.json`, including its `nodejs20` runtime pin.
+- No Cloud Functions deploy is needed and the Blaze upgrade is not required.
 
-Rating documents may omit `kind` and `replyEmail`; the function treats any
-`kind` other than `message` as `rating` and never sets Reply-To for it.
+## Verification
+
+Never submit real feedback to production just to test. To verify the payload
+locally: transpile `src/data/web3forms.ts` with `babel-preset-expo`, stub
+`global.fetch`, and call `notifyFeedbackByEmail(...)` — the full body can be
+inspected and no network request is made. For a live test, use a Web3Forms key
+bound to a test mailbox and submit one message from a dev build.

@@ -16,6 +16,7 @@ import {
   type DocumentData,
 } from 'firebase/firestore';
 import { getFirebaseDb } from './firebase';
+import { notifyFeedbackByEmail } from './web3forms';
 
 const FEEDBACK_COLLECTION = 'feedbacks';
 
@@ -86,7 +87,7 @@ export async function submitFeedback(data: {
   if (!db) return { ok: false, error: 'unconfigured' };
   const kind = data.kind ?? 'rating';
   try {
-    const docRef = await addDoc(collection(db, FEEDBACK_COLLECTION), {
+    const record = {
       kind,
       rating: kind === 'message' ? 0 : data.rating,
       category: kind === 'message' ? 'message' : data.category,
@@ -95,7 +96,18 @@ export async function submitFeedback(data: {
       status: 'pending',
       adminNotes: '',
       createdAt: serverTimestamp(),
-    } as DocumentData);
+    };
+    const docRef = await addDoc(collection(db, FEEDBACK_COLLECTION), record as DocumentData);
+    // Firestore is the source of truth; the email is a best-effort side effect.
+    // A Web3Forms outage must not turn a successful save into a red error.
+    notifyFeedbackByEmail({
+      kind,
+      rating: record.rating,
+      category: record.category,
+      comment: record.comment,
+      replyEmail: record.replyEmail,
+      documentId: docRef.id,
+    });
     return { ok: true, id: docRef.id };
   } catch (error) {
     return { ok: false, error: describeError(error) };
