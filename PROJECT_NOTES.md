@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-19, commit 77d1f4f4 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-19, commit f091c30d (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -204,9 +204,11 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 ## 8. Verified gotchas
 
 - Fullscreen is now text-only: `ReaderHeader` returns `null` for it. `StanzaRail`
-  gains `fullscreen` / `onExitFullscreen` and shows an exit button at the top of
-  the rail; its also-in badges are hidden there, leaving exit → language →
-  stanza dots. Search, overflow, favourite and prev/next are therefore only in
+  gains `fullscreen` / `onExitFullscreen` and shows an exit button at the **foot**
+  of the rail; its also-in badges are hidden there, leaving language → stanza
+  dots → exit. The rail width and screen-edge inset stay unchanged (the owner
+  explicitly rejected widening/insetting it). Search, overflow, favourite and
+  prev/next are therefore only in
   normal mode (one tap away). Verified in the browser: no golden/top bar, exit
   button present, also-in card gone, and tapping exit restores the normal
   header. Screenshot shown in the Review pane.
