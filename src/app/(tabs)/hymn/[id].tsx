@@ -679,7 +679,7 @@ export default function ReaderScreen() {
           contentContainerStyle={
             fullscreen
               ? {
-                  paddingHorizontal: spacing.xl,
+                  paddingHorizontal: spacing.md,
                   paddingBottom: insets.bottom + spacing.xxl,
                   maxWidth: READER_MAX_WIDTH,
                   width: '100%',
@@ -687,7 +687,8 @@ export default function ReaderScreen() {
                 }
               : {
                   flexGrow: 1,
-                  padding: spacing.lg,
+                  paddingVertical: spacing.lg,
+                  paddingHorizontal: spacing.md,
                   paddingBottom: insets.bottom + spacing.xxl,
                   maxWidth: READER_MAX_WIDTH,
                   width: '100%',
