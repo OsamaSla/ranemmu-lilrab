@@ -22,7 +22,7 @@
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useNavigation, useRouter } from 'expo-router';
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { Animated, Modal, Platform, Pressable, ScrollView, Share, View, useWindowDimensions } from 'react-native';
+import { Animated, Platform, ScrollView, Share, View, useWindowDimensions } from 'react-native';
 import { Gesture, GestureDetector, Directions, GestureHandlerRootView } from 'react-native-gesture-handler';
 import { useKeepAwake } from 'expo-keep-awake';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -38,8 +38,9 @@ import { IconButton } from '../../../components/IconButton';
 import { ReaderSearchOverlay } from '../../../components/ReaderSearchOverlay';
 import type { SegmentOption } from '../../../components/SegmentedControl';
 import { Toast } from '../../../components/Toast';
-import { ReaderIconButton } from '../../../components/reader/ReaderIconButton';
-import { ReaderToolbar, TOOLBAR_HEIGHT } from '../../../components/reader/ReaderToolbar';
+import { ReaderHeader } from '../../../components/reader/ReaderHeader';
+import { ReaderMenu, type ReaderMenuItem } from '../../../components/reader/ReaderMenu';
+import { TOOLBAR_HEIGHT } from '../../../components/reader/ReaderToolbar';
 import { StanzaRail } from '../../../components/reader/StanzaRail';
 import { TranslationNotice } from '../../../components/reader/TranslationNotice';
 import { VerseBlock } from '../../../components/reader/VerseBlock';
@@ -61,7 +62,7 @@ import { useGoBack } from '../../../hooks/useGoBack';
 import { useCanEdit } from '../../../hooks/useCanEdit';
 import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
 import { notify } from '../../../utils/confirm';
-import { palette, radius, spacing } from '../../../theme/tokens';
+import { palette, spacing } from '../../../theme/tokens';
 
 /**
  * Lets `expo export` and web deep links resolve every hymn statically.
@@ -276,7 +277,11 @@ export default function ReaderScreen() {
           : undefined;
   const transVerses = translation?.verses;
   const transTitle = translation?.title;
-  const transChorus = translation?.chorus;
+  // Books 2 and 3 flag refrains but carry no chorus label fields. Fall back to
+  // the UI language's word for "refrain" so the red heading is translated there
+  // too; Arabic-only reading keeps the printed Arabic label on its own.
+  const transChorus =
+    translation?.chorus ?? (parallel === 'ar' ? undefined : t('reader.refrain'));
   // Where the hymn's subject is founded in scripture, printed once above the
   // first stanza. It belongs to the hymn, not the interface language, so it is
   // always Arabic and never translated. Empty when no reference is known.
@@ -514,7 +519,7 @@ export default function ReaderScreen() {
       ) : null}
       {hymn.verses.map((verseBlock, verseIndex) => (
         <VerseBlock
-          key={`${verseIndex}-${verseBlock.label}`}
+          key={verseIndex}
           verseBlock={verseBlock}
           verseIndex={verseIndex}
           chorusWord={hymn.chorus}
@@ -565,6 +570,7 @@ export default function ReaderScreen() {
   );
 
   const toolbarProps = {
+    dark: fullscreen,
     number: hymn.number,
     neighbours,
     inSet,
@@ -585,6 +591,31 @@ export default function ReaderScreen() {
     onChooseLang: chooseParallel,
   };
 
+  const hymnTopics = allTopicsOf(hymn);
+  const topicsLine = hymnTopics.length
+    ? `${t('info.topics')}: ${hymnTopics.map((id) => t(`topic.${id}` as const)).join(' · ')}`
+    : undefined;
+  const onTopicsPress = () => {
+    const target = hymn.primaryTopic ?? hymnTopics[0];
+    if (target) router.push(`/library?topic=${target}`);
+  };
+
+  const menuItems: ReaderMenuItem[] = [
+    { icon: 'information-outline' as const, label: t('reader.info'), onPress: () => { setOverflowOpen(false); setInfoHymn(true); } },
+    { icon: 'cog-outline' as const, label: t('reader.settings'), onPress: () => { setOverflowOpen(false); setSettingsOpen(true); } },
+    { icon: 'share-variant' as const, label: t('reader.share'), onPress: () => { setOverflowOpen(false); shareHymn(); } },
+    { icon: 'playlist-plus' as const, label: t('setlist.addCurrent'), onPress: () => {
+        setOverflowOpen(false);
+        setSetlistToast(addToSetlist(hymn.id) ? t('setlist.added') : t('setlist.alreadyAdded'));
+      } },
+    ...(canEdit
+      ? [{ icon: 'pencil-outline' as const, label: t('admin.editHymn'), onPress: () => {
+          setOverflowOpen(false);
+          router.push({ pathname: '/admin-edit', params: { id: hymn.id } });
+        } }]
+      : []),
+  ];
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
     <Animated.View
@@ -593,77 +624,17 @@ export default function ReaderScreen() {
         backgroundColor: fullscreen ? palette.readerBg : colors.canvas,
         opacity: fullscreen ? fadeAnim : 1,
       }}>
-      {fullscreen ? (
-        <View
-          style={{
-            paddingTop: insets.top + spacing.sm,
-            flexDirection: direction.row,
-            alignItems: 'center',
-            paddingHorizontal: spacing.sm,
-          }}>
-          <ReaderIconButton
-            name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
-            label={t('common.back')}
-            onPress={goBack}
-            dark
-          />
-          <View style={{ flex: 1, paddingHorizontal: spacing.xs }}>
-            <ReaderToolbar {...toolbarProps} dark />
-          </View>
-        </View>
-      ) : (
-        <View
-          style={{
-            paddingTop: insets.top + spacing.sm,
-            paddingBottom: spacing.sm,
-            paddingHorizontal: spacing.sm,
-            backgroundColor: colors.primaryDeep,
-          }}>
-          {hymn.author || hymn.authorOriginal ? (
-            <AppText
-              variant="caption"
-              numberOfLines={1}
-              color={colors.onPrimary}
-              style={{ opacity: 0.75, fontSize: 11, textAlign: direction.textAlign, paddingHorizontal: spacing.sm }}>
-              {hymn.author ?? ''}
-              {hymn.author && hymn.authorOriginal ? ' · ' : ''}
-              {hymn.authorOriginal ?? ''}
-            </AppText>
-          ) : null}
-          <View style={{ flexDirection: direction.row, alignItems: 'flex-start' }}>
-            <IconButton
-              name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
-              label={t('common.back')}
-              color={colors.onPrimary}
-              onPress={goBack}
-            />
-            <View style={{ flex: 1, paddingHorizontal: spacing.xs }}>
-              <ReaderToolbar {...toolbarProps} dark={false} />
-              {allTopicsOf(hymn).length > 0 ? (
-                <Pressable
-                  onPress={() => {
-                    const target = hymn.primaryTopic ?? allTopicsOf(hymn)[0];
-                    if (target) router.push(`/library?topic=${target}`);
-                  }}
-                  accessibilityRole="button"
-                  accessibilityLabel={t('info.topics')}
-                  android_ripple={{ color: 'rgba(255,255,255,0.3)' }}>
-                  <AppText
-                    variant="caption"
-                    numberOfLines={1}
-                    color={colors.onPrimary}
-                    style={{ opacity: 0.85, textAlign: 'right', direction: 'rtl' }}>
-                    {t('info.topics')}:{' '}
-                    {allTopicsOf(hymn)
-                      .map((id) => t(`topic.${id}` as const))
-                      .join(' · ')}
-                  </AppText>
-                </Pressable>
-              ) : null}
-            </View>
-          </View>
-        </View>
-      )}
+      <ReaderHeader
+        fullscreen={fullscreen}
+        number={hymn.number}
+        author={hymn.author}
+        authorOriginal={hymn.authorOriginal}
+        topicsLine={topicsLine}
+        onTopicsPress={onTopicsPress}
+        onBack={goBack}
+        topInset={insets.top}
+        toolbarProps={toolbarProps}
+      />
 
       <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
         <StanzaRail
@@ -753,62 +724,12 @@ export default function ReaderScreen() {
         onClose={() => setSettingsOpen(false)}
         hymn={hymn}
       />
-      <Modal
+      <ReaderMenu
         visible={overflowOpen}
-        transparent
-        animationType="fade"
-        onRequestClose={() => setOverflowOpen(false)}>
-        <Pressable
-          onPress={() => setOverflowOpen(false)}
-          style={{ flex: 1, backgroundColor: colors.overlay, justifyContent: 'flex-start', alignItems: direction.isRTL ? 'flex-start' : 'flex-end', paddingTop: insets.top + TOOLBAR_HEIGHT + spacing.sm, paddingHorizontal: spacing.sm }}>
-          <View
-            onTouchStart={(e) => e.stopPropagation()}
-            style={{
-              backgroundColor: colors.surface,
-              borderRadius: radius.lg,
-              borderWidth: 1,
-              borderColor: colors.border,
-              minWidth: 200,
-              overflow: 'hidden',
-            }}>
-            {[
-              { icon: 'information-outline', label: t('reader.info'), onPress: () => { setOverflowOpen(false); setInfoHymn(true); } },
-              { icon: 'cog-outline', label: t('reader.settings'), onPress: () => { setOverflowOpen(false); setSettingsOpen(true); } },
-              { icon: 'share-variant', label: t('reader.share'), onPress: () => { setOverflowOpen(false); shareHymn(); } },
-              { icon: 'playlist-plus', label: t('setlist.addCurrent'), onPress: () => {
-                setOverflowOpen(false);
-                setSetlistToast(addToSetlist(hymn.id) ? t('setlist.added') : t('setlist.alreadyAdded'));
-              } },
-              ...(canEdit
-                ? [{ icon: 'pencil-outline', label: t('admin.editHymn'), onPress: () => {
-                    setOverflowOpen(false);
-                    router.push({ pathname: '/admin-edit', params: { id: hymn.id } });
-                  } }]
-                : []),
-            ].map((item, idx) => (
-              <Pressable
-                key={item.icon}
-                onPress={item.onPress}
-                android_ripple={{ color: colors.border }}
-                style={({ pressed }) => ({
-                  flexDirection: direction.row,
-                  alignItems: 'center',
-                  gap: spacing.sm,
-                  paddingHorizontal: spacing.md,
-                  paddingVertical: spacing.md,
-                  borderTopWidth: idx === 0 ? 0 : 1,
-                  borderTopColor: colors.border,
-                  opacity: pressed ? 0.7 : 1,
-                })}>
-                <MaterialCommunityIcons name={item.icon as any} size={20} color={colors.text} />
-                <AppText variant="body" style={{ fontWeight: '500' }}>
-                  {item.label}
-                </AppText>
-              </Pressable>
-            ))}
-          </View>
-        </Pressable>
-      </Modal>
+        onClose={() => setOverflowOpen(false)}
+        items={menuItems}
+        top={insets.top + TOOLBAR_HEIGHT + spacing.sm}
+      />
 {fixOverlays}
       {shareToast ? (
         <Toast
