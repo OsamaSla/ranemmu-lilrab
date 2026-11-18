@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-19, commit 55ff3330 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + toolbar, language chips now a roller in the tools row (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-19, commit b7801622 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + toolbar with a centred title, language picker now a dropdown at the top of the stanza rail (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -203,12 +203,16 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 
 ## 8. Verified gotchas
 
-- `ReaderToolbar` puts the hymn number on its own line and the language chips
-  in a compact **horizontal ScrollView** sharing the second row with the icon
-  toolbar (chips 15px/34px min, icons 32px). Before this, four fixed chips
-  squeezed «الترنيمة 132» into an ellipsis at 360px. Measured after: title
-  `scrollWidth <= clientWidth` (fully visible), one roller present, header
-  95px. Screenshot shown in the Review pane.
+- The hymn number is **centred on its own line** in `ReaderToolbar`, and the
+  language chips were removed from the header entirely. `StanzaRail` now opens
+  with a compact current-language button (above the stanza dots) that drops a
+  `ReaderMenu` picker with a check mark on the active language. The rail is kept
+  for translated single-stanza hymns so language switching never disappears.
+  `ReaderMenu` gained an `align` prop: alignment is **physical**, so in RTL
+  `align="left"` maps to `flex-end` (logical `flex-start` opened the menu on the
+  opposite side of the screen). Measured at 360×740: title fully visible,
+  header 95px, dropdown opens beside the rail. Both screenshots shown in the
+  Review pane.
 - The golden reader header was slimmed to **back + toolbar only**. The author /
   authorOriginal and topics lines were removed because both are already in
   «معلومات الترنيمة», whose topic rows still navigate to the filtered library —
