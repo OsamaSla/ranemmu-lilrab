@@ -328,7 +328,7 @@ admin: {
     feedbackCatOther: 'أخرى',
     feedbackModeRating: 'تقييم',
     feedbackModeMessage: 'رسالة',
-    feedbackMessageHint: 'إن كان لديك أي فكرة لتحسين التطبيق، اكتبه هنا كرسالة للمصمم',
+    feedbackMessageHint: 'إن كان لديك أي فكرة لتحسين التطبيق، اكتبها هنا كرسالة للمصمم',
     feedbackEmail: 'بريدك الإلكتروني',
     feedbackEmailHint: 'نستخدم بريدك فقط للرد على رسالتك',
     feedbackEmailInvalid: 'يرجى إدخال بريد إلكتروني صحيح',

@@ -42,7 +42,7 @@ owner explicitly asks for a translation.
   `scripts/book2/sync-hebrew-payloads.mjs` copies the corrected Hebrew grid
   back into the payload files (mandatory — `hebrew-apply.mjs` checks labels).
 - **Feedback** (`d507b6c0`): «التقييمات» has an anonymous rating path and an
-  email message path (hint: «إن كان لديك أي فكرة لتحسين التطبيق، اكتبه هنا كرسالة
+  email message path (hint: «إن كان لديك أي فكرة لتحسين التطبيق، اكتبها هنا كرسالة
   للمصمم»). Both share the `feedbacks` collection; messages carry `replyEmail`.
   Admin list has kind chips. A Firestore `onCreate` function emails the admin
   via Resend with From name `TarneemAPP` and Reply-To set to the sender.

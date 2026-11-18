@@ -1700,7 +1700,7 @@ stanzas and highlighted correctly.
 - `src/components/FeedbackModal.tsx` has two modes. **Rating** is unchanged and
   anonymous (stars, category, optional comment — no email). **Message** asks for
   a return email (validated client-side) plus text, with the owner's hint
-  «إن كان لديك أي فكرة لتحسين التطبيق، اكتبه هنا كرسالة للمصمم». Both write to the
+  «إن كان لديك أي فكرة لتحسين التطبيق، اكتبها هنا كرسالة للمصمم». Both write to the
   `feedbacks` collection with `kind: 'rating' | 'message'`; messages also store
   `replyEmail` and use `rating: 0`, `category: 'message'`, comment up to 1000
   chars (ratings keep 1–5 / 500). i18n keys added to ar/en/de together.
