@@ -45,6 +45,10 @@ owner explicitly asks for a translation.
   email message path (hint: «إن كان لديك أي فكرة لتحسين التطبيق، اكتبها هنا كرسالة
   للمصمم»). Both share the `feedbacks` collection; messages carry `replyEmail`.
   «تواصل معنا» in the More menu opens a mailto to the same admin address.
+- **Setlist** (`ac89c336`): user-defined categories, each with its own ordered
+  hymn row. The hymn page asks which category when adding; the setlist screen
+  manages categories and shares them via a `groups` URL param. See
+  `PROJECT_NOTES.md` §29.
   Admin list has kind chips. A Firestore `onCreate` function emails the admin
   via Resend with From name `TarneemAPP` and Reply-To set to the sender.
   **Manual steps remain for the owner**: Blaze plan, secrets/env, function

@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-18, commit b19eb17b (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-18, commit ac89c336 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -1737,6 +1737,27 @@ stanzas and highlighted correctly.
   submitted** — no production writes), all six gates green, `node --check
   functions/index.js` clean. Admin panel not visually checked (needs `/admin`
   unlock, which only the owner can do).
+
+## 29. Setlist categories (2026-11-18)
+
+- `src/store/setlist.ts` replaced the flat `ids: string[]` with
+  `categories: SetCategory[]` (`{ id, name, ids }`) + `activeId`. Old persisted
+  `{ ids }` is lifted by persist `version: 1` `migrate` into a «عام» category —
+  no hymn ids are lost. `add/remove/move` take an optional category id and fall
+  back to active → first → auto-created default.
+- `src/data/setlist.ts` keeps `parseSetIds`/`encodeSetIds` (reader prev/next and
+  old links) and adds `encodeSetGroups`/`parseSetGroups` for a `groups` URL
+  param: JSON `[[name, ids], ...]`, URL-encoded, strictly validated (SAFE_ID,
+  ≤50 groups, ≤500 ids each) and returning `null` on malformed input.
+- `src/components/SetlistCategoryPicker.tsx` is the shared sheet. The reader's
+  «إضافة إلى قائمة العبادة» now opens it instead of adding blindly; the setlist
+  screen gains category chips, new-category creation, rename/delete, and scopes
+  search/read/share/reorder/clear to the active category. Shared links carry
+  both `ids` (flat, for navigation) and `groups` (named categories).
+- Verified end-to-end in the browser with local storage only: created a
+  category, added a hymn from the setlist search, added another via the reader
+  picker, and confirmed both landed in the same category with correct counts
+  and order. All six gates green.
 
 
 
