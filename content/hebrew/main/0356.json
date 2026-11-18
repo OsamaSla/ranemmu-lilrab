@@ -1,0 +1,31 @@
+{
+  "book": "main",
+  "number": 356,
+  "title_he": "הַסֹּלֵחַ אֶת־כָּל־עֲוֺנֹתַיִךְ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "בָּרְכִי נַפְשִׁי אֶת־אֲדֹנָי",
+        "וְכָל־אֲשֶׁר בְּקִרְבִּי",
+        "תְּבָרְכִי אֶת־שְׁמוֹ",
+        "שְׁמוֹ הַקָּדוֹשׁ",
+        "בָּרְכִי נַפְשִׁי אֶת־אֲדֹנָי",
+        "בָּרְכִי אֶת־אֲדֹנָי",
+        "וְאַל־תִּשְׁכְּחִי כָּל־גְּמוּלָיו",
+        "הַסֹּלֵחַ עֲוֺנֹתַיִךְ כָּל־עֲוֺנֹתַיִךְ",
+        "הָרֹפֵא תַּחֲלֻמָיִךְ כָּל־תַּחֲלֻמָיִךְ",
+        "בָּרְכִי נַפְשִׁי אֶת־אֲדֹנָי",
+        "וְכָל־אֲשֶׁר בְּקִרְבִּי",
+        "תְּבָרְכִי אֶת־שְׁמוֹ",
+        "שְׁמוֹ הַקָּדוֹשׁ",
+        "בָּרְכִי נַפְשִׁי אֶת־אֲדֹנָי",
+        "בָּרְכִי אֶת־אֲדֹנָי",
+        "וְאַל־תִּשְׁכְּחִי כָּל־גְּמוּלָיו"
+      ]
+    }
+  ],
+  "review": [
+    "No chorus field; one 16-line stanza (Psalm 103:1-3). Uses the biblical wording with feminine suffixes addressing the soul (עֲוֺנֹתַיִךְ, תַּחֲלֻמָיִךְ, גְּמוּלָיו) per Ps 103. The Arabic repeats \"all your sins / all your diseases\" and the whole 1:1-1:7 block — the repeats are kept exactly. Tetragrammaton avoided because the Arabic prints الرب, not يَهْوَه (glossary rule). 1:1/1:5/1:10/1:14 repeat verbatim like the Arabic."
+  ]
+}
