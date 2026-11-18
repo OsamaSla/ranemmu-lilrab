@@ -39,13 +39,16 @@ unchanged unless the owner explicitly asks for a translation.
 - **Tooling**: `scripts/refrain-batch.mjs` includes `verses_he` in `LANGS`;
   `scripts/book2/sync-hebrew-payloads.mjs` copies the corrected Hebrew grid
   back into the payload files (mandatory — `hebrew-apply.mjs` checks labels).
-- **Feedback** (`d507b6c0`): «التقييمات» has an anonymous rating path and an
+- **Feedback** (`c762ba74`): «التقييمات» has an anonymous rating path and an
   email message path (hint «إن كان لديك أي فكرة لتحسين التطبيق، اكتبها هنا كرسالة
   للمصمم»). Both share the `feedbacks` collection; messages carry `replyEmail`.
   Admin list has kind chips. «تواصل معنا» opens a mailto to the admin address.
-  A Firestore `onCreate` function emails the admin via Resend with From name
-  `TarneemAPP` and Reply-To set to the sender. **Manual steps remain for the
-  owner**: Blaze plan, secrets/env, function deploy, Firestore rules (§28).
+  The admin alert is now a **client-side POST to Web3Forms** right after the
+  Firestore write — no Cloud Function, no Resend, Spark plan; `functions/` was
+  deleted and `firebase.json` has only `hosting`. The key is
+  `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY` (NOT `VITE_...` — Expo only inlines
+  `EXPO_PUBLIC_*`). **Owner setup remains**: add the key to local `.env.local`
+  and as a GitHub Actions secret; unset = notifications silently skipped (§28).
 - **Setlist** (`ac89c336`): user-defined categories with their own ordered hymn
   rows; the hymn page asks which category when adding; shared links carry a
   `groups` param. See `PROJECT_NOTES.md` §29.
@@ -121,6 +124,8 @@ unchanged unless the owner explicitly asks for a translation.
 ## Definition of done for this handoff
 
 - `main` equals `origin/main`, clean working tree, CI green after the lint fix.
-- The owner knows the only outstanding item is the **manual** Cloud Function
-  deploy (§28 / `docs/FEEDBACK_NOTIFICATIONS.md`); no code work is pending.
+- The owner knows the only outstanding item is **configuration, not code**:
+  set `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY` in the local `.env.local` and as a
+  GitHub Actions secret (§28 / `docs/FEEDBACK_NOTIFICATIONS.md`). No code work
+  is pending and no Blaze upgrade or function deploy is needed.
 - Any new session starts from this prompt plus `PROJECT_NOTES.md`.

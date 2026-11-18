@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-19, code at 208fbd48 (CI lint fix, pushed together with the closeout docs), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-19, code at c762ba74 (feedback email now a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner must add the access key to local env + GitHub secret); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through d9c7c8c0, local commits through c762ba74 not pushed; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -203,6 +203,14 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 
 ## 8. Verified gotchas
 
+- **Env prefix is `EXPO_PUBLIC_`, not `VITE_` (2026-11-19).** Gemini's Web3Forms
+  advice named `VITE_WEB3FORMS_ACCESS_KEY`, but Expo/Metro only inlines
+  `EXPO_PUBLIC_*` into the static bundle — a `VITE_*` value is `undefined` at
+  runtime and the client POST silently never fires. The single source of truth
+  is `process.env.EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY` in `src/data/web3forms.ts`,
+  cast to `string | undefined` for CI's pre-export typecheck (same pattern as
+  `adminAccess.ts`). After editing `.env.local`, rebuild with `--clear` or Metro
+  keeps serving the old inlined value.
 - **CI lint is real.** The push of `fb179538` failed both pages.yml and
   firebase.yml at "Build web app" (exit 1 in ~15 s). GitHub annotations named
   two new warnings in `setlist.tsx` (unused `addCategory`, unstable `ids ?? []`
@@ -1753,7 +1761,7 @@ which looks exactly like a code bug. Bring the tab to the front (or use a freshl
 opened tab) before diagnosing; a foreground production export measured all six
 stanzas and highlighted correctly.
 
-## 28. Feedback — anonymous rating, email message, admin alert (2026-11-18)
+## 28. Feedback — anonymous rating, email message, admin alert (2026-11-18; Web3Forms 2026-11-19)
 
 - **Rejected alternative (owner asked on 2026-11-19):** Gemini suggested dropping
   Resend/Functions/Blaze and using Firebase Auth's client-side
@@ -1771,30 +1779,31 @@ stanzas and highlighted correctly.
 - `src/app/(tabs)/admin-feedback.tsx` keeps the **same list** and adds kind
   chips (الكل / التقييمات / الرسائل) plus a `من: <email>` line on messages.
   No new screen.
-- `functions/index.js` — `notifyNewFeedback`, a Firestore `onCreate` trigger on
-  `feedbacks/{id}`. Sends **one** Resend email to `ADMIN_NOTIFY_EMAIL` (fallback
-  `osama.sla@gmail.com`), From name `TarneemAPP`, subject `[TarneemAPP] ...`,
-  `reply_to: replyEmail` for messages so the admin's Gmail **Reply** goes to the
-  sender. Ratings get no Reply-To and there is no second function. Full doc:
+- **No backend (2026-11-19, owner decision):** the project stays on Spark. The
+  Firestore `onCreate` trigger, the `resend` dependency and the whole `functions/`
+  directory were deleted, and `firebase.json` now has only `hosting`.
+  `src/data/web3forms.ts` sends a fire-and-forget POST to
+  `https://api.web3forms.com/submit` as soon as the Firestore write succeeds:
+  `access_key` from `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`, subject
+  `[TarneemAPP] تقييم جديد` / `[TarneemAPP] رسالة جديدة`, a text body with
+  kind/rating/category/comment/replyEmail/documentId, `from_name: TarneemAPP`,
+  and `replyto` only for messages with a validated `replyEmail`. Failures are
+  logged, never surfaced — Firestore remains the source of truth. Full doc:
   `docs/FEEDBACK_NOTIFICATIONS.md`.
-- `firebase.json` declares `functions.source = functions`, `runtime = nodejs20`
-  (v1 `runWith()` has no runtime field). Resend confirmed: `from: "Name <addr>"`
-  and `reply_to` are the correct API fields; the test sender
-  `onboarding@resend.dev` can only deliver to the account owner's verified
-  mailbox, which is exactly the admin-alert case.
-- **Manual deploy steps remain (owner):** Blaze plan, `cd functions && npm
-  install`, `firebase functions:secrets:set RESEND_API_KEY`, `firebase
-  functions:env:set ADMIN_NOTIFY_EMAIL=...`, `firebase deploy --only functions`,
-  and any Firestore-rules update in the console (rules are **not** in this repo).
-  CI deploys hosting only — functions are not auto-deployed.
+- **Owner setup (no code work):** add `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY=<key>` to
+  the gitignored local `.env.local` (rebuild with `--clear`) and create a GitHub
+  Actions secret of the same name — both workflows inject it into the build.
+  An unset key simply skips the POST; the build still succeeds. Firestore rules
+  are console-managed and unchanged — no Blaze upgrade, no function deploy.
 - «تواصل معنا» in `more.tsx` is no longer a not-configured stub: it opens
   `mailto:<CONTACT_EMAIL>?subject=…` through `Linking`. `CONTACT_EMAIL` is
   exported from `src/data/adminAccess.ts` as the first `EXPO_PUBLIC_ADMIN_EMAILS`
   entry (fallback `osama.sla@gmail.com`), so the contact address has one source.
   i18n `more.contactSubject` added in ar/en/de.
 - Verified: both form modes in the browser (opened and inspected, **nothing
-  submitted** — no production writes), all six gates green, `node --check
-  functions/index.js` clean. Admin panel not visually checked (needs `/admin`
+  submitted** — no production writes), all gates green, and the Web3Forms body
+  checked locally with a stubbed `fetch` (message → `replyto` present, rating →
+  absent, no network call). Admin panel not visually checked (needs `/admin`
   unlock, which only the owner can do).
 
 ## 29. Setlist categories (2026-11-18)
