@@ -19,6 +19,8 @@ owner explicitly asks for a translation.
    `content/hebrew/glossary.md` (Hebrew authoring rules),
    `docs/BOOK2_REFRAIN_FIX_PROMPT.md` (**historical, now completed** — do not
    follow it as pending work).
+4. `docs/FEEDBACK_NOTIFICATIONS.md` if the ratings/message feature comes up —
+   it holds the manual Cloud Function deploy steps.
 
 ## Current verified state — do not re-derive
 
@@ -39,6 +41,13 @@ owner explicitly asks for a translation.
 - **Tooling**: `scripts/refrain-batch.mjs` includes `verses_he` in `LANGS`;
   `scripts/book2/sync-hebrew-payloads.mjs` copies the corrected Hebrew grid
   back into the payload files (mandatory — `hebrew-apply.mjs` checks labels).
+- **Feedback** (`d507b6c0`): «التقييمات» has an anonymous rating path and an
+  email message path (hint: «إن كان لديك أي فكرة لتحسين التطبيق، اكتبه هنا كرسالة
+  للمصمم»). Both share the `feedbacks` collection; messages carry `replyEmail`.
+  Admin list has kind chips. A Firestore `onCreate` function emails the admin
+  via Resend with From name `TarneemAPP` and Reply-To set to the sender.
+  **Manual steps remain for the owner**: Blaze plan, secrets/env, function
+  deploy, Firestore rules in the console (see `PROJECT_NOTES.md` §28).
 - The stray `install-windows.ps1` (a Hex/Anomaly installer, unrelated to this
   repo) was deleted.
 - **Stanza accordion / windowing was deliberately NOT implemented.** The admin
@@ -47,8 +56,9 @@ owner explicitly asks for a translation.
   reader accordion would break sing-through reading and risk the rail offsets
   and Arabic↔translation pairing. Only do it if the owner explicitly asks
   again.
-- **Pending work: none.** The session was closed clean; everything is
-  committed and pushed.
+- **No code work is pending** — everything is committed. The remaining items
+  are manual owner steps: deploy the Cloud Function with secrets/env, and any
+  Firestore-rules change in the console. Those are not blocked on this repo.
 
 ## Commands and environment
 
@@ -101,6 +111,7 @@ owner explicitly asks for a translation.
 
 ## Definition of done for this handoff
 
-- `main` equals `origin/main` at `15bd0c36`, clean working tree.
-- The owner knows there is no remaining task; any new one starts from the
-  notes and this prompt.
+- The owner knows the code is ready but the feedback alert is not live until
+  the manual Cloud Function deploy is done (§28 / `FEEDBACK_NOTIFICATIONS.md`).
+- Current `main` head is recorded in `PROJECT_NOTES.md`'s "Last verified" line;
+  a fresh session should read it rather than trusting a stale hash here.

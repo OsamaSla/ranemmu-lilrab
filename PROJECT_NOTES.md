@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-18, commit 15bd0c36 (pushed; main in sync with origin, clean tree), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; stray install-windows.ps1 deleted; no pending work and no push pending — handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-18, commit d507b6c0 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet now has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -1694,6 +1694,39 @@ rail's offset store stays empty — dots do nothing and the highlight never move
 which looks exactly like a code bug. Bring the tab to the front (or use a freshly
 opened tab) before diagnosing; a foreground production export measured all six
 stanzas and highlighted correctly.
+
+## 28. Feedback — anonymous rating, email message, admin alert (2026-11-18)
+
+- `src/components/FeedbackModal.tsx` has two modes. **Rating** is unchanged and
+  anonymous (stars, category, optional comment — no email). **Message** asks for
+  a return email (validated client-side) plus text, with the owner's hint
+  «إن كان لديك أي فكرة لتحسين التطبيق، اكتبه هنا كرسالة للمصمم». Both write to the
+  `feedbacks` collection with `kind: 'rating' | 'message'`; messages also store
+  `replyEmail` and use `rating: 0`, `category: 'message'`, comment up to 1000
+  chars (ratings keep 1–5 / 500). i18n keys added to ar/en/de together.
+- `src/app/(tabs)/admin-feedback.tsx` keeps the **same list** and adds kind
+  chips (الكل / التقييمات / الرسائل) plus a `من: <email>` line on messages.
+  No new screen.
+- `functions/index.js` — `notifyNewFeedback`, a Firestore `onCreate` trigger on
+  `feedbacks/{id}`. Sends **one** Resend email to `ADMIN_NOTIFY_EMAIL` (fallback
+  `osama.sla@gmail.com`), From name `TarneemAPP`, subject `[TarneemAPP] ...`,
+  `reply_to: replyEmail` for messages so the admin's Gmail **Reply** goes to the
+  sender. Ratings get no Reply-To and there is no second function. Full doc:
+  `docs/FEEDBACK_NOTIFICATIONS.md`.
+- `firebase.json` declares `functions.source = functions`, `runtime = nodejs20`
+  (v1 `runWith()` has no runtime field). Resend confirmed: `from: "Name <addr>"`
+  and `reply_to` are the correct API fields; the test sender
+  `onboarding@resend.dev` can only deliver to the account owner's verified
+  mailbox, which is exactly the admin-alert case.
+- **Manual deploy steps remain (owner):** Blaze plan, `cd functions && npm
+  install`, `firebase functions:secrets:set RESEND_API_KEY`, `firebase
+  functions:env:set ADMIN_NOTIFY_EMAIL=...`, `firebase deploy --only functions`,
+  and any Firestore-rules update in the console (rules are **not** in this repo).
+  CI deploys hosting only — functions are not auto-deployed.
+- Verified: both form modes in the browser (opened and inspected, **nothing
+  submitted** — no production writes), all six gates green, `node --check
+  functions/index.js` clean. Admin panel not visually checked (needs `/admin`
+  unlock, which only the owner can do).
 
 
 
