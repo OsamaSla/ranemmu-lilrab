@@ -65,6 +65,10 @@ import { fontFamilyFor, READER_MAX_WIDTH } from '../../../theme/fonts';
 import { notify } from '../../../utils/confirm';
 import { palette, spacing } from '../../../theme/tokens';
 
+// Canonical origin — the same one «مشاركة التطبيق» and the setlist share use,
+// so a copied hymn link points at the original site on both hosts.
+const APP_SITE_URL = 'https://ranemmu-lilrab.web.app/';
+
 /**
  * Lets `expo export` and web deep links resolve every hymn statically.
  * Native dev and production builds resolve the param at runtime and ignore this.
@@ -425,6 +429,9 @@ export default function ReaderScreen() {
   }
 
   const shareHymn = () => {
+    // A direct link alongside the text, matching «مشاركة التطبيق»: recipients
+    // can open the hymn in the app instead of reading a pasted wall of text.
+    const hymnUrl = `${APP_SITE_URL}hymn/${hymn.id}`;
     const body = [
       `${hymn.number}. ${hymn.title}`,
       ...(transTitle ? [`${hymn.number}. ${transTitle}`] : []),
@@ -437,13 +444,16 @@ export default function ReaderScreen() {
         }),
         '',
       ]),
+      hymnUrl,
       `— ${t('appName')}`,
     ].join('\n');
 
+    // On web without a native share sheet, copy just the link — the same
+    // behaviour as the app share in the More menu.
     const tryClipboard = async () => {
       if (typeof navigator !== 'undefined' && navigator.clipboard?.writeText) {
         try {
-          await navigator.clipboard.writeText(body);
+          await navigator.clipboard.writeText(hymnUrl);
           setShareToast(true);
           return;
         } catch {
@@ -457,7 +467,7 @@ export default function ReaderScreen() {
       void tryClipboard();
       return;
     }
-    Share.share({ message: body }).catch(() => {
+    Share.share({ message: body, url: hymnUrl }).catch(() => {
       void tryClipboard();
     });
   };
