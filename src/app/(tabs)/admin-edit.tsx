@@ -763,6 +763,10 @@ export default function AdminEditScreen() {
               {t('admin.scripturesHint')}
             </AppText>
           )}
+          {/* chorus_en / chorus_de / chorus_he stay in the form and the save
+              patch (the reader reads them for the multilingual refrain heading),
+              but they are labels rather than editable translation work, so the
+              editor deliberately shows only the translated titles here. */}
           {hasEn ? (
             <>
               <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
@@ -771,14 +775,6 @@ export default function AdminEditScreen() {
               <TextInput
                 value={form.title_en}
                 onChangeText={(v) => set({ title_en: v })}
-                style={[fieldStyle, { writingDirection: 'ltr', textAlign: 'left' }]}
-              />
-              <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
-                {t('admin.chorusEn')}
-              </AppText>
-              <TextInput
-                value={form.chorus_en}
-                onChangeText={(v) => set({ chorus_en: v })}
                 style={[fieldStyle, { writingDirection: 'ltr', textAlign: 'left' }]}
               />
             </>
@@ -793,14 +789,6 @@ export default function AdminEditScreen() {
                 onChangeText={(v) => set({ title_de: v })}
                 style={[fieldStyle, { writingDirection: 'ltr', textAlign: 'left' }]}
               />
-              <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
-                {t('admin.chorusDe')}
-              </AppText>
-              <TextInput
-                value={form.chorus_de}
-                onChangeText={(v) => set({ chorus_de: v })}
-                style={[fieldStyle, { writingDirection: 'ltr', textAlign: 'left' }]}
-              />
             </>
           ) : null}
           {hasHe ? (
@@ -811,14 +799,6 @@ export default function AdminEditScreen() {
               <TextInput
                 value={form.title_he}
                 onChangeText={(v) => set({ title_he: v })}
-                style={hebrewField}
-              />
-              <AppText variant="label" color={colors.textMuted} style={{ marginTop: spacing.sm, marginBottom: spacing.xs }}>
-                {t('admin.chorusHe')}
-              </AppText>
-              <TextInput
-                value={form.chorus_he}
-                onChangeText={(v) => set({ chorus_he: v })}
                 style={hebrewField}
               />
             </>
