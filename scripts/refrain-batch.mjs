@@ -11,8 +11,11 @@
  *   keep  the refrain stays first:        refrain, 1, 2, 3 …
  *   move  it swaps with stanza 2:         1, refrain, 2, 3 …
  *
- * EN/DE translations mirror the Arabic stanza-for-stanza, so they are reordered
- * and labelled identically (the editor does the same on save).
+ * EN/DE/HE translations mirror the Arabic stanza-for-stanza, so they are
+ * reordered and labelled identically (the editor does the same on save). The
+ * Hebrew authoring payloads under content/hebrew/taranim/ must be synced too —
+ * run scripts/book2/sync-hebrew-payloads.mjs for the same numbers afterwards,
+ * or hebrew:apply --check / hebrew:align will fail on the stale labels.
  *
  * Afterwards run `npm run build:corpus` — the app reads the bundled chunks, not
  * content/*.json. Re-running is refused once a hymn has a refrain, so a typo in
@@ -27,7 +30,7 @@ const FILE = join(ROOT, 'content', 'taranim.json');
 
 /** The printed word for a refrain with no `chorus` field of its own. */
 const REFRAIN = 'القرار';
-const LANGS = ['verses', 'verses_en', 'verses_de'];
+const LANGS = ['verses', 'verses_en', 'verses_de', 'verses_he'];
 
 /** `315:move` → { number: 315, mode: 'move' } */
 function parseSpecs(argv) {
