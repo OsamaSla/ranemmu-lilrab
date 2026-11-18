@@ -4,7 +4,8 @@
  *
  * Transcribed families render as a grid of cells; tapping a cell opens the
  * family with one section per exact sub-metre (base first, then variants).
- * Books without families keep the plain exact-metre list.
+ * This is the printed index of «ترنيمات روحية» only — the only book carrying
+ * metre data — so the global book selection is deliberately ignored here.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useMemo, useState } from 'react';
@@ -24,7 +25,6 @@ import { groupByStructure } from '../../data/search';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { useCorpusVersion } from '../../store/corpus';
-import { useSettings } from '../../store/settings';
 import { type as typeScale } from '../../theme/fonts';
 import { spacing } from '../../theme/tokens';
 
@@ -35,12 +35,13 @@ export default function StructureScreen() {
   const [open, setOpen] = useState<Set<string>>(new Set());
   const [selected, setSelected] = useState<string | null>(null);
   const corpusVersion = useCorpusVersion();
-  const book = useSettings((s) => s.book);
 
+  // Only «ترنيمات روحية» has transcribed metre families; show that book's data
+  // regardless of which book the reader currently has selected.
   const summaries = useMemo(() => {
     void corpusVersion; // getSummaries() reads a mutable cache.
-    return getSummaries(book);
-  }, [corpusVersion, book]);
+    return getSummaries('taranim');
+  }, [corpusVersion]);
 
   const byId = useMemo(() => new Map(summaries.map((s) => [s.id, s])), [summaries]);
 

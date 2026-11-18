@@ -191,7 +191,7 @@ export const en: PartialDictionary = {
   'admin.convertToStanza': 'Make stanza',
   'admin.refrain': 'Refrain',
   'admin.stanza': 'Stanza',
-  'structure.title': 'Metre',
+  'structure.title': 'Metre of the Spiritual Songs book',
   'structure.subtitle': 'Hymns sharing the same metre',
   'structure.empty': 'No categorised hymns',
   'structure.unmapped': 'Other metres',
@@ -254,7 +254,7 @@ export const en: PartialDictionary = {
   'help.installApp.body': 'Open the site in your browser, then tap "Add to Home Screen" to use the app without a browser.',
 
   'more.title': 'More',
-  'more.structure': 'Metre',
+  'more.structure': 'Metre of the Spiritual Songs book',
   'more.favorites': 'Favorite Hymns',
   'more.setlist': 'Worship Setlist',
   'more.settings': 'Settings',

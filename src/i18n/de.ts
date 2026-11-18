@@ -196,7 +196,7 @@ export const de: PartialDictionary = {
   'admin.convertToStanza': 'Zur Strophe',
   'admin.refrain': 'Kehrvers',
   'admin.stanza': 'Strophe',
-  'structure.title': 'Metrum',
+  'structure.title': 'Metrum des Buches der geistlichen Lieder',
   'structure.subtitle': 'Lieder mit demselben Metrum',
   'structure.empty': 'Keine eingeordneten Lieder',
   'structure.unmapped': 'Weitere Metren',
@@ -259,7 +259,7 @@ export const de: PartialDictionary = {
   'help.installApp.body': 'Öffne die Website im Browser und tippe dann auf "Zum Startbildschirm hinzufügen", um die App ohne Browser zu nutzen.',
 
   'more.title': 'Mehr',
-  'more.structure': 'Metrum',
+  'more.structure': 'Metrum des Buches der geistlichen Lieder',
   'more.favorites': 'Lieblingslieder',
   'more.setlist': 'Gottesdienst-Playlist',
   'more.settings': 'Einstellungen',

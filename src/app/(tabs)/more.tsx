@@ -53,7 +53,7 @@ export default function MoreScreen() {
   const corpusVersion = useCorpusVersion();
   const hasMeter = useMemo(() => {
     void corpusVersion; // getSummaries() reads a mutable cache.
-    return getSummaries().some((s) => s.meter?.trim());
+    return getSummaries('taranim').some((s) => s.meter?.trim());
   }, [corpusVersion]);
 
   const shareApp = () => {
