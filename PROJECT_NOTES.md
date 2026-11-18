@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-18, commit 76066bbb, all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; nothing pushed after the handoff (e01fb65c)
+Last verified: 2026-11-18, commit 6a5ffa74 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; pushed through a38aa4ad, 6a5ffa74 pending push
 
 ## 1. What this is
 
@@ -189,6 +189,11 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `src/app/(tabs)/admin-edit.tsx`). The reader (`src/app/(tabs)/hymn/[id].tsx`,
   `refrainHeading`) shows the hymn's chorus word, else the verse label, else
   `القرار` — a bare number in an old saved label is never displayed.
+  Books 2/3 carry no `chorus` field, so `refrainHeading` now uses the printed
+  label (`القرار`/`قرار`) as the Arabic half and pairs it with the word in the
+  **viewed** language (`Refrain`/`Kehrvers`/`פְּזָמוֹן`), the same shape Book 1
+  gets from `chorus_en/de/he`. The fallback must not use the UI locale: with an
+  Arabic UI, an English view would otherwise show no English word at all.
 - Comments in the codebase are English prose explaining *why*.
 - The reader screen survives next/prev navigation (`router.replace`); only its
   inner ScrollView is keyed by hymn id, so the component instance is reused.

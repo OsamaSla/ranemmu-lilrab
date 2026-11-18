@@ -186,5 +186,9 @@ Their Excel `place` values already matched their existing stanza order.
 - `typecheck` exit 0 · `git diff --exit-code -- assets/hymns src/data/generated-chunks.ts` clean
 - Cross-check against the Excel: 123 rows, 0 mismatches, 123 flagged hymns in
   `content/taranim.json` (30 + 93), none outside the list.
+- Reader (2026-11-18, `6a5ffa74`): with a translation view selected, the red
+  refrain heading now reads `القرار · Refrain` / `القرار · Kehrvers` /
+  `القرار · פְּזָמוֹן` for these hymns, matching Book 1. Verified in the browser
+  on tr0132 (EN/DE/HE) and b30002 (EN); Book 1 h0014 unchanged.
 
 **Do not push** without explicit owner authorization.
