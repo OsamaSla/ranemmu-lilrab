@@ -48,12 +48,18 @@ export function refrainHeading(
   translated: string | undefined,
   label: string | undefined,
 ): string {
-  if (chorus?.trim() && translated?.trim() && translated !== chorus) {
-    return `${chorus} · ${translated}`;
-  }
-  if (chorus?.trim()) return chorus;
-  if (translated?.trim()) return translated;
   const printed = label?.trim();
-  if (printed && !NUMBER_LABEL.test(printed)) return printed;
+  // Books 2 and 3 flag the refrain stanza but carry no hymn-level `chorus`
+  // field; the printed label itself is the Arabic word (القرار / قرار). Use it
+  // as the Arabic half so those books pair the word with its translation just
+  // like Book 1 does through `chorus`. A bare number is not a word — older
+  // saved records keep their number label, so fall through to the translation.
+  const arabic =
+    chorus?.trim() || (printed && !NUMBER_LABEL.test(printed) ? printed : undefined);
+  if (arabic && translated?.trim() && translated !== arabic) {
+    return `${arabic} · ${translated}`;
+  }
+  if (arabic) return arabic;
+  if (translated?.trim()) return translated;
   return REFRAIN_FALLBACK;
 }

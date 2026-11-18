@@ -50,7 +50,7 @@ import { formatScriptureLine } from '../../../data/scriptures';
 import { encodeSetIds, parseSetIds, setNeighbours } from '../../../data/setlist';
 import { allTopicsOf } from '../../../data/topics';
 import { findSimilar } from '../../../data/search';
-import { bookLabelKey } from '../../../i18n';
+import { bookLabelKey, translate } from '../../../i18n';
 import { useT } from '../../../hooks/useT';
 import { useTheme } from '../../../hooks/useTheme';
 import { useVerseScroll } from '../../../hooks/useVerseScroll';
@@ -277,11 +277,18 @@ export default function ReaderScreen() {
           : undefined;
   const transVerses = translation?.verses;
   const transTitle = translation?.title;
-  // Books 2 and 3 flag refrains but carry no chorus label fields. Fall back to
-  // the UI language's word for "refrain" so the red heading is translated there
-  // too; Arabic-only reading keeps the printed Arabic label on its own.
+  // Books 2 and 3 flag refrains but carry no chorus label fields. Supply the
+  // word in the *viewed* language (not the UI language) so the red heading reads
+  // `القرار · Refrain` / `القرار · Kehrvers` / `القرار · פְּזָמוֹן` exactly as it
+  // does in Book 1, whose chorus_en/de/he carry the same words. Arabic-only
+  // reading keeps the printed Arabic label on its own.
   const transChorus =
-    translation?.chorus ?? (parallel === 'ar' ? undefined : t('reader.refrain'));
+    translation?.chorus ??
+    (parallel === 'ar'
+      ? undefined
+      : parallel === 'he'
+        ? 'פְּזָמוֹן'
+        : translate(parallel, 'reader.refrain'));
   // Where the hymn's subject is founded in scripture, printed once above the
   // first stanza. It belongs to the hymn, not the interface language, so it is
   // always Arabic and never translated. Empty when no reference is known.
