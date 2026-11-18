@@ -494,11 +494,6 @@ export default function ReaderScreen() {
    */
   const versesView = (
     <>
-      <TranslationNotice
-        parallel={parallel}
-        status={hymn.translationStatus}
-        fullscreen={fullscreen}
-      />
       {/* Where the hymn is founded in scripture: one small centred line above
           the first stanza, in Arabic whatever the UI language. Deliberately
           not tappable — the app bundles no Bible text, so the reference is a
@@ -555,6 +550,14 @@ export default function ReaderScreen() {
           onLongPressLine={openLineFix}
         />
       ))}
+      {/* A disclaimer belongs after the text, not before it: on a phone it
+          otherwise pushes the first stanza down. It stays with the translation
+          rather than in the info sheet, so readers still see the caveat. */}
+      <TranslationNotice
+        parallel={parallel}
+        status={hymn.translationStatus}
+        fullscreen={fullscreen}
+      />
     </>
   );
 

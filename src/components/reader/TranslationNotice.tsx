@@ -1,5 +1,5 @@
 /**
- * Translation disclaimer shown above the first stanza.
+ * Translation disclaimer shown after the last stanza, as a quiet footnote.
  *
  * The AI badge only applies to the machine-made en/de drafts: its text comes
  * from `translationStatus`, which is one flag for the whole record, so printing
@@ -38,12 +38,16 @@ export function TranslationNotice({ parallel, status, fullscreen }: TranslationN
         center
         color={fullscreen ? palette.readerText : colors.textMuted}
         style={{
-          opacity: fullscreen ? 0.75 : 1,
-          marginBottom: spacing.md,
+          opacity: fullscreen ? 0.7 : 0.85,
+          marginTop: spacing.lg,
           paddingHorizontal: spacing.md,
+          paddingTop: spacing.md,
+          borderTopWidth: 1,
+          borderTopColor: colors.border,
           writingDirection: 'rtl',
           textAlign: 'center',
-          lineHeight: 20,
+          fontSize: 11,
+          lineHeight: 18,
           fontFamily: HEBREW_FONT_FAMILY,
         }}>
         {TRANSLATION_NOTES.he}
@@ -52,14 +56,21 @@ export function TranslationNotice({ parallel, status, fullscreen }: TranslationN
   }
 
   return (
-    <View style={{ alignItems: 'center', marginBottom: spacing.md }}>
+    <View
+      style={{
+        alignItems: 'center',
+        marginTop: spacing.lg,
+        paddingTop: spacing.md,
+        borderTopWidth: 1,
+        borderTopColor: colors.border,
+      }}>
       <View
         style={{
           flexDirection: direction.row,
           alignItems: 'center',
           gap: spacing.xs,
           paddingHorizontal: spacing.md,
-          paddingVertical: spacing.xs,
+          paddingVertical: 3,
           borderRadius: radius.pill,
           borderWidth: 1,
           borderColor: effective === 'VERIFIED' ? colors.primary : colors.textMuted,
@@ -67,7 +78,7 @@ export function TranslationNotice({ parallel, status, fullscreen }: TranslationN
         }}>
         <MaterialCommunityIcons
           name={effective === 'VERIFIED' ? 'check-circle' : 'robot-outline'}
-          size={16}
+          size={14}
           color={effective === 'VERIFIED' ? colors.onPrimary : colors.textMuted}
         />
         <AppText
@@ -82,7 +93,15 @@ export function TranslationNotice({ parallel, status, fullscreen }: TranslationN
           variant="caption"
           center
           color={fullscreen ? palette.readerText : colors.textMuted}
-          style={{ opacity: fullscreen ? 0.75 : 1, marginTop: spacing.xs }}>
+          style={{
+            opacity: fullscreen ? 0.7 : 0.8,
+            marginTop: spacing.xs,
+            fontSize: 11,
+            lineHeight: 16,
+            // The note is English/German; without an LTR base the Arabic app
+            // direction pushes the final full stop onto the next line.
+            writingDirection: 'ltr',
+          }}>
           {TRANSLATION_NOTES[parallel]}
         </AppText>
       ) : null}
