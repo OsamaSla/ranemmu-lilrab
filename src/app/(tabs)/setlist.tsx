@@ -1,10 +1,10 @@
 /**
- * Worship setlist — an ordered, reorderable row of hymns for a service.
+ * Worship setlist — user-named categories, each holding an ordered hymn row.
  *
- * The row is stored locally (../store/setlist) but also travels in a single
- * `ids` query parameter. Opening a shared `/setlist?ids=…` link loads that row
- * into the store; every hymn opened from here carries the same parameter so the
- * reader's prev/next walks the set instead of the printed book order.
+ * A category is a group for a place, an occasion, a feast — whatever the leader
+ * needs. The rows are stored locally (../store/setlist) and travel in a shared
+ * link as both a flat `ids` list (for the reader's prev/next within one group)
+ * and a `groups` list carrying the category names and their hymn ids.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useLocalSearchParams, useRouter } from 'expo-router';
@@ -16,11 +16,12 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { IconButton } from '../../components/IconButton';
+import { SetlistCategoryPicker } from '../../components/SetlistCategoryPicker';
 import { Toast } from '../../components/Toast';
 import { areAllChunksLoaded, ensureAllChunks } from '../../data/chunks';
 import { getCorpus, getSummaries } from '../../data/loader';
 import { normalizeText } from '../../data/normalize';
-import { encodeSetIds, parseSetIds } from '../../data/setlist';
+import { encodeSetGroups, encodeSetIds, parseSetGroups, parseSetIds } from '../../data/setlist';
 import { ensureSearchIndex, isSearchIndexReady, searchHymns, titleKey } from '../../data/search';
 import type { HymnSummary } from '../../data/types';
 import { useT } from '../../hooks/useT';
@@ -34,6 +35,9 @@ import { noFocusRing, radius, spacing } from '../../theme/tokens';
 // title is useless to a recipient, so the share sheet always carries the URL.
 const APP_SITE_URL = 'https://ranemmu-lilrab.web.app/';
 
+/** Shared groups carry names, not local ids; give each one a stable local id. */
+const groupId = () => `cat_${Date.now().toString(36)}_${Math.random().toString(36).slice(2, 7)}`;
+
 /** Arabic-Indic and extended digits can be typed on any keyboard. */
 function westernDigits(text: string): string {
   return text.replace(/[\u0660-\u0669\u06F0-\u06F9]/g, (ch) =>
@@ -43,32 +47,49 @@ function westernDigits(text: string): string {
 
 export default function SetlistScreen() {
   const router = useRouter();
-  const { ids: idsParam } = useLocalSearchParams<{ ids?: string }>();
+  const { ids: idsParam, groups: groupsParam } = useLocalSearchParams<{ ids?: string; groups?: string }>();
   const { t, direction } = useT();
   const { colors } = useTheme();
   const insets = useSafeAreaInsets();
 
-  const ids = useSetlist((s) => s.ids);
+  const categories = useSetlist((s) => s.categories);
+  const activeId = useSetlist((s) => s.activeId);
+  const setActive = useSetlist((s) => s.setActive);
+  const addCategory = useSetlist((s) => s.addCategory);
+  const renameCategory = useSetlist((s) => s.renameCategory);
+  const removeCategory = useSetlist((s) => s.removeCategory);
   const add = useSetlist((s) => s.add);
   const remove = useSetlist((s) => s.remove);
   const move = useSetlist((s) => s.move);
-  const loadSet = useSetlist((s) => s.set);
-  const clearSet = useSetlist((s) => s.clear);
+  const clearCategory = useSetlist((s) => s.clearCategory);
+  const setCategories = useSetlist((s) => s.setCategories);
 
   const corpusVersion = useCorpusVersion();
 
   const [query, setQuery] = useState('');
   const [toast, setToast] = useState<string | null>(null);
   const dismissToast = useCallback(() => setToast(null), []);
+  const [pickerOpen, setPickerOpen] = useState(false);
+  const [renaming, setRenaming] = useState(false);
+  const [renameValue, setRenameValue] = useState('');
+
+  const active = categories.find((c) => c.id === activeId) ?? categories[0];
+  const ids = active?.ids ?? [];
 
   // A shared link is the source of truth on open; later local edits win.
   useEffect(() => {
+    const sharedGroups = parseSetGroups(groupsParam);
+    if (sharedGroups?.length) {
+      setCategories(sharedGroups.map((group) => ({ id: groupId(), name: group.name, ids: group.ids })));
+      return;
+    }
     const shared = parseSetIds(idsParam);
-    if (shared.length) loadSet(shared);
-  }, [idsParam, loadSet]);
+    if (shared.length) {
+      setCategories([{ id: 'default', name: t('setlist.defaultCategory'), ids: shared }]);
+    }
+  }, [groupsParam, idsParam, setCategories, t]);
 
   // Titles are instant from the summaries; lyrics come from the lazy chunks.
-  // Chunk loads and search-index readiness bump the corpus version.
   const summaries = useMemo(() => {
     void corpusVersion;
     return getSummaries();
@@ -116,13 +137,15 @@ export default function SetlistScreen() {
   const openAt = (id: string) => router.push(`/hymn/${id}?ids=${encodeSetIds(ids)}`);
 
   const addHymn = (id: string) => {
-    setToast(add(id) ? t('setlist.added') : t('setlist.alreadyAdded'));
+    if (!active) return;
+    setToast(add(id, active.id) ? t('setlist.added') : t('setlist.alreadyAdded'));
     setQuery('');
   };
 
   const shareSetlist = () => {
-    if (!ids.length) return;
-    const url = `${APP_SITE_URL}setlist?ids=${encodeSetIds(ids)}`;
+    const allIds = categories.flatMap((c) => c.ids);
+    if (!allIds.length) return;
+    const url = `${APP_SITE_URL}setlist?ids=${encodeSetIds(allIds)}&groups=${encodeSetGroups(categories)}`;
     const message = t('setlist.shareMessage');
     if (Platform.OS === 'web' && typeof navigator !== 'undefined' && !navigator.share) {
       if (navigator.clipboard?.writeText) {
@@ -139,12 +162,28 @@ export default function SetlistScreen() {
   };
 
   const clearAll = () => {
-    void confirmAction(t('setlist.title'), t('setlist.clearConfirm'), {
+    if (!active) return;
+    void confirmAction(active.name, t('setlist.clearCategoryConfirm'), {
       confirmLabel: t('setlist.clear'),
       destructive: true,
     }).then((ok) => {
-      if (ok) clearSet();
+      if (ok) clearCategory(active.id);
     });
+  };
+
+  const deleteCategory = () => {
+    if (!active) return;
+    void confirmAction(active.name, t('setlist.deleteCategoryConfirm'), {
+      confirmLabel: t('setlist.deleteCategory'),
+      destructive: true,
+    }).then((ok) => {
+      if (ok) removeCategory(active.id);
+    });
+  };
+
+  const commitRename = () => {
+    if (active && renameValue.trim()) renameCategory(active.id, renameValue.trim());
+    setRenaming(false);
   };
 
   return (
@@ -158,14 +197,100 @@ export default function SetlistScreen() {
             name="share-variant"
             label={t('setlist.share')}
             onPress={shareSetlist}
-            disabled={!ids.length}
+            disabled={!categories.some((c) => c.ids.length)}
             color={colors.onPrimary}
-            style={{ opacity: ids.length ? 1 : 0.5 }}
+            style={{ opacity: categories.some((c) => c.ids.length) ? 1 : 0.5 }}
           />
         }
       />
 
       <ScrollView contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}>
+        {/* Categories — one group per place/occasion. */}
+        <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.xs }}>
+          {t('setlist.categories')}
+        </AppText>
+        <View style={{ flexDirection: direction.row, flexWrap: 'wrap', gap: spacing.xs, marginBottom: spacing.md }}>
+          {categories.map((category) => (
+            <Pressable
+              key={category.id}
+              onPress={() => setActive(category.id)}
+              accessibilityRole="button"
+              accessibilityState={{ selected: category.id === active?.id }}
+              style={({ pressed }) => ({
+                paddingVertical: spacing.xs,
+                paddingHorizontal: spacing.md,
+                borderRadius: radius.pill,
+                borderWidth: 1,
+                borderColor: category.id === active?.id ? colors.primary : colors.border,
+                backgroundColor: category.id === active?.id ? colors.primary : 'transparent',
+                opacity: pressed ? 0.7 : 1,
+              })}>
+              <AppText
+                variant="caption"
+                color={category.id === active?.id ? colors.onPrimary : colors.text}
+                style={{ fontWeight: '700' }}>
+                {category.name} ({category.ids.length})
+              </AppText>
+            </Pressable>
+          ))}
+          <Pressable
+            onPress={() => setPickerOpen(true)}
+            accessibilityRole="button"
+            accessibilityLabel={t('setlist.newCategory')}
+            style={{
+              flexDirection: direction.row,
+              alignItems: 'center',
+              gap: 2,
+              paddingVertical: spacing.xs,
+              paddingHorizontal: spacing.md,
+              borderRadius: radius.pill,
+              borderWidth: 1,
+              borderColor: colors.border,
+            }}>
+            <MaterialCommunityIcons name="plus" size={16} color={colors.primary} />
+            <AppText variant="caption" color={colors.primary} style={{ fontWeight: '700' }}>
+              {t('setlist.newCategory')}
+            </AppText>
+          </Pressable>
+        </View>
+
+        {active ? (
+          <View style={{ flexDirection: direction.row, gap: spacing.sm, marginBottom: spacing.md }}>
+            <IconButton name="pencil-outline" label={t('setlist.rename')} onPress={() => { setRenameValue(active.name); setRenaming(true); }} />
+            <IconButton name="delete-outline" label={t('setlist.deleteCategory')} onPress={deleteCategory} />
+          </View>
+        ) : (
+          <AppText variant="body" color={colors.textMuted} center style={{ marginVertical: spacing.xl }}>
+            {t('setlist.noCategories')}
+          </AppText>
+        )}
+
+        {renaming ? (
+          <View style={{ flexDirection: direction.row, gap: spacing.sm, alignItems: 'center', marginBottom: spacing.md }}>
+            <TextInput
+              value={renameValue}
+              onChangeText={setRenameValue}
+              onSubmitEditing={commitRename}
+              accessibilityLabel={t('setlist.categoryName')}
+              style={[
+                {
+                  flex: 1,
+                  minHeight: 44,
+                  paddingHorizontal: spacing.md,
+                  borderRadius: radius.md,
+                  borderWidth: 1,
+                  borderColor: colors.border,
+                  backgroundColor: colors.surfaceMuted,
+                  color: colors.text,
+                  fontSize: 15,
+                },
+                noFocusRing,
+              ]}
+            />
+            <IconButton name="check" label={t('setlist.rename')} onPress={commitRename} />
+          </View>
+        ) : null}
+
         {/* Build the set: a number or a few words, across every book. */}
         <Card style={{ marginBottom: spacing.lg }}>
           <AppText variant="label" color={colors.textMuted} style={{ marginBottom: spacing.sm }}>
@@ -178,6 +303,7 @@ export default function SetlistScreen() {
             placeholderTextColor={colors.textMuted}
             accessibilityLabel={t('setlist.addTitle')}
             autoCorrect={false}
+            editable={Boolean(active)}
             style={[
               {
                 minHeight: 48,
@@ -192,7 +318,7 @@ export default function SetlistScreen() {
               noFocusRing,
             ]}
           />
-          {needle ? (
+          {needle && active ? (
             <View style={{ marginTop: spacing.sm }}>
               {results.length === 0 ? (
                 <AppText variant="caption" color={colors.textMuted} style={{ paddingVertical: spacing.sm }}>
@@ -265,7 +391,7 @@ export default function SetlistScreen() {
           </View>
         ) : null}
 
-        {/* The ordered set. */}
+        {/* The ordered set of the active category. */}
         {rows.length === 0 ? (
           <AppText variant="body" color={colors.textMuted} center style={{ marginTop: spacing.xl }}>
             {t('setlist.emptyHint')}
@@ -303,7 +429,7 @@ export default function SetlistScreen() {
                   size={20}
                   disabled={index === 0}
                   style={{ opacity: index === 0 ? 0.3 : 1 }}
-                  onPress={() => move(index, -1)}
+                  onPress={() => move(index, -1, active?.id)}
                 />
                 <IconButton
                   name="arrow-down"
@@ -311,15 +437,20 @@ export default function SetlistScreen() {
                   size={20}
                   disabled={index === rows.length - 1}
                   style={{ opacity: index === rows.length - 1 ? 0.3 : 1 }}
-                  onPress={() => move(index, 1)}
+                  onPress={() => move(index, 1, active?.id)}
                 />
-                <IconButton name="close" label={t('setlist.remove')} size={20} onPress={() => remove(id)} />
+                <IconButton name="close" label={t('setlist.remove')} size={20} onPress={() => remove(id, active?.id)} />
               </View>
             </Card>
           ))
         )}
       </ScrollView>
 
+      <SetlistCategoryPicker
+        visible={pickerOpen}
+        onClose={() => setPickerOpen(false)}
+        onPick={(id) => setActive(id)}
+      />
       {toast ? <Toast message={toast} onDismiss={dismissToast} bottom={insets.bottom + spacing.lg} /> : null}
     </View>
   );

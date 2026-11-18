@@ -33,6 +33,7 @@ import { EmptyState } from '../../../components/EmptyState';
 import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
 import { LineFixSheet, type FixSavedPayload, type FixTarget } from '../../../components/LineFixSheet';
 import { ReaderSettingsModal } from '../../../components/ReaderSettingsModal';
+import { SetlistCategoryPicker } from '../../../components/SetlistCategoryPicker';
 import { HymnRow } from '../../../components/HymnRow';
 import { IconButton } from '../../../components/IconButton';
 import { ReaderSearchOverlay } from '../../../components/ReaderSearchOverlay';
@@ -90,6 +91,7 @@ export default function ReaderScreen() {
   const [shareToast, setShareToast] = useState(false);
   const [setlistToast, setSetlistToast] = useState<string | null>(null);
   const dismissSetlistToast = useCallback(() => setSetlistToast(null), []);
+  const [categoryPickerOpen, setCategoryPickerOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
   const [infoHymn, setInfoHymn] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
@@ -613,7 +615,7 @@ export default function ReaderScreen() {
     { icon: 'share-variant' as const, label: t('reader.share'), onPress: () => { setOverflowOpen(false); shareHymn(); } },
     { icon: 'playlist-plus' as const, label: t('setlist.addCurrent'), onPress: () => {
         setOverflowOpen(false);
-        setSetlistToast(addToSetlist(hymn.id) ? t('setlist.added') : t('setlist.alreadyAdded'));
+        setCategoryPickerOpen(true);
       } },
     ...(canEdit
       ? [{ icon: 'pencil-outline' as const, label: t('admin.editHymn'), onPress: () => {
@@ -622,6 +624,14 @@ export default function ReaderScreen() {
         } }]
       : []),
   ];
+
+  // The picker resolves the category first; adding is a second, explicit tap
+  // so a hymn never lands in an unintended group.
+  const onPickCategory = (categoryId: string) => {
+    setSetlistToast(
+      addToSetlist(hymn.id, categoryId) ? t('setlist.added') : t('setlist.alreadyAdded'),
+    );
+  };
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
@@ -736,6 +746,11 @@ export default function ReaderScreen() {
         onClose={() => setOverflowOpen(false)}
         items={menuItems}
         top={insets.top + TOOLBAR_HEIGHT + spacing.sm}
+      />
+      <SetlistCategoryPicker
+        visible={categoryPickerOpen}
+        onClose={() => setCategoryPickerOpen(false)}
+        onPick={onPickCategory}
       />
 {fixOverlays}
       {shareToast ? (
