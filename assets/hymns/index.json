@@ -12464,6 +12464,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship",
@@ -12479,6 +12480,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -12489,6 +12491,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "warfare",
   "topics": [
    "word",
@@ -12503,6 +12506,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance"
  },
  {
@@ -12513,6 +12517,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -12523,6 +12528,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -12533,6 +12539,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
@@ -12544,6 +12551,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -12555,6 +12563,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
@@ -12568,6 +12577,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -12578,6 +12588,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "cross"
@@ -12591,6 +12602,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance",
   "topics": [
    "fellowship"
@@ -12604,6 +12616,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
@@ -12617,6 +12630,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "fellowship"
@@ -12630,6 +12644,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -12639,7 +12654,8 @@
   "title": "نجثو لك يا ربنا",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "h0596",
@@ -12649,6 +12665,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "eternity",
   "topics": [
    "worship"
@@ -12663,6 +12680,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship"
@@ -12677,6 +12695,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "eternity"
@@ -12690,6 +12709,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship",
   "topics": [
    "cross"
@@ -12703,6 +12723,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -12712,7 +12733,8 @@
   "title": "رحمتك أفضل من الحياه",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "h0602",
@@ -12722,6 +12744,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "cross",
@@ -12736,6 +12759,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -12746,6 +12770,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort"
@@ -12759,6 +12784,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -12769,6 +12795,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -12779,6 +12806,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "word",
   "topics": [
    "fellowship"
@@ -12792,6 +12820,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -12802,6 +12831,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "word",
@@ -12816,6 +12846,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "worship",
@@ -12830,6 +12861,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -12841,6 +12873,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -12851,6 +12884,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "comfort",
@@ -12865,6 +12899,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "fellowship"
  },
  {
@@ -12875,6 +12910,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
@@ -12884,7 +12920,8 @@
   "title": "اختبرني يا الله",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "h0617",
@@ -12894,6 +12931,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "church",
   "topics": [
    "worship"
@@ -12908,6 +12946,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "fellowship"
@@ -12920,7 +12959,8 @@
   "title": "تعال يا ربي بروحك",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "h0620",
@@ -12930,6 +12970,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "church"
  },
  {
@@ -12940,6 +12981,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "cross"
@@ -12953,6 +12995,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "repentance",
@@ -12967,6 +13010,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "repentance",
   "topics": [
    "fellowship",
@@ -12981,6 +13025,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "repentance"
@@ -12994,6 +13039,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship"
  },
  {
@@ -13005,6 +13051,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
@@ -13018,7 +13065,8 @@
   "title": "سد علينا الآن",
   "hasChorus": true,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "h0628",
@@ -13027,7 +13075,8 @@
   "title": "أوصنا أوصنا أوصنا في الأعالي",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "h0629",
@@ -13037,6 +13086,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship"
@@ -13050,6 +13100,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "worship",
@@ -13064,6 +13115,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort",
   "topics": [
    "cross",
@@ -13079,6 +13131,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "worship",
   "topics": [
    "comfort"
@@ -13092,6 +13145,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "word"
  },
  {
@@ -13102,6 +13156,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross"
  },
  {
@@ -13112,6 +13167,7 @@
   "hasChorus": true,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "comfort"
  },
  {
@@ -13122,6 +13178,7 @@
   "hasChorus": false,
   "hasEn": true,
   "hasDe": true,
+  "hasHe": true,
   "primaryTopic": "cross",
   "topics": [
    "comfort",
@@ -13136,7 +13193,8 @@
   "title": "ما أحلى مساكنك يا رب الجنود",
   "hasChorus": false,
   "hasEn": true,
-  "hasDe": true
+  "hasDe": true,
+  "hasHe": true
  },
  {
   "id": "h0638",
