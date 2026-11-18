@@ -12,7 +12,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
-import { useState } from 'react';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { Pressable, ScrollView, View } from 'react-native';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
@@ -22,7 +22,6 @@ import { useTheme } from '../../hooks/useTheme';
 import type { HymnSummary, HymnVerse } from '../../data/types';
 import { bookLabelKey } from '../../i18n';
 import { HIT_SLOP, palette, radius, spacing } from '../../theme/tokens';
-import { ReaderMenu } from './ReaderMenu';
 import { CHIP_COLORS, refrainHeading, type ReaderLang } from './readerText';
 
 /** Width of the reserved rail column and the diameter of one jump dot. */
@@ -62,7 +61,6 @@ export function StanzaRail({
   const insets = useSafeAreaInsets();
   const { colors } = useTheme();
   const { t } = useT();
-  const [langOpen, setLangOpen] = useState(false);
 
   // A translated single-stanza hymn still needs the rail for the language
   // switcher, even though it has no stanza dots to jump to.
@@ -76,6 +74,21 @@ export function StanzaRail({
         : lang === 'de'
           ? t('common.deShort')
           : t('common.heShort');
+
+  // One button, no popup: swiping it rolls through the languages. A tap also
+  // advances, so a mouse or a keyboard can change language without a swipe.
+  const cycleLanguage = (step: number) => {
+    if (translationOptions.length < 2) return;
+    const index = translationOptions.findIndex((option) => option.value === parallel);
+    const next = (index + step + translationOptions.length) % translationOptions.length;
+    onChooseLang(translationOptions[next].value);
+  };
+  const swipeLanguage = Gesture.Pan().onEnd((event) => {
+    if (Math.abs(event.translationX) >= 18) cycleLanguage(event.translationX < 0 ? 1 : -1);
+  });
+  const tapLanguage = Gesture.Tap().onEnd(() => cycleLanguage(1));
+  // Exclusive so a swipe never also fires the tap and skips a language.
+  const languageGesture = Gesture.Exclusive(swipeLanguage, tapLanguage);
 
   return (
     <View
@@ -94,31 +107,33 @@ export function StanzaRail({
           a centred, untruncated hymn number. */}
       {translationOptions.length > 1 ? (
         <View style={{ alignItems: 'center', paddingTop: spacing.sm, paddingBottom: spacing.xs }}>
-          <Pressable
-            onPress={() => setLangOpen(true)}
-            accessibilityRole="button"
-            accessibilityLabel={t('reader.translation')}
-            hitSlop={HIT_SLOP}
-            style={({ pressed }) => ({
-              flexDirection: 'row',
-              alignItems: 'center',
-              justifyContent: 'center',
-              width: RAIL_DOT,
-              minHeight: 30,
-              borderRadius: radius.pill,
-              backgroundColor: CHIP_COLORS[parallel].tint,
-              borderWidth: 1,
-              borderColor: CHIP_COLORS[parallel].fill,
-              opacity: pressed ? 0.7 : 1,
-            })}>
-            <AppText
-              variant="label"
-              useAppFont={false}
-              style={{ fontFamily: readerFontBold, fontSize: 12, fontWeight: '700', color: '#1A1A1A' }}>
-              {shortLang(parallel)}
-            </AppText>
-            <MaterialCommunityIcons name="chevron-down" size={13} color="#1A1A1A" />
-          </Pressable>
+          <GestureDetector gesture={languageGesture}>
+            <Pressable
+              accessibilityRole="button"
+              accessibilityLabel={`${t('reader.translation')}: ${shortLang(parallel)}. ${t('reader.swipeLanguage')}`}
+              hitSlop={HIT_SLOP}
+              style={({ pressed }) => ({
+                flexDirection: 'row',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: RAIL_DOT,
+                minHeight: 30,
+                borderRadius: radius.pill,
+                backgroundColor: CHIP_COLORS[parallel].tint,
+                borderWidth: 1,
+                borderColor: CHIP_COLORS[parallel].fill,
+                opacity: pressed ? 0.7 : 1,
+              })}>
+              <MaterialCommunityIcons name="chevron-left" size={10} color="#1A1A1A" style={{ opacity: 0.55 }} />
+              <AppText
+                variant="label"
+                useAppFont={false}
+                style={{ fontFamily: readerFontBold, fontSize: 12, fontWeight: '700', color: '#1A1A1A', marginHorizontal: 1 }}>
+                {shortLang(parallel)}
+              </AppText>
+              <MaterialCommunityIcons name="chevron-right" size={10} color="#1A1A1A" style={{ opacity: 0.55 }} />
+            </Pressable>
+          </GestureDetector>
         </View>
       ) : null}
       <ScrollView
@@ -280,21 +295,6 @@ export function StanzaRail({
           ))}
         </View>
       ) : null}
-      <ReaderMenu
-        visible={langOpen}
-        onClose={() => setLangOpen(false)}
-        top={insets.top + 64}
-        align="left"
-        items={translationOptions.map((option) => ({
-          icon: option.value === parallel ? 'check-circle' : 'circle-outline',
-          label: option.label,
-          selected: option.value === parallel,
-          onPress: () => {
-            onChooseLang(option.value);
-            setLangOpen(false);
-          },
-        }))}
-      />
     </View>
   );
 }

@@ -53,15 +53,19 @@ export function ReaderHeader({ fullscreen, onBack, topInset, toolbarProps }: Pro
         paddingHorizontal: spacing.sm,
         backgroundColor: colors.primaryDeep,
       }}>
-      <View style={{ flexDirection: direction.row, alignItems: 'center' }}>
-        <IconButton
-          name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
-          label={backLabel}
-          color={colors.onPrimary}
-          onPress={onBack}
-        />
-        <View style={{ flex: 1, paddingHorizontal: spacing.xs }}>
+      {/* Back is absolutely pinned so the toolbar keeps the full width and its
+          icon row is centred on the screen rather than offset by the button. */}
+      <View style={{ position: 'relative' }}>
+        <View style={{ paddingHorizontal: spacing.xs }}>
           <ReaderToolbar {...toolbarProps} dark={false} />
+        </View>
+        <View style={{ position: 'absolute', top: 0, ...(direction.isRTL ? { right: 0 } : { left: 0 }) }}>
+          <IconButton
+            name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
+            label={backLabel}
+            color={colors.onPrimary}
+            onPress={onBack}
+          />
         </View>
       </View>
     </View>

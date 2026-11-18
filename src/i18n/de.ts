@@ -70,6 +70,7 @@ export const de: PartialDictionary = {
   'reader.fontFamily': 'Schriftart',
   'reader.verseOf': 'Strophe',
   'reader.translation': 'Übersetzung',
+  'reader.swipeLanguage': 'Wischen zum Sprachwechsel',
   'reader.jump': 'Los',
   'reader.jumpPlaceholder': 'Nach Nummer oder Wort suchen...',
   'reader.tools': 'Werkzeuge',

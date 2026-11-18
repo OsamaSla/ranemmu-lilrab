@@ -79,6 +79,7 @@ export const ar = {
     fontFamily: 'نوع الخط',
     verseOf: 'المقطع',
     translation: 'الترجمة',
+    swipeLanguage: 'اسحب لتغيير اللغة',
     jump: 'انتقال',
     jumpPlaceholder: 'ابحث برقم أو كلمة...',
     tools: 'الأدوات',

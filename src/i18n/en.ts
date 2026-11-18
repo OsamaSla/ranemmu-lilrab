@@ -65,6 +65,7 @@ export const en: PartialDictionary = {
   'reader.fontFamily': 'Font',
   'reader.verseOf': 'Stanza',
   'reader.translation': 'Translation',
+  'reader.swipeLanguage': 'Swipe to change language',
   'reader.jump': 'Go',
   'reader.jumpPlaceholder': 'Search by number or word...',
   'reader.tools': 'Tools',
