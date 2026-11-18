@@ -22,6 +22,9 @@ const ADMIN_EMAILS: string[] = RAW.split(',')
   .map((value) => value.trim().toLowerCase())
   .filter(Boolean);
 
+/** The first admin address doubles as the public «تواصل معنا» mailbox. */
+export const CONTACT_EMAIL: string = ADMIN_EMAILS[0] ?? 'osama.sla@gmail.com';
+
 export function isAdminEmail(email: string | null | undefined): boolean {
   if (!email) return false;
   return ADMIN_EMAILS.includes(email.trim().toLowerCase());

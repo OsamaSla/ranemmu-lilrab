@@ -296,6 +296,7 @@ export const de: PartialDictionary = {
   'more.shareApp': 'App teilen',
   'more.shareAppMessage': 'Ranemmu-Lilrab-App — die Liederbücher Ranemmu Lilrab und geistliche Lieder',
   'more.contactUs': 'Kontakt',
+  'more.contactSubject': 'Nachricht von der Ranemmu-App',
   'more.officialSite': 'Offizielle Website: ranemmu-lilrab.web.app',
   'more.notConfigured': 'Diese Funktion ist noch nicht eingerichtet',
 

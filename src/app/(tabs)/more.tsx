@@ -1,9 +1,8 @@
 /**
  * المزيد — the secondary menu reached from the fourth tab.
  *
- * "Rate App" and "Contact Us" are present so the menu matches the reference
- * app's structure, but both raise the not-configured message until the Play
- * listing and a support address exist.
+ * "Rate App" opens the in-app feedback sheet; "Contact Us" opens the device's
+ * mail composer addressed to the admin mailbox from adminAccess.ts.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import type { ComponentProps } from 'react';
@@ -14,6 +13,7 @@ import { useRouter } from 'expo-router';
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
+import { CONTACT_EMAIL } from '../../data/adminAccess';
 import { getSummaries } from '../../data/loader';
 import { useCanEdit } from '../../hooks/useCanEdit';
 import { useT } from '../../hooks/useT';
@@ -22,7 +22,6 @@ import { useTheme } from '../../hooks/useTheme';
 import { useCorpusVersion } from '../../store/corpus';
 import type { TranslationKey } from '../../i18n';
 import { spacing } from '../../theme/tokens';
-import { notify } from '../../utils/confirm';
 
 type IconName = ComponentProps<typeof MaterialCommunityIcons>['name'];
 
@@ -44,7 +43,12 @@ export default function MoreScreen() {
 
   const [feedbackVisible, setFeedbackVisible] = useState(false);
 
-  const notConfigured = () => notify(t('more.title'), t('more.notConfigured'));
+  // A mailto: link opens the device's own mail app, so the sender replies from
+  // their real address and the admin gets it in the same mailbox as feedback.
+  const contactUs = () => {
+    const subject = encodeURIComponent(t('more.contactSubject'));
+    Linking.openURL(`mailto:${CONTACT_EMAIL}?subject=${subject}`).catch(() => {});
+  };
 
   const corpusVersion = useCorpusVersion();
   const hasMeter = useMemo(() => {
@@ -89,7 +93,7 @@ export default function MoreScreen() {
     { icon: 'shield-lock-outline', label: 'more.admin', onPress: () => router.push('/admin') },
     { icon: 'star', label: 'more.rateApp', onPress: () => setFeedbackVisible(true) },
     { icon: 'share-variant', label: 'more.shareApp', onPress: shareApp },
-    { icon: 'email-outline', label: 'more.contactUs', onPress: notConfigured },
+    { icon: 'email-outline', label: 'more.contactUs', onPress: contactUs },
   ];
 
   const visibleItems = items.filter(

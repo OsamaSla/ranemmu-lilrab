@@ -339,6 +339,7 @@ admin: {
     shareApp: 'مشاركة التطبيق',
     shareAppMessage: 'تطبيق رنموا للرب — كتابا الترانيم: رنموا للرب وترنيمات روحية',
     contactUs: 'تواصل معنا',
+    contactSubject: 'رسالة من تطبيق رنموا للرب',
     officialSite: 'الموقع الرسمي: ranemmu-lilrab.web.app',
     notConfigured: 'هذه الميزة غير مهيأة بعد',
   },

@@ -291,6 +291,7 @@ export const en: PartialDictionary = {
   'more.shareApp': 'Share the App',
   'more.shareAppMessage': 'Ranemmu Lilrab app — the hymn books Ranemmu Lilrab and spiritual songs',
   'more.contactUs': 'Contact Us',
+  'more.contactSubject': 'Message from the Ranemmu app',
   'more.officialSite': 'Official site: ranemmu-lilrab.web.app',
   'more.notConfigured': 'This feature is not set up yet',
 
