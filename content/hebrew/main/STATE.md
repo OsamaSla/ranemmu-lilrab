@@ -2,8 +2,8 @@
 
 Last updated: 2026-11-18 · after batch h0423-h0433
 
-- Progress: **522 / 1047** hymns, 10111 verse lines, 100 % pointed.
-  `hebrew:progress` reports 469 `review[]` notes — batches h0423-h0463 shipped
+- Progress: **529 / 1047** hymns, 10244 verse lines, 100 % pointed.
+  `hebrew:progress` reports 476 `review[]` notes — batches h0423-h0463 shipped
   none (six consecutive deviations; gates unaffected), h0464 onward resumed
   normal notes. `hebrew-meter --book main --flags-only` reports 16
   flags for h0001-h0007, 18 for h0008-h0015, 13 for h0016-h0023, 17 for
@@ -27,9 +27,9 @@ Last updated: 2026-11-18 · after batch h0423-h0433
   22 for h0423-h0433, 22 for h0434-h0440, 11 for h0441-h0448, 10 for
   h0449-h0456, 30 for h0457-h0463, 22 for h0464-h0470, 19 for h0471-h0477
   18 for h0478-h0484, 21 for h0485-h0491, 12 for h0492-h0497, 13 for
-  h0498-h0502, 16 for h0503-h0508, 20 for h0509-h0515 and 15 for h0516-h0522,
-  all reviewed and accepted.
-- Next batch: **h0523–h0529** (7 hymns, 133 lines) — recompute with
+  h0498-h0502, 16 for h0503-h0508, 20 for h0509-h0515, 15 for h0516-h0522
+  and 16 for h0523-h0529, all reviewed and accepted.
+- Next batch: **h0530–h0535** (6 hymns, 120 lines) — recompute with
   `node scripts/book1/next-batch.mjs` before every spawn.
 - Plan: `content/hebrew/main/PLAN.md` (rotation order, child prompt, gates).
 - Remaining tail after this book: none — Book 1 is the last book.
@@ -46,7 +46,7 @@ Last updated: 2026-11-18 · after batch h0423-h0433
     h0024-h0031, h0032-h0038, h0039-h0045, h0046-h0052, h0053-h0058,
     h0059-h0065, h0066-h0071, h0072-h0078, h0079-h0086, h0087-h0093,
     h0094-h0100, h0101-h0108, h0109-h0114, h0115-h0121, h0122-h0127,
-    h0128-h0133, h0134-h0140, h0141-h0149, h0150-h0156, h0157-h0164, h0165-h0169, h0170-h0175, h0176-h0180, h0181-h0187, h0188-h0193, h0194-h0199, h0200-h0206, h0207-h0213, h0214-h0220, h0221-h0227, h0228-h0234, h0235-h0241, h0242-h0247, h0248-h0253, h0254-h0260, h0261-h0267, h0268-h0273, h0274-h0279, h0280-h0285, h0286-h0292, h0293-h0299, h0300-h0306, h0307-h0314, h0315-h0320, h0321-h0326, h0327-h0333, h0334-h0340, h0341-h0345, h0346-h0351, h0352-h0358, h0359-h0363, h0364-h0369, h0370-h0376, h0377-h0382, h0383-h0387, h0388-h0394, h0395-h0400, h0401-h0408, h0409-h0416, h0417-h0422, h0423-h0433, h0434-h0440, h0441-h0448, h0449-h0456, h0457-h0463, h0464-h0470, h0471-h0477, h0478-h0484, h0485-h0491, h0492-h0497, h0498-h0502, h0503-h0508, h0509-h0515, h0516-h0522 (all gates green)
+    h0128-h0133, h0134-h0140, h0141-h0149, h0150-h0156, h0157-h0164, h0165-h0169, h0170-h0175, h0176-h0180, h0181-h0187, h0188-h0193, h0194-h0199, h0200-h0206, h0207-h0213, h0214-h0220, h0221-h0227, h0228-h0234, h0235-h0241, h0242-h0247, h0248-h0253, h0254-h0260, h0261-h0267, h0268-h0273, h0274-h0279, h0280-h0285, h0286-h0292, h0293-h0299, h0300-h0306, h0307-h0314, h0315-h0320, h0321-h0326, h0327-h0333, h0334-h0340, h0341-h0345, h0346-h0351, h0352-h0358, h0359-h0363, h0364-h0369, h0370-h0376, h0377-h0382, h0383-h0387, h0388-h0394, h0395-h0400, h0401-h0408, h0409-h0416, h0417-h0422, h0423-h0433, h0434-h0440, h0441-h0448, h0449-h0456, h0457-h0463, h0464-h0470, h0471-h0477, h0478-h0484, h0485-h0491, h0492-h0497, h0498-h0502, h0503-h0508, h0509-h0515, h0516-h0522, h0523-h0529 (all gates green)
 - Reset `exhausted_today` at the next local day boundary. On a quota response
   from a child, add that model here and advance `active_index` before retrying
   the same range.
@@ -516,6 +516,11 @@ Last updated: 2026-11-18 · after batch h0423-h0433
   (h518), 8/8/8 (h519), 7 (h520), 4×7 (h521), 16 (h522). One real fidelity fix:
   h516 3:5 restored dropped كل → `כָּל־יְגוֹנַי`. Choruses: h516/h518/h521;
   h517/h519/h520/h522 none. 7 hymns / 138 lines, 10111 total lines pointed.
+- h0523-h0529: 16 line-length flags (plus one shape notice), all Arabic-driven
+  — no missing or extra words. Shapes 4/5/4 (h523), 4×7 (h524), 4×6 (h525),
+  4×5 (h526), 4×6 (h527), 2×5 (h528), 2×7 (h529). Choruses: h523-h526/h528/
+  h529 v2; h527 none. h529 uses the Canticles register. 574 Hebrew word-pieces
+  pointed, 10244 total lines.
 - Tooling fix (commit `71522d3a`): `hebrew-meter.mjs` now falls back to the corpus
   file name when a hymn has no `book` key, so `--book main` sees hymns 1-1000.
 
