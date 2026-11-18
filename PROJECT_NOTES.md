@@ -1575,7 +1575,7 @@ so each memo explicitly reads it with `void corpusVersion;` — that keeps the
 dependency honest without a per-screen `eslint-disable`. Net: ~10 suppressions
 and all local chunk-version hacks removed.
 
-**Reader split (#16).** `hymn/[id].tsx` 1,565 → 818 lines. New modules under
+**Reader split (#16).** `hymn/[id].tsx` 1,565 → 818 → 752 lines after the 2026-11-18 follow-up (`2a533424`): the two header branches became `ReaderHeader.tsx`, the inline overflow modal became typed `ReaderMenu.tsx`, verse keys are now stable indices, and `transChorus` falls back to `t('reader.refrain')` for Books 2/3 which have no chorus-label fields (so their red refrain heading is translated instead of Arabic-only). gates: typecheck + eslint clean. New modules under
 `src/components/reader/`: `ReaderToolbar` (language chips + icon row + set
 badge), `StanzaRail`, `VerseBlock` (memoised), `TranslationNotice`,
 `ReaderIconButton`, plus shared `readerText.ts` (chips, disclaimers,
