@@ -1,0 +1,22 @@
+{
+  "book": "main",
+  "number": 312,
+  "title_he": "אֲנִי מַחֲכֶה לְךָ וּמְצַפֶּה לְךָ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אֲנִי מַחֲכֶה לְךָ וּמְצַפֶּה לְךָ",
+        "וְתִקְוָתִי וְכִסּוּפִי שַׂמְתִּים בְּךָ",
+        "לֹא בָּאֲנָשִׁים וְלֹא בַמָּמוֹן",
+        "וְלֹא בַיְּכֹלֶת וְלֹא בַגְּבוּרָה",
+        "לְבַדְּךָ יְדִידִי מִשְׁעָנִי עָלֶיךָ",
+        "לְבַדְּךָ תַּעַזְרֵנִי וְתָרִים רֹאשִׁי",
+        "וְתִשְׁמֹר זְכוּתִי זֹאת אַתָּה יְשׁוּעָתִי"
+      ]
+    }
+  ],
+  "review": [
+    "Egyptian colloquial hymn of waiting; rendered in liturgical Hebrew. Source line 1:6 has an unmatched opening parenthesis — omitted per the no-parentheses house rule, text translated by meaning. כִּסּוּפִים for أمل per glossary. No chorus field."
+  ]
+}
