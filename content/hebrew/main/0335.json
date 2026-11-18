@@ -1,0 +1,21 @@
+{
+  "book": "main",
+  "number": 335,
+  "title_he": "הָאוֹתוֹת וְהַפְּלָאוֹת אֲשֶׁר עָשָׂה",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "הָאוֹתוֹת וְהַפְּלָאוֹת אֲשֶׁר עָשָׂה",
+        "עִמִּי אֵל עֶלְיוֹן",
+        "טוֹב בְּעֵינַי לְסַפֵּר עֲלֵיהֶן",
+        "אוֹתוֹתָיו מַה־גְּדֹלוֹת וּפְלָאָיו מַה־חֲזָקוֹת",
+        "מַלְכוּתוֹ מַלְכוּת עוֹלָמִים",
+        "וְשָׁלְטָנוֹ לְדוֹר וָדוֹר"
+      ]
+    }
+  ],
+  "review": [
+    "No chorus field. Single six-line stanza. The Arabic's parenthesised response lines (1:2, 1:4) are kept as printed lines with the parentheses dropped per house style; the short 1:2 stays short. \"معي الله العلي\" rendered \"עִמִּי אֵל עֶלְיוֹן\"."
+  ]
+}
