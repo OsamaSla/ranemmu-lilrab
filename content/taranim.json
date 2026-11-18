@@ -30850,15 +30850,6 @@
     {
      "label": "1",
      "lines": [
-      "يَا حَبِيبِي يَا فِدَائِي",
-      "يَا طَبِيبِي يَا دَوَائِي",
-      "يَا حَيَاتِي يَا غِذَائِي",
-      "يَا هَنَاءَ الرُّوحِ يَا رَبِّي يَسُوع"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "رَبِّي فِي حِضْنِكَ رُوحِي تَسْتَرِيحُ تَهْدَأُ",
       "إِذْ فَدَيْتَ الرُّوحَ بِالدَّمِ الْكَرِيم",
       "يَا حَبِيبَ الْقَلْبِ رُوحِي فِيكَ دَوْمًا تَهْنَأُ",
@@ -30866,7 +30857,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "يَا حَبِيبِي يَا فِدَائِي",
+      "يَا طَبِيبِي يَا دَوَائِي",
+      "يَا حَيَاتِي يَا غِذَائِي",
+      "يَا هَنَاءَ الرُّوحِ يَا رَبِّي يَسُوع"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "حَامِ عَنِّي يَوْمَ تَأْتِي الرِّيحُ بِالْمَوْجِ الْعَنِيف",
       "فِي ظَلامِ اللَّيْلِ رَبِّي وَاحْمِنِي",
@@ -30875,7 +30876,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "وَجْهُكَ الْمُشْرِقُ بِالنُّورِ ضِيَائِي يَا حَبِيب",
       "وَعَزَاءُ الرُّوحِ فِي دُنْيَا الْعَنَا",
@@ -30890,15 +30891,6 @@
     {
      "label": "1",
      "lines": [
-      "O my Beloved, my Ransom",
-      "My Doctor, my Cure",
-      "My Life, my Food",
-      "O my souls bliss, my Lord Jesus"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Lord, in Your bosom my spirit rests, calms",
       "Since You ransomed my soul with precious blood",
       "O Hearts Beloved, my soul in You ever delights",
@@ -30906,7 +30898,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "O my Beloved, my Ransom",
+      "My Doctor, my Cure",
+      "My Life, my Food",
+      "O my souls bliss, my Lord Jesus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Guard me when the wind comes with violent waves",
       "In nights darkness, Lord, protect me",
@@ -30915,7 +30917,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Your radiant face is my light, O Beloved",
       "My souls comfort in toils world",
@@ -30929,15 +30931,6 @@
     {
      "label": "1",
      "lines": [
-      "O mein Geliebter, mein Lösegeld",
-      "Mein Arzt, meine Arznei",
-      "Mein Leben, meine Speise",
-      "O meiner Seele Wonne, mein Herr Jesus"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Herr, in deinem Schoß rastet, beruhigt sich meine Seele",
       "Da du erlöstest meine Seele mit teurem Blut",
       "O Herzens Geliebter, meine Seele in dir ergötzt sich allezeit",
@@ -30945,7 +30938,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "O mein Geliebter, mein Lösegeld",
+      "Mein Arzt, meine Arznei",
+      "Mein Leben, meine Speise",
+      "O meiner Seele Wonne, mein Herr Jesus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Behüte mich, wenn der Wind kommt mit heftigen Wogen",
       "In der Nacht Finsternis, Herr, schütze mich",
@@ -30954,7 +30957,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Dein strahlendes Antlitz ist mein Licht, o Geliebter",
       "Meiner Seele Trost in der Mühsal Welt",
@@ -30968,15 +30971,6 @@
     {
      "label": "1",
      "lines": [
-      "הוֹי דּוֹדִי, הוֹי כָפְרִי",
-      "הוֹי רֹפְאִי, הוֹי מַרְפְּאִי",
-      "הוֹי חַיַּי, הוֹי מַאֲכָלִי",
-      "הוֹי שְׂשׂוֹן הַנֶּפֶשׁ, הוֹי אֲדֹנִי יֵשׁוּעַ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אֲדֹנִי, בְּחֵיקְךָ רוּחִי תָּנוּחַ וְתִשְׁקֹט",
       "כִּי גָאַלְתָּ הַנֶּפֶשׁ בְּדָם יָקָר",
       "הוֹי חֲבִיב הַלֵּב, נַפְשִׁי בְךָ תָּמִיד תִּתְעַנָּג",
@@ -30984,7 +30978,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "הוֹי דּוֹדִי, הוֹי כָפְרִי",
+      "הוֹי רֹפְאִי, הוֹי מַרְפְּאִי",
+      "הוֹי חַיַּי, הוֹי מַאֲכָלִי",
+      "הוֹי שְׂשׂוֹן הַנֶּפֶשׁ, הוֹי אֲדֹנִי יֵשׁוּעַ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "גְּנֹן־נָא עָלַי בְּעֵת יָבוֹא הָרוּחַ בְּגַלִּים עַזִּים",
       "בַּחֲשֵׁכַת לַיְלָה, אֲדֹנִי, גְּנֹן",
@@ -30993,7 +30997,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "פָּנֶיךָ הַמְּאִירִים בָּאוֹר הֵם אוֹרִי, הוֹי דּוֹדִי",
       "וְנֶחָמַת הָרוּחַ בְּעוֹלָם הֶעָמָל",
@@ -31023,20 +31027,21 @@
     {
      "label": "1",
      "lines": [
-      "سُرُور سُرُور نَصِيبِي فِي الْحَيَاه",
-      "سَلَام سَلَام فَقِسْمَتِي الْإلٰه"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "الرَّبُّ قِسْمَتِي حَظِّي وَمُنْيَتِي",
       "مِنْهُ تَفِيضُ كَأْسِي فَهوَ نَصِيبُ نَفْسِي",
       "قَابِضُ قُرْعَتِي"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "سُرُور سُرُور نَصِيبِي فِي الْحَيَاه",
+      "سَلَام سَلَام فَقِسْمَتِي الْإلٰه"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "قَدْ صِرْتَ لِي النَّصِيب يَا سَيِّدِي الْحَبِيب",
       "فَالْإرْثُ لِي شَهِيٌّ وَحَسَنٌ بَهِيٌّ",
@@ -31044,7 +31049,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "الرَّبُّ كُلَّ حِين مَعِي عَنِ الْيَمِين",
       "لِذَا يُسَرُّ قَلْبِي مُبْتَهِجًا بِالرَّبِّ",
@@ -31052,7 +31057,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "وَعِنْدَ الاِنْطِلَاق أَسْكُنُ فِي اطْمِئْنَان",
       "أَرْقُدُ فِي السَّلَامَه عَلَى رَجَا الْقِيَامَه",
@@ -31066,20 +31071,21 @@
     {
      "label": "1",
      "lines": [
-      "Joy, joy, my portion in life",
-      "Peace, peace, God is my lot"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "The Lord is my Portion, my luck and my wish",
       "From Him my cup overflows, He is my souls Portion",
       "Grasping my lot"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Joy, joy, my portion in life",
+      "Peace, peace, God is my lot"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "You became my Portion, my beloved Master",
       "My heritage is sweet, fair, radiant",
@@ -31087,7 +31093,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "The Lord is with me ever, at my right hand",
       "Therefore my heart rejoices, exulting in the Lord",
@@ -31095,7 +31101,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "At departing I dwell in assurance",
       "Sleeping in peace, hoping the rising",
@@ -31108,20 +31114,21 @@
     {
      "label": "1",
      "lines": [
-      "Freude, Freude, mein Teil im Leben",
-      "Friede, Friede, Gott ist mein Los"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Der Herr ist mein Teil, mein Glück und mein Wunsch",
       "Von ihm fließt über mein Becher, er ist meiner Seele Teil",
       "Fassend mein Los"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Freude, Freude, mein Teil im Leben",
+      "Friede, Friede, Gott ist mein Los"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Du wardst mir das Teil, mein geliebter Herr",
       "Denn das Erbe ist mir süß und herrlich und strahlend",
@@ -31129,7 +31136,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Der Herr ist allezeit mit mir, zu meiner Rechten",
       "Darum freut sich mein Herz, jauchzend im Herrn",
@@ -31137,7 +31144,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Und beim Scheiden wohne ich in Zuversicht",
       "Schlafend in Frieden, hoffend das Auferstehen",
@@ -31150,20 +31157,21 @@
     {
      "label": "1",
      "lines": [
-      "שָׂשׂוֹן שָׂשׂוֹן, חֶלְקִי בַּחַיִּים",
-      "שָׁלוֹם שָׁלוֹם, כִּי אֱלֹהִים הוּא גוֹרָלִי"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אֲדֹנָי הוּא חֶלְקִי, גּוֹרָלִי וְחֶפְצִי",
       "מִמֶּנּוּ יִשְׁפַּע כּוֹסִי, כִּי־הוּא נַחֲלַת נַפְשִׁי",
       "תּוֹמֵךְ גּוֹרָלִי"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "שָׂשׂוֹן שָׂשׂוֹן, חֶלְקִי בַּחַיִּים",
+      "שָׁלוֹם שָׁלוֹם, כִּי אֱלֹהִים הוּא גוֹרָלִי"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "הָיִיתָ לִי לְחֶלְקִי, אֲדֹנִי הֶחָבִיב",
       "כִּי נַחֲלָתִי מְתוּקָה, טוֹבָה וְזֹהֶרֶת",
@@ -31171,7 +31179,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "אֲדֹנָי אִתִּי תָמִיד, לִימִינִי",
       "עַל־כֵּן יִשְׂמַח לִבִּי, יָגִיל בַּאֲדֹנָי",
@@ -31179,7 +31187,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "וּבְעֵת הַנְּסִיעָה אֶשְׁכֹּן בְּשַׁלְוָה",
       "אֶשְׁכַּב בְּשָׁלוֹם, עַל־תִּקְוַת הַתְּקוּמָה",
@@ -31805,15 +31813,6 @@
     {
      "label": "1",
      "lines": [
-      "سَيِّدِي مَاذَا تُرِيد؟",
-      "اِهْدِنِي حَيْثُ تُرِيد",
-      "إِنَّنِي لَسْتُ أُرِيد",
-      "غَيْرَ فِعْلِ مَا تُرِيد"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "سَيِّدِي نَفْسِي لَدَيْك",
       "عِنْدَ مَوْطِئ قَدَمَيْك",
       "وَحَيَاتِي فِي يَدَيْك",
@@ -31821,7 +31820,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "سَيِّدِي مَاذَا تُرِيد؟",
+      "اِهْدِنِي حَيْثُ تُرِيد",
+      "إِنَّنِي لَسْتُ أُرِيد",
+      "غَيْرَ فِعْلِ مَا تُرِيد"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "رَبِّي هَبْنِي أَنْ أَرَاك",
       "كَيْ أَسِيرَ فِي خُطَاك",
@@ -31836,15 +31845,6 @@
     {
      "label": "1",
      "lines": [
-      "Master, what do You want",
-      "Guide me where You will",
-      "I want nothing",
-      "But doing what You want"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Master, my soul is with You",
       "At Your feet's footstool",
       "My life is in Your hands",
@@ -31852,7 +31852,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Master, what do You want",
+      "Guide me where You will",
+      "I want nothing",
+      "But doing what You want"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Lord, grant me to see You",
       "Walking in Your steps",
@@ -31866,15 +31876,6 @@
     {
      "label": "1",
      "lines": [
-      "Meister, was willst du",
-      "Leite mich, wohin du willst",
-      "Ich will nichts",
-      "Als zu tun, was du willst"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Meister, meine Seele ist bei dir",
       "Zu deiner Füße Schemel",
       "Mein Leben ist in deinen Händen",
@@ -31882,7 +31883,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Meister, was willst du",
+      "Leite mich, wohin du willst",
+      "Ich will nichts",
+      "Als zu tun, was du willst"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Herr, gewähre mir, dich zu sehen",
       "Wandelnd in deinen Schritten",
@@ -31896,15 +31907,6 @@
     {
      "label": "1",
      "lines": [
-      "אֲדֹנִי, מֶה־תִּרְצֶה",
-      "נְחֵנִי אֶל־תִּרְצֶה",
-      "לֹא אֶחְפֹּץ דָּבָר כִּי",
-      "אִם־לַעֲשׂוֹת רְצוֹנְךָ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אֲדֹנִי, נַפְשִׁי לָךְ",
       "עַל־הֲדֹם רַגְלֶיךָ",
       "וְחַיַּי בְּיָדֶיךָ",
@@ -31912,7 +31914,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "אֲדֹנִי, מֶה־תִּרְצֶה",
+      "נְחֵנִי אֶל־תִּרְצֶה",
+      "לֹא אֶחְפֹּץ דָּבָר כִּי",
+      "אִם־לַעֲשׂוֹת רְצוֹנְךָ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "הַרְאֵנִי נָא פָנֶיךָ",
       "לָלֶכֶת בְּעִקְּבוֹתֶיךָ",
@@ -33017,17 +33029,6 @@
     {
      "label": "1",
      "lines": [
-      "يَوْمُ اللِّقَاءِ فِيهِ تَفْرَحُ الْقُلُوب",
-      "يَوْمُ اللِّقَاءِ فِيهِ يَنْقَضِي النَّحِيب",
-      "وَأَحْلَى مَا فِيهِ نَرَى وَجْهَ يَسُوع",
-      "يَوْمُ اللِّقَاءِ أَحْلَى أَيَّامِ الْوُجُود",
-      "يَوْمُ اللِّقَاءِ نَدْخُلُ الْعُرْسَ الْمَجِيد",
-      "وَأَحْلَى مَا فِيهِ نَرَى وَجْهَ يَسُوع"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "يَا رَأْسَنَا الْغَالِي لَقَدْ زَادَ الْحَنِين",
       "أَنْ يَأْتِي يَوْمٌ فِيهِ تُنْهِي الاِغْتِرَاب",
       "فَشَعْبُكَ عَلَى رَجَاءٍ كُلَّ حِين",
@@ -33035,7 +33036,19 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "يَوْمُ اللِّقَاءِ فِيهِ تَفْرَحُ الْقُلُوب",
+      "يَوْمُ اللِّقَاءِ فِيهِ يَنْقَضِي النَّحِيب",
+      "وَأَحْلَى مَا فِيهِ نَرَى وَجْهَ يَسُوع",
+      "يَوْمُ اللِّقَاءِ أَحْلَى أَيَّامِ الْوُجُود",
+      "يَوْمُ اللِّقَاءِ نَدْخُلُ الْعُرْسَ الْمَجِيد",
+      "وَأَحْلَى مَا فِيهِ نَرَى وَجْهَ يَسُوع"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "هُنَاكَ لاَ يَكُونُ ضَعْفٌ فِي السُّجُود",
       "حِينَ نَرَى الْأَمْجَادَ فِي وَجْهِ الْحَبِيب",
@@ -33044,7 +33057,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "هُنَاكَ نُهْدِي كُلَّ شُكْرٍ وَمَدِيح",
       "لِمَنْ فَدَانَا مِنْ هَلَاكٍ فِي الْجَحِيم",
@@ -33059,17 +33072,6 @@
     {
      "label": "1",
      "lines": [
-      "Meeting day, hearts rejoice therein",
-      "Meeting day, wailing ends therein",
-      "Its sweetest, we see Jesus face",
-      "Meeting day, existences sweetest day",
-      "Meeting day, we enter the glorious wedding",
-      "Its sweetest, we see Jesus face"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "O our dear Head, longing has grown",
       "For the day You end the exile",
       "Your people ever hope",
@@ -33077,7 +33079,19 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Meeting day, hearts rejoice therein",
+      "Meeting day, wailing ends therein",
+      "Its sweetest, we see Jesus face",
+      "Meeting day, existences sweetest day",
+      "Meeting day, we enter the glorious wedding",
+      "Its sweetest, we see Jesus face"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "No weakness there in worship",
       "Beholding glories in the Beloveds face",
@@ -33086,7 +33100,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "There we give all thanks and praise",
       "To Him who ransomed us from hells ruin",
@@ -33100,17 +33114,6 @@
     {
      "label": "1",
      "lines": [
-      "Tag der Begegnung, Herzen freuen sich darin",
-      "Tag der Begegnung, Klagen endet darin",
-      "Und sein Süßestes, wir sehen Jesu Angesicht",
-      "Tag der Begegnung, des Daseins süßester Tag",
-      "Tag der Begegnung, wir gehen ein zur herrlichen Hochzeit",
-      "Und sein Süßestes, wir sehen Jesu Angesicht"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "O unser teures Haupt, die Sehnsucht wuchs",
       "Dass komme der Tag, da du endest die Fremde",
       "Dein Volk hofft allezeit",
@@ -33118,7 +33121,19 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Tag der Begegnung, Herzen freuen sich darin",
+      "Tag der Begegnung, Klagen endet darin",
+      "Und sein Süßestes, wir sehen Jesu Angesicht",
+      "Tag der Begegnung, des Daseins süßester Tag",
+      "Tag der Begegnung, wir gehen ein zur herrlichen Hochzeit",
+      "Und sein Süßestes, wir sehen Jesu Angesicht"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Keine Schwäche dort in Anbetung",
       "Schauend Herrlichkeiten in des Geliebten Antlitz",
@@ -33127,7 +33142,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Dort geben wir allen Dank und Preis",
       "Dem, der uns erlöste vom Höllenverderben",
@@ -33141,17 +33156,6 @@
     {
      "label": "1",
      "lines": [
-      "יוֹם הַפְּגִישָׁה אָז יָשִׂישׂ הַלֵּב",
-      "יוֹם הַפְּגִישָׁה יִכְלֶה הַנְּהִי",
-      "וּמָתוֹק מִכֹּל פְּנֵי יֵשׁוּעַ",
-      "יוֹם הַפְּגִישָׁה מָתוֹק מִיָּמִים",
-      "יוֹם הַפְּגִישָׁה נָבֹא בַחֲתֻנָּה",
-      "וּמָתוֹק מִכֹּל פְּנֵי יֵשׁוּעַ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "רֹאשֵׁנוּ הֶחָבִיב, רַב הַכִּסּוּף",
       "לַיּוֹם אֲשֶׁר־בּוֹ תִּכְלֶה נָדוּדֵנוּ",
       "עַמְּךָ לַתִּקְוָה יְחַכֶּה תָמִיד",
@@ -33159,7 +33163,19 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "יוֹם הַפְּגִישָׁה אָז יָשִׂישׂ הַלֵּב",
+      "יוֹם הַפְּגִישָׁה יִכְלֶה הַנְּהִי",
+      "וּמָתוֹק מִכֹּל פְּנֵי יֵשׁוּעַ",
+      "יוֹם הַפְּגִישָׁה מָתוֹק מִיָּמִים",
+      "יוֹם הַפְּגִישָׁה נָבֹא בַחֲתֻנָּה",
+      "וּמָתוֹק מִכֹּל פְּנֵי יֵשׁוּעַ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "שָׁם אֵין חֻלְשָׁה בַּהִשְׁתַּחֲוָיָה",
       "כִּי־נִרְאֶה כְּבוֹדוֹ בִּפְנֵי הֶחָבִיב",
@@ -33168,7 +33184,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "שָׁם נָשִׁיב כָּל־תּוֹדָה וָשֶׁבַח",
       "לְמִי שֶׁפְּדָנוּ מֵאֲבַדּוֹן שְׁאוֹל",
@@ -34829,15 +34845,6 @@
     {
      "label": "1",
      "lines": [
-      "يَا لَسَعْدِي بِالْحَبِيبِ",
-      "مَنْ فَدَانِي بِالصَّلِيبِ",
-      "قِسْمَتِي كَأْسِي نَصِيبِي",
-      "وَحَيَاتِي فِيهِ تَصْفُو بَلْ تَطِيب"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "يَا لَسَعْدِي عِنْدَمَا بِالرُّوحِ أَشْدُو رَافِعًا",
       "لَحْنَ حُبٍّ وَمَدِيحٍ رَائِعًا",
       "كَيْمَا تَسْمَعَ السَّمَا وَالْأَرْضُ تَرْنِيمِي لَهُ",
@@ -34845,7 +34852,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "يَا لَسَعْدِي بِالْحَبِيبِ",
+      "مَنْ فَدَانِي بِالصَّلِيبِ",
+      "قِسْمَتِي كَأْسِي نَصِيبِي",
+      "وَحَيَاتِي فِيهِ تَصْفُو بَلْ تَطِيب"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "يَا لَسَعْدِي عِنْدَمَا بِالرُّوحِ أَدْنُو نَحْوَكَ",
       "وَصَلَاتِي بِالْخُشُوعِ أَرْفَعُ",
@@ -34854,7 +34871,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "يَا لَسَعْدِي يَا لَسَعْدِي فَالْقَدِيرُ لِي أَبٌ",
       "وَيَسُوعُ لِي مُخَلِّصٌ كَرِيم",
@@ -34869,15 +34886,6 @@
     {
      "label": "1",
      "lines": [
-      "O my bliss in the Beloved",
-      "Who ransomed me on the cross",
-      "My lot, my cup, my portion",
-      "My life in Him is pure, indeed sweet"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "O my bliss when in the Spirit I chant, raising",
       "A lovely, wondrous tune of love and praise",
       "That heaven and earth may hear my hymn to Him",
@@ -34885,7 +34893,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "O my bliss in the Beloved",
+      "Who ransomed me on the cross",
+      "My lot, my cup, my portion",
+      "My life in Him is pure, indeed sweet"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "O my bliss when in the Spirit I draw near You",
       "My prayer reverently I raise",
@@ -34894,7 +34912,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "O my bliss, O my bliss, the Almighty is my Father",
       "Jesus is my gracious Savior",
@@ -34908,15 +34926,6 @@
     {
      "label": "1",
      "lines": [
-      "O meine Wonne im Geliebten",
-      "Der mich erlöste am Kreuz",
-      "Mein Los, mein Becher, mein Teil",
-      "Und mein Leben in ihm ist lauter, ja süß"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "O meine Wonne, wenn im Geist ich singe, erhebend",
       "Eine liebliche, wunderbare Weise der Liebe und des Preises",
       "Dass Himmel und Erde hören mein Lied ihm",
@@ -34924,7 +34933,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "O meine Wonne im Geliebten",
+      "Der mich erlöste am Kreuz",
+      "Mein Los, mein Becher, mein Teil",
+      "Und mein Leben in ihm ist lauter, ja süß"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "O meine Wonne, wenn im Geist ich nahe dir",
       "Und mein Gebet ehrfürchtig ich erhebe",
@@ -34933,7 +34952,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "O meine Wonne, o meine Wonne, der Allmächtige ist mein Vater",
       "Und Jesus ist mir gnädiger Retter",
@@ -34947,15 +34966,6 @@
     {
      "label": "1",
      "lines": [
-      "מָה־אָשְׁרִי בַּדּוֹד",
-      "אֲשֶׁר־פְּדָנִי בַצְּלָב",
-      "חֶלְקִי כוֹסִי גוֹרָלִי",
-      "וְחַיַּי בּוֹ זַכִּים, אַף־מְתוּקִים"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "מָה־אָשְׁרִי כַּאֲשֶׁר בָּרוּחַ אָשִׁירָה",
       "זֶמֶר אַהֲבָה וּתְהִלָּה נִפְלָאָה",
       "לְמַעַן יִשְׁמַע שָׁמַיִם וָאֶרֶץ זְמִירָתִי",
@@ -34963,7 +34973,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "מָה־אָשְׁרִי בַּדּוֹד",
+      "אֲשֶׁר־פְּדָנִי בַצְּלָב",
+      "חֶלְקִי כוֹסִי גוֹרָלִי",
+      "וְחַיַּי בּוֹ זַכִּים, אַף־מְתוּקִים"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "מָה־אָשְׁרִי כַּאֲשֶׁר בָּרוּחַ אֶקְרָבָה",
       "וּתְפִלָּתִי בְּיִרְאָה אֶשָּׂאָה",
@@ -34972,7 +34992,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "מָה־אָשְׁרִי, מָה־אָשְׁרִי, כִּי שַׁדַּי הוּא אָבִי",
       "וְיֵשׁוּעַ מוֹשִׁיעִי הַנֶּדִיב",
@@ -35001,16 +35021,6 @@
     {
      "label": "1",
      "lines": [
-      "يَا جَمِيعَ الْمُؤْمِنِينَ حَمِّدُوهُ",
-      "بِابْتِهَاجِ الْقَلْبِ دَوْمًا وَاعْبُدُوهُ",
-      "وَاذْكُرُوا فَضْلًا لِرَبِّي رَدِّدُوهُ",
-      "هَاتِفِينَ كُلَّ حِينٍ مَجِّدُوهُ",
-      "بِالْمَسِيحِ يَعْظُمُ انْتِصَارُنَا"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "يَا يَسُوعُ كَوْكَبَ الصُّبْحِ الْمُنِير",
       "لِلْخَلَاصِ أَنْتَ صَانِعٌ قَدِير",
       "وَمُحَرِّرٌ مِنَ الْأَسْرِ الْأَسِير",
@@ -35019,7 +35029,18 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "يَا جَمِيعَ الْمُؤْمِنِينَ حَمِّدُوهُ",
+      "بِابْتِهَاجِ الْقَلْبِ دَوْمًا وَاعْبُدُوهُ",
+      "وَاذْكُرُوا فَضْلًا لِرَبِّي رَدِّدُوهُ",
+      "هَاتِفِينَ كُلَّ حِينٍ مَجِّدُوهُ",
+      "بِالْمَسِيحِ يَعْظُمُ انْتِصَارُنَا"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "بِانْتِظَارٍ أَرْتَجِي الرَّبَّ الْإِلٰه",
       "فَهوَ رَبٌّ سَامِعٌ مَنْ قَدْ دَعَاه",
@@ -35035,16 +35056,6 @@
     {
      "label": "1",
      "lines": [
-      "O all believers, praise Him",
-      "With joyful hearts ever worship Him",
-      "Recall your Lords favor, repeat it",
-      "Crying at all times, glorify Him",
-      "Through Christ great is our triumph"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "O Jesus, Morning Star so bright",
       "For salvation a mighty Maker",
       "Liberator of the bound captive",
@@ -35053,7 +35064,18 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "O all believers, praise Him",
+      "With joyful hearts ever worship Him",
+      "Recall your Lords favor, repeat it",
+      "Crying at all times, glorify Him",
+      "Through Christ great is our triumph"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "In waiting I hope in the Lord God",
       "He is a Lord who hears who called Him",
@@ -35068,16 +35090,6 @@
     {
      "label": "1",
      "lines": [
-      "O alle Gläubigen, preist ihn",
-      "Mit frohem Herzen allezeit betet ihn an",
-      "Und gedenkt eures Herrn Gnade, wiederholt sie",
-      "Rufend allezeit, verherrlicht ihn",
-      "Durch Christus groß ist unser Sieg"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "O Jesus, heller Morgenstern",
       "Zum Heil ein mächtiger Schöpfer",
       "Und Befreier des gefangenen Gefangenen",
@@ -35086,7 +35098,18 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "O alle Gläubigen, preist ihn",
+      "Mit frohem Herzen allezeit betet ihn an",
+      "Und gedenkt eures Herrn Gnade, wiederholt sie",
+      "Rufend allezeit, verherrlicht ihn",
+      "Durch Christus groß ist unser Sieg"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "In Warten harre ich des Herrn Gottes",
       "Denn er ist ein Herr, der hört, wer ihn rief",
@@ -35101,16 +35124,6 @@
     {
      "label": "1",
      "lines": [
-      "כָּל־הַמַּאֲמִינִים, הַלְלוּהוּ",
-      "בְּשִׂמְחַת לֵב עִבְדוּהוּ תָמִיד",
-      "זִכְרוּ חֶסֶד אֲדֹנֵינוּ וְשַׁנְּנוּהוּ",
-      "קוֹרְאִים בְּכָל־עֵת, כַּבְּדוּהוּ",
-      "בַּמָּשִׁיחַ יִגְדַּל נִצְחוֹנֵנוּ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "יֵשׁוּעַ, כּוֹכַב הַבֹּקֶר הַמֵּאִיר",
       "לַיְשׁוּעָה אַתָּה יוֹצֵר גִּבּוֹר",
       "וּמְשַׁחְרֵר אֶת־הָאָסִיר מִמַּסְגֵּר",
@@ -35119,7 +35132,18 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "כָּל־הַמַּאֲמִינִים, הַלְלוּהוּ",
+      "בְּשִׂמְחַת לֵב עִבְדוּהוּ תָמִיד",
+      "זִכְרוּ חֶסֶד אֲדֹנֵינוּ וְשַׁנְּנוּהוּ",
+      "קוֹרְאִים בְּכָל־עֵת, כַּבְּדוּהוּ",
+      "בַּמָּשִׁיחַ יִגְדַּל נִצְחוֹנֵנוּ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "בְּיִחוּל אֲקַוֶּה לַאדֹנָי אֱלֹהִים",
       "כִּי הוּא אֲדֹנָי שׁוֹמֵעַ קוֹרְאָיו",
@@ -35140,15 +35164,6 @@
     {
      "label": "1",
      "lines": [
-      "يَسْتَجِيبُ يَسْتَجِيب",
-      "يَسْتَجِيبُ طَالِبِيه",
-      "لَوْ تَأَنَّى يَسْتَجِيب",
-      "مُنْصِفًا لِمُخْتَارِيه"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "مَنْ يُصَلِّي مُؤْمِنًا",
       "بِيَسُوعَ لَا يَخِيب",
       "بِاسْمِهِ الْآبُ لَنَا",
@@ -35156,7 +35171,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "يَسْتَجِيبُ يَسْتَجِيب",
+      "يَسْتَجِيبُ طَالِبِيه",
+      "لَوْ تَأَنَّى يَسْتَجِيب",
+      "مُنْصِفًا لِمُخْتَارِيه"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "اسْأَلُوا مِنْهُ تُعْطَوْا",
       "فَهوَ يُعْطِي مَنْ قَصَد",
@@ -35165,7 +35190,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "اقْرَعُوا الْبَابَ الرَّفِيع",
       "فَهوَ يَفْتَحُ لَكُمْ",
@@ -35174,7 +35199,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "اطْرَحُوا الْحِمْلَ عَلَيْه",
       "مِنْ بَلَايَا وَهُمُوم",
@@ -35183,7 +35208,7 @@
      ]
     },
     {
-     "label": "6",
+     "label": "5",
      "lines": [
       "فَلْنَثِقْ فِي وَعْدِ الْآب",
       "بِإِيمَانٍ رَاسِخِين",
@@ -35198,15 +35223,6 @@
     {
      "label": "1",
      "lines": [
-      "He answers, He answers",
-      "He answers His seekers",
-      "Though He tarry, He answers",
-      "Just to His chosen"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Who prays believing",
       "In Jesus never fails",
       "In His name the Father to us",
@@ -35214,7 +35230,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "He answers, He answers",
+      "He answers His seekers",
+      "Though He tarry, He answers",
+      "Just to His chosen"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Ask of Him, you receive",
       "He gives who purposed",
@@ -35223,7 +35249,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Knock the lofty Door",
       "He opens to you",
@@ -35232,7 +35258,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Cast your load on Him",
       "Of woes and cares",
@@ -35241,7 +35267,7 @@
      ]
     },
     {
-     "label": "6",
+     "label": "5",
      "lines": [
       "Let us trust the Fathers promise",
       "In steadfast faith",
@@ -35255,15 +35281,6 @@
     {
      "label": "1",
      "lines": [
-      "Er erhört, er erhört",
-      "Er erhört seine Sucher",
-      "Ob er verziehe, er erhört",
-      "Gerecht seinen Erwählten"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Wer betet gläubig",
       "An Jesus, fehlt nimmer",
       "In seinem Namen der Vater uns",
@@ -35271,7 +35288,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Er erhört, er erhört",
+      "Er erhört seine Sucher",
+      "Ob er verziehe, er erhört",
+      "Gerecht seinen Erwählten"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Bittet von ihm, ihr empfangt",
       "Er gibt, der sich vornahm",
@@ -35280,7 +35307,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Klopft an die erhabene Tür",
       "Er öffnet euch",
@@ -35289,7 +35316,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Werft eure Last auf ihn",
       "Von Wehen und Sorgen",
@@ -35298,7 +35325,7 @@
      ]
     },
     {
-     "label": "6",
+     "label": "5",
      "lines": [
       "Lasst uns trauen des Vaters Verheißung",
       "In festem Glauben",
@@ -35312,15 +35339,6 @@
     {
      "label": "1",
      "lines": [
-      "יַעֲנֶה, יַעֲנֶה",
-      "יַעֲנֶה אֶת־דֹּרְשָׁיו",
-      "אִם־יִתְמַהְמַהּ יַעֲנֶה",
-      "בְּצֶדֶק לִבְחִירָיו"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "מִי שֶׁיִּתְפַּלֵּל מַאֲמִין",
       "בְּיֵשׁוּעַ לֹא יֵבוֹשׁ",
       "בִּשְׁמוֹ הָאָב לָנוּ",
@@ -35328,7 +35346,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "יַעֲנֶה, יַעֲנֶה",
+      "יַעֲנֶה אֶת־דֹּרְשָׁיו",
+      "אִם־יִתְמַהְמַהּ יַעֲנֶה",
+      "בְּצֶדֶק לִבְחִירָיו"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "שַׁאֲלוּ וְתִנָּתֵן לָכֶם",
       "הוּא נוֹתֵן לַמְבַקֵּשׁ",
@@ -35337,7 +35365,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "דִּפְקוּ דֶּלֶת הָרוֹמָה",
       "וְהִיא תִּפָּתַח לָכֶם",
@@ -35346,7 +35374,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "הַשְׁלִיכוּ עָלָיו מַשָּׂא",
       "מִצָּרוֹת וּדְאָגוֹת",
@@ -35355,7 +35383,7 @@
      ]
     },
     {
-     "label": "6",
+     "label": "5",
      "lines": [
       "נִבְטַח בְּהַבְטָחַת אָב",
       "בֶּאֱמוּנָה יַצִּיבָה",
@@ -35385,20 +35413,21 @@
      "label": "1",
      "lines": [
       "لَمْ تَرَ عَيْنٌ إِلٰهًا غَيْرَكَ",
-      "لَمْ تَرَ عَيْنٌ إِلٰهًا غَيْرَكَ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
-      "لَمْ تَرَ عَيْنٌ إِلٰهًا غَيْرَكَ",
       "يَفْتَحُ السِّجْنَ وَيَنْزِعُ الْقُيُود",
       "وَيَشُقُّ الْغَمْرَ فَإِذَا طَرِيق",
       "لَا تَعُوقُهُ جِبَالٌ أَوْ سُدُود"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "لَمْ تَرَ عَيْنٌ إِلٰهًا غَيْرَكَ",
+      "لَمْ تَرَ عَيْنٌ إِلٰهًا غَيْرَكَ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "مَنْ سِوَاكَ يَتَرَاءَى فِي الْأَتُون",
       "أَوْ يُنَجِّي النَّفْسَ مِنْ جُبِّ الْأُسُود",
@@ -35407,7 +35436,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "كَمْ تَأَلَّمْتَ عَلَى عُودِ الصَّلِيب",
       "كَيْ تُعِدَّنِي لِلْمَجْدِ يَا وَدُود",
@@ -35423,20 +35452,21 @@
      "label": "1",
      "lines": [
       "No eye has seen a God but You",
-      "No eye has seen a God but You"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
-      "No eye has seen a God but You",
       "Opening prisons, removing chains",
       "Parting the depths, behold, a way",
       "No mountains or dams hinder"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "No eye has seen a God but You",
+      "No eye has seen a God but You"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Who but You appears in the furnace",
       "Saving souls from the lions den",
@@ -35445,7 +35475,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "How You suffered on the crosss wood",
       "Preparing me for glory, O Tender",
@@ -35460,20 +35490,21 @@
      "label": "1",
      "lines": [
       "Kein Auge sah einen Gott außer dir",
-      "Kein Auge sah einen Gott außer dir"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
-      "Kein Auge sah einen Gott außer dir",
       "Öffnend Gefängnisse, entfernend Ketten",
       "Und spaltend die Tiefen, siehe, ein Weg",
       "Keine Berge oder Dämme hindern"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Kein Auge sah einen Gott außer dir",
+      "Kein Auge sah einen Gott außer dir"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Wer außer dir erscheint im Ofen",
       "Rettend Seelen aus der Löwen Grube",
@@ -35482,7 +35513,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Wie littest du an des Kreuzes Holz",
       "Bereitend mich zur Herrlichkeit, o Zärtlicher",
@@ -35497,20 +35528,21 @@
      "label": "1",
      "lines": [
       "עַיִן לֹא־רָאֲתָה אֵל זוּלָתֶךָ",
-      "עַיִן לֹא־רָאֲתָה אֵל זוּלָתֶךָ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
-      "עַיִן לֹא־רָאֲתָה אֵל זוּלָתֶךָ",
       "פּוֹתֵחַ סֹהַר וּמַתִּיר אֲסוּרִים",
       "בּוֹקֵעַ מְצוּלָה וַיָּשֶׂם דָּרֶךְ",
       "לֹא יִבְצְרוּהוּ הָרִים אוֹ סוּלוֹלוֹת"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "עַיִן לֹא־רָאֲתָה אֵל זוּלָתֶךָ",
+      "עַיִן לֹא־רָאֲתָה אֵל זוּלָתֶךָ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "מִי כָמוֹךָ נִרְאֶה בְּתוֹךְ כִּבְשַׁן אֵשׁ",
       "אוֹ מוֹשִׁיעַ נֶפֶשׁ מִבּוֹר אֲרָיוֹת",
@@ -35519,7 +35551,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "כַּמָּה עֻנֵּיתָ עַל־עֵץ הַצְּלָב",
       "לְהָכִינֵנִי לַכָּבוֹד, הוֹי יָדִיד",
@@ -35822,16 +35854,6 @@
     {
      "label": "1",
      "lines": [
-      "كَمْ أَنْتَ حُلْوٌ لِحَيَاتِي يَا يَسُوع",
-      "أَبْهَجْتَ قَلْبِي وَمَسَحْتَ لِي الدُّمُوع",
-      "مَنْ لِي سِوَاكَ فِي السَّمَاءِ أَرْتَجِي",
-      "مَنْ مَعْكَ أَبْغِي أَوْ أُرِيدُ فِي الرُّبُوع",
-      "كَمْ أَنْتَ حُلْوٌ حُلْوٌ حُلْوٌ يَا يَسُوع"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "يَا رَبُّ مَا أَحْلَى الْحَيَاةَ قُرْبَكَ",
       "فَعِشْرَتِي بِشَخْصِكَ تَلَذُّ لِي",
       "فِي الْقُرْبِ مِنْكَ رَاحَتِي سَعَادَتِي",
@@ -35839,7 +35861,18 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "كَمْ أَنْتَ حُلْوٌ لِحَيَاتِي يَا يَسُوع",
+      "أَبْهَجْتَ قَلْبِي وَمَسَحْتَ لِي الدُّمُوع",
+      "مَنْ لِي سِوَاكَ فِي السَّمَاءِ أَرْتَجِي",
+      "مَنْ مَعْكَ أَبْغِي أَوْ أُرِيدُ فِي الرُّبُوع",
+      "كَمْ أَنْتَ حُلْوٌ حُلْوٌ حُلْوٌ يَا يَسُوع"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "فِي الضِّيقِ كُنْتَ عَوْنًا لِي وَنَاصِرًا",
       "فِي شِدَّةِ الْآلَامِ كُنْتَ قَادِرًا",
@@ -35848,7 +35881,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "عَرَّفْتَنِي حُبَّكَ رَبِّي كَمْ يَكُون",
       "أَخْجَلْتَنِي إِذْ إِنَّ حُبِّي لَا يَدُوم",
@@ -35863,16 +35896,6 @@
     {
      "label": "1",
      "lines": [
-      "How sweet You are to my life, O Jesus",
-      "You gladdened my heart, wiping my tears",
-      "Whom but You in heaven do I await",
-      "Whom with You do I seek or want in the lands",
-      "How sweet, sweet, sweet You are, O Jesus"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Lord, how sweet is life near You",
       "My company with Your person delights me",
       "Near You are my rest and bliss",
@@ -35880,7 +35903,18 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "How sweet You are to my life, O Jesus",
+      "You gladdened my heart, wiping my tears",
+      "Whom but You in heaven do I await",
+      "Whom with You do I seek or want in the lands",
+      "How sweet, sweet, sweet You are, O Jesus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "In straits You were my Help and Champion",
       "In pains grip You were able",
@@ -35889,7 +35923,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "You showed me Your love, Lord, how great",
       "Shaming me, for my love does not last",
@@ -35903,16 +35937,6 @@
     {
      "label": "1",
      "lines": [
-      "Wie süß bist du meinem Leben, o Jesus",
-      "Du erfreutest mein Herz, wischend mir die Tränen",
-      "Wen außer dir im Himmel erwarte ich",
-      "Wen mit dir suche oder will ich in den Landen",
-      "Wie süß, süß, süß bist du, o Jesus"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Herr, wie süß ist das Leben nahe dir",
       "Denn mein Umgang mit deiner Person ergötzt mich",
       "Nahe dir sind meine Ruhe und Wonne",
@@ -35920,7 +35944,18 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Wie süß bist du meinem Leben, o Jesus",
+      "Du erfreutest mein Herz, wischend mir die Tränen",
+      "Wen außer dir im Himmel erwarte ich",
+      "Wen mit dir suche oder will ich in den Landen",
+      "Wie süß, süß, süß bist du, o Jesus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "In der Bedrängnis warst du mir Hilfe und Streiter",
       "In der Schmerzen Griff warst du mächtig",
@@ -35929,7 +35964,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Du zeigtest mir deine Liebe, Herr, wie groß",
       "Beschämend mich, denn meine Liebe dauert nicht",
@@ -35943,16 +35978,6 @@
     {
      "label": "1",
      "lines": [
-      "מַה־מָּתוֹק אַתָּה לְחַיַּי, יֵשׁוּעַ",
-      "שִׂמַּחְתָּ לִבִּי וּמָחִיתָ דִּמְעוֹתָי",
-      "מִי־לִי בַשָּׁמַיִם זוּלָתְךָ אֲיַחֵל",
-      "וּמִי עִמְּךָ אֶחְפֹּץ בָּאָרֶץ",
-      "מַה־מָּתוֹק, מָתוֹק, מָתוֹק אַתָּה, יֵשׁוּעַ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אֲדֹנָי, מַה־מָּתוֹק הַחַיִּים בְּקִרְבָתְךָ",
       "כִּי חֶבְרָתִי עִם־אִישׁוּתְךָ תַּעֲרֹב לִי",
       "בְּקִרְבָתְךָ מְנוּחָתִי וְאָשְׁרִי",
@@ -35960,7 +35985,18 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "מַה־מָּתוֹק אַתָּה לְחַיַּי, יֵשׁוּעַ",
+      "שִׂמַּחְתָּ לִבִּי וּמָחִיתָ דִּמְעוֹתָי",
+      "מִי־לִי בַשָּׁמַיִם זוּלָתְךָ אֲיַחֵל",
+      "וּמִי עִמְּךָ אֶחְפֹּץ בָּאָרֶץ",
+      "מַה־מָּתוֹק, מָתוֹק, מָתוֹק אַתָּה, יֵשׁוּעַ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "בַּצָּרָה הָיִיתָ עֶזְרָתִי וְנִצְחוֹנִי",
       "בְּעֹצֶם מַכְאוֹב הָיִיתָ יָכוֹל וְעוֹזֵר",
@@ -35969,7 +36005,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "הוֹדַעְתַּנִי אַהֲבָתְךָ כַּמָּה רַבָּה",
       "הִכְלַמְתַּנִי כִּי אַהֲבָתִי לֹא תֵחָלֵף",
@@ -36991,15 +37027,6 @@
     {
      "label": "1",
      "lines": [
-      "يَا مُنَجِّي يَا مُنَجِّي",
-      "أَنْتَ سُلْوَانِي",
-      "ثَغْرُكَ الْبَسَّامُ يَشْفِي",
-      "ضَعْفَ إِيمَانِي"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "سَائِلٌ نُعْمَاكَ يَلْقَى",
       "يَا أَبَا الرَّأْفَه",
       "مِنْ لَدُنْ عَرْشِكَ حَالًا",
@@ -37007,7 +37034,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "يَا مُنَجِّي يَا مُنَجِّي",
+      "أَنْتَ سُلْوَانِي",
+      "ثَغْرُكَ الْبَسَّامُ يَشْفِي",
+      "ضَعْفَ إِيمَانِي"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "إِنَّمَا جُلُّ مُرَادِي",
       "وَجْهُكَ الْوَضَّاح",
@@ -37016,7 +37053,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "أَنْتَ يَا كُلَّ سُرُورِي",
       "مَنْبَعُ الْأَلْطَاف",
@@ -37031,15 +37068,6 @@
     {
      "label": "1",
      "lines": [
-      "O my Savior, O my Savior",
-      "You are my comfort",
-      "Your smiling face heals",
-      "My weak faith"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Asking Your grace finds",
       "O merciful Father",
       "From Your throne at once",
@@ -37047,7 +37075,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "O my Savior, O my Savior",
+      "You are my comfort",
+      "Your smiling face heals",
+      "My weak faith"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "My utmost wish",
       "Is Your radiant face",
@@ -37056,7 +37094,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "You are all my joy",
       "Graces Fountain",
@@ -37070,15 +37108,6 @@
     {
      "label": "1",
      "lines": [
-      "O mein Retter, o mein Retter",
-      "Du bist mein Trost",
-      "Dein lächelnd Antlitz heilt",
-      "Meinen schwachen Glauben"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Bittend deine Gnade findet",
       "O barmherziger Vater",
       "Von deinem Thron alsbald",
@@ -37086,7 +37115,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "O mein Retter, o mein Retter",
+      "Du bist mein Trost",
+      "Dein lächelnd Antlitz heilt",
+      "Meinen schwachen Glauben"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Denn mein höchster Wunsch",
       "Ist dein strahlend Antlitz",
@@ -37095,7 +37134,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Du bist all meine Freude",
       "Quell der Gnaden",
@@ -37109,15 +37148,6 @@
     {
      "label": "1",
      "lines": [
-      "הוֹי מוֹשִׁיעִי, הוֹי מוֹשִׁיעִי",
-      "אַתָּה נֶחָמָתִי",
-      "פָּנֶיךָ הַמְּאִירוֹת יִרְפְּאוּ",
-      "חֻלְשַׁת אֱמוּנָתִי"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "הַשּׁוֹאֵל חֶסֶד יִמְצָא",
       "הוֹי אֲב הָרַחֲמִים",
       "מִכִּסֵּא כְּבוֹדְךָ מִיָּד",
@@ -37125,7 +37155,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "הוֹי מוֹשִׁיעִי, הוֹי מוֹשִׁיעִי",
+      "אַתָּה נֶחָמָתִי",
+      "פָּנֶיךָ הַמְּאִירוֹת יִרְפְּאוּ",
+      "חֻלְשַׁת אֱמוּנָתִי"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "אַךְ־כָּל־חֶפְצִי הָעִקָּר",
       "פָּנֶיךָ הַבְּהִירִים",
@@ -37134,7 +37174,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "אַתָּה הוּא כָּל־שִׂמְחָתִי",
       "מְקוֹר כָּל־הַחֲסָדִים",
@@ -37154,15 +37194,6 @@
     {
      "label": "1",
      "lines": [
-      "أَشْكُرُ مَنْ أَحَبَّنِي",
-      "حُبًّا سَمَا عَجِيب",
-      "طَهُرْتُ إِذْ غَسَّلَنِي",
-      "دَمُ ذَاكَ الْحَبِيب"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "مَحَبَّةُ اللهِ سَمَتْ",
       "مَا قَاسَهَا عَقْلٌ فَطِين",
       "فَوْقَ النُّجُومِ ارْتَفَعَتْ",
@@ -37174,7 +37205,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "أَشْكُرُ مَنْ أَحَبَّنِي",
+      "حُبًّا سَمَا عَجِيب",
+      "طَهُرْتُ إِذْ غَسَّلَنِي",
+      "دَمُ ذَاكَ الْحَبِيب"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "لَوْ صَارَ حِبْرًا كُلُّ يَمّ",
       "وَوَرَقًا كُلُّ الْفَلَك",
@@ -37193,15 +37234,6 @@
     {
      "label": "1",
      "lines": [
-      "I thank Him who loved me",
-      "With love sublime, wondrous",
-      "I was cleansed when He washed me",
-      "The blood of that Beloved"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Gods love has soared",
       "No shrewd mind has measured it",
       "Above the stars it rose",
@@ -37213,7 +37245,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "I thank Him who loved me",
+      "With love sublime, wondrous",
+      "I was cleansed when He washed me",
+      "The blood of that Beloved"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "If every sea became ink",
       "And every sky paper",
@@ -37231,15 +37273,6 @@
     {
      "label": "1",
      "lines": [
-      "Ich danke dem, der mich liebte",
-      "Mit Liebe erhaben, wunderbar",
-      "Gereinigt, da er mich wusch",
-      "Das Blut jenes Geliebten"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Gottes Liebe stieg empor",
       "Kein kluger Sinn hat sie gemessen",
       "Über die Sterne erhob sie sich",
@@ -37251,7 +37284,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Ich danke dem, der mich liebte",
+      "Mit Liebe erhaben, wunderbar",
+      "Gereinigt, da er mich wusch",
+      "Das Blut jenes Geliebten"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Würde jedes Meer zu Tinte",
       "Und jeder Himmel zu Papier",
@@ -37269,15 +37312,6 @@
     {
      "label": "1",
      "lines": [
-      "אוֹדֶה לְמִי שֶׁאֲהֵבַנִי",
-      "בְּאַהֲבָה רָמָה נִפְלֵאת",
-      "טָהַרְתִּי כִּי רְחָצַנִי",
-      "בְּדַם הַיָּדִיד הַהוּא"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אַהֲבַת אֵל נִשְׂגָּבָה",
       "לֹא מְדָדָהּ שֵׂכֶל עָרוּם",
       "מֵעַל כּוֹכָבִים עָלְתָה",
@@ -37289,7 +37323,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "אוֹדֶה לְמִי שֶׁאֲהֵבַנִי",
+      "בְּאַהֲבָה רָמָה נִפְלֵאת",
+      "טָהַרְתִּי כִּי רְחָצַנִי",
+      "בְּדַם הַיָּדִיד הַהוּא"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "אִם־כָּל־יָם יֵהָפֵךְ לִדְיוֹ",
       "וְכָל־שָׁמַיִם לִנְיָר",
@@ -37483,15 +37527,6 @@
     {
      "label": "1",
      "lines": [
-      "مَجْدًا لِمَنْ تَنَازَلَ",
-      "حَتَّى يُنِيرَ الْمَحْفَلَ",
-      "مَجْدًا لِمَنْ فِي وَسْطِنَا",
-      "مَجْدًا لِسَاكِنِ الْعُلَا"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "مَا أَبْهَى أَنْ نَجْتَمِعَ",
       "حَوْلَ الْحَبِيبِ لِلْمَدِيح",
       "وَحُبُّنَا حُبٌّ صَرِيح",
@@ -37499,7 +37534,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "مَجْدًا لِمَنْ تَنَازَلَ",
+      "حَتَّى يُنِيرَ الْمَحْفَلَ",
+      "مَجْدًا لِمَنْ فِي وَسْطِنَا",
+      "مَجْدًا لِسَاكِنِ الْعُلَا"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "هٰذَا سُرُورُ الْآبِ أَنْ",
       "نَقْصِدَ دَوْمًا مَجْدَهُ",
@@ -37508,7 +37553,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "وَسْطَ الْأَحِبَّا يَحْضُرُ",
       "بِالْبَرَكَاتِ يَأْمُرُ",
@@ -37517,7 +37562,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "فَهوَ حَبِيبُنَا الْغَنِيّ",
       "وَمِنْ غِنَاهُ نَغْتَنِي",
@@ -37532,15 +37577,6 @@
     {
      "label": "1",
      "lines": [
-      "Glory to Him who condescended",
-      "To enlighten the assembly",
-      "Glory to Him among us",
-      "Glory to heavens Dweller"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "How fair to gather",
       "Around the Beloved for praise",
       "Our love is candid love",
@@ -37548,7 +37584,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Glory to Him who condescended",
+      "To enlighten the assembly",
+      "Glory to Him among us",
+      "Glory to heavens Dweller"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "This is the Fathers joy, that",
       "We ever seek His glory",
@@ -37557,7 +37603,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Among loved ones He attends",
       "Commanding blessings",
@@ -37566,7 +37612,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "He is our rich Beloved",
       "From His riches we grow rich",
@@ -37580,15 +37626,6 @@
     {
      "label": "1",
      "lines": [
-      "Ehre dem, der sich herabließ",
-      "Zu erleuchten die Versammlung",
-      "Ehre dem unter uns",
-      "Ehre dem Himmels Bewohner"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Wie schön, zu versammeln",
       "Um den Geliebten zum Lob",
       "Und unsere Liebe ist aufrichtige Liebe",
@@ -37596,7 +37633,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Ehre dem, der sich herabließ",
+      "Zu erleuchten die Versammlung",
+      "Ehre dem unter uns",
+      "Ehre dem Himmels Bewohner"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Dies ist des Vaters Freude, dass",
       "Wir suchen immerdar seine Herrlichkeit",
@@ -37605,7 +37652,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Unter Geliebten weilt er",
       "Gebietend Segnungen",
@@ -37614,7 +37661,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Er ist unser reicher Geliebter",
       "Aus seinem Reichtum werden wir reich",
@@ -37628,15 +37675,6 @@
     {
      "label": "1",
      "lines": [
-      "כָּבוֹד לְמִי שֶׁהִשְׁפִּיל",
-      "לְהָאִיר אֶת־הַקָּהָל",
-      "כָּבוֹד לְמִי שֶׁבְּתוֹכֵנוּ",
-      "כָּבוֹד לְיוֹשֵׁב מְרוֹמִים"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "מַה־יָּפֶה כִּי נִקָּהֵל",
       "סָבִיב לַיָּדִיד לְהַלֵּל",
       "וְאַהֲבָתֵנוּ צְרוּפָה",
@@ -37644,7 +37682,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "כָּבוֹד לְמִי שֶׁהִשְׁפִּיל",
+      "לְהָאִיר אֶת־הַקָּהָל",
+      "כָּבוֹד לְמִי שֶׁבְּתוֹכֵנוּ",
+      "כָּבוֹד לְיוֹשֵׁב מְרוֹמִים"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "שְׂשׂוֹן הָאָב כִּי נִדְרֹשׁ",
       "תָּמִיד אֶת־כְּבוֹדוֹ",
@@ -37653,7 +37701,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "בֵּין אָהוּבִים יִשְׁכֹּן",
       "וּבְרָכוֹת יְצַוֶּה",
@@ -37662,7 +37710,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "הוּא יְדִידֵנוּ הֶעָשִׁיר",
       "וּמֵעָשְׁרוֹ נֶעֱשַׁרְנוּ",
@@ -37682,15 +37730,6 @@
     {
      "label": "1",
      "lines": [
-      "مَجْدًا لِمَنْ مَحَا الْآثَام",
-      "طَهَّرَنِي إِلَى التَّمَام",
-      "قَلْبِي امْتَلَا حُبًّا سَمَا",
-      "كَأَنِّي دَوْمًا فِي السَّمَا"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "مُذْ رَبِّي قَدْ أَكْرَمَنِي",
       "بِنَظْرَةٍ لِي بَاسِمَا",
       "قَلْبِي امْتَلَا حُبًّا سَمَا",
@@ -37698,7 +37737,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "مَجْدًا لِمَنْ مَحَا الْآثَام",
+      "طَهَّرَنِي إِلَى التَّمَام",
+      "قَلْبِي امْتَلَا حُبًّا سَمَا",
+      "كَأَنِّي دَوْمًا فِي السَّمَا"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "إِنْ كُنْتُ فِي قَصْرٍ أَعِيش",
       "أَوْ كُوخَةٍ بِلَا حِمَى",
@@ -37707,7 +37756,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "لَا تُزْعِجُ قَلْبِي الْهُمُوم",
       "فَادِيَّ لِي خَيْرُ حِمَى",
@@ -37716,7 +37765,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "مَجْدِي سُرُورِي لَذَّتِي",
       "أَنْ أَبْقَى مَعهُ دَائِمَا",
@@ -37731,15 +37780,6 @@
     {
      "label": "1",
      "lines": [
-      "Glory to Him who blotted sins",
-      "Cleansing me fully",
-      "My heart filled with sublime love",
-      "As though ever in heaven"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Since my Lord honored me",
       "With a smiling glance to me",
       "My heart filled with sublime love",
@@ -37747,7 +37787,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Glory to Him who blotted sins",
+      "Cleansing me fully",
+      "My heart filled with sublime love",
+      "As though ever in heaven"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "In a palace dwelling",
       "Or a shelterless hut",
@@ -37756,7 +37806,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "No cares disturb my heart",
       "My Ransomer is my best shelter",
@@ -37765,7 +37815,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "My glory, joy, delight",
       "Abiding with Him evermore",
@@ -37779,15 +37829,6 @@
     {
      "label": "1",
      "lines": [
-      "Ehre dem, der tilgte Sünden",
-      "Reinigend mich völlig",
-      "Mein Herz füllte sich mit erhabener Liebe",
-      "Als wäre es immerdar im Himmel"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Seit mein Herr ehrte mich",
       "Mit einem lächelnden Blick mir",
       "Mein Herz füllte sich mit erhabener Liebe",
@@ -37795,7 +37836,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Ehre dem, der tilgte Sünden",
+      "Reinigend mich völlig",
+      "Mein Herz füllte sich mit erhabener Liebe",
+      "Als wäre es immerdar im Himmel"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "In einem Palast wohnend",
       "Oder einer schutzlosen Hütte",
@@ -37804,7 +37855,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Keine Sorgen stören mein Herz",
       "Mein Erlöser ist mir beste Bergung",
@@ -37813,7 +37864,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Mein Ruhm, Freude, Wonne",
       "Bleibend bei ihm immerdar",
@@ -37827,15 +37878,6 @@
     {
      "label": "1",
      "lines": [
-      "כָּבוֹד לְמוֹחֵה הָעָוֹן",
-      "טִהֲרַנִי עַד־תָּמִים",
-      "לִבִּי מָלֵא אַהֲבָה רָמָה",
-      "כְּאִלּוּ בַּשָּׁמַיִם אָנִי"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "מֵאָז כִּבְּדַנִי אֲדֹנִי",
       "בְּמַבַּט חֵן אֵלַי",
       "לִבִּי מָלֵא אַהֲבָה רָמָה",
@@ -37843,7 +37885,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "כָּבוֹד לְמוֹחֵה הָעָוֹן",
+      "טִהֲרַנִי עַד־תָּמִים",
+      "לִבִּי מָלֵא אַהֲבָה רָמָה",
+      "כְּאִלּוּ בַּשָּׁמַיִם אָנִי"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "אִם־בְּאַרְמוֹן אֵשֵׁב",
       "אוֹ בְּסֻכָּה בְלִי מָגֵן",
@@ -37852,7 +37904,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "לֹא יַבְהִילוּ דְאָגוֹת",
       "גּוֹאֲלִי הוּא מָעוֹז טוֹב",
@@ -37861,7 +37913,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "כְּבוֹדִי שִׂמְחָתִי וְעֶדְנִי",
       "לָשֶׁבֶת אִתּוֹ לָנֶצַח",
@@ -38212,14 +38264,6 @@
     {
      "label": "1",
      "lines": [
-      "غَايَتِي الْمَسِيح غَايَتِي الْمَسِيح",
-      "أَسْعَى إِذًا نَحْوَ ذَا الْغَرَض",
-      "غَايَتِي الْمَسِيح"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "لَا تَذْكُرُوا لِي مِنَ الدُّنْيَا",
       "أَمْرًا أَقُومُ لَهُ سَعْيَا",
       "فَوِجْهَتِي الدَّعْوَةُ الْعُلْيَا",
@@ -38227,7 +38271,16 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "غَايَتِي الْمَسِيح غَايَتِي الْمَسِيح",
+      "أَسْعَى إِذًا نَحْوَ ذَا الْغَرَض",
+      "غَايَتِي الْمَسِيح"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "تَمْضِي الْحَيَاةُ وَشَهْوَتُهَا",
       "لَا بُدَّ تَذْهَبُ هَيْئَتُهَا",
@@ -38236,7 +38289,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "أَنْسَى التَّجَارِبَ وَالْعَنَا",
       "مُحْتَقِرًا كُلَّ مَا هُنَا",
@@ -38245,7 +38298,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "مَهْمَا يَكُنْ فِي عَنَاءِ الْمَسِير",
       "مِنْ وَحْشَةٍ وَجِهَادٍ كَثِير",
@@ -38254,7 +38307,7 @@
      ]
     },
     {
-     "label": "6",
+     "label": "5",
      "lines": [
       "أَمَّا أَنَا فَأَمَامِي السَّمَا",
       "حَيْثُ ارْتَقَى سَيِّدِي وَكَمَا",
@@ -38263,7 +38316,7 @@
      ]
     },
     {
-     "label": "7",
+     "label": "6",
      "lines": [
       "لِي رَاحَةٌ بَقِيَتْ عِنْدَهُ",
       "أَسْعَى لِكَيْ أَرَى مَجْدَهُ",
@@ -38278,14 +38331,6 @@
     {
      "label": "1",
      "lines": [
-      "My goal is Christ, my goal is Christ",
-      "I press toward this aim",
-      "My goal is Christ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Tell me nothing of this world",
       "Worth my pursuit",
       "My call is the upward call",
@@ -38293,7 +38338,16 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "My goal is Christ, my goal is Christ",
+      "I press toward this aim",
+      "My goal is Christ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Life passes, its lust",
       "Its form must fade",
@@ -38302,7 +38356,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "I forget trials and toil",
       "Despising all things here",
@@ -38311,7 +38365,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Whatever the journeys pains",
       "Loneliness, much strife",
@@ -38320,7 +38374,7 @@
      ]
     },
     {
-     "label": "6",
+     "label": "5",
      "lines": [
       "Before me is heaven",
       "Where my Master ascended, and as",
@@ -38329,7 +38383,7 @@
      ]
     },
     {
-     "label": "7",
+     "label": "6",
      "lines": [
       "Rest remains for me with Him",
       "I press to see His glory",
@@ -38343,14 +38397,6 @@
     {
      "label": "1",
      "lines": [
-      "Mein Ziel ist Christus, mein Ziel ist Christus",
-      "Ich jage hin zu diesem Zweck",
-      "Mein Ziel ist Christus"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Erzählt mir nichts von dieser Welt",
       "Würdig meines Strebens",
       "Denn mein Ruf ist der Ruf nach droben",
@@ -38358,7 +38404,16 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Mein Ziel ist Christus, mein Ziel ist Christus",
+      "Ich jage hin zu diesem Zweck",
+      "Mein Ziel ist Christus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Das Leben vergeht, seine Lust",
       "Seine Gestalt muss schwinden",
@@ -38367,7 +38422,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Ich vergesse Prüfungen und Mühsal",
       "Verachtend alles hier",
@@ -38376,7 +38431,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Was auch die Mühen der Reise",
       "Einsamkeit, vieler Kampf",
@@ -38385,7 +38440,7 @@
      ]
     },
     {
-     "label": "6",
+     "label": "5",
      "lines": [
       "Denn vor mir ist der Himmel",
       "Wohin mein Herr auffuhr, und wie",
@@ -38394,7 +38449,7 @@
      ]
     },
     {
-     "label": "7",
+     "label": "6",
      "lines": [
       "Ruhe bleibt mir bei ihm",
       "Ich dränge, zu sehen seine Herrlichkeit",
@@ -38408,14 +38463,6 @@
     {
      "label": "1",
      "lines": [
-      "מַטָּרָתִי הַמָּשִׁיחַ, מַטָּרָתִי הַמָּשִׁיחַ",
-      "לָכֵן אֶרְדֹּף אֶל־הַמַּטָּרָה",
-      "מַטָּרָתִי הַמָּשִׁיחַ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אַל־תַּזְכִּירוּ לִי מֵהָעוֹלָם",
       "דָּבָר אֲשֶׁר אֶרְדֹּף בִּשְׁבִילוֹ",
       "כִּי קְרִיאָתִי הִיא קְרִיאַת מַעְלָה",
@@ -38423,7 +38470,16 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "מַטָּרָתִי הַמָּשִׁיחַ, מַטָּרָתִי הַמָּשִׁיחַ",
+      "לָכֵן אֶרְדֹּף אֶל־הַמַּטָּרָה",
+      "מַטָּרָתִי הַמָּשִׁיחַ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "עוֹבְרִים הַחַיִּים וְתַאֲוָתָם",
       "וְצוּרָתָם עוֹבֶרֶת עִמָּהֶם",
@@ -38432,7 +38488,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "אֶשְׁכַּח נִסְיוֹנוֹת וָעָמָל",
       "וּבוֹזֶה לְכָל־אֲשֶׁר פֹּה",
@@ -38441,7 +38497,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "מַה־שֶּׁיִּהְיוּ עָמְלֵי הַדֶּרֶךְ",
       "מִשְּׁמָמָה וּמִלְחָמָה רַבָּה",
@@ -38450,7 +38506,7 @@
      ]
     },
     {
-     "label": "6",
+     "label": "5",
      "lines": [
       "וַאֲנִי הִנֵּה לְפָנַי שָׁמַיִם",
       "אֲשֶׁר שָׁמָּה עָלָה אֲדֹנִי",
@@ -38459,7 +38515,7 @@
      ]
     },
     {
-     "label": "7",
+     "label": "6",
      "lines": [
       "לִי מְנוּחָה נִשְׁאֲרָה אֶצְלוֹ",
       "אֶרְדֹּף לִרְאוֹת אֶת־כְּבוֹדוֹ",
@@ -38479,15 +38535,6 @@
     {
      "label": "1",
      "lines": [
-      "سَيِّدِي اسْتَلِمْ حَيَاتِي",
-      "وَقُوَى عَقْلِي وَذَاتِي",
-      "فِي حَيَاتِي وَمَمَاتِي",
-      "إِنَّنِي مِلْكٌ لِسَيِّدِي الْمَسِيح"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "سَيِّدِي اسْتَلِمْ حَيَاتِي كَرِّسَنَّهَا لَكَ",
       "وَلْيَفِضْ قَلْبِي بِحَمْدٍ مُسْتَدِيم",
       "خُذْ يَدِي مُحَرِّكًا لَهَا بِفِعْلِ حُبِّكَ",
@@ -38495,7 +38542,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "سَيِّدِي اسْتَلِمْ حَيَاتِي",
+      "وَقُوَى عَقْلِي وَذَاتِي",
+      "فِي حَيَاتِي وَمَمَاتِي",
+      "إِنَّنِي مِلْكٌ لِسَيِّدِي الْمَسِيح"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "صَوْتِيَ احْفَظْ مُنْشِدًا لِاسْمِ مَلِيكِي لَا سِوَاه",
       "وَفَمِي امْلَأْ بِرِسَالَةِ الْفِدَاء",
@@ -38504,7 +38561,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "لِتَكُنْ إِرَادَتِي كَمَا تَشَا بَيْنَ يَدَيْك",
       "وَلْيَكُنْ قَلْبِي لَكَ الْعَرْشَ الْمُرِيح",
@@ -38519,15 +38576,6 @@
     {
      "label": "1",
      "lines": [
-      "Master, receive my life",
-      "My minds powers, myself",
-      "In my life and death",
-      "I belong to my Master Christ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Master, receive my life, consecrate it to You",
       "Overflowing my heart with lasting praise",
       "Take my hands, moving them by Your loves act",
@@ -38535,7 +38583,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Master, receive my life",
+      "My minds powers, myself",
+      "In my life and death",
+      "I belong to my Master Christ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Keep my voice chanting my Kings name, none besides",
       "Fill my mouth with redemptions message",
@@ -38544,7 +38602,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Let my will be as You will, in Your hands",
       "Let my heart be Your restful throne",
@@ -38558,15 +38616,6 @@
     {
      "label": "1",
      "lines": [
-      "Meister, nimm an mein Leben",
-      "Meines Sinnes Kräfte, mich selbst",
-      "In meinem Leben und Tod",
-      "Gehöre ich meinem Herrn Christus"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Meister, nimm an mein Leben, weihe es dir",
       "Überfließend mein Herz mit dauerndem Lob",
       "Nimm meine Hände, bewegend sie durch deiner Liebe Wirken",
@@ -38574,7 +38623,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Meister, nimm an mein Leben",
+      "Meines Sinnes Kräfte, mich selbst",
+      "In meinem Leben und Tod",
+      "Gehöre ich meinem Herrn Christus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Behüte meine Stimme singend meines Königs Namen, keinen daneben",
       "Fülle meinen Mund mit der Erlösung Botschaft",
@@ -38583,7 +38642,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Sei mein Wille, wie du willst, in deinen Händen",
       "Sei mein Herz dir der Ruhe Thron",
@@ -38597,15 +38656,6 @@
     {
      "label": "1",
      "lines": [
-      "אֲדֹנִי, קַח אֶת־חַיָּי",
-      "כֹּחוֹת שִׂכְלִי וְעַצְמִי",
-      "בְּחַיַּי וּבְמוֹתִי הִנְנִי",
-      "כִּי אֲנִי קִנְיַן אֲדֹנִי הַמָּשִׁיחַ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אֲדֹנִי, קַח חַיַּי וְקַדֵּשׁ אוֹתָם לָךְ",
       "וְיָפִיץ לִבִּי תְּהִלָּה נֶצַח",
       "אֱחֹז יָדִי וְהָנֵעַ אוֹתָהּ בְּאַהֲבָתְךָ",
@@ -38613,7 +38663,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "אֲדֹנִי, קַח אֶת־חַיָּי",
+      "כֹּחוֹת שִׂכְלִי וְעַצְמִי",
+      "בְּחַיַּי וּבְמוֹתִי הִנְנִי",
+      "כִּי אֲנִי קִנְיַן אֲדֹנִי הַמָּשִׁיחַ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "שְׁמֹר קוֹלִי מְזַמֵּר שֵׁם מַלְכִּי וְאֵין זוּלָתוֹ",
       "וּמַלֵּא פִי בִּבְשׂוֹרַת הַפְּדוּת",
@@ -38622,7 +38682,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "יְהִי רְצוֹנִי כִּרְצוֹנְךָ בְּיָדֶיךָ",
       "וְיִהְיֶה לִבִּי לְךָ כִּסֵּא מְנוּחָה",
@@ -39432,29 +39492,30 @@
     {
      "label": "1",
      "lines": [
-      "هُوَذَا الْمَيْدَانُ قَدْ/أُعِدَّ فَلاَ رُقَادْ/هَيَّا جَاهِدُوا لِتَحْقِيقِ الْمُرَادْ/حَاضِرُوا بِالصَّبْرِ وَاصِلُوا الْجِهَادْ/ضِدَّ الشَّرِّ وَالْفَسَادْ/تَحْتَ لِوَاءِ مُخَلِّصِ الْعِبَادْ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "هَلُمَّ ارْفَعُوا الأَعْلاَمَ وَانْشَطُوا/أَيُّهَا الأَبْطَالْ/هُوَذَا الرَّبُّ يُنَادِي جُنْدَهُ:/”اِطْرَحُوا الأَثْقَالْ“"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "هُوَذَا الْمَيْدَانُ قَدْ/أُعِدَّ فَلاَ رُقَادْ/هَيَّا جَاهِدُوا لِتَحْقِيقِ الْمُرَادْ/حَاضِرُوا بِالصَّبْرِ وَاصِلُوا الْجِهَادْ/ضِدَّ الشَّرِّ وَالْفَسَادْ/تَحْتَ لِوَاءِ مُخَلِّصِ الْعِبَادْ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "هَا سَحَابَةُ الشُّهُودِ تَلْمَعُ/بِكُلِّ جَمَالْ/وَضِيَاءُ إِيمَانِهِمْ يَسْطَعُ/لِمَدَى الأَجْيَالْ"
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "مَنْ يَفْصِلُنَا عَنْ حُبِّ مَنْ ظَفَرْ/شِدَّةٌ أَمْ ضِيقْ/اِضْطِهَادٌ جُوعٌ عُرْيٌ أَمْ خَطَرْ/فِي كُلِّ الطَّرِيقْ"
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "فَلْنُثَابِرْ حَتَّى يَنْتَهِي الْجِهَادْ/بِنَيْلِ الْمُرَادْ/إِذْ يَجِيءُ الرَّبُّ صَاحِبُ الأَمْجَادْ/وَيَفْدِي الأَجْسَادْ"
      ]
@@ -39466,29 +39527,30 @@
     {
      "label": "1",
      "lines": [
-      "Behold the field is prepared, no sleep / Come, strive to attain the aim / Enduring with patience, keep the struggle / Against evil and corruption / Beneath the Savior of mens banner"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Come, raise the banners and be active / O heroes / Behold the Lord calls His army / Cast off the burdens"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Behold the field is prepared, no sleep / Come, strive to attain the aim / Enduring with patience, keep the struggle / Against evil and corruption / Beneath the Savior of mens banner"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Behold the witnesses cloud shines / In all beauty / Their faiths radiance gleams / Through the generations"
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Who parts us from the Conquerors love / Distress or straits / Persecution, hunger, nakedness or peril / All the way"
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Let us persevere till the struggle ends / Attaining the aim / When comes the Lord of glories / Ransoming the bodies"
      ]
@@ -39499,29 +39561,30 @@
     {
      "label": "1",
      "lines": [
-      "Siehe, das Feld ist bereitet, kein Schlaf / Kommt, ringt zu erlangen das Ziel / Harrend mit Geduld, haltet den Kampf / Wider Böses und Verderben / Unter des Retters der Menschen Banner"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Kommt, erhebt die Banner und seid tätig / O Helden / Siehe, der Herr ruft sein Heer / Werft ab die Lasten"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Siehe, das Feld ist bereitet, kein Schlaf / Kommt, ringt zu erlangen das Ziel / Harrend mit Geduld, haltet den Kampf / Wider Böses und Verderben / Unter des Retters der Menschen Banner"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Siehe, der Zeugen Wolke glänzt / In aller Schönheit / Ihres Glaubens Glanz strahlt / Durch die Geschlechter"
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Wer scheidet uns von des Siegers Liebe / Drangsal oder Enge / Verfolgung, Hunger, Blöße oder Gefahr / Den ganzen Weg"
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Lasst uns beharren, bis endet der Kampf / Erlangend das Ziel / Wenn kommt der Herr der Herrlichkeiten / Erlösend die Leiber"
      ]
@@ -39532,29 +39595,30 @@
     {
      "label": "1",
      "lines": [
-      "הִנֵּה הַמַּעֲרָכָה מוּכָנָה / וְאֵין לִשְׁכֹּב / הָבָה הִתְאַמְּצוּ לְהַשִּׂיג הַמַּטָּרָה / עִמְדוּ בַּסֵּבֶל וְהַמְשִׁיכוּ בַּמִּלְחָמָה / נֶגֶד הָרֶשַׁע וְהַשַּׁחַת / תַּחַת דֶּגֶל מוֹשִׁיעַ הָעֲבָדִים"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "הָבָה הָרִימוּ הַדְּגָלִים וְהִתְעוֹדְדוּ / הוֹי הַגִּבּוֹרִים / הִנֵּה הָאָדוֹן קוֹרֵא לִצְבָאוֹ: / הַשְׁלִיכוּ הַמַּשָּׂאוֹת"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "הִנֵּה הַמַּעֲרָכָה מוּכָנָה / וְאֵין לִשְׁכֹּב / הָבָה הִתְאַמְּצוּ לְהַשִּׂיג הַמַּטָּרָה / עִמְדוּ בַּסֵּבֶל וְהַמְשִׁיכוּ בַּמִּלְחָמָה / נֶגֶד הָרֶשַׁע וְהַשַּׁחַת / תַּחַת דֶּגֶל מוֹשִׁיעַ הָעֲבָדִים"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "הִנֵּה עֲנַן הָעֵדִים זֹהֵר / בְּכָל־הַדְרַת חֵן וָהָדָר / וְזֹהַר אֱמוּנָתָם מֵאִיר / לְמֶרְחַק כָּל־הַדּוֹרוֹת וָעַד"
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "מִי יַפְרִידֵנוּ מֵאַהֲבַת הַמְּנַצֵּחַ / צָרָה אוֹ מֵצַר / רְדִיפָה רָעָב עֵירֹם אוֹ סַכָּנָה / בְּכָל־הַדָּרֶךְ"
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "נַעֲמֹד בְּאֹמֶץ עַד־יִתֹּם הַמִּלְחָמָה / בְּהַשִּׂיג הַמַּטָּרָה / כִּי יָבוֹא הָאָדוֹן אֲדוֹן הַכָּבוֹד / וְיִפְדֶּה אֶת־הַגְּוִיּוֹת"
      ]
@@ -39573,15 +39637,6 @@
     {
      "label": "1",
      "lines": [
-      "كَمْ عَجِيبٌ حُبُّكَ يَا سَيِّدِي! كَمْ عَجِيب!",
-      "كَمْ رَقِيقٌ قَلْبُكَ يَا مُنْقِذِي يَا حَبِيب!",
-      "هَلْ صَدِيقٌ مِثْلُهُ فِي ذِي الرُّبُوع يَا جُمُوع؟",
-      "هَلِّلُويَا! مِثْلُكَ لَا يُوجَدُ يَا يَسُوع"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "مَنْ أَنَا يَا رَبُّ حَتَّى تَحْمِلَنْ عَنِّي الصَّلِيب",
       "مَنْ أَنَا لِتُصْبِحَ الْبَدِيلَ عَنِّي يَا حَبِيب",
       "تُصْبِحُ الْمُدَانَ أَنْتَ وَأَنَا أَغْدُو الْبَرِيء",
@@ -39589,7 +39644,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "كَمْ عَجِيبٌ حُبُّكَ يَا سَيِّدِي! كَمْ عَجِيب!",
+      "كَمْ رَقِيقٌ قَلْبُكَ يَا مُنْقِذِي يَا حَبِيب!",
+      "هَلْ صَدِيقٌ مِثْلُهُ فِي ذِي الرُّبُوع يَا جُمُوع؟",
+      "هَلِّلُويَا! مِثْلُكَ لَا يُوجَدُ يَا يَسُوع"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "مَنْ أَنَا لِتَصْنَعَنْ لِأَجْلِي كُلَّ ذَا الصَّنِيع",
       "مَنْ أَنَا لِتُخْلِي نَفْسَكَ مِنَ الْمَجْدِ الرَّفِيع",
@@ -39598,7 +39663,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "أَعْطِنِي أَنْ يَأْسِرَنِّي حُبُّكَ لِشَخْصِكَ",
       "كَيْ أَكُونَ حَافِظًا دَوْمًا وَفَاءَ قَوْلِكَ",
@@ -39613,15 +39678,6 @@
     {
      "label": "1",
      "lines": [
-      "How wondrous Your love, my Master, how wondrous",
-      "How tender Your heart, my Savior, O Beloved",
-      "Is there a friend like Him in these courts, O multitudes",
-      "Hallelujah, none like You, O Jesus"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Who am I, Lord, that You bear the cross for me",
       "Who am I, that You become my Substitute, O Beloved",
       "You become the condemned, I become the acquitted",
@@ -39629,7 +39685,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "How wondrous Your love, my Master, how wondrous",
+      "How tender Your heart, my Savior, O Beloved",
+      "Is there a friend like Him in these courts, O multitudes",
+      "Hallelujah, none like You, O Jesus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Who am I, that You do for me all this deed",
       "Who am I, that You empty Yourself of lofty glory",
@@ -39638,7 +39704,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Grant that Your love for Your person captivate me",
       "To keep ever faithful to Your word",
@@ -39652,15 +39718,6 @@
     {
      "label": "1",
      "lines": [
-      "Wie wunderbar deine Liebe, mein Herr, wie wunderbar",
-      "Wie zärtlich dein Herz, mein Retter, o Geliebter",
-      "Ist ein Freund wie er in diesen Höfen, o Mengen",
-      "Halleluja, keiner wie du, o Jesus"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Wer bin ich, Herr, dass du trägst für mich das Kreuz",
       "Wer bin ich, dass du wirst der Stellvertreter für mich, o Geliebter",
       "Du wirst der Verurteilte, ich werde der Freie",
@@ -39668,7 +39725,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Wie wunderbar deine Liebe, mein Herr, wie wunderbar",
+      "Wie zärtlich dein Herz, mein Retter, o Geliebter",
+      "Ist ein Freund wie er in diesen Höfen, o Mengen",
+      "Halleluja, keiner wie du, o Jesus"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Wer bin ich, dass du tust für mich all diese Tat",
       "Wer bin ich, dass du dich entäußerst der erhabenen Herrlichkeit",
@@ -39677,7 +39744,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Gib, dass deine Liebe zu deiner Person mich fesselt",
       "Zu halten immerdar Treue deinem Wort",
@@ -39691,15 +39758,6 @@
     {
      "label": "1",
      "lines": [
-      "מַה־נִּפְלֵאת אַהֲבָתְךָ, אֲדֹנִי, מַה־נִּפְלֵאת",
-      "מַה־רַךְ לְבָבְךָ, מוֹשִׁיעִי, הוֹי יָדִיד",
-      "הֲיֵשׁ רֵעַ כָּמוֹהוּ בִּקְצוֹת אֶרֶץ, הוֹי קְהִלּוֹת",
-      "הַלְלוּיָהּ! אֵין כָּמוֹךָ בָּעוֹלָם, יֵשׁוּעַ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "מִי אָנִי, אֲדֹנָי, כִּי־תִשָּׂא עָלַי אֶת־הַצְּלָב",
       "מִי אָנִי, כִּי־תִּהְיֶה תַּחְתַּי, הוֹי יָדִיד",
       "אַתָּה הַנִּדּוֹן, וַאֲנִי הַיּוֹצֵא זַכַּאי",
@@ -39707,7 +39765,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "מַה־נִּפְלֵאת אַהֲבָתְךָ, אֲדֹנִי, מַה־נִּפְלֵאת",
+      "מַה־רַךְ לְבָבְךָ, מוֹשִׁיעִי, הוֹי יָדִיד",
+      "הֲיֵשׁ רֵעַ כָּמוֹהוּ בִּקְצוֹת אֶרֶץ, הוֹי קְהִלּוֹת",
+      "הַלְלוּיָהּ! אֵין כָּמוֹךָ בָּעוֹלָם, יֵשׁוּעַ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "מִי אָנִי כִּי־תַּעֲשֶׂה לִי אֶת־כָּל־הַדָּבָר הַזֶּה",
       "מִי אָנִי כִּי־תָרִיק נַפְשְׁךָ מִכְּבוֹד מָרוֹם",
@@ -39716,7 +39784,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "תְּנָה־לִּי כִּי אַהֲבָתְךָ תַּאַסְרֵנִי לְאִישׁוּתְךָ",
       "לְמַעַן אֶשְׁמֹר תָּמִיד אֱמוּנַת דְּבָרֶךָ",
@@ -40376,15 +40444,6 @@
     {
      "label": "1",
      "lines": [
-      "يَا إلٰهي إِنِّي وَاثِق",
-      "بَلْ مُتَّكِلٌ عَلَيْك",
-      "كُلُّ وَعْدٍ مِنْكَ صَادِق",
-      "هَا أَنَا بَيْنَ يَدَيْك"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "مَا أَلَذَّ الاِتِّكَالَ",
       "عَلَى سَيِّدِي الْمَسِيح",
       "وَبِوَعْدِهِ الْكَرِيمِ",
@@ -40392,7 +40451,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "يَا إلٰهي إِنِّي وَاثِق",
+      "بَلْ مُتَّكِلٌ عَلَيْك",
+      "كُلُّ وَعْدٍ مِنْكَ صَادِق",
+      "هَا أَنَا بَيْنَ يَدَيْك"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "مَا أَلَذَّ الاِتِّكَالَ",
       "عَلَى رَبِّي ذِي الْبَهَا",
@@ -40401,7 +40470,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "مَا أَلَذَّ الاِتِّكَالَ",
       "عَلَى مُفْتَدِي الْأَنَام",
@@ -40416,15 +40485,6 @@
     {
      "label": "1",
      "lines": [
-      "My God, I am trusting",
-      "Relying on You",
-      "Every promise from You is true",
-      "Behold me in Your hands"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "How sweet to trust",
       "My Lord Christ",
       "In His gracious promise",
@@ -40432,7 +40492,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "My God, I am trusting",
+      "Relying on You",
+      "Every promise from You is true",
+      "Behold me in Your hands"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "How sweet to trust",
       "My radiant Lord",
@@ -40441,7 +40511,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "How sweet to trust",
       "Mankinds Redeemer",
@@ -40455,15 +40525,6 @@
     {
      "label": "1",
      "lines": [
-      "Mein Gott, ich vertraue",
-      "Und verlasse mich auf dich",
-      "Jede Verheißung von dir ist wahr",
-      "Siehe mich in deinen Händen"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Wie süß, zu vertrauen",
       "Meinem Herrn Christus",
       "Und in seiner gnädigen Verheißung",
@@ -40471,7 +40532,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Mein Gott, ich vertraue",
+      "Und verlasse mich auf dich",
+      "Jede Verheißung von dir ist wahr",
+      "Siehe mich in deinen Händen"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Wie süß, zu vertrauen",
       "Meinem strahlenden Herrn",
@@ -40480,7 +40551,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Wie süß, zu vertrauen",
       "Der Menschen Erlöser",
@@ -40494,15 +40565,6 @@
     {
      "label": "1",
      "lines": [
-      "אֱלֹהַי, הִנְנִי בוֹטֵחַ",
-      "אַף נִשְׁעָן עָלֶיךָ",
-      "כָּל־הַבְטָחָה מִמְּךָ אֱמֶת",
-      "הִנְנִי בֵּין יָדֶיךָ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "מַה־נָּעִים לִבְטֹחַ",
       "בַּאֲדֹנִי הַמָּשִׁיחַ",
       "וּבְהַבְטָחָתוֹ הַיְקָרָה",
@@ -40510,7 +40572,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "אֱלֹהַי, הִנְנִי בוֹטֵחַ",
+      "אַף נִשְׁעָן עָלֶיךָ",
+      "כָּל־הַבְטָחָה מִמְּךָ אֱמֶת",
+      "הִנְנִי בֵּין יָדֶיךָ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "מַה־נָּעִים לִבְטֹחַ",
       "בַּאֲדֹנִי הַנֶּהְדָּר",
@@ -40519,7 +40591,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "מַה־נָּעִים לִבְטֹחַ",
       "בְּפוֹדֶה כָּל־בָּשָׂר",
@@ -41224,13 +41296,6 @@
     {
      "label": "1",
      "lines": [
-      "نَلْتَقِي عَنْ قَرِيب",
-      "فِي السُّحبِ حَوْلَ الْفَادِي الْحَبِيب"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "لِي مَقَامٌ بَهِيجٌ سَمَا",
       "مَجْدُهُ فَاقَ نُورَ النَّهَار",
       "فِي الْعُلَى حَيْثُ فَادِي الْوَرَى",
@@ -41238,7 +41303,15 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "نَلْتَقِي عَنْ قَرِيب",
+      "فِي السُّحبِ حَوْلَ الْفَادِي الْحَبِيب"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "سَوْفَ نُهْدِي إِلَى رَبِّنَا",
       "حُلْوَ تَسْبِيحِ شُكْرٍ رَخِيم",
@@ -41247,7 +41320,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "نَلْتَقِي فِي الْعُلَى بَعْدَ مَا",
       "يَنْتَهِي سَيْرُنَا مِنْ هُنَا",
@@ -41256,7 +41329,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "حَيْثُ نُعْطَى أَكَالِيلَنَا",
       "لِامْتِلاَكٍ مَعَ الْمُنْتَصِر",
@@ -41271,13 +41344,6 @@
     {
      "label": "1",
      "lines": [
-      "We meet again soon",
-      "In the clouds around the beloved Redeemer"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "I have a radiant station on high",
       "Its glory surpasses daylight",
       "On high where mankinds Redeemer is",
@@ -41285,7 +41351,15 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "We meet again soon",
+      "In the clouds around the beloved Redeemer"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "We shall give our Lord",
       "Sweet, gentle thanks hymn",
@@ -41294,7 +41368,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "We meet on high after",
       "Our journey ends from here",
@@ -41303,7 +41377,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "There we receive our crowns",
       "Possessing with the Conqueror",
@@ -41317,13 +41391,6 @@
     {
      "label": "1",
      "lines": [
-      "Wir treffen uns wieder bald",
-      "In den Wolken um den geliebten Erlöser"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Ich habe eine strahlende Stätte in der Höhe",
       "Ihre Herrlichkeit übertrifft Tageslicht",
       "In der Höhe, wo der Menschen Erlöser ist",
@@ -41331,7 +41398,15 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Wir treffen uns wieder bald",
+      "In den Wolken um den geliebten Erlöser"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Wir werden geben unserem Herrn",
       "Süßes, sanftes Danklied",
@@ -41340,7 +41415,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Wir treffen uns in der Höhe, nachdem",
       "Endet unsere Reise von hier",
@@ -41349,7 +41424,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Dort empfangen wir unsere Kronen",
       "Besitzend mit dem Sieger",
@@ -41363,13 +41438,6 @@
     {
      "label": "1",
      "lines": [
-      "נִפָּגֵשׁ עוֹד בְּקָרוֹב",
-      "בֶּעָנָנִים סְבִיב הַגּוֹאֵל הָאָהוּב"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "יֶשׁ־לִי מַעֲמָד נָאֶה בַּמָּרוֹם",
       "כְּבוֹדוֹ עָלָה עַל־אוֹר הַיּוֹם",
       "בַּמְּרוֹמִים אֲשֶׁר שָׁם גּוֹאֵל כָּל־בָּשָׂר",
@@ -41377,7 +41445,15 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "נִפָּגֵשׁ עוֹד בְּקָרוֹב",
+      "בֶּעָנָנִים סְבִיב הַגּוֹאֵל הָאָהוּב"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "נַגִּישׁ לַאֲדֹנֵינוּ",
       "תְּהִלַּת תּוֹדָה מְתוּקָה וְרַכָּה",
@@ -41386,7 +41462,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "נִפָּגֵשׁ בַּמָּרוֹם אַחֲרֵי",
       "אֲשֶׁר יִתֹּם מַסָּעֵנוּ מִזֶּה",
@@ -41395,7 +41471,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "בַּאֲשֶׁר נְקַבֵּל עֲטָרוֹתֵינוּ",
       "לַחֲלֹק עִם הַמְּנַצֵּחַ",
@@ -41423,20 +41499,21 @@
      "label": "1",
      "lines": [
       "اللهُ حُبٌّ فَالسَّمَا",
-      "وَالْأَرْضُ تُبْدِي حُبَّهُ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
-      "اللهُ حُبٌّ فَالسَّمَا",
       "وَالْأَرْضُ تُبْدِي حُبَّهُ",
       "لَهُ لِسَانِي رَنَّمَ",
       "وَالْقَلْبُ يَهْوَى قُرْبَهُ"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "اللهُ حُبٌّ فَالسَّمَا",
+      "وَالْأَرْضُ تُبْدِي حُبَّهُ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "اللهُ حُبٌّ كُلُّنَا",
       "نَحْيَا بِهِ وَنُوجَدُ",
@@ -41445,7 +41522,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "اللهُ حُبٌّ فَافْرَحُوا",
       "إِذْ حُبُّهُ لَا يَنْتَهِي",
@@ -41454,7 +41531,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "اللهُ حُبٌّ قَدْ فَدَى",
       "دَمُ ابْنِهِ نَفْسَ الْأَثِيم",
@@ -41470,20 +41547,21 @@
      "label": "1",
      "lines": [
       "God is love, heaven",
-      "And earth display His love"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
-      "God is love, heaven",
       "And earth display His love",
       "My tongue hymned Him",
       "My heart loves His nearness"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "God is love, heaven",
+      "And earth display His love"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "God is love, all of us",
       "Live in Him, exist",
@@ -41492,7 +41570,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "God is love, rejoice",
       "His love never ends",
@@ -41501,7 +41579,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "God is love, He ransomed",
       "His Sons blood the guilty soul",
@@ -41516,20 +41594,21 @@
      "label": "1",
      "lines": [
       "Gott ist Liebe, der Himmel",
-      "Und die Erde zeigen seine Liebe"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
-      "Gott ist Liebe, der Himmel",
       "Und die Erde zeigen seine Liebe",
       "Ihm sang meine Zunge",
       "Mein Herz liebt seine Nähe"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Gott ist Liebe, der Himmel",
+      "Und die Erde zeigen seine Liebe"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Gott ist Liebe, alle wir",
       "Leben in ihm, bestehen",
@@ -41538,7 +41617,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Gott ist Liebe, freut euch",
       "Seine Liebe endet nimmer",
@@ -41547,7 +41626,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Gott ist Liebe, er erlöste",
       "Seines Sohnes Blut die schuldige Seele",
@@ -41562,20 +41641,21 @@
      "label": "1",
      "lines": [
       "אֱלֹהִים הוּא אַהֲבָה, הַשָּׁמַיִם",
-      "וְהָאָרֶץ יַגִּידוּ אַהֲבָתוֹ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
-      "אֱלֹהִים הוּא אַהֲבָה, הַשָּׁמַיִם",
       "וְהָאָרֶץ יַגִּידוּ אַהֲבָתוֹ",
       "לוֹ יָשִׁיר לְשׁוֹנִי זִמְרָה",
       "וְהַלֵּב יֶאֱהַב קִרְבָתוֹ"
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "אֱלֹהִים הוּא אַהֲבָה, הַשָּׁמַיִם",
+      "וְהָאָרֶץ יַגִּידוּ אַהֲבָתוֹ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "אֱלֹהִים הוּא אַהֲבָה, כֻּלָּנוּ",
       "חַיִּים בּוֹ וְנִתְקַיְּמָה",
@@ -41584,7 +41664,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "אֱלֹהִים הוּא אַהֲבָה, שִׂמְחוּ",
       "כִּי אַהֲבָתוֹ לֹא תִתֹּם",
@@ -41593,7 +41673,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "אֱלֹהִים הוּא אַהֲבָה, כִּי פָדָה",
       "דַּם בְּנוֹ נֶפֶשׁ הַחוֹטֵא",
@@ -41797,15 +41877,6 @@
     {
      "label": "1",
      "lines": [
-      "أَدْنُو مِنْكَ يَا مَلَاذِي",
-      "وَسْطَ هَمِّي وَالشُّجُون",
-      "أَنْسَى مَعكَ يَا نَجَاتِي",
-      "كُلَّ دَمْعٍ فِي الْعُيُون"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "يَا إِلٰهِي أَنْتَ تَعْلَم",
       "ضَعْفَ نَفْسِي كَمْ يَكُون",
       "إِنَّمَا فِي الضَّعْفِ أَنْتَ",
@@ -41813,7 +41884,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "أَدْنُو مِنْكَ يَا مَلَاذِي",
+      "وَسْطَ هَمِّي وَالشُّجُون",
+      "أَنْسَى مَعكَ يَا نَجَاتِي",
+      "كُلَّ دَمْعٍ فِي الْعُيُون"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "سَيِّدِي عَلِّمْنِي كَيْفَ",
       "أَسْكُبُ النَّفْسَ لَدَيْك",
@@ -41828,15 +41909,6 @@
     {
      "label": "1",
      "lines": [
-      "I draw near You, my Refuge",
-      "Amid care and sorrows",
-      "With You, my Rescue, I forget",
-      "Every tear in the eyes"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "My God, You know",
       "How great my souls weakness is",
       "But in weakness You",
@@ -41844,7 +41916,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "I draw near You, my Refuge",
+      "Amid care and sorrows",
+      "With You, my Rescue, I forget",
+      "Every tear in the eyes"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Master, teach me how",
       "To pour my soul with You",
@@ -41858,15 +41940,6 @@
     {
      "label": "1",
      "lines": [
-      "Ich nahe dir, meine Zuflucht",
-      "Inmitten von Sorge und Leiden",
-      "Bei dir, meine Rettung, vergesse ich",
-      "Jede Träne in den Augen"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Mein Gott, du weißt",
       "Wie groß meiner Seele Schwäche ist",
       "Doch in Schwäche du",
@@ -41874,7 +41947,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Ich nahe dir, meine Zuflucht",
+      "Inmitten von Sorge und Leiden",
+      "Bei dir, meine Rettung, vergesse ich",
+      "Jede Träne in den Augen"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Meister, lehre mich, wie",
       "Ausgieße meine Seele bei dir",
@@ -41888,15 +41971,6 @@
     {
      "label": "1",
      "lines": [
-      "אֶקְרַב אֵלֶיךָ, מַחְסִי",
-      "בְּתוֹךְ דְּאָגִי וְיָגוֹנִי",
-      "אֶשְׁכַּח עִמְּךָ, יְשׁוּעָתִי",
-      "כָּל־דִּמְעָה בְּעֵינֵינוּ"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אֱלֹהַי, אַתָּה יוֹדֵעַ",
       "כַּמָּה רַבָּה חֻלְשָׁתִי",
       "אַךְ בַּחֻלְשָׁה אַתָּה הוּא",
@@ -41904,7 +41978,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "אֶקְרַב אֵלֶיךָ, מַחְסִי",
+      "בְּתוֹךְ דְּאָגִי וְיָגוֹנִי",
+      "אֶשְׁכַּח עִמְּךָ, יְשׁוּעָתִי",
+      "כָּל־דִּמְעָה בְּעֵינֵינוּ"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "רַבִּי, לַמְּדֵנִי אֵיךְ",
       "אֶשְׁפֹּךְ אֶת־נַפְשִׁי לְפָנֶיךָ",
@@ -41924,15 +42008,6 @@
     {
      "label": "1",
      "lines": [
-      "اِجْذِبْنِي يَا رَبُّ لِلصَّلِيب",
-      "اِجْذِبْنِي أَيَا حَنُون",
-      "اِجْذِبْنِي يَا رَبُّ لِلصَّلِيب",
-      "إِلَى جَنْبِكَ الْمَطْعُون"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "قَدْ فَدَيْتَنِي وَامْتَلَكْتَنِي",
       "يَا مُخَلِّصِي الْمَجِيد",
       "إِنَّمَا أَنَا بُغْيَتِي هُنَا",
@@ -41940,7 +42015,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "اِجْذِبْنِي يَا رَبُّ لِلصَّلِيب",
+      "اِجْذِبْنِي أَيَا حَنُون",
+      "اِجْذِبْنِي يَا رَبُّ لِلصَّلِيب",
+      "إِلَى جَنْبِكَ الْمَطْعُون"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "لَذَّتِي تَحْلُو بَهْجَتِي تَعْلُو",
       "إِذْ بِرَبِّي أَخْتَلِي",
@@ -41949,7 +42034,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "جُدْ وَكَرِّسْنِي لَكَ خَصِّصْنِي",
       "خَادِمًا أُجْرِي رِضَاك",
@@ -41958,7 +42043,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "عُمْقَ حُبِّهِ عُظْمَ جُودِهِ",
       "لَا أَعِي ذَا فِي الْحَيَاه",
@@ -41973,15 +42058,6 @@
     {
      "label": "1",
      "lines": [
-      "Draw me, Lord, to the cross",
-      "Draw me, O Tender",
-      "Draw me, Lord, to the cross",
-      "To Your pierced side"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "You ransomed and possessed me",
       "O my glorious Savior",
       "All I seek here",
@@ -41989,7 +42065,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Draw me, Lord, to the cross",
+      "Draw me, O Tender",
+      "Draw me, Lord, to the cross",
+      "To Your pierced side"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "My delight grows sweet, my joy rises",
       "When alone with my Lord",
@@ -41998,7 +42084,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Bestow, consecrate me, appoint me Yours",
       "A servant doing Your pleasure",
@@ -42007,7 +42093,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "His loves depth, His bountys greatness",
       "I grasp not in this life",
@@ -42021,15 +42107,6 @@
     {
      "label": "1",
      "lines": [
-      "Ziehe mich, Herr, zum Kreuz",
-      "Ziehe mich, o Zärtlicher",
-      "Ziehe mich, Herr, zum Kreuz",
-      "Zu deiner durchstochenen Seite"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Du erlöstest und besaßest mich",
       "O mein herrlicher Retter",
       "Alles, was ich suche hier",
@@ -42037,7 +42114,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Ziehe mich, Herr, zum Kreuz",
+      "Ziehe mich, o Zärtlicher",
+      "Ziehe mich, Herr, zum Kreuz",
+      "Zu deiner durchstochenen Seite"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Meine Wonne wird süß, meine Freude steigt",
       "Wenn allein mit meinem Herrn",
@@ -42046,7 +42133,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Schenke, weihe mich, bestimme mich dir",
       "Ein Knecht, tuend dein Wohlgefallen",
@@ -42055,7 +42142,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Seiner Liebe Tiefe, seiner Fülle Größe",
       "Fasse ich nicht in diesem Leben",
@@ -42069,15 +42156,6 @@
     {
      "label": "1",
      "lines": [
-      "מָשְׁכֵנִי, אֲדֹנָי, אֶל־הַצְּלָב",
-      "מָשְׁכֵנִי, הוֹי הָרַחוּם",
-      "מָשְׁכֵנִי, אֲדֹנָי, אֶל־הַצְּלָב",
-      "אֶל־צִדְּךָ הַמְדֻקָּר"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "כִּי פָדִיתָ אוֹתִי וּקְנִיתָנִי",
       "הוֹי מוֹשִׁיעִי הַנֶּהְדָּר",
       "אַךְ מַטְּרָתִי הִיא כָּאן",
@@ -42085,7 +42163,17 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "מָשְׁכֵנִי, אֲדֹנָי, אֶל־הַצְּלָב",
+      "מָשְׁכֵנִי, הוֹי הָרַחוּם",
+      "מָשְׁכֵנִי, אֲדֹנָי, אֶל־הַצְּלָב",
+      "אֶל־צִדְּךָ הַמְדֻקָּר"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "תִּמְתַּק עֶדְנִי, תָּרוּם שִׂמְחָתִי",
       "בְּהִתְיַחֲדִי עִם־אֲדֹנִי",
@@ -42094,7 +42182,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "חָנֵּנִי וְקַדְּשֵׁנִי לָךְ",
       "עֶבֶד לַעֲשׂוֹת רְצוֹנְךָ",
@@ -42103,7 +42191,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "עֹמֶק אַהֲבָתוֹ, גֹּדֶל טוּבוֹ",
       "לֹא אֶשַּׂג בַּחַיִּים",
@@ -42125,13 +42213,6 @@
     {
      "label": "1",
      "lines": [
-      "آمَنْتُ يَا رَبِّي فَقَوِّ إِيمَانِي",
-      "شَدِّدْ يَقِينِي وَزِدْ فِيكَ إِرْكَانِي"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "أَنْتَ ابْتِهَاجِي مُنْيَتِي قَصْدِي",
       "مَوْلَايَ زِدْ حُبِّي وَإِرْكَانِي",
       "نَفْسِي اسْتَرَاحَتْ بِدَمِ الْعَهْدِ",
@@ -42139,7 +42220,15 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "آمَنْتُ يَا رَبِّي فَقَوِّ إِيمَانِي",
+      "شَدِّدْ يَقِينِي وَزِدْ فِيكَ إِرْكَانِي"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "إِنِّي ضَعِيفٌ وَاهِنُ الْحُبِّ",
       "لٰكِنَّ لِي يَنْبُوعَ إِحْسَانِ",
@@ -42148,7 +42237,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "زِدْنِي اقْتِرَابًا مِنْكَ بِالْقَلْبِ",
       "أَنْتَ الَّذِي بِالْحُبِّ تَرْعَانِي",
@@ -42157,7 +42246,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "مَوْلَايَ إِنِّي مُؤْمِنٌ زِدْنِي",
       "عَزْمًا يُقَوِّي بِالْفِدَا أَمْنِي",
@@ -42172,13 +42261,6 @@
     {
      "label": "1",
      "lines": [
-      "I believed, my Lord, so strengthen my faith",
-      "Firm my certainty, increase my reliance on You"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "You are my gladness, my wish, my aim",
       "Master, increase my love and reliance",
       "My soul rested in the covenants blood",
@@ -42186,7 +42268,15 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "I believed, my Lord, so strengthen my faith",
+      "Firm my certainty, increase my reliance on You"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "I am weak, faint in love",
       "But mine is graces fountain",
@@ -42195,7 +42285,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Increase my nearness to You in heart",
       "You who in love shepherd me",
@@ -42204,7 +42294,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Master, I am a believer, increase me",
       "Resolve strengthening in ransom my safety",
@@ -42218,13 +42308,6 @@
     {
      "label": "1",
      "lines": [
-      "Ich glaubte, mein Herr, so stärke meinen Glauben",
-      "Festige meine Gewissheit, mehre mein Vertrauen auf dich"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "Du bist meine Freude, mein Wunsch, mein Ziel",
       "Meister, mehre meine Liebe und Vertrauen",
       "Meine Seele rastete in des Bundes Blut",
@@ -42232,7 +42315,15 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "Ich glaubte, mein Herr, so stärke meinen Glauben",
+      "Festige meine Gewissheit, mehre mein Vertrauen auf dich"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "Ich bin schwach, matt in Liebe",
       "Doch mein ist der Gnade Quell",
@@ -42241,7 +42332,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "Mehre meine Nähe zu dir im Herzen",
       "Du, der in Liebe mich weidet",
@@ -42250,7 +42341,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "Meister, ich bin gläubig, mehre mir",
       "Entschluss, stärkend im Lösegeld meine Sicherheit",
@@ -42264,13 +42355,6 @@
     {
      "label": "1",
      "lines": [
-      "הֶאֱמַנְתִּי, אֲדֹנָי, חַזֵּק אֱמוּנָתִי",
-      "חַזֵּק בִּטְחוֹנִי וְהַרְבֵּה בְךָ מִשְׁעַנְתִּי"
-     ]
-    },
-    {
-     "label": "2",
-     "lines": [
       "אַתָּה שִׂמְחָתִי, מִשְׁאַלְתִּי, מַטְּרָתִי",
       "אֲדֹנִי, הַרְבֵּה אַהֲבָתִי וְשִׁעוּנִי",
       "נַפְשִׁי מָצְאָה מְנוּחָה בְּדַם־הַבְּרִית",
@@ -42278,7 +42362,15 @@
      ]
     },
     {
-     "label": "3",
+     "label": "القرار",
+     "lines": [
+      "הֶאֱמַנְתִּי, אֲדֹנָי, חַזֵּק אֱמוּנָתִי",
+      "חַזֵּק בִּטְחוֹנִי וְהַרְבֵּה בְךָ מִשְׁעַנְתִּי"
+     ],
+     "chorus": true
+    },
+    {
+     "label": "2",
      "lines": [
       "הִנְנִי חַלָּשׁ, רָפֶה בְּאַהֲבָה",
       "אַךְ־לִי מַעְיַן חֲסָדֶיךָ",
@@ -42287,7 +42379,7 @@
      ]
     },
     {
-     "label": "4",
+     "label": "3",
      "lines": [
       "רַבֵּה קִרְבָתִי אֵלֶיךָ בַּלֵּב",
       "אַתָּה הָאוֹהֵב, בְּאַהֲבָה רֹעִי",
@@ -42296,7 +42388,7 @@
      ]
     },
     {
-     "label": "5",
+     "label": "4",
      "lines": [
       "אֲדֹנִי, מַאֲמִין אָנִי, הַרְבֵּה־לִּי",
       "עֵצָה מְחַזֶּקֶת בַּפְּדוּת תִּקְוָתִי",
