@@ -44,6 +44,7 @@ owner explicitly asks for a translation.
 - **Feedback** (`d507b6c0`): «التقييمات» has an anonymous rating path and an
   email message path (hint: «إن كان لديك أي فكرة لتحسين التطبيق، اكتبها هنا كرسالة
   للمصمم»). Both share the `feedbacks` collection; messages carry `replyEmail`.
+  «تواصل معنا» in the More menu opens a mailto to the same admin address.
   Admin list has kind chips. A Firestore `onCreate` function emails the admin
   via Resend with From name `TarneemAPP` and Reply-To set to the sender.
   **Manual steps remain for the owner**: Blaze plan, secrets/env, function

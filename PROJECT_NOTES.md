@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-18, commit d507b6c0 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet now has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-18, commit 2c6d2451 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» now opens a mailto to the admin contact address; pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -1723,6 +1723,11 @@ stanzas and highlighted correctly.
   functions:env:set ADMIN_NOTIFY_EMAIL=...`, `firebase deploy --only functions`,
   and any Firestore-rules update in the console (rules are **not** in this repo).
   CI deploys hosting only — functions are not auto-deployed.
+- «تواصل معنا» in `more.tsx` is no longer a not-configured stub: it opens
+  `mailto:<CONTACT_EMAIL>?subject=…` through `Linking`. `CONTACT_EMAIL` is
+  exported from `src/data/adminAccess.ts` as the first `EXPO_PUBLIC_ADMIN_EMAILS`
+  entry (fallback `osama.sla@gmail.com`), so the contact address has one source.
+  i18n `more.contactSubject` added in ar/en/de.
 - Verified: both form modes in the browser (opened and inspected, **nothing
   submitted** — no production writes), all six gates green, `node --check
   functions/index.js` clean. Admin panel not visually checked (needs `/admin`
