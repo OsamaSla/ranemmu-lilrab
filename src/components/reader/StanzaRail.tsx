@@ -106,29 +106,6 @@ export function StanzaRail({
         borderRightColor: dark ? 'rgba(255,255,255,0.22)' : colors.border,
         backgroundColor: 'transparent',
       }}>
-      {/* Fullscreen has no top bar; this is its only window control. */}
-      {fullscreen ? (
-        <View style={{ alignItems: 'center', paddingTop: spacing.sm, paddingBottom: spacing.xs }}>
-          <Pressable
-            onPress={onExitFullscreen}
-            accessibilityRole="button"
-            accessibilityLabel={t('reader.exitFullscreen')}
-            hitSlop={HIT_SLOP}
-            style={({ pressed }) => ({
-              width: RAIL_DOT,
-              height: RAIL_DOT,
-              borderRadius: RAIL_DOT / 2,
-              alignItems: 'center',
-              justifyContent: 'center',
-              backgroundColor: 'rgba(255,255,255,0.14)',
-              borderWidth: 1,
-              borderColor: 'rgba(255,255,255,0.3)',
-              opacity: pressed ? 0.6 : 1,
-            })}>
-            <MaterialCommunityIcons name="fullscreen-exit" size={18} color={palette.readerText} />
-          </Pressable>
-        </View>
-      ) : null}
       {/* Language picker above the stanza dots: the rail is the natural home
           for "view settings" of the text column, and it frees the header for
           a centred, untruncated hymn number. */}
@@ -240,6 +217,35 @@ export function StanzaRail({
         })}
       </ScrollView>
 
+      {/* Fullscreen has no top bar, so the exit control sits at the foot of the
+          rail — away from the screen edge and near the thumb on a phone. */}
+      {fullscreen ? (
+        <View
+          style={{
+            alignItems: 'center',
+            paddingTop: spacing.sm,
+            paddingBottom: insets.bottom + spacing.lg,
+          }}>
+          <Pressable
+            onPress={onExitFullscreen}
+            accessibilityRole="button"
+            accessibilityLabel={t('reader.exitFullscreen')}
+            hitSlop={HIT_SLOP}
+            style={({ pressed }) => ({
+              width: RAIL_DOT,
+              height: RAIL_DOT,
+              borderRadius: RAIL_DOT / 2,
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(255,255,255,0.14)',
+              borderWidth: 1,
+              borderColor: 'rgba(255,255,255,0.3)',
+              opacity: pressed ? 0.6 : 1,
+            })}>
+            <MaterialCommunityIcons name="fullscreen-exit" size={18} color={palette.readerText} />
+          </Pressable>
+        </View>
+      ) : null}
       {/* The same hymn as printed by another book. It sits at the foot of the
           rail — the empty stretch below the stanza dots — rather than in the
           header, so the "where am I" column also answers "where else is it".
