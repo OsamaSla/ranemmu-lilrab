@@ -662,6 +662,8 @@ export default function ReaderScreen() {
           translationOptions={translationOptions}
           parallel={parallel}
           onChooseLang={chooseParallel}
+          fullscreen={fullscreen}
+          onExitFullscreen={exitFullscreen}
         />
         {/* RNGH defaults to `touch-action: none` on web, which also stopped the
             wrapped scroller from taking touch pans — on a phone the stanza dots

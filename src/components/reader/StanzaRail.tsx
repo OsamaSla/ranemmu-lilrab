@@ -41,6 +41,8 @@ interface StanzaRailProps {
   translationOptions: { value: ReaderLang; label: string }[];
   parallel: ReaderLang;
   onChooseLang: (lang: ReaderLang) => void;
+  fullscreen: boolean;
+  onExitFullscreen: () => void;
 }
 
 export function StanzaRail({
@@ -56,6 +58,8 @@ export function StanzaRail({
   translationOptions,
   parallel,
   onChooseLang,
+  fullscreen,
+  onExitFullscreen,
 }: StanzaRailProps) {
   const router = useRouter();
   const insets = useSafeAreaInsets();
@@ -63,8 +67,8 @@ export function StanzaRail({
   const { t } = useT();
 
   // A translated single-stanza hymn still needs the rail for the language
-  // switcher, even though it has no stanza dots to jump to.
-  if (verses.length < 2 && linked.length === 0 && translationOptions.length <= 1) return null;
+  // switcher; fullscreen always needs it for the exit button.
+  if (!fullscreen && verses.length < 2 && linked.length === 0 && translationOptions.length <= 1) return null;
 
   const shortLang = (lang: ReaderLang) =>
     lang === 'ar'
@@ -102,6 +106,29 @@ export function StanzaRail({
         borderRightColor: dark ? 'rgba(255,255,255,0.22)' : colors.border,
         backgroundColor: 'transparent',
       }}>
+      {/* Fullscreen has no top bar; this is its only window control. */}
+      {fullscreen ? (
+        <View style={{ alignItems: 'center', paddingTop: spacing.sm, paddingBottom: spacing.xs }}>
+          <Pressable
+            onPress={onExitFullscreen}
+            accessibilityRole="button"
+            accessibilityLabel={t('reader.exitFullscreen')}
+            hitSlop={HIT_SLOP}
+            style={({ pressed }) => ({
+              width: RAIL_DOT,
+              height: RAIL_DOT,
+              borderRadius: RAIL_DOT / 2,
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: 'rgba(255,255,255,0.14)',
+              borderWidth: 1,
+              borderColor: 'rgba(255,255,255,0.3)',
+              opacity: pressed ? 0.6 : 1,
+            })}>
+            <MaterialCommunityIcons name="fullscreen-exit" size={18} color={palette.readerText} />
+          </Pressable>
+        </View>
+      ) : null}
       {/* Language picker above the stanza dots: the rail is the natural home
           for "view settings" of the text column, and it frees the header for
           a centred, untruncated hymn number. */}
@@ -217,7 +244,7 @@ export function StanzaRail({
           rail — the empty stretch below the stanza dots — rather than in the
           header, so the "where am I" column also answers "where else is it".
           Outside the ScrollView so it stays reachable with many stanzas. */}
-      {linked.length > 0 ? (
+      {linked.length > 0 && !fullscreen ? (
         <View
           accessibilityRole="menu"
           accessibilityLabel={t('reader.alsoIn')}

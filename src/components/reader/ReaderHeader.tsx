@@ -13,7 +13,6 @@ import { IconButton } from '../IconButton';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { spacing } from '../../theme/tokens';
-import { ReaderIconButton } from './ReaderIconButton';
 import { ReaderToolbar } from './ReaderToolbar';
 
 type Props = {
@@ -28,22 +27,9 @@ export function ReaderHeader({ fullscreen, onBack, topInset, toolbarProps }: Pro
   const { t, direction } = useT();
   const backLabel = t('common.back');
 
-  if (fullscreen) {
-    return (
-      <View
-        style={{
-          paddingTop: topInset + spacing.sm,
-          flexDirection: direction.row,
-          alignItems: 'center',
-          paddingHorizontal: spacing.sm,
-        }}>
-        <ReaderIconButton name={direction.isRTL ? 'chevron-right' : 'chevron-left'} label={backLabel} onPress={onBack} dark />
-        <View style={{ flex: 1, paddingHorizontal: spacing.xs }}>
-          <ReaderToolbar {...toolbarProps} dark />
-        </View>
-      </View>
-    );
-  }
+  // Fullscreen is text-only: the exit control lives at the top of the left
+  // rail (see StanzaRail), so no top bar eats vertical space here.
+  if (fullscreen) return null;
 
   return (
     <View
