@@ -76,9 +76,12 @@ Last updated: 2026-11-18 · **Book 1 COMPLETE (1047/1047)**
   and are listed below.
 - The printed line is the unit, not the sentence: a short Arabic half-phrase
   stays short in Hebrew. Padding it is a regression.
-- **Chorus**: `C:` gets the Hebrew text of the chorus-tagged verse, joined by
-  ` · ` (Book 2's `chorus_he` convention). The Arabic label `القرار`/`قرار` stays
-  as stanza-label data.
+- **Chorus (FINAL — owner decision 2026-11-18)**: `C:` / `chorus_he` is the fixed
+  pointed word `פְּזָמוֹן` only — the Hebrew name of the refrain, NOT the hymn's
+  refrain text. The refrain text stays in the chorus-tagged `verses_he` stanza;
+  the Arabic label `القرار`/`قرار` stays as stanza-label data. All 694 Book 1
+  payloads were converted; the reader heading and admin editor field now show
+  `القرار · פְּזָמוֹן`.
 
 ## Deliberate geometry (do not "fix")
 - h0001-h0007 (pilot): 16 flags, all Arabic-driven shape/length — no missing or

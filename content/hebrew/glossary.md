@@ -156,9 +156,12 @@ Arabic wins.
 
 ## Open decisions
 
-- **Refrain hymns**: `chorus_he` should repeat the refrain text exactly in
-  every stanza that carries `chorus: true`; the meter check ignores it. Settle
-  on the first refrain hymn in Book 2 and record the rule here.
+- **Refrain hymns**: Book 2/3 keep the older convention — `chorus_he` repeats the
+  refrain text exactly in every stanza that carries `chorus: true`; the meter
+  check ignores it. **Book 1 (owner decision 2026-11-18) is different**:
+  `chorus_he` is only the fixed pointed word `פְּזָמוֹן` (the Hebrew name of the
+  refrain); the refrain text stays in the chorus-tagged `verses_he` stanza.
+  Do not "harmonise" Book 1 back to the Book 2/3 rule.
 - **Dialogue hymns** (`يقول لي` / congregational reply): keep the speaker
   shifts but do not add speaker labels — the reader prints lines only.
 - **Acrostics**: if Book 2 has one, the initial letters win over exact

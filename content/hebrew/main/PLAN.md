@@ -78,13 +78,15 @@ fix real faults only. Do NOT edit STATE.md or PLAN.md — the parent owns them.
 End with one line: DONE <FROM>-<TO> / BLOCKED <reason>.
 ```
 
-## Chorus rule (new for Book 1)
+## Chorus rule (final Book 1 convention — owner decision 2026-11-18)
 694 hymns have a top-level `chorus` field (a label, e.g. `القرار`) and one or more
 verses with `chorus: true`. The digest emits a blank `C:` line for these. Fill it
-with the **Hebrew translation of the chorus-tagged verse's lines**, joined by
-` · ` — the Book 2 convention (`chorus_he` holds the refrain text, not a label).
-The label itself stays as data in `verses_he`. `hebrew-apply` requires `chorus_he`
-to be pointed Hebrew.
+with the **fixed pointed Hebrew word `פְּזָמוֹן`** — the Hebrew name of the refrain,
+NOT the hymn's refrain text. The refrain text itself stays in `verses_he` in the
+chorus-tagged stanza; the Arabic label is data in `verses_he`. `hebrew-apply`
+requires `chorus_he` to be pointed Hebrew. This overrides the older Book 2
+convention where `chorus_he` repeated the refrain text; all 694 Book 1 payloads
+were converted by `scripts/book1/set-chorus-label.mjs` (commit after `dec4c89c`).
 
 ## Gates (all must pass before a batch counts)
 - `hebrew-pack` dry-run, then write — refutes foreign characters, missing lines,

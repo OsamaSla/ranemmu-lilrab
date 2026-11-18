@@ -47,7 +47,7 @@
       ]
     }
   ],
-  "chorus_he": "זֶה־הוּא דְּבָרוֹ, זֶה חֶפְצוֹ · אִם־נֹאחֵז בּוֹ, לָנוּ יִהְיֶה · כִּי הוּא נֶאֱמָן וְצַדִּיק · וְהוּא אָב חַנּוּן",
+  "chorus_he": "פְּזָמוֹן",
   "review": [
     "Settled taranim twin tr0275 reused where the Arabic matches (stanza 1, chorus, stanza 3, Isaiah 40:31 imagery in stanza 4), re-split into the main's printed lines. The chorus is verse 2 (label 1, four lines); C repeats all four joined by \" · \"; label القرار stays as data. Real difference from the twin: main 2:4 says أَبٌ حَنُون (compassionate Father), not رَبّ حَنُون, so it is rendered וְהוּא אָב חַנּוּן. Tetragrammaton avoided in 4:1 because the Arabic prints رَبّي العلي, not يَهْوَه (glossary). Stanza 4 follows the main's six printed lines one-for-one: 4:3 ويرفعون عاليا, 4:4 في عاصف الرياح, 4:5 مثلَ النسور الأقوياء, 4:6 نحو العُلا الجناح; the twin's single eagle line was split back into the main's two lines, so no printed line is merged or duplicated."
   ]
