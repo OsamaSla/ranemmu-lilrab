@@ -1,12 +1,13 @@
 /**
- * The reader's compact header row: language chips above a single icon toolbar.
+ * The reader's compact header: the hymn number owns its own line, and the icon
+ * toolbar shares the second line with a horizontally scrollable language strip.
  *
  * Prev/next, fullscreen, favourite, search and the overflow menu live here so
  * the bottom tab bar never hides and no tall sheet covers the hymn text. Search
  * sits outside the overflow menu for one-tap reach. The setlist position badge
  * appears between prev/next only while reading inside a shared `?ids=` set.
  */
-import { Pressable, View } from 'react-native';
+import { Pressable, ScrollView, View } from 'react-native';
 
 import { AppText } from '../AppText';
 import { useT } from '../../hooks/useT';
@@ -66,14 +67,21 @@ export function ReaderToolbar({
 
   const languageChips = () => {
     if (translationOptions.length <= 1) return null;
+    // A roller rather than a fixed strip: on a 360px screen the four chips plus
+    // the icon row cannot all fit, but the selected language stays reachable
+    // and the hymn number gets the whole first line to itself.
     return (
-      <View
-        style={{
+      <ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        nestedScrollEnabled
+        accessibilityLabel={t('reader.translation')}
+        style={{ flex: 1, minHeight: 34 }}
+        contentContainerStyle={{
           flexDirection: direction.row,
           alignItems: 'center',
           gap: 4,
-          paddingRight: 9,
-          paddingLeft: 8,
+          paddingHorizontal: 4,
         }}>
         {translationOptions.map((option) => {
           const selected = option.value === parallel;
@@ -93,13 +101,13 @@ export function ReaderToolbar({
               accessibilityRole="button"
               accessibilityLabel={option.label}
               accessibilityState={{ selected }}
-              hitSlop={6}
+              hitSlop={4}
               android_ripple={{ color: dark ? 'rgba(255,255,255,0.3)' : colors.border }}
               style={({ pressed }) => ({
-                minHeight: 32,
-                minWidth: 40,
-                paddingHorizontal: spacing.sm,
-                paddingVertical: 4,
+                minHeight: 30,
+                minWidth: 34,
+                paddingHorizontal: 6,
+                paddingVertical: 2,
                 borderRadius: radius.pill,
                 borderWidth: 1,
                 borderColor: selected
@@ -117,8 +125,8 @@ export function ReaderToolbar({
                 numberOfLines={1}
                 style={{
                   fontWeight: selected ? '700' : '500',
-                  fontSize: 18,
-                  lineHeight: 21,
+                  fontSize: 15,
+                  lineHeight: 18,
                   fontFamily: 'Amiri',
                   color: selected ? (option.value === 'ar' ? '#1A1A1A' : '#FFFFFF') : '#1A1A1A',
                   textAlign: 'right',
@@ -129,7 +137,7 @@ export function ReaderToolbar({
             </Pressable>
           );
         })}
-      </View>
+      </ScrollView>
     );
   };
 
@@ -149,7 +157,7 @@ export function ReaderToolbar({
           justifyContent: 'center',
           gap: 2,
           minHeight: TOOLBAR_HEIGHT,
-          flex: 1,
+          flexShrink: 0,
         }}>
         <ReaderIconButton
           name={direction.isRTL ? 'chevron-right' : 'chevron-left'}
@@ -157,7 +165,7 @@ export function ReaderToolbar({
           disabled={!neighbours.previous}
           onPress={goPrev}
           dark={dark}
-          box={36}
+          box={32}
         />
         {inSet && setIndex >= 0 ? (
           <AppText
@@ -174,14 +182,14 @@ export function ReaderToolbar({
           disabled={!neighbours.next}
           onPress={goNext}
           dark={dark}
-          box={36}
+          box={32}
         />
         <ReaderIconButton
           name={fullscreen ? 'fullscreen-exit' : 'fullscreen'}
           label={fullscreen ? t('reader.exitFullscreen') : t('reader.fullscreen')}
           onPress={onFullscreen}
           dark={dark}
-          box={36}
+          box={32}
         />
         <ReaderIconButton
           name={isFavorite ? 'star' : 'star-outline'}
@@ -189,21 +197,21 @@ export function ReaderToolbar({
           onPress={onToggleFavorite}
           color={isFavorite ? colors.favorite : ink}
           dark={dark}
-          box={36}
+          box={32}
         />
         <ReaderIconButton
           name="magnify"
           label={t('search.placeholder')}
           onPress={onSearch}
           dark={dark}
-          box={36}
+          box={32}
         />
         <ReaderIconButton
           name="dots-vertical"
           label={t('reader.more')}
           onPress={onOverflow}
           dark={dark}
-          box={36}
+          box={32}
         />
       </View>
     );
@@ -211,19 +219,20 @@ export function ReaderToolbar({
 
   return (
     <>
-      <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center' }}>
+      {/* The number owns the whole line; chips used to squeeze it on phones. */}
+      <View style={{ flexDirection: direction.row, alignItems: 'center' }}>
         <AppText
           variant="heading"
           numberOfLines={1}
           color={dark ? palette.readerText : colors.onPrimary}
-          style={{ fontWeight: '700', marginEnd: spacing.md, flexShrink: 1 }}>
+          style={{ fontWeight: '700', flexShrink: 1 }}>
           {t('common.hymnNumber')} {number}
         </AppText>
-        {languageChips()}
       </View>
       <View
-        style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center', marginTop: 2 }}>
+        style={{ flexDirection: direction.row, alignItems: 'center', marginTop: 2, gap: spacing.xs }}>
         {iconToolbar()}
+        {languageChips()}
       </View>
     </>
   );
