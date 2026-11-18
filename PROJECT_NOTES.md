@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-19, commit a9fdc91f (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-19, commit 69968e2e (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -203,6 +203,12 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 
 ## 8. Verified gotchas
 
+- `TranslationNotice` now renders **after the final stanza**, before the also-in
+  card, instead of above stanza 1 — the badge + sentence were pushing the text
+  down on phones. It is a quiet footnote: top border, 11px text, smaller badge.
+  The EN/DE note is pinned `writingDirection: 'ltr'`; with the app's RTL base the
+  final full stop wrapped onto its own line. Verified in the browser: no notice
+  at the top in EN view, notice present at the bottom, clean line wrap.
 - The hymn number and the icon row are both **centred** in the golden header:
   `ReaderHeader` pins the back chevron absolutely so the toolbar keeps the full
   width (measured title centre offset 0 at 360 px, previously −24).
