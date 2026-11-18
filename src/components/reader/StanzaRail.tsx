@@ -110,7 +110,7 @@ export function StanzaRail({
           for "view settings" of the text column, and it frees the header for
           a centred, untruncated hymn number. */}
       {translationOptions.length > 1 ? (
-        <View style={{ alignItems: 'center', paddingTop: spacing.sm, paddingBottom: spacing.xs }}>
+        <View style={{ alignItems: 'center', paddingTop: spacing.md, paddingBottom: spacing.md }}>
           <GestureDetector gesture={languageGesture}>
             <Pressable
               accessibilityRole="button"
@@ -223,8 +223,8 @@ export function StanzaRail({
         <View
           style={{
             alignItems: 'center',
-            paddingTop: spacing.sm,
-            paddingBottom: insets.bottom + spacing.lg,
+            paddingTop: spacing.md,
+            paddingBottom: insets.bottom + spacing.xl,
           }}>
           <Pressable
             onPress={onExitFullscreen}
