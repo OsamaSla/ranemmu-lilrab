@@ -1,0 +1,23 @@
+{
+  "book": "main",
+  "number": 227,
+  "title_he": "אָשִׁיר לַמֶּלֶךְ וְאַהֲלֵל",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "אָשִׁיר לַמֶּלֶךְ וְאַהֲלֵל",
+        "מִי כָּמוֹךָ אֱלֹהַי",
+        "יִשְׂמַח לִבִּי בְּקָרְבָתְךָ",
+        "יְמַלֵּא אֶת־עֵינַי כְּבוֹדְךָ",
+        "אֶשְׁתַּחֲוֶה לְךָ לְבַדְּךָ",
+        "אֲדֹנִי אֶעֱבֹדְךָ",
+        "אָשִׁיר לַמֶּלֶךְ וְאַהֲלֵל",
+        "מִי כָּמוֹךָ אֱלֹהַי"
+      ]
+    }
+  ],
+  "review": [
+    "Authored fresh (no settled twin). Lines 1:1-1:2 are repeated verbatim at 1:7-1:8 in the Arabic (an inclusio); kept identical in Hebrew. Arabic source parentheses dropped per house style."
+  ]
+}
