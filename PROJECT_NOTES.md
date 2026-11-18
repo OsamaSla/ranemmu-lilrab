@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-18, commit 78758bfb, all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; nothing pushed after the import commits
+Last verified: 2026-11-18, commit 76066bbb, all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; nothing pushed after the handoff (e01fb65c)
 
 ## 1. What this is
 
@@ -242,7 +242,29 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   (all except 318, 362, 364) swaps it below the old stanza 2, so the printed
   order is `1, القرار, 2, 3…`; mode `keep` leaves it first. Stanzas are relabelled
   `القرار` + 1…n in ar/en/de, and `index.json`'s `hasChorus` flips for exactly
-  these 30 — that is the check to run if the count looks wrong.
+  these 30 — that is the check to run if the count looks wrong. (Expanded to
+  123 on 2026-11-18 — see the next bullet.)
+- **Book 2 refrain list recovered (2026-11-18, `c8b62434`→`76066bbb`):** the
+  owner re-supplied the lost list as `C:\Users\osama\Desktop\1.xlsx`
+  (`Sheet1`: `Hymn | refrain | place`, 123 rows, `refrain` always 1). It is now
+  copied verbatim into `content/hebrew/taranim/STATE.md` — that file is the
+  durable source of truth, do not delete it. `place=2 → move` (refrain printed
+  first, moved below stanza 2 → `1, القرار, 2, 3…`); `place=1 → keep` (stays at
+  index 0). The 30 earlier fixes (315–374) were skipped; the Excel's `place`
+  for them matched their existing order (318/362/364 = 1, rest = 2), which
+  validated the mapping. **93 new hymns** applied in four commits: h0014–h0156
+  (23), h0157–h0216 (23), h0218–h0259 (23, with h0248 the only new `keep`),
+  h0260–h0329 (24). Result: 123 flagged taranim hymns, 0 mismatches against the
+  Excel, and only 93 payload files differ from `e01fb65c` (the 30 prior fixes
+  are byte-identical).
+  - `scripts/refrain-batch.mjs` `LANGS` now includes `verses_he` so the whole
+    AR/EN/DE/HE grid is reordered; new
+    `scripts/book2/sync-hebrew-payloads.mjs` copies the corrected `verses_he`
+    from the corpus into `content/hebrew/taranim/NNNN.json`. The sync is
+    mandatory: `hebrew-apply.mjs` `inspect()` checks payload labels against the
+    Arabic, so a stale payload fails `hebrew:check` (drift) and `hebrew:align`.
+    It refuses a sync whose per-stanza line counts changed, so it only ever
+    moves whole stanzas — never edits Hebrew text.
 - Gotcha: after `npm run build:corpus`, a **running Metro dev server keeps
   serving the old JSON chunk** — the reader still showed the pre-change stanza
   order until the server was restarted (`npm run web -- --clear`). The static
@@ -298,6 +320,9 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 
 ## 9. Known issues / cleanup candidates
 
+- `content/hebrew/taranim/STATE.md` holds the only repo copy of the recovered
+  123-hymn refrain list (previously lost with an old session). Keep it; the
+  Desktop `1.xlsx` it came from is outside the repo and not durable.
 - Two Book 3 hymns still lack a translation (run
   `set TRANSLATE_MODEL=qwen2.5:14b && node scripts/book3/translate-ollama.mjs`).
 - 54 Book 3 hymns score below the topic threshold and stay untagged (same
