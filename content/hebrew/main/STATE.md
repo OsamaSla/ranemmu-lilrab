@@ -1,9 +1,9 @@
 # Book 1 Hebrew — live state (subagent rotation driver)
 
-Last updated: 2026-11-18 · after batch h0248-h0253
+Last updated: 2026-11-18 · after batch h0254-h0260
 
-- Progress: **253 / 1047** hymns, 4873 verse lines, 100 % pointed. `hebrew:progress`
-  reports 241 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
+- Progress: **260 / 1047** hymns, 5010 verse lines, 100 % pointed. `hebrew:progress`
+  reports 248 `review[]` notes. `hebrew-meter --book main --flags-only` reports 16
   flags for h0001-h0007, 18 for h0008-h0015, 13 for h0016-h0023, 17 for
   h0024-h0031, 15 for h0032-h0038, 32 for h0039-h0045, 11 for h0046-h0052,
   18 for h0053-h0058, 18 for h0059-h0065, 15 for h0066-h0071, 13 for
@@ -14,8 +14,9 @@ Last updated: 2026-11-18 · after batch h0248-h0253
   h0170-h0175, 25 for h0176-h0180, 10 for h0181-h0187, 9 for h0188-h0193,
   7 for h0194-h0199, 13 for h0200-h0206, 11 for h0207-h0213, 14 for
   h0214-h0220, 14 for h0221-h0227, 10 for h0228-h0234, 22 for h0235-h0241
-  15 for h0242-h0247 and 20 for h0248-h0253, all reviewed and accepted.
-- Next batch: **h0254–h0260** (7 hymns, 137 lines) — recompute with
+  15 for h0242-h0247, 20 for h0248-h0253 and 10 for h0254-h0260, all reviewed
+  and accepted.
+- Next batch: **h0261–h0267** (7 hymns, 135 lines) — recompute with
   `node scripts/book1/next-batch.mjs` before every spawn.
 - Plan: `content/hebrew/main/PLAN.md` (rotation order, child prompt, gates).
 - Remaining tail after this book: none — Book 1 is the last book.
@@ -32,7 +33,7 @@ Last updated: 2026-11-18 · after batch h0248-h0253
     h0024-h0031, h0032-h0038, h0039-h0045, h0046-h0052, h0053-h0058,
     h0059-h0065, h0066-h0071, h0072-h0078, h0079-h0086, h0087-h0093,
     h0094-h0100, h0101-h0108, h0109-h0114, h0115-h0121, h0122-h0127,
-    h0128-h0133, h0134-h0140, h0141-h0149, h0150-h0156, h0157-h0164, h0165-h0169, h0170-h0175, h0176-h0180, h0181-h0187, h0188-h0193, h0194-h0199, h0200-h0206, h0207-h0213, h0214-h0220, h0221-h0227, h0228-h0234, h0235-h0241, h0242-h0247, h0248-h0253 (all gates green)
+    h0128-h0133, h0134-h0140, h0141-h0149, h0150-h0156, h0157-h0164, h0165-h0169, h0170-h0175, h0176-h0180, h0181-h0187, h0188-h0193, h0194-h0199, h0200-h0206, h0207-h0213, h0214-h0220, h0221-h0227, h0228-h0234, h0235-h0241, h0242-h0247, h0248-h0253, h0254-h0260 (all gates green)
 - Reset `exhausted_today` at the next local day boundary. On a quota response
   from a child, add that model here and advance `active_index` before retrying
   the same range.
@@ -240,6 +241,14 @@ Last updated: 2026-11-18 · after batch h0248-h0253
   verse-number artifacts omitted per h0081/h0100. Choruses: h248/h249/h250/
   h252/h253 v2; h251 none. Glossary: פִּדְיוֹנִי (h248), הַצּוּר (h250),
   כִּבְשַׁן (h251), הֲוָיָה (h252/h253). 598/598 Hebrew tokens pointed.
+- h0254-h0260: 10 line-length flags (plus three shape notices), all Arabic-driven
+  — no missing or extra words. Shapes 10 (h254), 4/6/4/4 (h255),
+  4/6/4/4/4/4/4 (h256), 4/2/4/4 (h257), 8/8/8 (h258), 7/7/7 (h259),
+  4×5 (h260); the 6- and 2-line choruses set the irregular shapes in
+  h255-h257. One real tightening: h255 1:1 `קָרָאתִי אֵלֶיךָ` → `קְרָאתִיךָ`
+  for `دعوتك`. Choruses: h255/h256/h257/h260 v2; h254/h258/h259 none. Glossary:
+  מִגְדַּל־עֹז, סֹהַר, מְצוּלָה, כִּבְשַׁן, בַּלָּהָה, חֻלְשָׁה, עוֹד מְעַט.
+  575/575 Hebrew tokens pointed.
 - Tooling fix (commit `71522d3a`): `hebrew-meter.mjs` now falls back to the corpus
   file name when a hymn has no `book` key, so `--book main` sees hymns 1-1000.
 
