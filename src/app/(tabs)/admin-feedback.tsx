@@ -21,6 +21,7 @@ import {
   updateFeedbackNotes,
   updateFeedbackStatus,
   type Feedback,
+  type FeedbackKind,
   type FeedbackStatus,
 } from '../../data/feedback';
 import { useCanEdit } from '../../hooks/useCanEdit';
@@ -42,11 +43,19 @@ const FEEDBACK_STATUS_LABEL: Record<FeedbackStatus, string> = {
 };
 
 const FEEDBACK_CATEGORY_LABEL: Record<string, string> = {
+  message: 'رسالة',
   missing_hymn: 'اقتراح ترنيمة',
   translation: 'الترجمة',
   bug: 'مشكلة تقنية',
   other: 'أخرى',
 };
+
+type KindFilter = 'all' | FeedbackKind;
+const KIND_FILTERS: { value: KindFilter; label: string }[] = [
+  { value: 'all', label: 'الكل' },
+  { value: 'rating', label: 'التقييمات' },
+  { value: 'message', label: 'الرسائل' },
+];
 
 /** Firestore Timestamp → localized date/time, or '' when not stamped yet. */
 function formatFeedbackDate(value: unknown): string {
@@ -68,6 +77,7 @@ export default function AdminFeedbackScreen() {
 
   const [items, setItems] = useState<(Feedback & { id: string })[]>([]);
   const [filter, setFilter] = useState<FeedbackStatus | 'all'>('all');
+  const [kindFilter, setKindFilter] = useState<KindFilter>('all');
   const [notesEdit, setNotesEdit] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState(true);
   const [msg, setMsg] = useState('');
@@ -194,10 +204,15 @@ export default function AdminFeedbackScreen() {
     setMsg('تم حذف التقييم');
   };
 
+  // Ratings and messages share the collection; the kind chips filter locally.
+  const visible = items.filter(
+    (fb) => kindFilter === 'all' || (fb.kind ?? 'rating') === kindFilter,
+  );
+
   return (
     <AdminScreenShell active="feedback">
       <FlatList
-        data={items}
+        data={visible}
         keyExtractor={(fb) => fb.id}
         keyboardShouldPersistTaps="handled"
         contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}
@@ -240,6 +255,38 @@ export default function AdminFeedbackScreen() {
               ))}
             </View>
 
+            <View
+              style={{
+                flexDirection: direction.row,
+                flexWrap: 'wrap',
+                gap: spacing.xs,
+                marginBottom: spacing.sm,
+              }}>
+              {KIND_FILTERS.map((option) => (
+                <Pressable
+                  key={option.value}
+                  onPress={() => setKindFilter(option.value)}
+                  accessibilityRole="button"
+                  accessibilityState={{ selected: kindFilter === option.value }}
+                  style={({ pressed }) => ({
+                    paddingVertical: spacing.xs,
+                    paddingHorizontal: spacing.md,
+                    borderRadius: radius.pill,
+                    borderWidth: 1,
+                    borderColor: kindFilter === option.value ? colors.primary : colors.border,
+                    backgroundColor: kindFilter === option.value ? colors.primary : 'transparent',
+                    opacity: pressed ? 0.75 : 1,
+                  })}>
+                  <AppText
+                    variant="caption"
+                    color={kindFilter === option.value ? colors.onPrimary : colors.text}
+                    style={{ fontWeight: '700' }}>
+                    {option.label}
+                  </AppText>
+                </Pressable>
+              ))}
+            </View>
+
             <Pressable
               onPress={refresh}
               disabled={loading}
@@ -275,7 +322,10 @@ export default function AdminFeedbackScreen() {
           )
         }
         renderItem={({ item: fb }) => {
-          const stars = '★'.repeat(Math.max(0, Math.min(5, Math.round(fb.rating))));
+          const isMessage = (fb.kind ?? 'rating') === 'message';
+          const stars = isMessage
+            ? 'رسالة'
+            : '★'.repeat(Math.max(0, Math.min(5, Math.round(fb.rating))));
           const createdAt = formatFeedbackDate(fb.createdAt);
           return (
             <Card style={{ marginTop: spacing.md, padding: spacing.md }}>
@@ -308,6 +358,12 @@ export default function AdminFeedbackScreen() {
               <AppText variant="body" style={{ marginTop: spacing.xs }}>
                 {fb.comment?.trim() ? fb.comment : 'بدون تعليق'}
               </AppText>
+
+              {isMessage && fb.replyEmail?.trim() ? (
+                <AppText variant="caption" color={colors.primary} style={{ marginTop: spacing.xs }}>
+                  {`من: ${fb.replyEmail.trim()}`}
+                </AppText>
+              ) : null}
 
               {createdAt ? (
                 <AppText variant="caption" color={colors.textMuted} style={{ marginTop: spacing.xs }}>

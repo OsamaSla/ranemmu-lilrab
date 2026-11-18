@@ -21,14 +21,22 @@ const FEEDBACK_COLLECTION = 'feedbacks';
 
 export type FeedbackStatus = 'pending' | 'in_progress' | 'completed';
 
+/**
+ * A rating is anonymous; a message carries a return address so the admin can
+ * reply by email. Both share one collection and one triage screen.
+ */
+export type FeedbackKind = 'rating' | 'message';
+
 /** Why a feedback call failed — the UI maps each one to a readable hint. */
 export type FeedbackError = 'unconfigured' | 'permission' | 'offline' | 'unknown';
 
 export interface Feedback {
   id?: string;
+  kind?: FeedbackKind;
   rating: number;
   category: string;
   comment: string;
+  replyEmail?: string;
   status: FeedbackStatus;
   adminNotes?: string;
   createdAt?: unknown;
@@ -71,14 +79,19 @@ export async function submitFeedback(data: {
   rating: number;
   category: string;
   comment: string;
+  kind?: FeedbackKind;
+  replyEmail?: string;
 }): Promise<SubmitFeedbackResult> {
   const db = getFirebaseDb();
   if (!db) return { ok: false, error: 'unconfigured' };
+  const kind = data.kind ?? 'rating';
   try {
     const docRef = await addDoc(collection(db, FEEDBACK_COLLECTION), {
-      rating: data.rating,
-      category: data.category,
+      kind,
+      rating: kind === 'message' ? 0 : data.rating,
+      category: kind === 'message' ? 'message' : data.category,
       comment: data.comment.slice(0, 500),
+      replyEmail: kind === 'message' ? (data.replyEmail ?? '').trim().slice(0, 254) : '',
       status: 'pending',
       adminNotes: '',
       createdAt: serverTimestamp(),
