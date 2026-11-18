@@ -1,0 +1,47 @@
+{
+  "book": "main",
+  "number": 388,
+  "title_he": "לִבִּי בְּכִסּוּפִים אֶל רֶגַע הַמִּפְגָּשׁ",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "לִבִּי בְּכִסּוּפִים",
+        "אֶל רֶגַע הַמִּפְגָּשׁ",
+        "וּמָתַי יָבוֹא",
+        "וְיֻשְׁלַם הַתִּקְוָה"
+      ]
+    },
+    {
+      "label": "1",
+      "lines": [
+        "הוּא כָּל־תִּקְוָתִי",
+        "וַאֲנִי בַּגָּלוּת",
+        "יֵשׁוּעַ יְדִידִי · כָּל־מִשְׁאָלָתִי"
+      ],
+      "chorus": true
+    },
+    {
+      "label": "2",
+      "lines": [
+        "אִם אָרְכָה תּוֹחַלְתִּי",
+        "מֻכְרָח אֲנִי לִרְאוֹתְךָ",
+        "זֶה כִּסּוּף לִבִּי",
+        "אֶשְׁכֹּן בִּמְרוֹמְךָ"
+      ]
+    },
+    {
+      "label": "3",
+      "lines": [
+        "הַסְּעָרוֹת שׁוֹתְקוֹת",
+        "וְתִשְׁכֹּנָה הָרוּחוֹת",
+        "וְאֶרְאֶה יְדִידִי",
+        "וְהַלֵּב יָנוּחַ"
+      ]
+    }
+  ],
+  "chorus_he": "הוּא כָּל־תִּקְוָתִי · וַאֲנִי בַּגָּלוּת · יֵשׁוּעַ יְדִידִי · כָּל־מִשְׁאָלָתִי",
+  "review": [
+    "Authored fresh; no settled twin. Chorus-tagged verse is the second stanza (label 1, three lines); C repeats its three lines joined by \" · \" (2:3 already carries an internal caesura from the Arabic's dash). 4/3/4/4 shape comes from the Arabic's three-line refrain stanza. Glossaries: כִּסּוּפִים for اشتياق/شوق, מִפְגָּשׁ for لقاء, מִשְׁאָלָה for منيتي, תִּקְוָה for الرجاء/آمالي, יֵשׁוּעַ (never בישו). \"سماك\" rendered בִּמְרוֹמְךָ (Your heights) to avoid an unattested suffix on שָׁמַיִם. Label القرار stays as data."
+  ]
+}
