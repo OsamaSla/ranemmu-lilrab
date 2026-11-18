@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-19, commit 208fbd48 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-19, code at 208fbd48 (CI lint fix, pushed together with the closeout docs), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with an admin-alert Cloud Function (§28 — manual deploy steps remain); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through b7ea5a5a; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -1755,6 +1755,12 @@ stanzas and highlighted correctly.
 
 ## 28. Feedback — anonymous rating, email message, admin alert (2026-11-18)
 
+- **Rejected alternative (owner asked on 2026-11-19):** Gemini suggested dropping
+  Resend/Functions/Blaze and using Firebase Auth's client-side
+  `sendEmailVerification()` after signup. That verifies an account's address —
+  feedback submission is anonymous (no signup), it would not notify the admin of
+  new content, and Auth templates cannot carry feedback or a Reply-To. It is a
+  different feature, not a replacement; only add it if explicitly requested.
 - `src/components/FeedbackModal.tsx` has two modes. **Rating** is unchanged and
   anonymous (stars, category, optional comment — no email). **Message** asks for
   a return email (validated client-side) plus text, with the owner's hint
