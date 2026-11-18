@@ -1,0 +1,37 @@
+{
+  "book": "main",
+  "number": 347,
+  "title_he": "נַעֲלֵיתָ מְאֹד אֲדֹנָי אֱלֹהִים",
+  "verses_he": [
+    {
+      "label": "1",
+      "lines": [
+        "נַעֲלֵיתָ מְאֹד אֲדֹנָי אֱלֹהִים",
+        "נַעֲלֵיתָ מְאֹד בָּאָרֶץ וּבַשָּׁמַיִם",
+        "נַעֲלֵיתָ מְאֹד אֵין כָּמוֹךָ אֵל",
+        "נַעֲלֵיתָ מְאֹד אֲדֹנָי אֱלֹהִים"
+      ]
+    },
+    {
+      "label": "1",
+      "lines": [
+        "כָּבוֹד לְךָ עֹז לְךָ",
+        "יָרוּם שִׁמְךָ עַל־הַכֹּל"
+      ],
+      "chorus": true
+    },
+    {
+      "label": "2",
+      "lines": [
+        "הֲדָרְךָ מְכַסֶּה כָּל־הֲוָיָה",
+        "כִּי אַתָּה גָּדוֹל מִבְּלִי גְּבוּל",
+        "לֹא יַעַמְדוּ לְפָנֶיךָ סְכָרִים רָמִים",
+        "נַעֲלֵיתָ לְבַדְּךָ · לְךָ כָּל־הַכְּרִיעָה"
+      ]
+    }
+  ],
+  "chorus_he": "כָּבוֹד לְךָ עֹז לְךָ · יָרוּם שִׁמְךָ עַל־הַכֹּל",
+  "review": [
+    "Chorus is verse 2 (two lines), C repeats both joined by \" · \"; the Arabic label القرار stays as data. Glossary: הֲוָיָה for الوجود, עֹז for عزاً, נַעֲלֵיתָ for علوت. The repeated 1:1/1:4 refrain is kept identical like the Arabic; 2:1's parallel halves stay in one line in the verse and are joined by \" · \" only in C."
+  ]
+}
