@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-18, commit 6a5ffa74 (local, not pushed), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; pushed through a38aa4ad, 6a5ffa74 pending push
+Last verified: 2026-11-18, commit 15bd0c36 (pushed; main in sync with origin, clean tree), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; stray install-windows.ps1 deleted; no pending work and no push pending — handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
