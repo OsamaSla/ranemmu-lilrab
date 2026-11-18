@@ -49,7 +49,6 @@ import type { ReaderLang } from '../../../components/reader/readerText';
 import { ensureHymn, getHymn, getLinks, getNeighbours, getSummaries, isHymnPending } from '../../../data/loader';
 import { formatScriptureLine } from '../../../data/scriptures';
 import { encodeSetIds, parseSetIds, setNeighbours } from '../../../data/setlist';
-import { allTopicsOf } from '../../../data/topics';
 import { findSimilar } from '../../../data/search';
 import { bookLabelKey, translate } from '../../../i18n';
 import { useT } from '../../../hooks/useT';
@@ -610,15 +609,6 @@ export default function ReaderScreen() {
     onChooseLang: chooseParallel,
   };
 
-  const hymnTopics = allTopicsOf(hymn);
-  const topicsLine = hymnTopics.length
-    ? `${t('info.topics')}: ${hymnTopics.map((id) => t(`topic.${id}` as const)).join(' · ')}`
-    : undefined;
-  const onTopicsPress = () => {
-    const target = hymn.primaryTopic ?? hymnTopics[0];
-    if (target) router.push(`/library?topic=${target}`);
-  };
-
   const menuItems: ReaderMenuItem[] = [
     { icon: 'information-outline' as const, label: t('reader.info'), onPress: () => { setOverflowOpen(false); setInfoHymn(true); } },
     { icon: 'cog-outline' as const, label: t('reader.settings'), onPress: () => { setOverflowOpen(false); setSettingsOpen(true); } },
@@ -653,11 +643,6 @@ export default function ReaderScreen() {
       }}>
       <ReaderHeader
         fullscreen={fullscreen}
-        number={hymn.number}
-        author={hymn.author}
-        authorOriginal={hymn.authorOriginal}
-        topicsLine={topicsLine}
-        onTopicsPress={onTopicsPress}
         onBack={goBack}
         topInset={insets.top}
         toolbarProps={toolbarProps}
