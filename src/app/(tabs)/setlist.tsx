@@ -55,7 +55,6 @@ export default function SetlistScreen() {
   const categories = useSetlist((s) => s.categories);
   const activeId = useSetlist((s) => s.activeId);
   const setActive = useSetlist((s) => s.setActive);
-  const addCategory = useSetlist((s) => s.addCategory);
   const renameCategory = useSetlist((s) => s.renameCategory);
   const removeCategory = useSetlist((s) => s.removeCategory);
   const add = useSetlist((s) => s.add);
@@ -74,7 +73,9 @@ export default function SetlistScreen() {
   const [renameValue, setRenameValue] = useState('');
 
   const active = categories.find((c) => c.id === activeId) ?? categories[0];
-  const ids = active?.ids ?? [];
+  // Stable empty array: a fresh [] each render made the `rows` useMemo depend
+  // on a changing value and tripped the exhaustive-deps lint gate in CI.
+  const ids = useMemo(() => active?.ids ?? [], [active]);
 
   // A shared link is the source of truth on open; later local edits win.
   useEffect(() => {

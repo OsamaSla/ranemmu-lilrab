@@ -7,7 +7,7 @@
  * screen's category switcher behave identically. A new name is created and
  * selected in one tap; there is no mode where a hymn sits outside a category.
  */
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Modal, Pressable, ScrollView, TextInput, View } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
@@ -32,9 +32,9 @@ export function SetlistCategoryPicker({
   const addCategory = useSetlist((s) => s.addCategory);
   const [name, setName] = useState('');
 
-  useEffect(() => {
-    if (!visible) setName('');
-  }, [visible]);
+  // No reset effect: every close path (pick / cancel / backdrop / hardware
+  // back) clears the field, so the next opening always starts empty without
+  // calling setState from an effect body.
 
   const pick = (id: string) => {
     onPick(id);
