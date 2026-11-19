@@ -339,6 +339,7 @@ export default function ReaderScreen() {
     onReaderScroll,
     scrollToVerse,
     onVerseLayout,
+    onScrollViewLayout,
     onLineLayout,
     stanzaOffset,
     lineOffsets,
@@ -675,6 +676,7 @@ export default function ReaderScreen() {
           key={hymn.id}
           ref={scrollRef}
           onScroll={onReaderScroll}
+          onLayout={onScrollViewLayout}
           scrollEventThrottle={16}
           style={{ flex: 1 }}
           contentContainerStyle={
