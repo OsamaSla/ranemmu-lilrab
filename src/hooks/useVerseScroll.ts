@@ -55,6 +55,14 @@ const HYSTERESIS = 24;
 const SNAP_DELAY = 180;
 /** Window in which our own animated scroll is ignored (no feedback loops). */
 const SETTLE_MS = 550;
+/**
+ * Past the last stanza the reader holds content (the translation notice and
+ * «ترنيمات مشابهة»). Once the reading centre crosses this far below the last
+ * stanza, snapping is suspended so that content stays reachable; scrolling
+ * back up past the exit threshold re-arms it.
+ */
+const TRAILING_ENTER = 40;
+const TRAILING_EXIT = 24;
 
 export function useVerseScroll(
   id: string | undefined,
@@ -72,6 +80,8 @@ export function useVerseScroll(
   // excluded). Until its first onLayout, the window height is close enough.
   const viewportHeight = useRef(Dimensions.get('window').height);
   const activeIndexRef = useRef<number | null>(null);
+  // True while the reader is scrolled into the content after the last stanza.
+  const trailingRef = useRef(false);
   const snapTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   // A rail tap or a snap scrolls with an animation; the events it emits would
   // otherwise walk the highlight through every stanza it flies past.
@@ -87,6 +97,7 @@ export function useVerseScroll(
   // ScrollView is keyed by hymn id), so the previous hymn's dot must be reset.
   useEffect(() => {
     settleUntilRef.current = 0;
+    trailingRef.current = false;
     if (snapTimer.current) clearTimeout(snapTimer.current);
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setActive(null);
@@ -141,11 +152,28 @@ export function useVerseScroll(
     (event: NativeSyntheticEvent<NativeScrollEvent>) => {
       const yOffset = event.nativeEvent.contentOffset.y;
       scrollY.current = yOffset;
+      const store = verseOffsets.current;
+      // Suspend snapping once the reading centre passes the last stanza, so
+      // the translation notice and «ترنيمات مشابهة» below it stay reachable.
+      const lastLayout =
+        hymn && store.hymnId === id ? store.layouts.get(hymn.verses.length - 1) : undefined;
+      if (lastLayout) {
+        const anchor = yOffset + viewportHeight.current / 2;
+        const lastCentre = centreOf(lastLayout);
+        if (anchor > lastCentre + TRAILING_ENTER) trailingRef.current = true;
+        else if (anchor < lastCentre - TRAILING_EXIT) trailingRef.current = false;
+      }
+      if (trailingRef.current) {
+        if (snapTimer.current) {
+          clearTimeout(snapTimer.current);
+          snapTimer.current = null;
+        }
+        return;
+      }
       // Keep tracking the offset for the line-fix sheet, but ignore the
       // animated scroll we just started (it must not move the highlight).
       if (Date.now() < settleUntilRef.current) return;
       if (!hymn) return;
-      const store = verseOffsets.current;
       if (store.hymnId !== id) return;
       const { index: nearest, anchor } = nearestTo(yOffset);
       if (nearest === undefined) return;
@@ -176,6 +204,8 @@ export function useVerseScroll(
         clearTimeout(snapTimer.current);
         snapTimer.current = null;
       }
+      // An explicit rail tap always means "go back to a stanza".
+      trailingRef.current = false;
       settleUntilRef.current = Date.now() + SETTLE_MS;
       setActive(verseIndex);
       scrollRef.current?.scrollTo({ y, animated: true });
