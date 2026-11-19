@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-19, code at 9d980867 (reader now tints the active stanza's background from the same `activeVerseIndex` that lights the rail dot; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner must add the access key to local env + GitHub secret); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through 01e7b9ad, local commits through 9d980867 not pushed; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-19, code at 0f5e803d (reader keeps the active stanza highlighted **and centred** — snap-to-stanza on scroll/rail tap; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner must add the access key to local env + GitHub secret); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through 01e7b9ad, local commits through 0f5e803d not pushed; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -220,18 +220,23 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `npx eslint src` before pushing. Fixed in `208fbd48` — `npx eslint src` and
   typecheck both clean. Logs need GitHub sign-in; the failing step and
   annotations were read from the public Actions API.
-- **Active stanza highlight (2026-11-19, `9d980867`):** `useVerseScroll`'s
-  `activeVerseIndex` now drives both the rail dot and a low-alpha gold
-  background (`palette.activeStanza` / `activeStanzaBorder`) on the matching
-  `VerseBlock`, so tapping a rail dot or scrolling tints the stanza being read
-  — on normal cards and in fullscreen (where the others stay transparent on
-  black). A 600 ms guard in `scrollToVerse` freezes the highlight during the
-  animated jump; without it the tint flickered through every intermediate
-  stanza. `VerseBlock` stays `memo()`-wrapped — only `isActive` changes per
-  transition. Verified in the dev browser on `tr0001`: «المقطع 2» then
-  «المقطع 5» moved the tint (computed `rgba(200, 168, 77, 0.16)`) and the
-  matching rail dot, fullscreen kept it on stanza 5 while the others were
-  `rgba(0,0,0,0)`; screenshot shown in the Review pane.
+- **Active stanza: highlighted and centred (2026-11-19, `9d980867` + `0f5e803d`):**
+  `useVerseScroll`'s `activeVerseIndex` drives both the rail dot and a low-alpha
+  gold background (`palette.activeStanza` / `activeStanzaBorder`) on the matching
+  `VerseBlock`, in normal cards and in fullscreen (others stay transparent on
+  black). The active stanza is now the one whose **centre** is nearest the
+  reading area's centre — not the one whose top is near the viewport top — and
+  scrolling *settles* by snapping that stanza back to the centre (180 ms quiet
+  period, 550 ms guard against our own animated scroll). A rail tap centres the
+  stanza immediately; a 24 px hysteresis holds the highlight until another
+  stanza is clearly nearer, so it steps into next/previous only past the
+  midpoint. `VerseBlock` stays `memo()`-wrapped — only `isActive` changes per
+  transition. Verified in the dev browser on `tr0001`: rail tap «المقطع 2» put
+  the active stanza's centre exactly on the ScrollView centre (466 px = 466 px);
+  driving `scrollTop` 200 → 600 stepped 2 → 3 → 4, each ending at delta 0 with
+  the rail dot following. Screenshots in the Review pane. Note: the in-app
+  browser's `scroll` tool overshoots badly (a 120 px wheel jumped to the last
+  stanza) — drive `scrollTop` directly when testing this.
 - Fullscreen is now text-only: `ReaderHeader` returns `null` for it. `StanzaRail`
   gains `fullscreen` / `onExitFullscreen` and shows an exit button at the **foot**
   of the rail; its also-in badges are hidden there, leaving language → stanza
