@@ -544,6 +544,7 @@ export default function ReaderScreen() {
           readerFontBold={readerFontBold}
           fullscreen={fullscreen}
           isDark={isDark}
+          isActive={activeVerseIndex === verseIndex}
           canEdit={canEdit}
           onVerseLayout={onVerseLayout}
           onLineLayout={onLineLayout}

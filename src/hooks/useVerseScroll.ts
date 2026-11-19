@@ -47,11 +47,15 @@ export function useVerseScroll(
   });
   const lineOffsets = useRef(new Map<string, number>());
   const scrollY = useRef(0);
+  // A rail tap scrolls with an animation; the events it emits would otherwise
+  // walk the highlight through every stanza it flies past before landing.
+  const jumpSettledAtRef = useRef(0);
   const [activeVerseIndex, setActiveVerseIndex] = useState<number | null>(null);
 
   // The reader component survives next/prev navigation (only the inner
   // ScrollView is keyed by hymn id), so the previous hymn's dot must be reset.
   useEffect(() => {
+    jumpSettledAtRef.current = 0;
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setActiveVerseIndex(null);
   }, [id]);
@@ -60,6 +64,9 @@ export function useVerseScroll(
     (event: NativeSyntheticEvent<NativeScrollEvent>) => {
       const yOffset = event.nativeEvent.contentOffset.y;
       scrollY.current = yOffset;
+      // Keep tracking the offset for the line-fix sheet, but hold the
+      // highlight on the stanza the reader tapped until the jump settles.
+      if (Date.now() < jumpSettledAtRef.current) return;
       if (!hymn) return;
       const store = verseOffsets.current;
       if (store.hymnId !== id) return;
@@ -90,6 +97,7 @@ export function useVerseScroll(
       if (store.hymnId !== id) return;
       const y = store.offsets.get(verseIndex);
       if (y !== undefined) {
+        jumpSettledAtRef.current = Date.now() + 600;
         setActiveVerseIndex(verseIndex);
         scrollRef.current?.scrollTo({ y: Math.max(0, y - spacing.lg), animated: true });
       }

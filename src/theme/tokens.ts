@@ -27,6 +27,14 @@ export const palette = {
   readerBg: '#000000',
   readerText: '#FFFFFF',
 
+  /**
+   * Background tint for the stanza currently being read. One low-alpha gold
+   * works on white cards, dark cards and pure-black fullscreen, so the
+   * highlight can follow `activeVerseIndex` without changing text contrast.
+   */
+  activeStanza: 'rgba(200, 168, 77, 0.16)',
+  activeStanzaBorder: 'rgba(200, 168, 77, 0.55)',
+
   favorite: '#C8A84D',
   danger: '#F2B8B5',
   overlay: 'rgba(0,0,0,0.65)',

@@ -1,6 +1,8 @@
 /**
  * One stanza of the hymn, memoised so a scroll event (which only moves the
- * rail highlight) never re-renders the whole hymn text.
+ * rail highlight) never re-renders the whole hymn text. The stanza the reader
+ * is on gets a low-alpha gold background, driven by the same
+ * `activeVerseIndex` that lights the rail dot — one highlight, two places.
  *
  * The Arabic line owns the reading column; a translation, when selected, is
  * rendered beneath it rather than replacing it. Readers get plain text;
@@ -30,6 +32,7 @@ interface VerseBlockProps {
   readerFontBold: string;
   fullscreen: boolean;
   isDark: boolean;
+  isActive: boolean;
   canEdit: boolean;
   onVerseLayout: (verseIndex: number) => (event: LayoutChangeEvent) => void;
   onLineLayout: (verseIndex: number, lineIndex: number) => (event: LayoutChangeEvent) => void;
@@ -48,6 +51,7 @@ export const VerseBlock = memo(function VerseBlock({
   readerFontBold,
   fullscreen,
   isDark,
+  isActive,
   canEdit,
   onVerseLayout,
   onLineLayout,
@@ -121,10 +125,18 @@ export const VerseBlock = memo(function VerseBlock({
     <View
       onLayout={onVerseLayout(verseIndex)}
       style={{
-        backgroundColor: fullscreen ? 'transparent' : colors.surface,
+        backgroundColor: isActive
+          ? palette.activeStanza
+          : fullscreen
+            ? 'transparent'
+            : colors.surface,
         borderRadius: radius.lg,
         borderWidth: fullscreen ? 0 : 1,
-        borderColor: fullscreen ? 'transparent' : colors.border,
+        borderColor: isActive
+          ? palette.activeStanzaBorder
+          : fullscreen
+            ? 'transparent'
+            : colors.border,
         paddingHorizontal: spacing.lg,
         paddingVertical: spacing.md,
         marginBottom: spacing.md,
