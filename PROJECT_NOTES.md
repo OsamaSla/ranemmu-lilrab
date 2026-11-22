@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-22, code at 572fe54e (Claude Opus script repairs applied — `npm run lint` is now real; reader keeps the active stanza highlighted **and centred** — snap-to-stanza on scroll/rail tap, suspended past the last stanza so «ترنيمات مشابهة» stays reachable; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner must add the access key to local env + GitHub secret); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through 53256532, local commits through 572fe54e not pushed; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-22, code at 9e83f0dc (refrain rail dot now highlights when tapped or centred; Claude Opus script repairs applied — `npm run lint` is now real; reader keeps the active stanza highlighted **and centred** — snap-to-stanza on scroll/rail tap, suspended past the last stanza so «ترنيمات مشابهة» stays reachable; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner must add the access key to local env + GitHub secret); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through 53256532, local commits through 9e83f0dc not pushed; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -258,6 +258,19 @@ unchanged (`setBook(id)` then `router.push('/library')`).
     `scrollTop` 1379 stays 1379 after 1 s, while a mid-scroll still snaps to a
     centred stanza (delta 0). Screenshot of both trailing cards in the Review
     pane. This hits Book 2 most because its hymns often have linked copies.
+- **Refrain rail dot (2026-11-22, `9e83f0dc`):** the original rail hard-coded
+  the chorus dot as always highlighted while excluding it from `isActive`
+  (`!isChorus && ...`), so it either glowed permanently or never lit up.
+  `isActive` now includes refrains and their dot/border/shadow/icon follow the
+  same active state as numbered dots. Verified in the dev browser on `h0001`:
+  at rest `rgb(18, 42, 32)`, after tapping the refrain dot `rgb(138, 154, 135)`,
+  and scrolling the refrain stanza to the centre re-lit it without a tap.
+- **GUI enhancement demo (2026-11-22, cancelled):** Claude Opus produced eight
+  `enhancements-*` files (sepia theme, continuous font slider, expandable
+  toolbar, onboarding tour, etc.). Applied, integrated and demonstrated, then
+  **fully reverted at the owner's request** — no trace left in history or the
+  working tree. Do not re-apply without a fresh explicit request. The only
+  keeper from that review is the refrain-dot fix above.
 - Fullscreen is now text-only: `ReaderHeader` returns `null` for it. `StanzaRail`
   gains `fullscreen` / `onExitFullscreen` and shows an exit button at the **foot**
   of the rail; its also-in badges are hidden there, leaving language → stanza
