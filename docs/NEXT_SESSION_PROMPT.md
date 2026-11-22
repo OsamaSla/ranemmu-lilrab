@@ -71,7 +71,8 @@ unchanged unless the owner explicitly asks for a translation.
   function. Only implement it as a separate feature if explicitly requested.
 - **CI lint is real** (§8): `fb179538` failed both workflows at "Build web app"
   due to new ESLint errors; fixed in `208fbd48`. Always run `npx eslint src`
-  before pushing — local `npm run lint` is vacuous.
+  (or `npm run lint`, which now runs the same ESLint check since 2026-11-22)
+  before pushing.
 
 ## Commands and environment
 
@@ -83,7 +84,7 @@ unchanged unless the owner explicitly asks for a translation.
 - The editor is behind Firebase sign-in; the owner must unlock `/admin` first.
   `useAdminGate` is intentionally not persisted, so a full page reload
   re-locks it — navigate client-side when testing.
-- **Lint gate:** `npx eslint src` (not `npm run lint`).
+- **Lint gate:** `npx eslint src` or `npm run lint` (both real since 2026-11-22).
 - Gates, all green at handoff:
   ```
   npm run hebrew:check

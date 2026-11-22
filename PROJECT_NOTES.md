@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-19, code at b3dcd38b (reader keeps the active stanza highlighted **and centred** — snap-to-stanza on scroll/rail tap, suspended past the last stanza so «ترنيمات مشابهة» stays reachable; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner must add the access key to local env + GitHub secret); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through 01e7b9ad, local commits through b3dcd38b not pushed; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-22, code at 572fe54e (Claude Opus script repairs applied — `npm run lint` is now real; reader keeps the active stanza highlighted **and centred** — snap-to-stanza on scroll/rail tap, suspended past the last stanza so «ترنيمات مشابهة» stays reachable; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner must add the access key to local env + GitHub secret); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through 53256532, local commits through 572fe54e not pushed; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -25,7 +25,19 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
   Windows `ENAMETOOLONG`.
 - `tsconfig.json`, `eslint.config.js`, `.gitignore` and `expo-env.d.ts` are tracked;
   `npm run typecheck` (`tsc --noEmit`, strict + `@/*` paths) and `npm run lint`
-  both pass clean on a fresh clone.
+  both pass clean on a fresh clone. **Since 2026-11-22** `lint` is
+  `npx eslint src --ext .ts,.tsx` (was the vacuous `expo lint`), so `build:web`'s
+  lint gate is real locally as well as in CI.
+- **Script repairs (2026-11-22, `572fe54e`, from a Claude Opus output folder):**
+  eight tracked legacy scripts got `node:` / explicit `Buffer` imports;
+  `scripts/book3/render.mjs` was converted CJS → ESM, `deploy-netlify.mjs` now
+  imports `existsSync` instead of calling undefined `fs.existsSync`/`exists`,
+  and `generate-static.mjs` uses its parsed `allHymns` instead of an undefined
+  `corpusModule`. `scripts/poc-hebrew2.mjs` is gitignored scratch and was also
+  replaced (Unicode escapes → literal chars, equivalent) but is not in git. Only
+  `warm-metro` and `fetch-fonts` are referenced by npm scripts; the rest are
+  legacy. All nine were syntax-checked before copying; every gate, including
+  the now-real `npm run lint`, passes.
 - Corpus loader (`src/data/loader.ts`) memoises merged summaries keyed on store
   object identity (overlays / remote patches / tombstones), so list screens no
   longer re-merge 1.8k records per mount; callers get a copy they can sort.
@@ -215,10 +227,10 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   firebase.yml at "Build web app" (exit 1 in ~15 s). GitHub annotations named
   two new warnings in `setlist.tsx` (unused `addCategory`, unstable `ids ?? []`
   in a `useMemo` dependency); `npx eslint src` additionally found an **error**
-  in `SetlistCategoryPicker.tsx` (`react-hooks/set-state-in-effect`). Locally
-  `npm run lint` is vacuous (legacy `expo lint`), so always run
-  `npx eslint src` before pushing. Fixed in `208fbd48` — `npx eslint src` and
-  typecheck both clean. Logs need GitHub sign-in; the failing step and
+  in `SetlistCategoryPicker.tsx` (`react-hooks/set-state-in-effect`). That local
+  gate was vacuous then (`expo lint`), but since 2026-11-22 `npm run lint` runs
+  ESLint directly — `npx eslint src` is still the canonical check. Fixed in
+  `208fbd48` — `npx eslint src` and typecheck both clean. Logs need GitHub sign-in; the failing step and
   annotations were read from the public Actions API.
 - **Active stanza: highlighted and centred (2026-11-19, `9d980867` + `0f5e803d` + `b3dcd38b`):**
   `useVerseScroll`'s `activeVerseIndex` drives both the rail dot and a low-alpha
@@ -380,6 +392,7 @@ unchanged (`setBook(id)` then `router.push('/library')`).
   `"lint" is not an expo command` and exits 0), so the `build:web` lint gate is
   currently vacuous. Real debt only shows via `npx eslint .` (16 errors in legacy
   scripts, e.g. `__filename`/`Buffer` `no-undef` in ESM scripts, dynamic env access).
+  Superseded 2026-11-22 (`572fe54e`): `npm run lint` now runs `npx eslint src --ext .ts,.tsx`.
 - Session 10 (2026-11-16): `npx expo export -p web` now fails locally with
   `--public-url must be a valid HTTPS URL` (needs `--public-url <https-url>`, else
   `Missing required option: --public-url`), and with an explicit `--public-url` it
@@ -961,9 +974,8 @@ and keep committing per step.
   `--clear` (verified 2026-11-14 on `tr0005`: chips stayed `عر/EN/DE`).
 - Gotcha: `react-hooks/set-state-in-effect` is reported at
   `src/app/(tabs)/hymn/[id].tsx` (the `setActiveVerseIndex(null)` reset) — it
-  predates this work. `npm run lint` is broken here (`expo lint` is not a
-  command in this CLI); lint files directly with
-  `node node_modules/eslint/bin/eslint.js <files>`.
+  predates this work. As of 2026-11-22 `npm run lint` works (ESLint directly);
+  use it or `npx eslint src` instead of the old direct `eslint.js` invocation.
 
 ## 16. Hebrew translation base — Books 1 and 3 (prepared 2026-11-15, commit f2797605)
 
