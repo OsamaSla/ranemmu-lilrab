@@ -3,9 +3,9 @@
  * Generate static hymn pages for Firebase & GitHub Pages
  * Creates simple HTML files from existing corpus data
  */
-import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { readdirSync, readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -25,11 +25,11 @@ try {
   const corpusPath = join(ROOT, 'dist', 'lib', 'data', 'corpus.js');
   const corpusContent = readFileSync(corpusPath, 'utf8');
   const allHymnsMatch = corpusContent.match(/allHymns:\s*(\[.*?\])[\s;]*$/s);
-  
+
   if (!allHymnsMatch) {
     throw new Error('Could not find allHymns in corpus export');
   }
-  
+
   // Extract and parse the array
   const allHymnsStr = allHymnsMatch[1];
   let allHymns;
@@ -38,36 +38,36 @@ try {
   } catch (e) {
     throw new Error('Corpus data is not valid JSON');
   }
-  
+
   if (!allHymns || !Array.isArray(allHymns)) {
     throw new Error('allHymns is not an array');
   }
-  
+
   console.log(`   ✅ Loaded ${allHymns.length} hymns\n`);
-  
+
   // Copy assets
   console.log('📁 Copying assets...');
   copyAssets();
-  
+
   // Generate library page
-  generateLibraryPage(corpusModule.allHymns);
-  
+  generateLibraryPage(allHymns);
+
   // Generate each hymn page
   let generated = 0;
-  for (const hymn of corpusModule.allHymns) {
+  for (const hymn of allHymns) {
     try {
-      generateHymnPage(hymn, corpusModule.allHymns);
+      generateHymnPage(hymn, allHymns);
       generated++;
       if (generated % 500 === 0) {
-        console.log(`   Processed ${generated}/${corpusModule.allHymns.length} hymns...`);
+        console.log(`   Processed ${generated}/${allHymns.length} hymns...`);
       }
     } catch (e) {
       console.warn(`   ⚠️  Could not generate ${hymn.id}: ${e.message}`);
     }
   }
-  
+
   console.log(`\n✅ Generated ${generated} hymn pages!`);
-  
+
 } catch (error) {
   console.error('❌ Error loading corpus:', error.message);
   process.exit(1);
@@ -83,7 +83,7 @@ function copyAssets() {
     'qr-code.html',
     'sw.js'
   ];
-  
+
   try {
     for (const file of filesToCopy) {
       const src = join(PUBLIC, file);
@@ -95,7 +95,7 @@ function copyAssets() {
   } catch (e) {
     console.log(`   ⚠️  Assets copy warning: ${e.message}`);
   }
-  
+
   // Copy icons folder
   const iconsSrc = join(PUBLIC, 'icons');
   if (existsSync(iconsSrc)) {
@@ -103,7 +103,7 @@ function copyAssets() {
     if (!existsSync(iconsDest)) {
       mkdirSync(iconsDest);
     }
-    
+
     try {
       const iconFiles = readdirSync(iconsSrc);
       for (const icon of iconFiles) {
@@ -147,14 +147,14 @@ function generateLibraryPage(hymns) {
       <input type="text" class="search-input" placeholder="ابحث عن ترنيمة..." id="search">
     </div>
   </div>
-  
+
   <div class="library-grid" id="library">
 ${hymns.map(h => `    <div class="hymn-card" onclick="location.href='/hymn/${h.id}'">
       <div class="hymn-number">#${h.number}</div>
       <div class="hymn-title">${h.title}</div>
     </div>`).join('\n')}
   </div>
-  
+
   <script>
     document.getElementById('search').addEventListener('input', function(e) {
       const query = e.target.value.toLowerCase();
@@ -167,7 +167,7 @@ ${hymns.map(h => `    <div class="hymn-card" onclick="location.href='/hymn/${h.i
   </script>
 </body>
 </html>`;
-  
+
   writeFileSync(join(DIST, 'library.html'), html);
   console.log('   ✅ library.html');
 }
@@ -175,16 +175,16 @@ ${hymns.map(h => `    <div class="hymn-card" onclick="location.href='/hymn/${h.i
 // Generate single hymn page
 function generateHymnPage(hymn, allHymns) {
   const destDir = join(DIST, 'hymn', hymn.id.replace('/hymn/', ''));
-  
+
   if (!existsSync(destDir)) {
     mkdirSync(destDir, { recursive: true });
   }
-  
+
   // Find neighbors
   const currentIndex = allHymns.findIndex(h => h.id === hymn.id);
   const prevHymn = currentIndex > 0 ? allHymns[currentIndex - 1] : null;
   const nextHymn = currentIndex < allHymns.length - 1 ? allHymns[currentIndex + 1] : null;
-  
+
   let html = `<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -218,26 +218,26 @@ function generateHymnPage(hymn, allHymns) {
     <div class="title">${hymn.title}</div>
     <button class="nav-btn" onclick="window.location.reload()">🔄</button>
   </div>
-  
+
   <div class="content">
     <h1>#${hymn.number} - ${hymn.title}</h1>
-    
+
 ${hymn.verses?.map((verse, idx) => `    <div class="verse ${verse.chorus ? 'chorus' : ''}" id="verse-${idx}">
       <div class="label ${verse.chorus ? 'chorus-label' : ''}">${verse.label}</div>
       <div class="lines">
 ${verse.lines.map(line => `<p style="margin-bottom: 8px;">${line}</p>`).join('\n')}
       </div>
     </div>\n`).join('\n')}
-    
+
     <div class="controls">
       <button class="control-btn" onclick="scrollToVerse(-1)">السابق ↗</button>
       <button class="control-btn" onclick="scrollToVerse(1)">↖ التالي</button>
     </div>
   </div>
-  
+
   <script>
     let currentVerse = 0;
-    
+
     function scrollToVerse(direction) {
       currentVerse += direction;
       const verses = document.querySelectorAll('.verse');
@@ -245,13 +245,13 @@ ${verse.lines.map(line => `<p style="margin-bottom: 8px;">${line}</p>`).join('\n
         verses[currentVerse].scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
     }
-    
+
     document.querySelectorAll('.verse').forEach((v, i) => {
       v.onclick = () => scrollToVerse(i - currentVerse);
     });
   </script>
 </body>
 </html>`;
-  
+
   writeFileSync(join(destDir, 'index.html'), html);
 }

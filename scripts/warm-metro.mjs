@@ -8,6 +8,8 @@
 // It polls /status until Metro is up, then downloads each entry bundle
 // (forcing a full compile into Metro's cache) and reports timings.
 
+import { Buffer } from 'node:buffer';
+
 const args = process.argv.slice(2);
 function opt(flag, fallback) {
   const i = args.indexOf(flag);

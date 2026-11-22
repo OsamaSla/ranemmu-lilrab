@@ -4,10 +4,10 @@
  * Generates all hymn pages + PWA assets
  * Ready for Firebase & GitHub Pages deployment
  */
-import { execSync } from 'child_process';
-import { copyFileSync, mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync, rmSync } from 'fs';
-import { join, dirname } from 'path';
-import { fileURLToPath } from 'url';
+import { execSync } from 'node:child_process';
+import { copyFileSync, mkdirSync, readdirSync, existsSync, readFileSync, writeFileSync, rmSync, lstatSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -25,7 +25,7 @@ try {
     stdio: ['pipe', 'pipe', 'ignore'],
     timeout: 30000
   }).trim();
-  
+
   if (summaries) {
     hymnIds = JSON.parse(summaries);
   }
@@ -37,30 +37,30 @@ try {
 // Method 1: Try Expo Static Export
 try {
   console.log('📦 Attempting Expo static export...\n');
-  
+
   // Clean previous builds
   if (existsSync(DIST)) {
     rmSync(DIST, { recursive: true, force: true });
   }
-  
+
   console.log('   Running expo export --web...');
-  
+
   // Try with different approaches
   const commands = [
     'npx expo export',
     'npx expo export --platform web'
   ];
-  
+
   let success = false;
-  
+
   for (const cmd of commands) {
     try {
-      execSync(cmd, { 
+      execSync(cmd, {
         cwd: ROOT,
         stdio: 'inherit',
         env: { ...process.env, NODE_ENV: 'production' }
       });
-      
+
       if (existsSync(DIST)) {
         const files = countFiles(DIST);
         console.log(`\n✅ Successfully exported ${files.total} files (${files.html} HTML pages)\n`);
@@ -72,12 +72,12 @@ try {
       continue;
     }
   }
-  
+
   if (!success && !existsSync(DIST)) {
     console.log('\n⚠️  Expo export failed or created empty output\n');
     throw new Error('No dist folder');
   }
-  
+
 } catch (error) {
   console.log('❌ Expo export completely failed\n');
   throw error;
@@ -87,7 +87,7 @@ try {
 function countFiles(dir) {
   let total = 0;
   let html = 0;
-  
+
   function walk(d) {
     try {
       const entries = readdirSync(d, { withFileTypes: true });
@@ -100,7 +100,7 @@ function countFiles(dir) {
       }
     } catch {}
   }
-  
+
   walk(dir);
   return { total, html };
 }
@@ -115,13 +115,13 @@ const manifestPath = join(DIST, 'manifest.json');
 if (existsSync(manifestPath)) {
   try {
     const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
-    
+
     // Ensure correct root paths for hosting
     if (manifest.start_url?.startsWith('/ranemmu-lilrab/')) {
       manifest.start_url = manifest.start_url.replace('/ranemmu-lilrab/', '/');
       console.log('✅ Updated start_url path');
     }
-    
+
     if (manifest.icons) {
       manifest.icons.forEach(icon => {
         if (icon.src?.startsWith('/ranemmu-lilrab/')) {
@@ -130,7 +130,7 @@ if (existsSync(manifestPath)) {
       });
       console.log('✅ Updated icon paths');
     }
-    
+
     writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
   } catch (e) {
     console.log('⚠️  Could not update manifest.json:', e.message);
@@ -141,18 +141,16 @@ if (existsSync(manifestPath)) {
 console.log('\n📦 Adding additional assets from public/...');
 try {
   const publicEntries = readdirSync(PUBLIC);
-  
+
   for (const entry of publicEntries) {
     const srcPath = join(PUBLIC, entry);
     const destPath = join(DIST, entry);
-    
-    const stat = existsSync(srcPath) && 
-                 ((typeof require === 'undefined') ? 
-                   fs.lstatSync(srcPath).isDirectory() : false);
-    
-    if (!stat && !srcPath.includes('index.html')) {
+
+    const isDirectory = existsSync(srcPath) && lstatSync(srcPath).isDirectory();
+
+    if (!isDirectory && !srcPath.includes('index.html')) {
       try {
-        if (stat) {
+        if (isDirectory) {
           // Directory
           if (!existsSync(destPath)) {
             mkdirSync(destPath, { recursive: true });
@@ -184,12 +182,12 @@ console.log('   GitHub Pages: Deploy workflow in .github/workflows/deploy.yml\n'
 // Copy helper
 function copyRecursive(src, dest) {
   if (!existsSync(dest)) mkdirSync(dest, { recursive: true });
-  
+
   const entries = readdirSync(src, { withFileTypes: true });
   for (const entry of entries) {
     const srcPath = join(src, entry.name);
     const destPath = join(dest, entry.name);
-    
+
     if (entry.isDirectory()) {
       copyRecursive(srcPath, destPath);
     } else {
@@ -197,7 +195,3 @@ function copyRecursive(src, dest) {
     }
   }
 }
-
-// Expose fs module
-import { lstatSync } from 'fs';
-global.fs = { lstatSync, readdirSync, existsSync, mkdirSync, copyFileSync, readFileSync, writeFileSync, rmSync };

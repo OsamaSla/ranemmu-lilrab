@@ -13,6 +13,7 @@
  */
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
+import { Buffer } from 'node:buffer';
 
 const input = process.argv[2];
 const output = process.argv[3];

@@ -3,7 +3,7 @@
  * Create deploy manifest for Netlify/Vercel
  * This copies all files from public/ to a deploy folder
  */
-import { readdirSync, copyFileSync, mkdirSync } from 'node:fs';
+import { readdirSync, copyFileSync, mkdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -12,22 +12,22 @@ const PUBLIC = join(ROOT, 'public');
 const DEPLOY = join(ROOT, '.netlify', 'frontend', 'publish');
 
 // Create deploy directory
-if (!await fs.existsSync(DEPLOY)) {
-  await fs.mkdirSync(DEPLOY, { recursive: true });
+if (!existsSync(DEPLOY)) {
+  mkdirSync(DEPLOY, { recursive: true });
 }
 
 console.log('📦 Preparing deployment files...');
 
 async function copyDir(src, dest) {
-  const entries = await readdirSync(src, { withFileTypes: true });
-  
+  const entries = readdirSync(src, { withFileTypes: true });
+
   for (const entry of entries) {
     const srcPath = join(src, entry.name);
     const destPath = join(dest, entry.name);
-    
+
     if (entry.isDirectory()) {
-      if (!await exists(destPath)) {
-        await mkdirSync(destPath, { recursive: true });
+      if (!existsSync(destPath)) {
+        mkdirSync(destPath, { recursive: true });
       }
       await copyDir(srcPath, destPath);
     } else {

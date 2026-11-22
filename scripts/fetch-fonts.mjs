@@ -11,9 +11,10 @@
  * Requires: Node 18+, and `pip install fonttools` for the variable families.
  */
 import { execFileSync } from 'node:child_process';
-import { mkdir, readdir, rm, writeFile } from 'node:fs/promises';
+import { mkdir, readdir, rm, writeFile, stat } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { Buffer } from 'node:buffer';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT_DIR = join(ROOT, 'assets', 'fonts');
@@ -144,7 +145,7 @@ async function main() {
         throw new Error(`${family.slug}: no static file named ${name} and no variable font to instance`);
       }
 
-      const { size } = await import('node:fs').then((fs) => fs.promises.stat(outPath));
+      const { size } = await stat(outPath);
       manifest.push({ file: name, family: family.label, slug: family.slug });
       console.log(`  ${name.padEnd(32)} ${(size / 1024).toFixed(0)} KB${direct ? '' : '  (instanced)'}`);
     }
