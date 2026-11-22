@@ -151,7 +151,9 @@ export function StanzaRail({
         }}>
         {verses.map((verseBlock, verseIndex) => {
           const isChorus = verseBlock.chorus;
-          const isActive = !isChorus && activeVerseIndex === verseIndex;
+          // A refrain is a stanza too: it highlights when tapped or when its
+          // text becomes the centred stanza, and looks normal otherwise.
+          const isActive = activeVerseIndex === verseIndex;
           const label = isChorus
             ? refrainHeading(chorusWord, transChorus, verseBlock.label)
             : `${t('reader.verseOf')} ${verseBlock.label}`;
@@ -169,30 +171,30 @@ export function StanzaRail({
                 borderRadius: RAIL_DOT / 2,
                 alignItems: 'center',
                 justifyContent: 'center',
-                backgroundColor: isChorus
+                backgroundColor: isActive
                   ? colors.accent
-                  : isActive
-                    ? colors.accent
-                    : dark
-                      ? 'rgba(255,255,255,0.14)'
-                      : colors.surfaceMuted,
-                borderWidth: isActive || isChorus ? 2 : 1,
-                borderColor: isChorus
+                  : dark
+                    ? 'rgba(255,255,255,0.14)'
+                    : colors.surfaceMuted,
+                borderWidth: isActive ? 2 : 1,
+                borderColor: isActive
                   ? colors.accent
-                  : isActive
-                    ? colors.accent
-                    : dark
-                      ? 'rgba(255,255,255,0.3)'
-                      : colors.border,
-                shadowColor: isActive || isChorus ? colors.accent : undefined,
-                shadowOffset: isActive || isChorus ? { width: 0, height: 0 } : undefined,
-                shadowOpacity: isActive || isChorus ? 0.4 : 0,
-                shadowRadius: isActive || isChorus ? 8 : 0,
-                elevation: isActive || isChorus ? 4 : 0,
+                  : dark
+                    ? 'rgba(255,255,255,0.3)'
+                    : colors.border,
+                shadowColor: isActive ? colors.accent : undefined,
+                shadowOffset: isActive ? { width: 0, height: 0 } : undefined,
+                shadowOpacity: isActive ? 0.4 : 0,
+                shadowRadius: isActive ? 8 : 0,
+                elevation: isActive ? 4 : 0,
                 opacity: pressed ? 0.6 : 1,
               })}>
               {isChorus ? (
-                <MaterialCommunityIcons name="repeat" size={16} color={colors.onPrimary} />
+                <MaterialCommunityIcons
+                  name="repeat"
+                  size={16}
+                  color={isActive ? colors.onPrimary : dark ? palette.readerText : colors.text}
+                />
               ) : (
                 <AppText
                   variant="label"
@@ -201,12 +203,11 @@ export function StanzaRail({
                     fontFamily: readerFontBold,
                     fontSize: 12,
                     fontWeight: '700',
-                    color:
-                      isActive || isChorus
-                        ? colors.onPrimary
-                        : dark
-                          ? palette.readerText
-                          : colors.text,
+                    color: isActive
+                      ? colors.onPrimary
+                      : dark
+                        ? palette.readerText
+                        : colors.text,
                     lineHeight: 16,
                   }}>
                   {verseBlock.label}
