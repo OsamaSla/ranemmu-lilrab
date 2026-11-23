@@ -8,9 +8,11 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import { I18nManager } from 'react-native';
+import { I18nManager, StyleSheet, View } from 'react-native';
 
+import { OnboardingFlow } from '../components/onboarding/OnboardingFlow';
 import { useAppUpdateCheck } from '../hooks/useAppUpdateCheck';
+import { useOnboarding } from '../hooks/useOnboarding';
 import { useTheme } from '../hooks/useTheme';
 import { DEFAULT_LOCALE, isRTL } from '../i18n';
 import { useAppFonts } from '../theme/fonts';
@@ -27,6 +29,7 @@ export default function RootLayout() {
   const fontsReady = useAppFonts(fontId);
   const { colors, isDark } = useTheme();
   const sessionUser = useSession((s) => s.user);
+  const onboarding = useOnboarding();
 
   // Web only: reload the installed PWA when a newer build is deployed.
   useAppUpdateCheck();
@@ -78,7 +81,9 @@ export default function RootLayout() {
       .catch(() => {});
   }, [sessionUser]);
 
-  if (!fontsReady) return null;
+  // Keep the splash screen up until both the fonts and the onboarding flag are
+  // known, so the app never flashes before the first-run tour opens.
+  if (!fontsReady || !onboarding.loaded) return null;
 
   return (
     <>
@@ -91,6 +96,11 @@ export default function RootLayout() {
         }}>
         <Stack.Screen name="(tabs)" />
       </Stack>
+      {!onboarding.isComplete ? (
+        <View style={StyleSheet.absoluteFill}>
+          <OnboardingFlow onComplete={onboarding.complete} onSkip={onboarding.complete} />
+        </View>
+      ) : null}
     </>
   );
 }

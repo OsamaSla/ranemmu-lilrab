@@ -19,6 +19,7 @@ import { useLocalSearchParams, useRouter } from 'expo-router';
 
 import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
+import { CoachHint } from '../../components/CoachHint';
 import { EmptyState } from '../../components/EmptyState';
 import { FilterSelect } from '../../components/FilterSelect';
 import { HymnRow } from '../../components/HymnRow';
@@ -642,6 +643,8 @@ export default function LibraryScreen() {
           </Pressable>
         </View>
       </View>
+
+      <CoachHint id="library.search" icon="magnify" label={t('coach.searchHint')} />
 
       <SectionList
         ref={listRef}

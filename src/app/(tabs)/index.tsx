@@ -9,6 +9,7 @@
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
+import type { ComponentProps } from 'react';
 import { useMemo, useRef, useState } from 'react';
 import {
   Animated,
@@ -25,9 +26,11 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AppText } from '../../components/AppText';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
-import { getBooks } from '../../data/loader';
-import type { BookId } from '../../data/types';
+import { getBooks, getSummaries } from '../../data/loader';
+import type { BookId, HymnSummary } from '../../data/types';
+import type { TranslationKey } from '../../i18n';
 import { useCorpusVersion } from '../../store/corpus';
+import { useLibrary } from '../../store/library';
 import { useSettings } from '../../store/settings';
 import { radius, shadow, spacing } from '../../theme/tokens';
 
@@ -52,6 +55,21 @@ const CARD_MAX = 262;
 const CARD_GAP = spacing.lg;
 /** Cover width / height, matching the printed covers (132 × 190). */
 const COVER_RATIO = 0.7;
+
+/**
+ * The four destinations a reader reaches for most, pinned above the book grid.
+ * Literal routes so Expo Router's typed-routes union can check them.
+ */
+const QUICK_ACTIONS = [
+  { icon: 'magnify', label: 'home.quickSearch', route: '/library' },
+  { icon: 'star-outline', label: 'home.quickFavorites', route: '/favorites' },
+  { icon: 'playlist-play', label: 'home.quickSetlist', route: '/setlist' },
+  { icon: 'help-circle-outline', label: 'home.quickHelp', route: '/help' },
+] as const satisfies readonly {
+  icon: ComponentProps<typeof MaterialCommunityIcons>['name'];
+  label: TranslationKey;
+  route: string;
+}[];
 
 /** Lift applied on web hover — `shadow.card` is the resting state. */
 const HOVER_SHADOW = { boxShadow: '0 14px 34px rgba(11, 42, 48, 0.22)' };
@@ -233,10 +251,25 @@ export default function HomeScreen() {
   const corpusVersion = useCorpusVersion();
   const book = useSettings((s) => s.book);
   const setBook = useSettings((s) => s.setBook);
+  const recents = useLibrary((s) => s.recents);
   const books = useMemo(() => {
     void corpusVersion; // getBooks() reads a mutable cache.
     return getBooks();
   }, [corpusVersion]);
+
+  // The three most recently opened hymns, resolved against the current corpus
+  // (stale ids drop out after a content rebuild). Shown as "Continue reading".
+  const recentHymns = useMemo(() => {
+    void corpusVersion; // getSummaries() reads a mutable cache.
+    const byId = new Map(getSummaries().map((s) => [s.id, s]));
+    const resolved: HymnSummary[] = [];
+    for (const entry of recents) {
+      const summary = byId.get(entry.id);
+      if (summary) resolved.push(summary);
+      if (resolved.length >= 3) break;
+    }
+    return resolved;
+  }, [recents, corpusVersion]);
 
   const total = books.reduce((sum, b) => sum + b.count, 0);
   const [goNumber, setGoNumber] = useState('');
@@ -328,6 +361,95 @@ export default function HomeScreen() {
           paddingBottom: insets.bottom + spacing.xxl,
         }}>
         <View style={{ width: '100%', maxWidth: CONTENT_MAX, alignSelf: 'center' }}>
+          {/* Quick actions — the destinations a reader reaches for most, kept
+              above the book grid so they are one tap away on every visit. */}
+          <View
+            style={{
+              flexDirection: direction.row,
+              flexWrap: 'wrap',
+              justifyContent: 'center',
+              gap: spacing.sm,
+              marginBottom: spacing.xl,
+            }}>
+            {QUICK_ACTIONS.map((action) => (
+              <Pressable
+                key={action.label}
+                onPress={() => router.push(action.route)}
+                accessibilityRole="button"
+                accessibilityLabel={t(action.label)}
+                style={({ pressed }) => ({
+                  flexDirection: direction.row,
+                  alignItems: 'center',
+                  gap: spacing.xs,
+                  paddingHorizontal: spacing.md,
+                  paddingVertical: spacing.sm,
+                  borderRadius: radius.pill,
+                  borderWidth: 1,
+                  borderColor: colors.border,
+                  backgroundColor: pressed ? colors.surfaceMuted : colors.surface,
+                  minHeight: 44,
+                })}>
+                <MaterialCommunityIcons name={action.icon} size={18} color={colors.primary} />
+                <AppText variant="label" style={{ fontWeight: '600' }}>
+                  {t(action.label)}
+                </AppText>
+              </Pressable>
+            ))}
+          </View>
+
+          {/* Continue reading — the last three hymns opened, newest first. */}
+          {recentHymns.length > 0 ? (
+            <View style={{ marginBottom: spacing.xl }}>
+              <AppText variant="heading" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
+                {t('home.continueReading')}
+              </AppText>
+              <View style={{ gap: spacing.sm }}>
+                {recentHymns.map((hymn) => (
+                  <Pressable
+                    key={hymn.id}
+                    onPress={() => router.push(`/hymn/${hymn.id}`)}
+                    accessibilityRole="button"
+                    accessibilityLabel={hymn.title}
+                    style={({ pressed }) => ({
+                      flexDirection: direction.row,
+                      alignItems: 'center',
+                      gap: spacing.md,
+                      padding: spacing.md,
+                      borderRadius: radius.md,
+                      borderWidth: 1,
+                      borderColor: colors.border,
+                      backgroundColor: pressed ? colors.surfaceMuted : colors.surface,
+                    })}>
+                    <View
+                      style={{
+                        width: 40,
+                        height: 40,
+                        borderRadius: radius.sm,
+                        backgroundColor: colors.surfaceMuted,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                      }}>
+                      <MaterialCommunityIcons name="book-open-variant" size={20} color={colors.primary} />
+                    </View>
+                    <View style={{ flex: 1 }}>
+                      <AppText variant="body" numberOfLines={1} style={{ fontWeight: '600' }}>
+                        {hymn.title}
+                      </AppText>
+                      <AppText variant="caption" color={colors.textMuted} numberOfLines={1}>
+                        {`${t('common.hymnNumber')} ${hymn.number}`}
+                      </AppText>
+                    </View>
+                    <MaterialCommunityIcons
+                      name={direction.isRTL ? 'chevron-left' : 'chevron-right'}
+                      size={22}
+                      color={colors.textMuted}
+                    />
+                  </Pressable>
+                ))}
+              </View>
+            </View>
+          ) : null}
+
           <AppText variant="title" center style={{ fontWeight: '700' }}>
             {t('home.chooseTitle')}
           </AppText>

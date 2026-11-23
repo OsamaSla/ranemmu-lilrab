@@ -56,7 +56,13 @@ export default function RecentsScreen() {
         keyExtractor={(row) => row.id}
         contentContainerStyle={{ padding: spacing.lg, paddingBottom: spacing.xxl }}
         ListEmptyComponent={
-          <EmptyState icon="history" title={t('recents.empty')} hint={t('recents.emptyHint')} />
+          <EmptyState
+            icon="history"
+            title={t('recents.empty')}
+            hint={t('recents.emptyHint')}
+            actionLabel={t('book.choose')}
+            onAction={() => router.push('/library')}
+          />
         }
         renderItem={({ item }) => (
           <HymnRow hymn={item.summary} onPress={() => router.push(`/hymn/${item.summary.id}`)} />

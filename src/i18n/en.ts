@@ -13,6 +13,12 @@ export const en: PartialDictionary = {
   'home.chooseTitle': 'Choose a book',
   'home.tagline': 'Hymn library',
   'home.hymnUnit': 'hymns',
+  'home.continueReading': 'Continue reading',
+  'home.startNew': 'Start a book',
+  'home.quickSearch': 'Search',
+  'home.quickFavorites': 'Favorites',
+  'home.quickSetlist': 'Worship setlist',
+  'home.quickHelp': 'Help',
 
   'library.title': 'Hymns',
   'library.count': 'Hymn count',
@@ -251,6 +257,9 @@ export const en: PartialDictionary = {
   'settings.version': 'Version',
 
   'help.title': 'User Guide',
+  'help.practiceTitle': 'Learn by doing',
+  'help.practiceBody': 'Open any section and try it right away.',
+  'help.replayTour': 'Replay the tour',
   'help.video.title': 'Video tutorial',
   'help.video.body': 'Watch how to use the app step by step — no reading needed.',
   'help.video.play': 'Play tutorial',
@@ -309,10 +318,58 @@ export const en: PartialDictionary = {
   'more.officialSite': 'Official site: ranemmu-lilrab.web.app',
   'more.notConfigured': 'This feature is not set up yet',
 
+  'onboarding.welcome.tagline':
+    'Over 1,800 hymns — offline, in four languages, with a smart reader.',
+  'onboarding.welcome.feature1.title': 'A full library',
+  'onboarding.welcome.feature1.body':
+    'Three books and 1,800+ hymns with instant search by number or words.',
+  'onboarding.welcome.feature2.title': 'Four languages',
+  'onboarding.welcome.feature2.body':
+    'Arabic, English, German and Hebrew — switch language in the reader.',
+  'onboarding.welcome.feature3.title': 'Works offline',
+  'onboarding.welcome.feature3.body':
+    'Every hymn is bundled — open the app anywhere, no connection needed.',
+  'onboarding.welcome.feature4.title': 'A smart reader',
+  'onboarding.welcome.feature4.body':
+    'Fullscreen, stanza navigation, and melody links for each hymn.',
+  'onboarding.bookPicker.title': 'Start with a book',
+  'onboarding.bookPicker.body':
+    'Pick the book you prefer — you can switch any time from Home.',
+  'onboarding.tour.step': 'Step',
+  'onboarding.tour.search.title': 'Search instantly',
+  'onboarding.tour.search.body':
+    'Type a hymn number or any word from its lyrics — results appear as you type.',
+  'onboarding.tour.library.title': 'Browse the hymns',
+  'onboarding.tour.library.body':
+    'Sorted by number or A–Z, filter by topic, and jump quickly between pages.',
+  'onboarding.tour.reader.title': 'Read comfortably',
+  'onboarding.tour.reader.body':
+    'Resizable text, four languages, a glowing refrain, and a stanza rail.',
+  'onboarding.tour.gestures.title': 'Smart gestures',
+  'onboarding.tour.gestures.body':
+    'Swipe the language button, tap a rail dot to jump, and go fullscreen in one tap.',
+  'onboarding.gestures.step': 'Hint',
+  'onboarding.gestures.swipeLanguage.title': 'Swipe to change language',
+  'onboarding.gestures.swipeLanguage.body':
+    'In the reader, swipe the language button (AR) up or down to cycle the available languages.',
+  'onboarding.gestures.railTap.title': 'Tap to jump',
+  'onboarding.gestures.railTap.body':
+    'The side rail lists every stanza — tap any dot to jump straight to it.',
+  'onboarding.gestures.fullscreen.title': 'Fullscreen',
+  'onboarding.gestures.fullscreen.body':
+    'Tap the square icon to hide the chrome and read the hymn alone; tap again to exit.',
+  'coach.searchHint': 'Try: tr001 or “نرنم”',
+  'coach.swipeLanguage': 'Swipe to change language',
+  'coach.railTap': 'Tap a dot to jump',
+  'coach.fullscreen': 'Read fullscreen',
   'common.back': 'Back',
   'common.close': 'Close',
   'common.cancel': 'Cancel',
   'common.ok': 'OK',
+  'common.next': 'Next',
+  'common.skip': 'Skip',
+  'common.done': 'Done',
+  'common.tryIt': 'Try it now',
   'common.loading': 'Loading...',
   'common.hymnNumber': 'Hymn',
   'common.notFound': 'This hymn could not be found',

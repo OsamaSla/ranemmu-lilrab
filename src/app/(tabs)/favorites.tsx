@@ -50,6 +50,8 @@ export default function FavoritesScreen() {
             icon="star-outline"
             title={t('favorites.empty')}
             hint={t('favorites.emptyHint')}
+            actionLabel={t('library.title')}
+            onAction={() => router.push('/library')}
           />
         }
         renderItem={({ item }) => (

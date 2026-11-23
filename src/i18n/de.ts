@@ -18,6 +18,12 @@ export const de: PartialDictionary = {
   'home.chooseTitle': 'Buch auswählen',
   'home.tagline': 'Liederbibliothek',
   'home.hymnUnit': 'Lieder',
+  'home.continueReading': 'Weiterlesen',
+  'home.startNew': 'Buch beginnen',
+  'home.quickSearch': 'Suche',
+  'home.quickFavorites': 'Favoriten',
+  'home.quickSetlist': 'Gottesdienstliste',
+  'home.quickHelp': 'Hilfe',
 
   'library.title': 'Lieder',
   'library.count': 'Anzahl der Lieder',
@@ -256,6 +262,9 @@ export const de: PartialDictionary = {
   'settings.version': 'Version',
 
   'help.title': 'Benutzerhandbuch',
+  'help.practiceTitle': 'Durch Ausprobieren lernen',
+  'help.practiceBody': 'Öffne einen Abschnitt und probiere es sofort aus.',
+  'help.replayTour': 'Tour wiederholen',
   'help.video.title': 'Videoanleitung',
   'help.video.body': 'Sieh Schritt für Schritt, wie die App funktioniert — ohne zu lesen.',
   'help.video.play': 'Anleitung abspielen',
@@ -314,10 +323,58 @@ export const de: PartialDictionary = {
   'more.officialSite': 'Offizielle Website: ranemmu-lilrab.web.app',
   'more.notConfigured': 'Diese Funktion ist noch nicht eingerichtet',
 
+  'onboarding.welcome.tagline':
+    'Über 1.800 Lieder — offline, in vier Sprachen, mit einem klugen Lesegerät.',
+  'onboarding.welcome.feature1.title': 'Eine ganze Bibliothek',
+  'onboarding.welcome.feature1.body':
+    'Drei Bücher und 1.800+ Lieder mit sofortiger Suche nach Nummer oder Wörtern.',
+  'onboarding.welcome.feature2.title': 'Vier Sprachen',
+  'onboarding.welcome.feature2.body':
+    'Arabisch, Englisch, Deutsch und Hebräisch — Sprache im Lesegerät wechseln.',
+  'onboarding.welcome.feature3.title': 'Funktioniert offline',
+  'onboarding.welcome.feature3.body':
+    'Jedes Lied ist enthalten — öffne die App überall, ganz ohne Verbindung.',
+  'onboarding.welcome.feature4.title': 'Ein kluges Lesegerät',
+  'onboarding.welcome.feature4.body':
+    'Vollbild, Strophen-Navigation und Melodielinks für jedes Lied.',
+  'onboarding.bookPicker.title': 'Mit einem Buch beginnen',
+  'onboarding.bookPicker.body':
+    'Wähle dein bevorzugtes Buch — du kannst jederzeit auf der Startseite wechseln.',
+  'onboarding.tour.step': 'Schritt',
+  'onboarding.tour.search.title': 'Sofort suchen',
+  'onboarding.tour.search.body':
+    'Tippe eine Liednummer oder ein beliebiges Wort aus dem Text ein — Ergebnisse erscheinen beim Tippen.',
+  'onboarding.tour.library.title': 'Die Lieder durchsuchen',
+  'onboarding.tour.library.body':
+    'Nach Nummer oder A–Z sortiert, nach Thema gefiltert, und schnell zwischen Seiten springen.',
+  'onboarding.tour.reader.title': 'Bequem lesen',
+  'onboarding.tour.reader.body':
+    'Anpassbare Schrift, vier Sprachen, ein leuchtender Kehrvers und eine Strophenleiste.',
+  'onboarding.tour.gestures.title': 'Kluge Gesten',
+  'onboarding.tour.gestures.body':
+    'Wische die Sprachschaltfläche, tippe einen Leistenpunkt zum Springen und gehe mit einem Tipp ins Vollbild.',
+  'onboarding.gestures.step': 'Tipp',
+  'onboarding.gestures.swipeLanguage.title': 'Wischen zum Sprachwechsel',
+  'onboarding.gestures.swipeLanguage.body':
+    'Wische im Lesegerät die Sprachschaltfläche (AR) nach oben oder unten, um die verfügbaren Sprachen zu wechseln.',
+  'onboarding.gestures.railTap.title': 'Tippen zum Springen',
+  'onboarding.gestures.railTap.body':
+    'Die Seitenleiste zeigt jede Strophe — tippe einen Punkt, um direkt dorthin zu springen.',
+  'onboarding.gestures.fullscreen.title': 'Vollbild',
+  'onboarding.gestures.fullscreen.body':
+    'Tippe das Quadrat-Symbol, um die Bedienelemente auszublenden und das Lied allein zu lesen; tippe erneut zum Beenden.',
+  'coach.searchHint': 'Probiere: tr001 oder „نرنم“',
+  'coach.swipeLanguage': 'Wischen zum Sprachwechsel',
+  'coach.railTap': 'Punkt antippen zum Springen',
+  'coach.fullscreen': 'Im Vollbild lesen',
   'common.back': 'Zurück',
   'common.close': 'Schließen',
   'common.cancel': 'Abbrechen',
   'common.ok': 'OK',
+  'common.next': 'Weiter',
+  'common.skip': 'Überspringen',
+  'common.done': 'Fertig',
+  'common.tryIt': 'Jetzt ausprobieren',
   'common.loading': 'Wird geladen...',
   'common.hymnNumber': 'Lied',
   'common.notFound': 'Dieses Lied konnte nicht gefunden werden',
