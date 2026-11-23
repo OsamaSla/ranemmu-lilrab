@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-23, commit pending (circular carousel TypeScript fixes complete, typecheck + lint pass)
+Last verified: 2026-11-23 (circular carousel + tour/reader cleanups + wake-lock fix; typecheck + lint pass, browser-verified)
 
 ## 1. What this is
 
@@ -1898,6 +1898,21 @@ Implemented a 3D-styled circular carousel on the home screen (`src/app/(tabs)/in
 - **Verified**: `npm run typecheck` and `npm run lint` both pass with no warnings or errors.
 
 Files modified: `src/app/(tabs)/index.tsx` - fixed TypeScript errors (line 119 KeyboardEvent type, line 151/158 primaryDeep color, line 245 extra brace).
+
+Follow-up refinements to the carousel (same file):
+
+- **Arrows moved below the books** into their own centered row. The card container must be tall enough (`CARD_FULL_HEIGHT` ≈ 504px) for the arrows to clear the cards — otherwise they render behind the cards' bottoms.
+- **Side-card click bug**: the offset formula `((i - activeIndex + n) % n) - 1` makes `activeIndex` name the LEFT card, not the centre, so `onNavigate` must set `setActiveIndex((index - 1 + n) % n)` for the tapped book to land in the centre.
+- **Smooth motion**: `useCarouselAnimation` animates translateX/scale/rotateY/opacity together via `Animated.parallel` + `Animated.timing` (650 ms, `Easing.inOut(Easing.cubic)`, native driver off on web). A redundant absolutely-positioned caption that overlapped the badges was removed.
+- **Mobile**: the whole native-size layout is `transform: [{ scale }]`-ed down as one unit (`carouselScale = clamp((width-48)/540, 0.5, 1)`), preserving exact PC proportions instead of reflowing text. A CSS/RN scale does not shrink the layout box, so margins are trimmed by `NATIVE_CAROUSEL_HEIGHT·(1-scale)/2` to avoid an empty gap above the books.
+- Removed the "Continue reading" list (`recentHymns` + `useLibrary`/`getSummaries`/`HymnSummary` + `home.continueReading` i18n keys in ar/en/de) per owner request.
+
+## 32. Onboarding tour + reader cleanups (2026-11-23)
+
+- Added a new **first tour step** "Pick your book" (`onboarding.tour.books.*` in ar/en/de) with an illustration of three overlapping cards + arrows, explaining tap-side-to-front / arrows / swipe. `TOUR` array id union now includes `'books'`, icon `view-carousel`. Tour is now 5 steps.
+- Removed the reader's "اسحب لتغيير اللغة" `CoachHint` banner and its unused `coach.swipeLanguage` i18n keys (ar/en/de) — owner request. `CoachHint` is still used on the library screen.
+- **Wake-lock error**: `useKeepAwake('reader')` on web throws `ERR_KEEP_AWAKE_TAG_INVALID` on unmount when the async `navigator.wakeLock.request` was rejected/never activated — the hook's cleanup calls `deactivateKeepAwake` without a `.catch()`. Fixed with `useKeepAwake('reader', { suppressDeactivateWarnings: true })` in `hymn/[id].tsx`. Verified 4× navigate in/out of the reader: 0 console errors.
+- All changes verified with `npm run typecheck` + `npm run lint` clean and browser screenshots.
 
 
 

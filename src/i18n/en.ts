@@ -13,7 +13,6 @@ export const en: PartialDictionary = {
   'home.chooseTitle': 'Choose a book',
   'home.tagline': 'Hymn library',
   'home.hymnUnit': 'hymns',
-  'home.continueReading': 'Continue reading',
   'home.startNew': 'Start a book',
   'home.quickSearch': 'Search',
   'home.quickFavorites': 'Favorites',
@@ -336,6 +335,9 @@ export const en: PartialDictionary = {
   'onboarding.bookPicker.body':
     'Pick the book you prefer — you can switch any time from Home.',
   'onboarding.tour.step': 'Step',
+  'onboarding.tour.books.title': 'Pick your book',
+  'onboarding.tour.books.body':
+    'On Home the three books sit in a carousel — tap a side book to bring it to the front, use the arrows below, or swipe to switch.',
   'onboarding.tour.search.title': 'Search instantly',
   'onboarding.tour.search.body':
     'Type a hymn number or any word from its lyrics — results appear as you type.',
@@ -359,7 +361,6 @@ export const en: PartialDictionary = {
   'onboarding.gestures.fullscreen.body':
     'Tap the square icon to hide the chrome and read the hymn alone; tap again to exit.',
   'coach.searchHint': 'Try: tr001 or “نرنم”',
-  'coach.swipeLanguage': 'Swipe to change language',
   'coach.railTap': 'Tap a dot to jump',
   'coach.fullscreen': 'Read fullscreen',
   'common.back': 'Back',

@@ -29,7 +29,6 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../../components/AppText';
 import { Card } from '../../../components/Card';
-import { CoachHint } from '../../../components/CoachHint';
 import { EmptyState } from '../../../components/EmptyState';
 import { HymnInfoSheet } from '../../../components/HymnInfoSheet';
 import { LineFixSheet, type FixSavedPayload, type FixTarget } from '../../../components/LineFixSheet';
@@ -89,7 +88,11 @@ export default function ReaderScreen() {
   // same gate the admin editor and the settings sheet's edit button use.
   const canEdit = useCanEdit();
   const { height: windowHeight } = useWindowDimensions();
-  useKeepAwake('reader');
+  // On web the wake-lock request can be rejected (unsupported browser / tab
+  // not focused). The hook swallows that failure but still calls deactivate on
+  // unmount, which then throws ERR_KEEP_AWAKE_TAG_INVALID. Suppress that
+  // spurious unhandled rejection — keeping the screen on is best-effort.
+  useKeepAwake('reader', { suppressDeactivateWarnings: true });
 
   const [searchOpen, setSearchOpen] = useState(false);
   const [shareToast, setShareToast] = useState(false);
@@ -650,10 +653,6 @@ export default function ReaderScreen() {
         topInset={insets.top}
         toolbarProps={toolbarProps}
       />
-
-      {!fullscreen ? (
-        <CoachHint id="reader.swipe" icon="gesture-swipe-vertical" label={t('coach.swipeLanguage')} />
-      ) : null}
 
       <View style={{ flex: 1, flexDirection: 'row', direction: 'ltr' }}>
         <StanzaRail

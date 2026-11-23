@@ -18,7 +18,6 @@ export const de: PartialDictionary = {
   'home.chooseTitle': 'Buch auswählen',
   'home.tagline': 'Liederbibliothek',
   'home.hymnUnit': 'Lieder',
-  'home.continueReading': 'Weiterlesen',
   'home.startNew': 'Buch beginnen',
   'home.quickSearch': 'Suche',
   'home.quickFavorites': 'Favoriten',
@@ -341,6 +340,9 @@ export const de: PartialDictionary = {
   'onboarding.bookPicker.body':
     'Wähle dein bevorzugtes Buch — du kannst jederzeit auf der Startseite wechseln.',
   'onboarding.tour.step': 'Schritt',
+  'onboarding.tour.books.title': 'Buch auswählen',
+  'onboarding.tour.books.body':
+    'Auf der Startseite stehen die drei Bücher im Karussell – tippe auf ein seitliches Buch, um es nach vorn zu holen, nutze die Pfeile darunter oder wische zum Wechseln.',
   'onboarding.tour.search.title': 'Sofort suchen',
   'onboarding.tour.search.body':
     'Tippe eine Liednummer oder ein beliebiges Wort aus dem Text ein — Ergebnisse erscheinen beim Tippen.',
@@ -363,8 +365,7 @@ export const de: PartialDictionary = {
   'onboarding.gestures.fullscreen.title': 'Vollbild',
   'onboarding.gestures.fullscreen.body':
     'Tippe das Quadrat-Symbol, um die Bedienelemente auszublenden und das Lied allein zu lesen; tippe erneut zum Beenden.',
-  'coach.searchHint': 'Probiere: tr001 oder „نرنم“',
-  'coach.swipeLanguage': 'Wischen zum Sprachwechsel',
+  'coach.searchHint': 'Probiere: tr001 oder „نرنم”',
   'coach.railTap': 'Punkt antippen zum Springen',
   'coach.fullscreen': 'Im Vollbild lesen',
   'common.back': 'Zurück',

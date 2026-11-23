@@ -48,11 +48,12 @@ const BOOK_COVERS: Record<string, number> = {
 type Stage = 'welcome' | 'bookPicker' | 'tour' | 'gestures';
 
 const TOUR: {
-  id: 'search' | 'library' | 'reader' | 'gestures';
-  icon: 'magnify' | 'format-list-numbered' | 'book-open-variant' | 'gesture-swipe';
+  id: 'books' | 'search' | 'library' | 'reader' | 'gestures';
+  icon: 'view-carousel' | 'magnify' | 'format-list-numbered' | 'book-open-variant' | 'gesture-swipe';
   title: TranslationKey;
   body: TranslationKey;
 }[] = [
+  { id: 'books', icon: 'view-carousel', title: 'onboarding.tour.books.title', body: 'onboarding.tour.books.body' },
   { id: 'search', icon: 'magnify', title: 'onboarding.tour.search.title', body: 'onboarding.tour.search.body' },
   { id: 'library', icon: 'format-list-numbered', title: 'onboarding.tour.library.title', body: 'onboarding.tour.library.body' },
   { id: 'reader', icon: 'book-open-variant', title: 'onboarding.tour.reader.title', body: 'onboarding.tour.reader.body' },
@@ -505,6 +506,40 @@ function TourIllustration({
   direction: ReturnType<typeof useT>['direction'];
   t: (key: TranslationKey) => string;
 }) {
+  if (id === 'books') {
+    return (
+      <View style={{ width: '100%', maxWidth: 360, alignItems: 'center' }}>
+        {/* Three overlapping cards: the centre one full size, the two side
+            ones smaller and angled — mirroring the real home carousel. */}
+        <View style={{ flexDirection: direction.row, alignItems: 'center', justifyContent: 'center' }}>
+          {[0, 1, 2].map((slot) => {
+            const centre = slot === 1;
+            return (
+              <View
+                key={slot}
+                style={{
+                  width: centre ? 104 : 84,
+                  height: centre ? 150 : 121,
+                  marginHorizontal: centre ? 0 : -18,
+                  borderRadius: radius.sm,
+                  borderWidth: 2,
+                  borderColor: centre ? colors.primary : colors.border,
+                  backgroundColor: colors.surface,
+                  transform: [{ rotate: slot === 0 ? '12deg' : slot === 2 ? '-12deg' : '0deg' }],
+                  zIndex: centre ? 2 : 1,
+                }}
+              />
+            );
+          })}
+        </View>
+        <View style={{ flexDirection: direction.row, alignItems: 'center', gap: spacing.xl, marginTop: spacing.lg }}>
+          <MaterialCommunityIcons name="chevron-left" size={26} color={colors.primary} />
+          <MaterialCommunityIcons name="chevron-right" size={26} color={colors.primary} />
+        </View>
+      </View>
+    );
+  }
+
   if (id === 'search') {
     return (
       <View
