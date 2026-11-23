@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-23, commit 5a952b92 (home screen search bar removed; onboarding demo verified, Option C complete), code at 9e83f0dc (refrain rail dot now highlights when tapped or centred; Claude Opus script repairs applied — `npm run lint` is now real; reader keeps the active stanza highlighted **and centred** — snap-to-stanza on scroll/rail tap, suspended past the last stanza so «ترنيمات مشابهة» stays reachable; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner must add the access key to local env + GitHub secret); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through 53256532, local commits through 9e83f0dc not pushed; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-23, commit pending (circular carousel TypeScript fixes complete, typecheck + lint pass)
 
 ## 1. What this is
 
@@ -1884,6 +1884,20 @@ stanzas and highlighted correctly.
   category, added a hymn from the setlist search, added another via the reader
   picker, and confirmed both landed in the same category with correct counts
   and order. All six gates green.
+
+## 31. Circular Coverflow-style book carousel (2026-11-23)
+
+Implemented a 3D-styled circular carousel on the home screen (`src/app/(tabs)/index.tsx`) with:
+
+- **Layout**: Container uses absolute positioning for 3-card stacked perspective. Center book at scale 1, side books at scale 0.84. RotateY: center 0deg, left 24deg, right -24deg. Z-index: center 10, sides 5.
+- **Interaction**: Click side card to navigate to center, click center card to open book. Arrow buttons (‹ ›) on outer edges for navigation.
+- **Gestures**: Horizontal swipe detection via `Gesture.Pan()` from react-native-gesture-handler. Swipe threshold of 30px for activating navigation.
+- **Web keyboard**: ArrowLeft/ArrowRight key listeners only active when `Platform.OS === 'web'`.
+- **RTL preservation**: Carousel container has `direction: 'ltr'` to force LTR, preserving RTL text within cards.
+- **Type fixes**: Added `ThemeColors` import and proper `KeyboardEvent` typing. Removed unused `Keyboard` import and `CARD_GAP` constant.
+- **Verified**: `npm run typecheck` and `npm run lint` both pass with no warnings or errors.
+
+Files modified: `src/app/(tabs)/index.tsx` - fixed TypeScript errors (line 119 KeyboardEvent type, line 151/158 primaryDeep color, line 245 extra brace).
 
 
 

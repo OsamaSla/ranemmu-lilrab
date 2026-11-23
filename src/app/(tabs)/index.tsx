@@ -7,11 +7,13 @@
  * Horizontal scrolling pans through books, maintaining tap-to-open functionality.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { Gesture, GestureDetector } from 'react-native-gesture-handler';
 import { useRouter } from 'expo-router';
 import type { ComponentProps } from 'react';
-import { useMemo, useRef, useState } from 'react';
+import { useMemo, useEffect, useRef, useState } from 'react';
 import {
   Animated,
+  Easing,
   Image as RNImage,
   Platform,
   Pressable,
@@ -24,13 +26,12 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { AppText } from '../../components/AppText';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
-import { getBooks, getSummaries } from '../../data/loader';
-import type { BookId, HymnSummary } from '../../data/types';
+import { getBooks } from '../../data/loader';
+import type { BookId } from '../../data/types';
 import type { TranslationKey } from '../../i18n';
 import { useCorpusVersion } from '../../store/corpus';
-import { useLibrary } from '../../store/library';
 import { useSettings } from '../../store/settings';
-import { radius, shadow, spacing } from '../../theme/tokens';
+import { radius, shadow, spacing, type ThemeColors } from '../../theme/tokens';
 
 /** Cover art per book, shown as it looks on the shelf. */
 const BOOK_COVERS: Record<BookId, number> = {
@@ -50,9 +51,23 @@ const BOOK_ACCENTS: Record<BookId, string> = {
 const CONTENT_MAX = 960;
 /** Cards stay book-shaped; beyond this width they scale the cover too much. */
 const CARD_MAX = 262;
-const CARD_GAP = spacing.lg;
 /** Cover width / height, matching the printed covers (132 × 190). */
 const COVER_RATIO = 0.7;
+/** Card box is taller than the cover: cover + metadata, at full scale. */
+const CARD_FULL_HEIGHT = CARD_MAX / COVER_RATIO + 130;
+/** Native (unscaled) height of the carousel + arrow row. */
+const NATIVE_CAROUSEL_HEIGHT = CARD_FULL_HEIGHT + spacing.lg + 44;
+/**
+ * The coverflow is laid out at its native 262 px card size on every screen,
+ * then the whole thing is scaled down as one unit on narrow viewports. This
+ * preserves the exact desktop proportions — card shape, overlap, type size
+ * and spacing — instead of rebuilding a different-looking mobile layout.
+ */
+function carouselScale(screenWidth: number) {
+  // At native size the three cards span roughly 540 px; fit that inside the
+  // viewport (minus its horizontal padding) without ever enlarging past 1.
+  return Math.min(1, Math.max(0.5, (screenWidth - 48) / 540));
+}
 
 /**
  * The four destinations a reader reaches for most, pinned above the book grid.
@@ -72,6 +87,15 @@ const QUICK_ACTIONS = [
 /** Lift applied on web hover — `shadow.card` is the resting state. */
 const HOVER_SHADOW = { boxShadow: '0 14px 34px rgba(11, 42, 48, 0.22)' };
 
+/** Styles for carousel components */
+const carouselStyles = {
+  arrowButton: {
+    padding: 8,
+    borderRadius: 20,
+    backgroundColor: 'rgba(255, 255, 255, 0.2)',
+  },
+};
+
 /** Type for book data returned by getBooks() */
 type BookData = { id: BookId; count: number; hasEn: boolean; hasDe: boolean; hasHe: boolean };
 
@@ -82,109 +106,195 @@ interface CircularCarouselProps {
   width: number;
   onPress: (id: BookId) => void;
   t: (key: TranslationKey) => string;
-  colors: { textMuted: string };
+  colors: ThemeColors;
+}
+
+/** Duration (ms) of a card's glide to its new slot — deliberately unhurried. */
+const SLIDE_DURATION = 650;
+
+/**
+ * Keeps one card's animated transform in sync with its slot in the ring.
+ * Initial values are taken from the first render's slot so a card never jumps
+ * when it mounts; afterwards every change eases smoothly into place.
+ */
+function useCarouselAnimation(offset: number) {
+  const [translateX] = useState(() => new Animated.Value(offset * 165));
+  const [scale] = useState(() => new Animated.Value(offset === 0 ? 1 : 0.84));
+  const [rotation] = useState(() => new Animated.Value(offset === 0 ? 0 : offset === -1 ? 24 : -24));
+  const [opacity] = useState(() => new Animated.Value(offset === 0 ? 1 : 0.9));
+
+  useEffect(() => {
+    const config = {
+      duration: SLIDE_DURATION,
+      easing: Easing.inOut(Easing.cubic),
+      useNativeDriver: Platform.OS !== 'web',
+    };
+    Animated.parallel([
+      Animated.timing(translateX, { ...config, toValue: offset * 165 }),
+      Animated.timing(scale, { ...config, toValue: offset === 0 ? 1 : 0.84 }),
+      Animated.timing(rotation, { ...config, toValue: offset === 0 ? 0 : offset === -1 ? 24 : -24 }),
+      Animated.timing(opacity, { ...config, toValue: offset === 0 ? 1 : 0.9 }),
+    ]).start();
+  }, [offset, translateX, scale, rotation, opacity]);
+
+  return {
+    transform: [
+      { translateX },
+      { scale },
+      { rotateY: rotation.interpolate({ inputRange: [-24, 24], outputRange: ['-24deg', '24deg'] }) },
+    ],
+    opacity,
+  };
+}
+
+interface CarouselCardProps {
+  book: BookData;
+  offset: number;
+  selectedBook: BookId | null;
+  t: (key: TranslationKey) => string;
+  colors: ThemeColors;
+  onNavigate: () => void;
+  onOpen: () => void;
+}
+
+/** A single book card that glides between slots with its 3D transform animated. */
+function CarouselCard({ book, offset, selectedBook, t, colors, onNavigate, onOpen }: CarouselCardProps) {
+  const animated = useCarouselAnimation(offset);
+  return (
+    <Animated.View
+      style={{
+        position: 'absolute',
+        width: CARD_MAX,
+        height: CARD_FULL_HEIGHT,
+        left: '50%',
+        marginLeft: -(CARD_MAX / 2),
+        alignItems: 'center',
+        zIndex: offset === 0 ? 10 : 5,
+      }}>
+      <Animated.View style={{ ...animated, width: CARD_MAX }}>
+        <BookCard
+          id={book.id}
+          name={t(`book.${book.id}` as const)}
+          count={book.count}
+          unit={t('home.hymnUnit')}
+          languages={[
+            ...(book.hasEn ? ['EN'] : []),
+            ...(book.hasDe ? ['DE'] : []),
+            ...(book.hasHe ? ['HE'] : []),
+          ]}
+          selected={book.id === selectedBook}
+          width={CARD_MAX}
+          onPress={offset === 0 ? onOpen : onNavigate}
+        />
+      </Animated.View>
+    </Animated.View>
+  );
 }
 
 /** Circular book carousel component that displays books with 3D perspective transforms. */
 function CircularCarousel({ books, selectedBook, width, onPress, t, colors }: CircularCarouselProps) {
-  const [scrollX] = useState(() => new Animated.Value(0));
+  const [activeIndex, setActiveIndex] = useState(0);
+  const scale = useMemo(() => carouselScale(width), [width]);
+  // A CSS/RN scale transform shrinks the pixels but not the layout box, which
+  // would leave a large empty gap above and below. Pull the margins in by the
+  // hidden amount so the surrounding content butts up against the scaled art.
+  const trim = (NATIVE_CAROUSEL_HEIGHT * (1 - scale)) / 2;
 
-  const onScroll = Animated.event(
-    [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-    { useNativeDriver: Platform.OS !== 'web' }
-  );
+  // Swipe gesture for horizontal navigation
+  const swipe = Gesture.Pan()
+    .onEnd((event) => {
+      if (Math.abs(event.translationX) >= 30) {
+        // Swipe right (positive translationX) = go to previous
+        // Swipe left (negative translationX) = go to next
+        setActiveIndex((prev) => {
+          const next = event.translationX > 0 ? prev - 1 : prev + 1;
+          return ((next % books.length) + books.length) % books.length;
+        });
+      }
+    });
 
-  const ITEM_WIDTH = CARD_MAX * 0.85;
+  // Web keyboard navigation - only on web platform
+  useEffect(() => {
+    if (Platform.OS !== 'web') return;
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        setActiveIndex((prev) => (prev === 0 ? books.length - 1 : prev - 1));
+        e.preventDefault();
+      } else if (e.key === 'ArrowRight') {
+        setActiveIndex((prev) => (prev === books.length - 1 ? 0 : prev + 1));
+        e.preventDefault();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [books.length]);
+
+  // Navigation functions
+  const goToPrevious = () => setActiveIndex((prev) => (prev === 0 ? books.length - 1 : prev - 1));
+  const goToNext = () => setActiveIndex((prev) => (prev === books.length - 1 ? 0 : prev + 1));
 
   return (
     <View
       style={{
         width: '100%',
-        height: CARD_MAX * 1.5,
-        alignSelf: 'center',
-        justifyContent: 'center',
         alignItems: 'center',
+        marginTop: spacing.lg - trim,
+        marginBottom: spacing.lg - trim,
+        // Scale the whole native-size layout down as one unit on phones so the
+        // PC look is preserved instead of re-flowing text at a smaller width.
+        transform: [{ scale }],
       }}>
-      <Animated.ScrollView
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        snapToInterval={ITEM_WIDTH}
-        decelerationRate="fast"
-        onScroll={onScroll}
-        scrollEventThrottle={16}
-        contentContainerStyle={{
+      <GestureDetector gesture={swipe}>
+        <View
+          style={{
+            width: '100%',
+            height: CARD_FULL_HEIGHT,
+            position: 'relative',
+            alignSelf: 'center',
+            justifyContent: 'center',
+            alignItems: 'center',
+            direction: 'ltr',
+          }}>
+          {books.map((b, index) => {
+            // -1 = left, 0 = centre, 1 = right (wrapping around the ring).
+            // Because of the `-1`, activeIndex names the LEFT card, not the
+            // centre one — so clicking a book must target index - 1 for it to
+            // land in the centre slot.
+            const circularOffset = ((index - activeIndex + books.length) % books.length) - 1;
+            return (
+              <CarouselCard
+                key={b.id}
+                book={b}
+                offset={circularOffset}
+                selectedBook={selectedBook}
+                t={t}
+                colors={colors}
+                onNavigate={() => setActiveIndex((index - 1 + books.length) % books.length)}
+                onOpen={() => onPress(b.id)}
+              />
+            );
+          })}
+        </View>
+      </GestureDetector>
+
+      {/* Navigation arrow buttons beneath the books */}
+      <View
+        style={{
+          flexDirection: 'row',
           alignItems: 'center',
-          paddingHorizontal: width / 2 - CARD_MAX / 2,
+          justifyContent: 'center',
+          gap: spacing.xl,
+          marginTop: spacing.lg,
+          zIndex: 20,
         }}>
-        {books.map((b, index) => {
-          const inputRange = [
-            (index - 1) * ITEM_WIDTH,
-            index * ITEM_WIDTH,
-            (index + 1) * ITEM_WIDTH,
-          ];
-
-          const scale = scrollX.interpolate({
-            inputRange,
-            outputRange: [0.8, 1, 0.8],
-            extrapolate: 'clamp',
-          });
-
-          const opacity = scrollX.interpolate({
-            inputRange,
-            outputRange: [0.5, 1, 0.5],
-            extrapolate: 'clamp',
-          });
-
-          const zIndex = scrollX.interpolate({
-            inputRange,
-            outputRange: [0, 10, 0],
-            extrapolate: 'clamp',
-          });
-
-          return (
-            <Animated.View
-              key={b.id}
-              style={{
-                width: CARD_MAX,
-                alignItems: 'center',
-                marginHorizontal: -CARD_MAX * 0.15,
-                zIndex,
-              }}>
-              <Animated.View
-                style={{
-                  transform: [{ scale }],
-                  opacity,
-                  width: CARD_MAX,
-                  alignItems: 'center',
-                }}>
-                <BookCard
-                  id={b.id}
-                  name={t(`book.${b.id}` as const)}
-                  count={b.count}
-                  unit={t('home.hymnUnit')}
-                  languages={[
-                    ...(b.hasEn ? ['EN'] : []),
-                    ...(b.hasDe ? ['DE'] : []),
-                    ...(b.hasHe ? ['HE'] : []),
-                  ]}
-                  selected={b.id === selectedBook}
-                  width={CARD_MAX}
-                  onPress={() => onPress(b.id)}
-                />
-              </Animated.View>
-              <AppText
-                variant="caption"
-                color={colors.textMuted}
-                style={{
-                  marginTop: spacing.xs,
-                  fontWeight: selectedBook === b.id ? '600' : '400',
-                }}>
-                {t(`book.${b.id}` as const)}
-              </AppText>
-            </Animated.View>
-          );
-        })}
-      </Animated.ScrollView>
+        <Pressable onPress={goToPrevious} style={carouselStyles.arrowButton} accessibilityLabel="Previous book">
+          <MaterialCommunityIcons name="chevron-left" size={28} color={colors.primaryDeep} />
+        </Pressable>
+        <Pressable onPress={goToNext} style={carouselStyles.arrowButton} accessibilityLabel="Next book">
+          <MaterialCommunityIcons name="chevron-right" size={28} color={colors.primaryDeep} />
+        </Pressable>
+      </View>
     </View>
   );
 }
@@ -366,25 +476,10 @@ export default function HomeScreen() {
   const corpusVersion = useCorpusVersion();
   const book = useSettings((s) => s.book);
   const setBook = useSettings((s) => s.setBook);
-  const recents = useLibrary((s) => s.recents);
   const books = useMemo(() => {
     void corpusVersion; // getBooks() reads a mutable cache.
     return getBooks();
   }, [corpusVersion]);
-
-  // The three most recently opened hymns, resolved against the current corpus
-  // (stale ids drop out after a content rebuild). Shown as "Continue reading".
-  const recentHymns = useMemo(() => {
-    void corpusVersion; // getSummaries() reads a mutable cache.
-    const byId = new Map(getSummaries().map((s) => [s.id, s]));
-    const resolved: HymnSummary[] = [];
-    for (const entry of recents) {
-      const summary = byId.get(entry.id);
-      if (summary) resolved.push(summary);
-      if (resolved.length >= 3) break;
-    }
-    return resolved;
-  }, [recents, corpusVersion]);
 
   const total = books.reduce((sum, b) => sum + b.count, 0);
 
@@ -495,59 +590,6 @@ export default function HomeScreen() {
               </Pressable>
             ))}
           </View>
-
-          {/* Continue reading — the last three hymns opened, newest first. */}
-          {recentHymns.length > 0 ? (
-            <View style={{ marginBottom: spacing.xl }}>
-              <AppText variant="heading" style={{ fontWeight: '700', marginBottom: spacing.sm }}>
-                {t('home.continueReading')}
-              </AppText>
-              <View style={{ gap: spacing.sm }}>
-                {recentHymns.map((hymn) => (
-                  <Pressable
-                    key={hymn.id}
-                    onPress={() => router.push(`/hymn/${hymn.id}`)}
-                    accessibilityRole="button"
-                    accessibilityLabel={hymn.title}
-                    style={({ pressed }) => ({
-                      flexDirection: direction.row,
-                      alignItems: 'center',
-                      gap: spacing.md,
-                      padding: spacing.md,
-                      borderRadius: radius.md,
-                      borderWidth: 1,
-                      borderColor: colors.border,
-                      backgroundColor: pressed ? colors.surfaceMuted : colors.surface,
-                    })}>
-                    <View
-                      style={{
-                        width: 40,
-                        height: 40,
-                        borderRadius: radius.sm,
-                        backgroundColor: colors.surfaceMuted,
-                        alignItems: 'center',
-                        justifyContent: 'center',
-                      }}>
-                      <MaterialCommunityIcons name="book-open-variant" size={20} color={colors.primary} />
-                    </View>
-                    <View style={{ flex: 1 }}>
-                      <AppText variant="body" numberOfLines={1} style={{ fontWeight: '600' }}>
-                        {hymn.title}
-                      </AppText>
-                      <AppText variant="caption" color={colors.textMuted} numberOfLines={1}>
-                        {`${t('common.hymnNumber')} ${hymn.number}`}
-                      </AppText>
-                    </View>
-                    <MaterialCommunityIcons
-                      name={direction.isRTL ? 'chevron-left' : 'chevron-right'}
-                      size={22}
-                      color={colors.textMuted}
-                    />
-                  </Pressable>
-                ))}
-              </View>
-            </View>
-          ) : null}
 
           <AppText variant="title" center style={{ fontWeight: '700' }}>
             {t('home.chooseTitle')}
