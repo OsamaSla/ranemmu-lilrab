@@ -72,12 +72,6 @@ const QUICK_ACTIONS = [
 /** Lift applied on web hover — `shadow.card` is the resting state. */
 const HOVER_SHADOW = { boxShadow: '0 14px 34px rgba(11, 42, 48, 0.22)' };
 
-/** Scale factor for the circular carousel. Books in the background are smaller. */
-const CAROUSEL_SCALE = 0.75;
-
-/** Width of a single book item in the carousel (covers + gap). */
-const CAROUSEL_ITEM_WIDTH = CARD_MAX + CARD_GAP;
-
 /** Type for book data returned by getBooks() */
 type BookData = { id: BookId; count: number; hasEn: boolean; hasDe: boolean; hasHe: boolean };
 
@@ -100,12 +94,13 @@ function CircularCarousel({ books, selectedBook, width, onPress, t, colors }: Ci
     { useNativeDriver: Platform.OS !== 'web' }
   );
 
+  const ITEM_WIDTH = CARD_MAX * 0.85;
+
   return (
     <View
       style={{
         width: '100%',
-        maxWidth: CAROUSEL_ITEM_WIDTH * books.length,
-        height: CARD_MAX * 1.6,
+        height: CARD_MAX * 1.5,
         alignSelf: 'center',
         justifyContent: 'center',
         alignItems: 'center',
@@ -113,32 +108,36 @@ function CircularCarousel({ books, selectedBook, width, onPress, t, colors }: Ci
       <Animated.ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
-        snapToInterval={CAROUSEL_ITEM_WIDTH}
+        snapToInterval={ITEM_WIDTH}
         decelerationRate="fast"
         onScroll={onScroll}
         scrollEventThrottle={16}
         contentContainerStyle={{
           alignItems: 'center',
-          paddingHorizontal: spacing.xl,
+          paddingHorizontal: width / 2 - CARD_MAX / 2,
         }}>
         {books.map((b, index) => {
+          const inputRange = [
+            (index - 1) * ITEM_WIDTH,
+            index * ITEM_WIDTH,
+            (index + 1) * ITEM_WIDTH,
+          ];
+
           const scale = scrollX.interpolate({
-            inputRange: [
-              (index - 1.5) * CAROUSEL_ITEM_WIDTH,
-              index * CAROUSEL_ITEM_WIDTH,
-              (index + 0.5) * CAROUSEL_ITEM_WIDTH,
-            ],
-            outputRange: [CAROUSEL_SCALE, 1, CAROUSEL_SCALE],
+            inputRange,
+            outputRange: [0.8, 1, 0.8],
             extrapolate: 'clamp',
           });
 
           const opacity = scrollX.interpolate({
-            inputRange: [
-              (index - 1.5) * CAROUSEL_ITEM_WIDTH,
-              index * CAROUSEL_ITEM_WIDTH,
-              (index + 0.5) * CAROUSEL_ITEM_WIDTH,
-            ],
-            outputRange: [0.6, 1, 0.6],
+            inputRange,
+            outputRange: [0.5, 1, 0.5],
+            extrapolate: 'clamp',
+          });
+
+          const zIndex = scrollX.interpolate({
+            inputRange,
+            outputRange: [0, 10, 0],
             extrapolate: 'clamp',
           });
 
@@ -148,11 +147,15 @@ function CircularCarousel({ books, selectedBook, width, onPress, t, colors }: Ci
               style={{
                 width: CARD_MAX,
                 alignItems: 'center',
+                marginHorizontal: -CARD_MAX * 0.15,
+                zIndex,
               }}>
               <Animated.View
                 style={{
                   transform: [{ scale }],
                   opacity,
+                  width: CARD_MAX,
+                  alignItems: 'center',
                 }}>
                 <BookCard
                   id={b.id}
