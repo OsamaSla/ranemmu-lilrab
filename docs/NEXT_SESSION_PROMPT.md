@@ -24,6 +24,25 @@ unchanged unless the owner explicitly asks for a translation.
 
 ## Current verified state — do not re-derive
 
+- **Head commit at closeout: `9acc7818`** (pushed, `main == origin/main`, clean
+  tree). This session's work, all in `PROJECT_NOTES.md` §31–§32:
+  - **Home carousel** (`src/app/(tabs)/index.tsx`): a 3-card circular coverflow.
+    Arrows sit below the books; cards glide between slots with a 650 ms
+    `Animated.timing`; tapping a side card brings it to centre (note the
+    `activeIndex` off-by-one — `onNavigate` uses `index - 1`); swipe + web arrow
+    keys work; the whole native-size layout is `transform: scale`-ed down on
+    phones (margins trimmed to kill the empty gap). Phone chrome is compact
+    (`compact = width < 600`) so the four quick-action pills fit one row.
+  - **Onboarding tour** (`OnboardingFlow.tsx`): new first step "Pick your book"
+    (i18n `onboarding.tour.books.*` in ar/en/de) — 5 steps now. The earlier GUI
+    demo's "onboarding tour" mentioned below was a **different, reverted** demo.
+  - **Reader cleanups** (`hymn/[id].tsx`): removed the swipe-language CoachHint;
+    wake-lock error fixed with `useKeepAwake('reader', { suppressDeactivateWarnings: true })`.
+    The hold-to-fix-a-line editor and 3-dots "Edit hymn" are intact — they are
+    gated by `canEdit`.
+  - **Admin gate** (`more.tsx`): the "الإدارة" entry is now visible for signed-out
+    visitors so they can reach the sign-in form in `/admin` (`|| !signedIn`).
+    Owner confirmed they could sign in again and everything works.
 - All three Hebrew books are **complete**: 1824/1824 translated hymns
   (taranim 375, book3 402, main 1047), 30,898 lines, 100 % pointed. No
   rotation-driver batches remain.
@@ -71,8 +90,15 @@ unchanged unless the owner explicitly asks for a translation.
   corpus content.
 - **Do not run `build:corpus` while Metro is live** — it causes transient
   "Unable to resolve assets/hymns/full/NNN.json" errors until a `--clear` restart.
-- The editor is behind Firebase sign-in; the owner must unlock `/admin` first.
-  `useAdminGate` is intentionally not persisted — navigate client-side.
+- The editor is behind Firebase sign-in (admin email `osama.sla@gmail.com`).
+  When signed out, the Admin entry in the More tab now stays visible so the
+  sign-in form in `/admin` is reachable. `useAdminGate` (offline PIN builds)
+  is intentionally not persisted — navigate client-side.
+- Headless-browser verification uses the repo's `playwright-core` + Edge at
+  `C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe`; skip onboarding
+  by seeding `localStorage['ranemmu.onboarding.v1']='true'` before `goto`. The
+  Expo overlay returns "Uncaught Error" on unhandled rejections, so check the
+  console when testing navigation.
 - Gates, all green at handoff:
   ```
   npm run hebrew:check
@@ -112,8 +138,11 @@ unchanged unless the owner explicitly asks for a translation.
 
 ## Definition of done for this handoff
 
-- `main` equals `origin/main` at the pushed head, clean working tree, both
-  deploy workflows triggered on that commit.
-- No code work pending. The only outstanding item is the owner's own live
-  end-to-end email check after one real feedback submission.
-- Any new session starts from this prompt plus `PROJECT_NOTES.md`.
+- `main` equals `origin/main` at `9acc7818`, clean working tree, both deploy
+  workflows triggered on that commit.
+- No code work pending. Owner confirmed the admin sign-in works again.
+  The only outstanding item is the owner's own live end-to-end email check
+  after one real feedback submission.
+- Any new session starts from this prompt plus `PROJECT_NOTES.md` — paste this
+  whole file as the first message, then read the notes (header + §1–§4, §7, §8,
+  §10, and the new §31–§32).
