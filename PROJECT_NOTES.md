@@ -1914,6 +1914,7 @@ Follow-up refinements to the carousel (same file):
 - Removed the reader's "اسحب لتغيير اللغة" `CoachHint` banner and its unused `coach.swipeLanguage` i18n keys (ar/en/de) — owner request. `CoachHint` is still used on the library screen.
 - **Wake-lock error**: `useKeepAwake('reader')` on web throws `ERR_KEEP_AWAKE_TAG_INVALID` on unmount when the async `navigator.wakeLock.request` was rejected/never activated — the hook's cleanup calls `deactivateKeepAwake` without a `.catch()`. Fixed with `useKeepAwake('reader', { suppressDeactivateWarnings: true })` in `hymn/[id].tsx`. Verified 4× navigate in/out of the reader: 0 console errors.
 - All changes verified with `npm run typecheck` + `npm run lint` clean and browser screenshots.
+- **Admin entry reachable when signed out** (`src/app/(tabs)/more.tsx`): the "الإدارة" entry was filtered by `canEdit`, which is false on a Firebase-configured build until an allowlisted admin signs in — so a signed-out visitor had no UI path to the sign-in form in `/admin`. The filter now keeps the entry visible when signed out (`|| !signedIn` via `useSession`) and hides it only from signed-in non-admins. Both symptoms (missing reader line-editing and missing admin panel) share this one gate: after signing in with `osama.sla@gmail.com` (the fallback admin email), `canEdit` flips true and both return.
 
 
 

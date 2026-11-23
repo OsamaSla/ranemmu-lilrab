@@ -14,6 +14,7 @@ import { AppBar } from '../../components/AppBar';
 import { AppText } from '../../components/AppText';
 import { Card } from '../../components/Card';
 import { CONTACT_EMAIL } from '../../data/adminAccess';
+import { useSession } from '../../store/session';
 import { getSummaries } from '../../data/loader';
 import { useCanEdit } from '../../hooks/useCanEdit';
 import { useT } from '../../hooks/useT';
@@ -37,9 +38,11 @@ export default function MoreScreen() {
   const router = useRouter();
   const { t } = useT();
   const { colors } = useTheme();
-  // Admin is only for listed admin accounts (or the offline PIN gate): a
-  // signed-in visitor with any other account must not see the entry at all.
+  // The Admin entry must stay reachable for a signed-out visitor: that is the
+  // only UI path to the sign-in form inside /admin. Hide it only from someone
+  // who is signed in but NOT an allowlisted admin.
   const canEdit = useCanEdit();
+  const signedIn = useSession((s) => s.user) !== null;
 
   const [feedbackVisible, setFeedbackVisible] = useState(false);
 
@@ -99,7 +102,7 @@ export default function MoreScreen() {
   const visibleItems = items.filter(
     (item) =>
       (item.label !== 'more.structure' || hasMeter) &&
-      (item.label !== 'more.admin' || canEdit),
+      (item.label !== 'more.admin' || canEdit || !signedIn),
   );
 
   return (
