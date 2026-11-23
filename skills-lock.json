@@ -1,17 +1,38 @@
 {
-  "version": 1,
+  "version": 2,
   "skills": {
+    "21st-ui": {
+      "source": "21st-dev/magic-mcp",
+      "commit": "6b5299e8a83ceffa73d4fc4e148905bb3eeeeb55",
+      "sourceType": "github",
+      "skillPath": "skills/21st-ui/SKILL.md",
+      "computedHash": "8f8bc9f57c1defb81d0bcb2d81c3ae38bd8b2d76e8f37123ede937ea78d340ad"
+    },
     "expo-dev-client": {
       "source": "expo/skills",
       "sourceType": "github",
       "skillPath": "plugins/expo/skills/expo-dev-client/SKILL.md",
-      "computedHash": "08bf029b2c8b22a49742d3801b7e382f7666c47aa9635470eadd26391f2bcee5"
+      "computedHash": "e7223bdb38651c4edc41055b0541a9ea42545f19a6cc224a9f8beed1277031b3"
+    },
+    "find-security-vulnerabilities-in-code": {
+      "source": "usestrix/strix",
+      "commit": "00912af5d179fda5e52961421f9061240a43676c",
+      "sourceType": "github",
+      "skillPath": "skills/find-security-vulnerabilities-in-code/SKILL.md",
+      "computedHash": "d9ea567e93b8add3991b0c43c1b9f3ea604c6c53e0f88ef4bcec3be9e616efac"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",
       "skillPath": "skills/find-skills/SKILL.md",
-      "computedHash": "b146008599c31057cef1c145774cea5d5afb30e8f43fa802e47a4b461419aaaf"
+      "computedHash": ""
+    },
+    "penetration-testing-with-strix": {
+      "source": "usestrix/strix",
+      "commit": "00912af5d179fda5e52961421f9061240a43676c",
+      "sourceType": "github",
+      "skillPath": "skills/penetration-testing-with-strix/SKILL.md",
+      "computedHash": "54ba2e5fabb69e319421fdf6c8bdbd43650b66d0ed592b920f57e60e25d9e809"
     }
   }
 }

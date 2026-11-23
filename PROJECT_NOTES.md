@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-22, code at a268ea96 (pushed; refrain rail dot now highlights when tapped or centred; Claude Opus script repairs applied — `npm run lint` is now real; reader keeps the active stanza highlighted **and centred** — snap-to-stanza on scroll/rail tap, suspended past the last stanza so «ترنيمات مشابهة» stays reachable; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner added the key to local `.env.local` + GitHub secret; both hosted bundles verified); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through a268ea96, clean working tree; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
+Last verified: 2026-11-23, commit 02a87513 (local only, not pushed — first-run onboarding / UI demo added, §30; previous baseline a268ea96), code at a268ea96 (pushed; refrain rail dot now highlights when tapped or centred; Claude Opus script repairs applied — `npm run lint` is now real; reader keeps the active stanza highlighted **and centred** — snap-to-stanza on scroll/rail tap, suspended past the last stanza so «ترنيمات مشابهة» stays reachable; feedback email is a client-side Web3Forms POST — `EXPO_PUBLIC_WEB3FORMS_ACCESS_KEY`; Cloud Functions/Resend and `functions/` removed, staying on Spark), all three Hebrew books complete: 1824/1824 translated hymns (taranim 375, book3 402, main 1047), 100 % pointed; Book 2 refrains recovered from Desktop/1.xlsx and applied to 123 hymns; translated refrain headings fixed for Books 2/3; feedback sheet has anonymous rating + email message with a Web3Forms admin alert (§28 — owner added the key to local `.env.local` + GitHub secret; both hosted bundles verified); «تواصل معنا» opens a mailto to the admin contact address; metre index scoped to Book 2 and relabelled (§8); setlist grouped into user-defined categories (§29); hymn share copies the canonical hymn link; reader header slimmed to back + centred title/tools, language button on the rail rolls on swipe, translation notice moved below the last stanza, fullscreen has no top bar (§8); pushed through a268ea96, clean working tree; stray install-windows.ps1 deleted; handoff prompt in docs/NEXT_SESSION_PROMPT.md
 
 ## 1. What this is
 
@@ -1877,6 +1877,49 @@ stanzas and highlighted correctly.
   category, added a hymn from the setlist search, added another via the reader
   picker, and confirmed both landed in the same category with correct counts
   and order. All six gates green.
+
+## 30. First-run onboarding + UI approachability demo (2026-11-23, local commit 02a87513)
+
+Owner asked for "Option C" — a working demo of onboarding + UI improvements —
+before deciding whether to keep it. Built locally, **not pushed**; it can be
+reverted with `git revert 02a87513` if rejected. (An earlier GUI demo was fully
+reverted on request — §8 — so do not assume this one is permanent.)
+
+- `src/components/onboarding/OnboardingFlow.tsx` — 4-stage overlay: welcome
+  (4 value cards) → book picker (covers, count, persisted via `setBook`) →
+  4-step feature tour with mini illustrations → 3 gesture hints (swipe
+  language, rail tap, fullscreen). No route of its own: rendered from the root
+  layout as a full-screen overlay, so no incomplete navigation stack.
+- `src/hooks/useOnboarding.ts` — module-level store with `useSyncExternalStore`
+  so the root layout and Help screen share one flag. **Gotcha:** the first
+  version returned `{ ...state, complete, replay }`, where the `complete`
+  *function* overwrote `state.complete` (boolean) — the overlay never showed.
+  The boolean is now exposed as `isComplete`. Storage key
+  `ranemmu.onboarding.v1` in AsyncStorage; a failed read fails open so storage
+  errors cannot trap returning readers.
+- `src/hooks/useFeatureHint.ts` — per-screen hint counter (max 3 shows) stored
+  as `ranemmu.hint.<id>`; `src/components/CoachHint.tsx` is the dismissible
+  one-line banner built on it.
+- Integration points: `src/app/_layout.tsx` (splash waits for `loaded`, overlay
+  while `!isComplete`); `library.tsx` (search hint); `hymn/[id].tsx` (swipe hint
+  in normal mode only); `help.tsx` (practice card, "try it now" buttons,
+  "replay the tour"); `index.tsx` (4 quick-action pills + "continue reading"
+  from the last 3 recents); `favorites.tsx`/`recents.tsx` (actionable empty
+  states).
+- `EmptyState` gained optional `actionLabel`/`onAction` — backwards compatible
+  with all existing callers.
+- i18n: `onboarding.*`, `coach.*`, `home.quick*`, `home.continueReading`,
+  `common.next/skip/done/tryIt`, `help.practiceTitle/practiceBody/replayTour`
+  added to ar/en/de together (ar is the typed source of truth).
+- Verification: `npx tsc --noEmit` and `npx eslint src --ext .ts,.tsx` both
+  clean. Browser walkthrough on :8081 (`node node_modules/expo/bin/cli start
+  --port 8081`) confirmed all four stages render in Arabic, the book selection
+  persists, the flag is written to AsyncStorage, completing hides the overlay,
+  and Help → «إعادة جولة التعريف» reopens it. Screenshots shown in the Review
+  pane. No `build:web` run (the local expo export limitation in §8 still
+  applies).
+- `skills-lock.json` remains modified from the earlier skill installs and was
+  deliberately left out of this commit.
 
 
 
