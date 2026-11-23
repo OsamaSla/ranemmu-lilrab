@@ -482,6 +482,9 @@ export default function HomeScreen() {
   }, [corpusVersion]);
 
   const total = books.reduce((sum, b) => sum + b.count, 0);
+  // On a phone the four quick-action pills must share one narrow row, and the
+  // chrome above the books should not push them down the screen.
+  const compact = width < 600;
 
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
@@ -507,8 +510,8 @@ export default function HomeScreen() {
             maxWidth: CONTENT_MAX,
             alignSelf: 'center',
             paddingTop: insets.top + spacing.md,
-            paddingBottom: spacing.xl,
-            paddingHorizontal: spacing.xl,
+            paddingBottom: compact ? spacing.md : spacing.xl,
+            paddingHorizontal: compact ? spacing.lg : spacing.xl,
             flexDirection: direction.row,
             alignItems: 'center',
             gap: spacing.md,
@@ -550,8 +553,8 @@ export default function HomeScreen() {
 
       <ScrollView
         contentContainerStyle={{
-          paddingTop: spacing.xl,
-          paddingHorizontal: spacing.xl,
+          paddingTop: compact ? spacing.md : spacing.xl,
+          paddingHorizontal: compact ? spacing.lg : spacing.xl,
           paddingBottom: insets.bottom + spacing.xxl,
         }}>
         <View style={{ width: '100%', maxWidth: CONTENT_MAX, alignSelf: 'center' }}>
@@ -560,10 +563,11 @@ export default function HomeScreen() {
           <View
             style={{
               flexDirection: direction.row,
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-              gap: spacing.sm,
-              marginBottom: spacing.xl,
+              // Keep all four pills on one line even on a narrow phone.
+              flexWrap: 'nowrap',
+              justifyContent: 'space-between',
+              gap: compact ? 3 : spacing.sm,
+              marginBottom: compact ? spacing.md : spacing.xl,
             }}>
             {QUICK_ACTIONS.map((action) => (
               <Pressable
@@ -574,8 +578,8 @@ export default function HomeScreen() {
                 style={({ pressed }) => ({
                   flexDirection: direction.row,
                   alignItems: 'center',
-                  gap: spacing.xs,
-                  paddingHorizontal: spacing.md,
+                  gap: compact ? 3 : spacing.xs,
+                  paddingHorizontal: compact ? spacing.sm : spacing.md,
                   paddingVertical: spacing.sm,
                   borderRadius: radius.pill,
                   borderWidth: 1,
@@ -583,8 +587,10 @@ export default function HomeScreen() {
                   backgroundColor: pressed ? colors.surfaceMuted : colors.surface,
                   minHeight: 44,
                 })}>
-                <MaterialCommunityIcons name={action.icon} size={18} color={colors.primary} />
-                <AppText variant="label" style={{ fontWeight: '600' }}>
+                <MaterialCommunityIcons name={action.icon} size={compact ? 15 : 18} color={colors.primary} />
+                <AppText
+                  variant="label"
+                  style={{ fontWeight: '600', fontSize: compact ? 12 : undefined }}>
                   {t(action.label)}
                 </AppText>
               </Pressable>
@@ -608,8 +614,8 @@ export default function HomeScreen() {
               borderRadius: 2,
               backgroundColor: colors.primary,
               alignSelf: 'center',
-              marginTop: spacing.md,
-              marginBottom: spacing.xl,
+              marginTop: compact ? spacing.sm : spacing.md,
+              marginBottom: compact ? spacing.md : spacing.xl,
             }}
           />
 

@@ -1906,6 +1906,7 @@ Follow-up refinements to the carousel (same file):
 - **Smooth motion**: `useCarouselAnimation` animates translateX/scale/rotateY/opacity together via `Animated.parallel` + `Animated.timing` (650 ms, `Easing.inOut(Easing.cubic)`, native driver off on web). A redundant absolutely-positioned caption that overlapped the badges was removed.
 - **Mobile**: the whole native-size layout is `transform: [{ scale }]`-ed down as one unit (`carouselScale = clamp((width-48)/540, 0.5, 1)`), preserving exact PC proportions instead of reflowing text. A CSS/RN scale does not shrink the layout box, so margins are trimmed by `NATIVE_CAROUSEL_HEIGHT·(1-scale)/2` to avoid an empty gap above the books.
 - Removed the "Continue reading" list (`recentHymns` + `useLibrary`/`getSummaries`/`HymnSummary` + `home.continueReading` i18n keys in ar/en/de) per owner request.
+- **Compact phone chrome** (`compact = width < 600`): the four quick-action pills previously wrapped "مساعدة" onto a 2nd line (416 px of pills in 342 px of space). On phones they now use `flexWrap: 'nowrap'`, `justifyContent: 'space-between'`, 8 px horizontal padding, 3 px gaps, 15 px icons and 12 px text so all four fit one row. Also reduced the gold header's bottom padding, the ScrollView's top/side padding, the pill row's bottom margin, and the divider's margins on phones. Books now start ~100 px higher; desktop is untouched.
 
 ## 32. Onboarding tour + reader cleanups (2026-11-23)
 
