@@ -1,11 +1,10 @@
 /**
  * الرئيسية — the landing screen: pick a book to open its library.
  *
- * The three books are cards rather than bare covers: the cover keeps the
- * printed shelf look, while the body carries the name and metadata pills.
- * The grid is measured from the viewport (1–3 columns) so the cards keep one
- * aspect ratio on phones and desktops alike, and cards scale on hover/press —
- * on web too — so the whole surface reads as tappable.
+ * The three books are displayed in a horizontal carousel with 3D perspective:
+ * the front book is full size, while background books show smaller with scale
+ * transforms. Cards have press animations and checkmarks for the selected book.
+ * Horizontal scrolling pans through books, maintaining tap-to-open functionality.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useRouter } from 'expo-router';
@@ -72,6 +71,120 @@ const QUICK_ACTIONS = [
 
 /** Lift applied on web hover — `shadow.card` is the resting state. */
 const HOVER_SHADOW = { boxShadow: '0 14px 34px rgba(11, 42, 48, 0.22)' };
+
+/** Scale factor for the circular carousel. Books in the background are smaller. */
+const CAROUSEL_SCALE = 0.75;
+
+/** Width of a single book item in the carousel (covers + gap). */
+const CAROUSEL_ITEM_WIDTH = CARD_MAX + CARD_GAP;
+
+/** Type for book data returned by getBooks() */
+type BookData = { id: BookId; count: number; hasEn: boolean; hasDe: boolean; hasHe: boolean };
+
+/** Props for the circular book carousel component. */
+interface CircularCarouselProps {
+  books: BookData[];
+  selectedBook: BookId | null;
+  width: number;
+  onPress: (id: BookId) => void;
+  t: (key: TranslationKey) => string;
+  colors: { textMuted: string };
+}
+
+/** Circular book carousel component that displays books with 3D perspective transforms. */
+function CircularCarousel({ books, selectedBook, width, onPress, t, colors }: CircularCarouselProps) {
+  const [scrollX] = useState(() => new Animated.Value(0));
+
+  const onScroll = Animated.event(
+    [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+    { useNativeDriver: Platform.OS !== 'web' }
+  );
+
+  return (
+    <View
+      style={{
+        width: '100%',
+        maxWidth: CAROUSEL_ITEM_WIDTH * books.length,
+        height: CARD_MAX * 1.6,
+        alignSelf: 'center',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}>
+      <Animated.ScrollView
+        horizontal
+        showsHorizontalScrollIndicator={false}
+        snapToInterval={CAROUSEL_ITEM_WIDTH}
+        decelerationRate="fast"
+        onScroll={onScroll}
+        scrollEventThrottle={16}
+        contentContainerStyle={{
+          alignItems: 'center',
+          paddingHorizontal: spacing.xl,
+        }}>
+        {books.map((b, index) => {
+          const scale = scrollX.interpolate({
+            inputRange: [
+              (index - 1.5) * CAROUSEL_ITEM_WIDTH,
+              index * CAROUSEL_ITEM_WIDTH,
+              (index + 0.5) * CAROUSEL_ITEM_WIDTH,
+            ],
+            outputRange: [CAROUSEL_SCALE, 1, CAROUSEL_SCALE],
+            extrapolate: 'clamp',
+          });
+
+          const opacity = scrollX.interpolate({
+            inputRange: [
+              (index - 1.5) * CAROUSEL_ITEM_WIDTH,
+              index * CAROUSEL_ITEM_WIDTH,
+              (index + 0.5) * CAROUSEL_ITEM_WIDTH,
+            ],
+            outputRange: [0.6, 1, 0.6],
+            extrapolate: 'clamp',
+          });
+
+          return (
+            <Animated.View
+              key={b.id}
+              style={{
+                width: CARD_MAX,
+                alignItems: 'center',
+              }}>
+              <Animated.View
+                style={{
+                  transform: [{ scale }],
+                  opacity,
+                }}>
+                <BookCard
+                  id={b.id}
+                  name={t(`book.${b.id}` as const)}
+                  count={b.count}
+                  unit={t('home.hymnUnit')}
+                  languages={[
+                    ...(b.hasEn ? ['EN'] : []),
+                    ...(b.hasDe ? ['DE'] : []),
+                    ...(b.hasHe ? ['HE'] : []),
+                  ]}
+                  selected={b.id === selectedBook}
+                  width={CARD_MAX}
+                  onPress={() => onPress(b.id)}
+                />
+              </Animated.View>
+              <AppText
+                variant="caption"
+                color={colors.textMuted}
+                style={{
+                  marginTop: spacing.xs,
+                  fontWeight: selectedBook === b.id ? '600' : '400',
+                }}>
+                {t(`book.${b.id}` as const)}
+              </AppText>
+            </Animated.View>
+          );
+        })}
+      </Animated.ScrollView>
+    </View>
+  );
+}
 
 /** One metadata pill under a book title. */
 function MetaBadge({
@@ -272,21 +385,6 @@ export default function HomeScreen() {
 
   const total = books.reduce((sum, b) => sum + b.count, 0);
 
-  // 3 columns on desktop, 2 on phones (where a single cover would be huge),
-  // 1 only on very narrow screens.
-  const columns = width >= 880 ? 3 : width >= 360 ? 2 : 1;
-  const gridWidth = Math.min(width - spacing.xl * 2, CONTENT_MAX);
-  const cardWidth = Math.max(
-    120,
-    Math.min(CARD_MAX, Math.floor((gridWidth - CARD_GAP * (columns - 1)) / columns)),
-  );
-
-  // One tap selects the book and opens its library right away.
-  const chooseBook = (id: BookId) => {
-    setBook(id);
-    router.push('/library');
-  };
-
   return (
     <View style={{ flex: 1, backgroundColor: colors.canvas }}>
       {/* Brand header. The notes artwork is a tinted watermark, so it never
@@ -472,31 +570,17 @@ export default function HomeScreen() {
 
 
 
-          <View
-            style={{
-              flexDirection: direction.row,
-              flexWrap: 'wrap',
-              justifyContent: 'center',
-              gap: CARD_GAP,
-            }}>
-            {books.map((b) => (
-              <BookCard
-                key={b.id}
-                id={b.id}
-                name={t(`book.${b.id}` as const)}
-                count={b.count}
-                unit={t('home.hymnUnit')}
-                languages={[
-                  ...(b.hasEn ? ['EN'] : []),
-                  ...(b.hasDe ? ['DE'] : []),
-                  ...(b.hasHe ? ['HE'] : []),
-                ]}
-                selected={b.id === book}
-                width={cardWidth}
-                onPress={() => chooseBook(b.id)}
-              />
-            ))}
-          </View>
+          <CircularCarousel
+            books={books}
+            selectedBook={book}
+            width={width}
+            onPress={(id) => {
+              setBook(id);
+              router.push('/library');
+            }}
+            t={t}
+            colors={colors}
+          />
         </View>
       </ScrollView>
     </View>
