@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-23, commit 9acc7818 (pushed — circular coverflow carousel with mobile scaling + smooth animation, onboarding tour carousel step, reader hint/wake-lock fixes, compact phone chrome, Admin entry reachable when signed out). All gates green: typecheck + lint pass; browser-verified at 1200×800 and 390×844. Working tree clean; main == origin/main. No code work pending.
+Last verified: 2026-11-24, commit HEAD (tutorial video replacement with GitHub Pages hosting). All gates green: typecheck + lint pass. Working tree has modified files (tutorial video, config updates). No code work pending.
 
 ## 1. What this is
 

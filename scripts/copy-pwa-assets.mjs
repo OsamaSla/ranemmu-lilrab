@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * Copy PWA assets (manifest.json + icons) to dist folder after build
+ * Copy PWA assets (manifest.json + icons + tutorial) to dist folder after build
  */
-import { readdirSync, readFile, writeFile, copyFileSync } from 'node:fs';
+import { readdirSync, readFileSync, writeFileSync, copyFileSync, mkdirSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -15,7 +15,7 @@ const manifestSrc = join(ASSETS.replace('images', ''), 'public', 'manifest.json'
 const manifestDest = join(DIST, 'manifest.json');
 
 try {
-  await writeFile(manifestDest, readFile(manifestSrc, 'utf8'));
+  writeFileSync(manifestDest, readFileSync(manifestSrc, 'utf8'));
   console.log('✅ Copied manifest.json to dist/');
 } catch (err) {
   // If public folder doesn't exist yet, just log warning
@@ -38,6 +38,20 @@ for (const [name, srcPath] of icons) {
   } catch (err) {
     console.warn(`⚠️  Missing icon: ${name} - skip`);
   }
+}
+
+// Copy tutorial video
+const tutorialSrc = join(ROOT, 'assets', 'tutorials', 'tutorial.mp4');
+const tutorialDest = join(DIST, 'assets', 'tutorials', 'tutorial.mp4');
+
+try {
+  // Ensure destination directory exists
+  const destDir = join(ROOT, 'dist', 'assets', 'tutorials');
+  mkdirSync(destDir, { recursive: true });
+  copyFileSync(tutorialSrc, tutorialDest);
+  console.log('✅ Copied tutorial.mp4');
+} catch (err) {
+  console.warn('⚠️  Missing tutorial video - skip');
 }
 
 console.log('\n🎉 PWA assets ready for deployment!');
