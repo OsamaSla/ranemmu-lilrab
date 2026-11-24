@@ -11,9 +11,9 @@
  * 2. Optional: upload a direct MP4 to any CDN and paste it as MP4_URL for
  *    in-app playback with fullscreen + native controls.
  */
-export const TUTORIAL_YOUTUBE_URL: string = 'https://youtu.be/vQu0NYcifa8';
+export const TUTORIAL_YOUTUBE_URL: string = 'https://youtu.be/Cq_12iqw6kk';
 
 /** Direct video file for in-app playback. Leave empty to use YouTube only.
  *  Filled by scripts/tutorial/publish_video.mjs after Firebase Storage upload.
  */
-export const TUTORIAL_MP4_URL: string = 'https://osamasla.github.io/ranemmu-lilrab/assets/tutorials/tutorial.mp4';
+export const TUTORIAL_MP4_URL: string = 'https://github.com/OsamaSla/ranemmu-lilrab/releases/download/tutorial-on-publish/AA.mp4';
