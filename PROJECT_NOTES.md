@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-26, main branch. App-language switcher added (Arabic/English/German). Typecheck + ESLint clean. Dev server tested and working.
+Last verified: 2026-11-26, main branch. App-language switcher added (Arabic/English/German). Language button added to home screen custom header. Typecheck + ESLint clean. Dev server tested and working.
 
 ## 1. What this is
 

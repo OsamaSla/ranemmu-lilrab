@@ -24,6 +24,7 @@ import {
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 
 import { AppText } from '../../components/AppText';
+import { LanguageButton } from '../../components/LanguagePicker';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { getBooks } from '../../data/loader';
@@ -548,6 +549,7 @@ export default function HomeScreen() {
               {total} {t('home.hymnUnit')}
             </AppText>
           </View>
+          <LanguageButton style={{ marginLeft: spacing.sm }} />
         </View>
       </View>
 
