@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-24, commit HEAD (tutorial video replacement with GitHub Pages hosting). All gates green: typecheck + lint pass. Working tree has modified files (tutorial video, config updates). No code work pending.
+Last verified: 2026-11-26, working tree (reader: tall-stanza clamp on phones). Typecheck + ESLint clean on the two touched files.
 
 ## 1. What this is
 
@@ -258,6 +258,23 @@ unchanged (`setBook(id)` then `router.push('/library')`).
     `scrollTop` 1379 stays 1379 after 1 s, while a mid-scroll still snaps to a
     centred stanza (delta 0). Screenshot of both trailing cards in the Review
     pane. This hits Book 2 most because its hymns often have linked copies.
+- **Tall stanzas on phones (2026-11-26):** with a translation selected, long
+  wrapped translation lines could make one stanza taller than the reading area;
+  centring such a stanza in `useVerseScroll` pushed its first lines above the
+  viewport, and the post-scroll snap kept yanking it back. Two fixes, phones
+  only in the first:
+  - `VerseBlock.tsx` caps each translated line at 3 rendered lines
+    (`numberOfLines={isPhone ? 3 : undefined}` + `ellipsizeMode="tail"`), where
+    `isPhone` is `useWindowDimensions().width < 500`. Arabic text and every font
+    size are untouched; desktop/web render the full translation as before.
+  - `useVerseScroll.ts` treats a stanza as "tall" when
+    `height >= viewportHeight`: `targetFor` aligns it to its top
+    (`layout.y - STANZA_TOP_GAP`, 12 px) instead of centring it, `scheduleSnap`
+    refuses to snap while a tall stanza is active, and `nearestTo` /
+    the hysteresis now measure distance to the stanza's **interval** (`distanceTo`,
+    zero while the anchor is inside it) so a tall stanza keeps the rail
+    highlight for its whole height. Verified with `npx tsc --noEmit` and
+    `npx eslint` on both files; not yet checked on a physical phone.
 - **Refrain rail dot (2026-11-22, `9e83f0dc`):** the original rail hard-coded
   the chorus dot as always highlighted while excluding it from `isActive`
   (`!isChorus && ...`), so it either glowed permanently or never lit up.

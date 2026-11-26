@@ -63,6 +63,13 @@ const SETTLE_MS = 550;
  */
 const TRAILING_ENTER = 40;
 const TRAILING_EXIT = 24;
+/**
+ * Breathing gap left above a stanza that is taller than the reading area.
+ * Such a stanza cannot be shown whole, so it is aligned to the top instead of
+ * the centre — centring it would push its first lines off the top of the
+ * screen, which is exactly what made long translated stanzas unreadable.
+ */
+const STANZA_TOP_GAP = 12;
 
 export function useVerseScroll(
   id: string | undefined,
@@ -112,10 +119,32 @@ export function useVerseScroll(
 
   const centreOf = (layout: StanzaLayout) => layout.y + layout.height / 2;
 
+  /** A stanza taller than the reading area cannot be framed whole. */
+  const isTallerThanViewport = (layout: StanzaLayout) =>
+    layout.height >= viewportHeight.current;
+
+  /**
+   * Distance from a reading anchor to a stanza, measured to the stanza's
+   * *interval* rather than its centre. Zero while the anchor is inside the
+   * stanza, which keeps a tall stanza highlighted for its whole height instead
+   * of handing the highlight to a neighbour once its centre scrolls past.
+   */
+  const distanceTo = (layout: StanzaLayout, anchor: number) => {
+    if (anchor < layout.y) return layout.y - anchor;
+    const bottom = layout.y + layout.height;
+    if (anchor > bottom) return anchor - bottom;
+    return 0;
+  };
+
   const targetFor = useCallback((verseIndex: number) => {
     const store = verseOffsets.current;
     const layout = store.layouts.get(verseIndex);
     if (!layout) return undefined;
+    // Tall stanzas: align to the top so the first line stays on screen and the
+    // reader scrolls down through it. Shorter stanzas keep the centred frame.
+    if (isTallerThanViewport(layout)) {
+      return Math.max(0, layout.y - STANZA_TOP_GAP);
+    }
     return Math.max(0, centreOf(layout) - viewportHeight.current / 2);
   }, []);
 
@@ -125,7 +154,7 @@ export function useVerseScroll(
     let best: number | undefined;
     let bestDiff = Infinity;
     store.layouts.forEach((layout, index) => {
-      const diff = Math.abs(centreOf(layout) - anchor);
+      const diff = distanceTo(layout, anchor);
       if (diff < bestDiff) {
         bestDiff = diff;
         best = index;
@@ -141,6 +170,11 @@ export function useVerseScroll(
       if (Date.now() < settleUntilRef.current) return;
       const index = activeIndexRef.current;
       if (index === null) return;
+      // Never snap a stanza that is taller than the reading area: its top is
+      // already pinned by `targetFor`, and re-snapping mid-stanza would undo
+      // the reader's own scroll every time they pause.
+      const layout = verseOffsets.current.layouts.get(index);
+      if (layout && layout.height >= viewportHeight.current) return;
       const y = targetFor(index);
       if (y === undefined) return;
       settleUntilRef.current = Date.now() + SETTLE_MS;
@@ -185,7 +219,7 @@ export function useVerseScroll(
         const nearestLayout = store.layouts.get(nearest);
         if (!currentLayout || !nearestLayout) return;
         // Hold the current stanza until another is clearly nearer the centre.
-        if (Math.abs(centreOf(nearestLayout) - anchor) + HYSTERESIS < Math.abs(centreOf(currentLayout) - anchor)) {
+        if (distanceTo(nearestLayout, anchor) + HYSTERESIS < distanceTo(currentLayout, anchor)) {
           setActive(nearest);
         }
       }

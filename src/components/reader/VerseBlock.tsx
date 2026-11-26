@@ -10,7 +10,7 @@
  * and a scroll still do nothing, so the reading experience is unchanged.
  */
 import { memo } from 'react';
-import { Pressable, Text as RNText, View, type LayoutChangeEvent } from 'react-native';
+import { Pressable, Text as RNText, View, useWindowDimensions, type LayoutChangeEvent } from 'react-native';
 
 import { AppText } from '../AppText';
 import { useT } from '../../hooks/useT';
@@ -60,6 +60,9 @@ export const VerseBlock = memo(function VerseBlock({
   const { colors } = useTheme();
   const { t } = useT();
   const onDark = fullscreen || isDark;
+  // Detect phone mode: screen width < 500px typically indicates a phone
+  const { width: screenWidth } = useWindowDimensions();
+  const isPhone = screenWidth < 500;
   const chorus = verseBlock.chorus === true;
   const headingSize = Math.round(readerSize * (chorus ? 0.9 : 0.7));
   // The quick-fix sheet names the stanza the same way the reader does, so its
@@ -91,10 +94,21 @@ export const VerseBlock = memo(function VerseBlock({
    * the only registered font carrying Hebrew glyphs *and* GPOS niqqud
    * positioning; the platform font is only the fallback. Hebrew also reads
    * right-to-left and needs extra leading so the points are not clipped.
+   *
+   * Phones are narrow, so a long translation wraps to many lines and a single
+   * stanza can end up taller than the viewport. Once that happens the reader
+   * cannot see a stanza whole: scrolling to its last line pushes its first
+   * lines off the top, which is the jank this clamp removes. Capping the
+   * translated line at three lines keeps every stanza inside one screen and
+   * leaves the Arabic text — and its size — completely untouched.
    */
+  const TRANSLATION_PHONE_LINES = 3;
+
   const translationText = (body: string) =>
     parallel === 'he' ? (
       <RNText
+        numberOfLines={isPhone ? TRANSLATION_PHONE_LINES : undefined}
+        ellipsizeMode="tail"
         style={{
           fontFamily: HEBREW_FONT_FAMILY,
           fontSize: Math.round(readerSize * 0.9),
@@ -108,6 +122,8 @@ export const VerseBlock = memo(function VerseBlock({
       </RNText>
     ) : (
       <RNText
+        numberOfLines={isPhone ? TRANSLATION_PHONE_LINES : undefined}
+        ellipsizeMode="tail"
         style={{
           fontFamily: readerFont,
           fontSize: Math.round(readerSize * 0.85),
