@@ -9,14 +9,15 @@
 import { ar, type Dictionary, type TranslationKey } from './ar';
 import { en } from './en';
 import { de } from './de';
+import { he } from './he';
 import type { BookId } from '../data/types';
 
-export type LocaleCode = 'ar' | 'en' | 'de';
+export type LocaleCode = 'ar' | 'en' | 'de' | 'he';
 
 export const DEFAULT_LOCALE: LocaleCode = 'ar';
 
 /** UI languages the dictionaries cover; the language switcher lists these. */
-export const LOCALES = ['ar', 'en', 'de'] as const satisfies readonly LocaleCode[];
+export const LOCALES = ['ar', 'en', 'de', 'he'] as const satisfies readonly LocaleCode[];
 
 export function isLocale(value: unknown): value is LocaleCode {
   return typeof value === 'string' && (LOCALES as readonly string[]).includes(value);
@@ -39,17 +40,19 @@ function flatten(node: Record<string, unknown>, prefix = ''): FlatDictionary {
   return out as FlatDictionary;
 }
 
+/** Hebrew uses flat keys like English and German */
 const DICTIONARIES: Record<LocaleCode, FlatDictionary> = {
   ar: flatten(ar),
   en,
   de,
+  he,
 };
 
 /**
- * Only Arabic is right-to-left. Adding a language here means adding it to
+ * Only Arabic and Hebrew are right-to-left. Adding a language here means adding it to
  * DICTIONARIES too — the type checker enforces it.
  */
-const RTL_LOCALES: ReadonlySet<LocaleCode> = new Set<LocaleCode>(['ar']);
+const RTL_LOCALES: ReadonlySet<LocaleCode> = new Set<LocaleCode>(['ar', 'he']);
 
 export function isRTL(locale: LocaleCode): boolean {
   return RTL_LOCALES.has(locale);

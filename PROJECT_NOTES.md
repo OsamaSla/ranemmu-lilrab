@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-26, main branch. App-language switcher added (Arabic/English/German). Language button added to home screen custom header. Typecheck + ESLint clean. Dev server tested and working.
+Last verified: 2026-11-26, main branch. App-language switcher with four UI languages (Arabic/English/German/Hebrew); `he` is RTL. Language button added to home screen custom header. Typecheck + ESLint clean.
 
 ## 1. What this is
 
@@ -63,7 +63,7 @@ recents, admin editing/publishing backed by Firebase, plus an admin gate.
 - `src/store/` — zustand stores (settings, favourites, overrides, remote, session).
 - `src/components/` — shared UI (AppText, Card, HymnRow, LyricsMatchRow, filters).
 - `src/theme/` — design tokens + bundled font registry.
-- `src/i18n/` — ui dictionaries ar / en / de (`useT()` returns `t` + direction);
+- `src/i18n/` — ui dictionaries ar / en / de / he (`useT()` returns `t` + direction);
   hymn content languages are separate (ar + en/de/he fields on the record).
 - `content/hebrew/` — hand-authored Hebrew payloads (`taranim/NNNN.json`) +
   `glossary.md`; merged into the corpus by `scripts/hebrew-apply.mjs` (§15).
@@ -194,7 +194,7 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 - All text goes through `AppText` (applies font family/size/theme + RTL writing
   direction). Hymn numbers render in Arabic-Indic digits via `useAppFont={false}`.
 - Spacing/radius come from `src/theme/tokens.ts`; never hardcode paddings.
-- i18n: add keys to `ar.ts`, `en.ts`, `de.ts` together.
+- i18n: add keys to `ar.ts`, `en.ts`, `de.ts`, `he.ts` together.
 - Refrain stanzas carry `chorus: true` and the printed word as label
   (`القرار`, or the hymn's `chorus` field); stanza numbering skips refrains.
   The admin editor enforces this on toggle/move (`renumberLabels` in
@@ -1964,6 +1964,27 @@ Follow-up refinements to the carousel (same file):
   overlay; `/help` shows the new label above the guide card; tapping it opens the tour
   and «تخطّي» closes it; `/library` contains no "tr001" hint text. `npx tsc --noEmit`
   and `npx eslint` on the seven touched files are clean.
+
+## 34. App-language switcher + Hebrew UI (2026-11-26)
+
+- App-wide UI language switcher: four UI languages — Arabic (`ar`), English
+  (`en`), German (`de`), Hebrew (`he`). The switcher control is
+  `LanguageButton` in `src/components/LanguagePicker.tsx`, mounted in the home
+  header (`src/app/(tabs)/index.tsx`) and in `AppBar.tsx`. `LANGUAGE_OPTIONS`
+  there is the single source for the modal list and the Settings segmented
+  control; language names are written in their own language.
+- `src/i18n/index.ts` holds the registry: `LocaleCode`, `LOCALES`,
+  `DICTIONARIES`, and `RTL_LOCALES` (both `ar` and `he`). Adding a locale means
+  adding it to all four lists + a dictionary file; the type checker enforces
+  `DICTIONARIES` completeness.
+- `src/i18n/he.ts` is a flat `PartialDictionary` authored like `en.ts` (dotted
+  keys), not nested like the Arabic source of truth. It falls back to Arabic
+  for any missing key via `translate()`.
+- Hebrew is **RTL**: `isRTL('he')` is true. This is the UI-direction only — it
+  never touches Arabic hymn text size/layout (per owner requirement), and
+  translations are never truncated.
+- Kept in sync with a prior commit (`03f26984`) that added the LanguageButton
+  to the home screen. Verified `npm run typecheck` + `npm run lint` clean.
 
 
 

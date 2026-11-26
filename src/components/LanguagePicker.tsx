@@ -1,14 +1,14 @@
 /**
  * App-language switcher.
  *
- * The UI is translated into Arabic, English and German, but until now the
- * choice was locked to Arabic. This is the visible control for it: a compact
- * globe pill for the app bar / home header, plus the shared `LANGUAGE_OPTIONS`
- * list the Settings screen renders as a segmented control.
+ * The UI is translated into Arabic, English, German and Hebrew. This is the
+ * visible control for it: a compact globe pill for the app bar / home header,
+ * plus the shared `LANGUAGE_OPTIONS` list the Settings screen renders as a
+ * segmented control.
  *
  * The language names are deliberately written in their own language
- * («العربية», English, Deutsch): someone who cannot read the current UI
- * language must still recognise their own.
+ * («العربية», English, «Deutsch», «עברית»): someone who cannot read the
+ * current UI language must still recognise their own.
  */
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useState } from 'react';
@@ -26,6 +26,7 @@ export const LANGUAGE_OPTIONS: { value: LocaleCode; label: string; code: string 
   { value: 'ar', label: 'العربية', code: 'AR' },
   { value: 'en', label: 'English', code: 'EN' },
   { value: 'de', label: 'Deutsch', code: 'DE' },
+  { value: 'he', label: 'עברית', code: 'HE' },
 ];
 
 export function LanguageButton({ style }: { style?: ViewStyle }) {
