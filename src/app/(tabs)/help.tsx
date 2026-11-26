@@ -32,7 +32,7 @@ const SECTIONS: { icon: IconName; title: TranslationKey; body: TranslationKey; r
 
 export default function HelpScreen() {
   const router = useRouter();
-  const { replay } = useOnboarding();
+  const { start } = useOnboarding();
   const { t, direction } = useT();
   const { colors } = useTheme();
 
@@ -115,6 +115,32 @@ export default function HelpScreen() {
             </AppText>
           </Pressable>
         </Card>
+        {/* Opens the first-run tour on demand — the only way to see it now that
+            it no longer starts by itself. */}
+        <Pressable
+          onPress={start}
+          accessibilityRole="button"
+          accessibilityLabel={t('help.tour')}
+          android_ripple={{ color: colors.border }}
+          style={({ pressed }) => ({
+            marginTop: spacing.md,
+            marginBottom: spacing.md,
+            flexDirection: direction.row,
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: spacing.sm,
+            paddingVertical: spacing.md,
+            borderRadius: radius.md,
+            borderWidth: 1,
+            borderColor: colors.primary,
+            opacity: pressed ? 0.7 : 1,
+          })}>
+          <MaterialCommunityIcons name="restart" size={18} color={colors.primary} />
+          <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
+            {t('help.tour')}
+          </AppText>
+        </Pressable>
+
         <Card style={{ padding: spacing.lg }}>
           <View style={{ flexDirection: direction.row, alignItems: 'center', marginBottom: spacing.lg }}>
             <View
@@ -189,31 +215,6 @@ export default function HelpScreen() {
             </View>
           ))}
         </Card>
-
-        {/* Replay the first-run tour — useful after learning the basics, and
-            the only way to see it again once the flag is stored. */}
-        <Pressable
-          onPress={replay}
-          accessibilityRole="button"
-          accessibilityLabel={t('help.replayTour')}
-          android_ripple={{ color: colors.border }}
-          style={({ pressed }) => ({
-            marginTop: spacing.lg,
-            flexDirection: direction.row,
-            alignItems: 'center',
-            justifyContent: 'center',
-            gap: spacing.sm,
-            paddingVertical: spacing.md,
-            borderRadius: radius.md,
-            borderWidth: 1,
-            borderColor: colors.primary,
-            opacity: pressed ? 0.7 : 1,
-          })}>
-          <MaterialCommunityIcons name="restart" size={18} color={colors.primary} />
-          <AppText variant="label" color={colors.primary} style={{ fontWeight: '700' }}>
-            {t('help.replayTour')}
-          </AppText>
-        </Pressable>
       </ScrollView>
     </View>
   );

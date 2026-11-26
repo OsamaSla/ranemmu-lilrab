@@ -258,7 +258,7 @@ export const en: PartialDictionary = {
   'help.title': 'User Guide',
   'help.practiceTitle': 'Learn by doing',
   'help.practiceBody': 'Open any section and try it right away.',
-  'help.replayTour': 'Replay the tour',
+  'help.tour': 'Get to know the app',
   'help.video.title': 'Video tutorial',
   'help.video.body': 'Watch how to use the app step by step — no reading needed.',
   'help.video.play': 'Play tutorial',
@@ -360,7 +360,6 @@ export const en: PartialDictionary = {
   'onboarding.gestures.fullscreen.title': 'Fullscreen',
   'onboarding.gestures.fullscreen.body':
     'Tap the square icon to hide the chrome and read the hymn alone; tap again to exit.',
-  'coach.searchHint': 'Try: tr001 or “نرنم”',
   'coach.railTap': 'Tap a dot to jump',
   'coach.fullscreen': 'Read fullscreen',
   'common.back': 'Back',

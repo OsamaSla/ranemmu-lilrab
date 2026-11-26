@@ -81,9 +81,9 @@ export default function RootLayout() {
       .catch(() => {});
   }, [sessionUser]);
 
-  // Keep the splash screen up until both the fonts and the onboarding flag are
-  // known, so the app never flashes before the first-run tour opens.
-  if (!fontsReady || !onboarding.loaded) return null;
+  // Keep the splash screen up until the bundled fonts are ready, so the app
+  // never flashes fallback text on launch.
+  if (!fontsReady) return null;
 
   return (
     <>
@@ -96,7 +96,7 @@ export default function RootLayout() {
         }}>
         <Stack.Screen name="(tabs)" />
       </Stack>
-      {!onboarding.isComplete ? (
+      {onboarding.isOpen ? (
         <View style={StyleSheet.absoluteFill}>
           <OnboardingFlow onComplete={onboarding.complete} onSkip={onboarding.complete} />
         </View>

@@ -263,7 +263,7 @@ export const de: PartialDictionary = {
   'help.title': 'Benutzerhandbuch',
   'help.practiceTitle': 'Durch Ausprobieren lernen',
   'help.practiceBody': 'Öffne einen Abschnitt und probiere es sofort aus.',
-  'help.replayTour': 'Tour wiederholen',
+  'help.tour': 'Die App kennenlernen',
   'help.video.title': 'Videoanleitung',
   'help.video.body': 'Sieh Schritt für Schritt, wie die App funktioniert — ohne zu lesen.',
   'help.video.play': 'Anleitung abspielen',
@@ -365,7 +365,6 @@ export const de: PartialDictionary = {
   'onboarding.gestures.fullscreen.title': 'Vollbild',
   'onboarding.gestures.fullscreen.body':
     'Tippe das Quadrat-Symbol, um die Bedienelemente auszublenden und das Lied allein zu lesen; tippe erneut zum Beenden.',
-  'coach.searchHint': 'Probiere: tr001 oder „نرنم”',
   'coach.railTap': 'Punkt antippen zum Springen',
   'coach.fullscreen': 'Im Vollbild lesen',
   'common.back': 'Zurück',

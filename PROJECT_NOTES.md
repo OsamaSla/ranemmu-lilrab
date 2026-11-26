@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-26, working tree (reader: tall-stanza clamp on phones). Typecheck + ESLint clean on the two touched files.
+Last verified: 2026-11-26, working tree (tour opens on demand only; help/search cleanup). Typecheck + ESLint clean on the touched files; verified in the dev browser.
 
 ## 1. What this is
 
@@ -1942,6 +1942,29 @@ Follow-up refinements to the carousel (same file):
 - **Wake-lock error**: `useKeepAwake('reader')` on web throws `ERR_KEEP_AWAKE_TAG_INVALID` on unmount when the async `navigator.wakeLock.request` was rejected/never activated — the hook's cleanup calls `deactivateKeepAwake` without a `.catch()`. Fixed with `useKeepAwake('reader', { suppressDeactivateWarnings: true })` in `hymn/[id].tsx`. Verified 4× navigate in/out of the reader: 0 console errors.
 - All changes verified with `npm run typecheck` + `npm run lint` clean and browser screenshots.
 - **Admin entry reachable when signed out** (`src/app/(tabs)/more.tsx`): the "الإدارة" entry was filtered by `canEdit`, which is false on a Firebase-configured build until an allowlisted admin signs in — so a signed-out visitor had no UI path to the sign-in form in `/admin`. The filter now keeps the entry visible when signed out (`|| !signedIn` via `useSession`) and hides it only from signed-in non-admins. Both symptoms (missing reader line-editing and missing admin panel) share this one gate: after signing in with `osama.sla@gmail.com` (the fallback admin email), `canEdit` flips true and both return.
+
+## 33. Tour on demand; help + search cleanup (2026-11-26)
+
+- **The first-run tour no longer opens by itself.** `src/hooks/useOnboarding.ts` was an
+  AsyncStorage flag (`ranemmu.onboarding.v1`) that `_layout.tsx` used to decide whether
+  to overlay `OnboardingFlow`; it is now a small in-memory store with `isOpen` / `start()`
+  / `complete()`, nothing persisted. `_layout.tsx` renders the overlay only while
+  `isOpen`, and the splash gate is fonts-only again (`!fontsReady`). Every launch goes
+  straight to the home screen; the old stored flag is simply ignored (left in
+  AsyncStorage, harmless).
+- **Help screen** (`src/app/(tabs)/help.tsx`): the replay button was renamed to
+  `help.tour` («تعرّف على التطبيق», EN "Get to know the app", DE "Die App
+  kennenlernen") and moved from the bottom of the page to just **above** the
+  «دليل المستخدم» guide card (after the install-app card), with matching top/bottom
+  spacing. It calls `start()`, which opens the same overlay.
+- **Library search hint removed**: the `CoachHint id="library.search"` line and the
+  `coach.searchHint` key (ar/en/de) are gone — owner request. `CoachHint.tsx` and
+  `useFeatureHint.ts` now have no call site; they are kept for future hints.
+- Verified in the dev browser on :8081: a fresh `/` load shows the book grid with no
+  overlay; `/help` shows the new label above the guide card; tapping it opens the tour
+  and «تخطّي» closes it; `/library` contains no "tr001" hint text. `npx tsc --noEmit`
+  and `npx eslint` on the seven touched files are clean.
+
 
 
 
