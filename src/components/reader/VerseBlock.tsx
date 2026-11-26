@@ -89,7 +89,8 @@ export const VerseBlock = memo(function VerseBlock({
   );
 
   /**
-   * One translated line under its Arabic original. en/de use the reader's
+   * One translated line, shown under its Arabic original on wide screens and
+   * beside it on phones. en/de use the reader's
    * Arabic font — they are Latin text inside an Arabic-typeset app. Hebrew is
    * typeset in the bundled Hebrew liturgical face (NotoSansHebrew), which is
    * the only registered font carrying Hebrew glyphs *and* GPOS niqqud
@@ -104,6 +105,16 @@ export const VerseBlock = memo(function VerseBlock({
    * leaves the Arabic text — and its size — completely untouched.
    */
   const TRANSLATION_PHONE_LINES = 3;
+
+  /**
+   * On a phone a translation is laid out beside its Arabic line instead of
+   * under it, so one line of the hymn costs one row rather than two. The
+   * Arabic column is the wider one and stays on the right (the reading
+   * direction); the translation sits to its left. This only applies while a
+   * translation is actually being viewed — Arabic-only reading keeps the full
+   * width, exactly as before.
+   */
+  const sideBySide = isPhone && parallel !== 'ar' && transLines !== undefined;
 
   const translationText = (body: string) =>
     parallel === 'he' ? (
@@ -197,7 +208,24 @@ export const VerseBlock = memo(function VerseBlock({
       {verseBlock.lines.map((line, lineIndex) => {
         const translated = transLines?.[lineIndex];
         const marginBottom = lineIndex < verseBlock.lines.length - 1 ? spacing.sm : 0;
-        const body = (
+        const body = sideBySide ? (
+          // Phone: one row per hymn line. `direction: 'ltr'` keeps the order
+          // physical (translation left, Arabic right) even in the RTL app.
+          // An untranslated line keeps an empty left cell so the Arabic column
+          // stays aligned down the stanza.
+          <View
+            style={{
+              flexDirection: 'row',
+              direction: 'ltr',
+              alignItems: 'flex-start',
+              gap: spacing.sm,
+            }}>
+            <View style={{ flex: 1 }}>
+              {translated ? translationText(translated) : null}
+            </View>
+            <View style={{ flex: 1.25 }}>{stanzaText(line)}</View>
+          </View>
+        ) : (
           <>
             {stanzaText(line)}
             {translated ? <View style={{ marginTop: 2 }}>{translationText(translated)}</View> : null}
