@@ -23,6 +23,8 @@ export const de: PartialDictionary = {
   'home.quickFavorites': 'Favoriten',
   'home.quickSetlist': 'Gottesdienstliste',
   'home.quickHelp': 'Hilfe',
+  'home.previousBook': 'Vorheriges Buch',
+  'home.nextBook': 'Nächstes Buch',
 
   'library.title': 'Lieder',
   'library.count': 'Anzahl der Lieder',
@@ -31,6 +33,8 @@ export const de: PartialDictionary = {
   'library.topics': 'Thema',
   'library.allTopics': 'Alle',
   'library.sortOrder': 'Sortierung',
+  'library.scrollUp50': '50 nach oben scrollen',
+  'library.scrollDown50': '50 nach unten scrollen',
 
   'topic.worship': 'Anbetung und Lobpreis',
   'topic.cross': 'Kreuz und Erlösung',
@@ -250,6 +254,7 @@ export const de: PartialDictionary = {
 
   'settings.title': 'Einstellungen',
   'settings.appearance': 'Darstellung',
+  'settings.language': 'Sprache',
   'settings.theme': 'Design',
   'settings.themeLight': 'Hell',
   'settings.themeDark': 'Dunkel',
@@ -257,6 +262,10 @@ export const de: PartialDictionary = {
   'settings.appFontSize': 'Schriftgröße der App',
   'settings.readerFontSize': 'Schriftgröße der Lieder',
   'settings.data': 'Daten',
+  'settings.downloadOffline': 'Für die Offline-Nutzung herunterladen',
+  'settings.offlineTitle': 'Offline',
+  'settings.offlineDone': 'Alle Lieder wurden heruntergeladen.',
+  'settings.offlineFailed': 'Download fehlgeschlagen.',
   'settings.about': 'Über die App',
   'settings.version': 'Version',
 
@@ -367,6 +376,10 @@ export const de: PartialDictionary = {
     'Tippe das Quadrat-Symbol, um die Bedienelemente auszublenden und das Lied allein zu lesen; tippe erneut zum Beenden.',
   'coach.railTap': 'Punkt antippen zum Springen',
   'coach.fullscreen': 'Im Vollbild lesen',
+  'notFound.title': 'Seite nicht gefunden',
+  'notFound.body': 'Der geöffnete Link ist ungültig oder existiert nicht mehr.',
+  'notFound.home': 'Zur Startseite',
+
   'common.back': 'Zurück',
   'common.close': 'Schließen',
   'common.cancel': 'Abbrechen',

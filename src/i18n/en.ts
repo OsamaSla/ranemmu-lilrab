@@ -18,6 +18,8 @@ export const en: PartialDictionary = {
   'home.quickFavorites': 'Favorites',
   'home.quickSetlist': 'Worship setlist',
   'home.quickHelp': 'Help',
+  'home.previousBook': 'Previous book',
+  'home.nextBook': 'Next book',
 
   'library.title': 'Hymns',
   'library.count': 'Hymn count',
@@ -26,6 +28,8 @@ export const en: PartialDictionary = {
   'library.topics': 'Topic',
   'library.allTopics': 'All',
   'library.sortOrder': 'Sort order',
+  'library.scrollUp50': 'Scroll up by 50',
+  'library.scrollDown50': 'Scroll down by 50',
 
   'topic.worship': 'Worship & Praise',
   'topic.cross': 'The Cross & Redemption',
@@ -245,6 +249,7 @@ export const en: PartialDictionary = {
 
   'settings.title': 'Settings',
   'settings.appearance': 'Appearance',
+  'settings.language': 'Language',
   'settings.theme': 'Theme',
   'settings.themeLight': 'Light',
   'settings.themeDark': 'Dark',
@@ -252,6 +257,10 @@ export const en: PartialDictionary = {
   'settings.appFontSize': 'App text size',
   'settings.readerFontSize': 'Hymn text size',
   'settings.data': 'Data',
+  'settings.downloadOffline': 'Download for offline use',
+  'settings.offlineTitle': 'Offline',
+  'settings.offlineDone': 'All hymns downloaded.',
+  'settings.offlineFailed': 'Download failed.',
   'settings.about': 'About',
   'settings.version': 'Version',
 
@@ -362,6 +371,10 @@ export const en: PartialDictionary = {
     'Tap the square icon to hide the chrome and read the hymn alone; tap again to exit.',
   'coach.railTap': 'Tap a dot to jump',
   'coach.fullscreen': 'Read fullscreen',
+  'notFound.title': 'Page not found',
+  'notFound.body': 'The link you opened is invalid or no longer exists.',
+  'notFound.home': 'Back to home',
+
   'common.back': 'Back',
   'common.close': 'Close',
   'common.cancel': 'Cancel',

@@ -23,6 +23,8 @@ export const ar = {
     quickFavorites: 'المفضلة',
     quickSetlist: 'قائمة العبادة',
     quickHelp: 'مساعدة',
+    previousBook: 'الكتاب السابق',
+    nextBook: 'الكتاب التالي',
   },
 
   library: {
@@ -33,6 +35,8 @@ export const ar = {
     topics: 'الموضوع',
     allTopics: 'كل المواضيع',
     sortOrder: 'الترتيب',
+    scrollUp50: 'تحريك لأعلى ٥٠',
+    scrollDown50: 'تحريك لأسفل ٥٠',
   },
 
   topic: {
@@ -277,6 +281,7 @@ admin: {
   settings: {
     title: 'الإعدادات',
     appearance: 'المظهر',
+    language: 'اللغة',
     theme: 'السمة',
     themeLight: 'فاتح',
     themeDark: 'داكن',
@@ -284,6 +289,10 @@ admin: {
     appFontSize: 'حجم خط التطبيق',
     readerFontSize: 'حجم خط الترنيمة',
     data: 'البيانات',
+    downloadOffline: 'تحميل للاستخدام دون إنترنت',
+    offlineTitle: 'الاستخدام دون إنترنت',
+    offlineDone: 'تم تحميل كل الترنيمات.',
+    offlineFailed: 'تعذّر التحميل.',
     about: 'عن التطبيق',
     version: 'الإصدار',
   },
@@ -421,6 +430,12 @@ admin: {
   coach: {
     railTap: 'اضغط نقطة للانتقال',
     fullscreen: 'اقرأ بملء الشاشة',
+  },
+
+  notFound: {
+    title: 'الصفحة غير موجودة',
+    body: 'الرابط الذي فتحته غير صحيح أو لم يعد موجودًا.',
+    home: 'العودة إلى الصفحة الرئيسية',
   },
 
   common: {

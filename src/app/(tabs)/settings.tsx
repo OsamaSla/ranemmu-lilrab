@@ -15,19 +15,21 @@ import { Card } from '../../components/Card';
 import { FontChips } from '../../components/FontChips';
 import { IconButton } from '../../components/IconButton';
 import { SegmentedControl } from '../../components/SegmentedControl';
+import { LANGUAGE_OPTIONS } from '../../components/LanguagePicker';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
 import { ensureAllChunks } from '../../data/loader';
 import { useLibrary } from '../../store/library';
 import {
+  useSettings,
+  type ThemePreference,
+  type LocaleCode,
   APP_SCALE_MAX,
   APP_SCALE_MIN,
   APP_SCALE_STEP,
   READER_SIZE_MAX,
   READER_SIZE_MIN,
   READER_SIZE_STEP,
-  useSettings,
-  type ThemePreference,
 } from '../../store/settings';
 import { spacing } from '../../theme/tokens';
 import { confirmAction, notify } from '../../utils/confirm';
@@ -40,6 +42,8 @@ export default function SettingsScreen() {
 
   const theme = useSettings((s) => s.theme);
   const setTheme = useSettings((s) => s.setTheme);
+  const locale = useSettings((s) => s.locale);
+  const setLocale = useSettings((s) => s.setLocale);
   const fontFamily = useSettings((s) => s.fontFamily);
   const setFontFamily = useSettings((s) => s.setFontFamily);
   const appScale = useSettings((s) => s.appScale);
@@ -115,12 +119,20 @@ export default function SettingsScreen() {
           />
           <IconRowButton
             icon="download"
-            label="Download for offline use"
+            label={t('settings.downloadOffline')}
             onPress={() => {
               void ensureAllChunks()
-                .then(() => notify('Offline', 'All hymns downloaded.'))
-                .catch(() => notify('Offline', 'Download failed.'));
+                .then(() => notify(t('settings.offlineTitle'), t('settings.offlineDone')))
+                .catch(() => notify(t('settings.offlineTitle'), t('settings.offlineFailed')));
             }}
+          />
+        </Section>
+
+        <Section title={t('settings.language')}>
+          <SegmentedControl
+            value={locale}
+            onChange={(value) => setLocale(value as LocaleCode)}
+            options={LANGUAGE_OPTIONS.map((o) => ({ value: o.value, label: o.label }))}
           />
         </Section>
 

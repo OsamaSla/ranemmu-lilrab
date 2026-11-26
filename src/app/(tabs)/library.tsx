@@ -605,7 +605,7 @@ export default function LibraryScreen() {
           <Pressable
             onPress={() => jumpBy(-50)}
             accessibilityRole="button"
-            accessibilityLabel="Scroll up by 50"
+            accessibilityLabel={t('library.scrollUp50')}
             android_ripple={{ color: colors.border }}
             style={({ pressed }) => ({
               width: 44,
@@ -624,7 +624,7 @@ export default function LibraryScreen() {
           <Pressable
             onPress={() => jumpBy(50)}
             accessibilityRole="button"
-            accessibilityLabel="Scroll down by 50"
+            accessibilityLabel={t('library.scrollDown50')}
             android_ripple={{ color: colors.border }}
             style={({ pressed }) => ({
               width: 44,

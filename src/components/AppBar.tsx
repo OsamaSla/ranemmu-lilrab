@@ -14,6 +14,7 @@ import { useGoBack } from '../hooks/useGoBack';
 import { useT } from '../hooks/useT';
 import { useTheme } from '../hooks/useTheme';
 import { spacing } from '../theme/tokens';
+import { LanguageButton } from './LanguagePicker';
 
 interface AppBarProps {
   title: string;
@@ -101,6 +102,7 @@ export function AppBar({ title, action, subtitle, showBack }: AppBarProps) {
       </View>
 
       {action}
+      <LanguageButton />
     </View>
   );
 }

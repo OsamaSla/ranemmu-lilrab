@@ -26,6 +26,16 @@ export default function Root({ children }: PropsWithChildren) {
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
         {/*
+          The document html lang/dir are set dynamically by _layout.tsx on the
+          client to enable language switching. This static value is a fallback
+          for the pre-rendered HTML. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `document.documentElement.lang='ar';document.documentElement.dir='rtl';`,
+          }}
+        />
+
+        {/*
           Render the app on the client instead of hydrating the pre-rendered
           HTML.
 

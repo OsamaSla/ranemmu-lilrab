@@ -8,10 +8,12 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { create } from 'zustand';
 import { createJSONStorage, persist } from 'zustand/middleware';
 
-import { DEFAULT_LOCALE, type LocaleCode } from '../i18n';
+import { DEFAULT_LOCALE, isLocale, type LocaleCode as I18nLocaleCode } from '../i18n';
 import { DEFAULT_FONT_ID, ensureFontFamily } from '../theme/fonts';
 import type { ThemeName } from '../theme/tokens';
 import type { BookId } from '../data/types';
+
+export type LocaleCode = I18nLocaleCode;
 
 /** Reader text size bounds, in points. */
 export const READER_SIZE_MIN = 14;
@@ -40,6 +42,7 @@ interface SettingsState {
   book: BookId;
 
   setTheme: (theme: ThemePreference) => void;
+  setLocale: (locale: LocaleCode) => void;
   setFontFamily: (id: string) => void;
   setAdminPin: (pin: string) => void;
   setBook: (book: BookId) => void;
@@ -66,6 +69,7 @@ export const useSettings = create<SettingsState>()(
       book: 'main',
 
       setTheme: (theme) => set({ theme }),
+      setLocale: (locale) => set({ locale }),
       setFontFamily: (fontFamily) => {
         void ensureFontFamily(fontFamily);
         set({ fontFamily });
@@ -98,15 +102,21 @@ export const useSettings = create<SettingsState>()(
       // v3: adds the chosen hymn book (defaults to 'main' for older stores).
       // v4: adds the GitHub token for one-tap publishing (defaults to '').
       // v5: drops the GitHub token — publishing moved to Firebase.
-      version: 6,
+      // v6: the UI language choice is persisted again by the language
+      //     switcher; an unknown stored value falls back to Arabic.
+      version: 7,
       migrate: (persisted) => {
         const { githubToken: _dropped, ...rest } = (persisted ?? {}) as Record<string, unknown>;
         void _dropped;
         return {
           adminPin: '1234',
           book: 'main',
+          fontFamily: 'inter',
+          appScale: 1,
+          readerSize: 20,
+          theme: 'system',
           ...rest,
-          locale: 'ar',
+          locale: isLocale(rest.locale) ? rest.locale : DEFAULT_LOCALE,
         };
       },
     },

@@ -288,10 +288,10 @@ function CircularCarousel({ books, selectedBook, width, onPress, t, colors }: Ci
           marginTop: spacing.lg,
           zIndex: 20,
         }}>
-        <Pressable onPress={goToPrevious} style={carouselStyles.arrowButton} accessibilityLabel="Previous book">
+        <Pressable onPress={goToPrevious} style={carouselStyles.arrowButton} accessibilityLabel={t('home.previousBook')}>
           <MaterialCommunityIcons name="chevron-left" size={28} color={colors.primaryDeep} />
         </Pressable>
-        <Pressable onPress={goToNext} style={carouselStyles.arrowButton} accessibilityLabel="Next book">
+        <Pressable onPress={goToNext} style={carouselStyles.arrowButton} accessibilityLabel={t('home.nextBook')}>
           <MaterialCommunityIcons name="chevron-right" size={28} color={colors.primaryDeep} />
         </Pressable>
       </View>

@@ -1,6 +1,6 @@
 # PROJECT NOTES — ranemmu-lilrab (hymn library / ترانيم)
 
-Last verified: 2026-11-26, working tree (tour opens on demand only; help/search cleanup). Typecheck + ESLint clean on the touched files; verified in the dev browser.
+Last verified: 2026-11-26, main branch. App-language switcher added (Arabic/English/German). Typecheck + ESLint clean. Dev server tested and working.
 
 ## 1. What this is
 

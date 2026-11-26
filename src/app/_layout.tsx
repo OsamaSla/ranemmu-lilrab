@@ -8,7 +8,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
-import { I18nManager, StyleSheet, View } from 'react-native';
+import { I18nManager, StyleSheet, View, Platform } from 'react-native';
 
 import { OnboardingFlow } from '../components/onboarding/OnboardingFlow';
 import { useAppUpdateCheck } from '../hooks/useAppUpdateCheck';
@@ -40,6 +40,16 @@ export default function RootLayout() {
     // allows switching languages without a restart.
     I18nManager.allowRTL(isRTL(DEFAULT_LOCALE));
   }, []);
+
+  // Web only: sync document.html lang and dir with the current locale.
+  // This enables LTR layout when switching from Arabic.
+  const locale = useSettings((s) => s.locale);
+  useEffect(() => {
+    if (Platform.OS === 'web' && typeof document !== 'undefined') {
+      document.documentElement.lang = locale;
+      document.documentElement.dir = isRTL(locale) ? 'rtl' : 'ltr';
+    }
+  }, [locale]);
 
   useEffect(() => {
     if (fontsReady) SplashScreen.hideAsync().catch(() => {});

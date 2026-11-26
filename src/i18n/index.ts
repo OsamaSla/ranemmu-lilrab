@@ -15,6 +15,13 @@ export type LocaleCode = 'ar' | 'en' | 'de';
 
 export const DEFAULT_LOCALE: LocaleCode = 'ar';
 
+/** UI languages the dictionaries cover; the language switcher lists these. */
+export const LOCALES = ['ar', 'en', 'de'] as const satisfies readonly LocaleCode[];
+
+export function isLocale(value: unknown): value is LocaleCode {
+  return typeof value === 'string' && (LOCALES as readonly string[]).includes(value);
+}
+
 type FlatDictionary = Record<TranslationKey, string>;
 
 /** Flattens the nested Arabic source to the same dotted shape en/de use. */
