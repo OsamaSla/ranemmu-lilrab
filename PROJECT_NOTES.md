@@ -261,39 +261,30 @@ unchanged (`setBook(id)` then `router.push('/library')`).
 - **Tall stanzas on phones (2026-11-26):** with a translation selected, long
   wrapped translation lines could make one stanza taller than the reading area;
   centring such a stanza in `useVerseScroll` pushed its first lines above the
-  viewport, and the post-scroll snap kept yanking it back. Two fixes, phones
-  only in the first:
-  - `VerseBlock.tsx` caps each translated line at 3 rendered lines
-    (`numberOfLines={isPhone ? 3 : undefined}` + `ellipsizeMode="tail"`). Arabic
-    text and every font size are untouched; desktop/web render the full
-    translation as before.
-  - `useVerseScroll.ts` treats a stanza as "tall" when
-    `height >= viewportHeight`: `targetFor` aligns it to its top
-    (`layout.y - STANZA_TOP_GAP`, 12 px) instead of centring it, `scheduleSnap`
-    refuses to snap while a tall stanza is active, and `nearestTo` /
-    the hysteresis now measure distance to the stanza's **interval** (`distanceTo`,
-    zero while the anchor is inside it) so a tall stanza keeps the rail
-    highlight for its whole height. Verified with `npx tsc --noEmit` and
-    `npx eslint` on both files; not yet checked on a physical phone.
-- **Screen modes + phone side-by-side translation (2026-11-26):**
+  viewport, and the post-scroll snap kept yanking it back. `useVerseScroll.ts`
+  now treats a stanza as "tall" when `height >= viewportHeight`: `targetFor`
+  aligns it to its top (`layout.y - STANZA_TOP_GAP`, 12 px) instead of centring
+  it, `scheduleSnap` refuses to snap while a tall stanza is active, and
+  `nearestTo` / the hysteresis measure distance to the stanza's **interval**
+  (`distanceTo`, zero while the anchor is inside it) so a tall stanza keeps the
+  rail highlight for its whole height. The earlier companion fix — clamping the
+  translation to 3 lines on phones — was **removed on 2026-11-26**: the owner
+  rejected it ("ends with 3 dots, useless"), and a cut translation is worse than
+  a tall stanza now that tall stanzas scroll correctly. Do not reintroduce
+  `numberOfLines` truncation on hymn translations.
+- **Screen modes; side-by-side translation measured and rejected (2026-11-26):**
   `src/hooks/useScreenMode.ts` is the single breakpoint source —
-  `screenModeFor(width)` returns `phone` (< `PHONE_MAX_WIDTH` 500),
-  `tablet` (< `TABLET_MAX_WIDTH` 1024) or `desktop`, with `useScreenMode()` /
-  `useIsPhone()` wrappers. Branch phone-only layout on it instead of adding new
-  `width < N` checks. `VerseBlock` renders a translation **beside** its Arabic
-  line on phones (`sideBySide = isPhone && parallel !== 'ar' && transLines`):
-  one row per hymn line, translation in the left `flex: 1` cell, Arabic in the
-  right `flex: 1.25` cell, `direction: 'ltr'` so the order stays physical inside
-  the RTL app. Arabic-only reading keeps full width. Wide screens keep the
-  stacked layout. Do not widen the translation cell past ~1:1.25 — Arabic is the
-  primary column.
-  Verified at a 370 × 824 viewport against the dev server (hymn `tr0001`):
-  translation left / Arabic right, Arabic-only still full width, no console
-  errors except the expected `screen-wake-lock` policy warning inside an
-  iframe. Trade-off to know: the translation column is ~130 px, so the 3-line
-  clamp clips sooner than it did stacked (`and relied on …`). Raise
-  `TRANSLATION_PHONE_LINES` or rebalance the flex values if the owner wants
-  more translation visible.
+  `screenModeFor(width)` returns `phone` (< `PHONE_MAX_WIDTH` 500), `tablet`
+  (< `TABLET_MAX_WIDTH` 1024) or `desktop`, with `useScreenMode()` /
+  `useIsPhone()` wrappers. It has **no call site yet**; it is the intended hook
+  for future phone-only layout work, not dead code to delete casually.
+  A phone-only side-by-side translation (translation left, Arabic right) was
+  implemented, shipped, then reverted: measured on `tr0001` at a 370 px viewport
+  with the full translation visible, total content height was **3564 px
+  side-by-side vs 3396 px stacked**, and two ~130 px columns read badly. It only
+  looked shorter while it truncated text. Conclusion: stacked is the correct
+  phone layout — do not re-attempt side-by-side without a new measurement that
+  beats stacked.
 - **Refrain rail dot (2026-11-22, `9e83f0dc`):** the original rail hard-coded
   the chorus dot as always highlighted while excluding it from `isActive`
   (`!isChorus && ...`), so it either glowed permanently or never lit up.

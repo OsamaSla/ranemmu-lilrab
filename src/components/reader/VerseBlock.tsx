@@ -15,7 +15,6 @@ import { Pressable, Text as RNText, View, type LayoutChangeEvent } from 'react-n
 import { AppText } from '../AppText';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
-import { useScreenMode } from '../../hooks/useScreenMode';
 import type { HymnVerse } from '../../data/types';
 import { HEBREW_FONT_FAMILY } from '../../theme/fonts';
 import { palette, radius, spacing } from '../../theme/tokens';
@@ -61,9 +60,6 @@ export const VerseBlock = memo(function VerseBlock({
   const { colors } = useTheme();
   const { t } = useT();
   const onDark = fullscreen || isDark;
-  // Phone screens get the compact reading layout; tablets and desktops keep
-  // the wide one. See useScreenMode for the breakpoints.
-  const isPhone = useScreenMode() === 'phone';
   const chorus = verseBlock.chorus === true;
   const headingSize = Math.round(readerSize * (chorus ? 0.9 : 0.7));
   // The quick-fix sheet names the stanza the same way the reader does, so its
@@ -89,38 +85,21 @@ export const VerseBlock = memo(function VerseBlock({
   );
 
   /**
-   * One translated line, shown under its Arabic original on wide screens and
-   * beside it on phones. en/de use the reader's
-   * Arabic font — they are Latin text inside an Arabic-typeset app. Hebrew is
-   * typeset in the bundled Hebrew liturgical face (NotoSansHebrew), which is
-   * the only registered font carrying Hebrew glyphs *and* GPOS niqqud
+   * One translated line, shown under its Arabic original. en/de use the
+   * reader's Arabic font — they are Latin text inside an Arabic-typeset app.
+   * Hebrew is typeset in the bundled Hebrew liturgical face (NotoSansHebrew),
+   * which is the only registered font carrying Hebrew glyphs *and* GPOS niqqud
    * positioning; the platform font is only the fallback. Hebrew also reads
    * right-to-left and needs extra leading so the points are not clipped.
    *
-   * Phones are narrow, so a long translation wraps to many lines and a single
-   * stanza can end up taller than the viewport. Once that happens the reader
-   * cannot see a stanza whole: scrolling to its last line pushes its first
-   * lines off the top, which is the jank this clamp removes. Capping the
-   * translated line at three lines keeps every stanza inside one screen and
-   * leaves the Arabic text — and its size — completely untouched.
+   * The translation is never truncated: a cut-off sentence is worse than a
+   * taller stanza. Long stanzas are made readable by the scroll behaviour
+   * instead — `useVerseScroll` aligns a stanza taller than the screen to its
+   * top and stops snapping inside it, so its first line stays visible.
    */
-  const TRANSLATION_PHONE_LINES = 3;
-
-  /**
-   * On a phone a translation is laid out beside its Arabic line instead of
-   * under it, so one line of the hymn costs one row rather than two. The
-   * Arabic column is the wider one and stays on the right (the reading
-   * direction); the translation sits to its left. This only applies while a
-   * translation is actually being viewed — Arabic-only reading keeps the full
-   * width, exactly as before.
-   */
-  const sideBySide = isPhone && parallel !== 'ar' && transLines !== undefined;
-
   const translationText = (body: string) =>
     parallel === 'he' ? (
       <RNText
-        numberOfLines={isPhone ? TRANSLATION_PHONE_LINES : undefined}
-        ellipsizeMode="tail"
         style={{
           fontFamily: HEBREW_FONT_FAMILY,
           fontSize: Math.round(readerSize * 0.9),
@@ -134,8 +113,6 @@ export const VerseBlock = memo(function VerseBlock({
       </RNText>
     ) : (
       <RNText
-        numberOfLines={isPhone ? TRANSLATION_PHONE_LINES : undefined}
-        ellipsizeMode="tail"
         style={{
           fontFamily: readerFont,
           fontSize: Math.round(readerSize * 0.85),
@@ -208,24 +185,7 @@ export const VerseBlock = memo(function VerseBlock({
       {verseBlock.lines.map((line, lineIndex) => {
         const translated = transLines?.[lineIndex];
         const marginBottom = lineIndex < verseBlock.lines.length - 1 ? spacing.sm : 0;
-        const body = sideBySide ? (
-          // Phone: one row per hymn line. `direction: 'ltr'` keeps the order
-          // physical (translation left, Arabic right) even in the RTL app.
-          // An untranslated line keeps an empty left cell so the Arabic column
-          // stays aligned down the stanza.
-          <View
-            style={{
-              flexDirection: 'row',
-              direction: 'ltr',
-              alignItems: 'flex-start',
-              gap: spacing.sm,
-            }}>
-            <View style={{ flex: 1 }}>
-              {translated ? translationText(translated) : null}
-            </View>
-            <View style={{ flex: 1.25 }}>{stanzaText(line)}</View>
-          </View>
-        ) : (
+        const body = (
           <>
             {stanzaText(line)}
             {translated ? <View style={{ marginTop: 2 }}>{translationText(translated)}</View> : null}
