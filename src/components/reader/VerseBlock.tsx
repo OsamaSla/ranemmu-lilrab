@@ -10,11 +10,12 @@
  * and a scroll still do nothing, so the reading experience is unchanged.
  */
 import { memo } from 'react';
-import { Pressable, Text as RNText, View, useWindowDimensions, type LayoutChangeEvent } from 'react-native';
+import { Pressable, Text as RNText, View, type LayoutChangeEvent } from 'react-native';
 
 import { AppText } from '../AppText';
 import { useT } from '../../hooks/useT';
 import { useTheme } from '../../hooks/useTheme';
+import { useScreenMode } from '../../hooks/useScreenMode';
 import type { HymnVerse } from '../../data/types';
 import { HEBREW_FONT_FAMILY } from '../../theme/fonts';
 import { palette, radius, spacing } from '../../theme/tokens';
@@ -60,9 +61,9 @@ export const VerseBlock = memo(function VerseBlock({
   const { colors } = useTheme();
   const { t } = useT();
   const onDark = fullscreen || isDark;
-  // Detect phone mode: screen width < 500px typically indicates a phone
-  const { width: screenWidth } = useWindowDimensions();
-  const isPhone = screenWidth < 500;
+  // Phone screens get the compact reading layout; tablets and desktops keep
+  // the wide one. See useScreenMode for the breakpoints.
+  const isPhone = useScreenMode() === 'phone';
   const chorus = verseBlock.chorus === true;
   const headingSize = Math.round(readerSize * (chorus ? 0.9 : 0.7));
   // The quick-fix sheet names the stanza the same way the reader does, so its
